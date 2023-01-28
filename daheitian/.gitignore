@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 *.midi
 *.wav
+*.aiff
 *.mp3
 *.logicx
 *.aif

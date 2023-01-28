@@ -57,6 +57,7 @@ def daheitian_score(time_signatures):
             "SquareBracketGroup",
         ],
         time_signatures=time_signatures,
+        filler=abjad.Rest,
     )
 
     return score
@@ -64,48 +65,227 @@ def daheitian_score(time_signatures):
 
 # immutables
 
-all_voice_names = [
-    "flute voice",
-    "oboe voice",
-    "clarinetineflat voice",
-    "bassoon voice",
-    "frenchhorn voice",
-    "trumpet voice",
-    "tenortrombone voice",
-    "tuba voice",
-    "piano 1 voice",
-    "piano 2 voice",
-    "harp voice",
-    "percussion 1 voice",
-    "percussion 2 voice",
-    "percussion 3 voice",
-    "violin 1 voice",
-    "violin 2 voice",
-    "viola voice",
-    "cello voice",
-    "contrabass voice",
-]
+all_voice_names = eval(
+    """[
+        "flute voice",
+        "oboe voice",
+        "clarinetineflat voice",
+        "bassoon voice",
+        "frenchhorn voice",
+        "trumpet voice",
+        "tenortrombone voice",
+        "tuba voice",
+        "piano 1 voice",
+        "piano 2 voice",
+        "harp voice",
+        "percussion 1 voice",
+        "percussion 2 voice",
+        "percussion 3 voice",
+        "violin 1 voice",
+        "violin 2 voice",
+        "viola voice",
+        "cello voice",
+        "contrabass voice",
+    ]"""
+)
 
-first_voice_names = [
-    "flute voice",
-    "oboe voice",
-    "clarinetineflat voice",
-    "bassoon voice",
-    "frenchhorn voice",
-    "trumpet voice",
-    "tenortrombone voice",
-    "tuba voice",
-    "piano 1 voice",
-    "harp voice",
-    "percussion 1 voice",
-    "percussion 2 voice",
-    "percussion 3 voice",
-    "violin 1 voice",
-    "violin 2 voice",
-    "viola voice",
-    "cello voice",
-    "contrabass voice",
-]
+first_voice_names = eval(
+    """[
+        "flute voice",
+        "oboe voice",
+        "clarinetineflat voice",
+        "bassoon voice",
+        "frenchhorn voice",
+        "trumpet voice",
+        "tenortrombone voice",
+        "tuba voice",
+        "piano 1 voice",
+        "harp voice",
+        "percussion 1 voice",
+        "percussion 2 voice",
+        "percussion 3 voice",
+        "violin 1 voice",
+        "violin 2 voice",
+        "viola voice",
+        "cello voice",
+        "contrabass voice",
+    ]"""
+)
+
+# dictionaries
+
+_bloom_pitches = {
+    "violin 1 voice": {
+        4: [-3.5, "df'"],
+        5: [
+            "df'",
+            evans.ETPitch(
+                fundamental="af,",
+                repeating_ratio="11/8",
+                number_of_divisions=3,
+                scale_degree=17,
+            ),
+            evans.ETPitch(
+                fundamental="af,",
+                repeating_ratio="11/8",
+                number_of_divisions=3,
+                scale_degree=17,
+            ),
+            evans.ETPitch(
+                fundamental="af,",
+                repeating_ratio="11/8",
+                number_of_divisions=3,
+                scale_degree=12,
+            ),
+            evans.ETPitch(
+                fundamental="af,",
+                repeating_ratio="11/8",
+                number_of_divisions=6,
+                scale_degree=26,
+            ),
+            evans.ETPitch(
+                fundamental="af,",
+                repeating_ratio="11/8",
+                number_of_divisions=4,
+                scale_degree=18,
+            ),
+            evans.ETPitch(
+                fundamental="af'",
+                repeating_ratio="11/8",
+                number_of_divisions=3,
+                scale_degree=3,
+            ),
+        ],
+    },
+    "violin 2 voice": {
+        3: [
+            -4.5,
+            -3.5,
+        ],
+        4: [
+            -3.5,
+            -4,
+            -3,
+        ],
+        5: [
+            -3,
+            evans.ETPitch(
+                fundamental="af,",
+                repeating_ratio="11/8",
+                number_of_divisions=3,
+                scale_degree=10,
+            ),
+            evans.ETPitch(
+                fundamental="af,",
+                repeating_ratio="11/8",
+                number_of_divisions=3,
+                scale_degree=10,
+            ),
+            evans.ETPitch(
+                fundamental="af,",
+                repeating_ratio="11/8",
+                number_of_divisions=3,
+                scale_degree=10,
+            ),
+            evans.ETPitch(
+                fundamental="af,",
+                repeating_ratio="11/8",
+                number_of_divisions=6,
+                scale_degree=22,
+            ),
+            evans.ETPitch(
+                fundamental="af,",
+                repeating_ratio="11/8",
+                number_of_divisions=4,
+                scale_degree=14,
+            ),
+            evans.ETPitch(
+                fundamental="af,",
+                repeating_ratio="11/8",
+                number_of_divisions=3,
+                scale_degree=11,
+            ),
+        ],
+    },
+    "viola voice": {
+        2: [-4, -3.5, -4],
+        3: [
+            -4,
+            -4.5,
+        ],
+        4: [-4.5, -7, -12],
+        5: [
+            -12,
+            evans.ETPitch(
+                fundamental="af,",
+                repeating_ratio="11/8",
+                number_of_divisions=3,
+                scale_degree=3,
+            ),
+            evans.ETPitch(
+                fundamental="af,",
+                repeating_ratio="11/8",
+                number_of_divisions=3,
+                scale_degree=3,
+            ),
+            evans.ETPitch(
+                fundamental="af,",
+                repeating_ratio="11/8",
+                number_of_divisions=3,
+                scale_degree=5,
+            ),
+            evans.ETPitch(
+                fundamental="af,",
+                repeating_ratio="11/8",
+                number_of_divisions=6,
+                scale_degree=10,
+            ),
+            evans.ETPitch(
+                fundamental="af,",
+                repeating_ratio="11/8",
+                number_of_divisions=4,
+                scale_degree=8,
+            ),
+            evans.ETPitch(
+                fundamental="af,",
+                repeating_ratio="11/8",
+                number_of_divisions=3,
+                scale_degree=8,
+            ),
+        ],
+    },
+    "cello voice": {
+        5: [
+            -4,
+            "af,",
+            "af,",
+            evans.ETPitch(
+                fundamental="af,",
+                repeating_ratio="11/8",
+                number_of_divisions=3,
+                scale_degree=4,
+            ),
+            evans.ETPitch(
+                fundamental="af,",
+                repeating_ratio="11/8",
+                number_of_divisions=6,
+                scale_degree=5,
+            ),
+            evans.ETPitch(
+                fundamental="af,,",
+                repeating_ratio="11/8",
+                number_of_divisions=4,
+                scale_degree=7,
+            ),
+            evans.ETPitch(
+                fundamental="af,,",
+                repeating_ratio="11/8",
+                number_of_divisions=3,
+                scale_degree=4,
+            ),
+        ]
+    },
+}
 
 # markups
 
@@ -340,3 +520,63 @@ def write_instrument_names(score):
 def write_short_instrument_names(score):
     for voice_name, markup in zip(first_voice_names, all_short_instrument_names):
         trinton.attach(voice=score[voice_name], leaves=[0], attachment=markup)
+
+
+# notation tools
+
+
+def fermata_measures(score, measures, fermata="ufermata"):
+    trinton.attach_multiple(
+        score=score,
+        voice="Global Context",
+        leaves=[_ - 1 for _ in measures],
+        attachments=[
+            abjad.Markup(
+                rf'\markup \fontsize #5 \center-column {{ \musicglyph "scripts.{fermata}" }} '
+            ),
+            abjad.LilyPondLiteral(
+                r"\once \override Score.TimeSignature.stencil = ##f",
+                "before",
+            ),
+        ],
+        direction=abjad.UP,
+    )
+
+
+def change_lines(
+    lines,
+    selector=trinton.select_leaves_by_index([0], pitched=True),
+    clef="treble",
+):
+    def change(argument):
+        selections = selector(argument)
+        for selection in selections:
+            abjad.attach(abjad.Clef(clef), selection)
+            abjad.attach(
+                abjad.LilyPondLiteral(
+                    rf"\staff-line-count {lines}",
+                    site="absolute_before",
+                ),
+                selection,
+            )
+
+    return change
+
+
+def invisible_tuplet_brackets():
+    def command(argument):
+        for tuplet in abjad.select.tuplets(argument):
+            abjad.attach(
+                abjad.LilyPondLiteral(
+                    "\once \override TupletBracket.stencil = ##f", "before"
+                ),
+                tuplet,
+            )
+            abjad.attach(
+                abjad.LilyPondLiteral(
+                    "\once \override TupletNumber.stencil = ##f", "before"
+                ),
+                tuplet,
+            )
+
+    return command
