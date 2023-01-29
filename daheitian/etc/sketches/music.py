@@ -42,7 +42,7 @@ for measure, string in zip(
         r"\markup \fontsize #4 { Stage 2 ( incredibly long, soli emerge from bridge via SCP ) }",
         r"\markup \fontsize #4 { Stage 3 ( incredibly long, though less than Stage 2 ) }",
         r"\markup \fontsize #4 { Stage 4 ( long ) }",
-        r"\markup \fontsize #4 { ( time-space notation in actual score, not homorhythmic ) }",
+        r"\markup \fontsize #4 { ( time-space notation in actual score ) }",
         r"\markup \fontsize #4 { Stage 5 ( final, ends with each voice dropping out one by one as it is replaced with something else ) }",
     ],
 ):
@@ -316,7 +316,7 @@ trinton.make_music(
             8,
         ),
     ),
-    evans.PitchHandler([-4.5, -7, -12]),
+    evans.PitchHandler(library._bloom_pitches["viola voice"][4]),
     trinton.hooked_spanner_command(
         string="Solo",
         selector=trinton.select_leaves_by_index([0, -1]),
@@ -376,58 +376,37 @@ trinton.make_music(
     evans.RhythmHandler(
         evans.talea(
             [
+                4,
                 2,
+                -2,
+                3,
                 1,
-                -1,
-                2,
-                2,
-                2,
-                2,
-                2,
+                3,
+                1,
+                3,
+                1,
+                3,
+                1,
+                4,
             ],
-            8,
+            16,
         ),
     ),
-    evans.PitchHandler(
-        [
-            "df'",
-            evans.ETPitch(
-                fundamental="af,",
-                repeating_ratio="11/8",
-                number_of_divisions=3,
-                scale_degree=17,
-            ),
-            evans.ETPitch(
-                fundamental="af,",
-                repeating_ratio="11/8",
-                number_of_divisions=3,
-                scale_degree=17,
-            ),
-            evans.ETPitch(
-                fundamental="af,",
-                repeating_ratio="11/8",
-                number_of_divisions=3,
-                scale_degree=12,
-            ),
-            evans.ETPitch(
-                fundamental="af,",
-                repeating_ratio="11/8",
-                number_of_divisions=6,
-                scale_degree=26,
-            ),
-            evans.ETPitch(
-                fundamental="af,",
-                repeating_ratio="11/8",
-                number_of_divisions=4,
-                scale_degree=18,
-            ),
-            evans.ETPitch(
-                fundamental="af'",
-                repeating_ratio="11/8",
-                number_of_divisions=3,
-                scale_degree=3,
-            ),
-        ]
+    trinton.pitch_with_selector_command(
+        pitch_list=library._bloom_pitches["violin 1 voice"][5],
+        selector=trinton.select_leaves_by_index([0, 1, 2, 4, 6, 8, 10], pitched=True),
+    ),
+    trinton.pitch_with_selector_command(
+        pitch_list=[2, 7, 10, 14],
+        selector=trinton.select_leaves_by_index(
+            [
+                3,
+                5,
+                7,
+                9,
+            ],
+            pitched=True,
+        ),
     ),
     trinton.hooked_spanner_command(
         string="Solo",
@@ -442,6 +421,10 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[abjad.Glissando()], selector=trinton.select_leaves_by_index([0])
     ),
+    trinton.attachment_command(
+        attachments=[abjad.Glissando(zero_padding=True)],
+        selector=trinton.pleaves(exclude=[0, 1, -1]),
+    ),
     voice=score["violin 1 voice"],
 )
 
@@ -450,63 +433,47 @@ trinton.make_music(
     evans.RhythmHandler(
         evans.talea(
             [
+                4,
                 2,
+                -2,
+                3,
                 1,
-                -1,
-                2,
-                2,
-                2,
-                2,
-                2,
+                3,
+                1,
+                3,
+                1,
+                3,
+                1,
+                4,
             ],
-            8,
+            16,
         ),
     ),
-    evans.PitchHandler(
-        [
-            -3,
-            evans.ETPitch(
-                fundamental="af,",
-                repeating_ratio="11/8",
-                number_of_divisions=3,
-                scale_degree=10,
-            ),
-            evans.ETPitch(
-                fundamental="af,",
-                repeating_ratio="11/8",
-                number_of_divisions=3,
-                scale_degree=10,
-            ),
-            evans.ETPitch(
-                fundamental="af,",
-                repeating_ratio="11/8",
-                number_of_divisions=3,
-                scale_degree=10,
-            ),
-            evans.ETPitch(
-                fundamental="af,",
-                repeating_ratio="11/8",
-                number_of_divisions=6,
-                scale_degree=22,
-            ),
-            evans.ETPitch(
-                fundamental="af,",
-                repeating_ratio="11/8",
-                number_of_divisions=4,
-                scale_degree=14,
-            ),
-            evans.ETPitch(
-                fundamental="af,",
-                repeating_ratio="11/8",
-                number_of_divisions=3,
-                scale_degree=11,
-            ),
-        ]
+    trinton.pitch_with_selector_command(
+        pitch_list=library._bloom_pitches["violin 2 voice"][5],
+        selector=trinton.select_leaves_by_index([0, 1, 2, 4, 6, 8, 10], pitched=True),
+    ),
+    trinton.pitch_with_selector_command(
+        pitch_list=[
+            0,
+            2,
+            8,
+            9,
+        ],
+        selector=trinton.select_leaves_by_index(
+            [
+                3,
+                5,
+                7,
+                9,
+            ],
+            pitched=True,
+        ),
     ),
     trinton.hooked_spanner_command(
         string="Solo",
         selector=trinton.select_leaves_by_index([0, -1]),
-        padding=5,
+        padding=6,
     ),
     trinton.attachment_command(
         attachments=[abjad.Articulation(">")],
@@ -515,6 +482,10 @@ trinton.make_music(
     trinton.noteheads_only(),
     trinton.attachment_command(
         attachments=[abjad.Glissando()], selector=trinton.select_leaves_by_index([0])
+    ),
+    trinton.attachment_command(
+        attachments=[abjad.Glissando(zero_padding=True)],
+        selector=trinton.pleaves(exclude=[0, 1, -1]),
     ),
     voice=score["violin 2 voice"],
 )
@@ -524,63 +495,54 @@ trinton.make_music(
     evans.RhythmHandler(
         evans.talea(
             [
+                4,
                 2,
+                -2,
+                3,
                 1,
-                -1,
-                2,
-                2,
-                2,
-                2,
-                2,
+                3,
+                1,
+                4,
+                3,
+                1,
             ],
-            8,
+            16,
         ),
     ),
-    evans.PitchHandler(
-        [
-            -12,
-            evans.ETPitch(
-                fundamental="af,",
-                repeating_ratio="11/8",
-                number_of_divisions=3,
-                scale_degree=3,
-            ),
-            evans.ETPitch(
-                fundamental="af,",
-                repeating_ratio="11/8",
-                number_of_divisions=3,
-                scale_degree=3,
-            ),
-            evans.ETPitch(
-                fundamental="af,",
-                repeating_ratio="11/8",
-                number_of_divisions=3,
-                scale_degree=5,
-            ),
-            evans.ETPitch(
-                fundamental="af,",
-                repeating_ratio="11/8",
-                number_of_divisions=6,
-                scale_degree=10,
-            ),
-            evans.ETPitch(
-                fundamental="af,",
-                repeating_ratio="11/8",
-                number_of_divisions=4,
-                scale_degree=8,
-            ),
-            evans.ETPitch(
-                fundamental="af,",
-                repeating_ratio="11/8",
-                number_of_divisions=3,
-                scale_degree=8,
-            ),
-        ]
+    trinton.pitch_with_selector_command(
+        pitch_list=library._bloom_pitches["viola voice"][5],
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                1,
+                2,
+                4,
+                6,
+                7,
+                9,
+            ],
+            pitched=True,
+        ),
+    ),
+    trinton.pitch_with_selector_command(
+        pitch_list=[
+            -2,
+            0,
+            7,
+        ],
+        selector=trinton.select_leaves_by_index(
+            [
+                3,
+                5,
+                8,
+            ],
+            pitched=True,
+        ),
     ),
     trinton.hooked_spanner_command(
         string="Solo",
         selector=trinton.select_leaves_by_index([0, -1]),
-        padding=5,
+        padding=7.5,
     ),
     trinton.attachment_command(
         attachments=[abjad.Articulation(">")],
@@ -589,6 +551,10 @@ trinton.make_music(
     trinton.noteheads_only(),
     trinton.attachment_command(
         attachments=[abjad.Glissando()], selector=trinton.select_leaves_by_index([0])
+    ),
+    trinton.attachment_command(
+        attachments=[abjad.Glissando(zero_padding=True)],
+        selector=trinton.pleaves(exclude=[0, 1, 6, -1]),
     ),
     voice=score["viola voice"],
 )
@@ -598,32 +564,60 @@ trinton.make_music(
     evans.RhythmHandler(
         evans.talea(
             [
+                4,
                 2,
+                -2,
+                3,
                 1,
-                -1,
-                2,
-                2,
-                2,
-                2,
-                2,
+                3,
+                1,
+                3,
+                1,
+                3,
+                1,
+                4,
             ],
-            8,
+            16,
         ),
     ),
-    evans.PitchHandler(library._bloom_pitches["cello voice"][5]),
+    trinton.pitch_with_selector_command(
+        pitch_list=library._bloom_pitches["cello voice"][5],
+        selector=trinton.select_leaves_by_index([0, 1, 2, 4, 6, 8, 10], pitched=True),
+    ),
+    trinton.pitch_with_selector_command(
+        pitch_list=[
+            "af",
+            "fs",
+            "ef",
+            "cs",
+        ],
+        selector=trinton.select_leaves_by_index(
+            [
+                3,
+                5,
+                7,
+                9,
+            ],
+            pitched=True,
+        ),
+    ),
     trinton.hooked_spanner_command(
         string="Solo",
         selector=trinton.select_leaves_by_index([0, -1]),
-        padding=5,
+        padding=6,
     ),
     trinton.attachment_command(
         attachments=[abjad.Articulation(">")],
         selector=trinton.select_leaves_by_index([2], pitched=True),
     ),
+    trinton.noteheads_only(),
     trinton.attachment_command(
         attachments=[abjad.Glissando()], selector=trinton.select_leaves_by_index([0])
     ),
-    trinton.noteheads_only(),
+    trinton.attachment_command(
+        attachments=[abjad.Glissando(zero_padding=True)],
+        selector=trinton.pleaves(exclude=[0, 1, -1]),
+    ),
     voice=score["cello voice"],
 )
 
@@ -654,7 +648,7 @@ trinton.make_music(
 
 # trinton.make_sc_file(
 #     score=score,
-#     tempo=((1, 8), 20),
+#     tempo=((1, 4), 10),
 #     current_directory="/Users/trintonprater/scores/daheitian/daheitian/etc/sketches",
 # )
 

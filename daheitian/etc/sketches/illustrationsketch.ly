@@ -54,7 +54,7 @@
             s1 * 7/4
             % AFTER:
             % MARKUP:
-            ^ \markup \fontsize #4 { ( time-space notation in actual score, not homorhythmic ) }
+            ^ \markup \fontsize #4 { ( time-space notation in actual score ) }
             ^ \markup \fontsize #4 { Stage 5 ( final, ends with each voice dropping out one by one as it is replaced with something else ) }
         % CLOSE_BRACKETS:
         }
@@ -449,10 +449,10 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        ef''8
+                        d'8
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { \center-column { "+24" } }
+                        ^ \markup \center-align { \center-column { "-49" } }
                         r8
                         % BEFORE:
                         % COMMANDS:
@@ -461,12 +461,15 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        ef''4
+                        d'8.
                         % AFTER:
                         % ARTICULATIONS:
                         - \accent
                         % MARKUP:
-                        ^ \markup \center-align { \center-column { "+24" } }
+                        ^ \markup \center-align { \center-column { "-49" } }
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
                         % BEFORE:
                         % COMMANDS:
                         \once \override Beam.stencil = ##f
@@ -474,10 +477,11 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        fs'4
+                        d'16
                         % AFTER:
-                        % MARKUP:
-                        ^ \markup \center-align { \center-column { "+5" } }
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
                         % BEFORE:
                         % COMMANDS:
                         \once \override Beam.stencil = ##f
@@ -485,10 +489,13 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        af'4
+                        g'8.
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { \center-column { "-11" } }
+                        ^ \markup \center-align { \center-column { "+3" } }
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
                         % BEFORE:
                         % COMMANDS:
                         \once \override Beam.stencil = ##f
@@ -496,10 +503,63 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        a'4
+                        g'16
+                        % AFTER:
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf'8.
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { \center-column { "-19" } }
+                        ^ \markup \center-align { \center-column { "-22" } }
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf'16
+                        % AFTER:
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        d''8.
+                        % AFTER:
+                        % MARKUP:
+                        ^ \markup \center-align { \center-column { "+32" } }
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        d''16
+                        % AFTER:
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
                         % BEFORE:
                         % COMMANDS:
                         \once \override Beam.stencil = ##f
@@ -635,7 +695,7 @@
                         a4
                         % AFTER:
                         % SPANNER_STARTS:
-                        - \tweak padding #5
+                        - \tweak padding #6
                         - \abjad-dashed-line-with-hook
                         - \tweak bound-details.left.text \markup \concat { \upright { "Solo" } \hspace #0.5 }
                         - \tweak bound-details.right.padding -1
@@ -648,10 +708,10 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        d'8
+                        c'8
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { \center-column { "+38" } }
+                        ^ \markup \center-align { \center-column { "-32" } }
                         r8
                         % BEFORE:
                         % COMMANDS:
@@ -660,12 +720,15 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        d'4
+                        c'8.
                         % AFTER:
                         % ARTICULATIONS:
                         - \accent
                         % MARKUP:
-                        ^ \markup \center-align { \center-column { "+38" } }
+                        ^ \markup \center-align { \center-column { "-32" } }
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
                         % BEFORE:
                         % COMMANDS:
                         \once \override Beam.stencil = ##f
@@ -673,10 +736,11 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        d'4
+                        c'16
                         % AFTER:
-                        % MARKUP:
-                        ^ \markup \center-align { \center-column { "+38" } }
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
                         % BEFORE:
                         % COMMANDS:
                         \once \override Beam.stencil = ##f
@@ -684,10 +748,13 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        e'4
+                        d'8.
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { \center-column { "+21" } }
+                        ^ \markup \center-align { \center-column { "-49" } }
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
                         % BEFORE:
                         % COMMANDS:
                         \once \override Beam.stencil = ##f
@@ -695,10 +762,11 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        ef'4
+                        d'16
                         % AFTER:
-                        % MARKUP:
-                        ^ \markup \center-align { \center-column { "+30" } }
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
                         % BEFORE:
                         % COMMANDS:
                         \once \override Beam.stencil = ##f
@@ -706,10 +774,62 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        e'4
+                        af'8.
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { \center-column { "+21" } }
+                        ^ \markup \center-align { \center-column { "-5" } }
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        af'16
+                        % AFTER:
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a'8.
+                        % AFTER:
+                        % MARKUP:
+                        ^ \markup \center-align { \center-column { "-19" } }
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a'16
+                        % AFTER:
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        c''4
+                        % AFTER:
+                        % MARKUP:
+                        ^ \markup \center-align { \center-column { "-32" } }
                         % SPANNER_STOPS:
                         \stopTextSpan
                     % CLOSE_BRACKETS:
@@ -846,7 +966,7 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        f4.
+                        g4.
                         % AFTER:
                         % SPANNER_STARTS:
                         \glissando
@@ -857,7 +977,7 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        c4
+                        gqf4
                         % AFTER:
                         % SPANNER_STOPS:
                         \stopTextSpan
@@ -868,10 +988,10 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        c4
+                        gqf4
                         % AFTER:
                         % SPANNER_STARTS:
-                        - \tweak padding #5
+                        - \tweak padding #7.5
                         - \abjad-dashed-line-with-hook
                         - \tweak bound-details.left.text \markup \concat { \upright { "Solo" } \hspace #0.5 }
                         - \tweak bound-details.right.padding -1
@@ -884,10 +1004,10 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        d8
+                        bf8
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { \center-column { "-49" } }
+                        ^ \markup \center-align { \center-column { "-16" } }
                         r8
                         % BEFORE:
                         % COMMANDS:
@@ -896,12 +1016,15 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        d4
+                        bf8.
                         % AFTER:
                         % ARTICULATIONS:
                         - \accent
                         % MARKUP:
-                        ^ \markup \center-align { \center-column { "-49" } }
+                        ^ \markup \center-align { \center-column { "-16" } }
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
                         % BEFORE:
                         % COMMANDS:
                         \once \override Beam.stencil = ##f
@@ -909,10 +1032,25 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        f4
+                        bf16
+                        % AFTER:
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        c'8.
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { \center-column { "+19" } }
+                        ^ \markup \center-align { \center-column { "-32" } }
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
                         % BEFORE:
                         % COMMANDS:
                         \once \override Beam.stencil = ##f
@@ -920,10 +1058,11 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        f4
+                        c'16
                         % AFTER:
-                        % MARKUP:
-                        ^ \markup \center-align { \center-column { "+19" } }
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
                         % BEFORE:
                         % COMMANDS:
                         \once \override Beam.stencil = ##f
@@ -931,7 +1070,7 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        g4
+                        g'4
                         % AFTER:
                         % MARKUP:
                         ^ \markup \center-align { \center-column { "+3" } }
@@ -942,10 +1081,36 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        b4
+                        g'8.
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { \center-column { "-30" } }
+                        ^ \markup \center-align { \center-column { "+3" } }
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        g'16
+                        % AFTER:
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf'4
+                        % AFTER:
+                        % MARKUP:
+                        ^ \markup \center-align { \center-column { "-16" } }
                         % SPANNER_STOPS:
                         \stopTextSpan
                     % CLOSE_BRACKETS:
@@ -1026,7 +1191,7 @@
                         af4
                         % AFTER:
                         % SPANNER_STARTS:
-                        - \tweak padding #5
+                        - \tweak padding #6
                         - \abjad-dashed-line-with-hook
                         - \tweak bound-details.left.text \markup \concat { \upright { "Solo" } \hspace #0.5 }
                         - \tweak bound-details.right.padding -1
@@ -1039,7 +1204,7 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        af,8
+                        af8
                         r8
                         % BEFORE:
                         % COMMANDS:
@@ -1048,10 +1213,13 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        af,4
+                        af8.
                         % AFTER:
                         % ARTICULATIONS:
                         - \accent
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
                         % BEFORE:
                         % COMMANDS:
                         \once \override Beam.stencil = ##f
@@ -1059,10 +1227,51 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        ef4
+                        af16
+                        % AFTER:
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        fs8.
+                        % AFTER:
+                        % MARKUP:
+                        ^ \markup \center-align { \center-column { "+16" } }
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        fs16
+                        % AFTER:
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ef8.
                         % AFTER:
                         % MARKUP:
                         ^ \markup \center-align { \center-column { "+35" } }
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
                         % BEFORE:
                         % COMMANDS:
                         \once \override Beam.stencil = ##f
@@ -1070,10 +1279,25 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        cs4
+                        ef16
+                        % AFTER:
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        cs8.
                         % AFTER:
                         % MARKUP:
                         ^ \markup \center-align { \center-column { "-41" } }
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
                         % BEFORE:
                         % COMMANDS:
                         \once \override Beam.stencil = ##f
@@ -1081,10 +1305,11 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        fs,4
+                        cs16
                         % AFTER:
-                        % MARKUP:
-                        ^ \markup \center-align { \center-column { "-35" } }
+                        % SPANNER_STARTS:
+                        - \abjad-zero-padding-glissando
+                        \glissando
                         % BEFORE:
                         % COMMANDS:
                         \once \override Beam.stencil = ##f
@@ -1092,10 +1317,10 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        ef,4
+                        d4
                         % AFTER:
                         % MARKUP:
-                        ^ \markup \center-align { \center-column { "+35" } }
+                        ^ \markup \center-align { \center-column { "-49" } }
                         % SPANNER_STOPS:
                         \stopTextSpan
                     % CLOSE_BRACKETS:
