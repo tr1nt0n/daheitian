@@ -247,7 +247,7 @@ _bloom_pitches = {
                 scale_degree=8,
             ),
             evans.ETPitch(
-                fundamental="af'",
+                fundamental="af",
                 repeating_ratio="11/8",
                 number_of_divisions=3,
                 scale_degree=1,
@@ -256,7 +256,6 @@ _bloom_pitches = {
     },
     "cello voice": {
         5: [
-            -4,
             "af",
             "af",
             evans.ETPitch(

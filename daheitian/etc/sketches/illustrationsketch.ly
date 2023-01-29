@@ -1107,7 +1107,7 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        bf'4
+                        bf4
                         % AFTER:
                         % MARKUP:
                         ^ \markup \center-align { \center-column { "-16" } }
@@ -1188,7 +1188,7 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
-                        af4
+                        af4.
                         % AFTER:
                         % SPANNER_STARTS:
                         - \tweak padding #6
@@ -1196,15 +1196,6 @@
                         - \tweak bound-details.left.text \markup \concat { \upright { "Solo" } \hspace #0.5 }
                         - \tweak bound-details.right.padding -1
                         \startTextSpan
-                        \glissando
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        af8
                         r8
                         % BEFORE:
                         % COMMANDS:
@@ -1215,8 +1206,6 @@
                         \once \override Stem.stencil = ##f
                         af8.
                         % AFTER:
-                        % ARTICULATIONS:
-                        - \accent
                         % SPANNER_STARTS:
                         - \abjad-zero-padding-glissando
                         \glissando
@@ -1229,6 +1218,8 @@
                         \once \override Stem.stencil = ##f
                         af16
                         % AFTER:
+                        % ARTICULATIONS:
+                        - \accent
                         % SPANNER_STARTS:
                         - \abjad-zero-padding-glissando
                         \glissando

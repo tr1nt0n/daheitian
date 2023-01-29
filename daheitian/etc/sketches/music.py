@@ -9,6 +9,55 @@ from daheitian import library
 
 # score
 
+# score = library.daheitian_score([(7, 4)])
+#
+# trinton.make_music(
+#     lambda _: trinton.select_target(_, (1,)),
+#     evans.RhythmHandler(evans.even_division([4,])),
+#     evans.PitchHandler(library._bloom_pitches["violin 1 voice"][5]),
+#     voice=score["violin 1 voice"]
+# )
+#
+# trinton.make_music(
+#     lambda _: trinton.select_target(_, (1,)),
+#     evans.RhythmHandler(evans.even_division([4,])),
+#     evans.PitchHandler(library._bloom_pitches["violin 2 voice"][5]),
+#     voice=score["violin 2 voice"]
+# )
+#
+# trinton.make_music(
+#     lambda _: trinton.select_target(_, (1,)),
+#     evans.RhythmHandler(evans.even_division([4,])),
+#     evans.PitchHandler(library._bloom_pitches["viola voice"][5]),
+#     trinton.attachment_command(
+#         [abjad.Clef("altovarC")],
+#         trinton.select_leaves_by_index([0])
+#     ),
+#     voice=score["viola voice"]
+# )
+#
+# trinton.make_music(
+#     lambda _: trinton.select_target(_, (1,)),
+#     evans.RhythmHandler(evans.even_division([4,])),
+#     evans.PitchHandler(library._bloom_pitches["cello voice"][5]),
+#     trinton.attachment_command(
+#         [abjad.Clef("bass")],
+#         trinton.select_leaves_by_index([0])
+#     ),
+#     voice=score["cello voice"]
+# )
+#
+# trinton.make_music(
+#     lambda _: trinton.select_target(_, (1,)),
+#     evans.RhythmHandler(evans.talea([2, 5], 4)),
+#     evans.PitchHandler([-4, "af,,"]),
+#     trinton.attachment_command(
+#         [abjad.Clef("bass")],
+#         trinton.select_leaves_by_index([0])
+#     ),
+#     voice=score["contrabass voice"]
+# )
+
 score = library.daheitian_score(
     [
         (1, 8),
@@ -564,8 +613,7 @@ trinton.make_music(
     evans.RhythmHandler(
         evans.talea(
             [
-                4,
-                2,
+                6,
                 -2,
                 3,
                 1,
@@ -582,7 +630,7 @@ trinton.make_music(
     ),
     trinton.pitch_with_selector_command(
         pitch_list=library._bloom_pitches["cello voice"][5],
-        selector=trinton.select_leaves_by_index([0, 1, 2, 4, 6, 8, 10], pitched=True),
+        selector=trinton.select_leaves_by_index([0, 1, 3, 5, 7, 9,], pitched=True),
     ),
     trinton.pitch_with_selector_command(
         pitch_list=[
@@ -593,10 +641,10 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index(
             [
-                3,
-                5,
-                7,
-                9,
+                2,
+                4,
+                6,
+                8,
             ],
             pitched=True,
         ),
@@ -612,11 +660,8 @@ trinton.make_music(
     ),
     trinton.noteheads_only(),
     trinton.attachment_command(
-        attachments=[abjad.Glissando()], selector=trinton.select_leaves_by_index([0])
-    ),
-    trinton.attachment_command(
         attachments=[abjad.Glissando(zero_padding=True)],
-        selector=trinton.pleaves(exclude=[0, 1, -1]),
+        selector=trinton.pleaves(exclude=[0, -1]),
     ),
     voice=score["cello voice"],
 )
