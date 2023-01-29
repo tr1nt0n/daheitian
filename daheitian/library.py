@@ -112,6 +112,15 @@ first_voice_names = eval(
     ]"""
 )
 
+map = trinton.logistic_map(
+    x=4,
+    r=-1,
+    n=12,
+    seed=2,
+)
+
+map = eval("""[i for i in map if i > 1]""")
+
 # dictionaries
 
 _bloom_pitches = {
@@ -285,6 +294,14 @@ _bloom_pitches = {
         ]
     },
 }
+
+# sequences
+
+def logistic_map(index=0):
+    return trinton.rotated_sequence(
+        map,
+        index
+    )
 
 # markups
 
@@ -519,6 +536,30 @@ def write_instrument_names(score):
 def write_short_instrument_names(score):
     for voice_name, markup in zip(first_voice_names, all_short_instrument_names):
         trinton.attach(voice=score[voice_name], leaves=[0], attachment=markup)
+
+# rhythm tools
+
+def flute_graces():
+    def graces(argument):
+        pleaves = abjad.select.leaves(argument, pitched=True)
+
+        handler = evans.GraceHandler(
+            boolean_vector=[1],
+            gesture_lengths=[1,],
+            forget=False,
+        )
+
+        relevant_leaves = []
+
+        for leaf in pleaves:
+            if leaf.written_pitch.number == 15:
+                relevant_leaves.append(leaf)
+
+        for leaf in relevant_leaves:
+            if relevant_leaves.index(leaf) % 3 == 0:
+                handler(leaf)
+
+    return graces
 
 
 # notation tools
