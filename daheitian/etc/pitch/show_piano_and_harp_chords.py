@@ -26,11 +26,32 @@ trinton.make_music(
     trinton.noteheads_only(),
     trinton.attachment_command(
         attachments=[abjad.Clef("treble")],
-        selector=trinton.select_leaves_by_index([1, 9, 13, 16, 18, 25, 32, ])
+        selector=trinton.select_leaves_by_index(
+            [
+                1,
+                9,
+                13,
+                16,
+                18,
+                25,
+                32,
+            ]
+        ),
     ),
     trinton.attachment_command(
         attachments=[abjad.Clef("bass")],
-        selector=trinton.select_leaves_by_index([0, 7, 11, 14, 17, 24, 31, 33,])
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                7,
+                11,
+                14,
+                17,
+                24,
+                31,
+                33,
+            ]
+        ),
     ),
     trinton.ottava_command(
         selector=trinton.select_leaves_by_index(
@@ -54,7 +75,7 @@ trinton.make_music(
             ],
         )
     ),
-    voice=score["piano 1 voice"]
+    voice=score["piano 1 voice"],
 )
 
 trinton.make_music(
@@ -65,11 +86,32 @@ trinton.make_music(
     trinton.noteheads_only(),
     trinton.attachment_command(
         attachments=[abjad.Clef("treble")],
-        selector=trinton.select_leaves_by_index([1, 9, 13, 16, 18, 25, 32, ])
+        selector=trinton.select_leaves_by_index(
+            [
+                1,
+                9,
+                13,
+                16,
+                18,
+                25,
+                32,
+            ]
+        ),
     ),
     trinton.attachment_command(
         attachments=[abjad.Clef("bass")],
-        selector=trinton.select_leaves_by_index([0, 7, 11, 14, 17, 24, 31, 33,])
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                7,
+                11,
+                14,
+                17,
+                24,
+                31,
+                33,
+            ]
+        ),
     ),
     trinton.ottava_command(
         selector=trinton.select_leaves_by_index(
@@ -93,7 +135,15 @@ trinton.make_music(
             ],
         )
     ),
-    voice=score["piano 2 voice"]
+    voice=score["piano 2 voice"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (1,)),
+    evans.RhythmHandler(evans.even_division([8])),
+    evans.PitchHandler([9, 10, 13, 15, "es''", 18, 20, 21]),
+    library.respell_harp(),
+    voice=score["harp voice"],
 )
 
 # write sc file

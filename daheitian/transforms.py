@@ -40,15 +40,33 @@ for _ in range(0, 12):
 alpha_progression = []
 
 pattern_1 = abjad.Pattern(indices=[1, 4, 5], period=6)
-pattern_2 = abjad.Pattern(indices=[0, 6, 9,], period=10)
+pattern_2 = abjad.Pattern(
+    indices=[
+        0,
+        6,
+        9,
+    ],
+    period=10,
+)
 
 for i, chord in zip(range(len(cycled_progression)), cycled_progression):
     if pattern_1.matches_index(i, len(cycled_progression)):
         alpha = evans.Sequence(chord).alpha(category=1)
-        if chord == [-26, -21, -12,]:
+        if chord == [
+            -26,
+            -21,
+            -12,
+        ]:
             alpha = [_ * -1 for _ in alpha]
             alpha_progression.append(alpha)
-        elif chord == [-4, 7, 13, 14, 17, 21,]:
+        elif chord == [
+            -4,
+            7,
+            13,
+            14,
+            17,
+            21,
+        ]:
             new_alpha = []
             for _ in alpha:
                 if alpha.index(_) == 0:
@@ -62,10 +80,21 @@ for i, chord in zip(range(len(cycled_progression)), cycled_progression):
 
     elif pattern_2.matches_index(i, len(cycled_progression)):
         alpha = evans.Sequence(chord).alpha(category=2)
-        if chord == [-26, -21, -12,]:
+        if chord == [
+            -26,
+            -21,
+            -12,
+        ]:
             alpha = [_ * -1 for _ in alpha]
             alpha_progression.append(alpha)
-        elif chord == [-4, 7, 13, 14, 17, 21,]:
+        elif chord == [
+            -4,
+            7,
+            13,
+            14,
+            17,
+            21,
+        ]:
             new_alpha = []
             for _ in alpha:
                 if alpha.index(_) == 0:
@@ -86,28 +115,34 @@ for chord in alpha_progression[0:6]:
 
 for chord in alpha_progression[6:12]:
     if alpha_progression.index(chord) % 2 == 0:
-        transposed_progression.append(
-            trinton.transpose(chord, 1)
-        )
+        transposed_progression.append(trinton.transpose(chord, 1))
     else:
-        transposed_progression.append(
-            trinton.transpose(chord, 2)
-        )
+        transposed_progression.append(trinton.transpose(chord, 2))
 
-for chord, transpose in zip(alpha_progression[12:24], [3, 3, 4, 3, 2, 4, 6, 4, 6, 7, 7, 5,]):
-    transposed_progression.append(
-        trinton.transpose(chord, transpose)
-    )
+for chord, transpose in zip(
+    alpha_progression[12:24],
+    [
+        3,
+        3,
+        4,
+        3,
+        2,
+        4,
+        6,
+        4,
+        6,
+        7,
+        7,
+        5,
+    ],
+):
+    transposed_progression.append(trinton.transpose(chord, transpose))
 
 for chord in alpha_progression[24:36]:
     if alpha_progression.index(chord) % 2 == 0:
-        transposed_progression.append(
-            trinton.transpose(chord, 6)
-        )
+        transposed_progression.append(trinton.transpose(chord, 6))
     else:
-        transposed_progression.append(
-            trinton.transpose(chord, 7)
-        )
+        transposed_progression.append(trinton.transpose(chord, 7))
 
 final_progression = []
 

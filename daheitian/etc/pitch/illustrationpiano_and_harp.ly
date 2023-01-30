@@ -884,7 +884,23 @@
                     % COMMANDS:
                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
-                    r1 * 17/8
+                    a'8
+                    bf'8
+                    cs''8
+                    ds''8
+                    es''8
+                    fs''8
+                    gs''8
+                    a''8
+                    a'8
+                    bf'8
+                    cs''8
+                    ds''8
+                    es''8
+                    fs''8
+                    gs''8
+                    a''8
+                    a'8
                 % CLOSE_BRACKETS:
                 }
             % CLOSE_BRACKETS:

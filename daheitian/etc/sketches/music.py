@@ -20,9 +20,16 @@ score = library.daheitian_score(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (1,)),
-    evans.RhythmHandler(evans.talea(library.logistic_map(1), 32, treat_tuplets=False),),
+    evans.RhythmHandler(
+        evans.talea(library.logistic_map(1), 32, treat_tuplets=False),
+    ),
     trinton.force_rest(
-        selector=trinton.patterned_tie_index_selector([3,], 6)
+        selector=trinton.patterned_tie_index_selector(
+            [
+                3,
+            ],
+            6,
+        )
     ),
     evans.PitchHandler([13, "ds''"]),
     trinton.tremolo_command(selector=trinton.pleaves()),
@@ -53,7 +60,7 @@ trinton.make_music(
         attachments=[abjad.Clef("bass"), abjad.Clef("treble")],
         selector=trinton.select_leaves_by_index([0, 1]),
     ),
-    voice=score["piano 2 voice"]
+    voice=score["piano 2 voice"],
 )
 
 # write sc file

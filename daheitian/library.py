@@ -297,11 +297,10 @@ _bloom_pitches = {
 
 # sequences
 
+
 def logistic_map(index=0):
-    return trinton.rotated_sequence(
-        map,
-        index
-    )
+    return trinton.rotated_sequence(map, index)
+
 
 # markups
 
@@ -537,7 +536,12 @@ def write_short_instrument_names(score):
     for voice_name, markup in zip(first_voice_names, all_short_instrument_names):
         trinton.attach(voice=score[voice_name], leaves=[0], attachment=markup)
 
+
+# pitch tools
+
+
 # rhythm tools
+
 
 def flute_graces():
     def graces(argument):
@@ -545,7 +549,9 @@ def flute_graces():
 
         handler = evans.GraceHandler(
             boolean_vector=[1],
-            gesture_lengths=[1,],
+            gesture_lengths=[
+                1,
+            ],
             forget=False,
         )
 
