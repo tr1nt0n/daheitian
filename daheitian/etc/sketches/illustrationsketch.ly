@@ -36,6 +36,12 @@
                         % AFTER:
                         % STEM_TREMOLOS:
                         :64
+                        % SPANNER_STARTS:
+                        - \tweak padding #6.5
+                        - \abjad-dashed-line-with-hook
+                        - \tweak bound-details.left.text \markup \concat { \upright { "Solo" } \hspace #0.5 }
+                        - \tweak bound-details.right.padding -2
+                        \startTextSpan
                         % BEFORE:
                         % BEFORE:
                         % COMMANDS:
@@ -195,6 +201,8 @@
                         % AFTER:
                         % STEM_TREMOLOS:
                         :256
+                        % SPANNER_STOPS:
+                        \stopTextSpan
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -335,7 +343,27 @@
                     % OPEN_BRACKETS:
                     \context Voice = "piano 2 voice"
                     {
-                        r1 * 15/4
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        <bf,, ef, c>4
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <af g' cs'' d'' f'' a''>4
+                        <b'' fs''' e''''>4
+                        <bf,, ef, c>4
+                        <af g' cs'' d'' f'' a''>4
+                        <b'' fs''' e''''>4
+                        <bf,, ef, c>4
+                        <af g' cs'' d'' f'' a''>4
+                        <b'' fs''' e''''>4
+                        <bf,, ef, c>4
+                        <af g' cs'' d'' f'' a''>4
+                        <b'' fs''' e''''>4
+                        <bf,, ef, c>4
+                        <af g' cs'' d'' f'' a''>4
+                        <b'' fs''' e''''>4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:

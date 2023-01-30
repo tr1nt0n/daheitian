@@ -6,6 +6,7 @@ import trinton
 from abjadext import rmakers
 from abjadext import microtones
 from daheitian import library
+from daheitian import transforms
 
 # score
 
@@ -35,7 +36,24 @@ trinton.make_music(
         selector=trinton.grace_selector(),
     ),
     trinton.treat_tuplets(),
+    trinton.hooked_spanner_command(
+        string="Solo",
+        selector=trinton.select_leaves_by_index([0, -1]),
+        padding=6.5,
+        right_padding=2,
+    ),
     voice=score["flute voice"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (1,)),
+    evans.RhythmHandler(evans.even_division([4])),
+    evans.PitchHandler(transforms.initial_progression),
+    trinton.linear_attachment_command(
+        attachments=[abjad.Clef("bass"), abjad.Clef("treble")],
+        selector=trinton.select_leaves_by_index([0, 1]),
+    ),
+    voice=score["piano 2 voice"]
 )
 
 # write sc file

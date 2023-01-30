@@ -1,3 +1,9 @@
+\version "2.23.14"
+\language "english"
+\include "/Users/trintonprater/scores/daheitian/daheitian/build/sketch-stylesheet.ily"
+\include "/Users/trintonprater/abjad/abjad/scm/abjad.ily"
+\score
+{
     % OPEN_BRACKETS:
     \context Score = "Score"
     <<
@@ -1017,3 +1023,4 @@
         >>
     % CLOSE_BRACKETS:
     >>
+}
