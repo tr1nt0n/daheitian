@@ -12,138 +12,97 @@ from daheitian import transforms
 
 score = library.daheitian_score(
     [
-        (34, 16),
+        (9, 4),
+        (9, 4),
+        (9, 4),
+        (9, 4),
     ]
 )
 
-# flute
+# commands
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (1,)),
-    evans.RhythmHandler(evans.even_division([16])),
+    lambda _: trinton.select_target(_, (1, 4)),
+    evans.RhythmHandler(evans.even_division([4])),
     evans.PitchHandler(transforms.piano_chords_rh),
     trinton.force_accidentals_command(selector=trinton.pleaves()),
     trinton.noteheads_only(),
     trinton.attachment_command(
         attachments=[abjad.Clef("treble")],
-        selector=trinton.select_leaves_by_index(
+        selector=trinton.patterned_leaf_index_selector(
             [
                 1,
-                9,
-                13,
-                16,
-                18,
-                25,
-                32,
-            ]
+            ],
+            3,
         ),
     ),
     trinton.attachment_command(
         attachments=[abjad.Clef("bass")],
-        selector=trinton.select_leaves_by_index(
-            [
-                0,
-                7,
-                11,
-                14,
-                17,
-                24,
-                31,
-                33,
-            ]
-        ),
+        selector=trinton.patterned_leaf_index_selector([0], 3),
     ),
-    trinton.ottava_command(
-        selector=trinton.select_leaves_by_index(
-            [
-                1,
-                1,
-                3,
-                3,
-                5,
-                5,
-                9,
-                9,
-                19,
-                20,
-                22,
-                22,
-                26,
-                29,
-                32,
-                32,
-            ],
-        )
+    trinton.attachment_command(
+        attachments=[abjad.Ottava(n=1), abjad.Ottava(n=0, site="after")],
+        selector=trinton.patterned_leaf_index_selector([2], 3),
     ),
     voice=score["piano 1 voice"],
 )
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (1,)),
-    evans.RhythmHandler(evans.even_division([16])),
+    lambda _: trinton.select_target(_, (1, 4)),
+    evans.RhythmHandler(evans.even_division([4])),
     evans.PitchHandler(transforms.piano_chords_lh),
     trinton.force_accidentals_command(selector=trinton.pleaves()),
     trinton.noteheads_only(),
     trinton.attachment_command(
         attachments=[abjad.Clef("treble")],
-        selector=trinton.select_leaves_by_index(
+        selector=trinton.patterned_leaf_index_selector(
             [
                 1,
-                9,
-                13,
-                16,
-                18,
-                25,
-                32,
-            ]
+            ],
+            3,
         ),
     ),
     trinton.attachment_command(
         attachments=[abjad.Clef("bass")],
-        selector=trinton.select_leaves_by_index(
-            [
-                0,
-                7,
-                11,
-                14,
-                17,
-                24,
-                31,
-                33,
-            ]
-        ),
+        selector=trinton.patterned_leaf_index_selector([0], 3),
     ),
-    trinton.ottava_command(
-        selector=trinton.select_leaves_by_index(
-            [
-                1,
-                1,
-                3,
-                3,
-                5,
-                5,
-                9,
-                9,
-                19,
-                20,
-                22,
-                22,
-                26,
-                29,
-                32,
-                32,
-            ],
-        )
+    trinton.attachment_command(
+        attachments=[abjad.Ottava(n=1), abjad.Ottava(n=0, site="after")],
+        selector=trinton.patterned_leaf_index_selector([2], 3),
     ),
     voice=score["piano 2 voice"],
 )
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (1,)),
-    evans.RhythmHandler(evans.even_division([8])),
-    evans.PitchHandler([9, 10, 13, 15, "es''", 18, 20, 21]),
-    library.respell_harp(),
+    lambda _: trinton.select_target(_, (1, 4)),
+    evans.RhythmHandler(
+        evans.tuplet(
+            [
+                (
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                ),
+                (
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                ),
+            ]
+        )
+    ),
+    library.pitch_harp_arpeggi(),
+    trinton.noteheads_only(),
+    trinton.invisible_tuplet_brackets(),
     voice=score["harp voice"],
+    preprocessor=trinton.fuse_quarters_preprocessor((1,)),
 )
 
 # write sc file

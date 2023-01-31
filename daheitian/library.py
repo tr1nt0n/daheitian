@@ -9,6 +9,7 @@ import quicktions
 from abjadext import rmakers
 from abjadext import microtones
 from itertools import cycle
+from daheitian import transforms
 
 # score
 
@@ -540,10 +541,25 @@ def write_short_instrument_names(score):
 # pitch tools
 
 
+def pitch_harp_arpeggi(chord_slice=0, selector=trinton.pleaves()):
+    def pitch(argument):
+        selections = selector(argument)
+        pitch_list = []
+        chords = transforms.harp_arpeggi[chord_slice:]
+        for chord in chords:
+            for pitch in chord:
+                pitch_list.append(pitch)
+
+        handler = evans.PitchHandler(pitch_list=pitch_list)
+        handler(selections)
+
+    return pitch
+
+
 # rhythm tools
 
 
-def flute_graces():
+def flute_graces(mod=3):
     def graces(argument):
         pleaves = abjad.select.leaves(argument, pitched=True)
 
@@ -558,11 +574,11 @@ def flute_graces():
         relevant_leaves = []
 
         for leaf in pleaves:
-            if leaf.written_pitch.number == 15:
+            if leaf.written_pitch.number == 15 or leaf.written_pitch.number == 19:
                 relevant_leaves.append(leaf)
 
         for leaf in relevant_leaves:
-            if relevant_leaves.index(leaf) % 3 == 0:
+            if relevant_leaves.index(leaf) % mod == 0:
                 handler(leaf)
 
     return graces
@@ -609,20 +625,43 @@ def change_lines(
     return change
 
 
-def invisible_tuplet_brackets():
-    def command(argument):
-        for tuplet in abjad.select.tuplets(argument):
-            abjad.attach(
-                abjad.LilyPondLiteral(
-                    "\once \override TupletBracket.stencil = ##f", "before"
-                ),
-                tuplet,
-            )
-            abjad.attach(
-                abjad.LilyPondLiteral(
-                    "\once \override TupletNumber.stencil = ##f", "before"
-                ),
-                tuplet,
-            )
+def harp_clefs(selector=trinton.pleaves()):
+    def clefs(argument):
+        selections = selector(argument)
+        for leaf in selections:
+            with_previous_leaf = abjad.select.with_previous_leaf(leaf)
+            previous_leaf = with_previous_leaf[0]
+            if leaf.written_pitch.number < -5:
+                abjad.attach(abjad.Clef("bass"), leaf)
+            else:
+                abjad.attach(abjad.Clef("treble"), leaf)
 
-    return command
+            if (
+                previous_leaf.written_pitch.number < -5
+                and leaf.written_pitch.number < -5
+            ):
+                abjad.detach(abjad.Clef, leaf)
+
+            if (
+                previous_leaf.written_pitch.number > -5
+                and leaf.written_pitch.number > -5
+            ):
+                abjad.detach(abjad.Clef, leaf)
+
+    return clefs
+
+
+def piano_pedals(selector=trinton.pleaves()):
+    def pedals(argument):
+        selections = selector(argument)
+        logical_ties = abjad.select.logical_ties(selections, pitched=True)
+
+        groups = abjad.sequence.partition_by_counts(
+            sequence=logical_ties,
+            counts=[3 for _ in range(len(logical_ties))],
+            overhang=True,
+        )
+        for group in groups:
+            abjad.piano_pedal(group)
+
+    return pedals

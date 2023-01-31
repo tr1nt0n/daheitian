@@ -12,8 +12,20 @@
         {
             % OPENING:
             % COMMANDS:
-            \time 34/16
-            s1 * 17/8
+            \time 9/4
+            s1 * 9/4
+            % OPENING:
+            % COMMANDS:
+            \time 9/4
+            s1 * 9/4
+            % OPENING:
+            % COMMANDS:
+            \time 9/4
+            s1 * 9/4
+            % OPENING:
+            % COMMANDS:
+            \time 9/4
+            s1 * 9/4
         % CLOSE_BRACKETS:
         }
         % OPEN_BRACKETS:
@@ -32,7 +44,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
-                        r1 * 17/8
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -47,7 +62,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
-                        r1 * 17/8
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -62,7 +80,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Klarinette in Es }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kl. }
-                        r1 * 17/8
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -77,7 +98,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Fagotte }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { fg.}
-                        r1 * 17/8
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -94,7 +118,10 @@
                     % COMMANDS:
                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Hörner in F }
                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hn. }
-                    r1 * 17/8
+                    r1 * 9/4
+                    r1 * 9/4
+                    r1 * 9/4
+                    r1 * 9/4
                 % CLOSE_BRACKETS:
                 }
             % CLOSE_BRACKETS:
@@ -112,7 +139,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Trompeten in C }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ tpt. }
-                        r1 * 17/8
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -127,7 +157,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tenorposaunen }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pos. }
-                        r1 * 17/8
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -142,7 +175,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tuben }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { tb. }
-                        r1 * 17/8
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -170,131 +206,7 @@
                         % OPENING:
                         % COMMANDS:
                         \clef "bass"
-                        <ef,! c!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        \ottava 1
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "treble"
-                        <g'''! f''''!>16
-                        % AFTER:
-                        % COMMANDS:
-                        \ottava 0
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <g''! bf''! b''! ef'''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        \ottava 1
-                        <c''''! bf''''!>16
-                        % AFTER:
-                        % COMMANDS:
-                        \ottava 0
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <d''! f''! fs''! bf''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        \ottava 1
-                        <c''''! bf''''!>16
-                        % AFTER:
-                        % COMMANDS:
-                        \ottava 0
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <g''! bf''! b''! ef'''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "bass"
-                        <bf,! g!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <ef,! d!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        \ottava 1
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "treble"
-                        <g'''! f''''!>16
-                        % AFTER:
-                        % COMMANDS:
-                        \ottava 0
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <e''! g''! af''! c'''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "bass"
-                        <ef,! d!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <bf,! g!>16
+                        <ef,! c!>4
                         % BEFORE:
                         % COMMANDS:
                         \once \override Beam.stencil = ##f
@@ -305,59 +217,7 @@
                         % OPENING:
                         % COMMANDS:
                         \clef "treble"
-                        <c''! ef''! e''! af''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "bass"
-                        <a,! fs!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <bf,! g!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "treble"
-                        <ef''! fs''! g''! b''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "bass"
-                        <fs,! ef!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "treble"
-                        <d''! f''! fs''! bf''!>16
+                        <cs''! d''! f''! a''!>4
                         % BEFORE:
                         % COMMANDS:
                         \once \override Beam.stencil = ##f
@@ -366,135 +226,7 @@
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
                         \ottava 1
-                        <a'''! g''''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <d''''! c'''''!>16
-                        % AFTER:
-                        % COMMANDS:
-                        \ottava 0
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <d''! f''! fs''! bf''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        \ottava 1
-                        <bf'''! af''''!>16
-                        % AFTER:
-                        % COMMANDS:
-                        \ottava 0
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <c''! ef''! e''! af''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "bass"
-                        <d,! cs!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "treble"
-                        <g''! bf''! b''! ef'''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        \ottava 1
-                        <b'''! a''''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <fs'''! e''''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <d''''! c'''''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <b'''! a''''!>16
-                        % AFTER:
-                        % COMMANDS:
-                        \ottava 0
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <g''! bf''! b''! ef'''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "bass"
-                        <af,! g!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        \ottava 1
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "treble"
-                        <b'''! a''''!>16
+                        <fs'''! e''''!>4
                         % AFTER:
                         % COMMANDS:
                         \ottava 0
@@ -508,7 +240,370 @@
                         % OPENING:
                         % COMMANDS:
                         \clef "bass"
-                        <fs,! ef!>16
+                        <ef,! c!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <c''! ef''! e''! af''!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <fs'''! e''''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        <e,! cs!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <ef''! e''! g''! b''!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <af'''! fs''''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        <e,! ef!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <ef''! e''! g''! b''!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <g'''! f''''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        <fs,! ef!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <ef''! fs''! g''! b''!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <bf'''! af''''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        <fs,! ef!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <ef''! e''! g''! b''!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <b'''! a''''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        <a,! fs!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <f''! fs''! a''! cs'''!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <c''''! bf''''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        <a,! af!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <g''! bf''! b''! ef'''!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <b'''! a''''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        <a,! fs!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <af''! a''! c'''! e'''!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <cs''''! b''''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        <a,! fs!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <af''! a''! c'''! e'''!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <c''''! bf''''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        <a,! fs!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <fs''! a''! bf''! d'''!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <c''''! bf''''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        <a,! af!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <af''! a''! c'''! e'''!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <cs''''! b''''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -529,131 +624,7 @@
                         % OPENING:
                         % COMMANDS:
                         \clef "bass"
-                        <bf,,!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        \ottava 1
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "treble"
-                        <bf''!>16
-                        % AFTER:
-                        % COMMANDS:
-                        \ottava 0
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <d'! cs''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        \ottava 1
-                        <ef'''!>16
-                        % AFTER:
-                        % COMMANDS:
-                        \ottava 0
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <a! af'!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        \ottava 1
-                        <f'''!>16
-                        % AFTER:
-                        % COMMANDS:
-                        \ottava 0
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <d'! cs''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "bass"
-                        <f,!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <c,!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        \ottava 1
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "treble"
-                        <c'''!>16
-                        % AFTER:
-                        % COMMANDS:
-                        \ottava 0
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <b! bf'!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "bass"
-                        <c,!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <f,!>16
+                        <bf,,!>4
                         % BEFORE:
                         % COMMANDS:
                         \once \override Beam.stencil = ##f
@@ -664,59 +635,7 @@
                         % OPENING:
                         % COMMANDS:
                         \clef "treble"
-                        <g! fs'!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "bass"
-                        <e,!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <f,!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "treble"
-                        <bf! a'!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "bass"
-                        <cs,!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "treble"
-                        <a! af'!>16
+                        <af! g'!>4
                         % BEFORE:
                         % COMMANDS:
                         \once \override Beam.stencil = ##f
@@ -725,135 +644,7 @@
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
                         \ottava 1
-                        <c'''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <f'''!>16
-                        % AFTER:
-                        % COMMANDS:
-                        \ottava 0
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <a! af'!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        \ottava 1
-                        <ef'''!>16
-                        % AFTER:
-                        % COMMANDS:
-                        \ottava 0
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <g! fs'!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "bass"
-                        <b,,!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "treble"
-                        <d'! cs''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        \ottava 1
-                        <fs'''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <b''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <f'''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <d'''!>16
-                        % AFTER:
-                        % COMMANDS:
-                        \ottava 0
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        <d'! cs''!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "bass"
-                        <f,!>16
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Dots.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override NoteHead.duration-log = 2
-                        \once \override Stem.stencil = ##f
-                        \ottava 1
-                        % OPENING:
-                        % COMMANDS:
-                        \clef "treble"
-                        <fs'''!>16
+                        <b''!>4
                         % AFTER:
                         % COMMANDS:
                         \ottava 0
@@ -867,7 +658,370 @@
                         % OPENING:
                         % COMMANDS:
                         \clef "bass"
-                        <cs,!>16
+                        <bf,,!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <g! fs'!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <b''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        <b,,!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <bf! a'!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <b''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        <cs,!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <bf! a'!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <c'''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        <cs,!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <bf! a'!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <ef'''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        <cs,!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <bf! a'!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <d'''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        <e,!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <c'! b'!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <f'''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        <fs,!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <d'! cs''!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <e'''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        <e,!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <ef'! d''!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <e'''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        <e,!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <ef'! d''!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <f'''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        <e,!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <cs'! c''!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <f'''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        <fs,!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
+                        <ef'! d''!>4
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \ottava 1
+                        <e'''!>4
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -882,25 +1036,2202 @@
                 {
                     % BEFORE:
                     % COMMANDS:
-                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
-                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
-                    a'8
-                    bf'8
-                    cs''8
-                    ds''8
-                    es''8
-                    fs''8
-                    gs''8
-                    a''8
-                    a'8
-                    bf'8
-                    cs''8
-                    ds''8
-                    es''8
-                    fs''8
-                    gs''8
-                    a''8
-                    a'8
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 2/3
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
+                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
+                        bf,16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        cs''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        fs''16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 4/7
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        cs'''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es'''16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 2/3
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        fs16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 4/7
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a,16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 2/3
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        cs''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        fs''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf,16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds''16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 4/7
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        cs'''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es'''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs''16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 2/3
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        fs16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds'16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 4/7
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a,16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 2/3
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf,16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        fs''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        cs''16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 4/7
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        cs'''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es'''16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 2/3
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        fs16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds'16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 4/7
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a,16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a''16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 2/3
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        cs''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf,16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        fs''16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 4/7
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        cs'''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es'''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs'16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 2/3
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        fs16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds'16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 4/7
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a,16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 2/3
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        cs''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf,16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        fs''16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 4/7
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es'''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        cs'''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs''16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 2/3
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        fs16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 4/7
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a,16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 2/3
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        cs''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        fs''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf,16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 4/7
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es'''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        cs'''16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 2/3
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        fs16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds'16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 4/7
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a,16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 2/3
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        fs''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        cs''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf,16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds''16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 4/7
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        cs'''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es'''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 2/3
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        fs16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 4/7
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a,16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a'16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 2/3
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        fs''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        cs''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf,16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds''16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 4/7
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es'''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        cs'''16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 2/3
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        fs16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds'16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 4/7
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a,16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 2/3
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf,16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        fs''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        cs''16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 4/7
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es'''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        cs'''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        gs''16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 2/3
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        fs16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a'16
+                    % CLOSE_BRACKETS:
+                    }
+                    % BEFORE:
+                    % COMMANDS:
+                    \once \override TupletBracket.stencil = ##f
+                    \once \override TupletNumber.stencil = ##f
+                    % OPEN_BRACKETS:
+                    \times 4/7
+                    {
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a,16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        a''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        es''16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        ds'16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override Beam.stencil = ##f
+                        \once \override Dots.stencil = ##f
+                        \once \override Flag.stencil = ##f
+                        \once \override NoteHead.duration-log = 2
+                        \once \override Stem.stencil = ##f
+                        bf16
+                    % CLOSE_BRACKETS:
+                    }
                 % CLOSE_BRACKETS:
                 }
             % CLOSE_BRACKETS:
@@ -915,7 +3246,10 @@
                     % COMMANDS:
                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Pauken }
                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pk. }
-                    r1 * 17/8
+                    r1 * 9/4
+                    r1 * 9/4
+                    r1 * 9/4
+                    r1 * 9/4
                 % CLOSE_BRACKETS:
                 }
             % CLOSE_BRACKETS:
@@ -933,7 +3267,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
-                        r1 * 17/8
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -948,7 +3285,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
-                        r1 * 17/8
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -968,7 +3308,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violinen 1 }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vl. 1 }
-                        r1 * 17/8
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -983,7 +3326,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violinen 2 }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vl. 2 }
-                        r1 * 17/8
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -998,7 +3344,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
-                        r1 * 17/8
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1013,7 +3362,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
-                        r1 * 17/8
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1028,7 +3380,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Kontrabässe }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kb. }
-                        r1 * 17/8
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
+                        r1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:

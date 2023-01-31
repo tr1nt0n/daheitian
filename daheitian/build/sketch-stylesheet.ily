@@ -52,6 +52,7 @@
         \numericTimeSignature
         \accepts TimeSignatureContext
         proportionalNotationDuration = #(ly:make-moment 1 20)
+        pedalSustainStyle = #'bracket
 
         \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 0) (minimum distance . 7) (padding . 7) (stretchability . 28))
         \override StaffGrouper.staffgroup-staff-spacing = #'((basic-distance . 0) (minimum distance . 7) (padding . 7) (stretchability . 28))
@@ -125,8 +126,8 @@
         \override Tie.height-limit = 6
         \override Tie.thickness = 1.5
 
-        tupletFullLength = ##t
-        \override TupletBracket.full-length-to-extent = ##f
+        % tupletFullLength = ##t
+        % \override TupletBracket.full-length-to-extent = ##f
         \override TupletBracket.padding = 3
         \override TupletNumber.font-size = 1.5
         \override TupletBracket.bracket-visibility = ##t

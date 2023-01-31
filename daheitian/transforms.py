@@ -8,7 +8,7 @@ from abjadext import rmakers
 from abjadext import microtones
 from daheitian import library
 
-# initial link chords
+# piano link chords
 
 initial_progression = [
     [
@@ -39,14 +39,18 @@ for _ in range(0, 12):
 
 alpha_progression = []
 
-pattern_1 = abjad.Pattern(indices=[1, 4, 5], period=6)
+pattern_1 = abjad.Pattern(
+    indices=[
+        4,
+        8,
+    ],
+    period=9,
+)
 pattern_2 = abjad.Pattern(
     indices=[
-        0,
-        6,
         9,
     ],
-    period=10,
+    period=12,
 )
 
 for i, chord in zip(range(len(cycled_progression)), cycled_progression):
@@ -155,10 +159,6 @@ for _ in transposed_progression:
     else:
         final_progression.append(_)
 
-random.seed(2)
-
-final_progression = random.sample(final_progression, len(final_progression))
-
 piano_chords_rh = []
 
 piano_chords_lh = []
@@ -179,3 +179,60 @@ for chord in final_progression:
 piano_chords_rh = trinton.remove_adjacent(piano_chords_rh)
 
 piano_chords_lh = trinton.remove_adjacent(piano_chords_lh)
+
+# harp arpeggi
+
+harp_arpeggi = [
+    [
+        "bf,",
+        "bf",
+        "es'",
+        "cs''",
+        "ds''",
+        "fs''",
+    ],
+    [
+        "gs",
+        "gs'",
+        "ds''",
+        "gs''",
+        "bf''",
+        "cs'''",
+        "es'''",
+    ],
+    [
+        "bf''",
+        "a'",
+        "ds'",
+        "bf",
+        "fs",
+        "es",
+    ],
+    [
+        "a,",
+        "bf",
+        "ds'",
+        "a'",
+        "es''",
+        "a''",
+        "bf''",
+    ],
+]
+
+multiplied_arpeggi = []
+
+for _ in range(0, 9):
+    for chord in harp_arpeggi:
+        multiplied_arpeggi.append(chord)
+
+harp_arpeggi = []
+
+for chord in multiplied_arpeggi[0:4]:
+    harp_arpeggi.append(chord)
+
+for chord, seed in zip(
+    multiplied_arpeggi[4:], list(range(len(multiplied_arpeggi[4:])))
+):
+    random.seed(seed)
+    shuffled = random.sample(chord, len(chord))
+    harp_arpeggi.append(shuffled)
