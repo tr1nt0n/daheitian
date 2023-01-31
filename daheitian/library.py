@@ -636,13 +636,18 @@ def harp_clefs(selector=trinton.pleaves()):
             else:
                 abjad.attach(abjad.Clef("treble"), leaf)
 
-            if (
+            if isinstance(previous_leaf, abjad.Rest) or isinstance(
+                previous_leaf, abjad.Skip
+            ):
+                pass
+
+            elif (
                 previous_leaf.written_pitch.number < -5
                 and leaf.written_pitch.number < -5
             ):
                 abjad.detach(abjad.Clef, leaf)
 
-            if (
+            elif (
                 previous_leaf.written_pitch.number > -5
                 and leaf.written_pitch.number > -5
             ):

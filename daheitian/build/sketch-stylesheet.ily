@@ -54,8 +54,8 @@
         proportionalNotationDuration = #(ly:make-moment 1 20)
         pedalSustainStyle = #'bracket
 
-        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 0) (minimum distance . 7) (padding . 7) (stretchability . 28))
-        \override StaffGrouper.staffgroup-staff-spacing = #'((basic-distance . 0) (minimum distance . 7) (padding . 7) (stretchability . 28))
+        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 0) (minimum distance . 5) (padding . 5) (stretchability . 28))
+        \override StaffGrouper.staffgroup-staff-spacing = #'((basic-distance . 0) (minimum distance . 5) (padding . 5) (stretchability . 28))
 
         \override AccidentalSuggestion.avoid-slur = #'ignore
         % \override Accidental.X-extent = ##f
@@ -122,7 +122,9 @@
         \override TextScript.font-name = "Bodoni72 Book"
         \override TextSpanner.font-name = "Bodoni72 Book"
 
-        \override Tie.stencil = #flare-tie
+        % \override Tie.stencil = #flare-tie
+        \shape #'((2.5 . 0) (1.66 . 0) (0.82 . 0) (0 . 0)) Tie
+        \override Tie.X-extent = ##f
         \override Tie.height-limit = 6
         \override Tie.thickness = 1.5
 
