@@ -1,7 +1,7 @@
 \version "2.23.14"
 \language english
 #(set-default-paper-size "11x17portrait")
-#(set-global-staff-size 14)
+#(set-global-staff-size 12)
 #(ly:set-option 'relative-includes #t)
 
 \include "../library.ily"
@@ -35,7 +35,7 @@
         \override MetronomeMark.stencil = ##f
 		\override TimeSignature.X-extent = #'(0 . -25)
         \override TimeSignature.Y-extent = #'(25 . 0)
-        \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 10) (minimum-distance . 10) (padding . 5) (stretchability . 0))
+        \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 14) (minimum-distance . 14) (padding . 10) (stretchability . 0))
         \override TimeSignature.break-visibility = #end-of-line-invisible
         \override TimeSignature.font-size = 12
 		\override TimeSignature.font-name = "Bodoni72 Bold"
@@ -167,6 +167,7 @@
         \override DurationLine.breakable = ##t
 
         \override InstrumentName.self-alignment-X = #CENTER
+        \RemoveAllEmptyStaves
     }
 
     \context {
