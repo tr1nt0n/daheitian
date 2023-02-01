@@ -13,15 +13,10 @@ from daheitian import transforms
 score = library.daheitian_score(
     [
         (3, 2),
-        (4, 4),
-        (3, 2),
-        (3, 4),
     ]
 )
 
 # commands
-
-library.monolith(score=score, measure=1)
 
 # write sc file
 
