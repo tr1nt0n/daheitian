@@ -128,8 +128,8 @@
         \override Tie.height-limit = 6
         \override Tie.thickness = 1.5
 
-        % tupletFullLength = ##t
-        % \override TupletBracket.full-length-to-extent = ##f
+        tupletFullLength = ##t
+        \override TupletBracket.full-length-to-extent = ##f
         \override TupletBracket.padding = 3
         \override TupletNumber.font-size = 1.5
         \override TupletBracket.bracket-visibility = ##t

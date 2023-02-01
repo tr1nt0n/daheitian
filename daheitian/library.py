@@ -10,6 +10,7 @@ from abjadext import rmakers
 from abjadext import microtones
 from itertools import cycle
 from daheitian import transforms
+from daheitian import library
 
 # score
 
@@ -537,6 +538,109 @@ def write_short_instrument_names(score):
     for voice_name, markup in zip(first_voice_names, all_short_instrument_names):
         trinton.attach(voice=score[voice_name], leaves=[0], attachment=markup)
 
+# materials
+
+def monolith(score, measure):
+    target = abjad.select.leaf(score["Global Context"], measure - 1)
+
+    time_signature = abjad.get.indicator(target, abjad.TimeSignature)
+
+    if time_signature != abjad.TimeSignature((3, 2)):
+        raise Exception("Must be 3/2 measure")
+
+    # chimes
+
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (measure,)),
+        evans.RhythmHandler(
+            evans.tuplet([(1,), (2, 3)])
+        ),
+        evans.PitchHandler([["c'", "df'"]]),
+        trinton.linear_attachment_command(
+            attachments=[
+                abjad.Clef("bass"),
+                abjad.Dynamic("mp"),
+                abjad.StartHairpin("--"),
+                abjad.StopHairpin(),
+            ],
+            selector=trinton.select_leaves_by_index([0, 0, 0, -1])
+        ),
+        trinton.notehead_bracket_command(),
+        library.boxed_markup(
+            string="Röhrenglocken"
+        ),
+        library.change_lines(
+            lines=5,
+        ),
+        voice=score["percussion 2 voice"],
+        preprocessor=trinton.fuse_quarters_preprocessor((2, 6))
+    )
+
+    # flutes
+
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (measure,)),
+        evans.RhythmHandler(
+            evans.even_division([64])
+        ),
+        library.flute_flageolets(),
+        trinton.linear_attachment_command(
+            attachments=[
+                abjad.Dynamic("pp"),
+                abjad.StartHairpin("--"),
+                abjad.StopHairpin(),
+            ],
+            selector=trinton.select_leaves_by_index([0, 0, -1])
+        ),
+        voice=score["flute voice"],
+    )
+
+    # horns
+
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (measure,)),
+        evans.RhythmHandler(
+            evans.tuplet(
+                [
+                    (3, 1, 1, 2, 1,),
+                    (7, 1, -12),
+                ]
+            )
+        ),
+        evans.PitchHandler([24]),
+        trinton.notehead_bracket_command(),
+        library.horn_monolith_attachments(),
+        trinton.attachment_command(
+            attachments=[abjad.Articulation(">"),
+            abjad.Articulation("staccato"),],
+            selector=trinton.select_leaves_by_index([2, 4, -1], pitched=True)
+        ),
+        trinton.hooked_spanner_command(
+            string="Flatterhafte Ventile",
+            selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+            right_padding=2
+        ),
+        trinton.linear_attachment_command(
+            attachments=[
+                abjad.Dynamic("ff"),
+                abjad.StartHairpin("o<|"),
+                abjad.Dynamic("f"),
+                abjad.Dynamic("ff"),
+                abjad.Dynamic("mf"),
+                abjad.StartHairpin(">"),
+                abjad.Dynamic("sf"),
+                abjad.StartHairpin("o<"),
+                abjad.Dynamic("fff")
+            ],
+            selector=trinton.select_leaves_by_index(
+                [0, 0, 1, 2, 3, 3, 4, 5, -1], pitched=True
+            ),
+        ),
+        trinton.tremolo_command(selector=trinton.pleaves()),
+        voice=score["frenchhorn voice"],
+        preprocessor=trinton.fuse_quarters_preprocessor((2, 6)),
+        beam_meter=True
+    )
 
 # pitch tools
 
@@ -585,6 +689,14 @@ def flute_graces(mod=3):
 
 
 # notation tools
+
+def boxed_markup(string, selector=trinton.select_leaves_by_index([0], pitched=True)):
+    literal = abjad.LilyPondLiteral(rf'\boxed-markup "{string}" 1', "after")
+    command = trinton.attachment_command(
+        attachments=[literal],
+        selector=selector,
+    )
+    return command
 
 
 def fermata_measures(score, measures, fermata="ufermata"):
@@ -670,3 +782,89 @@ def piano_pedals(selector=trinton.pleaves()):
             abjad.piano_pedal(group)
 
     return pedals
+
+def flute_flageolets(overblow=False, selector=trinton.pleaves()):
+    def attach(argument):
+        selections = selector(argument)
+
+        all_but_first = abjad.select.exclude(selections, [0])
+
+        handler = evans.PitchHandler(["g''''", "a''''", "b''''", "a''''"])
+
+        abjad.attach(
+            abjad.LilyPondLiteral(
+                r"\set fontSize = #-3",
+                "before"
+            ),
+            selections[0]
+        )
+
+        abjad.attach(
+            abjad.Ottava(n=1),
+            selections[0]
+        )
+
+        abjad.slur(selections)
+
+        for leaf in selections:
+            abjad.attach(
+                abjad.Articulation("flageolet"),
+                leaf
+            )
+
+        for leaf in all_but_first:
+            abjad.attach(
+                abjad.LilyPondLiteral(r"\once \override Stem.stencil = ##f", "before"),
+                leaf,
+            )
+            abjad.attach(
+                abjad.LilyPondLiteral(r"\once \override Beam.stencil = ##f", "before"),
+                leaf,
+            )
+            abjad.attach(
+                abjad.LilyPondLiteral(r"\once \override Flag.stencil = ##f", "before"),
+                leaf,
+            )
+
+        abjad.attach(
+            abjad.LilyPondLiteral(
+                r"\set fontSize = #-0.25",
+                "after"
+            ),
+            leaf
+        )
+
+        abjad.attach(
+            abjad.Ottava(n=0, site="after"),
+            selections[-1]
+        )
+
+        abjad.beam(selections[0:2])
+
+        handler(selections)
+
+    return attach
+
+def horn_monolith_attachments(selector=trinton.pleaves()):
+    def attach(argument):
+        selections = selector(argument)
+
+        abjad.attach(
+            abjad.LilyPondLiteral(r"\highest", "before"),
+            selections[0]
+        )
+
+        abjad.attach(
+            abjad.LilyPondLiteral(r"\revert-noteheads", "after"),
+            selections[-1]
+        )
+
+        for leaf in selections:
+            abjad.attach(
+                abjad.LilyPondLiteral(
+                    r"\once \override NoteHead.no-ledgers = ##t", "before"
+                ),
+                leaf
+            )
+
+    return attach
