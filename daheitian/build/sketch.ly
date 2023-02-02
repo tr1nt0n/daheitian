@@ -916,7 +916,7 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
-                        r1 * 3/2
+                        R1 * 3/2
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -931,7 +931,7 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Klarinette in Es }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kl. }
-                        r1 * 3/2
+                        R1 * 3/2
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -946,7 +946,7 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Fagotte }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { fg.}
-                        r1 * 3/2
+                        R1 * 3/2
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1081,7 +1081,7 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Trompeten in C }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ tpt. }
-                        r1 * 3/2
+                        R1 * 3/2
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1096,7 +1096,7 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tenorposaunen }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pos. }
-                        r1 * 3/2
+                        R1 * 3/2
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1111,7 +1111,7 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tuben }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { tb. }
-                        r1 * 3/2
+                        R1 * 3/2
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1131,7 +1131,7 @@
                         % COMMANDS:
                         \set PianoStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Klavier }
                         \set PianoStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { klav. }
-                        r1 * 3/2
+                        R1 * 3/2
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1142,7 +1142,7 @@
                     % OPEN_BRACKETS:
                     \context Voice = "piano 2 voice"
                     {
-                        r1 * 3/2
+                        R1 * 3/2
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1159,7 +1159,7 @@
                     % COMMANDS:
                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
-                    r1 * 3/2
+                    R1 * 3/2
                 % CLOSE_BRACKETS:
                 }
             % CLOSE_BRACKETS:
@@ -1174,7 +1174,7 @@
                     % COMMANDS:
                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Pauken }
                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pk. }
-                    r1 * 3/2
+                    R1 * 3/2
                 % CLOSE_BRACKETS:
                 }
             % CLOSE_BRACKETS:
@@ -1233,7 +1233,7 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
-                        r1 * 3/2
+                        R1 * 3/2
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1253,7 +1253,7 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violinen 1 }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vl. 1 }
-                        r1 * 3/2
+                        R1 * 3/2
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1268,7 +1268,7 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violinen 2 }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vl. 2 }
-                        r1 * 3/2
+                        R1 * 3/2
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1283,7 +1283,7 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
-                        r1 * 3/2
+                        R1 * 3/2
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1298,7 +1298,7 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
-                        r1 * 3/2
+                        R1 * 3/2
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1313,7 +1313,7 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Kontrabässe }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kb. }
-                        r1 * 3/2
+                        R1 * 3/2
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:

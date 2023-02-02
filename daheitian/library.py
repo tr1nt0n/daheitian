@@ -706,6 +706,21 @@ def boxed_markup(string, selector=trinton.select_leaves_by_index([0], pitched=Tr
 
 
 def fermata_measures(score, measures, fermata="ufermata"):
+
+    for voice in abjad.iterate.components(score["Staff Group"], abjad.Staff):
+        all_measures = abjad.select.group_by_measure(voice)
+
+        clef_whitespace = abjad.LilyPondLiteral(
+            r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
+            "absolute_after",
+        )
+
+        for measure in measures:
+            abjad.attach(start_command, all_measures[measure - 1][0])
+            abjad.attach(clef_whitespace, all_measures[measure - 1][0])
+            if last_measure is False:
+                abjad.attach(stop_command, all_measures[measure - 1][0])
+
     trinton.attach_multiple(
         score=score,
         voice="Global Context",
