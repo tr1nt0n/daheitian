@@ -44,10 +44,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -62,10 +62,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -80,10 +80,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Klarinette in Es }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kl. }
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -98,10 +98,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Fagotte }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { fg.}
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -118,10 +118,10 @@
                     % COMMANDS:
                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Hörner in F }
                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hn. }
-                    r1 * 9/4
-                    r1 * 9/4
-                    r1 * 9/4
-                    r1 * 9/4
+                    R1 * 9/4
+                    R1 * 9/4
+                    R1 * 9/4
+                    R1 * 9/4
                 % CLOSE_BRACKETS:
                 }
             % CLOSE_BRACKETS:
@@ -139,10 +139,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Trompeten in C }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ tpt. }
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -157,10 +157,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tenorposaunen }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pos. }
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -175,10 +175,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tuben }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { tb. }
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1058,6 +1058,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         bf16
                         % BEFORE:
                         % COMMANDS:
@@ -1204,6 +1207,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         fs16
                         % BEFORE:
                         % COMMANDS:
@@ -1237,6 +1243,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         bf16
                         % BEFORE:
                         % COMMANDS:
@@ -1310,6 +1319,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         bf,16
                         % BEFORE:
                         % COMMANDS:
@@ -1318,6 +1330,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         bf16
                         % BEFORE:
                         % COMMANDS:
@@ -1424,6 +1439,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         es16
                         % BEFORE:
                         % COMMANDS:
@@ -1440,6 +1458,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         a'16
                         % BEFORE:
                         % COMMANDS:
@@ -1521,6 +1542,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         a,16
                     % CLOSE_BRACKETS:
                     }
@@ -1538,6 +1562,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         bf16
                         % BEFORE:
                         % COMMANDS:
@@ -1554,6 +1581,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         bf,16
                         % BEFORE:
                         % COMMANDS:
@@ -1562,6 +1592,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         ds''16
                         % BEFORE:
                         % COMMANDS:
@@ -1660,6 +1693,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         fs16
                         % BEFORE:
                         % COMMANDS:
@@ -1668,6 +1704,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         bf''16
                         % BEFORE:
                         % COMMANDS:
@@ -1692,6 +1731,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         es16
                         % BEFORE:
                         % COMMANDS:
@@ -1700,6 +1742,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         ds'16
                     % CLOSE_BRACKETS:
                     }
@@ -1741,6 +1786,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         a,16
                         % BEFORE:
                         % COMMANDS:
@@ -1749,6 +1797,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         es''16
                         % BEFORE:
                         % COMMANDS:
@@ -1806,6 +1857,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         bf,16
                         % BEFORE:
                         % COMMANDS:
@@ -1814,6 +1868,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         ds''16
                         % BEFORE:
                         % COMMANDS:
@@ -1904,6 +1961,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         fs16
                         % BEFORE:
                         % COMMANDS:
@@ -1912,6 +1972,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         bf''16
                         % BEFORE:
                         % COMMANDS:
@@ -1936,6 +1999,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         es16
                         % BEFORE:
                         % COMMANDS:
@@ -1944,6 +2010,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         ds'16
                     % CLOSE_BRACKETS:
                     }
@@ -2001,6 +2070,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         a,16
                         % BEFORE:
                         % COMMANDS:
@@ -2009,6 +2081,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         bf16
                     % CLOSE_BRACKETS:
                     }
@@ -2050,6 +2125,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         bf,16
                         % BEFORE:
                         % COMMANDS:
@@ -2058,6 +2136,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         bf16
                         % BEFORE:
                         % COMMANDS:
@@ -2156,6 +2237,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         fs16
                         % BEFORE:
                         % COMMANDS:
@@ -2164,6 +2248,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         a'16
                         % BEFORE:
                         % COMMANDS:
@@ -2188,6 +2275,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         es16
                     % CLOSE_BRACKETS:
                     }
@@ -2205,6 +2295,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         bf16
                         % BEFORE:
                         % COMMANDS:
@@ -2213,6 +2306,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         a,16
                         % BEFORE:
                         % COMMANDS:
@@ -2221,6 +2317,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         es''16
                         % BEFORE:
                         % COMMANDS:
@@ -2310,6 +2409,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         bf,16
                     % CLOSE_BRACKETS:
                     }
@@ -2327,6 +2429,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         bf''16
                         % BEFORE:
                         % COMMANDS:
@@ -2416,6 +2521,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         es16
                         % BEFORE:
                         % COMMANDS:
@@ -2432,6 +2540,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         ds'16
                     % CLOSE_BRACKETS:
                     }
@@ -2457,6 +2568,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         a,16
                         % BEFORE:
                         % COMMANDS:
@@ -2465,6 +2579,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         es''16
                         % BEFORE:
                         % COMMANDS:
@@ -2546,6 +2663,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         bf,16
                         % BEFORE:
                         % COMMANDS:
@@ -2554,6 +2674,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         ds''16
                     % CLOSE_BRACKETS:
                     }
@@ -2644,6 +2767,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         es16
                         % BEFORE:
                         % COMMANDS:
@@ -2652,6 +2778,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         bf''16
                         % BEFORE:
                         % COMMANDS:
@@ -2668,6 +2797,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         fs16
                         % BEFORE:
                         % COMMANDS:
@@ -2676,6 +2808,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         bf16
                     % CLOSE_BRACKETS:
                     }
@@ -2709,6 +2844,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         a,16
                         % BEFORE:
                         % COMMANDS:
@@ -2717,6 +2855,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         es''16
                         % BEFORE:
                         % COMMANDS:
@@ -2782,6 +2923,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         bf,16
                         % BEFORE:
                         % COMMANDS:
@@ -2790,6 +2934,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         es'16
                         % BEFORE:
                         % COMMANDS:
@@ -2880,6 +3027,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         es16
                         % BEFORE:
                         % COMMANDS:
@@ -2888,6 +3038,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         a'16
                         % BEFORE:
                         % COMMANDS:
@@ -2896,6 +3049,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         fs16
                         % BEFORE:
                         % COMMANDS:
@@ -2904,6 +3060,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         bf16
                         % BEFORE:
                         % COMMANDS:
@@ -2969,6 +3128,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         a,16
                         % BEFORE:
                         % COMMANDS:
@@ -2977,6 +3139,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         bf''16
                         % BEFORE:
                         % COMMANDS:
@@ -3002,6 +3167,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         bf,16
                         % BEFORE:
                         % COMMANDS:
@@ -3010,6 +3178,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         bf16
                         % BEFORE:
                         % COMMANDS:
@@ -3124,6 +3295,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         fs16
                         % BEFORE:
                         % COMMANDS:
@@ -3132,6 +3306,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         ds'16
                         % BEFORE:
                         % COMMANDS:
@@ -3148,6 +3325,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         es16
                         % BEFORE:
                         % COMMANDS:
@@ -3156,6 +3336,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         bf16
                         % BEFORE:
                         % COMMANDS:
@@ -3181,6 +3364,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         a,16
                         % BEFORE:
                         % COMMANDS:
@@ -3189,6 +3375,9 @@
                         \once \override Flag.stencil = ##f
                         \once \override NoteHead.duration-log = 2
                         \once \override Stem.stencil = ##f
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "treble"
                         a'16
                         % BEFORE:
                         % COMMANDS:
@@ -3246,10 +3435,10 @@
                     % COMMANDS:
                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Pauken }
                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pk. }
-                    r1 * 9/4
-                    r1 * 9/4
-                    r1 * 9/4
-                    r1 * 9/4
+                    R1 * 9/4
+                    R1 * 9/4
+                    R1 * 9/4
+                    R1 * 9/4
                 % CLOSE_BRACKETS:
                 }
             % CLOSE_BRACKETS:
@@ -3267,10 +3456,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -3285,10 +3474,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -3308,10 +3497,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violinen 1 }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vl. 1 }
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -3326,10 +3515,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violinen 2 }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vl. 2 }
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -3344,10 +3533,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -3362,10 +3551,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -3380,10 +3569,10 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Kontrabässe }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kb. }
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
-                        r1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
+                        R1 * 9/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:

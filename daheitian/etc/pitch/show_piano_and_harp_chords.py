@@ -101,6 +101,7 @@ trinton.make_music(
     library.pitch_harp_arpeggi(),
     trinton.noteheads_only(),
     trinton.invisible_tuplet_brackets(),
+    library.harp_clefs(),
     voice=score["harp voice"],
     preprocessor=trinton.fuse_quarters_preprocessor((1,)),
 )
