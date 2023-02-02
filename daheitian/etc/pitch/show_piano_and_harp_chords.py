@@ -102,6 +102,10 @@ trinton.make_music(
     trinton.noteheads_only(),
     trinton.invisible_tuplet_brackets(),
     library.harp_clefs(),
+    trinton.attachment_command(
+        attachments=[abjad.Clef("bass")],
+        selector=trinton.select_leaves_by_index([0]),
+    ),
     voice=score["harp voice"],
     preprocessor=trinton.fuse_quarters_preprocessor((1,)),
 )

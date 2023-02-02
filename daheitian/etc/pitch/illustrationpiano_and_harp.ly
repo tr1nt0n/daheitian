@@ -1050,6 +1050,9 @@
                         \once \override Stem.stencil = ##f
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
                         bf,16
                         % BEFORE:
                         % COMMANDS:
