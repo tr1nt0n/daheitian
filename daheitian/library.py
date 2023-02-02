@@ -716,10 +716,10 @@ def fermata_measures(score, measures, fermata="ufermata"):
         )
 
         for measure in measures:
-            abjad.attach(start_command, all_measures[measure - 1][0])
-            abjad.attach(clef_whitespace, all_measures[measure - 1][0])
-            if last_measure is False:
-                abjad.attach(stop_command, all_measures[measure - 1][0])
+            relevant_leaf = all_measures[measure - 1][0]
+            next_leaf = abjad.select.with_next_leaf(relevant_leaf)[-1]
+            if abjad.get.has_indicator(next_leaf, abjad.Clef):
+                abjad.attach(clef_whitespace, relevant_leaf)
 
     trinton.attach_multiple(
         score=score,
