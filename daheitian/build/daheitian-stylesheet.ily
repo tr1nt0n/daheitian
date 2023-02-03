@@ -26,12 +26,20 @@
         \numericTimeSignature
         \type Engraver_group
         \consists Axis_group_engraver
+        \consists Bar_number_engraver
         \consists Time_signature_engraver
 		\consists Mark_engraver
 		\consists Metronome_mark_engraver
 		\consists Text_engraver
 		\consists Text_spanner_engraver
         \consists Measure_spanner_engraver
+        \override BarNumber.stencil = #(make-stencil-circler 0.1 0.75 ly:text-interface::print)
+        \override BarNumber.Y-extent = ##f
+        \override BarNumber.Y-offset = -10.5
+        \override BarNumber.extra-offset = #'(-0.5 . 0.5)
+        \override BarNumber.font-size = 7
+        \override BarNumber.padding = 4
+        \override BarNumber.font-name = "Bodoni72 Bold"
         \override MetronomeMark.stencil = ##f
 		\override TimeSignature.X-extent = #'(0 . -25)
         \override TimeSignature.Y-extent = #'(25 . 0)
@@ -50,6 +58,7 @@
         \Score
         \numericTimeSignature
         \accepts TimeSignatureContext
+        \remove Bar_number_engraver
         proportionalNotationDuration = #(ly:make-moment 1 20)
         pedalSustainStyle = #'bracket
 
@@ -63,14 +72,6 @@
         % \override BarLine.X-extent = #'(0 . 0)
         \override BarLine.thick-thickness = #10
         \override BarLine.bar-extent = #'(-3.5 . 3.5)
-
-        \override BarNumber.stencil = #(make-stencil-circler 0.1 0.75 ly:text-interface::print)
-        \override BarNumber.Y-extent = ##f
-		\override BarNumber.Y-offset = 0
-		\override BarNumber.extra-offset = #'(-2 . 4)
-        \override BarNumber.font-size = 7
-		\override BarNumber.padding = 5
-        \override BarNumber.font-name = "Bodoni72 Bold"
 
         autoBeaming = ##f
         \override Beam.breakable = ##t

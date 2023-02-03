@@ -18,6 +18,8 @@ score = library.daheitian_score(
 
 # commands
 
+# globals
+
 # write sc file
 
 # trinton.make_sc_file(
