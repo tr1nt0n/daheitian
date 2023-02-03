@@ -20,7 +20,7 @@ def daheitian_score(time_signatures):
         instruments=[
             abjad.Flute(),
             abjad.Oboe(),
-            abjad.ClarinetInEFlat(),
+            abjad.BassClarinet(),
             abjad.Bassoon(),
             abjad.FrenchHorn(),
             abjad.Trumpet(),
@@ -71,7 +71,7 @@ all_voice_names = eval(
     """[
         "flute voice",
         "oboe voice",
-        "clarinetineflat voice",
+        "bassclarinet voice",
         "bassoon voice",
         "frenchhorn voice",
         "trumpet voice",
@@ -95,7 +95,7 @@ first_voice_names = eval(
     """[
         "flute voice",
         "oboe voice",
-        "clarinetineflat voice",
+        "bassclarinet voice",
         "bassoon voice",
         "frenchhorn voice",
         "trumpet voice",
@@ -322,7 +322,7 @@ all_instrument_names = [
     abjad.InstrumentName(
         context="Staff",
         markup=abjad.Markup(
-            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Klarinette in Es }'
+            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Bassklarinetten }'
         ),
     ),
     abjad.InstrumentName(
@@ -388,13 +388,13 @@ all_instrument_names = [
     abjad.InstrumentName(
         context="Staff",
         markup=abjad.Markup(
-            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Violinen 1 }'
+            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Geigen 1 }'
         ),
     ),
     abjad.InstrumentName(
         context="Staff",
         markup=abjad.Markup(
-            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Violinen 2 }'
+            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Geigen 2 }'
         ),
     ),
     abjad.InstrumentName(
@@ -433,7 +433,7 @@ all_short_instrument_names = [
     abjad.ShortInstrumentName(
         context="Staff",
         markup=abjad.Markup(
-            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { kl. }'
+            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { bkl. }'
         ),
     ),
     abjad.ShortInstrumentName(
@@ -499,13 +499,13 @@ all_short_instrument_names = [
     abjad.ShortInstrumentName(
         context="Staff",
         markup=abjad.Markup(
-            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { vl. 1 }'
+            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { g. 1 }'
         ),
     ),
     abjad.ShortInstrumentName(
         context="Staff",
         markup=abjad.Markup(
-            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { vl. 2 }'
+            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { g. 2 }'
         ),
     ),
     abjad.ShortInstrumentName(
