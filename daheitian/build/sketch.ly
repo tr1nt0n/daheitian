@@ -922,15 +922,15 @@
                 % CLOSE_BRACKETS:
                 }
                 % OPEN_BRACKETS:
-                \context Staff = "clarinetineflat staff"
+                \context Staff = "bassclarinet staff"
                 {
                     % OPEN_BRACKETS:
-                    \context Voice = "clarinetineflat voice"
+                    \context Voice = "bassclarinet voice"
                     {
                         % BEFORE:
                         % COMMANDS:
-                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Klarinette in Es }
-                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kl. }
+                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bassklarinetten }
+                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { bkl. }
                         R1 * 3/2
                     % CLOSE_BRACKETS:
                     }
@@ -1251,8 +1251,8 @@
                     {
                         % BEFORE:
                         % COMMANDS:
-                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violinen 1 }
-                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vl. 1 }
+                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
+                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
                         R1 * 3/2
                     % CLOSE_BRACKETS:
                     }
@@ -1266,8 +1266,8 @@
                     {
                         % BEFORE:
                         % COMMANDS:
-                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violinen 2 }
-                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vl. 2 }
+                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
+                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
                         R1 * 3/2
                     % CLOSE_BRACKETS:
                     }

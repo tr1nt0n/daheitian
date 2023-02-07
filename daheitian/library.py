@@ -718,8 +718,15 @@ def fermata_measures(score, measures, fermata="ufermata"):
         for measure in measures:
             relevant_leaf = all_measures[measure - 1][0]
             next_leaf = abjad.select.with_next_leaf(relevant_leaf)[-1]
+            mm_rest = abjad.MultimeasureRest(1, multiplier=(1, 8))
+            transparent_literal = abjad.LilyPondLiteral(
+                r"\once \override MultiMeasureRest.transparent = ##t",
+                "before",
+            )
+            abjad.attach(transparent_literal, mm_rest)
             if abjad.get.has_indicator(next_leaf, abjad.Clef):
-                abjad.attach(clef_whitespace, relevant_leaf)
+                abjad.attach(clef_whitespace, mm_rest)
+            abjad.mutate.replace(relevant_leaf, mm_rest)
 
     trinton.attach_multiple(
         score=score,
