@@ -123,6 +123,10 @@ map = trinton.logistic_map(
 
 map = eval("""[i for i in map if i > 1]""")
 
+flute_overblowing_pitches = eval(
+    """["a''", "e'''", "a'''", "cs''''", "e''''", "gqf''''", "a''''", "gqf''''", "e''''", "cs''''", "a'''", "e'''", "a''", "a'",]"""
+)
+
 # dictionaries
 
 _bloom_pitches = {
@@ -649,6 +653,18 @@ def monolith(score, measure):
 
 # pitch tools
 
+_voice_to_partial = {
+    "contrabass voice": "a,",
+    "contrabass a voice": "e",
+    "cello voice": 7.5,
+    "cello a voice": 17.5,
+    "viola voice": "e''",
+    "viola a voice": "a'''",
+    "violin 2 voice": "e''''",
+    "violin 2a voice": "g''''",
+    "violin 1 voice": 11,
+}
+
 
 def pitch_harp_arpeggi(chord_slice=0, selector=trinton.pleaves()):
     def pitch(argument):
@@ -694,6 +710,63 @@ def flute_graces(mod=3):
 
 
 # notation tools
+
+
+def flute_overblowing_noteheads(selector=trinton.grace_selector()):
+    def noteheads(argument):
+        selections = selector(argument)
+
+        groups = abjad.sequence.partition_by_counts(
+            sequence=selections,
+            counts=[14 for _ in range(len(selections))],
+            overhang=True,
+        )
+
+        for group in groups:
+            relevant_leaves = abjad.select.exclude(group, [-1])
+
+            for leaf in relevant_leaves:
+                abjad.tweak(leaf.note_head, r"\tweak style #'harmonic")
+
+    return noteheads
+
+
+def parenthesize_noteheads(selector=trinton.exclude_graces()):
+    def parenthesize(argument):
+        selections = selector(argument)
+        selections = abjad.select.leaves(selections, pitched=True)
+        for selection in selections:
+            selection.note_head.is_parenthesized = True
+
+    return parenthesize
+
+
+onbeat_flute_handler = trinton.OnBeatGraceHandler(
+    number_of_attacks=[14],
+    durations=[
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+    ],
+    font_size=-4,
+    leaf_duration=(1, 100),
+    attack_number_forget=False,
+    durations_forget=False,
+    boolean_vector=[1],
+    vector_forget=False,
+    name="onbeat flute graces",
+)
 
 
 def boxed_markup(string, selector=trinton.select_leaves_by_index([0], pitched=True)):
@@ -812,7 +885,7 @@ def piano_pedals(selector=trinton.pleaves()):
     return pedals
 
 
-def flute_flageolets(overblow=False, selector=trinton.pleaves()):
+def flute_flageolets(selector=trinton.pleaves()):
     def attach(argument):
         selections = selector(argument)
 

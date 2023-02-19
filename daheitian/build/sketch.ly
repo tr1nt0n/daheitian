@@ -6,8 +6,11 @@
         {
             % OPENING:
             % COMMANDS:
-            \time 3/2
-            s1 * 3/2
+            \time 15/4
+            s1 * 15/4
+            % AFTER:
+            % MARKUP:
+            - \markup \fontsize #7 "build upward in pitch and dynamic from bass, persist tutti for 37 seconds ( Achtel = 60 ) "
         % CLOSE_BRACKETS:
         }
         % OPEN_BRACKETS:
@@ -22,886 +25,210 @@
                     % OPEN_BRACKETS:
                     \context Voice = "flute voice"
                     {
-                        % BEFORE:
-                        % COMMANDS:
-                        \ottava 1
-                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
-                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
-                        \set fontSize = #-3
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        \pp
-                        % START_BEAM:
-                        [
-                        % SPANNER_STARTS:
-                        (
-                        - \tweak stencil #constante-hairpin
-                        \<
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % STOP_BEAM:
-                        ]
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        g''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        b''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override Beam.stencil = ##f
-                        \once \override Flag.stencil = ##f
-                        \once \override Stem.stencil = ##f
-                        a''''64
-                        % AFTER:
-                        % ARTICULATIONS:
-                        - \flageolet
-                        \!
-                        % SPANNER_STOPS:
-                        )
-                        % COMMANDS:
-                        \ottava 0
-                        \set fontSize = #-0.25
+                        % OPEN_BRACKETS:
+                        <<
+                            % OPEN_BRACKETS:
+                            \context Voice = "On_Beat_Grace_Container"
+                            {
+                            % OPENING:
+                                % COMMANDS:
+                                \set fontSize = #-4
+                                % BEFORE:
+                                % COMMANDS:
+                                \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
+                                \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
+                                % OPENING:
+                                % COMMANDS:
+                                \slash
+                                \voiceOne
+                                \tweak style #'harmonic
+                                a''8 * 2/25
+                                % AFTER:
+                                % START_BEAM:
+                                [
+                                % SPANNER_STARTS:
+                                (
+                                \tweak style #'harmonic
+                                e'''16 * 4/25
+                                \tweak style #'harmonic
+                                a'''16 * 4/25
+                                \tweak style #'harmonic
+                                cs''''16 * 4/25
+                                \tweak style #'harmonic
+                                e''''16 * 4/25
+                                \tweak style #'harmonic
+                                gqf''''16 * 4/25
+                                \tweak style #'harmonic
+                                a''''16 * 4/25
+                                \tweak style #'harmonic
+                                gqf''''16 * 4/25
+                                \tweak style #'harmonic
+                                e''''16 * 4/25
+                                \tweak style #'harmonic
+                                cs''''16 * 4/25
+                                \tweak style #'harmonic
+                                a'''16 * 4/25
+                                \tweak style #'harmonic
+                                e'''16 * 4/25
+                                \tweak style #'harmonic
+                                a''16 * 4/25
+                                a'8 * 2/25
+                                % AFTER:
+                                % SPANNER_STOPS:
+                                )
+                                % STOP_BEAM:
+                                ]
+                            % CLOSE_BRACKETS:
+                            }
+                            % OPEN_BRACKETS:
+                            \context Voice = "flute voice Anchor"
+                            {
+                                % OPENING:
+                                % COMMANDS:
+                                \voiceTwo
+                                \parenthesize
+                                a'2...
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \ff
+                            % CLOSE_BRACKETS:
+                            }
+                        % CLOSE_BRACKETS:
+                        >>
+                        % OPEN_BRACKETS:
+                        <<
+                            % OPEN_BRACKETS:
+                            \context Voice = "On_Beat_Grace_Container"
+                            {
+                            % OPENING:
+                                % COMMANDS:
+                                \set fontSize = #-4
+                                % OPENING:
+                                % COMMANDS:
+                                \slash
+                                \voiceOne
+                                \tweak style #'harmonic
+                                a''8 * 2/25
+                                % AFTER:
+                                % START_BEAM:
+                                [
+                                % SPANNER_STARTS:
+                                (
+                                \tweak style #'harmonic
+                                e'''16 * 4/25
+                                \tweak style #'harmonic
+                                a'''16 * 4/25
+                                \tweak style #'harmonic
+                                cs''''16 * 4/25
+                                \tweak style #'harmonic
+                                e''''16 * 4/25
+                                \tweak style #'harmonic
+                                gqf''''16 * 4/25
+                                \tweak style #'harmonic
+                                a''''16 * 4/25
+                                \tweak style #'harmonic
+                                gqf''''16 * 4/25
+                                \tweak style #'harmonic
+                                e''''16 * 4/25
+                                \tweak style #'harmonic
+                                cs''''16 * 4/25
+                                \tweak style #'harmonic
+                                a'''16 * 4/25
+                                \tweak style #'harmonic
+                                e'''16 * 4/25
+                                \tweak style #'harmonic
+                                a''16 * 4/25
+                                a'8 * 2/25
+                                % AFTER:
+                                % SPANNER_STOPS:
+                                )
+                                % STOP_BEAM:
+                                ]
+                            % CLOSE_BRACKETS:
+                            }
+                            % OPEN_BRACKETS:
+                            \context Voice = "flute voice Anchor"
+                            {
+                                % OPENING:
+                                % COMMANDS:
+                                \voiceTwo
+                                \parenthesize
+                                a'2...
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                            % CLOSE_BRACKETS:
+                            }
+                        % CLOSE_BRACKETS:
+                        >>
+                        % OPEN_BRACKETS:
+                        <<
+                            % OPEN_BRACKETS:
+                            \context Voice = "On_Beat_Grace_Container"
+                            {
+                            % OPENING:
+                                % COMMANDS:
+                                \set fontSize = #-4
+                                % OPENING:
+                                % COMMANDS:
+                                \slash
+                                \voiceOne
+                                \tweak style #'harmonic
+                                a''8 * 2/25
+                                % AFTER:
+                                % START_BEAM:
+                                [
+                                % SPANNER_STARTS:
+                                (
+                                \tweak style #'harmonic
+                                e'''16 * 4/25
+                                \tweak style #'harmonic
+                                a'''16 * 4/25
+                                \tweak style #'harmonic
+                                cs''''16 * 4/25
+                                \tweak style #'harmonic
+                                e''''16 * 4/25
+                                \tweak style #'harmonic
+                                gqf''''16 * 4/25
+                                \tweak style #'harmonic
+                                a''''16 * 4/25
+                                \tweak style #'harmonic
+                                gqf''''16 * 4/25
+                                \tweak style #'harmonic
+                                e''''16 * 4/25
+                                \tweak style #'harmonic
+                                cs''''16 * 4/25
+                                \tweak style #'harmonic
+                                a'''16 * 4/25
+                                \tweak style #'harmonic
+                                e'''16 * 4/25
+                                \tweak style #'harmonic
+                                a''16 * 4/25
+                                a'8 * 2/25
+                                % AFTER:
+                                % SPANNER_STOPS:
+                                )
+                                % STOP_BEAM:
+                                ]
+                            % CLOSE_BRACKETS:
+                            }
+                            % OPEN_BRACKETS:
+                            \context Voice = "flute voice Anchor"
+                            {
+                                % OPENING:
+                                % COMMANDS:
+                                \voiceTwo
+                                \parenthesize
+                                a'2...
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                            % CLOSE_BRACKETS:
+                            }
+                        % CLOSE_BRACKETS:
+                        >>
+                        r2...
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -916,7 +243,7 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
-                        R1 * 3/2
+                        R1 * 15/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -931,7 +258,7 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bassklarinetten }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { bkl. }
-                        R1 * 3/2
+                        R1 * 15/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -946,7 +273,7 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Fagotte }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { fg.}
-                        R1 * 3/2
+                        R1 * 15/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -961,109 +288,9 @@
                 {
                     % BEFORE:
                     % COMMANDS:
-                    \highest
-                    \once \override NoteHead.no-ledgers = ##t
                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Hörner in F }
                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hn. }
-                    % OPENING:
-                    % COMMANDS:
-                    \override Staff.Stem.stemlet-length = 0.75
-                    c'''8.
-                    % AFTER:
-                    % STEM_TREMOLOS:
-                    :64
-                    % ARTICULATIONS:
-                    \ff
-                    % START_BEAM:
-                    [
-                    % SPANNER_STARTS:
-                    - \tweak circled-tip ##t
-                    - \tweak stencil #abjad-flared-hairpin
-                    \<
-                    - \tweak padding #7
-                    - \abjad-dashed-line-with-hook
-                    - \tweak bound-details.left.text \markup \concat { \upright { "Flatterhafte Ventile" } \hspace #0.5 }
-                    - \tweak bound-details.right.padding -2
-                    \startTextSpan
-                    % BEFORE:
-                    % COMMANDS:
-                    \once \override NoteHead.no-ledgers = ##t
-                    c'''16
-                    % AFTER:
-                    % STEM_TREMOLOS:
-                    :128
-                    % ARTICULATIONS:
-                    \f
-                    % BEFORE:
-                    % COMMANDS:
-                    \once \override NoteHead.no-ledgers = ##t
-                    c'''16
-                    % AFTER:
-                    % STEM_TREMOLOS:
-                    :128
-                    % ARTICULATIONS:
-                    - \accent
-                    - \staccato
-                    \ff
-                    % BEFORE:
-                    % COMMANDS:
-                    \once \override NoteHead.no-ledgers = ##t
-                    c'''8
-                    % AFTER:
-                    % STEM_TREMOLOS:
-                    :64
-                    % ARTICULATIONS:
-                    \mf
-                    % SPANNER_STARTS:
-                    \>
-                    % BEFORE:
-                    % COMMANDS:
-                    \once \override NoteHead.no-ledgers = ##t
-                    % OPENING:
-                    % COMMANDS:
-                    \revert Staff.Stem.stemlet-length
-                    c'''16
-                    % AFTER:
-                    % STEM_TREMOLOS:
-                    :128
-                    % ARTICULATIONS:
-                    - \accent
-                    - \staccato
-                    \sf
-                    % STOP_BEAM:
-                    ]
-                    % OPEN_BRACKETS:
-                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 2 0))
-                    \times 4/5
-                    {
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override NoteHead.no-ledgers = ##t
-                        c'''4..
-                        % AFTER:
-                        % STEM_TREMOLOS:
-                        :32
-                        % SPANNER_STARTS:
-                        - \tweak circled-tip ##t
-                        \<
-                        % BEFORE:
-                        % COMMANDS:
-                        \once \override NoteHead.no-ledgers = ##t
-                        c'''16
-                        % AFTER:
-                        % STEM_TREMOLOS:
-                        :128
-                        % ARTICULATIONS:
-                        - \accent
-                        - \staccato
-                        \fff
-                        % SPANNER_STOPS:
-                        \stopTextSpan
-                        % COMMANDS:
-                        \revert-noteheads
-                        r2.
-                    % CLOSE_BRACKETS:
-                    }
+                    R1 * 15/4
                 % CLOSE_BRACKETS:
                 }
             % CLOSE_BRACKETS:
@@ -1081,7 +308,7 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Trompeten in C }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ tpt. }
-                        R1 * 3/2
+                        R1 * 15/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1096,7 +323,7 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tenorposaunen }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pos. }
-                        R1 * 3/2
+                        R1 * 15/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1111,7 +338,7 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tuben }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { tb. }
-                        R1 * 3/2
+                        R1 * 15/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1131,7 +358,7 @@
                         % COMMANDS:
                         \set PianoStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Klavier }
                         \set PianoStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { klav. }
-                        R1 * 3/2
+                        R1 * 15/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1142,7 +369,7 @@
                     % OPEN_BRACKETS:
                     \context Voice = "piano 2 voice"
                     {
-                        R1 * 3/2
+                        R1 * 15/4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1159,7 +386,7 @@
                     % COMMANDS:
                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
-                    R1 * 3/2
+                    R1 * 15/4
                 % CLOSE_BRACKETS:
                 }
             % CLOSE_BRACKETS:
@@ -1174,7 +401,7 @@
                     % COMMANDS:
                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Pauken }
                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pk. }
-                    R1 * 3/2
+                    R1 * 15/4
                 % CLOSE_BRACKETS:
                 }
             % CLOSE_BRACKETS:
@@ -1190,35 +417,151 @@
                     {
                         % ABSOLUTE_BEFORE:
                         % COMMANDS:
-                        \staff-line-count 5
+                        \staff-line-count 1
                         % BEFORE:
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
                         % OPENING:
                         % COMMANDS:
-                        \clef "bass"
-                        \clef "treble"
-                        <c' df'>2
+                        \clef "percussion"
+                        c'4
                         % AFTER:
+                        % STEM_TREMOLOS:
+                        :32
                         % ARTICULATIONS:
-                        \mp
+                        - \espressivo
+                        \p
                         % SPANNER_STARTS:
-                        - \tweak stencil #constante-hairpin
-                        \<
+                        ~
                         % COMMANDS:
-                        \boxed-markup "Röhrenglocken" 1
-                        % OPEN_BRACKETS:
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 2 0))
-                        \times 4/5
-                        {
-                            <c' df'>2
-                            <c' df'>2.
-                            % AFTER:
-                            % ARTICULATIONS:
-                            \!
-                        % CLOSE_BRACKETS:
-                        }
+                        \boxed-markup "Triangel" 1
+                        c'16
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :128
+                        c'4
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :32
+                        % ARTICULATIONS:
+                        - \espressivo
+                        % SPANNER_STARTS:
+                        ~
+                        c'16
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :128
+                        c'4
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :32
+                        % ARTICULATIONS:
+                        - \espressivo
+                        % SPANNER_STARTS:
+                        ~
+                        c'16
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :128
+                        c'4
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :32
+                        % ARTICULATIONS:
+                        - \espressivo
+                        % SPANNER_STARTS:
+                        ~
+                        c'16
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :128
+                        c'4
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :32
+                        % ARTICULATIONS:
+                        - \espressivo
+                        % SPANNER_STARTS:
+                        ~
+                        c'16
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :128
+                        c'4
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :32
+                        % ARTICULATIONS:
+                        - \espressivo
+                        % SPANNER_STARTS:
+                        ~
+                        c'16
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :128
+                        c'4
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :32
+                        % ARTICULATIONS:
+                        - \espressivo
+                        % SPANNER_STARTS:
+                        ~
+                        c'16
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :128
+                        c'4
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :32
+                        % ARTICULATIONS:
+                        - \espressivo
+                        % SPANNER_STARTS:
+                        ~
+                        c'16
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :128
+                        c'4
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :32
+                        % ARTICULATIONS:
+                        - \espressivo
+                        % SPANNER_STARTS:
+                        ~
+                        c'16
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :128
+                        c'4
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :32
+                        % ARTICULATIONS:
+                        - \espressivo
+                        % SPANNER_STARTS:
+                        ~
+                        c'16
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :128
+                        c'4
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :32
+                        % ARTICULATIONS:
+                        - \espressivo
+                        % SPANNER_STARTS:
+                        ~
+                        c'16
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :128
+                        r4
+                        r16
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1233,7 +576,52 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
-                        R1 * 3/2
+                        a2
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :32
+                        % ARTICULATIONS:
+                        - \espressivo
+                        \p
+                        % COMMANDS:
+                        \boxed-markup "Glockenspiel" 1
+                        a2
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :32
+                        % ARTICULATIONS:
+                        - \espressivo
+                        a2
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :32
+                        % ARTICULATIONS:
+                        - \espressivo
+                        a2
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :32
+                        % ARTICULATIONS:
+                        - \espressivo
+                        a2
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :32
+                        % ARTICULATIONS:
+                        - \espressivo
+                        a2
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :32
+                        % ARTICULATIONS:
+                        - \espressivo
+                        a2
+                        % AFTER:
+                        % STEM_TREMOLOS:
+                        :32
+                        % ARTICULATIONS:
+                        - \espressivo
+                        r4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1253,7 +641,78 @@
                         % COMMANDS:
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
-                        R1 * 3/2
+                        % OPENING:
+                        % PITCHED_TRILL:
+                        \pitchedTrill
+                        \tweak style #'harmonic-mixed
+                        b'2
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \espressivo
+                        \mp
+                        % SPANNER_STARTS:
+                        - \tweak padding #7
+                        - \abjad-dashed-line-with-hook
+                        - \tweak bound-details.left.text \markup \concat { \upright { "MSP" } \hspace #0.5 }
+                        - \tweak bound-details.right.padding -1
+                        \startTextSpan
+                        ~
+                        % TRILL_SPANNER_STARTS:
+                        \startTrillSpan a'
+                        \tweak style #'harmonic-mixed
+                        b'16
+                        \tweak style #'harmonic-mixed
+                        b'2
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \espressivo
+                        % SPANNER_STARTS:
+                        ~
+                        \tweak style #'harmonic-mixed
+                        b'16
+                        \tweak style #'harmonic-mixed
+                        b'2
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \espressivo
+                        % SPANNER_STARTS:
+                        ~
+                        \tweak style #'harmonic-mixed
+                        b'16
+                        \tweak style #'harmonic-mixed
+                        b'2
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \espressivo
+                        % SPANNER_STARTS:
+                        ~
+                        \tweak style #'harmonic-mixed
+                        b'16
+                        \tweak style #'harmonic-mixed
+                        b'2
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \espressivo
+                        % SPANNER_STARTS:
+                        ~
+                        \tweak style #'harmonic-mixed
+                        b'16
+                        \tweak style #'harmonic-mixed
+                        b'2
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \espressivo
+                        % SPANNER_STARTS:
+                        ~
+                        \tweak style #'harmonic-mixed
+                        b'16
+                        % AFTER:
+                        % SPANNER_STOPS:
+                        \stopTextSpan
+                        r4.
+                        % AFTER:
+                        % SPANNER_STOPS:
+                        \stopTrillSpan
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1264,11 +723,144 @@
                     % OPEN_BRACKETS:
                     \context Voice = "violin 2 voice"
                     {
-                        % BEFORE:
+                        % OPEN_BRACKETS:
+                        <<
+                            % OPEN_BRACKETS:
+                            \context Voice = "violin 2 voice temp"
+                            {
+                                % BEFORE:
+                                % COMMANDS:
+                                \ottava 1
+                                \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
+                                \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
+                                % OPENING:
+                                % COMMANDS:
+                                \voiceTwo
+                                % PITCHED_TRILL:
+                                \pitchedTrill
+                                \tweak style #'harmonic-mixed
+                                e''''4.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \mp
+                                % TRILL_SPANNER_STARTS:
+                                \startTrillSpan a'
+                                \tweak style #'harmonic-mixed
+                                e''''4.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''''4.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''''4.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''''4.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''''4.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''''4.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''''4.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''''4.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                r4.
+                                % AFTER:
+                                % SPANNER_STOPS:
+                                \stopTrillSpan
+                            % CLOSE_BRACKETS:
+                            }
+                            % OPEN_BRACKETS:
+                            \context Voice = "violin 2a voice"
+                            {
+                                % OPENING:
+                                % COMMANDS:
+                                \voiceOne
+                                % PITCHED_TRILL:
+                                \pitchedTrill
+                                \tweak style #'harmonic-mixed
+                                g''''4..
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STARTS:
+                                - \tweak padding #18
+                                - \abjad-dashed-line-with-hook
+                                - \tweak bound-details.left.text \markup \concat { \upright { "both voices MSP" } \hspace #0.5 }
+                                - \tweak bound-details.right.padding -8
+                                \startTextSpan
+                                % TRILL_SPANNER_STARTS:
+                                \startTrillSpan a'
+                                \tweak style #'harmonic-mixed
+                                g''''4..
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                g''''4..
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                g''''4..
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                g''''4..
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                g''''4..
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                g''''4..
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                g''''4..
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                r4
+                                % AFTER:
+                                % SPANNER_STOPS:
+                                \stopTrillSpan
+                            % CLOSE_BRACKETS:
+                            }
+                        % CLOSE_BRACKETS:
+                        >>
+                        % AFTER:
                         % COMMANDS:
-                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
-                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
-                        R1 * 3/2
+                        \oneVoice
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1279,11 +871,223 @@
                     % OPEN_BRACKETS:
                     \context Voice = "viola voice"
                     {
-                        % BEFORE:
+                        % OPEN_BRACKETS:
+                        <<
+                            % OPEN_BRACKETS:
+                            \context Voice = "viola voice temp"
+                            {
+                                % BEFORE:
+                                % COMMANDS:
+                                \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
+                                \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
+                                % OPENING:
+                                % COMMANDS:
+                                \voiceTwo
+                                % PITCHED_TRILL:
+                                \pitchedTrill
+                                \tweak style #'harmonic-mixed
+                                e''8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \mp
+                                % TRILL_SPANNER_STARTS:
+                                \startTrillSpan a'
+                                \tweak style #'harmonic-mixed
+                                e''8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                e''8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                r8.
+                                % AFTER:
+                                % SPANNER_STOPS:
+                                \stopTrillSpan
+                            % CLOSE_BRACKETS:
+                            }
+                            % OPEN_BRACKETS:
+                            \context Voice = "viola a voice"
+                            {
+                                % OPENING:
+                                % COMMANDS:
+                                \voiceOne
+                                % PITCHED_TRILL:
+                                \pitchedTrill
+                                \tweak style #'harmonic-mixed
+                                a'''4
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STARTS:
+                                - \tweak padding #16.5
+                                - \abjad-dashed-line-with-hook
+                                - \tweak bound-details.left.text \markup \concat { \upright { "both voices MSP" } \hspace #0.5 }
+                                - \tweak bound-details.right.padding -10
+                                \startTextSpan
+                                % TRILL_SPANNER_STARTS:
+                                \startTrillSpan a'
+                                \tweak style #'harmonic-mixed
+                                a'''4
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                a'''4
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                a'''4
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                a'''4
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                a'''4
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                a'''4
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                a'''4
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                a'''4
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                a'''4
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                a'''4
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                a'''4
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                a'''4
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \tweak style #'harmonic-mixed
+                                a'''4
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                r4
+                                % AFTER:
+                                % SPANNER_STOPS:
+                                \stopTrillSpan
+                            % CLOSE_BRACKETS:
+                            }
+                        % CLOSE_BRACKETS:
+                        >>
+                        % AFTER:
                         % COMMANDS:
-                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
-                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
-                        R1 * 3/2
+                        \oneVoice
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1294,11 +1098,140 @@
                     % OPEN_BRACKETS:
                     \context Voice = "cello voice"
                     {
-                        % BEFORE:
+                        % OPEN_BRACKETS:
+                        <<
+                            % OPEN_BRACKETS:
+                            \context Voice = "cello voice temp"
+                            {
+                                % BEFORE:
+                                % COMMANDS:
+                                \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
+                                \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
+                                % OPENING:
+                                % COMMANDS:
+                                \voiceTwo
+                                % PITCHED_TRILL:
+                                \pitchedTrill
+                                \tweak style #'harmonic-mixed
+                                gqs'2
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                \mp
+                                % SPANNER_STARTS:
+                                ~
+                                % TRILL_SPANNER_STARTS:
+                                \startTrillSpan a
+                                \tweak style #'harmonic-mixed
+                                gqs'8.
+                                \tweak style #'harmonic-mixed
+                                gqs'2
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STARTS:
+                                ~
+                                \tweak style #'harmonic-mixed
+                                gqs'8.
+                                \tweak style #'harmonic-mixed
+                                gqs'2
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STARTS:
+                                ~
+                                \tweak style #'harmonic-mixed
+                                gqs'8.
+                                \tweak style #'harmonic-mixed
+                                gqs'2
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STARTS:
+                                ~
+                                \tweak style #'harmonic-mixed
+                                gqs'8.
+                                \tweak style #'harmonic-mixed
+                                gqs'2
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STARTS:
+                                ~
+                                \tweak style #'harmonic-mixed
+                                gqs'8.
+                                r4
+                                % AFTER:
+                                % SPANNER_STOPS:
+                                \stopTrillSpan
+                                r16
+                            % CLOSE_BRACKETS:
+                            }
+                            % OPEN_BRACKETS:
+                            \context Voice = "cello a voice"
+                            {
+                                % OPENING:
+                                % COMMANDS:
+                                \voiceOne
+                                % PITCHED_TRILL:
+                                \pitchedTrill
+                                \tweak style #'harmonic-mixed
+                                fqs''2.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STARTS:
+                                - \tweak padding #13
+                                - \abjad-dashed-line-with-hook
+                                - \tweak bound-details.left.text \markup \concat { \upright { "both voices MSP" } \hspace #0.5 }
+                                - \tweak bound-details.right.padding -6
+                                \startTextSpan
+                                ~
+                                % TRILL_SPANNER_STARTS:
+                                \startTrillSpan a
+                                \tweak style #'harmonic-mixed
+                                fqs''16
+                                \tweak style #'harmonic-mixed
+                                fqs''2.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STARTS:
+                                ~
+                                \tweak style #'harmonic-mixed
+                                fqs''16
+                                \tweak style #'harmonic-mixed
+                                fqs''2.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STARTS:
+                                ~
+                                \tweak style #'harmonic-mixed
+                                fqs''16
+                                \tweak style #'harmonic-mixed
+                                fqs''2.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STARTS:
+                                ~
+                                \tweak style #'harmonic-mixed
+                                fqs''16
+                                % AFTER:
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                r2
+                                % AFTER:
+                                % SPANNER_STOPS:
+                                \stopTrillSpan
+                            % CLOSE_BRACKETS:
+                            }
+                        % CLOSE_BRACKETS:
+                        >>
+                        % AFTER:
                         % COMMANDS:
-                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
-                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
-                        R1 * 3/2
+                        \oneVoice
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1309,11 +1242,268 @@
                     % OPEN_BRACKETS:
                     \context Voice = "contrabass voice"
                     {
-                        % BEFORE:
+                        % OPEN_BRACKETS:
+                        <<
+                            % OPEN_BRACKETS:
+                            \context Voice = "contrabass voice temp"
+                            {
+                                % BEFORE:
+                                % COMMANDS:
+                                \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Kontrabässe }
+                                \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kb. }
+                                % OPENING:
+                                % COMMANDS:
+                                \clef "bass"
+                                \voiceTwo
+                                a,\breve...
+                                % AFTER:
+                                % ARTICULATIONS:
+                                \f
+                            % CLOSE_BRACKETS:
+                            }
+                            % OPEN_BRACKETS:
+                            \context Voice = "contrabass a voice"
+                            {
+                                % OPENING:
+                                % COMMANDS:
+                                \voiceOne
+                                % PITCHED_TRILL:
+                                \pitchedTrill
+                                \tweak style #'harmonic-mixed
+                                e8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STARTS:
+                                - \tweak padding #11
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \upright { "ord." } \hspace #0.5 }
+                                \startTextSpan
+                                % TRILL_SPANNER_STARTS:
+                                \startTrillSpan a,
+                                \tweak style #'harmonic-mixed
+                                e8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                % SPANNER_STARTS:
+                                - \tweak padding #11
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \upright { "MSP" } \hspace #0.5 }
+                                \startTextSpan
+                                \tweak style #'harmonic-mixed
+                                e8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                % SPANNER_STARTS:
+                                - \tweak padding #11
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \upright { "ord." } \hspace #0.5 }
+                                \startTextSpan
+                                \tweak style #'harmonic-mixed
+                                e8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                % SPANNER_STARTS:
+                                - \tweak padding #11
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \upright { "MSP" } \hspace #0.5 }
+                                \startTextSpan
+                                \tweak style #'harmonic-mixed
+                                e8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                % SPANNER_STARTS:
+                                - \tweak padding #11
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \upright { "ord." } \hspace #0.5 }
+                                \startTextSpan
+                                \tweak style #'harmonic-mixed
+                                e8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                % SPANNER_STARTS:
+                                - \tweak padding #11
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \upright { "MSP" } \hspace #0.5 }
+                                \startTextSpan
+                                \tweak style #'harmonic-mixed
+                                e8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                % SPANNER_STARTS:
+                                - \tweak padding #11
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \upright { "ord." } \hspace #0.5 }
+                                \startTextSpan
+                                \tweak style #'harmonic-mixed
+                                e8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                % SPANNER_STARTS:
+                                - \tweak padding #11
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \upright { "MSP" } \hspace #0.5 }
+                                \startTextSpan
+                                \tweak style #'harmonic-mixed
+                                e8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                % SPANNER_STARTS:
+                                - \tweak padding #11
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \upright { "ord." } \hspace #0.5 }
+                                \startTextSpan
+                                \tweak style #'harmonic-mixed
+                                e8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                % SPANNER_STARTS:
+                                - \tweak padding #11
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \upright { "MSP" } \hspace #0.5 }
+                                \startTextSpan
+                                \tweak style #'harmonic-mixed
+                                e8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                % SPANNER_STARTS:
+                                - \tweak padding #11
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \upright { "ord." } \hspace #0.5 }
+                                \startTextSpan
+                                \tweak style #'harmonic-mixed
+                                e8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                % SPANNER_STARTS:
+                                - \tweak padding #11
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \upright { "MSP" } \hspace #0.5 }
+                                \startTextSpan
+                                \tweak style #'harmonic-mixed
+                                e8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                % SPANNER_STARTS:
+                                - \tweak padding #11
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \upright { "ord." } \hspace #0.5 }
+                                \startTextSpan
+                                \tweak style #'harmonic-mixed
+                                e8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                % SPANNER_STARTS:
+                                - \tweak padding #11
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \upright { "MSP" } \hspace #0.5 }
+                                \startTextSpan
+                                \tweak style #'harmonic-mixed
+                                e8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                % SPANNER_STARTS:
+                                - \tweak padding #11
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \upright { "ord." } \hspace #0.5 }
+                                \startTextSpan
+                                \tweak style #'harmonic-mixed
+                                e8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                % SPANNER_STARTS:
+                                - \tweak padding #11
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \upright { "MSP" } \hspace #0.5 }
+                                \startTextSpan
+                                \tweak style #'harmonic-mixed
+                                e8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                % SPANNER_STARTS:
+                                - \tweak padding #11
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \upright { "ord." } \hspace #0.5 }
+                                \startTextSpan
+                                \tweak style #'harmonic-mixed
+                                e8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                % SPANNER_STARTS:
+                                - \tweak padding #11
+                                - \abjad-dashed-line-with-arrow
+                                - \tweak bound-details.left.text \markup \concat { \upright { "MSP" } \hspace #0.5 }
+                                - \tweak bound-details.right.text \markup \upright { "ord." }
+                                \startTextSpan
+                                \tweak style #'harmonic-mixed
+                                e8.
+                                % AFTER:
+                                % ARTICULATIONS:
+                                - \espressivo
+                                % SPANNER_STOPS:
+                                \stopTextSpan
+                                r8.
+                                % AFTER:
+                                % SPANNER_STOPS:
+                                \stopTrillSpan
+                            % CLOSE_BRACKETS:
+                            }
+                        % CLOSE_BRACKETS:
+                        >>
+                        % AFTER:
                         % COMMANDS:
-                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Kontrabässe }
-                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kb. }
-                        R1 * 3/2
+                        \oneVoice
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
