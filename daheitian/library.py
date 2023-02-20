@@ -29,6 +29,7 @@ def daheitian_score(time_signatures):
             abjad.Piano(),
             abjad.Piano(),
             abjad.Harp(),
+            abjad.Harp(),
             abjad.Percussion(),
             abjad.Percussion(),
             abjad.Percussion(),
@@ -43,7 +44,7 @@ def daheitian_score(time_signatures):
             1,
             3,
             2,
-            1,
+            2,
             1,
             2,
             5,
@@ -53,7 +54,7 @@ def daheitian_score(time_signatures):
             "SquareBracketGroup",
             "SquareBracketGroup",
             "PianoStaff",
-            "SquareBracketGroup",
+            "GrandStaff",
             "SquareBracketGroup",
             "SquareBracketGroup",
             "SquareBracketGroup",
@@ -79,7 +80,8 @@ all_voice_names = eval(
         "tuba voice",
         "piano 1 voice",
         "piano 2 voice",
-        "harp voice",
+        "harp 1 voice",
+        "harp 2 voice",
         "percussion 1 voice",
         "percussion 2 voice",
         "percussion 3 voice",
@@ -102,7 +104,7 @@ first_voice_names = eval(
         "tenortrombone voice",
         "tuba voice",
         "piano 1 voice",
-        "harp voice",
+        "harp 1 voice",
         "percussion 1 voice",
         "percussion 2 voice",
         "percussion 3 voice",
@@ -125,6 +127,25 @@ map = eval("""[i for i in map if i > 1]""")
 
 flute_overblowing_pitches = eval(
     """["a''", "e'''", "a'''", "cs''''", "e''''", "gqf''''", "a''''", "gqf''''", "e''''", "cs''''", "a'''", "e'''", "a''", "a'",]"""
+)
+
+harp_chords = eval(
+    """[
+        [
+            "a'''",
+            "bf'''",
+            "ds''''",
+            "e''''",
+            "fs''''"
+        ],
+        [
+            "g'''",
+            "a'''",
+            "bf'''",
+            "ds''''",
+            "e''''",
+        ],
+    ]"""
 )
 
 # dictionaries
@@ -366,7 +387,7 @@ all_instrument_names = [
         ),
     ),
     abjad.InstrumentName(
-        context="Staff",
+        context="GrandStaff",
         markup=abjad.Markup(
             '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Harfe }'
         ),
@@ -477,7 +498,7 @@ all_short_instrument_names = [
         ),
     ),
     abjad.ShortInstrumentName(
-        context="Staff",
+        context="GrandStaff",
         markup=abjad.Markup(
             '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { hf. }'
         ),
@@ -666,21 +687,6 @@ _voice_to_partial = {
 }
 
 
-def pitch_harp_arpeggi(chord_slice=0, selector=trinton.pleaves()):
-    def pitch(argument):
-        selections = selector(argument)
-        pitch_list = []
-        chords = transforms.harp_arpeggi[chord_slice:]
-        for chord in chords:
-            for pitch in chord:
-                pitch_list.append(pitch)
-
-        handler = evans.PitchHandler(pitch_list=pitch_list)
-        handler(selections)
-
-    return pitch
-
-
 # rhythm tools
 
 
@@ -838,31 +844,44 @@ def change_lines(
     return change
 
 
-def harp_clefs(selector=trinton.pleaves()):
+def handle_clefs(selector=trinton.pleaves()):
     def clefs(argument):
         selections = selector(argument)
         for leaf in selections:
             with_previous_leaf = abjad.select.with_previous_leaf(leaf)
             previous_leaf = with_previous_leaf[0]
-            if leaf.written_pitch.number < -5:
+
+            if isinstance(leaf, abjad.Chord):
+                head = leaf.note_heads[0]
+            else:
+                head = leaf
+
+            if isinstance(previous_leaf, abjad.Chord):
+                previous_head = previous_leaf.note_heads[0]
+            else:
+                previous_head = previous_leaf
+
+            if head.written_pitch.number < -5:
                 abjad.attach(abjad.Clef("bass"), leaf)
             else:
                 abjad.attach(abjad.Clef("treble"), leaf)
 
-            if isinstance(previous_leaf, abjad.Rest) or isinstance(
-                previous_leaf, abjad.Skip
+            if (
+                isinstance(previous_leaf, abjad.Rest)
+                or isinstance(previous_leaf, abjad.Skip)
+                or isinstance(previous_leaf, abjad.MultimeasureRest)
             ):
                 pass
 
             elif (
-                previous_leaf.written_pitch.number < -5
-                and leaf.written_pitch.number < -5
+                previous_head.written_pitch.number < -5
+                and head.written_pitch.number < -5
             ):
                 abjad.detach(abjad.Clef, leaf)
 
             elif (
-                previous_leaf.written_pitch.number > -5
-                and leaf.written_pitch.number > -5
+                previous_head.written_pitch.number > -5
+                and head.written_pitch.number > -5
             ):
                 abjad.detach(abjad.Clef, leaf)
 
