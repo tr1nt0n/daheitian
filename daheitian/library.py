@@ -53,7 +53,7 @@ def daheitian_score(time_signatures):
             "SquareBracketGroup",
             "SquareBracketGroup",
             "SquareBracketGroup",
-            "PianoStaff",
+            "GrandStaff",
             "GrandStaff",
             "SquareBracketGroup",
             "SquareBracketGroup",
@@ -381,7 +381,7 @@ all_instrument_names = [
         ),
     ),
     abjad.InstrumentName(
-        context="PianoStaff",
+        context="GrandStaff",
         markup=abjad.Markup(
             '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Klavier }'
         ),
@@ -492,7 +492,7 @@ all_short_instrument_names = [
         ),
     ),
     abjad.ShortInstrumentName(
-        context="PianoStaff",
+        context="GrandStaff",
         markup=abjad.Markup(
             '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { klav. }'
         ),
@@ -687,6 +687,26 @@ _voice_to_partial = {
 }
 
 
+def piano_kb_pitches(index=0):
+    return trinton.rotated_sequence(
+        trinton.random_walk(
+            chord=trinton.transpose(
+                [
+                    8,
+                    2,
+                    0,
+                    4,
+                    7,
+                    1,
+                ],
+                36,
+            ),
+            seed=27,
+        ),
+        index,
+    )
+
+
 # rhythm tools
 
 
@@ -718,6 +738,32 @@ def flute_graces(mod=3):
 # notation tools
 
 
+def timbre_trills(selector=trinton.pleaves(), index=0):
+    def trill(argument):
+        selections = selector(argument)
+
+        trill_sequence = trinton.random_walk(
+            chord=[
+                1,
+                3,
+                2,
+                3,
+            ],
+            seed=12,
+        )
+
+        trill_sequence = trinton.rotated_sequence(trill_sequence, index)
+
+        for leaf, trill in zip(selections, trill_sequence):
+            abjad.attach(
+                abjad.Markup(rf"\markup \center-column {{ \circle {trill} }}"),
+                leaf,
+                direction=abjad.UP,
+            )
+
+    return trill
+
+
 def flute_overblowing_noteheads(selector=trinton.grace_selector()):
     def noteheads(argument):
         selections = selector(argument)
@@ -745,6 +791,80 @@ def parenthesize_noteheads(selector=trinton.exclude_graces()):
             selection.note_head.is_parenthesized = True
 
     return parenthesize
+
+
+def imbrication(
+    voice,
+    measures,
+    pitch,
+    indices,
+    period,
+    name="Imbrication",
+    dynamic=None,
+    secondary_dynamic=None,
+):
+    for measure in measures:
+        trinton.make_music(
+            lambda _: trinton.select_target(_, (measure,)),
+            trinton.pitch_with_selector_command(
+                pitch_list=[
+                    pitch,
+                ],
+                selector=trinton.patterned_tie_index_selector(
+                    indices, period, pitched=True
+                ),
+            ),
+            voice=voice,
+        )
+
+        leaves = abjad.select.group_by_measure(voice)
+        leaves = leaves[measure - 1]
+        leaves = abjad.select.leaves(leaves, pitched=True)
+
+        relevant_leaves = []
+
+        for leaf in leaves:
+            if leaf.written_pitch.number == pitch:
+                relevant_leaves.append(leaf)
+
+        trinton.make_music(
+            lambda _: trinton.select_target(_, (measure,)),
+            trinton.call_imbrication(
+                pitches=[pitch for _ in list(range(len(relevant_leaves)))],
+                name=name,
+                articulation=">",
+            ),
+            voice=voice,
+        )
+
+        if dynamic is not None:
+            for leaf in relevant_leaves:
+                abjad.detach(abjad.Articulation, leaf)
+                abjad.detach(abjad.Markup, leaf)
+                abjad.attach(abjad.Dynamic(dynamic), leaf)
+
+        if secondary_dynamic is not None:
+            for leaf in relevant_leaves:
+                next_leaf = abjad.select.with_next_leaf(
+                    leaf,
+                )[-1]
+                if (
+                    isinstance(next_leaf, abjad.Note)
+                    and abjad.get.has_indicator(next_leaf, abjad.Dynamic) is False
+                ):
+                    abjad.attach(abjad.Dynamic(secondary_dynamic), next_leaf)
+
+
+def remove_accidentals(voice, measure_range):
+    selections = trinton.select_target(voice, measure_range)
+
+    for leaf in abjad.select.leaves(selections, pitched=True):
+        abjad.attach(
+            abjad.LilyPondLiteral(
+                r"\once \override Staff.Accidental.stencil = ##f", "before"
+            ),
+            leaf,
+        )
 
 
 onbeat_flute_handler = trinton.OnBeatGraceHandler(
