@@ -122,11 +122,11 @@
         \override TextScript.font-name = "Bodoni72 Book"
         \override TextSpanner.font-name = "Bodoni72 Book"
 
-        % \override Tie.stencil = #flare-tie
-        \shape #'((2.5 . 0) (1.66 . 0) (0.82 . 0) (0 . 0)) Tie
-        \override Tie.X-extent = ##f
-        \override Tie.height-limit = 6
-        \override Tie.thickness = 1.5
+        \shape #'((2 . 0) (1 . 0) (0.5 . 0) (0 . 0)) LaissezVibrerTie
+        \override LaissezVibrerTie.X-extent = ##f
+
+        \shape #'((-2 . 0) (-1 . 0) (-0.5 . 0) (0 . 0)) RepeatTie
+        \override RepeatTie.X-extent = ##f
 
         tupletFullLength = ##t
         \override TupletBracket.full-length-to-extent = ##f

@@ -148,6 +148,10 @@ harp_chords = eval(
     ]"""
 )
 
+oboe_chant_talea = eval(
+    """[2, 4, 2, 4, 2, 3, 3, -3, 2, 4, 2, 4, 2, 4, 2, 3, 2, 3, 3, -3,]"""
+)
+
 # dictionaries
 
 _bloom_pitches = {
@@ -735,7 +739,21 @@ def flute_graces(mod=3):
     return graces
 
 
+def oboe_talea(index=0):
+    return trinton.rotated_sequence(oboe_chant_talea, index)
+
+
 # notation tools
+
+
+def ties(score):
+    for voice in abjad.select.components(score["Staff Group"], abjad.Voice):
+        for leaf in abjad.select.leaves(voice):
+            if abjad.get.has_indicator(leaf, abjad.Tie) and abjad.get.duration(
+                leaf
+            ) > abjad.Duration(1, 16):
+                abjad.detach(abjad.Tie, leaf)
+                abjad.attach(abjad.RepeatTie(), abjad.select.with_next_leaf(leaf)[-1])
 
 
 def timbre_trills(selector=trinton.pleaves(), index=0):
@@ -893,6 +911,30 @@ onbeat_flute_handler = trinton.OnBeatGraceHandler(
     vector_forget=False,
     name="onbeat flute graces",
 )
+
+
+def trombone_blast_attachments():
+    def attach(argument):
+        leaves = abjad.select.leaves(argument, pitched=True)
+
+        groups = abjad.sequence.partition_by_counts(
+            sequence=leaves,
+            counts=[2 for _ in range(len(leaves))],
+            overhang=True,
+        )
+
+        abjad.attach(abjad.LilyPondLiteral(r"\lowest", "before"), leaves[0])
+
+        abjad.attach(abjad.LilyPondLiteral(r"\revert-noteheads", "after"), leaves[-1])
+
+        for group in groups:
+            abjad.attach(abjad.Glissando(), group[0])
+
+            abjad.attach(abjad.StartHairpin("o<|"), group[0])
+
+            abjad.attach(abjad.Dynamic("ff"), group[-1])
+
+    return attach
 
 
 def boxed_markup(string, selector=trinton.select_leaves_by_index([0], pitched=True)):
