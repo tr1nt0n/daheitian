@@ -91,7 +91,7 @@
                         % SPANNER_STARTS:
                         - \tweak padding #6.5
                         - \abjad-dashed-line-with-hook
-                        - \tweak bound-details.left.text \markup \concat { \upright { "Solo" } \hspace #0.5 }
+                        - \tweak bound-details.left.text \markup \concat { \upright { "Solo, 1/3 Luftklang" } \hspace #0.5 }
                         - \tweak bound-details.right.padding -1
                         \startTextSpan
                         - \tweak stencil #constante-hairpin
@@ -150,6 +150,11 @@
                         - \tenuto
                         \mf
                         % SPANNER_STARTS:
+                        - \tweak padding #5.5
+                        - \abjad-dashed-line-with-hook
+                        - \tweak bound-details.left.text \markup \concat { \upright { "1/3 Luftklang" } \hspace #0.5 }
+                        - \tweak bound-details.right.padding -1
+                        \startTextSpan
                         - \tweak stencil #constante-hairpin
                         \<
                         bf4
@@ -198,12 +203,19 @@
                         % ARTICULATIONS:
                         - \tenuto
                         \!
+                        % SPANNER_STOPS:
+                        \stopTextSpan
                         bf8.
                         % AFTER:
                         % ARTICULATIONS:
                         - \tenuto
                         \f
                         % SPANNER_STARTS:
+                        - \tweak padding #5.5
+                        - \abjad-dashed-line-with-arrow
+                        - \tweak bound-details.left.text \markup \concat { \upright { "1/3 Luftklang" } \hspace #0.5 }
+                        - \tweak bound-details.right.text \markup \upright { "Norm." }
+                        \startTextSpan
                         - \tweak stencil #constante-hairpin
                         \<
                         bf8.
@@ -259,6 +271,8 @@
                         % AFTER:
                         % ARTICULATIONS:
                         - \tenuto
+                        % SPANNER_STOPS:
+                        \stopTextSpan
                         r8.
                         bf8
                         % AFTER:
@@ -319,6 +333,11 @@
                         - \tenuto
                         \mf
                         % SPANNER_STARTS:
+                        - \tweak padding #5.5
+                        - \abjad-dashed-line-with-hook
+                        - \tweak bound-details.left.text \markup \concat { \upright { "1/3 Luftklang" } \hspace #0.5 }
+                        - \tweak bound-details.right.padding -1
+                        \startTextSpan
                         - \tweak stencil #constante-hairpin
                         \<
                         c''4
@@ -367,6 +386,8 @@
                         % ARTICULATIONS:
                         - \tenuto
                         \!
+                        % SPANNER_STOPS:
+                        \stopTextSpan
                         % OPEN_BRACKETS:
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 2 0))
                         \times 2/3
@@ -377,6 +398,11 @@
                             - \tenuto
                             \f
                             % SPANNER_STARTS:
+                            - \tweak padding #5.5
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \upright { "1/3 Luftklang" } \hspace #0.5 }
+                            - \tweak bound-details.right.text \markup \upright { "Norm." }
+                            \startTextSpan
                             - \tweak stencil #constante-hairpin
                             \<
                             c''8.
@@ -487,6 +513,8 @@
                             % AFTER:
                             % ARTICULATIONS:
                             - \tenuto
+                            % SPANNER_STOPS:
+                            \stopTextSpan
                             c''8.
                             % AFTER:
                             % ARTICULATIONS:
@@ -608,6 +636,11 @@
                         - \tenuto
                         \mf
                         % SPANNER_STARTS:
+                        - \tweak padding #5.5
+                        - \abjad-dashed-line-with-hook
+                        - \tweak bound-details.left.text \markup \concat { \upright { "1/3 Luftklang" } \hspace #0.5 }
+                        - \tweak bound-details.right.padding -1
+                        \startTextSpan
                         - \tweak stencil #constante-hairpin
                         \<
                         bf4
@@ -656,12 +689,19 @@
                         % ARTICULATIONS:
                         - \tenuto
                         \!
+                        % SPANNER_STOPS:
+                        \stopTextSpan
                         bf8
                         % AFTER:
                         % ARTICULATIONS:
                         - \tenuto
                         \f
                         % SPANNER_STARTS:
+                        - \tweak padding #5.5
+                        - \abjad-dashed-line-with-arrow
+                        - \tweak bound-details.left.text \markup \concat { \upright { "1/3 Luftklang" } \hspace #0.5 }
+                        - \tweak bound-details.right.text \markup \upright { "Norm." }
+                        \startTextSpan
                         - \tweak stencil #constante-hairpin
                         \<
                         bf4
@@ -713,6 +753,8 @@
                         % AFTER:
                         % ARTICULATIONS:
                         - \tenuto
+                        % SPANNER_STOPS:
+                        \stopTextSpan
                         bf8.
                         % AFTER:
                         % ARTICULATIONS:
@@ -778,7 +820,14 @@
                     R1 * 9/4
                     R1 * 9/4
                     R1 * 9/4
-                    R1 * 9/4
+                    % OPENING:
+                    % COMMANDS:
+                    \clef "bass"
+                    ef\breve
+                    ef4
+                    % AFTER:
+                    % SPANNER_STARTS:
+                    \repeatTie
                 % CLOSE_BRACKETS:
                 }
             % CLOSE_BRACKETS:
@@ -1039,7 +1088,20 @@
                         R1 * 9/4
                         R1 * 9/4
                         R1 * 9/4
-                        R1 * 9/4
+                        % ABSOLUTE_BEFORE:
+                        % COMMANDS:
+                        \staff-line-count 1
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "percussion"
+                        c'2
+                        % AFTER:
+                        % COMMANDS:
+                        \boxed-markup "Tanggu" 1
+                        c'2
+                        c'2
+                        c'2
+                        c'4
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1057,7 +1119,26 @@
                         R1 * 9/4
                         R1 * 9/4
                         R1 * 9/4
-                        R1 * 9/4
+                        % OPEN_BRACKETS:
+                        \tweak text #tuplet-number::calc-fraction-text
+                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 9) (ly:make-duration 2 0))
+                        \times 9/8
+                        {
+                            % ABSOLUTE_BEFORE:
+                            % COMMANDS:
+                            \staff-line-count 2
+                            % OPENING:
+                            % COMMANDS:
+                            \clef "percussion"
+                            b2
+                            % AFTER:
+                            % COMMANDS:
+                            \boxed-markup "Gongs der chinesisch Oper" 1
+                            d'2
+                            b2
+                            d'2
+                        % CLOSE_BRACKETS:
+                        }
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1080,7 +1161,186 @@
                         R1 * 9/4
                         R1 * 9/4
                         R1 * 9/4
-                        R1 * 9/4
+                        % BEFORE:
+                        % GROB_OVERRIDES:
+                        \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \score
+                            {
+                                \context Score = "Score"
+                                \with
+                                {
+                                    \override SpacingSpanner.spacing-increment = 0.5
+                                    proportionalNotationDuration = ##f
+                                }
+                                <<
+                                    \context RhythmicStaff = "Rhythmic_Staff"
+                                    \with
+                                    {
+                                        \remove Time_signature_engraver
+                                        \remove Staff_symbol_engraver
+                                        \override Stem.direction = #up
+                                        \override Stem.length = 5
+                                        \override TupletBracket.bracket-visibility = ##t
+                                        \override TupletBracket.direction = #up
+                                        \override TupletBracket.minimum-length = 4
+                                        \override TupletBracket.padding = 1.25
+                                        \override TupletBracket.shorten-pair = #'(-1 . -1.5)
+                                        \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
+                                        \override TupletNumber.font-size = 0
+                                        \override TupletNumber.text = #tuplet-number::calc-fraction-text
+                                        tupletFullLength = ##t
+                                    }
+                                    {
+                                        c'1
+                                        ~
+                                        c'8
+                                    }
+                                >>
+                                \layout
+                                {
+                                    indent = 0
+                                    ragged-right = ##t
+                                }
+                            }
+                        % OPEN_BRACKETS:
+                        \times 1/1
+                        {
+                            % BEFORE:
+                            % GROB_OVERRIDES:
+                            \once \override Beam.grow-direction = #right
+                            b'32 * 127/32
+                            % AFTER:
+                            % START_BEAM:
+                            [
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            \<
+                            - \tweak padding #4.5
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \upright { "ST" } \hspace #0.5 }
+                            \startTextSpanOne
+                            - \tweak padding #7
+                            - \abjad-dashed-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \upright { "Pizz." } \hspace #0.5 }
+                            - \tweak bound-details.right.padding -3
+                            \startTextSpan
+                            b'32 * 31/8
+                            b'32 * 59/16
+                            b'32 * 109/32
+                            b'32 * 49/16
+                            b'32 * 11/4
+                            b'32 * 79/32
+                            b'32 * 71/32
+                            b'32 * 65/32
+                            b'32 * 15/8
+                            b'32 * 7/4
+                            b'32 * 27/16
+                            b'32 * 13/8
+                            b'32 * 51/32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \mf
+                            % SPANNER_STOPS:
+                            \stopTextSpanOne
+                            % STOP_BEAM:
+                            ]
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            \>
+                            - \tweak padding #4.5
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \upright { "SP" } \hspace #0.5 }
+                            \startTextSpanOne
+                        % CLOSE_BRACKETS:
+                        }
+                        % AFTER:
+                        % GROB_REVERTS:
+                        \revert TupletNumber.text
+                        % BEFORE:
+                        % GROB_OVERRIDES:
+                        \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \score
+                            {
+                                \context Score = "Score"
+                                \with
+                                {
+                                    \override SpacingSpanner.spacing-increment = 0.5
+                                    proportionalNotationDuration = ##f
+                                }
+                                <<
+                                    \context RhythmicStaff = "Rhythmic_Staff"
+                                    \with
+                                    {
+                                        \remove Time_signature_engraver
+                                        \remove Staff_symbol_engraver
+                                        \override Stem.direction = #up
+                                        \override Stem.length = 5
+                                        \override TupletBracket.bracket-visibility = ##t
+                                        \override TupletBracket.direction = #up
+                                        \override TupletBracket.minimum-length = 4
+                                        \override TupletBracket.padding = 1.25
+                                        \override TupletBracket.shorten-pair = #'(-1 . -1.5)
+                                        \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
+                                        \override TupletNumber.font-size = 0
+                                        \override TupletNumber.text = #tuplet-number::calc-fraction-text
+                                        tupletFullLength = ##t
+                                    }
+                                    {
+                                        c'1
+                                        ~
+                                        c'8
+                                    }
+                                >>
+                                \layout
+                                {
+                                    indent = 0
+                                    ragged-right = ##t
+                                }
+                            }
+                        % OPEN_BRACKETS:
+                        \times 1/1
+                        {
+                            % BEFORE:
+                            % GROB_OVERRIDES:
+                            \once \override Beam.grow-direction = #left
+                            b'32 * 49/32
+                            % AFTER:
+                            % START_BEAM:
+                            [
+                            b'32 * 25/16
+                            b'32 * 51/32
+                            b'32 * 53/32
+                            b'32 * 55/32
+                            b'32 * 59/32
+                            b'32 * 63/32
+                            b'32 * 69/32
+                            b'32 * 19/8
+                            b'32 * 83/32
+                            b'32 * 23/8
+                            % AFTER:
+                            % SPANNER_STOPS:
+                            \stopTextSpanOne
+                            % SPANNER_STARTS:
+                            - \tweak padding #4.5
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \upright { "ST" } \hspace #0.5 }
+                            - \tweak bound-details.right.text \markup \upright { "MSP" }
+                            \startTextSpanOne
+                            b'32 * 101/32
+                            b'32 * 55/16
+                            b'32 * 59/16
+                            b'32 * 123/32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \!
+                            % SPANNER_STOPS:
+                            \stopTextSpan
+                            \stopTextSpanOne
+                            % STOP_BEAM:
+                            ]
+                        % CLOSE_BRACKETS:
+                        }
+                        % AFTER:
+                        % GROB_REVERTS:
+                        \revert TupletNumber.text
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1098,7 +1358,186 @@
                         R1 * 9/4
                         R1 * 9/4
                         R1 * 9/4
-                        R1 * 9/4
+                        % BEFORE:
+                        % GROB_OVERRIDES:
+                        \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \score
+                            {
+                                \context Score = "Score"
+                                \with
+                                {
+                                    \override SpacingSpanner.spacing-increment = 0.5
+                                    proportionalNotationDuration = ##f
+                                }
+                                <<
+                                    \context RhythmicStaff = "Rhythmic_Staff"
+                                    \with
+                                    {
+                                        \remove Time_signature_engraver
+                                        \remove Staff_symbol_engraver
+                                        \override Stem.direction = #up
+                                        \override Stem.length = 5
+                                        \override TupletBracket.bracket-visibility = ##t
+                                        \override TupletBracket.direction = #up
+                                        \override TupletBracket.minimum-length = 4
+                                        \override TupletBracket.padding = 1.25
+                                        \override TupletBracket.shorten-pair = #'(-1 . -1.5)
+                                        \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
+                                        \override TupletNumber.font-size = 0
+                                        \override TupletNumber.text = #tuplet-number::calc-fraction-text
+                                        tupletFullLength = ##t
+                                    }
+                                    {
+                                        c'1
+                                        ~
+                                        c'8
+                                    }
+                                >>
+                                \layout
+                                {
+                                    indent = 0
+                                    ragged-right = ##t
+                                }
+                            }
+                        % OPEN_BRACKETS:
+                        \times 1/1
+                        {
+                            % BEFORE:
+                            % GROB_OVERRIDES:
+                            \once \override Beam.grow-direction = #right
+                            bqf'32 * 127/32
+                            % AFTER:
+                            % START_BEAM:
+                            [
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            \<
+                            - \tweak padding #4.5
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \upright { "ST" } \hspace #0.5 }
+                            \startTextSpanOne
+                            - \tweak padding #7
+                            - \abjad-dashed-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \upright { "Pizz." } \hspace #0.5 }
+                            - \tweak bound-details.right.padding -3
+                            \startTextSpan
+                            bqf'32 * 31/8
+                            bqf'32 * 59/16
+                            bqf'32 * 109/32
+                            bqf'32 * 49/16
+                            bqf'32 * 11/4
+                            bqf'32 * 79/32
+                            bqf'32 * 71/32
+                            bqf'32 * 65/32
+                            bqf'32 * 15/8
+                            bqf'32 * 7/4
+                            bqf'32 * 27/16
+                            bqf'32 * 13/8
+                            bqf'32 * 51/32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \mf
+                            % SPANNER_STOPS:
+                            \stopTextSpanOne
+                            % STOP_BEAM:
+                            ]
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            \>
+                            - \tweak padding #4.5
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \upright { "SP" } \hspace #0.5 }
+                            \startTextSpanOne
+                        % CLOSE_BRACKETS:
+                        }
+                        % AFTER:
+                        % GROB_REVERTS:
+                        \revert TupletNumber.text
+                        % BEFORE:
+                        % GROB_OVERRIDES:
+                        \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \score
+                            {
+                                \context Score = "Score"
+                                \with
+                                {
+                                    \override SpacingSpanner.spacing-increment = 0.5
+                                    proportionalNotationDuration = ##f
+                                }
+                                <<
+                                    \context RhythmicStaff = "Rhythmic_Staff"
+                                    \with
+                                    {
+                                        \remove Time_signature_engraver
+                                        \remove Staff_symbol_engraver
+                                        \override Stem.direction = #up
+                                        \override Stem.length = 5
+                                        \override TupletBracket.bracket-visibility = ##t
+                                        \override TupletBracket.direction = #up
+                                        \override TupletBracket.minimum-length = 4
+                                        \override TupletBracket.padding = 1.25
+                                        \override TupletBracket.shorten-pair = #'(-1 . -1.5)
+                                        \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
+                                        \override TupletNumber.font-size = 0
+                                        \override TupletNumber.text = #tuplet-number::calc-fraction-text
+                                        tupletFullLength = ##t
+                                    }
+                                    {
+                                        c'1
+                                        ~
+                                        c'8
+                                    }
+                                >>
+                                \layout
+                                {
+                                    indent = 0
+                                    ragged-right = ##t
+                                }
+                            }
+                        % OPEN_BRACKETS:
+                        \times 1/1
+                        {
+                            % BEFORE:
+                            % GROB_OVERRIDES:
+                            \once \override Beam.grow-direction = #left
+                            bqf'32 * 49/32
+                            % AFTER:
+                            % START_BEAM:
+                            [
+                            bqf'32 * 25/16
+                            bqf'32 * 51/32
+                            bqf'32 * 53/32
+                            bqf'32 * 55/32
+                            bqf'32 * 59/32
+                            bqf'32 * 63/32
+                            bqf'32 * 69/32
+                            bqf'32 * 19/8
+                            bqf'32 * 83/32
+                            bqf'32 * 23/8
+                            % AFTER:
+                            % SPANNER_STOPS:
+                            \stopTextSpanOne
+                            % SPANNER_STARTS:
+                            - \tweak padding #4.5
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \upright { "ST" } \hspace #0.5 }
+                            - \tweak bound-details.right.text \markup \upright { "MSP" }
+                            \startTextSpanOne
+                            bqf'32 * 101/32
+                            bqf'32 * 55/16
+                            bqf'32 * 59/16
+                            bqf'32 * 123/32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \!
+                            % SPANNER_STOPS:
+                            \stopTextSpan
+                            \stopTextSpanOne
+                            % STOP_BEAM:
+                            ]
+                        % CLOSE_BRACKETS:
+                        }
+                        % AFTER:
+                        % GROB_REVERTS:
+                        \revert TupletNumber.text
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1116,7 +1555,189 @@
                         R1 * 9/4
                         R1 * 9/4
                         R1 * 9/4
-                        R1 * 9/4
+                        % BEFORE:
+                        % GROB_OVERRIDES:
+                        \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \score
+                            {
+                                \context Score = "Score"
+                                \with
+                                {
+                                    \override SpacingSpanner.spacing-increment = 0.5
+                                    proportionalNotationDuration = ##f
+                                }
+                                <<
+                                    \context RhythmicStaff = "Rhythmic_Staff"
+                                    \with
+                                    {
+                                        \remove Time_signature_engraver
+                                        \remove Staff_symbol_engraver
+                                        \override Stem.direction = #up
+                                        \override Stem.length = 5
+                                        \override TupletBracket.bracket-visibility = ##t
+                                        \override TupletBracket.direction = #up
+                                        \override TupletBracket.minimum-length = 4
+                                        \override TupletBracket.padding = 1.25
+                                        \override TupletBracket.shorten-pair = #'(-1 . -1.5)
+                                        \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
+                                        \override TupletNumber.font-size = 0
+                                        \override TupletNumber.text = #tuplet-number::calc-fraction-text
+                                        tupletFullLength = ##t
+                                    }
+                                    {
+                                        c'1
+                                        ~
+                                        c'8
+                                    }
+                                >>
+                                \layout
+                                {
+                                    indent = 0
+                                    ragged-right = ##t
+                                }
+                            }
+                        % OPEN_BRACKETS:
+                        \times 1/1
+                        {
+                            % BEFORE:
+                            % GROB_OVERRIDES:
+                            \once \override Beam.grow-direction = #right
+                            % OPENING:
+                            % COMMANDS:
+                            \clef "altovarC"
+                            aqs'32 * 127/32
+                            % AFTER:
+                            % START_BEAM:
+                            [
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            \<
+                            - \tweak padding #5.5
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \upright { "ST" } \hspace #0.5 }
+                            \startTextSpanOne
+                            - \tweak padding #8
+                            - \abjad-dashed-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \upright { "Pizz." } \hspace #0.5 }
+                            - \tweak bound-details.right.padding -3
+                            \startTextSpan
+                            aqs'32 * 31/8
+                            aqs'32 * 59/16
+                            aqs'32 * 109/32
+                            aqs'32 * 49/16
+                            aqs'32 * 11/4
+                            aqs'32 * 79/32
+                            aqs'32 * 71/32
+                            aqs'32 * 65/32
+                            aqs'32 * 15/8
+                            aqs'32 * 7/4
+                            aqs'32 * 27/16
+                            aqs'32 * 13/8
+                            aqs'32 * 51/32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \mf
+                            % SPANNER_STOPS:
+                            \stopTextSpanOne
+                            % STOP_BEAM:
+                            ]
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            \>
+                            - \tweak padding #5.5
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \upright { "SP" } \hspace #0.5 }
+                            \startTextSpanOne
+                        % CLOSE_BRACKETS:
+                        }
+                        % AFTER:
+                        % GROB_REVERTS:
+                        \revert TupletNumber.text
+                        % BEFORE:
+                        % GROB_OVERRIDES:
+                        \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \score
+                            {
+                                \context Score = "Score"
+                                \with
+                                {
+                                    \override SpacingSpanner.spacing-increment = 0.5
+                                    proportionalNotationDuration = ##f
+                                }
+                                <<
+                                    \context RhythmicStaff = "Rhythmic_Staff"
+                                    \with
+                                    {
+                                        \remove Time_signature_engraver
+                                        \remove Staff_symbol_engraver
+                                        \override Stem.direction = #up
+                                        \override Stem.length = 5
+                                        \override TupletBracket.bracket-visibility = ##t
+                                        \override TupletBracket.direction = #up
+                                        \override TupletBracket.minimum-length = 4
+                                        \override TupletBracket.padding = 1.25
+                                        \override TupletBracket.shorten-pair = #'(-1 . -1.5)
+                                        \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
+                                        \override TupletNumber.font-size = 0
+                                        \override TupletNumber.text = #tuplet-number::calc-fraction-text
+                                        tupletFullLength = ##t
+                                    }
+                                    {
+                                        c'1
+                                        ~
+                                        c'8
+                                    }
+                                >>
+                                \layout
+                                {
+                                    indent = 0
+                                    ragged-right = ##t
+                                }
+                            }
+                        % OPEN_BRACKETS:
+                        \times 1/1
+                        {
+                            % BEFORE:
+                            % GROB_OVERRIDES:
+                            \once \override Beam.grow-direction = #left
+                            aqs'32 * 49/32
+                            % AFTER:
+                            % START_BEAM:
+                            [
+                            aqs'32 * 25/16
+                            aqs'32 * 51/32
+                            aqs'32 * 53/32
+                            aqs'32 * 55/32
+                            aqs'32 * 59/32
+                            aqs'32 * 63/32
+                            aqs'32 * 69/32
+                            aqs'32 * 19/8
+                            aqs'32 * 83/32
+                            aqs'32 * 23/8
+                            % AFTER:
+                            % SPANNER_STOPS:
+                            \stopTextSpanOne
+                            % SPANNER_STARTS:
+                            - \tweak padding #5.5
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \upright { "ST" } \hspace #0.5 }
+                            - \tweak bound-details.right.text \markup \upright { "MSP" }
+                            \startTextSpanOne
+                            aqs'32 * 101/32
+                            aqs'32 * 55/16
+                            aqs'32 * 59/16
+                            aqs'32 * 123/32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \!
+                            % SPANNER_STOPS:
+                            \stopTextSpan
+                            \stopTextSpanOne
+                            % STOP_BEAM:
+                            ]
+                        % CLOSE_BRACKETS:
+                        }
+                        % AFTER:
+                        % GROB_REVERTS:
+                        \revert TupletNumber.text
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1134,7 +1755,189 @@
                         R1 * 9/4
                         R1 * 9/4
                         R1 * 9/4
-                        R1 * 9/4
+                        % BEFORE:
+                        % GROB_OVERRIDES:
+                        \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \score
+                            {
+                                \context Score = "Score"
+                                \with
+                                {
+                                    \override SpacingSpanner.spacing-increment = 0.5
+                                    proportionalNotationDuration = ##f
+                                }
+                                <<
+                                    \context RhythmicStaff = "Rhythmic_Staff"
+                                    \with
+                                    {
+                                        \remove Time_signature_engraver
+                                        \remove Staff_symbol_engraver
+                                        \override Stem.direction = #up
+                                        \override Stem.length = 5
+                                        \override TupletBracket.bracket-visibility = ##t
+                                        \override TupletBracket.direction = #up
+                                        \override TupletBracket.minimum-length = 4
+                                        \override TupletBracket.padding = 1.25
+                                        \override TupletBracket.shorten-pair = #'(-1 . -1.5)
+                                        \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
+                                        \override TupletNumber.font-size = 0
+                                        \override TupletNumber.text = #tuplet-number::calc-fraction-text
+                                        tupletFullLength = ##t
+                                    }
+                                    {
+                                        c'1
+                                        ~
+                                        c'8
+                                    }
+                                >>
+                                \layout
+                                {
+                                    indent = 0
+                                    ragged-right = ##t
+                                }
+                            }
+                        % OPEN_BRACKETS:
+                        \times 1/1
+                        {
+                            % BEFORE:
+                            % GROB_OVERRIDES:
+                            \once \override Beam.grow-direction = #right
+                            % OPENING:
+                            % COMMANDS:
+                            \clef "bass"
+                            bf32 * 127/32
+                            % AFTER:
+                            % START_BEAM:
+                            [
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            \<
+                            - \tweak padding #5.5
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \upright { "ST" } \hspace #0.5 }
+                            \startTextSpanOne
+                            - \tweak padding #8
+                            - \abjad-dashed-line-with-hook
+                            - \tweak bound-details.left.text \markup \concat { \upright { "Pizz." } \hspace #0.5 }
+                            - \tweak bound-details.right.padding -3
+                            \startTextSpan
+                            bf32 * 31/8
+                            bf32 * 59/16
+                            bf32 * 109/32
+                            bf32 * 49/16
+                            bf32 * 11/4
+                            bf32 * 79/32
+                            bf32 * 71/32
+                            bf32 * 65/32
+                            bf32 * 15/8
+                            bf32 * 7/4
+                            bf32 * 27/16
+                            bf32 * 13/8
+                            bf32 * 51/32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \mf
+                            % SPANNER_STOPS:
+                            \stopTextSpanOne
+                            % STOP_BEAM:
+                            ]
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            \>
+                            - \tweak padding #5.5
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \upright { "SP" } \hspace #0.5 }
+                            \startTextSpanOne
+                        % CLOSE_BRACKETS:
+                        }
+                        % AFTER:
+                        % GROB_REVERTS:
+                        \revert TupletNumber.text
+                        % BEFORE:
+                        % GROB_OVERRIDES:
+                        \override TupletNumber.text = \markup \scale #'(0.75 . 0.75) \score
+                            {
+                                \context Score = "Score"
+                                \with
+                                {
+                                    \override SpacingSpanner.spacing-increment = 0.5
+                                    proportionalNotationDuration = ##f
+                                }
+                                <<
+                                    \context RhythmicStaff = "Rhythmic_Staff"
+                                    \with
+                                    {
+                                        \remove Time_signature_engraver
+                                        \remove Staff_symbol_engraver
+                                        \override Stem.direction = #up
+                                        \override Stem.length = 5
+                                        \override TupletBracket.bracket-visibility = ##t
+                                        \override TupletBracket.direction = #up
+                                        \override TupletBracket.minimum-length = 4
+                                        \override TupletBracket.padding = 1.25
+                                        \override TupletBracket.shorten-pair = #'(-1 . -1.5)
+                                        \override TupletBracket.springs-and-rods = #ly:spanner::set-spacing-rods
+                                        \override TupletNumber.font-size = 0
+                                        \override TupletNumber.text = #tuplet-number::calc-fraction-text
+                                        tupletFullLength = ##t
+                                    }
+                                    {
+                                        c'1
+                                        ~
+                                        c'8
+                                    }
+                                >>
+                                \layout
+                                {
+                                    indent = 0
+                                    ragged-right = ##t
+                                }
+                            }
+                        % OPEN_BRACKETS:
+                        \times 1/1
+                        {
+                            % BEFORE:
+                            % GROB_OVERRIDES:
+                            \once \override Beam.grow-direction = #left
+                            bf32 * 49/32
+                            % AFTER:
+                            % START_BEAM:
+                            [
+                            bf32 * 25/16
+                            bf32 * 51/32
+                            bf32 * 53/32
+                            bf32 * 55/32
+                            bf32 * 59/32
+                            bf32 * 63/32
+                            bf32 * 69/32
+                            bf32 * 19/8
+                            bf32 * 83/32
+                            bf32 * 23/8
+                            % AFTER:
+                            % SPANNER_STOPS:
+                            \stopTextSpanOne
+                            % SPANNER_STARTS:
+                            - \tweak padding #5.5
+                            - \abjad-dashed-line-with-arrow
+                            - \tweak bound-details.left.text \markup \concat { \upright { "ST" } \hspace #0.5 }
+                            - \tweak bound-details.right.text \markup \upright { "MSP" }
+                            \startTextSpanOne
+                            bf32 * 101/32
+                            bf32 * 55/16
+                            bf32 * 59/16
+                            bf32 * 123/32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \!
+                            % SPANNER_STOPS:
+                            \stopTextSpan
+                            \stopTextSpanOne
+                            % STOP_BEAM:
+                            ]
+                        % CLOSE_BRACKETS:
+                        }
+                        % AFTER:
+                        % GROB_REVERTS:
+                        \revert TupletNumber.text
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:

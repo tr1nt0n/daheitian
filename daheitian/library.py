@@ -746,6 +746,30 @@ def oboe_talea(index=0):
 # notation tools
 
 
+def left_beam(selector=None):
+    def beam(argument):
+        if selector is not None:
+            for tuplet in selector(argument):
+                abjad.override(tuplet[0]).Beam.grow_direction = abjad.LEFT
+        else:
+            for tuplet in abjad.select.tuplets(argument):
+                abjad.override(tuplet[0]).Beam.grow_direction = abjad.LEFT
+
+    return beam
+
+
+def right_beam(selector=None):
+    def beam(argument):
+        if selector is not None:
+            for tuplet in selector(argument):
+                abjad.override(tuplet[0]).Beam.grow_direction = abjad.RIGHT
+        else:
+            for tuplet in abjad.select.tuplets(argument):
+                abjad.override(tuplet[0]).Beam.grow_direction = abjad.RIGHT
+
+    return beam
+
+
 def ties(score):
     for voice in abjad.select.components(score["Staff Group"], abjad.Voice):
         for leaf in abjad.select.leaves(voice):
