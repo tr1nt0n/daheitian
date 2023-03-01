@@ -746,6 +746,31 @@ def oboe_talea(index=0):
 # notation tools
 
 
+def aftergrace(notes_string, cons=(15, 16), selector=trinton.pleaves()):
+    def grace(argument):
+        selections = selector(argument)
+
+        ties = abjad.select.logical_ties(selections)
+
+        string = f"#(define afterGraceFraction (cons {cons[0]} {cons[-1]}))"
+
+        literal = abjad.LilyPondLiteral(string)
+
+        abjad.attach(literal, selections[0])
+
+        containers = [abjad.AfterGraceContainer(notes_string) for _ in ties]
+
+        for container in containers:
+            literal = abjad.LilyPondLiteral(r"\slash")
+
+            abjad.attach(literal, container[0])
+
+        for container, tie in zip(containers, ties):
+            abjad.attach(container, tie[-1])
+
+    return grace
+
+
 def left_beam(selector=None):
     def beam(argument):
         if selector is not None:
@@ -941,18 +966,31 @@ def trombone_blast_attachments():
     def attach(argument):
         leaves = abjad.select.leaves(argument, pitched=True)
 
-        groups = abjad.sequence.partition_by_counts(
-            sequence=leaves,
-            counts=[2 for _ in range(len(leaves))],
-            overhang=True,
-        )
-
         abjad.attach(abjad.LilyPondLiteral(r"\lowest", "before"), leaves[0])
 
-        abjad.attach(abjad.LilyPondLiteral(r"\revert-noteheads", "after"), leaves[-1])
+        abjad.attach(
+            abjad.LilyPondLiteral(r"\revert-noteheads", "absolute_after"), leaves[-1]
+        )
 
-        for group in groups:
-            abjad.attach(abjad.Glissando(), group[0])
+        ties = abjad.select.logical_ties(argument, pitched=True)
+
+        for tie in ties:
+
+            group = abjad.select.with_next_leaf(tie)
+
+            abjad.glissando(
+                group,
+                hide_middle_note_heads=True,
+                allow_repeats=True,
+                allow_ties=True,
+            )
+
+            ledger_literal = abjad.LilyPondLiteral(
+                r"\once \override NoteHead.no-ledgers = ##t", "before"
+            )
+
+            for leaf in group:
+                abjad.attach(ledger_literal, leaf)
 
             abjad.attach(abjad.StartHairpin("o<|"), group[0])
 

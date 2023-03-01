@@ -225,15 +225,21 @@ trinton.make_music(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (3, 4)),
-    evans.RhythmHandler(evans.tuplet([(3, 1)])),
+    evans.RhythmHandler(
+        evans.talea(
+            [
+                9,
+            ],
+            8,
+        )
+    ),
     evans.PitchHandler([-24]),
     trinton.attachment_command(
         attachments=[abjad.Clef("bass")], selector=trinton.select_leaves_by_index([0])
     ),
+    library.aftergrace(notes_string="c,16", cons=(10, 11)),
     library.trombone_blast_attachments(),
-    trinton.notehead_bracket_command(),
     voice=score["tenortrombone voice"],
-    preprocessor=trinton.fuse_eighths_preprocessor((9,)),
 )
 
 # tuba music commands

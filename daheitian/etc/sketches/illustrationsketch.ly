@@ -865,86 +865,182 @@
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pos. }
                         R1 * 9/4
                         R1 * 9/4
+                        % BEFORE:
+                        % COMMANDS:
+                        \lowest
+                        \once \override NoteHead.no-ledgers = ##t
+                        % OPENING:
+                        % COMMANDS:
+                        #(define afterGraceFraction (cons 10 11))
+                        \clef "bass"
+                        c,1
+                        % AFTER:
+                        % SPANNER_STARTS:
+                        - \tweak circled-tip ##t
+                        - \tweak stencil #abjad-flared-hairpin
+                        \<
+                        \glissando
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        % OPENING:
+                        % COMMANDS:
+                        \hide NoteHead
+                        \override Accidental.stencil = ##f
+                        \override NoteColumn.glissando-skip = ##t
+                        \override NoteHead.no-ledgers = ##t
+                        \afterGrace
+                        c,8
+                        % AFTER:
+                        % SPANNER_STARTS:
+                        \repeatTie
                         % OPEN_BRACKETS:
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 9) (ly:make-duration 3 0))
-                        \times 9/8
                         {
                             % BEFORE:
                             % COMMANDS:
-                            \lowest
+                            \once \override NoteHead.no-ledgers = ##t
                             % OPENING:
                             % COMMANDS:
-                            \clef "bass"
-                            c,2.
-                            % AFTER:
-                            % SPANNER_STARTS:
-                            - \tweak circled-tip ##t
-                            - \tweak stencil #abjad-flared-hairpin
-                            \<
-                            \glissando
-                            c,4
+                            \revert Accidental.stencil
+                            \revert NoteColumn.glissando-skip
+                            \revert NoteHead.no-ledgers
+                            \undo \hide NoteHead
+                            \slash
+                            c,16
                             % AFTER:
                             % ARTICULATIONS:
                             \ff
                         % CLOSE_BRACKETS:
                         }
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        c,1
+                        % AFTER:
+                        % SPANNER_STARTS:
+                        - \tweak circled-tip ##t
+                        - \tweak stencil #abjad-flared-hairpin
+                        \<
+                        \glissando
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        % OPENING:
+                        % COMMANDS:
+                        \hide NoteHead
+                        \override Accidental.stencil = ##f
+                        \override NoteColumn.glissando-skip = ##t
+                        \override NoteHead.no-ledgers = ##t
+                        \afterGrace
+                        c,8
+                        % AFTER:
+                        % SPANNER_STARTS:
+                        \repeatTie
                         % OPEN_BRACKETS:
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 9) (ly:make-duration 3 0))
-                        \times 9/8
                         {
-                            c,2.
-                            % AFTER:
-                            % SPANNER_STARTS:
-                            - \tweak circled-tip ##t
-                            - \tweak stencil #abjad-flared-hairpin
-                            \<
-                            \glissando
-                            c,4
-                            % AFTER:
-                            % ARTICULATIONS:
-                            \ff
-                        % CLOSE_BRACKETS:
-                        }
-                        % OPEN_BRACKETS:
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 9) (ly:make-duration 3 0))
-                        \times 9/8
-                        {
-                            c,2.
-                            % AFTER:
-                            % SPANNER_STARTS:
-                            - \tweak circled-tip ##t
-                            - \tweak stencil #abjad-flared-hairpin
-                            \<
-                            \glissando
-                            c,4
-                            % AFTER:
-                            % ARTICULATIONS:
-                            \ff
-                        % CLOSE_BRACKETS:
-                        }
-                        % OPEN_BRACKETS:
-                        \tweak text #tuplet-number::calc-fraction-text
-                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 8 9) (ly:make-duration 3 0))
-                        \times 9/8
-                        {
-                            c,2.
-                            % AFTER:
-                            % SPANNER_STARTS:
-                            - \tweak circled-tip ##t
-                            - \tweak stencil #abjad-flared-hairpin
-                            \<
-                            \glissando
-                            c,4
-                            % AFTER:
-                            % ARTICULATIONS:
-                            \ff
+                            % BEFORE:
                             % COMMANDS:
-                            \revert-noteheads
+                            \once \override NoteHead.no-ledgers = ##t
+                            % OPENING:
+                            % COMMANDS:
+                            \revert Accidental.stencil
+                            \revert NoteColumn.glissando-skip
+                            \revert NoteHead.no-ledgers
+                            \undo \hide NoteHead
+                            \slash
+                            c,16
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \ff
                         % CLOSE_BRACKETS:
                         }
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        c,1
+                        % AFTER:
+                        % SPANNER_STARTS:
+                        - \tweak circled-tip ##t
+                        - \tweak stencil #abjad-flared-hairpin
+                        \<
+                        \glissando
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        % OPENING:
+                        % COMMANDS:
+                        \hide NoteHead
+                        \override Accidental.stencil = ##f
+                        \override NoteColumn.glissando-skip = ##t
+                        \override NoteHead.no-ledgers = ##t
+                        \afterGrace
+                        c,8
+                        % AFTER:
+                        % SPANNER_STARTS:
+                        \repeatTie
+                        % OPEN_BRACKETS:
+                        {
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override NoteHead.no-ledgers = ##t
+                            % OPENING:
+                            % COMMANDS:
+                            \revert Accidental.stencil
+                            \revert NoteColumn.glissando-skip
+                            \revert NoteHead.no-ledgers
+                            \undo \hide NoteHead
+                            \slash
+                            c,16
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \ff
+                        % CLOSE_BRACKETS:
+                        }
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        c,1
+                        % AFTER:
+                        % SPANNER_STARTS:
+                        - \tweak circled-tip ##t
+                        - \tweak stencil #abjad-flared-hairpin
+                        \<
+                        \glissando
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        % OPENING:
+                        % COMMANDS:
+                        \hide NoteHead
+                        \override Accidental.stencil = ##f
+                        \override NoteColumn.glissando-skip = ##t
+                        \override NoteHead.no-ledgers = ##t
+                        \afterGrace
+                        c,8
+                        % AFTER:
+                        % SPANNER_STARTS:
+                        \repeatTie
+                        % OPEN_BRACKETS:
+                        {
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override NoteHead.no-ledgers = ##t
+                            % OPENING:
+                            % COMMANDS:
+                            \revert Accidental.stencil
+                            \revert NoteColumn.glissando-skip
+                            \revert NoteHead.no-ledgers
+                            \undo \hide NoteHead
+                            \slash
+                            c,16
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \ff
+                        % CLOSE_BRACKETS:
+                        }
+                        % ABSOLUTE_AFTER:
+                        % COMMANDS:
+                        \revert-noteheads
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
