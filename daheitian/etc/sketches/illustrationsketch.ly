@@ -245,7 +245,7 @@
                     #(define afterGraceFraction (cons 12 13))
                     \clef "bass"
                     \afterGrace
-                    bf,1
+                    c1
                     % AFTER:
                     % STEM_TREMOLOS:
                     :32
@@ -277,7 +277,7 @@
                     % COMMANDS:
                     #(define afterGraceFraction (cons 10 11))
                     \afterGrace
-                    a,4
+                    aqs,4
                     % AFTER:
                     % STEM_TREMOLOS:
                     :32
@@ -303,7 +303,7 @@
                         \revert NoteHead.no-ledgers
                         \undo \hide NoteHead
                         \slash
-                        a16
+                        b16
                         % AFTER:
                         % SPANNER_STOPS:
                         )

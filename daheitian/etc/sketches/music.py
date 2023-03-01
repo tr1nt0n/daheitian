@@ -30,7 +30,7 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (1,)),
     evans.RhythmHandler(rmakers.note),
-    evans.PitchHandler(["bf,"]),
+    evans.PitchHandler(["c"]),
     library.aftergrace(
         notes_string="aqs,16",
         cons=(12, 13),
@@ -52,9 +52,9 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (2,)),
     evans.RhythmHandler(evans.talea([2, 5, 8, 10, 10], 8)),
-    evans.PitchHandler(["a,", "gs", "e'", "e'", "e'"]),
+    evans.PitchHandler(["aqs,", "gs", "e'", "e'", "e'"]),
     library.aftergrace(
-        notes_string="a16", cons=(10, 11), selector=trinton.select_leaves_by_index([0])
+        notes_string="b16", cons=(10, 11), selector=trinton.select_leaves_by_index([0])
     ),
     library.aftergrace(
         notes_string="e'16",
