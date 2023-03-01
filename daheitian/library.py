@@ -962,21 +962,102 @@ onbeat_flute_handler = trinton.OnBeatGraceHandler(
 )
 
 
-def trombone_blast_attachments():
+# def aftergrace_attachments(selector=trinton.pleaves(), notehead_change=None, dynamic=None):
+#     def attach(argument):
+#         selections = selector(argument)
+#
+#         ties = abjad.select.logical_ties(selections, pitched=True)
+#
+#         leaves = abjad.select.leaves(selections, pitched=True)
+#
+#         ledger_literal = abjad.LilyPondLiteral(
+#             r"\once \override NoteHead.no-ledgers = ##t", "before"
+#         )
+#
+#         notehead_literal = abjad.LilyPondLiteral(notehead_change, "absolute_before")
+#
+#         closing_literal = abjad.LilyPondLiteral(r"\revert-noteheads", "absolute_after")
+#
+#         for tie in ties:
+#
+#             group = abjad.select.with_next_leaf(tie)
+#
+#             grace = baca.select.graces(group)
+#
+#             abjad.glissando(
+#                 group,
+#                 hide_middle_note_heads=True,
+#                 allow_repeats=True,
+#                 allow_ties=True,
+#             )
+#
+#             abjad.slur(group)
+#
+#             if notehead_change is not None:
+#                 for leaf in group:
+#                     abjad.attach(ledger_literal, leaf)
+#
+#             if dynamic is not None:
+#
+#                 abjad.attach(abjad.StartHairpin("o<|"), tie[0])
+#
+#                 abjad.attach(abjad.Dynamic(dynamic), grace[-1])
+#
+#             if notehead_change is not None:
+#
+#                 abjad.attach(notehead_literal, grace[-1])
+#
+#                 abjad.attach(
+#                     closing_literal, grace[-1]
+#                 )
+#
+#     return attach
+
+
+def aftergrace_attachments(
+    selector=trinton.pleaves(), notehead_change=None, dynamic=None
+):
     def attach(argument):
-        leaves = abjad.select.leaves(argument, pitched=True)
+        selections = selector(argument)
 
-        abjad.attach(abjad.LilyPondLiteral(r"\lowest", "before"), leaves[0])
+        ties = abjad.select.logical_ties(selections, pitched=True)
 
-        abjad.attach(
-            abjad.LilyPondLiteral(r"\revert-noteheads", "absolute_after"), leaves[-1]
-        )
+        leaves = abjad.select.leaves(selections, pitched=True)
 
-        ties = abjad.select.logical_ties(argument, pitched=True)
+        _overrides = {
+            "highest": r"\once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bb)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bc)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0be)))))))",
+            "lowest": r"\once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))",
+        }
+
+        if notehead_change is not None:
+            notehead_literal = abjad.LilyPondLiteral(
+                _overrides[notehead_change], "before"
+            )
+
+            stem_literal = abjad.LilyPondLiteral(
+                r"\once \override NoteHead.stem-attachment = #'(0 . 0.75)"
+            )
+
+            ledger_literal = abjad.LilyPondLiteral(
+                r"\once \override NoteHead.no-ledgers = ##t"
+            )
+
+            accidental_literal = abjad.LilyPondLiteral(
+                r"\once \override Staff.AccidentalPlacement.right-padding = #0.6"
+            )
+
+            literals = [
+                stem_literal,
+                ledger_literal,
+                notehead_literal,
+                accidental_literal,
+            ]
 
         for tie in ties:
 
             group = abjad.select.with_next_leaf(tie)
+
+            grace = baca.select.graces(group)
 
             abjad.glissando(
                 group,
@@ -985,16 +1066,18 @@ def trombone_blast_attachments():
                 allow_ties=True,
             )
 
-            ledger_literal = abjad.LilyPondLiteral(
-                r"\once \override NoteHead.no-ledgers = ##t", "before"
-            )
+            abjad.slur(group)
 
-            for leaf in group:
-                abjad.attach(ledger_literal, leaf)
+            if dynamic is not None:
 
-            abjad.attach(abjad.StartHairpin("o<|"), group[0])
+                abjad.attach(abjad.StartHairpin("o<|"), tie[0])
 
-            abjad.attach(abjad.Dynamic("ff"), group[-1])
+                abjad.attach(abjad.Dynamic(dynamic), grace[-1])
+
+            if notehead_change is not None:
+
+                for literal in literals:
+                    abjad.attach(literal, grace[-1])
 
     return attach
 
