@@ -26,6 +26,48 @@ trinton.make_music(
     voice=score["Global Context"],
 )
 
+# piano music commands
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (2,)),
+    evans.RhythmHandler(
+        evans.talea(
+            [
+                -7,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+            ],
+            8,
+        ),
+    ),
+    evans.PitchHandler(["bf,,,"]),
+    trinton.attachment_command(
+        attachments=[
+            abjad.Clef("bass"),
+        ],
+        selector=trinton.select_leaves_by_index([0]),
+    ),
+    trinton.ottava_command(
+        octave=-2, selector=trinton.select_leaves_by_index([0, -1], pitched=True)
+    ),
+    trinton.linear_attachment_command(
+        attachments=[abjad.StartHairpin("o<"), abjad.Dynamic("fff")],
+        selector=trinton.select_leaves_by_index([0, -3], pitched=True),
+    ),
+    voice=score["piano 2 voice"],
+)
+
 # timpani music commands
 
 trinton.make_music(
@@ -103,6 +145,47 @@ trinton.make_music(
         selector=trinton.pleaves(),
     ),
     voice=score["percussion 1 voice"],
+)
+
+# percussion music commands
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (2,)),
+    evans.RhythmHandler(
+        evans.talea(
+            [
+                -7,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+            ],
+            8,
+        ),
+    ),
+    evans.PitchHandler(
+        [[-1, 2]],
+    ),
+    library.change_lines(
+        lines=2, clef="percussion", selector=trinton.select_leaves_by_index([0])
+    ),
+    library.boxed_markup(
+        string="Bangu + Tanggu",
+    ),
+    trinton.linear_attachment_command(
+        attachments=[abjad.StartHairpin("o<"), abjad.Dynamic("fff")],
+        selector=trinton.select_leaves_by_index([0, -3], pitched=True),
+    ),
+    voice=score["percussion 2 voice"],
 )
 
 # contrabass music commands
@@ -412,6 +495,71 @@ trinton.make_music(
             5,
         )
     ),
+)
+
+# woodwind music commands
+
+for voice_name, pitch in zip(
+    [
+        "bassoon voice",
+        "bassclarinet voice",
+        "oboe voice",
+    ],
+    [
+        "g,",
+        "bf'",
+        "b",
+    ],
+):
+
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (2,)),
+        evans.RhythmHandler(evans.talea([-25, 5], 8)),
+        evans.PitchHandler([pitch]),
+        library.aftergrace(
+            notes_string=f"{pitch}16",
+            cons=(12, 13),
+        ),
+        library.aftergrace_attachments(),
+        trinton.linear_attachment_command(
+            attachments=[
+                evans.make_fancy_gliss(
+                    1,
+                    1,
+                    1,
+                    2,
+                    1,
+                    1,
+                    1,
+                    1,
+                    2,
+                    1,
+                    1,
+                    1,
+                ),
+            ],
+            selector=trinton.select_leaves_by_index([0], pitched=True),
+        ),
+        trinton.linear_attachment_command(
+            attachments=[
+                abjad.Dynamic("fff"),
+                abjad.StartHairpin("--"),
+                abjad.StopHairpin(),
+            ],
+            selector=trinton.select_leaves_by_index(
+                [0, 0, -1],
+                pitched=True,
+            ),
+        ),
+        voice=score[voice_name],
+    )
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (2,)),
+    trinton.attachment_command(
+        attachments=[abjad.Clef("bass")], selector=trinton.select_leaves_by_index([0])
+    ),
+    voice=score["bassoon voice"],
 )
 
 # write sc file

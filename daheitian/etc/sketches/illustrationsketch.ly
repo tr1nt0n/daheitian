@@ -56,7 +56,78 @@
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
                         R1 * 1
-                        R1 * 15/4
+                        r\breve.
+                        r8
+                        % BEFORE:
+                        % COMMANDS:
+                        \fancy-gliss
+                           #'(
+                              (0 0 0.5 1 1 0)
+                              (1 0 1.5 -1 2 0)
+                              (2 0 2.5 1 3 0)
+                              (3 0 3.5 -1 4 0)
+                              (4 0 4.5 1 5 0)
+                              (5 0 5.5 -1 6 0)
+                              (6 0 6.5 2 7 0)
+                              (7 0 7.5 -2 8 0)
+                              (8 0 8.5 1 9 0)
+                              (9 0 9.5 -1 10 0)
+                              (10 0 10.5 1 11 0)
+                              (11 0 11.5 -1 12 0)
+                              (12 0 12.5 1 13 0)
+                              (13 0 13.5 -1 14 0)
+                              (14 0 14.5 1 15 0)
+                              (15 0 15.5 -1 16 0)
+                              (16 0 16.5 2 17 0)
+                              (17 0 17.5 -2 18 0)
+                              (18 0 18.5 1 19 0)
+                              (19 0 19.5 -1 20 0)
+                              (20 0 20.5 1 21 0)
+                              (21 0 21.5 -1 22 0)
+                              (22 0 22.5 1 23 0)
+                              (23 0 23.5 -1 24 0)
+                         )
+                         #0.5
+                        % OPENING:
+                        % COMMANDS:
+                        #(define afterGraceFraction (cons 12 13))
+                        b2
+                        % AFTER:
+                        % ARTICULATIONS:
+                        \fff
+                        % SPANNER_STARTS:
+                        (
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        \glissando
+                        % OPENING:
+                        % COMMANDS:
+                        \hide NoteHead
+                        \override Accidental.stencil = ##f
+                        \override NoteColumn.glissando-skip = ##t
+                        \override NoteHead.no-ledgers = ##t
+                        \afterGrace
+                        b8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        \!
+                        % SPANNER_STARTS:
+                        \repeatTie
+                        % OPEN_BRACKETS:
+                        {
+                            % OPENING:
+                            % COMMANDS:
+                            \revert Accidental.stencil
+                            \revert NoteColumn.glissando-skip
+                            \revert NoteHead.no-ledgers
+                            \undo \hide NoteHead
+                            \slash
+                            b16
+                            % AFTER:
+                            % SPANNER_STOPS:
+                            )
+                        % CLOSE_BRACKETS:
+                        }
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -72,7 +143,78 @@
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bassklarinetten }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { bkl. }
                         R1 * 1
-                        R1 * 15/4
+                        r\breve.
+                        r8
+                        % BEFORE:
+                        % COMMANDS:
+                        \fancy-gliss
+                           #'(
+                              (0 0 0.5 1 1 0)
+                              (1 0 1.5 -1 2 0)
+                              (2 0 2.5 1 3 0)
+                              (3 0 3.5 -1 4 0)
+                              (4 0 4.5 1 5 0)
+                              (5 0 5.5 -1 6 0)
+                              (6 0 6.5 2 7 0)
+                              (7 0 7.5 -2 8 0)
+                              (8 0 8.5 1 9 0)
+                              (9 0 9.5 -1 10 0)
+                              (10 0 10.5 1 11 0)
+                              (11 0 11.5 -1 12 0)
+                              (12 0 12.5 1 13 0)
+                              (13 0 13.5 -1 14 0)
+                              (14 0 14.5 1 15 0)
+                              (15 0 15.5 -1 16 0)
+                              (16 0 16.5 2 17 0)
+                              (17 0 17.5 -2 18 0)
+                              (18 0 18.5 1 19 0)
+                              (19 0 19.5 -1 20 0)
+                              (20 0 20.5 1 21 0)
+                              (21 0 21.5 -1 22 0)
+                              (22 0 22.5 1 23 0)
+                              (23 0 23.5 -1 24 0)
+                         )
+                         #0.5
+                        % OPENING:
+                        % COMMANDS:
+                        #(define afterGraceFraction (cons 12 13))
+                        bf'2
+                        % AFTER:
+                        % ARTICULATIONS:
+                        \fff
+                        % SPANNER_STARTS:
+                        (
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        \glissando
+                        % OPENING:
+                        % COMMANDS:
+                        \hide NoteHead
+                        \override Accidental.stencil = ##f
+                        \override NoteColumn.glissando-skip = ##t
+                        \override NoteHead.no-ledgers = ##t
+                        \afterGrace
+                        bf'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        \!
+                        % SPANNER_STARTS:
+                        \repeatTie
+                        % OPEN_BRACKETS:
+                        {
+                            % OPENING:
+                            % COMMANDS:
+                            \revert Accidental.stencil
+                            \revert NoteColumn.glissando-skip
+                            \revert NoteHead.no-ledgers
+                            \undo \hide NoteHead
+                            \slash
+                            bf'16
+                            % AFTER:
+                            % SPANNER_STOPS:
+                            )
+                        % CLOSE_BRACKETS:
+                        }
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -88,7 +230,81 @@
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Fagotte }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { fg.}
                         R1 * 1
-                        R1 * 15/4
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        r\breve.
+                        r8
+                        % BEFORE:
+                        % COMMANDS:
+                        \fancy-gliss
+                           #'(
+                              (0 0 0.5 1 1 0)
+                              (1 0 1.5 -1 2 0)
+                              (2 0 2.5 1 3 0)
+                              (3 0 3.5 -1 4 0)
+                              (4 0 4.5 1 5 0)
+                              (5 0 5.5 -1 6 0)
+                              (6 0 6.5 2 7 0)
+                              (7 0 7.5 -2 8 0)
+                              (8 0 8.5 1 9 0)
+                              (9 0 9.5 -1 10 0)
+                              (10 0 10.5 1 11 0)
+                              (11 0 11.5 -1 12 0)
+                              (12 0 12.5 1 13 0)
+                              (13 0 13.5 -1 14 0)
+                              (14 0 14.5 1 15 0)
+                              (15 0 15.5 -1 16 0)
+                              (16 0 16.5 2 17 0)
+                              (17 0 17.5 -2 18 0)
+                              (18 0 18.5 1 19 0)
+                              (19 0 19.5 -1 20 0)
+                              (20 0 20.5 1 21 0)
+                              (21 0 21.5 -1 22 0)
+                              (22 0 22.5 1 23 0)
+                              (23 0 23.5 -1 24 0)
+                         )
+                         #0.5
+                        % OPENING:
+                        % COMMANDS:
+                        #(define afterGraceFraction (cons 12 13))
+                        g,2
+                        % AFTER:
+                        % ARTICULATIONS:
+                        \fff
+                        % SPANNER_STARTS:
+                        (
+                        - \tweak stencil #constante-hairpin
+                        \<
+                        \glissando
+                        % OPENING:
+                        % COMMANDS:
+                        \hide NoteHead
+                        \override Accidental.stencil = ##f
+                        \override NoteColumn.glissando-skip = ##t
+                        \override NoteHead.no-ledgers = ##t
+                        \afterGrace
+                        g,8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        \!
+                        % SPANNER_STARTS:
+                        \repeatTie
+                        % OPEN_BRACKETS:
+                        {
+                            % OPENING:
+                            % COMMANDS:
+                            \revert Accidental.stencil
+                            \revert NoteColumn.glissando-skip
+                            \revert NoteHead.no-ledgers
+                            \undo \hide NoteHead
+                            \slash
+                            g,16
+                            % AFTER:
+                            % SPANNER_STOPS:
+                            )
+                        % CLOSE_BRACKETS:
+                        }
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -190,7 +406,35 @@
                     \context Voice = "piano 2 voice"
                     {
                         R1 * 1
-                        R1 * 15/4
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "bass"
+                        r2..
+                        % BEFORE:
+                        % COMMANDS:
+                        \ottava -2
+                        bf,,,4
+                        % AFTER:
+                        % SPANNER_STARTS:
+                        - \tweak circled-tip ##t
+                        \<
+                        bf,,,4
+                        bf,,,4
+                        bf,,,4
+                        bf,,,4
+                        bf,,,4
+                        bf,,,4
+                        bf,,,4
+                        bf,,,4
+                        bf,,,4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        \fff
+                        bf,,,4
+                        bf,,,8
+                        % AFTER:
+                        % COMMANDS:
+                        \ottava 0
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -562,7 +806,34 @@
                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
                         R1 * 1
-                        R1 * 15/4
+                        % ABSOLUTE_BEFORE:
+                        % COMMANDS:
+                        \staff-line-count 2
+                        % OPENING:
+                        % COMMANDS:
+                        \clef "percussion"
+                        r2..
+                        <b d'>4
+                        % AFTER:
+                        % SPANNER_STARTS:
+                        - \tweak circled-tip ##t
+                        \<
+                        % COMMANDS:
+                        \boxed-markup "Bangu + Tanggu" 1
+                        <b d'>4
+                        <b d'>4
+                        <b d'>4
+                        <b d'>4
+                        <b d'>4
+                        <b d'>4
+                        <b d'>4
+                        <b d'>4
+                        <b d'>4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        \fff
+                        <b d'>4
+                        <b d'>8
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
