@@ -746,6 +746,58 @@ def oboe_talea(index=0):
 # notation tools
 
 
+def unpitched_glissandi(selector=trinton.pleaves(), articulation=None, trill=False):
+    def gliss(argument):
+        selections = selector(argument)
+
+        accidental_literal = abjad.LilyPondLiteral(
+            r"\once \override Accidental.stencil = ##f", "before"
+        )
+
+        dots_literal = abjad.LilyPondLiteral(
+            r"\once \override Dots.staff-position = #2", "before"
+        )
+
+        notehead_literal = abjad.LilyPondLiteral(
+            r"\once \override NoteHead.X-extent = #'(0 . 0) \once \override NoteHead.transparent = ##t \once \override NoteHead.no-ledgers = ##t",
+            "before",
+        )
+
+        exclude_first_and_last = abjad.select.exclude(selections, [0, -1])
+
+        for leaf in exclude_first_and_last:
+            abjad.attach(accidental_literal, leaf)
+
+            abjad.attach(dots_literal, leaf)
+
+            abjad.attach(notehead_literal, leaf)
+
+        ties = abjad.select.logical_ties(selections)
+
+        exclude_last_tie = abjad.select.exclude(ties, [-1])
+
+        for tie in exclude_last_tie:
+            abjad.glissando(
+                abjad.select.with_next_leaf(tie),
+                hide_middle_note_heads=True,
+                allow_repeats=True,
+                allow_ties=True,
+                zero_padding=True,
+            )
+
+        if articulation is not None:
+            for tie in ties:
+                abjad.attach(abjad.Articulation(articulation), tie[0])
+
+        if trill is True:
+            start_trill_span = abjad.StartTrillSpan(interval=abjad.NamedInterval("m2"))
+            stop_trill_span = abjad.StopTrillSpan()
+            abjad.attach(start_trill_span, selections[0])
+            abjad.attach(stop_trill_span, selections[-1])
+
+    return gliss
+
+
 def aftergrace(notes_string, cons=(15, 16), selector=trinton.pleaves()):
     def grace(argument):
         selections = selector(argument)

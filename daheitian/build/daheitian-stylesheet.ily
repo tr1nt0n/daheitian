@@ -122,6 +122,8 @@
         \override TextScript.font-name = "Bodoni72 Book"
         \override TextSpanner.font-name = "Bodoni72 Book"
 
+        \override TrillSpanner.bound-details.right.padding = #-5
+
         \shape #'((2 . 0) (1 . 0) (0.5 . 0) (0 . 0)) LaissezVibrerTie
         \override LaissezVibrerTie.X-extent = ##f
 
