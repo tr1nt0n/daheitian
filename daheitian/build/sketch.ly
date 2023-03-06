@@ -444,8 +444,6 @@
                         \afterGrace
                         c'''4..
                         % AFTER:
-                        % ARTICULATIONS:
-                        - \marcato
                         % SPANNER_STARTS:
                         (
                         - \tweak circled-tip ##t
@@ -474,6 +472,7 @@
                             c'''16
                             % AFTER:
                             % ARTICULATIONS:
+                            - \marcato
                             \ffff
                             % SPANNER_STOPS:
                             )
@@ -511,8 +510,6 @@
                         \once \override Staff.AccidentalPlacement.right-padding = #0.6
                         c'''16
                         % AFTER:
-                        % ARTICULATIONS:
-                        - \marcato
                         % SPANNER_STARTS:
                         (
                         - \tweak circled-tip ##t
@@ -581,16 +578,12 @@
                                  #0.5
                                 \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bb)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bc)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0be)))))))
                                 \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bb)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bc)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0be)))))))
-                                \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bb)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bc)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0be)))))))
                                 % OPENING:
                                 % COMMANDS:
                                 \once \override NoteHead.no-ledgers = ##t
                                 \once \override NoteHead.no-ledgers = ##t
-                                \once \override NoteHead.no-ledgers = ##t
                                 \once \override NoteHead.stem-attachment = #'(0 . 0.75)
                                 \once \override NoteHead.stem-attachment = #'(0 . 0.75)
-                                \once \override NoteHead.stem-attachment = #'(0 . 0.75)
-                                \once \override Staff.AccidentalPlacement.right-padding = #0.6
                                 \once \override Staff.AccidentalPlacement.right-padding = #0.6
                                 \once \override Staff.AccidentalPlacement.right-padding = #0.6
                                 \revert Accidental.stencil
@@ -601,31 +594,13 @@
                                 c'''16
                                 % AFTER:
                                 % ARTICULATIONS:
+                                - \marcato
                                 \ffff
                                 % SPANNER_STOPS:
                                 )
-                                % SPANNER_STARTS:
-                                (
-                                - \tweak circled-tip ##t
-                                - \tweak stencil #abjad-flared-hairpin
-                                \<
-                                \glissando
                             % CLOSE_BRACKETS:
                             }
-                            % OPENING:
-                            % COMMANDS:
-                            \hide NoteHead
-                            \override Accidental.stencil = ##f
-                            \override NoteColumn.glissando-skip = ##t
-                            \override NoteHead.no-ledgers = ##t
-                            \revert Accidental.stencil
-                            \revert NoteColumn.glissando-skip
-                            \revert NoteHead.no-ledgers
-                            \undo \hide NoteHead
                             r16
-                            % AFTER:
-                            % SPANNER_STOPS:
-                            )
                         % CLOSE_BRACKETS:
                         }
                         r4.
@@ -667,8 +642,6 @@
                         \once \override Staff.AccidentalPlacement.right-padding = #0.6
                         c'''8
                         % AFTER:
-                        % ARTICULATIONS:
-                        - \marcato
                         % SPANNER_STARTS:
                         (
                         - \tweak circled-tip ##t
@@ -725,16 +698,12 @@
                                  #0.5
                                 \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bb)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bc)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0be)))))))
                                 \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bb)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bc)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0be)))))))
-                                \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bb)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bc)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0be)))))))
                                 % OPENING:
                                 % COMMANDS:
                                 \once \override NoteHead.no-ledgers = ##t
                                 \once \override NoteHead.no-ledgers = ##t
-                                \once \override NoteHead.no-ledgers = ##t
                                 \once \override NoteHead.stem-attachment = #'(0 . 0.75)
                                 \once \override NoteHead.stem-attachment = #'(0 . 0.75)
-                                \once \override NoteHead.stem-attachment = #'(0 . 0.75)
-                                \once \override Staff.AccidentalPlacement.right-padding = #0.6
                                 \once \override Staff.AccidentalPlacement.right-padding = #0.6
                                 \once \override Staff.AccidentalPlacement.right-padding = #0.6
                                 \revert Accidental.stencil
@@ -745,31 +714,13 @@
                                 c'''16
                                 % AFTER:
                                 % ARTICULATIONS:
+                                - \marcato
                                 \ffff
                                 % SPANNER_STOPS:
                                 )
-                                % SPANNER_STARTS:
-                                (
-                                - \tweak circled-tip ##t
-                                - \tweak stencil #abjad-flared-hairpin
-                                \<
-                                \glissando
                             % CLOSE_BRACKETS:
                             }
-                            % OPENING:
-                            % COMMANDS:
-                            \hide NoteHead
-                            \override Accidental.stencil = ##f
-                            \override NoteColumn.glissando-skip = ##t
-                            \override NoteHead.no-ledgers = ##t
-                            \revert Accidental.stencil
-                            \revert NoteColumn.glissando-skip
-                            \revert NoteHead.no-ledgers
-                            \undo \hide NoteHead
                             r8
-                            % AFTER:
-                            % SPANNER_STOPS:
-                            )
                         % CLOSE_BRACKETS:
                         }
                         r8
@@ -807,8 +758,6 @@
                         \once \override Staff.AccidentalPlacement.right-padding = #0.6
                         c'''4.
                         % AFTER:
-                        % ARTICULATIONS:
-                        - \marcato
                         % SPANNER_STARTS:
                         (
                         - \tweak circled-tip ##t
@@ -850,6 +799,7 @@
                             c'''16
                             % AFTER:
                             % ARTICULATIONS:
+                            - \marcato
                             \ffff
                             % SPANNER_STOPS:
                             )
@@ -893,8 +843,6 @@
                         \once \override Staff.AccidentalPlacement.right-padding = #0.6
                         c'''4
                         % AFTER:
-                        % ARTICULATIONS:
-                        - \marcato
                         % SPANNER_STARTS:
                         (
                         - \tweak circled-tip ##t
@@ -936,6 +884,7 @@
                             c'''16
                             % AFTER:
                             % ARTICULATIONS:
+                            - \marcato
                             \ffff
                             % SPANNER_STOPS:
                             )
@@ -973,8 +922,6 @@
                         \once \override Staff.AccidentalPlacement.right-padding = #0.6
                         c'''4
                         % AFTER:
-                        % ARTICULATIONS:
-                        - \marcato
                         % SPANNER_STARTS:
                         (
                         - \tweak circled-tip ##t
@@ -1016,6 +963,7 @@
                             c'''16
                             % AFTER:
                             % ARTICULATIONS:
+                            - \marcato
                             \ffff
                             % SPANNER_STOPS:
                             )

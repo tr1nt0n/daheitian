@@ -1022,12 +1022,12 @@ onbeat_flute_handler = trinton.OnBeatGraceHandler(
 
 
 def aftergrace_attachments(
-    selector=trinton.pleaves(), notehead_change=None, dynamic=None
+    selector=trinton.pleaves(), notehead_change=None, dynamic=None, articulation=None
 ):
     def attach(argument):
         selections = selector(argument)
 
-        ties = abjad.select.logical_ties(selections, pitched=True)
+        ties = abjad.select.logical_ties(selections, pitched=True, grace=False)
 
         leaves = abjad.select.leaves(selections, pitched=True)
 
@@ -1075,16 +1075,20 @@ def aftergrace_attachments(
 
             abjad.slur(group)
 
+            if notehead_change is not None:
+
+                for literal in literals:
+                    abjad.attach(literal, grace[-1])
+
             if dynamic is not None:
 
                 abjad.attach(abjad.StartHairpin("o<|"), tie[0])
 
                 abjad.attach(abjad.Dynamic(dynamic), grace[-1])
 
-            if notehead_change is not None:
+            if articulation is not None:
 
-                for literal in literals:
-                    abjad.attach(literal, grace[-1])
+                abjad.attach(abjad.Articulation(articulation), grace[-1])
 
     return attach
 

@@ -127,17 +127,13 @@ trinton.make_music(
     ),
     trinton.force_rest(selector=trinton.patterned_tie_index_selector([2, 4], 6)),
     evans.PitchHandler([24]),
-    trinton.attachment_command(
-        attachments=[abjad.Articulation("marcato")],
-        selector=trinton.logical_ties(first=True, pitched=True),
-    ),
     library.aftergrace(
         notes_string="c'''16",
         cons=(15, 16),
     ),
     library.aftergrace_attachments(
-        selector=trinton.pleaves(),
         dynamic="ffff",
+        articulation="marcato",
         notehead_change="highest",
     ),
     trinton.linear_attachment_command(
