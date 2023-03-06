@@ -327,11 +327,9 @@ _bloom_pitches = {
 }
 
 _brass_chord_pitches = {
-    "frenchhorn voice": "13/4",
-    "frenchhorn 2 voice": "18/7",
+    "frenchhorn voice": [quicktions.Fraction(_) for _ in ["13/4", "18/7"]],
     "trumpet voice": ["d''", "f''"],
-    "tenortrombone voice": "64/21",
-    "tenortrombone 2 voice": "22/9",
+    "tenortrombone voice": [quicktions.Fraction(_) for _ in ["64/21", "22/9"]],
     "tuba voice": ["as,", "b,,"],
 }
 
@@ -755,19 +753,6 @@ def oboe_talea(index=0):
 # notation tools
 
 
-def clean_cent_markups(selector):
-    def clean(argument):
-        selections = selector(argument)
-        for leaf in selections:
-            markups = [_ for _ in abjad.get.markup(leaf)]
-            if abjad.get.has_indicator(leaf, abjad.Markup):
-                for markup in markups:
-                    abjad.detach(abjad.Markup, leaf)
-                    abjad.attach(markup, leaf, direction=abjad.DOWN)
-
-    return clean
-
-
 def unpitched_glissandi(selector=trinton.pleaves(), articulation=None, trill=False):
     def gliss(argument):
         selections = selector(argument)
@@ -1034,58 +1019,6 @@ onbeat_flute_handler = trinton.OnBeatGraceHandler(
     vector_forget=False,
     name="onbeat flute graces",
 )
-
-
-# def aftergrace_attachments(selector=trinton.pleaves(), notehead_change=None, dynamic=None):
-#     def attach(argument):
-#         selections = selector(argument)
-#
-#         ties = abjad.select.logical_ties(selections, pitched=True)
-#
-#         leaves = abjad.select.leaves(selections, pitched=True)
-#
-#         ledger_literal = abjad.LilyPondLiteral(
-#             r"\once \override NoteHead.no-ledgers = ##t", "before"
-#         )
-#
-#         notehead_literal = abjad.LilyPondLiteral(notehead_change, "absolute_before")
-#
-#         closing_literal = abjad.LilyPondLiteral(r"\revert-noteheads", "absolute_after")
-#
-#         for tie in ties:
-#
-#             group = abjad.select.with_next_leaf(tie)
-#
-#             grace = baca.select.graces(group)
-#
-#             abjad.glissando(
-#                 group,
-#                 hide_middle_note_heads=True,
-#                 allow_repeats=True,
-#                 allow_ties=True,
-#             )
-#
-#             abjad.slur(group)
-#
-#             if notehead_change is not None:
-#                 for leaf in group:
-#                     abjad.attach(ledger_literal, leaf)
-#
-#             if dynamic is not None:
-#
-#                 abjad.attach(abjad.StartHairpin("o<|"), tie[0])
-#
-#                 abjad.attach(abjad.Dynamic(dynamic), grace[-1])
-#
-#             if notehead_change is not None:
-#
-#                 abjad.attach(notehead_literal, grace[-1])
-#
-#                 abjad.attach(
-#                     closing_literal, grace[-1]
-#                 )
-#
-#     return attach
 
 
 def aftergrace_attachments(
