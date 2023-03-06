@@ -326,6 +326,15 @@ _bloom_pitches = {
     },
 }
 
+_brass_chord_pitches = {
+    "frenchhorn voice": "13/4",
+    "frenchhorn 2 voice": "18/7",
+    "trumpet voice": ["d''", "f''"],
+    "tenortrombone voice": "64/21",
+    "tenortrombone 2 voice": "22/9",
+    "tuba voice": ["as,", "b,,"],
+}
+
 # sequences
 
 
@@ -744,6 +753,19 @@ def oboe_talea(index=0):
 
 
 # notation tools
+
+
+def clean_cent_markups(selector):
+    def clean(argument):
+        selections = selector(argument)
+        for leaf in selections:
+            markups = [_ for _ in abjad.get.markup(leaf)]
+            if abjad.get.has_indicator(leaf, abjad.Markup):
+                for markup in markups:
+                    abjad.detach(abjad.Markup, leaf)
+                    abjad.attach(markup, leaf, direction=abjad.DOWN)
+
+    return clean
 
 
 def unpitched_glissandi(selector=trinton.pleaves(), articulation=None, trill=False):
