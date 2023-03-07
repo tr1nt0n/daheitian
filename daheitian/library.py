@@ -333,6 +333,180 @@ _brass_chord_pitches = {
     "tuba voice": ["as,", "b,,"],
 }
 
+_moths_selectors = {
+    1: {
+        "contrabass voice": trinton.patterned_tie_index_selector([0, 10, 20], 30),
+        "cello voice": trinton.patterned_tie_index_selector([6, 12, 18, 24], 30),
+        "viola voice": trinton.patterned_tie_index_selector([6, 12, 18, 24], 30),
+        "violin 2 voice": trinton.patterned_tie_index_selector([0, 7, 14, 21], 28),
+        "violin 1 voice": trinton.patterned_tie_index_selector(
+            [4, 8, 12, 16, 20, 24], 28
+        ),
+        "bassoon voice": trinton.patterned_tie_index_selector([0, 10, 20], 30),
+        "bassclarinet voice": trinton.patterned_tie_index_selector([0, 7, 14, 21], 28),
+        "oboe voice": trinton.patterned_tie_index_selector([4, 8, 12, 16, 20, 24], 28),
+    },
+    2: {
+        "contrabass voice": trinton.patterned_tie_index_selector(
+            [
+                0,
+                1,
+                2,
+                3,
+                4,
+                10,
+                11,
+                12,
+                13,
+                14,
+                20,
+                21,
+                22,
+                23,
+                24,
+            ],
+            30,
+        ),
+        "cello voice": trinton.patterned_tie_index_selector(
+            [6, 7, 12, 13, 18, 19, 24, 25], 30
+        ),
+        "viola voice": trinton.patterned_tie_index_selector(
+            [
+                6,
+                7,
+                8,
+                9,
+                12,
+                13,
+                14,
+                15,
+                18,
+                19,
+                20,
+                21,
+                24,
+                25,
+                26,
+                27,
+            ],
+            30,
+        ),
+        "violin 2 voice": trinton.patterned_tie_index_selector(
+            [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+            ],
+            28,
+        ),
+        "violin 1 voice": trinton.patterned_tie_index_selector(
+            [
+                4,
+                5,
+                8,
+                9,
+                12,
+                13,
+                16,
+                17,
+                20,
+                21,
+                24,
+                25,
+            ],
+            28,
+        ),
+        "bassoon voice": trinton.patterned_tie_index_selector(
+            [
+                0,
+                1,
+                2,
+                10,
+                11,
+                12,
+                20,
+                21,
+                22,
+            ],
+            30,
+        ),
+        "bassclarinet voice": trinton.patterned_tie_index_selector(
+            [
+                0,
+                1,
+                2,
+                7,
+                8,
+                9,
+                14,
+                15,
+                16,
+                21,
+                22,
+                23,
+            ],
+            28,
+        ),
+        "oboe voice": trinton.patterned_tie_index_selector(
+            [
+                4,
+                5,
+                6,
+                8,
+                9,
+                10,
+                12,
+                13,
+                14,
+                16,
+                17,
+                18,
+                20,
+                21,
+                22,
+                24,
+                25,
+                26,
+            ],
+            28,
+        ),
+    },
+}
+
+_fundamental_to_multiphonic = {
+    "cqs,": abjad.Markup(
+        r"\markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }",
+    ),
+    "d": abjad.Markup(
+        r"\markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }",
+    ),
+    "c''": abjad.Markup(
+        r"\markup { C }",
+    ),
+}
+
 # sequences
 
 
@@ -721,6 +895,16 @@ def piano_kb_pitches(index=0):
 # rhythm tools
 
 
+def fuse_contiguous(selector=trinton.pleaves()):
+    def fuse(argument):
+        selections = selector(argument)
+        contiguous = abjad.select.group_by_contiguity(selections)
+        for group in contiguous:
+            abjad.mutate.fuse(group)
+
+    return fuse
+
+
 def flute_graces(mod=3):
     def graces(argument):
         pleaves = abjad.select.leaves(argument, pitched=True)
@@ -751,6 +935,18 @@ def oboe_talea(index=0):
 
 
 # notation tools
+
+
+def attach_multiphonics(selector=trinton.logical_ties(first=True, pitched=True)):
+    def attach(argument):
+        selections = selector(argument)
+        for selection in selections:
+            named_pitch = selection.written_pitch.name
+            abjad.attach(
+                _fundamental_to_multiphonic[named_pitch], selection, direction=abjad.UP
+            )
+
+    return attach
 
 
 def contiguous_trills(selector=trinton.pleaves()):
