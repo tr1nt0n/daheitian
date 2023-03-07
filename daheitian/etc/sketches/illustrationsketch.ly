@@ -79,7 +79,7 @@
                         - \marcato
                         \fff
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         % START_BEAM:
                         [
                         % SPANNER_STARTS:
@@ -96,7 +96,7 @@
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         % START_BEAM:
                         [
                         r16
@@ -110,7 +110,7 @@
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         % START_BEAM:
                         [
                         r16
@@ -124,7 +124,7 @@
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         % START_BEAM:
                         [
                         r16
@@ -138,7 +138,7 @@
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         % START_BEAM:
                         [
                         r16
@@ -152,7 +152,7 @@
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         % START_BEAM:
                         [
                         r16
@@ -167,7 +167,7 @@
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         % START_BEAM:
                         [
                         r16
@@ -181,7 +181,7 @@
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         % START_BEAM:
                         [
                         r16
@@ -195,7 +195,7 @@
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         % START_BEAM:
                         [
                         r16
@@ -209,7 +209,7 @@
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         % START_BEAM:
                         [
                         r16
@@ -223,7 +223,7 @@
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         % START_BEAM:
                         [
                         r16
@@ -237,7 +237,7 @@
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         % START_BEAM:
                         [
                         r16
@@ -253,42 +253,42 @@
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         r16
                         c''8.
                         % AFTER:
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         r16
                         c''8.
                         % AFTER:
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         r16
                         c''8.
                         % AFTER:
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         r16
                         c''8.
                         % AFTER:
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         r16
                         c''8.
                         % AFTER:
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         r16
                         r4
                         c''8.
@@ -296,46 +296,253 @@
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         r16
                         c''8.
                         % AFTER:
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         r16
                         c''8.
                         % AFTER:
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         r16
                         c''8.
                         % AFTER:
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         r16
                         c''8.
                         % AFTER:
                         % ARTICULATIONS:
                         - \marcato
                         % MARKUP:
-                        ^ \markup { C }
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
                         r16
                         c''8.
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        r16
+                        r4
+                        c''4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        c''8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        % START_BEAM:
+                        [
+                        c''16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        c''16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        % STOP_BEAM:
+                        ]
+                        c''8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        % START_BEAM:
+                        [
+                        c''8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        % STOP_BEAM:
+                        ]
+                        c''16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        % START_BEAM:
+                        [
+                        c''8.
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        % STOP_BEAM:
+                        ]
+                        c''4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        c''8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        % START_BEAM:
+                        [
+                        c''8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        % STOP_BEAM:
+                        ]
+                        c''4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        c''8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        % START_BEAM:
+                        [
+                        c''16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        c''16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        % STOP_BEAM:
+                        ]
+                        c''8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        % START_BEAM:
+                        [
+                        c''8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        % STOP_BEAM:
+                        ]
+                        c''16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        % START_BEAM:
+                        [
+                        c''8.
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        % STOP_BEAM:
+                        ]
+                        c''4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        c''8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        % START_BEAM:
+                        [
+                        c''8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        % STOP_BEAM:
+                        ]
+                        c''4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        c''8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        % START_BEAM:
+                        [
+                        c''16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        c''16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        % STOP_BEAM:
+                        ]
+                        c''8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        % START_BEAM:
+                        [
+                        c''8
                         % AFTER:
                         % ARTICULATIONS:
                         - \marcato
                         \!
                         % MARKUP:
-                        ^ \markup { C }
-                        r16
-                        r4
-                        R1 * 15/4
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }
+                        % STOP_BEAM:
+                        ]
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -715,11 +922,386 @@
                         % AFTER:
                         % ARTICULATIONS:
                         - \marcato
+                        r16
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a8.
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a8.
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        % BEFORE:
+                        % COMMANDS:
+                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                        % OPENING:
+                        % COMMANDS:
+                        \once \override NoteHead.no-ledgers = ##t
+                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                        a8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
                         \!
                         % SPANNER_STOPS:
                         \stopTextSpan
-                        r16
-                        R1 * 15/4
+                        % STOP_BEAM:
+                        ]
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -896,13 +1478,219 @@
                         ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
                         d16
                         % AFTER:
-                        % ARTICULATIONS:
-                        \!
                         % SPANNER_STARTS:
                         \repeatTie
                         r8.
                         r4
-                        R1 * 15/4
+                        cqs,4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }
+                        d8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
+                        % START_BEAM:
+                        [
+                        cqs,16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }
+                        d16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
+                        % STOP_BEAM:
+                        ]
+                        cqs,8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }
+                        % START_BEAM:
+                        [
+                        d8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
+                        % STOP_BEAM:
+                        ]
+                        cqs,16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }
+                        % START_BEAM:
+                        [
+                        d8.
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
+                        % STOP_BEAM:
+                        ]
+                        cqs,4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }
+                        d8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
+                        % START_BEAM:
+                        [
+                        cqs,8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }
+                        % STOP_BEAM:
+                        ]
+                        d4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
+                        cqs,8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }
+                        % START_BEAM:
+                        [
+                        d16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
+                        cqs,16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }
+                        % STOP_BEAM:
+                        ]
+                        d8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
+                        % START_BEAM:
+                        [
+                        cqs,8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }
+                        % STOP_BEAM:
+                        ]
+                        d16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
+                        % START_BEAM:
+                        [
+                        cqs,8.
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }
+                        % STOP_BEAM:
+                        ]
+                        d4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
+                        cqs,8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }
+                        % START_BEAM:
+                        [
+                        d8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
+                        % STOP_BEAM:
+                        ]
+                        cqs,4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }
+                        d8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
+                        % START_BEAM:
+                        [
+                        cqs,16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }
+                        d16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
+                        % STOP_BEAM:
+                        ]
+                        cqs,8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }
+                        % START_BEAM:
+                        [
+                        d8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        \!
+                        % MARKUP:
+                        ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
+                        % STOP_BEAM:
+                        ]
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1344,12 +2132,163 @@
                         % AFTER:
                         % ARTICULATIONS:
                         - \marcato
+                        r8
+                        r4
+                        b4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        g16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        d'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        b8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        f'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        g8.
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        d'4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        b8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        f'4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        g8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        d'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        f'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        b8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        g16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        d'8.
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        f'4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        b8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        g4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        d'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        f'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        b16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        g8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
                         \!
                         % SPANNER_STOPS:
                         \stopTextSpan
-                        r8
-                        r4
-                        R1 * 15/4
+                        % STOP_BEAM:
+                        ]
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1555,10 +2494,161 @@
                         % AFTER:
                         % ARTICULATIONS:
                         - \marcato
+                        f'4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        g8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        d'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        f'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        b8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        g16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        d'8.
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        f'4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        b8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        g4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        d'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        f'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        b16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        g8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        d'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        f'8.
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        b4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        g8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        d'4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        b16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        f'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        g8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        d'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
                         \!
                         % SPANNER_STOPS:
                         \stopTextSpan
-                        R1 * 15/4
+                        % STOP_BEAM:
+                        ]
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1751,14 +2841,164 @@
                         - \marcato
                         f'8
                         % AFTER:
-                        % ARTICULATIONS:
-                        \!
-                        % SPANNER_STOPS:
-                        \stopTextSpan
                         % SPANNER_STARTS:
                         \repeatTie
                         r8
-                        R1 * 15/4
+                        b4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        g16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        d'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        b8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        f'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        g8.
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        d'4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        b8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        f'4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        g8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        d'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        f'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        b8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        g16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        d'8.
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        f'4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        b8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        g4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        d'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        f'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        b16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        g8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        \!
+                        % SPANNER_STOPS:
+                        \stopTextSpan
+                        % STOP_BEAM:
+                        ]
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -1941,11 +3181,162 @@
                         % AFTER:
                         % ARTICULATIONS:
                         - \marcato
+                        r4
+                        f'4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        b8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        f'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        g16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        d'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        b16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        f'8.
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        g4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        d'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        b4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        g16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        d'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        b8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        f'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        g8.
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        d'4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        b8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        f'4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        g8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        d'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        f'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        b8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
                         \!
                         % SPANNER_STOPS:
                         \stopTextSpan
-                        r4
-                        R1 * 15/4
+                        % STOP_BEAM:
+                        ]
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:
@@ -2115,15 +3506,165 @@
                         - \marcato
                         d'8.
                         % AFTER:
-                        % ARTICULATIONS:
-                        \!
-                        % SPANNER_STOPS:
-                        \stopTextSpan
                         % SPANNER_STARTS:
                         \repeatTie
                         r16
                         r4
-                        R1 * 15/4
+                        f'4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        b8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        f'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        g16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        d'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        b16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        f'8.
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        g4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        d'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        b4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        g16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        d'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        b8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        f'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        g8.
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        d'4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        b8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        f'4
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        g8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        d'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        f'16
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % STOP_BEAM:
+                        ]
+                        b8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        % START_BEAM:
+                        [
+                        f'8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        - \marcato
+                        \!
+                        % SPANNER_STOPS:
+                        \stopTextSpan
+                        % STOP_BEAM:
+                        ]
                     % CLOSE_BRACKETS:
                     }
                 % CLOSE_BRACKETS:

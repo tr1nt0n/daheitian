@@ -30,7 +30,7 @@ for leaf, string in zip(
         voice=score["Global Context"],
     )
 
-# stage 1 rhythms
+# rhythms
 
 for voice_name in [
     "contrabass voice",
@@ -85,6 +85,14 @@ for voice_name in [
         library.fuse_contiguous(),
         trinton.beam_groups(beam_rests=True, selector=abjad.select.tuplets),
         evans.RewriteMeterCommand(boundary_depth=-1),
+        voice=score[voice_name],
+        preprocessor=trinton.fuse_quarters_preprocessor((1,)),
+    )
+
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (3,)),
+        evans.RhythmHandler(evans.talea(library.moths_talea(), 16)),
+        trinton.beam_durations([(1, 4)]),
         voice=score[voice_name],
         preprocessor=trinton.fuse_quarters_preprocessor((1,)),
     )

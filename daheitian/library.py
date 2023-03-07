@@ -152,6 +152,22 @@ oboe_chant_talea = eval(
     """[2, 4, 2, 4, 2, 3, 3, -3, 2, 4, 2, 4, 2, 4, 2, 3, 2, 3, 3, -3,]"""
 )
 
+moth_talea = eval(
+    """[
+        4,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        3,
+        4,
+        2,
+        2,
+    ]"""
+)
+
 # dictionaries
 
 _bloom_pitches = {
@@ -503,7 +519,7 @@ _fundamental_to_multiphonic = {
         r"\markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }",
     ),
     "c''": abjad.Markup(
-        r"\markup { C }",
+        r"\markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }",
     ),
 }
 
@@ -932,6 +948,10 @@ def flute_graces(mod=3):
 
 def oboe_talea(index=0):
     return trinton.rotated_sequence(oboe_chant_talea, index)
+
+
+def moths_talea(index=0):
+    return trinton.rotated_sequence(moth_talea, index)
 
 
 # notation tools
