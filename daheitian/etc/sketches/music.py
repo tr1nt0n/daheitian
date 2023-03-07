@@ -174,6 +174,7 @@ trinton.make_music(
         selector=trinton.pleaves(),
     ),
     trinton.notehead_bracket_command(),
+    library.contiguous_trills(),
     voice=score["trumpet voice"],
     preprocessor=trinton.fuse_quarters_preprocessor((2,)),
 )

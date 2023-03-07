@@ -753,6 +753,16 @@ def oboe_talea(index=0):
 # notation tools
 
 
+def contiguous_trills(selector=trinton.pleaves()):
+    def trill(argument):
+        selections = selector(argument)
+        runs = abjad.select.group_by_contiguity(selections)
+        for run in runs:
+            abjad.trill_spanner(run)
+
+    return trill
+
+
 def unpitched_glissandi(selector=trinton.pleaves(), articulation=None, trill=False):
     def gliss(argument):
         selections = selector(argument)

@@ -456,6 +456,8 @@
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         \glissando
+                        % TRILL_SPANNER_STARTS:
+                        \startTrillSpan
                         % OPEN_BRACKETS:
                         {
                             % BEFORE:
@@ -604,6 +606,7 @@
                                 \ffff
                                 % SPANNER_STOPS:
                                 )
+                                \stopTrillSpan
                             % CLOSE_BRACKETS:
                             }
                             r16
@@ -654,6 +657,8 @@
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         \glissando
+                        % TRILL_SPANNER_STARTS:
+                        \startTrillSpan
                         % OPEN_BRACKETS:
                         \tweak text #tuplet-number::calc-fraction-text
                         \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 4) (ly:make-duration 3 0))
@@ -724,6 +729,7 @@
                                 \ffff
                                 % SPANNER_STOPS:
                                 )
+                                \stopTrillSpan
                             % CLOSE_BRACKETS:
                             }
                             r8
@@ -770,6 +776,8 @@
                         - \tweak stencil #abjad-flared-hairpin
                         \<
                         \glissando
+                        % TRILL_SPANNER_STARTS:
+                        \startTrillSpan
                         % BEFORE:
                         % COMMANDS:
                         \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bb)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bc)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0be)))))))
@@ -949,6 +957,8 @@
                         \afterGrace
                         c'''4
                         % AFTER:
+                        % SPANNER_STOPS:
+                        \stopTrillSpan
                         % SPANNER_STARTS:
                         \repeatTie
                         % OPEN_BRACKETS:
