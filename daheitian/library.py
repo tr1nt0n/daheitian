@@ -780,7 +780,14 @@ def monolith(score, measure):
 
     trinton.make_music(
         lambda _: trinton.select_target(_, (measure,)),
-        evans.RhythmHandler(evans.tuplet([(1,), (2, 3)])),
+        evans.RhythmHandler(
+            evans.tuplet(
+                [
+                    (1,),
+                    (7, 1, -12),
+                ]
+            )
+        ),
         evans.PitchHandler([["c'", "df'"]]),
         trinton.linear_attachment_command(
             attachments=[
@@ -846,7 +853,7 @@ def monolith(score, measure):
             selector=trinton.select_leaves_by_index([2, 4, -1], pitched=True),
         ),
         trinton.hooked_spanner_command(
-            string="Flatterhafte Ventile",
+            string="Flatterventile",
             selector=trinton.select_leaves_by_index([0, -1], pitched=True),
             right_padding=2,
         ),
@@ -930,6 +937,7 @@ def flute_graces(mod=3):
             gesture_lengths=[
                 1,
             ],
+            remove_skips=True,
             forget=False,
         )
 
@@ -1046,7 +1054,9 @@ def aftergrace(notes_string, cons=(15, 16), selector=trinton.pleaves()):
         containers = [abjad.AfterGraceContainer(notes_string) for _ in ties]
 
         for container in containers:
-            literal = abjad.LilyPondLiteral(r"\slash")
+            literal = abjad.LilyPondLiteral(
+                r'\once \override Flag.stroke-style = #"grace"'
+            )
 
             abjad.attach(literal, container[0])
 

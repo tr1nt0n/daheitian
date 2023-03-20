@@ -12,7 +12,7 @@
 \header {
     dedication = \markup \fontsize #12 \center-column {\line \override #'(font-name . "Bodoni72 Bold") { { D À H Ē I T I Ā N } } \fontsize #0.25 \with-color #white "."}
     title = \markup \override #'(font-name . "Source Han Serif SC Bold") \fontsize #16 \center-column { \line { 大 黒 天 } \fontsize #0.01 \with-color #white "."}
-    subtitle = \markup \fontsize #5 \center-column { \line { \override #'(font-name . "Bodoni72 Book Italic") { für } \override #'(font-name . "Bodoni72 Bold") { ORCHESTER} } \fontsize #0.01 \with-color #white "."}
+    subtitle = \markup \fontsize #5 \center-column { \line { \override #'(font-name . "Bodoni72 Book Italic") { für } \override #'(font-name . "Bodoni72 Bold") { ORCHESTER } } \fontsize #0.01 \with-color #white "."}
     composer = \markup \override #'(font-name . "Bodoni72") \fontsize #4 {"Trinton Hlynn (*2000)"}
 }
 
