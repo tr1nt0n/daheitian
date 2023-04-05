@@ -9,13 +9,6 @@
 \include "/Users/trintonprater/trinton/lilypond/trinton-markups.ily"
 \include "/Users/trintonprater/abjad-ext-microtones/abjadext/microtones/lilypond/ekmelos-ji-accidental-markups.ily"
 
-% \header {
-%     dedication = \markup \fontsize #12 \center-column {\line \override #'(font-name . "Bodoni72 Bold") { { D À H Ē I T I Ā N } } \fontsize #0.25 \with-color #white "."}
-%     title = \markup \override #'(font-name . "Source Han Serif SC Bold") \fontsize #16 \center-column { \line { 大 黒 天 } \fontsize #0.01 \with-color #white "."}
-%     subtitle = \markup \fontsize #5 \center-column { \line { \override #'(font-name . "Bodoni72 Book Italic") { für } \override #'(font-name . "Bodoni72 Bold") { ORCHESTER} } \fontsize #0.01 \with-color #white "."}
-%     composer = \markup \override #'(font-name . "Bodoni72") \fontsize #4 {"Trinton Hlynn (*2000)"}
-% }
-
 \layout {
     \accidentalStyle neo-modern
     ragged-bottom = ##t
@@ -65,13 +58,13 @@
         \override BarLine.thick-thickness = #10
         \override BarLine.bar-extent = #'(-3.5 . 3.5)
 
-        \override BarNumber.stencil = #(make-stencil-circler 0.1 0.75 ly:text-interface::print)
-        \override BarNumber.Y-extent = ##f
-		\override BarNumber.Y-offset = 0
-		\override BarNumber.extra-offset = #'(-2 . 4)
-        \override BarNumber.font-size = 7
-		\override BarNumber.padding = 5
-        \override BarNumber.font-name = "Bodoni72 Bold"
+        % \override BarNumber.stencil = #(make-stencil-circler 0.1 0.75 ly:text-interface::print)
+        % \override BarNumber.Y-extent = ##f
+		% \override BarNumber.Y-offset = 0
+		% \override BarNumber.extra-offset = #'(-2 . 4)
+        % \override BarNumber.font-size = 7
+		% \override BarNumber.padding = 5
+        % \override BarNumber.font-name = "Bodoni72 Bold"
 
         autoBeaming = ##f
         \override Beam.breakable = ##t
@@ -161,7 +154,7 @@
     \context {
         \Staff
         fontSize = #-0.25
-        \remove Time_signature_engraver
+        % \remove Time_signature_engraver
         \consists Duration_line_engraver
 
         \override DurationLine.style = #'line
@@ -170,7 +163,7 @@
         \override DurationLine.breakable = ##t
 
         \override InstrumentName.self-alignment-X = #CENTER
-        \RemoveAllEmptyStaves
+        % \RemoveAllEmptyStaves
     }
 
     \context {

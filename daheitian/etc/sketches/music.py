@@ -234,7 +234,7 @@ library.ties(score=score)
 
 trinton.render_file(
     score=score,
-    segment_path="/Users/trintonprater/scores/daheitian/daheitian/etc/sketches",
+    segment_path="/Users/trintonprater/scores/daheitian/daheitian",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="sketch",
     includes=[
