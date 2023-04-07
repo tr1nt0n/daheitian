@@ -9,6 +9,8 @@
 \include "/Users/trintonprater/trinton/lilypond/trinton-markups.ily"
 \include "/Users/trintonprater/abjad-ext-microtones/abjadext/microtones/lilypond/ekmelos-ji-accidental-markups.ily"
 
+afterGraceFraction = #(cons 15 16)
+
 \header {
     dedication = \markup \fontsize #12 \center-column {\line \override #'(font-name . "Bodoni72 Bold") { { D À H Ē I T I Ā N } } \fontsize #0.25 \with-color #white "."}
     title = \markup \override #'(font-name . "Source Han Serif SC Bold") \fontsize #16 \center-column { \line { 大 黒 天 } \fontsize #0.01 \with-color #white "."}
@@ -30,6 +32,7 @@
         \consists Time_signature_engraver
 		\consists Mark_engraver
 		\consists Metronome_mark_engraver
+        \consists Multi_measure_rest_engraver
 		\consists Text_engraver
 		\consists Text_spanner_engraver
         \consists Measure_spanner_engraver
@@ -39,14 +42,14 @@
         \override BarNumber.extra-offset = #'(-0.5 . 0.5)
         \override BarNumber.font-size = 7
         \override BarNumber.padding = 4
-        \override BarNumber.font-name = "Bodoni72 Bold"
+        \override BarNumber.font-name = "Bodoni72 Book"
         \override MetronomeMark.stencil = ##f
 		\override TimeSignature.X-extent = #'(0 . -25)
         \override TimeSignature.Y-extent = #'(25 . 0)
         \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 14) (minimum-distance . 14) (padding . 10) (stretchability . 0))
         \override TimeSignature.break-visibility = #end-of-line-invisible
         \override TimeSignature.font-size = 12
-		\override TimeSignature.font-name = "Bodoni72 Bold"
+		\override TimeSignature.font-name = "Bodoni72 Book"
         \override TimeSignature.X-offset = -2.5
         \override TimeSignature.Y-offset = 3
         \override TimeSignature.whiteout-style = #'outline

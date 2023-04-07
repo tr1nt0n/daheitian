@@ -1186,12 +1186,6 @@ def aftergrace(notes_string, cons=(15, 16), selector=trinton.pleaves()):
 
         ties = abjad.select.logical_ties(selections)
 
-        string = f"#(define afterGraceFraction (cons {cons[0]} {cons[-1]}))"
-
-        literal = abjad.LilyPondLiteral(string)
-
-        abjad.attach(literal, selections[0])
-
         containers = [abjad.AfterGraceContainer(notes_string) for _ in ties]
 
         for container in containers:
@@ -1481,51 +1475,11 @@ def boxed_markup(string, selector=trinton.select_leaves_by_index([0], pitched=Tr
 
 def return_boxed_markup(string, font=None):
     if font == "italic":
-        boxed_string = rf"""\markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #8 \line {{ {string} }}"""
+        boxed_string = rf"""\markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line {{ {string} }}"""
     else:
-        boxed_string = rf'\boxed-markup "{string}" 1', "after"
+        boxed_string = rf"""\markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line {{ {string} }}"""
 
     return boxed_string
-
-
-def fermata_measures(score, measures, fermata="ufermata"):
-
-    for voice in abjad.iterate.components(score["Staff Group"], abjad.Staff):
-        all_measures = abjad.select.group_by_measure(voice)
-
-        clef_whitespace = abjad.LilyPondLiteral(
-            r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
-            "absolute_after",
-        )
-
-        for measure in measures:
-            relevant_leaf = all_measures[measure - 1][0]
-            next_leaf = abjad.select.with_next_leaf(relevant_leaf)[-1]
-            mm_rest = abjad.MultimeasureRest(1, multiplier=(1, 8))
-            transparent_literal = abjad.LilyPondLiteral(
-                r"\once \override MultiMeasureRest.transparent = ##t",
-                "before",
-            )
-            abjad.attach(transparent_literal, mm_rest)
-            if abjad.get.has_indicator(next_leaf, abjad.Clef):
-                abjad.attach(clef_whitespace, mm_rest)
-            abjad.mutate.replace(relevant_leaf, mm_rest)
-
-    trinton.attach_multiple(
-        score=score,
-        voice="Global Context",
-        leaves=[_ - 1 for _ in measures],
-        attachments=[
-            abjad.Markup(
-                rf'\markup \fontsize #5 \center-column {{ \musicglyph "scripts.{fermata}" }} '
-            ),
-            abjad.LilyPondLiteral(
-                r"\once \override Score.TimeSignature.stencil = ##f",
-                "before",
-            ),
-        ],
-        direction=abjad.UP,
-    )
 
 
 def change_lines(
