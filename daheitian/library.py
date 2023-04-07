@@ -66,6 +66,147 @@ def daheitian_score(time_signatures):
     return score
 
 
+# tempi
+
+metronome_marks = {
+    "48": abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 48),
+    "57 3/5": abjad.MetronomeMark.make_tempo_equation_markup(
+        (1, 4), quicktions.Fraction(288, 5)
+    ),
+    "72": abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 72),
+    "96": abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 96),
+    "144": abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 144),
+    # slower
+    "2.=4": abjad.MetricModulation(
+        left_rhythm=abjad.Note("c2."), right_rhythm=abjad.Note("c4")
+    ),
+    "4:5(2)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("4:5", "c2"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "2=4": abjad.MetricModulation(
+        left_rhythm=abjad.Note("c2"), right_rhythm=abjad.Note("c4")
+    ),
+    "5:6(4)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("5:6", "c4"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "4:5(4)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("4:5", "c4"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "3:5(4)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("3:5", "c4"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "3:4(4)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("3:4", "c4"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "4.=4": abjad.MetricModulation(
+        left_rhythm=abjad.Note("c4."), right_rhythm=abjad.Note("c4")
+    ),
+    # faster
+    "6:5(4)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("6:5", "c4"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "5:4(4)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("5:4", "c4"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "5:4(8)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("5:4", "c8"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "5:3(4)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("5:3", "c4"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "4:3(4)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("4:3", "c4"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "3:2(4)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("3:2", "c4"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+    "8=4": abjad.MetricModulation(
+        left_rhythm=abjad.Note("c8"), right_rhythm=abjad.Note("c4")
+    ),
+    "3:2(8)=4": abjad.MetricModulation(
+        left_rhythm=abjad.Tuplet("3:2", "c8"),
+        right_rhythm=abjad.Note("c4"),
+    ),
+}
+
+
+def metronome_markups(met_string, mod_string=None):
+    if mod_string is None:
+        mark = abjad.LilyPondLiteral(
+            [
+                r"^ \markup {",
+                r"  \raise #12 \with-dimensions-from \null",
+                # r"  \override #'(font-size . 5.5)", # score
+                r"  \override #'(font-size . 5.5)",  # parts
+                r"  \concat {",
+                f"      {met_string.string[8:]}",
+                r"  }",
+                r"}",
+            ],
+            site="after",
+        )
+        return mark
+
+    else:
+        mark = abjad.LilyPondLiteral(
+            [
+                r"^ \markup {",
+                r"  \raise #19 \with-dimensions-from \null",
+                # r"  \override #'(font-size . 5.5)", # score
+                r"  \override #'(font-size . 5.5)",  # parts
+                r"  \concat {",
+                r"  \center-column {",
+                r"  \line {",
+                f"      {met_string.string[8:]}",
+                r"  }",
+                r"  \null",
+                r"  \line {",
+                f"      {abjad.lilypond(mod_string)[8:]}",
+                r"  }",
+                r"  }",
+                r"  }",
+                r"}",
+            ],
+            site="after",
+        )
+        return mark
+
+
+# movement titles
+
+movements = [
+    abjad.Markup(
+        r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #8 \box \line { 天（ 一 ）}""",
+    ),
+    abjad.Markup(
+        r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #8 { 鬼 }""",
+    ),
+    abjad.Markup(
+        r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #8 { 化 }""",
+    ),
+    abjad.Markup(
+        r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #8 { 神 }""",
+    ),
+    abjad.Markup(
+        r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #8 \box \line  { 天（ 二 ）}""",
+    ),
+]
+
+movements = [
+    abjad.bundle(movement, r"- \tweak padding #18.5") for movement in movements
+]
+
 # immutables
 
 all_voice_names = eval(
@@ -1338,6 +1479,15 @@ def boxed_markup(string, selector=trinton.select_leaves_by_index([0], pitched=Tr
     return command
 
 
+def return_boxed_markup(string, font=None):
+    if font == "italic":
+        boxed_string = rf"""\markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #8 \line {{ {string} }}"""
+    else:
+        boxed_string = rf'\boxed-markup "{string}" 1', "after"
+
+    return boxed_string
+
+
 def fermata_measures(score, measures, fermata="ufermata"):
 
     for voice in abjad.iterate.components(score["Staff Group"], abjad.Staff):
@@ -1396,6 +1546,24 @@ def change_lines(
             )
 
     return change
+
+
+def standard_clefs(score):
+    voices = abjad.select.components(score["Staff Group"], abjad.Voice)
+    for voice in voices:
+        if (
+            voice.name == "bassoon voice"
+            or voice.name == "tuba voice"
+            or voice.name == "piano 2 voice"
+            or voice.name == "harp 2 voice"
+            or voice.name == "percussion 1 voice"
+            or voice.name == "cello voice"
+            or voice.name == "contrabass voice"
+        ):
+            abjad.attach(abjad.Clef("bass"), voice[0])
+
+        if voice.name == "viola voice":
+            abjad.attach(abjad.Clef("altovarC"), voice[0])
 
 
 def handle_clefs(selector=trinton.pleaves()):

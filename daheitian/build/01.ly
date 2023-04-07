@@ -6,15 +6,27 @@
         {
             % OPENING:
             % COMMANDS:
-            \time 3/2
-            s1 * 3/2
+            \time 2/4
+            s1 * 1/2
             % AFTER:
+            % MARKUP:
+            - \tweak padding #18.5
+            ^ \markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #8 \box \line { 天（ 一 ）}
             % COMMANDS:
-            \break
+            ^ \markup {
+              \raise #12 \with-dimensions-from \null
+              \override #'(font-size . 5.5)
+              \concat {
+                  \abjad-metronome-mark-markup #2 #0 #1 #"72"
+              }
+            }
+            % BEFORE:
+            % COMMANDS:
+            \once \override Score.TimeSignature.stencil = ##f
             % OPENING:
             % COMMANDS:
-            \time 3/2
-            s1 * 3/2
+            \time 2/4
+            s1 * 1/2
         % CLOSE_BRACKETS:
         }
         % BEFORE:
@@ -46,10 +58,354 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
+                                    \key a \major
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
-                                    R1 * 3/2
-                                    R1 * 3/2
+                                    <cs''' a'''>4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    \f
+                                    r8.
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \ottava 1
+                                    \set fontSize = #-3
+                                    g''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    \pppp
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    (
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    a''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % STOP_BEAM:
+                                    ]
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    b''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    a''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \key c \major
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    g''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    a''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    b''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    a''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    g''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    a''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    b''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    a''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    g''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    a''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    b''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    a''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    g''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    a''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    b''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    a''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    g''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    a''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    b''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    a''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    g''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    a''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    b''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    a''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    g''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    a''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    b''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    a''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    g''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    a''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    b''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Stem.stencil = ##f
+                                    a''''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \flageolet
+                                    \!
+                                    % SPANNER_STOPS:
+                                    )
+                                    % COMMANDS:
+                                    \ottava 0
+                                    \set fontSize = #-0.25
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -67,12 +423,59 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "oboe voice"
                                 {
-                                    % BEFORE:
+                                    % OPEN_BRACKETS:
+                                    <<
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "oboe voice temp"
+                                        {
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \key a \major
+                                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
+                                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \voiceTwo
+                                            cs''4
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \staccato
+                                            \f
+                                            r4
+                                            r2
+                                        % CLOSE_BRACKETS:
+                                        }
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "oboe divisi voice"
+                                        {
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \voiceOne
+                                            a''2
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            ^ \f
+                                            % SPANNER_STARTS:
+                                            - \tweak circled-tip ##t
+                                            ^ \>
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \key c \major
+                                            a''4
+                                            % AFTER:
+                                            % SPANNER_STARTS:
+                                            \repeatTie
+                                            r4
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            \!
+                                        % CLOSE_BRACKETS:
+                                        }
+                                    % CLOSE_BRACKETS:
+                                    >>
+                                    % AFTER:
                                     % COMMANDS:
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
-                                    R1 * 3/2
-                                    R1 * 3/2
+                                    \oneVoice
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -92,10 +495,30 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
+                                    \key b \major
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bassklarinetten }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { bkl. }
-                                    R1 * 3/2
-                                    R1 * 3/2
+                                    <ds''' b'''>4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    \f
+                                    % COMMANDS:
+                                    \boxed-markup "( Höchste Tonhöhe kann instabil sein )" 1
+                                    r4
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \key c \major
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -115,10 +538,31 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
+                                    \key a \major
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Fagotte }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { fg.}
-                                    R1 * 3/2
-                                    R1 * 3/2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "bass"
+                                    <a cs'>4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    \f
+                                    r4
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \key c \major
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -142,212 +586,28 @@
                         {
                             % BEFORE:
                             % COMMANDS:
-                            \highest
-                            \once \override NoteHead.no-ledgers = ##t
+                            \key e \major
                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Hörner in F }
                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hn. }
-                            % OPENING:
-                            % COMMANDS:
-                            \override Staff.Stem.stemlet-length = 0.75
-                            c'''8.
+                            <e' e''>4
                             % AFTER:
-                            % STEM_TREMOLOS:
-                            :64
                             % ARTICULATIONS:
-                            \ff
-                            % START_BEAM:
-                            [
-                            % SPANNER_STARTS:
-                            - \tweak circled-tip ##t
-                            - \tweak stencil #abjad-flared-hairpin
-                            \<
-                            - \tweak padding #7
-                            - \abjad-dashed-line-with-hook
-                            - \tweak bound-details.left.text \markup \concat { \upright { "Flatterhafte Ventile" } \hspace #0.5 }
-                            - \tweak bound-details.right.padding -2
-                            \startTextSpan
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override NoteHead.no-ledgers = ##t
-                            c'''16
-                            % AFTER:
-                            % STEM_TREMOLOS:
-                            :128
-                            % ARTICULATIONS:
+                            - \staccato
                             \f
+                            r4
+                            % ABSOLUTE_BEFORE:
+                            % COMMANDS:
+                            \once \override Staff.BarLine.transparent = ##f
                             % BEFORE:
                             % COMMANDS:
-                            \once \override NoteHead.no-ledgers = ##t
-                            c'''16
+                            \key c \major
+                            \once \override Rest.transparent = ##t
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                            r1 * 1/4
+                            s1 * 1/4
                             % AFTER:
-                            % STEM_TREMOLOS:
-                            :128
-                            % ARTICULATIONS:
-                            - \accent
-                            - \staccato
-                            \ff
-                            % BEFORE:
                             % COMMANDS:
-                            \once \override NoteHead.no-ledgers = ##t
-                            c'''8
-                            % AFTER:
-                            % STEM_TREMOLOS:
-                            :64
-                            % ARTICULATIONS:
-                            \mf
-                            % SPANNER_STARTS:
-                            \>
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override NoteHead.no-ledgers = ##t
-                            % OPENING:
-                            % COMMANDS:
-                            \revert Staff.Stem.stemlet-length
-                            c'''16
-                            % AFTER:
-                            % STEM_TREMOLOS:
-                            :128
-                            % ARTICULATIONS:
-                            - \accent
-                            - \staccato
-                            \sf
-                            % STOP_BEAM:
-                            ]
-                            % OPEN_BRACKETS:
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 2 0))
-                            \times 4/5
-                            {
-                                % BEFORE:
-                                % COMMANDS:
-                                \once \override NoteHead.no-ledgers = ##t
-                                c'''4..
-                                % AFTER:
-                                % STEM_TREMOLOS:
-                                :32
-                                % SPANNER_STARTS:
-                                - \tweak circled-tip ##t
-                                \<
-                                % BEFORE:
-                                % COMMANDS:
-                                \once \override NoteHead.no-ledgers = ##t
-                                c'''16
-                                % AFTER:
-                                % STEM_TREMOLOS:
-                                :128
-                                % ARTICULATIONS:
-                                - \accent
-                                - \staccato
-                                \fff
-                                % SPANNER_STOPS:
-                                \stopTextSpan
-                                % COMMANDS:
-                                \revert-noteheads
-                                r2.
-                            % CLOSE_BRACKETS:
-                            }
-                            % BEFORE:
-                            % COMMANDS:
-                            \highest
-                            \once \override NoteHead.no-ledgers = ##t
-                            % OPENING:
-                            % COMMANDS:
-                            \override Staff.Stem.stemlet-length = 0.75
-                            c'''8.
-                            % AFTER:
-                            % STEM_TREMOLOS:
-                            :64
-                            % ARTICULATIONS:
-                            \ff
-                            % START_BEAM:
-                            [
-                            % SPANNER_STARTS:
-                            - \tweak circled-tip ##t
-                            - \tweak stencil #abjad-flared-hairpin
-                            \<
-                            - \tweak padding #7
-                            - \abjad-dashed-line-with-hook
-                            - \tweak bound-details.left.text \markup \concat { \upright { "Flatterhafte Ventile" } \hspace #0.5 }
-                            - \tweak bound-details.right.padding -2
-                            \startTextSpan
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override NoteHead.no-ledgers = ##t
-                            c'''16
-                            % AFTER:
-                            % STEM_TREMOLOS:
-                            :128
-                            % ARTICULATIONS:
-                            \f
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override NoteHead.no-ledgers = ##t
-                            c'''16
-                            % AFTER:
-                            % STEM_TREMOLOS:
-                            :128
-                            % ARTICULATIONS:
-                            - \accent
-                            - \staccato
-                            \ff
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override NoteHead.no-ledgers = ##t
-                            c'''8
-                            % AFTER:
-                            % STEM_TREMOLOS:
-                            :64
-                            % ARTICULATIONS:
-                            \mf
-                            % SPANNER_STARTS:
-                            \>
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override NoteHead.no-ledgers = ##t
-                            % OPENING:
-                            % COMMANDS:
-                            \revert Staff.Stem.stemlet-length
-                            c'''16
-                            % AFTER:
-                            % STEM_TREMOLOS:
-                            :128
-                            % ARTICULATIONS:
-                            - \accent
-                            - \staccato
-                            \sf
-                            % STOP_BEAM:
-                            ]
-                            % OPEN_BRACKETS:
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 2 0))
-                            \times 4/5
-                            {
-                                % BEFORE:
-                                % COMMANDS:
-                                \once \override NoteHead.no-ledgers = ##t
-                                c'''4..
-                                % AFTER:
-                                % STEM_TREMOLOS:
-                                :32
-                                % SPANNER_STARTS:
-                                - \tweak circled-tip ##t
-                                \<
-                                % BEFORE:
-                                % COMMANDS:
-                                \once \override NoteHead.no-ledgers = ##t
-                                c'''16
-                                % AFTER:
-                                % STEM_TREMOLOS:
-                                :128
-                                % ARTICULATIONS:
-                                - \accent
-                                - \staccato
-                                \fff
-                                % SPANNER_STOPS:
-                                \stopTextSpan
-                                % COMMANDS:
-                                \revert-noteheads
-                                r2.
-                            % CLOSE_BRACKETS:
-                            }
+                            \stopStaff \startStaff
                         % CLOSE_BRACKETS:
                         }
                     % CLOSE_BRACKETS:
@@ -375,10 +635,28 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
+                                    \key a \major
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Trompeten in C }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ tpt. }
-                                    R1 * 3/2
-                                    R1 * 3/2
+                                    <a' a''>4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    \f
+                                    r4
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \key c \major
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -396,12 +674,34 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "tenortrombone voice"
                                 {
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
+                                    \key a \major
+                                    \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tenorposaunen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pos. }
-                                    R1 * 3/2
-                                    R1 * 3/2
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \key c \major
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -419,12 +719,37 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "tuba voice"
                                 {
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
+                                    \key a \major
+                                    \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tuben }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { tb. }
-                                    R1 * 3/2
-                                    R1 * 3/2
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "bass"
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \key c \major
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -441,7 +766,7 @@
                 % OPEN_BRACKETS:
                 {
                     % OPEN_BRACKETS:
-                    \context PianoStaff = "sub group 3"
+                    \context GrandStaff = "sub group 3"
                     <<
                         % BEFORE:
                         % COMMANDS:
@@ -454,12 +779,34 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "piano 1 voice"
                                 {
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set PianoStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Klavier }
-                                    \set PianoStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { klav. }
-                                    R1 * 3/2
-                                    R1 * 3/2
+                                    \key a \major
+                                    \once \override Rest.transparent = ##t
+                                    \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Klavier }
+                                    \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { klav. }
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \key c \major
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -477,8 +824,35 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "piano 2 voice"
                                 {
-                                    R1 * 3/2
-                                    R1 * 3/2
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \key a \major
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "bass"
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \key c \major
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -491,30 +865,110 @@
                 }
                 % BEFORE:
                 % COMMANDS:
-                \tag #'voice11
+                \tag #'group5
                 % OPEN_BRACKETS:
                 {
                     % OPEN_BRACKETS:
-                    \context Staff = "harp staff"
-                    {
+                    \context GrandStaff = "sub group 4"
+                    <<
+                        % BEFORE:
+                        % COMMANDS:
+                        \tag #'voice11
                         % OPEN_BRACKETS:
-                        \context Voice = "harp voice"
                         {
-                            % BEFORE:
-                            % COMMANDS:
-                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
-                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
-                            R1 * 3/2
-                            R1 * 3/2
+                            % OPEN_BRACKETS:
+                            \context Staff = "harp 1 staff"
+                            {
+                                % OPEN_BRACKETS:
+                                \context Voice = "harp 1 voice"
+                                {
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \key a \major
+                                    \once \override Rest.transparent = ##t
+                                    \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
+                                    \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \key c \major
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                % CLOSE_BRACKETS:
+                                }
+                            % CLOSE_BRACKETS:
+                            }
+                        % CLOSE_BRACKETS:
+                        }
+                        % BEFORE:
+                        % COMMANDS:
+                        \tag #'voice12
+                        % OPEN_BRACKETS:
+                        {
+                            % OPEN_BRACKETS:
+                            \context Staff = "harp 2 staff"
+                            {
+                                % OPEN_BRACKETS:
+                                \context Voice = "harp 2 voice"
+                                {
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \key a \major
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "bass"
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \key c \major
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                % CLOSE_BRACKETS:
+                                }
+                            % CLOSE_BRACKETS:
+                            }
                         % CLOSE_BRACKETS:
                         }
                     % CLOSE_BRACKETS:
-                    }
+                    >>
                 % CLOSE_BRACKETS:
                 }
                 % BEFORE:
                 % COMMANDS:
-                \tag #'voice12
+                \tag #'voice13
                 % OPEN_BRACKETS:
                 {
                     % OPEN_BRACKETS:
@@ -525,124 +979,35 @@
                         {
                             % BEFORE:
                             % COMMANDS:
+                            \key a \major
                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Pauken }
                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pk. }
-                            R1 * 3/2
-                            R1 * 3/2
+                            % OPENING:
+                            % COMMANDS:
+                            \clef "bass"
+                            <a,>4
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \staccato
+                            \f
+                            r4
+                            % ABSOLUTE_BEFORE:
+                            % COMMANDS:
+                            \once \override Staff.BarLine.transparent = ##f
+                            % BEFORE:
+                            % COMMANDS:
+                            \key c \major
+                            \once \override Rest.transparent = ##t
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                            r1 * 1/4
+                            s1 * 1/4
+                            % AFTER:
+                            % COMMANDS:
+                            \stopStaff \startStaff
                         % CLOSE_BRACKETS:
                         }
                     % CLOSE_BRACKETS:
                     }
-                % CLOSE_BRACKETS:
-                }
-                % BEFORE:
-                % COMMANDS:
-                \tag #'group5
-                % OPEN_BRACKETS:
-                {
-                    % OPEN_BRACKETS:
-                    \context SquareBracketGroup = "sub group 4"
-                    <<
-                        % BEFORE:
-                        % COMMANDS:
-                        \tag #'voice13
-                        % OPEN_BRACKETS:
-                        {
-                            % OPEN_BRACKETS:
-                            \context Staff = "percussion 2 staff"
-                            {
-                                % OPEN_BRACKETS:
-                                \context Voice = "percussion 2 voice"
-                                {
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \staff-line-count 5
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \clef "bass"
-                                    \clef "treble"
-                                    <c' df'>2
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    \mp
-                                    % SPANNER_STARTS:
-                                    - \tweak stencil #constante-hairpin
-                                    \<
-                                    % COMMANDS:
-                                    \boxed-markup "Röhrenglocken" 1
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 2 0))
-                                    \times 4/5
-                                    {
-                                        <c' df'>2
-                                        <c' df'>2.
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \!
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \staff-line-count 5
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \clef "bass"
-                                    \clef "treble"
-                                    <c' df'>2
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    \mp
-                                    % SPANNER_STARTS:
-                                    - \tweak stencil #constante-hairpin
-                                    \<
-                                    % COMMANDS:
-                                    \boxed-markup "Röhrenglocken" 1
-                                    % OPEN_BRACKETS:
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 2 0))
-                                    \times 4/5
-                                    {
-                                        <c' df'>2
-                                        <c' df'>2.
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \!
-                                    % CLOSE_BRACKETS:
-                                    }
-                                % CLOSE_BRACKETS:
-                                }
-                            % CLOSE_BRACKETS:
-                            }
-                        % CLOSE_BRACKETS:
-                        }
-                        % BEFORE:
-                        % COMMANDS:
-                        \tag #'voice14
-                        % OPEN_BRACKETS:
-                        {
-                            % OPEN_BRACKETS:
-                            \context Staff = "percussion 3 staff"
-                            {
-                                % OPEN_BRACKETS:
-                                \context Voice = "percussion 3 voice"
-                                {
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
-                                    R1 * 3/2
-                                    R1 * 3/2
-                                % CLOSE_BRACKETS:
-                                }
-                            % CLOSE_BRACKETS:
-                            }
-                        % CLOSE_BRACKETS:
-                        }
-                    % CLOSE_BRACKETS:
-                    >>
                 % CLOSE_BRACKETS:
                 }
                 % BEFORE:
@@ -655,7 +1020,115 @@
                     <<
                         % BEFORE:
                         % COMMANDS:
+                        \tag #'voice14
+                        % OPEN_BRACKETS:
+                        {
+                            % OPEN_BRACKETS:
+                            \context Staff = "percussion 2 staff"
+                            {
+                                % OPEN_BRACKETS:
+                                \context Voice = "percussion 2 voice"
+                                {
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \staff-line-count 1
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "percussion"
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \key c \major
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                % CLOSE_BRACKETS:
+                                }
+                            % CLOSE_BRACKETS:
+                            }
+                        % CLOSE_BRACKETS:
+                        }
+                        % BEFORE:
+                        % COMMANDS:
                         \tag #'voice15
+                        % OPEN_BRACKETS:
+                        {
+                            % OPEN_BRACKETS:
+                            \context Staff = "percussion 3 staff"
+                            {
+                                % OPEN_BRACKETS:
+                                \context Voice = "percussion 3 voice"
+                                {
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \staff-line-count 1
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "percussion"
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \key c \major
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                % CLOSE_BRACKETS:
+                                }
+                            % CLOSE_BRACKETS:
+                            }
+                        % CLOSE_BRACKETS:
+                        }
+                    % CLOSE_BRACKETS:
+                    >>
+                % CLOSE_BRACKETS:
+                }
+                % BEFORE:
+                % COMMANDS:
+                \tag #'group7
+                % OPEN_BRACKETS:
+                {
+                    % OPEN_BRACKETS:
+                    \context SquareBracketGroup = "sub group 6"
+                    <<
+                        % BEFORE:
+                        % COMMANDS:
+                        \tag #'voice16
                         % OPEN_BRACKETS:
                         {
                             % OPEN_BRACKETS:
@@ -666,33 +1139,28 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
+                                    \key a \major
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
-                                    R1 * 3/2
-                                    R1 * 3/2
-                                % CLOSE_BRACKETS:
-                                }
-                            % CLOSE_BRACKETS:
-                            }
-                        % CLOSE_BRACKETS:
-                        }
-                        % BEFORE:
-                        % COMMANDS:
-                        \tag #'voice16
-                        % OPEN_BRACKETS:
-                        {
-                            % OPEN_BRACKETS:
-                            \context Staff = "violin 2 staff"
-                            {
-                                % OPEN_BRACKETS:
-                                \context Voice = "violin 2 voice"
-                                {
+                                    <a e' cs'' a''>4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    \f
+                                    r4
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
-                                    R1 * 3/2
-                                    R1 * 3/2
+                                    \key c \major
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -705,17 +1173,35 @@
                         % OPEN_BRACKETS:
                         {
                             % OPEN_BRACKETS:
-                            \context Staff = "viola staff"
+                            \context Staff = "violin 2 staff"
                             {
                                 % OPEN_BRACKETS:
-                                \context Voice = "viola voice"
+                                \context Voice = "violin 2 voice"
                                 {
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
-                                    R1 * 3/2
-                                    R1 * 3/2
+                                    \key a \major
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
+                                    <a e' cs'' a''>4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    \f
+                                    r4
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \key c \major
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -728,17 +1214,38 @@
                         % OPEN_BRACKETS:
                         {
                             % OPEN_BRACKETS:
-                            \context Staff = "cello staff"
+                            \context Staff = "viola staff"
                             {
                                 % OPEN_BRACKETS:
-                                \context Voice = "cello voice"
+                                \context Voice = "viola voice"
                                 {
                                     % BEFORE:
                                     % COMMANDS:
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
-                                    R1 * 3/2
-                                    R1 * 3/2
+                                    \key a \major
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "altovarC"
+                                    <a e' a'>4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    \f
+                                    r4
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \key c \major
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -751,6 +1258,50 @@
                         % OPEN_BRACKETS:
                         {
                             % OPEN_BRACKETS:
+                            \context Staff = "cello staff"
+                            {
+                                % OPEN_BRACKETS:
+                                \context Voice = "cello voice"
+                                {
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \key a \major
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "bass"
+                                    <a,>4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    \f
+                                    r4
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \key c \major
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                % CLOSE_BRACKETS:
+                                }
+                            % CLOSE_BRACKETS:
+                            }
+                        % CLOSE_BRACKETS:
+                        }
+                        % BEFORE:
+                        % COMMANDS:
+                        \tag #'voice20
+                        % OPEN_BRACKETS:
+                        {
+                            % OPEN_BRACKETS:
                             \context Staff = "contrabass staff"
                             {
                                 % OPEN_BRACKETS:
@@ -758,10 +1309,31 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
+                                    \key a \major
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Kontrabässe }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kb. }
-                                    R1 * 3/2
-                                    R1 * 3/2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "bass"
+                                    <a,>4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    \f
+                                    r4
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \key c \major
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:

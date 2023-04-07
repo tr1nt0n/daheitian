@@ -74,6 +74,33 @@ map_ts_sequence = trinton.make_ts_pair_list(
     ),
 )
 
+# section 1
+
+section_1_ts = taal_ts_sequence[0:2]
+
+# section 2
+
+section_2_ts = taal_ts_sequence[2:4]
+
+section_2_ts.insert(0, (1, 4))
+
+section_2_ts.append((1, 4))
+
+# section 3
+
+section_3_ts = taal_ts_sequence[4:6]
+
+for _ in map_ts_sequence[0:3]:
+    section_3_ts.append(_)
+
+# section 4
+
+section_4_ts = taal_ts_sequence[6:11]
+
+section_4_ts.insert(4, (1, 4))
+
+section_4_ts.insert(-1, (1, 4))
+
 # sketch_ts_sequence = []
 #
 # for _ in taal_ts_sequence:
