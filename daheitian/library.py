@@ -146,7 +146,7 @@ def metronome_markups(met_string, mod_string=None):
         mark = abjad.LilyPondLiteral(
             [
                 r"^ \markup {",
-                r"  \raise #12 \with-dimensions-from \null",
+                r"  \raise #9 \with-dimensions-from \null",
                 # r"  \override #'(font-size . 5.5)", # score
                 r"  \override #'(font-size . 5.5)",  # parts
                 r"  \concat {",
@@ -162,19 +162,12 @@ def metronome_markups(met_string, mod_string=None):
         mark = abjad.LilyPondLiteral(
             [
                 r"^ \markup {",
-                r"  \raise #19 \with-dimensions-from \null",
+                r"  \raise #9 \with-dimensions-from \null",
                 # r"  \override #'(font-size . 5.5)", # score
                 r"  \override #'(font-size . 5.5)",  # parts
                 r"  \concat {",
-                r"  \center-column {",
-                r"  \line {",
                 f"      {met_string.string[8:]}",
-                r"  }",
-                r"  \null",
-                r"  \line {",
-                f"      {abjad.lilypond(mod_string)[8:]}",
-                r"  }",
-                r"  }",
+                f"      [{abjad.lilypond(mod_string)[8:]}]",
                 r"  }",
                 r"}",
             ],
@@ -203,9 +196,7 @@ movements = [
     ),
 ]
 
-movements = [
-    abjad.bundle(movement, r"- \tweak padding #18.5") for movement in movements
-]
+movements = [abjad.bundle(movement, r"- \tweak padding #14") for movement in movements]
 
 # immutables
 
@@ -662,6 +653,15 @@ _fundamental_to_multiphonic = {
     "c''": abjad.Markup(
         r"\markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }",
     ),
+}
+
+_klavierubung_selectors = {
+    1: trinton.patterned_tie_index_selector([1, 5], 8),
+    2: {
+        "bassclarinet voice": trinton.patterned_tie_index_selector([3, 6], 8),
+        "bassoon voice": trinton.patterned_tie_index_selector([0, 2, 7], 8),
+        "percussion 3 voice": trinton.patterned_tie_index_selector([1, 2, 5, 7], 8),
+    },
 }
 
 # sequences
@@ -1180,7 +1180,7 @@ def unpitched_glissandi(selector=trinton.pleaves(), articulation=None, trill=Fal
     return gliss
 
 
-def aftergrace(notes_string, cons=(15, 16), selector=trinton.pleaves()):
+def aftergrace(notes_string, selector=trinton.pleaves()):
     def grace(argument):
         selections = selector(argument)
 
@@ -1230,7 +1230,7 @@ def ties(score):
         for leaf in abjad.select.leaves(voice):
             if abjad.get.has_indicator(leaf, abjad.Tie) and abjad.get.duration(
                 leaf
-            ) > abjad.Duration(1, 16):
+            ) > abjad.Duration(3, 32):
                 abjad.detach(abjad.Tie, leaf)
                 abjad.attach(abjad.RepeatTie(), abjad.select.with_next_leaf(leaf)[-1])
 

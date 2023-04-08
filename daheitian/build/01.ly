@@ -10,11 +10,11 @@
             s1 * 1/2
             % AFTER:
             % MARKUP:
-            - \tweak padding #18.5
+            - \tweak padding #14
             ^ \markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #8 \box \line { 天（ 一 ）}
             % COMMANDS:
             ^ \markup {
-              \raise #12 \with-dimensions-from \null
+              \raise #9 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"72"
@@ -504,7 +504,7 @@
                                     - \staccato
                                     \f
                                     % COMMANDS:
-                                    \boxed-markup "( Höchste Tonhöhe kann instabil sein )" 1
+                                    \boxed-markup "( Höchste Tonhöhe darf instabil sein )" 1
                                     r4
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:

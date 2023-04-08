@@ -118,10 +118,23 @@ trinton.make_music(
                 library.return_boxed_markup(string="Plötzlicher Anfang", font="italic"),
             ),
             abjad.Glissando(),
+            abjad.StartSlur(),
             abjad.StartHairpin("<"),
             abjad.Dynamic("mp"),
+            abjad.StopSlur(),
         ],
-        selector=trinton.select_leaves_by_index([0, 0, 0, 1, 1, 2]),
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                0,
+                0,
+                1,
+                1,
+                1,
+                2,
+                -1,
+            ]
+        ),
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(

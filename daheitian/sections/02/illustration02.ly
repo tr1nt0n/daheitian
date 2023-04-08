@@ -35,18 +35,11 @@
             % AFTER:
             % COMMANDS:
             ^ \markup {
-              \raise #19 \with-dimensions-from \null
+              \raise #9 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
-              \center-column {
-              \line {
                   \abjad-metronome-mark-mixed-number-markup #2 #0 #1 #"57" #"3" #"5"
-              }
-              \null
-              \line {
-                  \abjad-metric-modulation-tuplet-lhs #2 #0 #5 #4 #2 #0 #'(1 . 1)
-              }
-              }
+                  [\abjad-metric-modulation-tuplet-lhs #2 #0 #5 #4 #2 #0 #'(1 . 1)]
               }
             }
             % OPENING:
@@ -1371,6 +1364,7 @@
                                     gs4.
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                    (
                                     - \tweak padding #11
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Solo } \hspace #0.5 }
@@ -1416,6 +1410,7 @@
                                     gs16
                                     % AFTER:
                                     % SPANNER_STOPS:
+                                    )
                                     \stopTextSpan
                                     \stopTextSpanOne
                                     % STOP_BEAM:

@@ -178,7 +178,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0]),
     ),
-    library.boxed_markup(string="( Höchste Tonhöhe kann instabil sein )"),
+    library.boxed_markup(string="( Höchste Tonhöhe darf instabil sein )"),
     voice=score["bassclarinet voice"],
 )
 
