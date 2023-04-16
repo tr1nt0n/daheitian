@@ -101,6 +101,12 @@ section_4_ts.insert(4, (1, 4))
 
 section_4_ts.insert(6, (1, 4))
 
+# section 5
+
+section_5_ts = map_ts_sequence[3:10]
+
+section_5_ts.append((1, 4))
+
 # sketch_ts_sequence = []
 #
 # for _ in taal_ts_sequence:

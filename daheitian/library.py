@@ -178,19 +178,19 @@ def metronome_markups(met_string, mod_string=None):
 
 movements = [
     abjad.Markup(
-        r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #8 \box \line { 天（ 一 ）}""",
+        r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #8 \box \line { I. 天（ 一 ）}""",
     ),
     abjad.Markup(
-        r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #8 { 鬼 }""",
+        r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #8 \box \line { II. 鬼 }""",
     ),
     abjad.Markup(
-        r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #8 { 化 }""",
+        r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #8 \box \line { III. 化 }""",
     ),
     abjad.Markup(
-        r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #8 { 神 }""",
+        r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #8 \box \line { IV. 神 }""",
     ),
     abjad.Markup(
-        r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #8 \box \line  { 天（ 二 ）}""",
+        r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #8 \box \line  { V. 天（ 二 ）}""",
     ),
 ]
 
@@ -1067,9 +1067,12 @@ def fuse_contiguous(selector=trinton.pleaves()):
     return fuse
 
 
-def flute_graces(mod=3):
+def flute_graces(
+    selector=trinton.pleaves(),
+    grace_selector=trinton.patterned_tie_index_selector([1, 3, 4], 5),
+):
     def graces(argument):
-        pleaves = abjad.select.leaves(argument, pitched=True)
+        selections = selector(argument)
 
         handler = evans.GraceHandler(
             boolean_vector=[1],
@@ -1082,13 +1085,14 @@ def flute_graces(mod=3):
 
         relevant_leaves = []
 
-        for leaf in pleaves:
+        for leaf in selections:
             if leaf.written_pitch.number == 15 or leaf.written_pitch.number == 19:
                 relevant_leaves.append(leaf)
 
-        for leaf in relevant_leaves:
-            if relevant_leaves.index(leaf) % mod == 0:
-                handler(leaf)
+        grace_ties = grace_selector(relevant_leaves)
+
+        for tie in grace_ties:
+            handler(tie[0])
 
     return graces
 
@@ -1102,6 +1106,62 @@ def moths_talea(index=0):
 
 
 # notation tools
+
+
+def ring_mod_attachments(selector=trinton.pleaves(), dynamics=["p"]):
+    def attach(argument):
+        selections = selector(argument)
+        pleaves = abjad.select.leaves(selections, pitched=True)
+
+        groups = abjad.sequence.partition_by_counts(
+            sequence=pleaves,
+            counts=[3 for _ in range(len(selections))],
+            overhang=True,
+        )
+
+        for group, dynamic in zip(groups, cycle(dynamics)):
+            abjad.beam(group)
+            abjad.glissando(
+                group,
+                hide_middle_note_heads=True,
+                allow_repeats=True,
+                allow_ties=True,
+            )
+            middle_leaves = abjad.select.exclude(group, [0, -1])
+            for leaf in middle_leaves:
+                abjad.attach(
+                    abjad.LilyPondLiteral(
+                        r"\once \override Dots.staff-position = #2", "before"
+                    ),
+                    leaf,
+                )
+
+            abjad.attach(abjad.StartHairpin("o<"), group[0], direction=abjad.UP)
+            abjad.attach(abjad.Dynamic(dynamic), group[1], direction=abjad.UP)
+            abjad.attach(abjad.StartHairpin(">o"), group[1], direction=abjad.UP)
+            abjad.attach(abjad.StopHairpin(), group[-1])
+
+    return attach
+
+
+def flute_grace_attachments(selector=trinton.pleaves()):
+    def attach(argument):
+        selections = selector(argument)
+
+        trinton.tremolo_command()(selections)
+
+        graces = abjad.select.leaves(selections, grace=True)
+
+        for grace in graces:
+            abjad.attach(abjad.Articulation(">"), grace)
+
+            with_next_leaf = abjad.select.with_next_leaf(grace)
+
+            tie_group = abjad.select.logical_ties(with_next_leaf)
+
+            abjad.slur(tie_group)
+
+    return attach
 
 
 def attach_multiphonics(selector=trinton.logical_ties(first=True, pitched=True)):
@@ -1229,8 +1289,17 @@ def ties(score):
             if abjad.get.has_indicator(leaf, abjad.Tie) and abjad.get.duration(
                 leaf
             ) > abjad.Duration(3, 32):
-                abjad.detach(abjad.Tie, leaf)
                 abjad.attach(abjad.RepeatTie(), abjad.select.with_next_leaf(leaf)[-1])
+
+            if abjad.get.has_indicator(leaf, abjad.Tie) and abjad.get.duration(
+                leaf
+            ) <= abjad.Duration(3, 32):
+                abjad.attach(
+                    abjad.LilyPondLiteral(
+                        r"\once \override Tie.transparent = ##f", "before"
+                    ),
+                    leaf,
+                )
 
 
 def timbre_trills(selector=trinton.pleaves(), index=0):
@@ -1289,77 +1358,62 @@ def parenthesize_noteheads(selector=trinton.exclude_graces()):
 
 
 def imbrication(
-    voice,
-    measures,
     pitch,
-    indices,
-    period,
     name="Imbrication",
     dynamic=None,
     secondary_dynamic=None,
 ):
-    for measure in measures:
-        trinton.make_music(
-            lambda _: trinton.select_target(_, (measure,)),
-            trinton.pitch_with_selector_command(
-                pitch_list=[
-                    pitch,
-                ],
-                selector=trinton.patterned_tie_index_selector(
-                    indices, period, pitched=True
-                ),
-            ),
-            voice=voice,
-        )
+    def imbricate(argument):
+        selections = argument
 
-        leaves = abjad.select.group_by_measure(voice)
-        leaves = leaves[measure - 1]
-        leaves = abjad.select.leaves(leaves, pitched=True)
+        pleaves = abjad.select.leaves(selections, pitched=True)
 
         relevant_leaves = []
 
-        for leaf in leaves:
+        for leaf in pleaves:
             if leaf.written_pitch.number == pitch:
                 relevant_leaves.append(leaf)
-
-        trinton.make_music(
-            lambda _: trinton.select_target(_, (measure,)),
-            trinton.call_imbrication(
-                pitches=[pitch for _ in list(range(len(relevant_leaves)))],
-                name=name,
-                articulation=">",
-            ),
-            voice=voice,
-        )
 
         if dynamic is not None:
             for leaf in relevant_leaves:
                 abjad.detach(abjad.Articulation, leaf)
+
+        trinton.imbrication(
+            selections=selections,
+            pitches=[pitch for _ in list(range(len(relevant_leaves)))],
+            name=name,
+            articulation=">",
+            beam=True,
+        )
+
+        if dynamic is not None:
+            for leaf in relevant_leaves:
                 abjad.detach(abjad.Markup, leaf)
                 abjad.attach(abjad.Dynamic(dynamic), leaf)
 
         if secondary_dynamic is not None:
             for leaf in relevant_leaves:
-                next_leaf = abjad.select.with_next_leaf(
-                    leaf,
-                )[-1]
-                if (
-                    isinstance(next_leaf, abjad.Note)
-                    and abjad.get.has_indicator(next_leaf, abjad.Dynamic) is False
-                ):
-                    abjad.attach(abjad.Dynamic(secondary_dynamic), next_leaf)
+                next_pleaf = pleaves[pleaves.index(leaf) + 1]
+
+                if abjad.get.has_indicator(next_pleaf, abjad.Dynamic) is False:
+                    abjad.attach(abjad.Dynamic(secondary_dynamic), next_pleaf)
+
+    return imbricate
 
 
-def remove_accidentals(voice, measure_range):
-    selections = trinton.select_target(voice, measure_range)
+def remove_accidentals(selector=trinton.pleaves()):
+    def remove(argument):
+        selections = selector(argument)
 
-    for leaf in abjad.select.leaves(selections, pitched=True):
-        abjad.attach(
-            abjad.LilyPondLiteral(
-                r"\once \override Staff.Accidental.stencil = ##f", "before"
-            ),
-            leaf,
-        )
+        for leaf in selections:
+            abjad.attach(
+                abjad.LilyPondLiteral(
+                    r"\once \override Staff.Accidental.stencil = ##f", "before"
+                ),
+                leaf,
+            )
+
+    return remove
 
 
 onbeat_flute_handler = trinton.OnBeatGraceHandler(
@@ -1641,3 +1695,37 @@ def horn_monolith_attachments(selector=trinton.pleaves()):
             )
 
     return attach
+
+
+def blank_measure_by_hand(score, voice_names, measures, clef_whitespace=False):
+    for voice_name in voice_names:
+        for measure in measures:
+            trinton.make_music(
+                lambda _: trinton.select_target(_, (measure,)),
+                trinton.attachment_command(
+                    attachments=[
+                        abjad.LilyPondLiteral(
+                            r"\stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff",
+                            "before",
+                        ),
+                        abjad.LilyPondLiteral(
+                            r"\once \override MultiMeasureRest.transparent = ##t",
+                            "before",
+                        ),
+                        abjad.LilyPondLiteral(r"\stopStaff \startStaff", "after"),
+                    ],
+                    selector=trinton.select_leaves_by_index([0]),
+                ),
+                voice=score[voice_name],
+            )
+
+            if clef_whitespace is True:
+                clef_whitespace = abjad.LilyPondLiteral(
+                    r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
+                    "before",
+                )
+                selection = trinton.select_target(score[voice_name], (measure,))
+                relevant_leaf = selection[0]
+                next_leaf = abjad.select.with_next_leaf(relevant_leaf)[-1]
+                if abjad.get.has_indicator(next_leaf, abjad.Clef):
+                    abjad.attach(clef_whitespace, next_leaf)

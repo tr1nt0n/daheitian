@@ -1814,6 +1814,9 @@
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 1
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Tie.transparent = ##f
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "percussion"
@@ -1834,6 +1837,9 @@
                                     r8.
                                     r8.
                                     r32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Tie.transparent = ##f
                                     c'16.
                                     % AFTER:
                                     % ARTICULATIONS:

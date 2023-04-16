@@ -1198,6 +1198,7 @@
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
+                                    ~
                                     c'2.
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1277,6 +1278,7 @@
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
+                                    ~
                                     c'2.
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1352,12 +1354,12 @@
                                     \<
                                     % COMMANDS:
                                     \boxed-markup "Steg" 1
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 5
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "altovarC"
@@ -1384,6 +1386,7 @@
                                     \mp
                                     % SPANNER_STARTS:
                                     \glissando
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -1482,12 +1485,12 @@
                                     \<
                                     % COMMANDS:
                                     \boxed-markup "Steg" 1
-                                    % ABSOLUTE_AFTER:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 5
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "bass"
@@ -1614,6 +1617,7 @@
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
+                                    ~
                                     c'2.
                                     % AFTER:
                                     % ARTICULATIONS:

@@ -17,7 +17,7 @@
             % AFTER:
             % MARKUP:
             - \tweak padding #14
-            ^ \markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #8 \box \line { 天（ 一 ）}
+            ^ \markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #8 \box \line { I. 天（ 一 ）}
             % COMMANDS:
             ^ \markup {
               \raise #9 \with-dimensions-from \null
@@ -464,6 +464,7 @@
                                             % SPANNER_STARTS:
                                             - \tweak circled-tip ##t
                                             ^ \>
+                                            ~
                                             % BEFORE:
                                             % COMMANDS:
                                             \key c \major

@@ -90,6 +90,7 @@
             _ \markup \center-column { \abs-fontsize #15 \musicglyph "scripts.ulongfermata" }
             % COMMANDS:
             \bar "||"
+            \break
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -1409,6 +1410,7 @@
                             - \tweak circled-tip ##t
                             \>
                             \glissando
+                            ~
                             % COMMANDS:
                             _ #(make-dynamic-script (markup #:whiteout #:italic "ffpp"))
                             % BEFORE:
@@ -1795,10 +1797,12 @@
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
+                                    ~
                                     c'1
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     \repeatTie
+                                    ~
                                     c'2.
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1895,10 +1899,12 @@
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
+                                    ~
                                     c'1
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     \repeatTie
+                                    ~
                                     c'2.
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1995,10 +2001,12 @@
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
+                                    ~
                                     c'1
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     \repeatTie
+                                    ~
                                     c'2.
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -2095,10 +2103,12 @@
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
+                                    ~
                                     c'1
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     \repeatTie
+                                    ~
                                     c'2.
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -2220,6 +2230,7 @@
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
+                                    ~
                                     c'2.
                                     % AFTER:
                                     % ARTICULATIONS:

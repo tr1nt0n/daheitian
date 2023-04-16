@@ -17,8 +17,6 @@ score = library.daheitian_score(ts.section_4_ts)
 
 # timpani music commands
 
-# timpani music commands
-
 trinton.make_music(
     lambda _: trinton.select_target(_, (1, 2)),
     evans.RhythmHandler(rmakers.note),
@@ -186,6 +184,7 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[
             abjad.BarLine("||"),
+            abjad.LilyPondLiteral(r"\break", "after"),
         ],
         selector=trinton.select_leaves_by_index([0]),
     ),
