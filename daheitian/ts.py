@@ -99,7 +99,7 @@ section_4_ts = taal_ts_sequence[6:11]
 
 section_4_ts.insert(4, (1, 4))
 
-section_4_ts.insert(-1, (1, 4))
+section_4_ts.insert(6, (1, 4))
 
 # sketch_ts_sequence = []
 #

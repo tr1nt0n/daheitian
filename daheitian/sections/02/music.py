@@ -281,17 +281,17 @@ trinton.remove_redundant_time_signatures(score=score)
 
 library.ties(score=score)
 
+# parts globals
+
 # parts
 
 trinton.extract_parts(score)
-
-# parts globals
 
 # render parts file without whiteout_empty_staves
 
 # trinton.render_file(
 #     score=score,
-#     segment_path="/Users/trintonprater/scores/daheitian/daheitian/sections/01",
+#     segment_path="/Users/trintonprater/scores/daheitian/daheitian/sections/02",
 #     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
 #     segment_name="02_parts",
 #     includes=[

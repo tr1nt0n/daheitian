@@ -197,7 +197,7 @@ afterGraceFraction = #(cons 15 16)
 \paper {
     % max-systems-per-page = 3
     system-separator-markup = \markup { \slashSeparator }
-    system-system-spacing = #'((basic-distance . 16) (minimum-distance . 16) (padding . 2))
+    system-system-spacing = #'((basic-distance . 16) (minimum-distance . 16) (padding . 4))
     indent = 20\mm
     short-indent = 15\mm
     bottom-margin = 10\mm

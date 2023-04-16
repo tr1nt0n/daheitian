@@ -147,8 +147,7 @@ def metronome_markups(met_string, mod_string=None):
             [
                 r"^ \markup {",
                 r"  \raise #9 \with-dimensions-from \null",
-                # r"  \override #'(font-size . 5.5)", # score
-                r"  \override #'(font-size . 5.5)",  # parts
+                r"  \override #'(font-size . 5.5)",
                 r"  \concat {",
                 f"      {met_string.string[8:]}",
                 r"  }",
@@ -163,8 +162,7 @@ def metronome_markups(met_string, mod_string=None):
             [
                 r"^ \markup {",
                 r"  \raise #9 \with-dimensions-from \null",
-                # r"  \override #'(font-size . 5.5)", # score
-                r"  \override #'(font-size . 5.5)",  # parts
+                r"  \override #'(font-size . 5.5)",
                 r"  \concat {",
                 f"      {met_string.string[8:]}",
                 f"      [{abjad.lilypond(mod_string)[8:]}]",

@@ -216,11 +216,11 @@ trinton.remove_redundant_time_signatures(score=score)
 
 library.ties(score=score)
 
+# parts globals
+
 # parts
 
 trinton.extract_parts(score)
-
-# parts globals
 
 # render parts file without whiteout_empty_staves
 

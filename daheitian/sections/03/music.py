@@ -231,17 +231,17 @@ trinton.remove_redundant_time_signatures(score=score)
 
 library.ties(score=score)
 
+# parts globals
+
 # parts
 
 trinton.extract_parts(score)
-
-# parts globals
 
 # render parts file without whiteout_empty_staves
 
 # trinton.render_file(
 #     score=score,
-#     segment_path="/Users/trintonprater/scores/daheitian/daheitian/sections/01",
+#     segment_path="/Users/trintonprater/scores/daheitian/daheitian/sections/03",
 #     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
 #     segment_name="03_parts",
 #     includes=[
@@ -251,26 +251,6 @@ trinton.extract_parts(score)
 # )
 
 # score globals
-
-# trinton.fermata_measures(
-#     score=score,
-#     measures=[
-#         1,
-#     ],
-#     fermata="uverylongfermata",
-#     font_size="15",
-#     blank=False,
-# )
-#
-# trinton.fermata_measures(
-#     score=score,
-#     measures=[
-#         0,
-#     ],
-#     fermata="ulongfermata",
-#     font_size="15",
-#     blank=False,
-# )
 
 for measure, tempo in zip(
     [
