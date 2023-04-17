@@ -53,7 +53,7 @@ trinton.make_music(
     library.flute_grace_attachments(),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="Duet",
+            string="Duett",
         ),
         full_string=True,
         padding=11.5,
@@ -126,7 +126,7 @@ trinton.make_music(
     rmakers.rewrite_dots,
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler([-1.5]),
-    library.ring_mod_attachments(dynamics=["ppp", "pp", "pp", "p"]),
+    library.ring_mod_attachments(dynamics=["ppp", "ppp", "pp", "p"]),
     trinton.notehead_bracket_command(),
     evans.IntermittentVoiceHandler(
         rhythm_handler=evans.RhythmHandler(evans.talea([4], 1)),
@@ -153,6 +153,136 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, 1, 1, 3, 3, -1]),
     ),
     voice=score["bassclarinet divisi voice"],
+)
+
+# piano music commands
+
+for voice_name, hand in zip(
+    [
+        "piano 1 voice",
+        "piano 2 voice",
+    ],
+    [
+        "rh",
+        "lh",
+    ],
+):
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (4, 5)),
+        evans.RhythmHandler(
+            evans.talea(
+                [
+                    -2,
+                    1,
+                    1,
+                    1,
+                ],
+                4,
+            )
+        ),
+        evans.PitchHandler(library.piano_chords(hand=hand, index=0)),
+        library.handle_clefs(),
+        trinton.ottava_command(
+            selector=trinton.select_leaves_by_index(
+                [
+                    -1,
+                    -1,
+                ]
+            )
+        ),
+        trinton.linear_attachment_command(
+            attachments=[
+                abjad.StartSlur(),
+                abjad.StopSlur(),
+            ],
+            selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+        ),
+        voice=score[voice_name],
+    )
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (4, 5)),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.Dynamic("ppp"),
+            abjad.Dynamic("p"),
+            abjad.Dynamic("pp"),
+        ],
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                1,
+                -1,
+            ],
+            pitched=True,
+        ),
+    ),
+    voice=score["piano 1 voice"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (4, 5)),
+    library.piano_pedals(),
+    voice=score["piano 2 voice"],
+)
+
+# harp music commands
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (1, 5)),
+    evans.RhythmHandler(evans.talea([_ for _ in library.logistic_map(16) if _ < 6], 8)),
+    trinton.force_rest(selector=trinton.patterned_tie_index_selector([0], 2)),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    evans.PitchHandler(
+        library.harp_chords[0],
+    ),
+    trinton.ottava_command(
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True)
+    ),
+    trinton.tremolo_command(),
+    trinton.attachment_command(
+        attachments=[abjad.Arpeggio()],
+        selector=trinton.logical_ties(pitched=True, first=True),
+    ),
+    trinton.attachment_command(
+        attachments=[abjad.Dynamic("ppp")],
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+            ],
+            pitched=True,
+        ),
+    ),
+    voice=score["harp 1 voice"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (1, 5)),
+    evans.RhythmHandler(evans.talea([-15, 100], 16)),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    library.change_lines(lines=1, clef="percussion"),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.StartHairpin("<"),
+            abjad.Dynamic("pp"),
+            abjad.StartHairpin("<"),
+            abjad.Dynamic("p"),
+        ],
+        selector=trinton.select_leaves_by_index([0, 3, 3, -1], pitched=True),
+        direction=abjad.UP,
+    ),
+    trinton.hooked_spanner_command(
+        string=library.return_boxed_markup(
+            string="Kratzen Sie die mit Draht umwickelten Saiten mit einer Plastikkarte ab",
+        ),
+        full_string=True,
+        padding=8,
+        style="solid-line-with-up-hook",
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+        right_padding=4,
+        direction="down",
+    ),
+    voice=score["harp 2 voice"],
 )
 
 # markups

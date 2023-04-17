@@ -262,19 +262,21 @@ flute_overblowing_pitches = eval(
 harp_chords = eval(
     """[
         [
-            "a'''",
-            "bf'''",
-            "ds''''",
-            "e''''",
-            "fs''''"
-        ],
-        [
-            "g'''",
-            "a'''",
-            "bf'''",
-            "ds''''",
-            "e''''",
-        ],
+            [
+                "a'''",
+                "bf'''",
+                "ds''''",
+                "e''''",
+                "fs''''"
+            ],
+            [
+                "g'''",
+                "a'''",
+                "bf'''",
+                "ds''''",
+                "e''''",
+            ],
+        ]
     ]"""
 )
 
@@ -1052,6 +1054,15 @@ def piano_kb_pitches(index=0):
         ),
         index,
     )
+
+
+def piano_chords(hand="rh", index=0):
+    if hand == "rh":
+        chords = transforms.piano_chords_rh
+    if hand == "lh":
+        chords = transforms.piano_chords_lh
+
+    return trinton.rotated_sequence(chords, index)
 
 
 # rhythm tools

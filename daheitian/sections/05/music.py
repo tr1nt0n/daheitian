@@ -94,7 +94,7 @@ trinton.make_music(
         evans.tuplet([(4, 3, 1), (-1,)]),
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
-    evans.PitchHandler([library.harp_chords[0]]),
+    evans.PitchHandler(library.harp_chords[0]),
     trinton.ottava_command(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True)
     ),
@@ -127,7 +127,7 @@ trinton.make_music(
         evans.talea([-6, 11, 1], 32),
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
-    evans.PitchHandler([library.harp_chords[0]]),
+    evans.PitchHandler(library.harp_chords[0]),
     trinton.ottava_command(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True)
     ),

@@ -38,7 +38,7 @@ afterGraceFraction = #(cons 15 16)
         \consists Measure_spanner_engraver
         \override BarNumber.stencil = #(make-stencil-circler 0.1 0.75 ly:text-interface::print)
         \override BarNumber.Y-extent = ##f
-        \override BarNumber.Y-offset = -10.5
+        \override BarNumber.Y-offset = -8
         \override BarNumber.extra-offset = #'(-0.5 . 0.5)
         \override BarNumber.font-size = 4
         \override BarNumber.padding = 4
@@ -198,7 +198,7 @@ afterGraceFraction = #(cons 15 16)
 %
 \paper {
     % max-systems-per-page = 3
-    system-separator-markup = \markup { \slashSeparator }
+    system-separator-markup = \markup \fontsize #12 { \tremolo-moderato }
     system-system-spacing = #'((basic-distance . 16) (minimum-distance . 16) (padding . 4))
     indent = 20\mm
     short-indent = 15\mm
