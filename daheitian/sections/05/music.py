@@ -65,9 +65,6 @@ trinton.make_music(
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler([-1.5]),
     library.ring_mod_attachments(dynamics=["ppp"]),
-    trinton.force_accidentals_command(
-        selector=trinton.select_leaves_by_index([0], pitched=True)
-    ),
     trinton.notehead_bracket_command(),
     evans.IntermittentVoiceHandler(
         rhythm_handler=evans.RhythmHandler(evans.talea([21], 8)),
