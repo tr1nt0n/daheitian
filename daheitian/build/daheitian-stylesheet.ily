@@ -112,7 +112,7 @@ afterGraceFraction = #(cons 15 16)
 
         \override Staff.thickness = #0.5
 
-        \override Stem.stemlet-length = 0.75
+        \override Stem.stemlet-length = 1
         \override Stem.thickness = #0.5
         \override Stem.details.beamed-lengths = #'(6)
         \override Stem.details.lengths = #'(6)

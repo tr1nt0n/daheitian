@@ -141,7 +141,7 @@ metronome_marks = {
 }
 
 
-def metronome_markups(met_string, mod_string=None):
+def metronome_markups(met_string, mod_string=None, string_only=False):
     if mod_string is None:
         mark = abjad.LilyPondLiteral(
             [
@@ -158,19 +158,22 @@ def metronome_markups(met_string, mod_string=None):
         return mark
 
     else:
-        mark = abjad.LilyPondLiteral(
-            [
-                r"^ \markup {",
-                r"  \raise #9 \with-dimensions-from \null",
-                r"  \override #'(font-size . 5.5)",
-                r"  \concat {",
-                f"      {met_string.string[8:]}",
-                f"      [{abjad.lilypond(mod_string)[8:]}]",
-                r"  }",
-                r"}",
-            ],
-            site="after",
-        )
+        if string_only is True:
+            mark = f"\markup {{ \override #'(font-size . 5.5) \concat {{ {met_string.string[8:]} [{abjad.lilypond(mod_string)[8:]}] }} }}"
+        else:
+            mark = abjad.LilyPondLiteral(
+                [
+                    r"^ \markup {",
+                    r"  \raise #9 \with-dimensions-from \null",
+                    r"  \override #'(font-size . 5.5)",
+                    r"  \concat {",
+                    f"      {met_string.string[8:]}",
+                    f"      [{abjad.lilypond(mod_string)[8:]}]",
+                    r"  }",
+                    r"}",
+                ],
+                site="after",
+            )
         return mark
 
 
@@ -1119,7 +1122,34 @@ def moths_talea(index=0):
 # notation tools
 
 
-def ring_mod_attachments(selector=trinton.pleaves(), dynamics=["p"]):
+def fuse_durations(divisions):
+    def func(selections):
+        selections = abjad.select.leaves(selections)
+
+        durations = cycle([abjad.Duration(_) for _ in divisions])
+
+        new_durations = []
+
+        for _, duration in zip(range(len(selections)), durations):
+            new_durations.append(duration)
+
+        group = []
+
+        for leaf in selections:
+            group.append(leaf)
+
+            if abjad.get.duration(group) == new_durations[0]:
+                if all(isinstance(leaf, abjad.Rest) for leaf in group):
+                    abjad.mutate.fuse(group)
+                group.clear()
+                new_durations.pop(0)
+
+    return func
+
+
+def ring_mod_attachments(
+    selector=trinton.pleaves(), dynamics=["p"], direction=abjad.UP
+):
     def attach(argument):
         selections = selector(argument)
         pleaves = abjad.select.leaves(selections, pitched=True)
@@ -1147,9 +1177,9 @@ def ring_mod_attachments(selector=trinton.pleaves(), dynamics=["p"]):
                     leaf,
                 )
 
-            abjad.attach(abjad.StartHairpin("o<"), group[0], direction=abjad.UP)
-            abjad.attach(abjad.Dynamic(dynamic), group[1], direction=abjad.UP)
-            abjad.attach(abjad.StartHairpin(">o"), group[1], direction=abjad.UP)
+            abjad.attach(abjad.StartHairpin("o<"), group[0], direction=direction)
+            abjad.attach(abjad.Dynamic(dynamic), group[1], direction=direction)
+            abjad.attach(abjad.StartHairpin(">o"), group[1], direction=direction)
             abjad.attach(abjad.StopHairpin(), group[-1])
 
     return attach
