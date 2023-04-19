@@ -263,7 +263,6 @@
                                     - \tweak circled-tip ##t
                                     _ \<
                                     \glissando
-                                    ~
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -271,9 +270,6 @@
                                     \override NoteColumn.glissando-skip = ##t
                                     \override NoteHead.no-ledgers = ##t
                                     c''8
-                                    % AFTER:
-                                    % SPANNER_STARTS:
-                                    \repeatTie
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2

@@ -1188,13 +1188,17 @@ def ring_mod_attachments(
                     )
 
             if clean_swells is True:
-                middle_ties = abjad.select.exclude(group, [0])
-                for tie in middle_ties:
+                subsequent_ties = abjad.select.exclude(group, [0])
+                for tie in subsequent_ties:
                     for leaf in tie:
                         abjad.detach(abjad.Markup, leaf)
                         for head in leaf.note_heads:
                             head.is_forced = False
                             abjad.tweak(head, r"\tweak Accidental.transparent ##t")
+
+            for tie in group:
+                for leaf in tie:
+                    abjad.detach(abjad.Tie, leaf)
 
             abjad.attach(abjad.StartHairpin("o<"), group[0][0], direction=direction)
             abjad.attach(abjad.Dynamic(dynamic), group[1][0], direction=direction)

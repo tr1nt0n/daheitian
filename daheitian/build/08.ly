@@ -1,36 +1,12 @@
-\version "2.23.14"
-\language "english"
-\include "/Users/trintonprater/scores/daheitian/daheitian/build/daheitian-stylesheet.ily"
-\include "/Users/trintonprater/abjad/abjad/scm/abjad.ily"
-\score
-{
     % OPEN_BRACKETS:
     \context Score = "Score"
     <<
         % OPEN_BRACKETS:
         \context TimeSignatureContext = "Global Context"
         {
-            % OPENING:
-            % COMMANDS:
-            \time 3/4
-            s1 * 3/4
-            % AFTER:
-            % COMMANDS:
-            ^ \markup {
-              \raise #9 \with-dimensions-from \null
-              \override #'(font-size . 5.5)
-              \concat {
-                  \abjad-metronome-mark-markup #2 #0 #1 #"144"
-                  [\abjad-metric-modulation-tuplet-lhs #3 #0 #2 #3 #2 #0 #'(1 . 1)]
-              }
-            }
             % BEFORE:
             % COMMANDS:
-            \once \override Score.TimeSignature.stencil = ##f
-            % OPENING:
-            % COMMANDS:
-            \time 3/4
-            s1 * 3/4
+            \bar ".|:"
             % OPENING:
             % COMMANDS:
             \time 4/4
@@ -42,13 +18,17 @@
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"96"
-                  [\abjad-metric-modulation #2 #1 #2 #0 #'(1 . 1)]
+                  [\abjad-metric-modulation-tuplet-lhs #2 #0 #3 #4 #2 #0 #'(1 . 1)]
               }
             }
             % OPENING:
             % COMMANDS:
             \time 3/4
             s1 * 3/4
+            % OPENING:
+            % COMMANDS:
+            \time 2/4
+            s1 * 1/2
             % ABSOLUTE_BEFORE:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -63,40 +43,8 @@
             % AFTER:
             % MARKUP:
             _ \markup \center-column { \abs-fontsize #15 \musicglyph "scripts.ufermata" }
-            % ABSOLUTE_AFTER:
             % COMMANDS:
-            \once \override Score.BarLine.transparent = ##f
-            % OPENING:
-            % COMMANDS:
-            \time 4/4
-            s1 * 1
-            % AFTER:
-            % COMMANDS:
-            ^ \markup {
-              \raise #9 \with-dimensions-from \null
-              \override #'(font-size . 5.5)
-              \concat {
-                  \abjad-metronome-mark-markup #2 #0 #1 #"144"
-                  [\abjad-metric-modulation-tuplet-lhs #2 #0 #2 #3 #2 #0 #'(1 . 1)]
-              }
-            }
-            % ABSOLUTE_BEFORE:
-            % COMMANDS:
-            \once \override Score.BarLine.transparent = ##f
-            % BEFORE:
-            % COMMANDS:
-            \once \override MultiMeasureRest.transparent = ##t
-            \once \override Score.TimeSignature.stencil = ##f
-            % OPENING:
-            % COMMANDS:
-            \time 1/4
-            R1 * 1/4
-            % AFTER:
-            % MARKUP:
-            _ \markup \center-column { \abs-fontsize #15 \musicglyph "scripts.ulongfermata" }
-            % COMMANDS:
-            \bar "||"
-            \break
+            \bar ":|."
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -138,30 +86,6 @@
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/2
                                     s1 * 1/2
                                     % AFTER:
@@ -186,20 +110,8 @@
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                    s1 * 1/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
+                                    r1 * 1/4
+                                    s1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
@@ -232,20 +144,31 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "oboe voice"
                                 {
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
+                                    bf4
                                     % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #5.5
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Solo } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2
+                                    \startTextSpan
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    bf2
+                                    bf4
+                                    bf4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    r2
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \once \override Staff.BarLine.transparent = ##f
@@ -253,56 +176,8 @@
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                    s1 * 1/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
+                                    r1 * 1/4
+                                    s1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
@@ -344,30 +219,6 @@
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bassklarinetten }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { bkl. }
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/2
                                     s1 * 1/2
                                     % AFTER:
@@ -392,20 +243,8 @@
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                    s1 * 1/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
+                                    r1 * 1/4
+                                    s1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
@@ -447,30 +286,6 @@
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Fagotte }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { fg.}
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/2
                                     s1 * 1/2
                                     % AFTER:
@@ -495,20 +310,8 @@
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                    s1 * 1/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
+                                    r1 * 1/4
+                                    s1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
@@ -554,30 +357,6 @@
                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Hörner in F }
                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hn. }
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                            r1 * 3/8
-                            s1 * 3/8
-                            % AFTER:
-                            % COMMANDS:
-                            \stopStaff \startStaff
-                            % ABSOLUTE_BEFORE:
-                            % COMMANDS:
-                            \once \override Staff.BarLine.transparent = ##f
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override Rest.transparent = ##t
-                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                            r1 * 3/8
-                            s1 * 3/8
-                            % AFTER:
-                            % COMMANDS:
-                            \stopStaff \startStaff
-                            % ABSOLUTE_BEFORE:
-                            % COMMANDS:
-                            \once \override Staff.BarLine.transparent = ##f
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override Rest.transparent = ##t
-                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 1/2
                             s1 * 1/2
                             % AFTER:
@@ -602,20 +381,8 @@
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                            r1 * 1/8
-                            s1 * 1/8
-                            % AFTER:
-                            % COMMANDS:
-                            \stopStaff \startStaff
-                            % ABSOLUTE_BEFORE:
-                            % COMMANDS:
-                            \once \override Staff.BarLine.transparent = ##f
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override Rest.transparent = ##t
-                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                            r1 * 1/2
-                            s1 * 1/2
+                            r1 * 1/4
+                            s1 * 1/4
                             % AFTER:
                             % COMMANDS:
                             \stopStaff \startStaff
@@ -665,30 +432,6 @@
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Trompeten in C }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ tpt. }
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/2
                                     s1 * 1/2
                                     % AFTER:
@@ -713,20 +456,8 @@
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                    s1 * 1/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
+                                    r1 * 1/4
+                                    s1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
@@ -768,30 +499,6 @@
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tenorposaunen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pos. }
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/2
                                     s1 * 1/2
                                     % AFTER:
@@ -816,20 +523,8 @@
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                    s1 * 1/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
+                                    r1 * 1/4
+                                    s1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
@@ -871,30 +566,6 @@
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tuben }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { tb. }
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/2
                                     s1 * 1/2
                                     % AFTER:
@@ -919,20 +590,8 @@
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                    s1 * 1/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
+                                    r1 * 1/4
+                                    s1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
@@ -986,30 +645,6 @@
                                     \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Klavier }
                                     \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { klav. }
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/2
                                     s1 * 1/2
                                     % AFTER:
@@ -1034,20 +669,8 @@
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                    s1 * 1/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
+                                    r1 * 1/4
+                                    s1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
@@ -1087,30 +710,6 @@
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/2
                                     s1 * 1/2
                                     % AFTER:
@@ -1135,20 +734,8 @@
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                    s1 * 1/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
+                                    r1 * 1/4
+                                    s1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
@@ -1202,30 +789,6 @@
                                     \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
                                     \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/2
                                     s1 * 1/2
                                     % AFTER:
@@ -1250,20 +813,8 @@
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                    s1 * 1/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
+                                    r1 * 1/4
+                                    s1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
@@ -1303,30 +854,6 @@
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/2
                                     s1 * 1/2
                                     % AFTER:
@@ -1351,20 +878,8 @@
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                    s1 * 1/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
+                                    r1 * 1/4
+                                    s1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
@@ -1401,63 +916,14 @@
                         % OPEN_BRACKETS:
                         \context Voice = "percussion 1 voice"
                         {
-                            % BEFORE:
-                            % COMMANDS:
-                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Pauken }
-                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pk. }
-                            % OPENING:
-                            % COMMANDS:
-                            \clef "bass"
-                            c2.
-                            % AFTER:
-                            % STEM_TREMOLOS:
-                            :32
-                            % SPANNER_STARTS:
-                            - \tweak circled-tip ##t
-                            \>
-                            \glissando
-                            ~
-                            % COMMANDS:
-                            _ #(make-dynamic-script (markup #:whiteout #:italic "ffpp"))
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override Dots.staff-position = #2
-                            % OPENING:
-                            % COMMANDS:
-                            \hide NoteHead
-                            \override Accidental.stencil = ##f
-                            \override NoteColumn.glissando-skip = ##t
-                            \override NoteHead.no-ledgers = ##t
-                            \afterGrace
-                            c2.
-                            % AFTER:
-                            % STEM_TREMOLOS:
-                            :32
-                            % SPANNER_STARTS:
-                            \repeatTie
-                            % OPEN_BRACKETS:
-                            {
-                                % OPENING:
-                                % COMMANDS:
-                                \once \override Flag.stroke-style = #"grace"
-                                \revert Accidental.stencil
-                                \revert NoteColumn.glissando-skip
-                                \revert NoteHead.no-ledgers
-                                \undo \hide NoteHead
-                                aqs,16
-                                % AFTER:
-                                % STEM_TREMOLOS:
-                                :128
-                                % ARTICULATIONS:
-                                \!
-                            % CLOSE_BRACKETS:
-                            }
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
                             \once \override Staff.BarLine.transparent = ##f
                             % BEFORE:
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
+                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Pauken }
+                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pk. }
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 1/2
                             s1 * 1/2
@@ -1483,36 +949,11 @@
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                            r1 * 1/8
-                            s1 * 1/8
+                            r1 * 1/4
+                            s1 * 1/4
                             % AFTER:
                             % COMMANDS:
                             \stopStaff \startStaff
-                            % OPENING:
-                            \afterGrace
-                            c1
-                            % AFTER:
-                            % STEM_TREMOLOS:
-                            :32
-                            % ARTICULATIONS:
-                            \mp
-                            % SPANNER_STARTS:
-                            - \tweak circled-tip ##t
-                            \>
-                            \glissando
-                            % OPEN_BRACKETS:
-                            {
-                                % OPENING:
-                                % COMMANDS:
-                                \once \override Flag.stroke-style = #"grace"
-                                aqs,16
-                                % AFTER:
-                                % STEM_TREMOLOS:
-                                :128
-                                % ARTICULATIONS:
-                                \!
-                            % CLOSE_BRACKETS:
-                            }
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
                             \once \override Staff.BarLine.transparent = ##f
@@ -1559,30 +1000,6 @@
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/2
                                     s1 * 1/2
                                     % AFTER:
@@ -1607,20 +1024,8 @@
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                    s1 * 1/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
+                                    r1 * 1/4
+                                    s1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
@@ -1662,30 +1067,6 @@
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/2
                                     s1 * 1/2
                                     % AFTER:
@@ -1710,20 +1091,8 @@
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                    s1 * 1/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
+                                    r1 * 1/4
+                                    s1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
@@ -1770,29 +1139,18 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \staff-line-count 1
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    r2
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \staff-line-count 1
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "percussion"
-                                    c'4
+                                    c'1
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    \mp
+                                    \pp
                                     % MARKUP:
                                     - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen und enden }
                                     % SPANNER_STARTS:
@@ -1804,12 +1162,12 @@
                                     - \tweak stencil #constante-hairpin
                                     \<
                                     ~
-                                    c'1
+                                    c'2.
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     \repeatTie
                                     ~
-                                    c'2.
+                                    c'2
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \!
@@ -1817,30 +1175,6 @@
                                     \stopTextSpan
                                     % SPANNER_STARTS:
                                     \repeatTie
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                    s1 * 1/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \once \override Staff.BarLine.transparent = ##f
@@ -1872,77 +1206,99 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \staff-line-count 1
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    r2
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \staff-line-count 1
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "percussion"
-                                    c'4
+                                    c'1
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    \mp
+                                    \pp
                                     % MARKUP:
-                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen und enden }
+                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen }
                                     % SPANNER_STARTS:
-                                    - \tweak padding #3
+                                    - \tweak padding #7.5
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Steg } \hspace #0.5 }
-                                    - \tweak bound-details.right.padding -4
+                                    - \tweak bound-details.right.padding -10.5
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
                                     ~
-                                    c'1
+                                    c'2
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     \repeatTie
                                     ~
-                                    c'2.
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c'8.
                                     % AFTER:
-                                    % ARTICULATIONS:
-                                    \!
                                     % SPANNER_STOPS:
                                     \stopTextSpan
+                                    % START_BEAM:
+                                    [
                                     % SPANNER_STARTS:
                                     \repeatTie
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \staff-line-count 5
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                    s1 * 1/8
+                                    \once \override Tie.transparent = ##f
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    \revert Staff.Stem.stemlet-length
+                                    gqs16
                                     % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    (
+                                    - \tweak padding #10.5
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Solo } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2
+                                    \startTextSpan
+                                    - \tweak padding #7.5
+                                    - \abjad-solid-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { {  } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { MSP }
+                                    - \tweak bound-details.right.padding 1
+                                    \startTextSpanOne
+                                    \<
+                                    \glissando
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
-                                    % AFTER:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
                                     % COMMANDS:
-                                    \stopStaff \startStaff
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    gqs4..
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    aqf16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
+                                    \stopTextSpan
+                                    \stopTextSpanOne
+                                    % COMMANDS:
+                                    _ #(make-dynamic-script (markup #:whiteout #:italic "p +"))
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \once \override Staff.BarLine.transparent = ##f
@@ -1974,77 +1330,151 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \staff-line-count 1
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    r2
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \staff-line-count 1
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "percussion"
-                                    c'4
+                                    c'2
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    \mp
+                                    \pp
                                     % MARKUP:
-                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen und enden }
+                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen }
                                     % SPANNER_STARTS:
-                                    - \tweak padding #3
+                                    - \tweak padding #6
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Steg } \hspace #0.5 }
-                                    - \tweak bound-details.right.padding -4
+                                    - \tweak bound-details.right.padding -8
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
                                     ~
-                                    c'1
+                                    c'8
                                     % AFTER:
-                                    % SPANNER_STARTS:
-                                    \repeatTie
-                                    ~
-                                    c'2.
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    \!
                                     % SPANNER_STOPS:
                                     \stopTextSpan
                                     % SPANNER_STARTS:
                                     \repeatTie
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \staff-line-count 5
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "altovarC"
+                                    gs4.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    (
+                                    - \tweak padding #6
+                                    - \abjad-solid-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { {  } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { MSP }
+                                    - \tweak bound-details.right.padding 1
+                                    \startTextSpanOne
+                                    - \tweak padding #9
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Solo } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2
+                                    \startTextSpan
+                                    \<
+                                    \glissando
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                    s1 * 1/8
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    gs16
                                     % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    % OPENING:
                                     % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    \revert Staff.Stem.stemlet-length
+                                    aqf8.
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    \glissando
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
-                                    % AFTER:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
                                     % COMMANDS:
-                                    \stopStaff \startStaff
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    aqf8.
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    \revert Staff.Stem.stemlet-length
+                                    gs16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
+                                    % STOP_BEAM:
+                                    ]
+                                    gs4
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    (
+                                    \glissando
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    gs4..
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    gqs16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
+                                    \stopTextSpan
+                                    \stopTextSpanOne
+                                    % COMMANDS:
+                                    _ #(make-dynamic-script (markup #:whiteout #:italic "p +"))
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \once \override Staff.BarLine.transparent = ##f
@@ -2076,77 +1506,84 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \staff-line-count 1
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    r2
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \staff-line-count 1
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "percussion"
-                                    c'4
+                                    c'2
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    \mp
+                                    \pp
                                     % MARKUP:
-                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen und enden }
+                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen }
                                     % SPANNER_STARTS:
-                                    - \tweak padding #3
+                                    - \tweak padding #4
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Steg } \hspace #0.5 }
-                                    - \tweak bound-details.right.padding -4
+                                    - \tweak bound-details.right.padding -8
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
                                     ~
-                                    c'1
+                                    c'8
                                     % AFTER:
-                                    % SPANNER_STARTS:
-                                    \repeatTie
-                                    ~
-                                    c'2.
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    \!
                                     % SPANNER_STOPS:
                                     \stopTextSpan
                                     % SPANNER_STARTS:
                                     \repeatTie
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \staff-line-count 5
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "bass"
+                                    gs4.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #4
+                                    - \abjad-solid-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { {  } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { MSP }
+                                    - \tweak bound-details.right.padding 1
+                                    \startTextSpanOne
+                                    - \tweak padding #7
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Solo } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2
+                                    \startTextSpan
+                                    \<
+                                    \glissando
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                    s1 * 1/8
-                                    % AFTER:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
                                     % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    gs2.
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
-                                    % AFTER:
+                                    \once \override Dots.staff-position = #2
+                                    gs4..
+                                    % OPENING:
                                     % COMMANDS:
-                                    \stopStaff \startStaff
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    gs16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    \stopTextSpanOne
+                                    % COMMANDS:
+                                    _ #(make-dynamic-script (markup #:whiteout #:italic "p +"))
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \once \override Staff.BarLine.transparent = ##f
@@ -2176,60 +1613,22 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "contrabass voice"
                                 {
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \staff-line-count 1
                                     % BEFORE:
                                     % COMMANDS:
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Kontrabässe }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kb. }
                                     % OPENING:
                                     % COMMANDS:
-                                    \clef "bass"
-                                    a,2.
-                                    % AFTER:
-                                    % SPANNER_STARTS:
-                                    - \tweak circled-tip ##t
-                                    \>
-                                    \glissando
-                                    % COMMANDS:
-                                    _ #(make-dynamic-script (markup #:whiteout #:italic "ffpp"))
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Dots.staff-position = #2
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
-                                    \afterGrace
-                                    a,2.
-                                    % AFTER:
-                                    % OPEN_BRACKETS:
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \once \override Flag.stroke-style = #"grace"
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
-                                        a,16
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \!
-                                    % CLOSE_BRACKETS:
-                                    }
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \staff-line-count 1
-                                    % OPENING:
-                                    % COMMANDS:
                                     \clef "percussion"
                                     c'1
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    \mp
+                                    \pp
                                     % MARKUP:
-                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt enden }
+                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen und enden }
                                     % SPANNER_STARTS:
                                     - \tweak padding #3
                                     - \abjad-solid-line-with-hook
@@ -2241,53 +1640,17 @@
                                     ~
                                     c'2.
                                     % AFTER:
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    ~
+                                    c'2
+                                    % AFTER:
                                     % ARTICULATIONS:
                                     \!
                                     % SPANNER_STOPS:
                                     \stopTextSpan
                                     % SPANNER_STARTS:
                                     \repeatTie
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                    s1 * 1/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \staff-line-count 5
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \clef "bass"
-                                    \afterGrace
-                                    a,1
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    \mp
-                                    % SPANNER_STARTS:
-                                    - \tweak circled-tip ##t
-                                    \>
-                                    \glissando
-                                    % OPEN_BRACKETS:
-                                    {
-                                        % OPENING:
-                                        % COMMANDS:
-                                        \once \override Flag.stroke-style = #"grace"
-                                        a,16
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \!
-                                    % CLOSE_BRACKETS:
-                                    }
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \once \override Staff.BarLine.transparent = ##f
@@ -2316,4 +1679,3 @@
         }
     % CLOSE_BRACKETS:
     >>
-}

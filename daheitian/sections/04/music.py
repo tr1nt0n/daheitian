@@ -245,7 +245,7 @@ for measure, tempo in zip(
         ),
         library.metronome_markups(
             met_string=library.metronome_marks["96"],
-            mod_string=library.metronome_marks["3:4(4)=4"],
+            mod_string=library.metronome_marks["4.=4"],
         ),
         library.metronome_markups(
             met_string=library.metronome_marks["144"],

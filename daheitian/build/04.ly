@@ -36,7 +36,7 @@
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"96"
-                  [\abjad-metric-modulation-tuplet-lhs #2 #0 #4 #3 #2 #0 #'(1 . 1)]
+                  [\abjad-metric-modulation #2 #1 #2 #0 #'(1 . 1)]
               }
             }
             % OPENING:
