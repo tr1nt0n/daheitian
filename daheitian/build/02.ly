@@ -1183,7 +1183,7 @@
                                     \pp
                                     % MARKUP:
                                     - \tweak padding #5
-                                    ^ \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Plötzlicher Anfang }
+                                    ^ \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen und enden }
                                     % SPANNER_STARTS:
                                     - \tweak padding #3
                                     - \abjad-solid-line-with-hook
@@ -1263,7 +1263,7 @@
                                     \pp
                                     % MARKUP:
                                     - \tweak padding #5
-                                    ^ \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Plötzlicher Anfang }
+                                    ^ \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen und enden }
                                     % SPANNER_STARTS:
                                     - \tweak padding #3
                                     - \abjad-solid-line-with-hook
@@ -1342,7 +1342,7 @@
                                     % ARTICULATIONS:
                                     \pp
                                     % MARKUP:
-                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Plötzlicher Anfang }
+                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen und enden }
                                     % SPANNER_STARTS:
                                     - \tweak stencil #constante-hairpin
                                     \<
@@ -1473,7 +1473,7 @@
                                     % ARTICULATIONS:
                                     \pp
                                     % MARKUP:
-                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Plötzlicher Anfang }
+                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen und enden }
                                     % SPANNER_STARTS:
                                     - \tweak stencil #constante-hairpin
                                     \<
@@ -1602,7 +1602,7 @@
                                     % ARTICULATIONS:
                                     \pp
                                     % MARKUP:
-                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Plötzlicher Anfang }
+                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen und enden }
                                     % SPANNER_STARTS:
                                     - \tweak padding #3
                                     - \abjad-solid-line-with-hook

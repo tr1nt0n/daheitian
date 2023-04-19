@@ -80,7 +80,9 @@ for voice_name in ["violin 1 voice", "violin 2 voice"]:
     abjad.attach(
         abjad.bundle(
             abjad.Markup(
-                library.return_boxed_markup(string="Plötzlicher Anfang", font="italic"),
+                library.return_boxed_markup(
+                    string="Abrupt beginnen und enden", font="italic"
+                ),
             ),
             r"- \tweak padding #5",
         ),
@@ -115,7 +117,9 @@ trinton.make_music(
             abjad.Dynamic("pp"),
             abjad.StartHairpin("--"),
             abjad.Markup(
-                library.return_boxed_markup(string="Plötzlicher Anfang", font="italic"),
+                library.return_boxed_markup(
+                    string="Abrupt beginnen und enden", font="italic"
+                ),
             ),
             abjad.Glissando(),
             abjad.StartSlur(),
@@ -204,7 +208,9 @@ trinton.make_music(
             abjad.Dynamic("pp"),
             abjad.StartHairpin("--"),
             abjad.Markup(
-                library.return_boxed_markup(string="Plötzlicher Anfang", font="italic"),
+                library.return_boxed_markup(
+                    string="Abrupt beginnen und enden", font="italic"
+                ),
             ),
             abjad.StartHairpin("<"),
             abjad.Dynamic("mp"),
@@ -245,7 +251,7 @@ trinton.make_music(
 
 abjad.attach(
     abjad.Markup(
-        library.return_boxed_markup(string="Plötzlicher Anfang", font="italic"),
+        library.return_boxed_markup(string="Abrupt beginnen und enden", font="italic"),
     ),
     abjad.select.leaf(score["contrabass voice"], 0),
 )

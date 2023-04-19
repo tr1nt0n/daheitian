@@ -82,7 +82,7 @@ for voice_name in ["violin 1 voice", "violin 2 voice", "viola voice", "cello voi
             attachments=[
                 abjad.Markup(
                     library.return_boxed_markup(
-                        string="Plötzlicher Anfang", font="italic"
+                        string="Abrupt beginnen und enden", font="italic"
                     )
                 ),
                 abjad.Dynamic("mp"),
@@ -139,11 +139,14 @@ trinton.make_music(
     ),
     trinton.linear_attachment_command(
         attachments=[
+            abjad.Markup(
+                library.return_boxed_markup(string="Abrupt enden", font="italic")
+            ),
             abjad.Dynamic("mp"),
             abjad.StartHairpin("--"),
             abjad.StopHairpin(),
         ],
-        selector=trinton.select_leaves_by_index([0, 0, -1], pitched=True),
+        selector=trinton.select_leaves_by_index([0, 0, 0, -1], pitched=True),
     ),
     voice=score["contrabass voice"],
     preprocessor=trinton.fuse_preprocessor((2,)),
