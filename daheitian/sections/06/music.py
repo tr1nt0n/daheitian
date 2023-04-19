@@ -273,7 +273,7 @@ trinton.make_music(
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="Kratzen Sie die mit Draht umwickelten Saiten mit einer Plastikkarte ab",
+            string="Kratzen Sie langsam die mit Draht umwickelten Saiten mit einer Plastikkarte",
         ),
         full_string=True,
         padding=8,
@@ -281,6 +281,9 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=4,
         direction="down",
+    ),
+    trinton.change_notehead_command(
+        notehead="la",
     ),
     voice=score["harp 2 voice"],
 )

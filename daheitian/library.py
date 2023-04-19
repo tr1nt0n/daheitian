@@ -656,6 +656,15 @@ _fundamental_to_multiphonic = {
     "c''": abjad.Markup(
         r"\markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }",
     ),
+    "cqs, hspace": abjad.Markup(
+        r"\markup \hspace #2.5 \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }",
+    ),
+    "d hspace": abjad.Markup(
+        r"\markup \hspace #2.5 \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }",
+    ),
+    "c'' hspace": abjad.Markup(
+        r"\markup \hspace #1.5 \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }",
+    ),
 }
 
 _klavierubung_selectors = {
@@ -1148,14 +1157,14 @@ def fuse_durations(divisions):
 
 
 def ring_mod_attachments(
-    selector=trinton.pleaves(), dynamics=["p"], direction=abjad.UP
+    selector=trinton.pleaves(), dynamics=["p"], direction=abjad.UP, clean_swells=False
 ):
     def attach(argument):
         selections = selector(argument)
-        pleaves = abjad.select.leaves(selections, pitched=True)
+        pties = abjad.select.logical_ties(selections, pitched=True)
 
         groups = abjad.sequence.partition_by_counts(
-            sequence=pleaves,
+            sequence=pties,
             counts=[3 for _ in range(len(selections))],
             overhang=True,
         )
@@ -1168,19 +1177,29 @@ def ring_mod_attachments(
                 allow_repeats=True,
                 allow_ties=True,
             )
-            middle_leaves = abjad.select.exclude(group, [0, -1])
-            for leaf in middle_leaves:
-                abjad.attach(
-                    abjad.LilyPondLiteral(
-                        r"\once \override Dots.staff-position = #2", "before"
-                    ),
-                    leaf,
-                )
+            middle_ties = abjad.select.exclude(group, [0, -1])
+            for tie in middle_ties:
+                for leaf in tie:
+                    abjad.attach(
+                        abjad.LilyPondLiteral(
+                            r"\once \override Dots.staff-position = #2", "before"
+                        ),
+                        leaf,
+                    )
 
-            abjad.attach(abjad.StartHairpin("o<"), group[0], direction=direction)
-            abjad.attach(abjad.Dynamic(dynamic), group[1], direction=direction)
-            abjad.attach(abjad.StartHairpin(">o"), group[1], direction=direction)
-            abjad.attach(abjad.StopHairpin(), group[-1])
+            if clean_swells is True:
+                middle_ties = abjad.select.exclude(group, [0])
+                for tie in middle_ties:
+                    for leaf in tie:
+                        abjad.detach(abjad.Markup, leaf)
+                        for head in leaf.note_heads:
+                            head.is_forced = False
+                            abjad.tweak(head, r"\tweak Accidental.transparent ##t")
+
+            abjad.attach(abjad.StartHairpin("o<"), group[0][0], direction=direction)
+            abjad.attach(abjad.Dynamic(dynamic), group[1][0], direction=direction)
+            abjad.attach(abjad.StartHairpin(">o"), group[1][0], direction=direction)
+            abjad.attach(abjad.StopHairpin(), group[-1][0])
 
     return attach
 

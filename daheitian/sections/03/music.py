@@ -51,7 +51,7 @@ trinton.make_music(
     evans.PitchHandler(["c''"]),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="Schlagzunge",
+            string="Slaptongue",
         ),
         full_string=True,
         padding=8,
@@ -90,7 +90,7 @@ trinton.make_music(
     evans.PitchHandler(["b"]),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="Schlagzunge",
+            string="Slaptongue",
         ),
         full_string=True,
         padding=8,
@@ -209,7 +209,7 @@ trinton.make_music(
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
     library.change_lines(lines=1, clef="percussion"),
-    library.boxed_markup(string="Amboss mit Hammerchen"),
+    library.boxed_markup(string="Amboss mit Hämmerchen"),
     trinton.attachment_command(
         attachments=[abjad.Dynamic("mp")],
         selector=trinton.select_leaves_by_index([0], pitched=True),

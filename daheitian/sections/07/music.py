@@ -24,15 +24,82 @@ trinton.make_music(
     evans.PitchHandler([12]),
     library.ring_mod_attachments(dynamics=["p"], direction=abjad.DOWN),
     trinton.hooked_spanner_command(
-        string=library._fundamental_to_multiphonic["c''"].string,
+        string=library._fundamental_to_multiphonic["c'' hspace"].string,
         full_string=True,
-        padding=8,
+        padding=7,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
-        right_padding=2,
+        right_padding=1.5,
     ),
+    trinton.notehead_bracket_command(),
     voice=score["oboe voice"],
-    preprocessor=trinton.fuse_quarters_preprocessor((1,)),
+    preprocessor=trinton.fuse_quarters_preprocessor(
+        (
+            3,
+            1,
+            2,
+            1,
+        )
+    ),
+)
+
+# brass music commands
+
+for voice_name, fundamental in zip(
+    ["frenchhorn voice", "tenortrombone voice"],
+    [
+        "e'",
+        "a",
+    ],
+):
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (3, 4)),
+        evans.RhythmHandler(
+            evans.tuplet(
+                [
+                    (-1,),
+                    (8, 7, 1),
+                ]
+            )
+        ),
+        evans.PitchHandler([fundamental]),
+        evans.PitchHandler([library._brass_chord_pitches[voice_name]], as_ratios=True),
+        trinton.force_accidentals_command(
+            selector=trinton.logical_ties(first=True, pitched=True)
+        ),
+        trinton.notehead_bracket_command(),
+        library.ring_mod_attachments(
+            dynamics=["p"], direction=abjad.DOWN, clean_swells=True
+        ),
+        voice=score[voice_name],
+        preprocessor=trinton.fuse_sixteenths_preprocessor((9, 19)),
+    )
+
+for voice_name in ["trumpet voice", "tuba voice"]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (3, 4)),
+        evans.RhythmHandler(
+            evans.tuplet(
+                [
+                    (-1,),
+                    (8, 7, 1),
+                ]
+            )
+        ),
+        evans.PitchHandler([library._brass_chord_pitches[voice_name]]),
+        trinton.notehead_bracket_command(),
+        library.ring_mod_attachments(
+            dynamics=["p"],
+            direction=abjad.DOWN,
+        ),
+        voice=score[voice_name],
+        preprocessor=trinton.fuse_sixteenths_preprocessor((9, 19)),
+    )
+
+# tuba music commands
+
+abjad.attach(
+    abjad.Clef("bass"), abjad.select.leaves(score["tuba voice"], pitched=True)[0]
 )
 
 # timpani music commands

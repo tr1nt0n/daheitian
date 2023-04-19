@@ -171,10 +171,54 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "oboe voice"
                                 {
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 2 0))
+                                    \times 12/16
+                                    {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
+                                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
+                                        c''2
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        _ \<
+                                        - \tweak padding #7
+                                        - \abjad-solid-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { \hspace #1.5 \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) } \hspace #0.5 }
+                                        - \tweak bound-details.right.padding -1.5
+                                        \startTextSpan
+                                        \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        c''4..
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        _ \p
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        _ \>
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        c''16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                    % CLOSE_BRACKETS:
+                                    }
                                     c''8
                                     % AFTER:
                                     % START_BEAM:
@@ -182,11 +226,6 @@
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     _ \<
-                                    - \tweak padding #8
-                                    - \abjad-solid-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) } \hspace #0.5 }
-                                    - \tweak bound-details.right.padding -2
-                                    \startTextSpan
                                     \glissando
                                     % BEFORE:
                                     % COMMANDS:
@@ -225,9 +264,6 @@
                                     _ \<
                                     \glissando
                                     ~
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
                                     \hide NoteHead
@@ -236,117 +272,12 @@
                                     \override NoteHead.no-ledgers = ##t
                                     c''8
                                     % AFTER:
-                                    % ARTICULATIONS:
-                                    _ \p
-                                    % SPANNER_STARTS:
-                                    - \tweak circled-tip ##t
-                                    _ \>
-                                    \repeatTie
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
-                                    c''8..
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    \!
-                                    % STOP_BEAM:
-                                    ]
-                                    c''32
-                                    % AFTER:
-                                    % START_BEAM:
-                                    [
-                                    % SPANNER_STARTS:
-                                    - \tweak circled-tip ##t
-                                    _ \<
-                                    \glissando
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Dots.staff-position = #2
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
-                                    c''8
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    _ \p
-                                    % SPANNER_STARTS:
-                                    - \tweak circled-tip ##t
-                                    _ \>
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
-                                    c''16..
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    \!
-                                    % STOP_BEAM:
-                                    ]
-                                    c''64
-                                    % AFTER:
-                                    % START_BEAM:
-                                    [
-                                    % SPANNER_STARTS:
-                                    - \tweak circled-tip ##t
-                                    _ \<
-                                    \glissando
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Dots.staff-position = #2
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
-                                    c''8
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    _ \p
-                                    % SPANNER_STARTS:
-                                    - \tweak circled-tip ##t
-                                    _ \>
-                                    ~
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
-                                    c''8
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    \!
-                                    % STOP_BEAM:
-                                    ]
                                     % SPANNER_STARTS:
                                     \repeatTie
-                                    c''8..
-                                    % AFTER:
-                                    % START_BEAM:
-                                    [
-                                    % SPANNER_STARTS:
-                                    - \tweak circled-tip ##t
-                                    _ \<
-                                    \glissando
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
-                                    c''32
+                                    c''8..
                                     % AFTER:
                                     % ARTICULATIONS:
                                     _ \p
@@ -359,13 +290,13 @@
                                     \revert NoteColumn.glissando-skip
                                     \revert NoteHead.no-ledgers
                                     \undo \hide NoteHead
-                                    c''8
+                                    c''32
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \!
                                     % STOP_BEAM:
                                     ]
-                                    c''16..
+                                    c''8
                                     % AFTER:
                                     % START_BEAM:
                                     [
@@ -382,12 +313,10 @@
                                     \override Accidental.stencil = ##f
                                     \override NoteColumn.glissando-skip = ##t
                                     \override NoteHead.no-ledgers = ##t
-                                    c''64
+                                    c''16..
                                     % AFTER:
                                     % ARTICULATIONS:
                                     _ \p
-                                    % STOP_BEAM:
-                                    ]
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     _ \>
@@ -397,14 +326,89 @@
                                     \revert NoteColumn.glissando-skip
                                     \revert NoteHead.no-ledgers
                                     \undo \hide NoteHead
+                                    c''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % STOP_BEAM:
+                                    ]
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 2 0))
+                                    \times 12/16
+                                    {
+                                        c''2
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        _ \<
+                                        \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        c''4..
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        _ \p
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        _ \>
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        c''16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    c''8
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    _ \<
+                                    \glissando
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    c''16..
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    _ \p
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    _ \>
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    c''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % STOP_BEAM:
+                                    ]
                                     c''4
                                     % AFTER:
-                                    % ARTICULATIONS:
-                                    \!
-                                    c''8..
-                                    % AFTER:
-                                    % START_BEAM:
-                                    [
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     _ \<
@@ -418,26 +422,28 @@
                                     \override Accidental.stencil = ##f
                                     \override NoteColumn.glissando-skip = ##t
                                     \override NoteHead.no-ledgers = ##t
+                                    c''8..
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    _ \p
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    _ \>
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
                                     c''32
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    _ \p
-                                    % SPANNER_STARTS:
-                                    - \tweak circled-tip ##t
-                                    _ \>
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
-                                    c''8
-                                    % AFTER:
-                                    % ARTICULATIONS:
                                     \!
                                     % STOP_BEAM:
                                     ]
-                                    c''16..
+                                    c''8
                                     % AFTER:
                                     % START_BEAM:
                                     [
@@ -454,12 +460,10 @@
                                     \override Accidental.stencil = ##f
                                     \override NoteColumn.glissando-skip = ##t
                                     \override NoteHead.no-ledgers = ##t
-                                    c''64
+                                    c''16..
                                     % AFTER:
                                     % ARTICULATIONS:
                                     _ \p
-                                    % STOP_BEAM:
-                                    ]
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     _ \>
@@ -469,14 +473,14 @@
                                     \revert NoteColumn.glissando-skip
                                     \revert NoteHead.no-ledgers
                                     \undo \hide NoteHead
+                                    c''64
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    % STOP_BEAM:
+                                    ]
                                     c''4
                                     % AFTER:
-                                    % ARTICULATIONS:
-                                    \!
-                                    c''8..
-                                    % AFTER:
-                                    % START_BEAM:
-                                    [
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     _ \<
@@ -490,127 +494,29 @@
                                     \override Accidental.stencil = ##f
                                     \override NoteColumn.glissando-skip = ##t
                                     \override NoteHead.no-ledgers = ##t
+                                    c''8..
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    _ \p
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    _ \>
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
                                     c''32
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    _ \p
-                                    % SPANNER_STARTS:
-                                    - \tweak circled-tip ##t
-                                    _ \>
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
-                                    c''8
-                                    % AFTER:
-                                    % ARTICULATIONS:
                                     \!
-                                    % STOP_BEAM:
-                                    ]
-                                    c''16..
-                                    % AFTER:
-                                    % START_BEAM:
-                                    [
-                                    % SPANNER_STARTS:
-                                    - \tweak circled-tip ##t
-                                    _ \<
-                                    \glissando
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Dots.staff-position = #2
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
-                                    c''64
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    _ \p
-                                    % STOP_BEAM:
-                                    ]
-                                    % SPANNER_STARTS:
-                                    - \tweak circled-tip ##t
-                                    _ \>
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
-                                    c''4
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    \!
-                                    c''8..
-                                    % AFTER:
-                                    % START_BEAM:
-                                    [
-                                    % SPANNER_STARTS:
-                                    - \tweak circled-tip ##t
-                                    _ \<
-                                    \glissando
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Dots.staff-position = #2
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
-                                    c''32
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    _ \p
-                                    % SPANNER_STARTS:
-                                    - \tweak circled-tip ##t
-                                    _ \>
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
-                                    c''8
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    \!
-                                    % STOP_BEAM:
-                                    ]
-                                    c''16..
-                                    % AFTER:
-                                    % START_BEAM:
-                                    [
-                                    % SPANNER_STARTS:
-                                    - \tweak circled-tip ##t
-                                    _ \<
-                                    \glissando
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
-                                    c''64
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    \!
-                                    _ \p
                                     % SPANNER_STOPS:
                                     \stopTextSpan
                                     % STOP_BEAM:
                                     ]
-                                    % SPANNER_STARTS:
-                                    - \tweak circled-tip ##t
-                                    _ \>
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \once \override Staff.BarLine.transparent = ##f
@@ -828,30 +734,74 @@
                             % AFTER:
                             % COMMANDS:
                             \stopStaff \startStaff
-                            % ABSOLUTE_BEFORE:
-                            % COMMANDS:
-                            \once \override Staff.BarLine.transparent = ##f
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override Rest.transparent = ##t
-                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                            r1 * 1/2
-                            s1 * 1/2
-                            % AFTER:
-                            % COMMANDS:
-                            \stopStaff \startStaff
-                            % ABSOLUTE_BEFORE:
-                            % COMMANDS:
-                            \once \override Staff.BarLine.transparent = ##f
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override Rest.transparent = ##t
-                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                            r1 * 3/8
-                            s1 * 3/8
-                            % AFTER:
-                            % COMMANDS:
-                            \stopStaff \startStaff
+                            r2
+                            r16
+                            % OPEN_BRACKETS:
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 16 19) (ly:make-duration 4 0))
+                            \times 19/16
+                            {
+                                <
+                                    \tweak Accidental.stencil #ly:text-interface::print
+                                    \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                    gs''!
+                                    \tweak Accidental.stencil #ly:text-interface::print
+                                    \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                    cs'''!
+                                >2
+                                % AFTER:
+                                % MARKUP:
+                                ^ \markup \center-align { \center-column { \line { \concat { C+41 }  }\line { \concat { +35 }  } } }
+                                % SPANNER_STARTS:
+                                - \tweak circled-tip ##t
+                                _ \<
+                                \glissando
+                                % BEFORE:
+                                % COMMANDS:
+                                \once \override Dots.staff-position = #2
+                                % OPENING:
+                                % COMMANDS:
+                                \hide NoteHead
+                                \override Accidental.stencil = ##f
+                                \override NoteColumn.glissando-skip = ##t
+                                \override NoteHead.no-ledgers = ##t
+                                <
+                                    \tweak Accidental.stencil #ly:text-interface::print
+                                    \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                    \tweak Accidental.transparent ##t
+                                    gs''
+                                    \tweak Accidental.stencil #ly:text-interface::print
+                                    \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                    \tweak Accidental.transparent ##t
+                                    cs'''
+                                >4..
+                                % AFTER:
+                                % ARTICULATIONS:
+                                _ \p
+                                % SPANNER_STARTS:
+                                - \tweak circled-tip ##t
+                                _ \>
+                                % OPENING:
+                                % COMMANDS:
+                                \revert Accidental.stencil
+                                \revert NoteColumn.glissando-skip
+                                \revert NoteHead.no-ledgers
+                                \undo \hide NoteHead
+                                <
+                                    \tweak Accidental.stencil #ly:text-interface::print
+                                    \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                    \tweak Accidental.transparent ##t
+                                    gs''
+                                    \tweak Accidental.stencil #ly:text-interface::print
+                                    \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                    \tweak Accidental.transparent ##t
+                                    cs'''
+                                >16
+                                % AFTER:
+                                % ARTICULATIONS:
+                                \!
+                            % CLOSE_BRACKETS:
+                            }
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
                             \once \override Staff.BarLine.transparent = ##f
@@ -915,30 +865,47 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
+                                    r2
+                                    r16
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 16 19) (ly:make-duration 4 0))
+                                    \times 19/16
+                                    {
+                                        <d'' f''>2
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        _ \<
+                                        \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        <d'' f''>4..
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        _ \p
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        _ \>
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <d'' f''>16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                    % CLOSE_BRACKETS:
+                                    }
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \once \override Staff.BarLine.transparent = ##f
@@ -994,30 +961,74 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
+                                    r2
+                                    r16
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 16 19) (ly:make-duration 4 0))
+                                    \times 19/16
+                                    {
+                                        <
+                                            \tweak Accidental.stencil #ly:text-interface::print
+                                            \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                            c''!
+                                            \tweak Accidental.stencil #ly:text-interface::print
+                                            \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                            e''!
+                                        >2
+                                        % AFTER:
+                                        % MARKUP:
+                                        ^ \markup \center-align { \center-column { \line { \concat { +29 }  }\line { \concat { +47 }  } } }
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        _ \<
+                                        \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        <
+                                            \tweak Accidental.stencil #ly:text-interface::print
+                                            \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                            \tweak Accidental.transparent ##t
+                                            c''
+                                            \tweak Accidental.stencil #ly:text-interface::print
+                                            \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                            \tweak Accidental.transparent ##t
+                                            e''
+                                        >4..
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        _ \p
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        _ \>
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <
+                                            \tweak Accidental.stencil #ly:text-interface::print
+                                            \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                            \tweak Accidental.transparent ##t
+                                            c''
+                                            \tweak Accidental.stencil #ly:text-interface::print
+                                            \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                            \tweak Accidental.transparent ##t
+                                            e''
+                                        >16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                    % CLOSE_BRACKETS:
+                                    }
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \once \override Staff.BarLine.transparent = ##f
@@ -1073,30 +1084,50 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
+                                    r2
+                                    r16
+                                    % OPEN_BRACKETS:
+                                    \tweak text #tuplet-number::calc-fraction-text
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 16 19) (ly:make-duration 4 0))
+                                    \times 19/16
+                                    {
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "bass"
+                                        <b,, as,>2
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        _ \<
+                                        \glissando
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \hide NoteHead
+                                        \override Accidental.stencil = ##f
+                                        \override NoteColumn.glissando-skip = ##t
+                                        \override NoteHead.no-ledgers = ##t
+                                        <b,, as,>4..
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        _ \p
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        _ \>
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        <b,, as,>16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                    % CLOSE_BRACKETS:
+                                    }
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \once \override Staff.BarLine.transparent = ##f

@@ -117,10 +117,12 @@ afterGraceFraction = #(cons 15 16)
         \override Stem.details.beamed-lengths = #'(6)
         \override Stem.details.lengths = #'(6)
 
-        \override StemTremolo.beam-width = 1.5
-        \override StemTremolo.beam-width = 1.5
-        \override StemTremolo.flag-count = 4
-        \override StemTremolo.slope = 0.5
+        \override StemTremolo.stencil = #ly:text-interface::print
+        \override StemTremolo.text = \markup {
+            \fontsize #3.5
+            \override #'(font-name . "ekmelos")
+            \char ##xe222
+        }
 
         \override TextScript.font-name = "Bodoni72 Book"
         \override TextSpanner.font-name = "Bodoni72 Book"
@@ -205,25 +207,37 @@ afterGraceFraction = #(cons 15 16)
     bottom-margin = 10\mm
     left-margin = 10\mm
     right-margin = 10\mm
-    top-margin = 10\mm
+    top-margin = 17\mm
 
     oddHeaderMarkup = \markup ""
     evenHeaderMarkup = \markup ""
     oddFooterMarkup = \markup
         \fill-line {
-            "大黒天 - Trinton Hlynn"
-        \concat {
-            \fontsize #4
-                \fromproperty #'page:page-number-string
-        }
+            \concat {
+                \override #'(font-name . "Source Han Serif SC Bold")
+                "大黒天"
+                \override #'(font-name . "Bodoni72 Book")
+                " - Trinton Hlynn"
+            }
+            \concat {
+                \fontsize #5
+                \override #'(font-name . "Bodoni72 Book")
+                    \fromproperty #'page:page-number-string
+            }
         }
 
         evenFooterMarkup = \markup
             \fill-line {
                 \concat {
-                    \fontsize #4
+                    \fontsize #5
+                    \override #'(font-name . "Bodoni72 Book")
                         \fromproperty #'page:page-number-string
                 }
-                "大黒天 - Trinton Hlynn"
+                \concat {
+                    \override #'(font-name . "Source Han Serif SC Bold")
+                    "大黒天"
+                    \override #'(font-name . "Bodoni72 Book")
+                    " - Trinton Hlynn"
+                }
             }
 }

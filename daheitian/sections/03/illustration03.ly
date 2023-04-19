@@ -812,7 +812,7 @@
                                         % SPANNER_STARTS:
                                         - \tweak padding #8
                                         - \abjad-solid-line-with-hook
-                                        - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Schlagzunge } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Slaptongue } \hspace #0.5 }
                                         - \tweak bound-details.right.padding -2
                                         \startTextSpan
                                         r16
@@ -910,7 +910,7 @@
                                         % SPANNER_STARTS:
                                         - \tweak padding #8
                                         - \abjad-solid-line-with-hook
-                                        - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Schlagzunge } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Slaptongue } \hspace #0.5 }
                                         - \tweak bound-details.right.padding -2
                                         \startTextSpan
                                         r8
@@ -1834,7 +1834,7 @@
                                     % SPANNER_STARTS:
                                     ~
                                     % COMMANDS:
-                                    \boxed-markup "Amboss mit Hammerchen" 1
+                                    \boxed-markup "Amboss mit Hämmerchen" 1
                                     c'8
                                     c'8.
                                     % AFTER:
