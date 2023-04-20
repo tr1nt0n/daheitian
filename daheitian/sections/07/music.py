@@ -69,7 +69,7 @@ for voice_name, fundamental in zip(
         ),
         trinton.notehead_bracket_command(),
         library.ring_mod_attachments(
-            dynamics=["p"], direction=abjad.DOWN, clean_swells=True
+            dynamics=["p +"], direction=abjad.DOWN, clean_swells=True
         ),
         voice=score[voice_name],
         preprocessor=trinton.fuse_sixteenths_preprocessor((9, 19)),
@@ -89,7 +89,7 @@ for voice_name in ["trumpet voice", "tuba voice"]:
         evans.PitchHandler([library._brass_chord_pitches[voice_name]]),
         trinton.notehead_bracket_command(),
         library.ring_mod_attachments(
-            dynamics=["p"],
+            dynamics=["p +"],
             direction=abjad.DOWN,
         ),
         voice=score[voice_name],

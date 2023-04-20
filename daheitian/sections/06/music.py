@@ -126,7 +126,7 @@ trinton.make_music(
     rmakers.rewrite_dots,
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler([-1.5]),
-    library.ring_mod_attachments(dynamics=["ppp", "ppp", "pp", "p"]),
+    library.ring_mod_attachments(dynamics=["pppp", "ppp", "ppp", "pp"]),
     trinton.notehead_bracket_command(),
     evans.IntermittentVoiceHandler(
         rhythm_handler=evans.RhythmHandler(evans.talea([4], 1)),
@@ -144,7 +144,7 @@ trinton.make_music(
     trinton.linear_attachment_command(
         attachments=[
             abjad.StartHairpin("o<"),
-            abjad.Dynamic("ppp"),
+            trinton.make_custom_dynamic("ppp +"),
             abjad.StartHairpin("<"),
             abjad.Dynamic("pp"),
             abjad.StartHairpin("<"),
@@ -234,7 +234,7 @@ trinton.make_music(
     trinton.force_rest(selector=trinton.patterned_tie_index_selector([0], 2)),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(
-        library.harp_chords[0],
+        library.harp_chords,
     ),
     trinton.ottava_command(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True)

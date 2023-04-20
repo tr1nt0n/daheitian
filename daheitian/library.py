@@ -265,21 +265,19 @@ flute_overblowing_pitches = eval(
 harp_chords = eval(
     """[
         [
-            [
-                "a'''",
-                "bf'''",
-                "ds''''",
-                "e''''",
-                "fs''''"
-            ],
-            [
-                "g'''",
-                "a'''",
-                "bf'''",
-                "ds''''",
-                "e''''",
-            ],
-        ]
+            "a'''",
+            "bf'''",
+            "ds''''",
+            "e''''",
+            "fs''''"
+        ],
+        [
+            "g'''",
+            "a'''",
+            "bf'''",
+            "ds''''",
+            "e''''",
+        ],
     ]"""
 )
 
@@ -1201,7 +1199,9 @@ def ring_mod_attachments(
                     abjad.detach(abjad.Tie, leaf)
 
             abjad.attach(abjad.StartHairpin("o<"), group[0][0], direction=direction)
-            abjad.attach(abjad.Dynamic(dynamic), group[1][0], direction=direction)
+            abjad.attach(
+                trinton.make_custom_dynamic(dynamic, direction=direction), group[1][0]
+            )
             abjad.attach(abjad.StartHairpin(">o"), group[1][0], direction=direction)
             abjad.attach(abjad.StopHairpin(), group[-1][0])
 
@@ -1478,6 +1478,27 @@ def remove_accidentals(selector=trinton.pleaves()):
             )
 
     return remove
+
+
+def percussive_bassoon_attachments(selector=trinton.pleaves()):
+    def attach(argument):
+        selections = selector(argument)
+
+        pties = abjad.select.logical_ties(selections, pitched=True)
+
+        for leaf in selections:
+            if leaf.written_pitch.number == -13:
+                abjad.tweak(leaf.note_head, r"\tweak style #'cross")
+
+        for tie in pties:
+            if tie[0].written_pitch.number == -14:
+                abjad.attach(
+                    abjad.LilyPondLiteral(r"\triangleStemOn", "before"), tie[0]
+                )
+
+                abjad.attach(abjad.LilyPondLiteral(r"\stemOff", "after"), tie[-1])
+
+    return attach
 
 
 onbeat_flute_handler = trinton.OnBeatGraceHandler(

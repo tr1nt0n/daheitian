@@ -196,11 +196,11 @@
                                         \override NoteHead.no-ledgers = ##t
                                         c''4..
                                         % AFTER:
-                                        % ARTICULATIONS:
-                                        _ \p
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         _ \>
+                                        % COMMANDS:
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -232,11 +232,11 @@
                                     \override NoteHead.no-ledgers = ##t
                                     c''16..
                                     % AFTER:
-                                    % ARTICULATIONS:
-                                    _ \p
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     _ \>
+                                    % COMMANDS:
+                                    _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
@@ -269,11 +269,11 @@
                                     \once \override Dots.staff-position = #2
                                     c''8..
                                     % AFTER:
-                                    % ARTICULATIONS:
-                                    _ \p
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     _ \>
+                                    % COMMANDS:
+                                    _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
@@ -305,11 +305,11 @@
                                     \override NoteHead.no-ledgers = ##t
                                     c''16..
                                     % AFTER:
-                                    % ARTICULATIONS:
-                                    _ \p
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     _ \>
+                                    % COMMANDS:
+                                    _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
@@ -344,11 +344,11 @@
                                         \override NoteHead.no-ledgers = ##t
                                         c''4..
                                         % AFTER:
-                                        % ARTICULATIONS:
-                                        _ \p
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         _ \>
+                                        % COMMANDS:
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -380,11 +380,11 @@
                                     \override NoteHead.no-ledgers = ##t
                                     c''16..
                                     % AFTER:
-                                    % ARTICULATIONS:
-                                    _ \p
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     _ \>
+                                    % COMMANDS:
+                                    _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
@@ -414,13 +414,13 @@
                                     \override NoteHead.no-ledgers = ##t
                                     c''8..
                                     % AFTER:
-                                    % ARTICULATIONS:
-                                    _ \p
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     _ \>
+                                    % COMMANDS:
+                                    _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
@@ -452,11 +452,11 @@
                                     \override NoteHead.no-ledgers = ##t
                                     c''16..
                                     % AFTER:
-                                    % ARTICULATIONS:
-                                    _ \p
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     _ \>
+                                    % COMMANDS:
+                                    _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
@@ -486,13 +486,13 @@
                                     \override NoteHead.no-ledgers = ##t
                                     c''8..
                                     % AFTER:
-                                    % ARTICULATIONS:
-                                    _ \p
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     _ \>
+                                    % COMMANDS:
+                                    _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
@@ -766,11 +766,11 @@
                                     cs'''
                                 >4..
                                 % AFTER:
-                                % ARTICULATIONS:
-                                _ \p
                                 % SPANNER_STARTS:
                                 - \tweak circled-tip ##t
                                 _ \>
+                                % COMMANDS:
+                                _ #(make-dynamic-script (markup #:whiteout #:italic "p +"))
                                 % OPENING:
                                 % COMMANDS:
                                 \revert Accidental.stencil
@@ -879,11 +879,11 @@
                                         \override NoteHead.no-ledgers = ##t
                                         <d'' f''>4..
                                         % AFTER:
-                                        % ARTICULATIONS:
-                                        _ \p
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         _ \>
+                                        % COMMANDS:
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "p +"))
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -993,11 +993,11 @@
                                             e''
                                         >4..
                                         % AFTER:
-                                        % ARTICULATIONS:
-                                        _ \p
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         _ \>
+                                        % COMMANDS:
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "p +"))
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -1101,11 +1101,11 @@
                                         \override NoteHead.no-ledgers = ##t
                                         <b,, as,>4..
                                         % AFTER:
-                                        % ARTICULATIONS:
-                                        _ \p
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         _ \>
+                                        % COMMANDS:
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "p +"))
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil

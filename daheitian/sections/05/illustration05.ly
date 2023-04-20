@@ -461,7 +461,7 @@
                                             \voiceOne
                                             r4.
                                             r4
-                                            bqf!8.
+                                            bqf8.
                                             % AFTER:
                                             % START_BEAM:
                                             [
@@ -480,11 +480,11 @@
                                             \override NoteHead.no-ledgers = ##t
                                             bqf8.
                                             % AFTER:
-                                            % ARTICULATIONS:
-                                            ^ \ppp
                                             % SPANNER_STARTS:
                                             - \tweak circled-tip ##t
                                             ^ \>
+                                            % COMMANDS:
+                                            ^ #(make-dynamic-script (markup #:whiteout #:italic "pppp"))
                                             % OPENING:
                                             % COMMANDS:
                                             \revert Accidental.stencil
@@ -517,11 +517,11 @@
                                             \override NoteHead.no-ledgers = ##t
                                             bqf8
                                             % AFTER:
-                                            % ARTICULATIONS:
-                                            ^ \ppp
                                             % SPANNER_STARTS:
                                             - \tweak circled-tip ##t
                                             ^ \>
+                                            % COMMANDS:
+                                            ^ #(make-dynamic-script (markup #:whiteout #:italic "pppp"))
                                             % OPENING:
                                             % COMMANDS:
                                             \revert Accidental.stencil
@@ -558,11 +558,11 @@
                                                 \override NoteHead.no-ledgers = ##t
                                                 bqf8
                                                 % AFTER:
-                                                % ARTICULATIONS:
-                                                ^ \ppp
                                                 % SPANNER_STARTS:
                                                 - \tweak circled-tip ##t
                                                 ^ \>
+                                                % COMMANDS:
+                                                ^ #(make-dynamic-script (markup #:whiteout #:italic "pppp"))
                                                 % OPENING:
                                                 % COMMANDS:
                                                 \revert Accidental.stencil
@@ -603,11 +603,11 @@
                                                 \override NoteHead.no-ledgers = ##t
                                                 bqf8
                                                 % AFTER:
-                                                % ARTICULATIONS:
-                                                ^ \ppp
                                                 % SPANNER_STARTS:
                                                 - \tweak circled-tip ##t
                                                 ^ \>
+                                                % COMMANDS:
+                                                ^ #(make-dynamic-script (markup #:whiteout #:italic "pppp"))
                                                 % OPENING:
                                                 % COMMANDS:
                                                 \revert Accidental.stencil

@@ -901,20 +901,16 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \clef "bass"
-                                        b8
+                                        \tweak style #'cross
+                                        b,8
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \mp
                                         % MARKUP:
                                         ^ \markup \center-column { \circle 1 }
-                                        % SPANNER_STARTS:
-                                        - \tweak padding #8
-                                        - \abjad-solid-line-with-hook
-                                        - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Slaptongue } \hspace #0.5 }
-                                        - \tweak bound-details.right.padding -2
-                                        \startTextSpan
                                         r8
-                                        b8
+                                        \tweak style #'cross
+                                        b,8
                                         % AFTER:
                                         % MARKUP:
                                         ^ \markup \center-column { \circle 3 }
@@ -941,7 +937,8 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \override Staff.Stem.stemlet-length = 0.75
-                                        b8
+                                        \tweak style #'cross
+                                        b,8
                                         % AFTER:
                                         % MARKUP:
                                         ^ \markup \center-column { \circle 2 }
@@ -950,12 +947,11 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Staff.Stem.stemlet-length
-                                        b8
+                                        \tweak style #'cross
+                                        b,8
                                         % AFTER:
                                         % MARKUP:
                                         ^ \markup \center-column { \circle 3 }
-                                        % SPANNER_STOPS:
-                                        \stopTextSpan
                                         % STOP_BEAM:
                                         ]
                                     % CLOSE_BRACKETS:

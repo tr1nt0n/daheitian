@@ -578,11 +578,11 @@
                                                 \override NoteHead.no-ledgers = ##t
                                                 bqf4
                                                 % AFTER:
-                                                % ARTICULATIONS:
-                                                ^ \ppp
                                                 % SPANNER_STARTS:
                                                 - \tweak circled-tip ##t
                                                 ^ \>
+                                                % COMMANDS:
+                                                ^ #(make-dynamic-script (markup #:whiteout #:italic "pppp"))
                                                 % OPENING:
                                                 % COMMANDS:
                                                 \revert Accidental.stencil
@@ -615,11 +615,11 @@
                                             \override NoteHead.no-ledgers = ##t
                                             bqf8
                                             % AFTER:
-                                            % ARTICULATIONS:
-                                            ^ \ppp
                                             % SPANNER_STARTS:
                                             - \tweak circled-tip ##t
                                             ^ \>
+                                            % COMMANDS:
+                                            ^ #(make-dynamic-script (markup #:whiteout #:italic "ppp"))
                                             % OPENING:
                                             % COMMANDS:
                                             \revert Accidental.stencil
@@ -654,11 +654,11 @@
                                                 \override NoteHead.no-ledgers = ##t
                                                 bqf4
                                                 % AFTER:
-                                                % ARTICULATIONS:
-                                                ^ \pp
                                                 % SPANNER_STARTS:
                                                 - \tweak circled-tip ##t
                                                 ^ \>
+                                                % COMMANDS:
+                                                ^ #(make-dynamic-script (markup #:whiteout #:italic "ppp"))
                                                 % OPENING:
                                                 % COMMANDS:
                                                 \revert Accidental.stencil
@@ -694,11 +694,11 @@
                                                 \override NoteHead.no-ledgers = ##t
                                                 bqf4
                                                 % AFTER:
-                                                % ARTICULATIONS:
-                                                ^ \p
                                                 % SPANNER_STARTS:
                                                 - \tweak circled-tip ##t
                                                 ^ \>
+                                                % COMMANDS:
+                                                ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
                                                 % OPENING:
                                                 % COMMANDS:
                                                 \revert Accidental.stencil
@@ -727,12 +727,12 @@
                                             ~
                                             as2.
                                             % AFTER:
-                                            % ARTICULATIONS:
-                                            \ppp
                                             % SPANNER_STARTS:
                                             \<
                                             \repeatTie
                                             ~
+                                            % COMMANDS:
+                                            _ #(make-dynamic-script (markup #:whiteout #:italic "ppp +"))
                                             as2
                                             % AFTER:
                                             % SPANNER_STARTS:

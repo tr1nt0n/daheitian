@@ -87,17 +87,8 @@ trinton.make_music(
     trinton.force_note(selector=library._klavierubung_selectors[2]["bassoon voice"]),
     rmakers.rewrite_dots,
     evans.RewriteMeterCommand(boundary_depth=-2),
-    evans.PitchHandler(["b"]),
-    trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="Slaptongue",
-        ),
-        full_string=True,
-        padding=8,
-        style="solid-line-with-hook",
-        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
-        right_padding=2,
-    ),
+    evans.PitchHandler([-13]),
+    library.percussive_bassoon_attachments(),
     library.timbre_trills(index=3),
     trinton.attachment_command(
         attachments=[abjad.Clef("bass"), abjad.Dynamic("mp")],
