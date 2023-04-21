@@ -141,21 +141,27 @@ metronome_marks = {
 }
 
 
-def metronome_markups(met_string, mod_string=None, string_only=False):
+def metronome_markups(
+    met_string, mod_string=None, string_only=False, parenthesis=False
+):
     if mod_string is None:
-        mark = abjad.LilyPondLiteral(
-            [
-                r"^ \markup {",
-                r"  \raise #9 \with-dimensions-from \null",
-                r"  \override #'(font-size . 5.5)",
-                r"  \concat {",
-                f"      {met_string.string[8:]}",
-                r"  }",
-                r"}",
-            ],
-            site="after",
-        )
-        return mark
+        if parenthesis is False:
+            mark = abjad.LilyPondLiteral(
+                [
+                    r"^ \markup {",
+                    r"  \raise #9 \with-dimensions-from \null",
+                    r"  \override #'(font-size . 5.5)",
+                    r"  \concat {",
+                    f"      {met_string.string[8:]}",
+                    r"  }",
+                    r"}",
+                ],
+                site="after",
+            )
+            return mark
+        else:
+            mark = f"\markup {{ \override #'(font-size . 5.5) \concat {{ ( {met_string.string[8:]} ) }} }}"
+            return mark
 
     else:
         if string_only is True:

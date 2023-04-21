@@ -157,6 +157,7 @@
                                     bf4
                                     % AFTER:
                                     % ARTICULATIONS:
+                                    - \tenuto
                                     \mf
                                     % SPANNER_STARTS:
                                     - \tweak padding #5.5
@@ -167,10 +168,17 @@
                                     - \tweak stencil #constante-hairpin
                                     \<
                                     bf2
-                                    bf4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
                                     bf4
                                     % AFTER:
                                     % ARTICULATIONS:
+                                    - \tenuto
+                                    bf4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \tenuto
                                     \!
                                     % SPANNER_STOPS:
                                     \stopTextSpan
@@ -1064,32 +1072,58 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "percussion 3 voice"
                                 {
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
+                                    % OPEN_BRACKETS:
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 2 0))
+                                    \times 2/3
+                                    {
+                                        % ABSOLUTE_BEFORE:
+                                        % COMMANDS:
+                                        \staff-line-count 1
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
+                                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \clef "percussion"
+                                        c'2
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \tenuto
+                                        \pppp
+                                        % SPANNER_STARTS:
+                                        - \tweak stencil #constante-hairpin
+                                        \<
+                                        % COMMANDS:
+                                        \boxed-markup "Tam-Tam mit Bogen" 1
+                                        c'4
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \tenuto
+                                        % SPANNER_STARTS:
+                                        ~
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % OPEN_BRACKETS:
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 3 0))
+                                    \times 4/5
+                                    {
+                                        c'4.
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        \repeatTie
+                                        c'4
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \tenuto
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    c'4
                                     % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
+                                    % ARTICULATIONS:
+                                    - \tenuto
+                                    \!
+                                    r2
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \once \override Staff.BarLine.transparent = ##f

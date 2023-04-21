@@ -123,6 +123,10 @@ section_8_ts = taal_ts_sequence[20:23]
 
 section_8_ts.append((1, 4))
 
+# section 9
+
+section_9_ts = taal_ts_sequence[23:28]
+
 # sketch_ts_sequence = []
 #
 # for _ in taal_ts_sequence:

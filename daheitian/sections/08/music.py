@@ -42,6 +42,10 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, 0, -1], pitched=True),
     ),
+    trinton.attachment_command(
+        attachments=[abjad.Articulation("tenuto")],
+        selector=trinton.logical_ties(pitched=True, first=True),
+    ),
     voice=score["oboe voice"],
     preprocessor=trinton.fuse_quarters_preprocessor((5, 2)),
 )
@@ -84,6 +88,52 @@ for voice_name in ["violin 1 voice", "contrabass voice"]:
         voice=score[voice_name],
         preprocessor=trinton.fuse_preprocessor((3,)),
     )
+
+# percussion 2 music commands
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (1, 2)),
+    evans.RhythmHandler(
+        evans.talea(
+            library.oboe_chant_talea,
+            16,
+            extra_counts=[
+                -5,
+                -3,
+            ],
+            treat_tuplets=False,
+        )
+    ),
+    trinton.force_rest(selector=trinton.select_tuplets_by_index([-1])),
+    trinton.treat_tuplets(),
+    rmakers.force_diminution,
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    library.change_lines(lines=1, clef="percussion"),
+    library.boxed_markup(string="Tam-Tam mit Bogen"),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.Dynamic("pppp"),
+            abjad.StartHairpin("--"),
+            abjad.StopHairpin(),
+        ],
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                0,
+                -1,
+            ],
+            pitched=True,
+        ),
+    ),
+    trinton.attachment_command(
+        attachments=[abjad.Articulation("tenuto")],
+        selector=trinton.logical_ties(pitched=True, first=True),
+    ),
+    trinton.notehead_bracket_command(),
+    voice=score["percussion 3 voice"],
+    preprocessor=trinton.fuse_quarters_preprocessor((2, 2, 1, 2)),
+    beam_meter=True,
+)
 
 # violin 2 music commands
 
