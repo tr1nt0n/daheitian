@@ -167,10 +167,8 @@ trinton.make_music(
                 library.return_boxed_markup(string="Abrupt beginnen", font="italic"),
             ),
             abjad.StartHairpin("--"),
-            abjad.StartSlur(),
             abjad.StartHairpin("<"),
             trinton.make_custom_dynamic("p +"),
-            abjad.StopSlur(),
         ],
         selector=trinton.select_leaves_by_index(
             [
@@ -178,11 +176,14 @@ trinton.make_music(
                 0,
                 0,
                 3,
-                3,
-                -1,
                 -1,
             ]
         ),
+    ),
+    trinton.linear_attachment_command(
+        attachments=[abjad.StartSlur(), abjad.StopSlur()],
+        selector=trinton.select_leaves_by_index([3, -1]),
+        direction=abjad.UP,
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(

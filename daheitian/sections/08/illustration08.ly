@@ -1300,7 +1300,6 @@
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
-                                    (
                                     - \tweak padding #10.5
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Solo } \hspace #0.5 }
@@ -1314,6 +1313,7 @@
                                     \startTextSpanOne
                                     \<
                                     \glissando
+                                    ^ (
                                     ~
                                     % BEFORE:
                                     % COMMANDS:

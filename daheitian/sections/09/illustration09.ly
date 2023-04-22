@@ -1385,18 +1385,70 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    r2
+                                    r32
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
-                                    % AFTER:
+                                    \ottava 1
+                                    % OPENING:
                                     % COMMANDS:
-                                    \stopStaff \startStaff
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    <g''' a''' bf''' ds'''' e''''>16.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % ARTICULATIONS:
+                                    \arpeggio
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    _ \<
+                                    \glissando
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    <g''' a''' bf''' ds'''' e''''>32
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :256
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    <g''' a''' bf''' ds'''' e''''>16.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    _ \>
+                                    % COMMANDS:
+                                    _ #(make-dynamic-script (markup #:whiteout #:italic "ppp +"))
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    <g''' a''' bf''' ds'''' e''''>32
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :256
+                                    % ARTICULATIONS:
+                                    \!
+                                    % STOP_BEAM:
+                                    ]
+                                    % COMMANDS:
+                                    \ottava 0
+                                    r8..
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -1632,18 +1684,65 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
+                                    r2
+                                    r32
+                                    % OPENING:
                                     % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c'16.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    _ \<
+                                    \glissando
+                                    % COMMANDS:
+                                    \boxed-markup "Triangel" 1
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    c'32
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :256
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
-                                    % AFTER:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
                                     % COMMANDS:
-                                    \stopStaff \startStaff
+                                    \revert Staff.Stem.stemlet-length
+                                    c'16.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    _ \>
+                                    % COMMANDS:
+                                    _ #(make-dynamic-script (markup #:whiteout #:italic "ppp +"))
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    c'32
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :256
+                                    % ARTICULATIONS:
+                                    \!
+                                    % STOP_BEAM:
+                                    ]
+                                    r8..
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -1891,18 +1990,69 @@
                                     % ARTICULATIONS:
                                     - \tenuto
                                     \!
+                                    r2
+                                    r32
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \staff-line-count 5
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    a16.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    _ \<
+                                    \glissando
+                                    % COMMANDS:
+                                    \boxed-markup "Glockenspiel" 1
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    a32
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :256
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
-                                    % AFTER:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
                                     % COMMANDS:
-                                    \stopStaff \startStaff
+                                    \revert Staff.Stem.stemlet-length
+                                    a16.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    _ \>
+                                    % COMMANDS:
+                                    _ #(make-dynamic-script (markup #:whiteout #:italic "ppp +"))
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    a32
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :256
+                                    % ARTICULATIONS:
+                                    \!
+                                    % STOP_BEAM:
+                                    ]
+                                    r8..
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -2033,66 +2183,149 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \staff-line-count 1
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
+                                    \override Staff.BarLine.bar-extent = #'(-0.01 . 0.01)
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/4
-                                    s1 * 1/4
-                                    % AFTER:
+                                    % OPENING:
                                     % COMMANDS:
-                                    \stopStaff \startStaff
+                                    \clef "percussion"
+                                    c'2
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ppp
+                                    % MARKUP:
+                                    ^ \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen }
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #8
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Steg } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -5
+                                    \startTextSpan
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    ~
+                                    c'1
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    ~
+                                    c'2.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    ~
+                                    c'4.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    ~
+                                    c'4
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    ~
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c'16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    \repeatTie
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \staff-line-count 5
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
+                                    \once \override Tie.transparent = ##f
+                                    \override Staff.BarLine.bar-extent = #'(-2 . 2)
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    \revert Staff.Stem.stemlet-length
+                                    gqs16
                                     % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #11
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Solo } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2
+                                    \startTextSpan
+                                    - \tweak padding #8
+                                    - \abjad-solid-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { {  } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { MSP }
+                                    - \tweak bound-details.right.padding 1
+                                    \startTextSpanOne
+                                    \glissando
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/4
-                                    s1 * 3/4
-                                    % AFTER:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
                                     % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
-                                    % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    gqs2.
+                                    % OPEN_BRACKETS:
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 2 0))
+                                    \times 4/5
+                                    {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
+                                        gqs4.
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        \<
+                                        ^ (
+                                        ~
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
+                                        gqs4.
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        \repeatTie
+                                        ~
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
+                                        gqs4..
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \p
+                                        % SPANNER_STOPS:
+                                        \stopTextSpanOne
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \>
+                                        \repeatTie
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        aqf16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                        % SPANNER_STOPS:
+                                        )
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -2110,68 +2343,186 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "viola voice"
                                 {
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/4
-                                    s1 * 1/4
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "altovarC"
+                                    gs2
                                     % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    % ARTICULATIONS:
+                                    \ppp
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #10.5
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { MSP } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2.5
+                                    \startTextSpanOne
+                                    - \tweak padding #14
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Solo } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2
+                                    \startTextSpan
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    \glissando
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    gs2
                                     % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/4
-                                    s1 * 3/4
+                                    \once \override Dots.staff-position = #2
+                                    gs8
                                     % AFTER:
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    % OPENING:
                                     % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    aqf4.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    (
+                                    \glissando
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    s1 * 3/8
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    aqf4.
                                     % AFTER:
-                                    % COMMANDS:
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    s1 * 1/2
+                                    \once \override Dots.staff-position = #2
+                                    aqf4
                                     % AFTER:
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    ~
+                                    % BEFORE:
                                     % COMMANDS:
-                                    \stopStaff \startStaff
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    aqf16
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Accidental.stencil
+                                    \revert NoteColumn.glissando-skip
+                                    \revert NoteHead.no-ledgers
+                                    \undo \hide NoteHead
+                                    \revert Staff.Stem.stemlet-length
+                                    gs16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
+                                    \stopTextSpanOne
+                                    % STOP_BEAM:
+                                    ]
+                                    gs2.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \tweak padding #10.5
+                                    - \abjad-solid-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { {  } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { SP }
+                                    - \tweak bound-details.right.padding 1
+                                    \startTextSpanOne
+                                    \glissando
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \hide NoteHead
+                                    \override Accidental.stencil = ##f
+                                    \override NoteColumn.glissando-skip = ##t
+                                    \override NoteHead.no-ledgers = ##t
+                                    gs2.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    % OPEN_BRACKETS:
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 2 0))
+                                    \times 4/5
+                                    {
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
+                                        gs4.
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        (
+                                        \<
+                                        ~
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
+                                        gs4.
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        \repeatTie
+                                        ~
+                                        % BEFORE:
+                                        % COMMANDS:
+                                        \once \override Dots.staff-position = #2
+                                        gs4..
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \p
+                                        % SPANNER_STOPS:
+                                        \stopTextSpanOne
+                                        % SPANNER_STARTS:
+                                        - \tweak circled-tip ##t
+                                        \>
+                                        \repeatTie
+                                        % OPENING:
+                                        % COMMANDS:
+                                        \revert Accidental.stencil
+                                        \revert NoteColumn.glissando-skip
+                                        \revert NoteHead.no-ledgers
+                                        \undo \hide NoteHead
+                                        gqs16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        \!
+                                        % SPANNER_STOPS:
+                                        )
+                                        \stopTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -2206,7 +2557,7 @@
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { MSP } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -75.5
                                     \startTextSpanOne
-                                    - \tweak padding #7.5
+                                    - \tweak padding #8
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Solo } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -2
@@ -2321,7 +2672,7 @@
                                     - \tweak padding #10.5
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Steg } \hspace #0.5 }
-                                    - \tweak bound-details.right.padding -38
+                                    - \tweak bound-details.right.padding -40
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<

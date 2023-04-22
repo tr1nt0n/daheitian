@@ -65,8 +65,8 @@ afterGraceFraction = #(cons 15 16)
         proportionalNotationDuration = #(ly:make-moment 1 20)
         pedalSustainStyle = #'bracket
 
-        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 0) (minimum distance . 5) (padding . 5) (stretchability . 28))
-        \override StaffGrouper.staffgroup-staff-spacing = #'((basic-distance . 0) (minimum distance . 5) (padding . 5) (stretchability . 28))
+        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 0) (minimum distance . 5) (padding . 8) (stretchability . 28))
+        \override StaffGrouper.staffgroup-staff-spacing = #'((basic-distance . 0) (minimum distance . 5) (padding . 8) (stretchability . 28))
 
         \override AccidentalSuggestion.avoid-slur = #'ignore
         % \override Accidental.X-extent = ##f
@@ -201,7 +201,7 @@ afterGraceFraction = #(cons 15 16)
 \paper {
     % max-systems-per-page = 3
     system-separator-markup = \markup \fontsize #12 { \tremolo-moderato }
-    system-system-spacing = #'((basic-distance . 16) (minimum-distance . 16) (padding . 4))
+    system-system-spacing = #'((basic-distance . 16) (minimum-distance . 16) (padding . 8))
     indent = 20\mm
     short-indent = 15\mm
     bottom-margin = 10\mm
