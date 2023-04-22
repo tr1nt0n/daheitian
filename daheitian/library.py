@@ -661,10 +661,10 @@ _fundamental_to_multiphonic = {
         r"\markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }",
     ),
     "cqs, hspace": abjad.Markup(
-        r"\markup \hspace #2.5 \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }",
+        r"\markup \hspace #4 \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }",
     ),
     "d hspace": abjad.Markup(
-        r"\markup \hspace #2.5 \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }",
+        r"\markup \hspace #4 \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }",
     ),
     "c'' hspace": abjad.Markup(
         r"\markup \hspace #1.5 \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }",
