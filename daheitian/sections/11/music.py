@@ -387,7 +387,7 @@ trinton.make_music(
 # cello music commands
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (7, 9)),
+    lambda _: trinton.select_target(_, (8, 9)),
     evans.RhythmHandler(
         evans.talea(
             [

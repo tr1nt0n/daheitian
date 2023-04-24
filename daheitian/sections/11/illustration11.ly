@@ -6053,6 +6053,18 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/4
+                                    s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                     % OPEN_BRACKETS:
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 2 0))
                                     \times 2/3
@@ -6102,14 +6114,6 @@
                                         \override Accidental.stencil = ##f
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         \revert Accidental.stencil
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
@@ -6156,14 +6160,6 @@
                                         \override Accidental.stencil = ##f
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         \revert Accidental.stencil
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
@@ -6220,14 +6216,6 @@
                                         \override Accidental.stencil = ##f
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         \revert Accidental.stencil
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
@@ -6272,14 +6260,6 @@
                                         \override Accidental.stencil = ##f
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         \revert Accidental.stencil
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
@@ -6327,26 +6307,20 @@
                                     \override Accidental.stencil = ##f
                                     \override NoteColumn.glissando-skip = ##t
                                     \override NoteHead.no-ledgers = ##t
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
                                     bf'''4
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     ~
                                     bf'''16
                                     % AFTER:
+                                    % ARTICULATIONS:
+                                    \ff
                                     % SPANNER_STOPS:
                                     \stopTrillSpan
                                     % SPANNER_STARTS:
                                     \repeatTie
                                     % OPENING:
                                     % COMMANDS:
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
                                     \revert Accidental.stencil
                                     \revert NoteColumn.glissando-skip
                                     \revert NoteHead.no-ledgers
@@ -6408,14 +6382,6 @@
                                         \override Accidental.stencil = ##f
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         \revert Accidental.stencil
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
@@ -6436,7 +6402,6 @@
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
-                                        \ff
                                         % SPANNER_STARTS:
                                         - \abjad-zero-padding-glissando
                                         \glissando
@@ -6458,14 +6423,6 @@
                                         \override Accidental.stencil = ##f
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         \revert Accidental.stencil
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
@@ -6512,14 +6469,6 @@
                                         \override Accidental.stencil = ##f
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         \revert Accidental.stencil
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
@@ -6553,11 +6502,6 @@
                                         \glissando
                                         % TRILL_SPANNER_STARTS:
                                         \startTrillSpan cf''''
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Accidental.stencil = ##f
-                                        \once \override Dots.staff-position = #2
-                                        \once \override NoteHead.X-extent = #'(0 . 0) \once \override NoteHead.transparent = ##t \once \override NoteHead.no-ledgers = ##t
                                         % OPENING:
                                         % COMMANDS:
                                         \hide NoteHead
@@ -6576,14 +6520,6 @@
                                         \override Accidental.stencil = ##f
                                         \override NoteColumn.glissando-skip = ##t
                                         \override NoteHead.no-ledgers = ##t
-                                        \hide NoteHead
-                                        \override Accidental.stencil = ##f
-                                        \override NoteColumn.glissando-skip = ##t
-                                        \override NoteHead.no-ledgers = ##t
-                                        \revert Accidental.stencil
-                                        \revert NoteColumn.glissando-skip
-                                        \revert NoteHead.no-ledgers
-                                        \undo \hide NoteHead
                                         \revert Accidental.stencil
                                         \revert NoteColumn.glissando-skip
                                         \revert NoteHead.no-ledgers
@@ -6605,121 +6541,15 @@
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
+                                        % SPANNER_STOPS:
+                                        \stopTextSpan
+                                        \stopTrillSpan
                                         % STOP_BEAM:
                                         ]
-                                        % SPANNER_STARTS:
-                                        - \abjad-zero-padding-glissando
-                                        \glissando
+                                        % COMMANDS:
+                                        \ottava 0
                                     % CLOSE_BRACKETS:
                                     }
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
-                                    gs'''16
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \accent
-                                    % SPANNER_STOPS:
-                                    \stopTrillSpan
-                                    % SPANNER_STARTS:
-                                    - \abjad-zero-padding-glissando
-                                    \glissando
-                                    % OPENING:
-                                    % COMMANDS:
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
-                                    \hide NoteHead
-                                    \override Accidental.stencil = ##f
-                                    \override NoteColumn.glissando-skip = ##t
-                                    \override NoteHead.no-ledgers = ##t
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
-                                    \revert Accidental.stencil
-                                    \revert NoteColumn.glissando-skip
-                                    \revert NoteHead.no-ledgers
-                                    \undo \hide NoteHead
-                                    r16
-                                    % OPENING:
-                                    % PITCHED_TRILL:
-                                    \pitchedTrill
-                                    fs'''4.
-                                    % AFTER:
-                                    % ARTICULATIONS:
-                                    - \accent
-                                    % SPANNER_STOPS:
-                                    \stopTextSpan
-                                    \stopTrillSpan
-                                    % TRILL_SPANNER_STARTS:
-                                    \startTrillSpan g'''
-                                    % COMMANDS:
-                                    \ottava 0
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
