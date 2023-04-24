@@ -1256,7 +1256,9 @@ def contiguous_trills(selector=trinton.pleaves()):
     return trill
 
 
-def unpitched_glissandi(selector=trinton.pleaves(), articulation=None, trill=False):
+def unpitched_glissandi(
+    selector=trinton.pleaves(), contiguous=False, articulation=None, trill=False
+):
     def gliss(argument):
         selections = selector(argument)
 
@@ -1275,35 +1277,70 @@ def unpitched_glissandi(selector=trinton.pleaves(), articulation=None, trill=Fal
 
         exclude_first_and_last = abjad.select.exclude(selections, [0, -1])
 
-        for leaf in exclude_first_and_last:
-            abjad.attach(accidental_literal, leaf)
+        if contiguous is False:
+            for leaf in exclude_first_and_last:
+                abjad.attach(accidental_literal, leaf)
 
-            abjad.attach(dots_literal, leaf)
+                abjad.attach(dots_literal, leaf)
 
-            abjad.attach(notehead_literal, leaf)
+                abjad.attach(notehead_literal, leaf)
 
-        ties = abjad.select.logical_ties(selections)
+        ties = abjad.select.logical_ties(selections, pitched=True)
 
-        exclude_last_tie = abjad.select.exclude(ties, [-1])
+        groups = abjad.select.exclude(ties, [-1])
 
-        for tie in exclude_last_tie:
-            abjad.glissando(
-                abjad.select.with_next_leaf(tie),
-                hide_middle_note_heads=True,
-                allow_repeats=True,
-                allow_ties=True,
-                zero_padding=True,
-            )
+        if contiguous is True:
+            groups = abjad.select.group_by_contiguity(ties)
+
+        for group in groups:
+            if contiguous is True:
+                exclude_first_and_last = abjad.select.exclude(group, [0, -1])
+                exclude_last = abjad.select.exclude(ties, [-1])
+                for tie in exclude_first_and_last:
+                    for leaf in tie:
+                        abjad.attach(accidental_literal, leaf)
+
+                        abjad.attach(dots_literal, leaf)
+
+                        abjad.attach(notehead_literal, leaf)
+
+                for tie in exclude_last:
+                    abjad.glissando(
+                        abjad.select.with_next_leaf(tie),
+                        hide_middle_note_heads=True,
+                        allow_repeats=True,
+                        allow_ties=True,
+                        zero_padding=True,
+                    )
+            else:
+                abjad.glissando(
+                    abjad.select.with_next_leaf(group),
+                    hide_middle_note_heads=True,
+                    allow_repeats=True,
+                    allow_ties=True,
+                    zero_padding=True,
+                )
 
         if articulation is not None:
             for tie in ties:
                 abjad.attach(abjad.Articulation(articulation), tie[0])
 
         if trill is True:
-            start_trill_span = abjad.StartTrillSpan(interval=abjad.NamedInterval("m2"))
-            stop_trill_span = abjad.StopTrillSpan()
-            abjad.attach(start_trill_span, selections[0])
-            abjad.attach(stop_trill_span, selections[-1])
+            if contiguous is True:
+                for group in groups:
+                    start_trill_span = abjad.StartTrillSpan(
+                        interval=abjad.NamedInterval("m2")
+                    )
+                    stop_trill_span = abjad.StopTrillSpan()
+                    abjad.attach(start_trill_span, group[0][0])
+                    abjad.attach(stop_trill_span, group[-1][-1])
+            else:
+                start_trill_span = abjad.StartTrillSpan(
+                    interval=abjad.NamedInterval("m2")
+                )
+                stop_trill_span = abjad.StopTrillSpan()
+                abjad.attach(start_trill_span, selections[0])
+                abjad.attach(stop_trill_span, selections[-1])
 
     return gliss
 
