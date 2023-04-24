@@ -941,7 +941,7 @@ def monolith(score, measure):
             evans.tuplet(
                 [
                     (1,),
-                    (7, 1, -12),
+                    (8, 1, -11),
                 ]
             )
         ),
@@ -953,7 +953,7 @@ def monolith(score, measure):
                 abjad.StartHairpin("--"),
                 abjad.StopHairpin(),
             ],
-            selector=trinton.select_leaves_by_index([0, 0, 0, -1]),
+            selector=trinton.select_leaves_by_index([0, 0, 0, -1], pitched=True),
         ),
         trinton.notehead_bracket_command(),
         library.boxed_markup(string="Röhrenglocken"),
@@ -995,7 +995,7 @@ def monolith(score, measure):
                         2,
                         1,
                     ),
-                    (7, 1, -12),
+                    (8, 1, -11),
                 ]
             )
         ),
@@ -1010,7 +1010,11 @@ def monolith(score, measure):
             selector=trinton.select_leaves_by_index([2, 4, -1], pitched=True),
         ),
         trinton.hooked_spanner_command(
-            string="Flatterventile",
+            string=library.return_boxed_markup(
+                string="Flatternventile",
+            ),
+            full_string=True,
+            style="solid-line-with-hook",
             selector=trinton.select_leaves_by_index([0, -1], pitched=True),
             right_padding=2,
         ),
@@ -1312,6 +1316,7 @@ def unpitched_glissandi(
                         allow_ties=True,
                         zero_padding=True,
                     )
+
             else:
                 abjad.glissando(
                     abjad.select.with_next_leaf(group),
