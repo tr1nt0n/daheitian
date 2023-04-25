@@ -1026,7 +1026,7 @@ def monolith(score, measure):
                 abjad.Dynamic("ff"),
                 abjad.Dynamic("mf"),
                 abjad.StartHairpin(">"),
-                abjad.Dynamic("sf"),
+                trinton.make_custom_dynamic("pf"),
                 abjad.StartHairpin("o<"),
                 abjad.Dynamic("fff"),
             ],

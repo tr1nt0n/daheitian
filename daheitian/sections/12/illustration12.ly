@@ -1182,9 +1182,10 @@
                             % ARTICULATIONS:
                             - \accent
                             - \staccato
-                            \sf
                             % STOP_BEAM:
                             ]
+                            % COMMANDS:
+                            _ #(make-dynamic-script (markup #:whiteout #:italic "pf"))
                             % OPEN_BRACKETS:
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 2 0))
                             \times 16/20

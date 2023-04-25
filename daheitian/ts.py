@@ -135,6 +135,10 @@ section_10_ts = taal_ts_sequence[28:31]
 
 section_11_ts = taal_ts_sequence[31:40]
 
+# section 13
+
+section_13_ts = map_ts_sequence[10:25]
+
 # sketch_ts_sequence = []
 #
 # for _ in taal_ts_sequence:
