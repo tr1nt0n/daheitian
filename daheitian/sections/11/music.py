@@ -155,7 +155,7 @@ trinton.make_music(
     #     ["b'''", "ef''''", "a'''", "fs''''", "cs''''", "e''''", "cs''''", "af''''"]
     # ),
     evans.PitchHandler(["f''''", "ef''''", "g''''", "b'''", "a''''", "cs''''"]),
-    library.unpitched_glissandi(contiguous=True, trill=True),
+    library.unpitched_glissandi(trill=True),
     trinton.call_rmaker(
         rmaker=rmakers.beam,
         selector=trinton.ranged_selector(
@@ -246,7 +246,7 @@ trinton.make_music(
         ["b'''", "ef''''", "a'''", "fs''''", "cs''''", "e''''", "cs''''", "af''''"]
     ),
     library.change_lines(lines=5, clef="treble"),
-    library.unpitched_glissandi(contiguous=True, trill=True),
+    library.unpitched_glissandi(trill=True),
     trinton.linear_attachment_command(
         attachments=[abjad.StartHairpin("o<"), abjad.Dynamic("ff")],
         selector=trinton.select_leaves_by_index([0, -6], pitched=True),
@@ -336,7 +336,7 @@ trinton.make_music(
         ["gs'''", "gf''''", "a'''", "f''''", "c''''", "ef''''"],
     ),
     library.change_lines(lines=5, clef="treble"),
-    library.unpitched_glissandi(contiguous=True, trill=True),
+    library.unpitched_glissandi(trill=True),
     trinton.linear_attachment_command(
         attachments=[abjad.StartHairpin("o<"), abjad.Dynamic("ff")],
         selector=trinton.select_leaves_by_index([0, -7], pitched=True),
@@ -417,7 +417,7 @@ trinton.make_music(
     evans.PitchHandler(
         ["bf'''", "a''", "gs'''", "fs'''"],
     ),
-    library.unpitched_glissandi(contiguous=True, trill=True),
+    library.unpitched_glissandi(trill=True),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Clef("treble"),
