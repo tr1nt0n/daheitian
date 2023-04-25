@@ -1440,8 +1440,6 @@
                                     \tweak style #'harmonic-mixed
                                     gqs'4
                                     % AFTER:
-                                    % ARTICULATIONS:
-                                    - \marcato
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     _ \<
