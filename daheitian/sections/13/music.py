@@ -129,7 +129,7 @@ trinton.make_music(
     library.ring_mod_attachments(dynamics=["mp"]),
     trinton.notehead_bracket_command(),
     evans.IntermittentVoiceHandler(
-        rhythm_handler=evans.RhythmHandler(evans.talea([21], 8)),
+        rhythm_handler=evans.RhythmHandler(evans.talea([100], 8)),
         direction=abjad.DOWN,
         voice_name="frenchhorn divisi voice",
     ),

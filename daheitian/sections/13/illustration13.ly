@@ -1750,26 +1750,15 @@
                                     % SPANNER_STARTS:
                                     \repeatTie
                                     ~
-                                    ds8.
+                                    ds4.
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     \repeatTie
-                                    ~
-                                    ds8
-                                    % AFTER:
-                                    % SPANNER_STARTS:
-                                    \repeatTie
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Tie.transparent = ##f
-                                    \once \override Tie.transparent = ##f
-                                    ds16
-                                    % AFTER:
-                                    % SPANNER_STARTS:
                                     ~
                                     ds4..
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                    \repeatTie
                                     ~
                                     ds8.
                                     % AFTER:
