@@ -1455,6 +1455,8 @@ def imbrication(
             if leaf.written_pitch.number == pitch:
                 relevant_leaves.append(leaf)
 
+        relevant_ties = abjad.select.logical_ties(relevant_leaves)
+
         if dynamic is not None:
             for leaf in relevant_leaves:
                 abjad.detach(abjad.Articulation, leaf)
@@ -1468,16 +1470,17 @@ def imbrication(
         )
 
         if dynamic is not None:
-            for leaf in relevant_leaves:
-                abjad.detach(abjad.Markup, leaf)
-                abjad.attach(abjad.Dynamic(dynamic), leaf)
+            for tie in relevant_ties:
+                abjad.detach(abjad.Markup, tie[0])
+                abjad.attach(abjad.Dynamic(dynamic), tie[0])
 
         if secondary_dynamic is not None:
-            for leaf in relevant_leaves:
-                next_pleaf = pleaves[pleaves.index(leaf) + 1]
+            pties = abjad.select.logical_ties(pleaves)
+            for tie in relevant_ties:
+                next_tie = pties[pties.index(tie) + 1]
 
-                if abjad.get.has_indicator(next_pleaf, abjad.Dynamic) is False:
-                    abjad.attach(abjad.Dynamic(secondary_dynamic), next_pleaf)
+                if abjad.get.has_indicator(next_tie[0], abjad.Dynamic) is False:
+                    abjad.attach(abjad.Dynamic(secondary_dynamic), next_tie[0])
 
     return imbricate
 

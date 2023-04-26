@@ -107,6 +107,53 @@ for n in range(11, 18):
 abjad.attach(abjad.StartHairpin(">o"), bass_clarinet_pleaves[11])
 abjad.attach(abjad.StopHairpin(), bass_clarinet_pleaves[17])
 
+# bassoon music commands
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (1, 15)),
+    evans.RhythmHandler(
+        evans.tuplet([(1, 1, 1, 1, 1, 1)]),
+    ),
+    rmakers.force_rest,
+    trinton.force_note(selector=library._klavierubung_selectors[2]["bassoon voice"]),
+    rmakers.rewrite_dots,
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    evans.PitchHandler(
+        [
+            "b,",
+        ]
+    ),
+    trinton.attachment_command(
+        attachments=[abjad.Clef("bass")],
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+            ],
+            pitched=True,
+        ),
+    ),
+    library.timbre_trills(index=2),
+    trinton.pitch_with_selector_command(
+        pitch_list=["bf,"],
+        selector=trinton.patterned_leaf_index_selector([0, 5, 7], 8, pitched=True),
+    ),
+    library.percussive_bassoon_attachments(),
+    library.imbrication(
+        pitch=-14, name="bassoon imbrication", dynamic="ff", secondary_dynamic="mf"
+    ),
+    library.remove_accidentals(),
+    trinton.notehead_bracket_command(),
+    voice=score["bassoon voice"],
+)
+
+bassoon_pleaves = abjad.select.leaves(score["bassoon voice"], pitched=True)
+
+for n in range(20, 34):
+    abjad.detach(abjad.Dynamic, bassoon_pleaves[n])
+
+abjad.attach(abjad.StartHairpin(">o"), bassoon_pleaves[20])
+abjad.attach(abjad.StopHairpin(), bassoon_pleaves[33])
+
 # horn music commands
 
 trinton.make_music(
@@ -287,6 +334,79 @@ trinton.make_music(
     preprocessor=trinton.fuse_preprocessor((15,)),
 )
 
+# percussion 1 music commands
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (1, 15)),
+    evans.RhythmHandler(
+        rmakers.note,
+    ),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    library.change_lines(lines=1, clef="percussion"),
+    library.boxed_markup(string="Bangu mit Bambusstäbchen"),
+    trinton.attachment_command(
+        attachments=[abjad.Dynamic("ff")], selector=trinton.select_leaves_by_index([0])
+    ),
+    voice=score["percussion 2 voice"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (10, 15)),
+    trinton.linear_attachment_command(
+        attachments=[abjad.StartHairpin(">o"), abjad.StopHairpin()],
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+    ),
+    voice=score["percussion 2 voice"],
+)
+
+# percussion 2 music commands
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (1, 15)),
+    evans.RhythmHandler(
+        evans.tuplet([(1, 1)]),
+    ),
+    rmakers.force_rest,
+    trinton.force_note(
+        selector=library._klavierubung_selectors[2]["percussion 3 voice"]
+    ),
+    rmakers.rewrite_dots,
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.pitch_with_selector_command(
+        pitch_list=[1],
+        selector=trinton.patterned_leaf_index_selector([0, 5, 7], 8, pitched=True),
+    ),
+    library.change_lines(lines=1, clef="percussion"),
+    trinton.attachment_command(
+        attachments=[abjad.Articulation("stopped")],
+        selector=trinton.logical_ties(pitched=True, first=True),
+    ),
+    library.imbrication(
+        pitch=1, name="percussion 3 imbrication", dynamic="ff", secondary_dynamic="f"
+    ),
+    trinton.notehead_bracket_command(),
+    library.remove_accidentals(),
+    voice=score["percussion 3 voice"],
+)
+
+percussion2_pleaves = abjad.select.leaves(score["percussion 3 voice"], pitched=True)
+
+abjad.attach(
+    abjad.Markup(
+        library.return_boxed_markup(
+            string="Amboss mit Hämmerchen",
+        ),
+    ),
+    percussion2_pleaves[0],
+    direction=abjad.UP,
+)
+
+for n in range(13, 19):
+    abjad.detach(abjad.Dynamic, percussion2_pleaves[n])
+
+abjad.attach(abjad.StartHairpin(">o"), percussion2_pleaves[13])
+abjad.attach(abjad.StopHairpin(), percussion2_pleaves[18])
+
 # markups
 
 library.write_instrument_names(score=score)
@@ -298,6 +418,18 @@ trinton.remove_redundant_time_signatures(score=score)
 library.ties(score=score)
 
 # parts globals
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (15,)),
+    trinton.attachment_command(
+        attachments=[
+            abjad.BarLine("||"),
+            abjad.LilyPondLiteral(r"\break", "after"),
+        ],
+        selector=trinton.select_leaves_by_index([0]),
+    ),
+    voice=score["Global Context"],
+)
 
 # parts
 

@@ -89,6 +89,9 @@
             % AFTER:
             % SPANNER_STOPS:
             \stopTextSpan
+            % COMMANDS:
+            \bar "||"
+            \break
         % CLOSE_BRACKETS:
         }
         % BEFORE:
@@ -1312,25 +1315,854 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "bassoon voice"
                                 {
-                                    % BEFORE:
+                                    % OPEN_BRACKETS:
+                                    <<
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "bassoon voice temp"
+                                        {
+                                            % OPEN_BRACKETS:
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 7) (ly:make-duration 4 0))
+                                            \times 7/6
+                                            {
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Fagotte }
+                                                \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { fg.}
+                                                \triangleStemOn
+                                                \voiceTwo
+                                                % OPENING:
+                                                % COMMANDS:
+                                                \clef "bass"
+                                                bf,16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \ff
+                                                % COMMANDS:
+                                                \stemOff
+                                                r16
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \tweak style #'cross
+                                                b,16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \mf
+                                                % MARKUP:
+                                                ^ \markup \center-column { \circle 1 }
+                                                r8.
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 7) (ly:make-duration 4 0))
+                                            \times 7/6
+                                            {
+                                                r16
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \tweak style #'cross
+                                                b,16
+                                                % AFTER:
+                                                % MARKUP:
+                                                ^ \markup \center-column { \circle 3 }
+                                                % START_BEAM:
+                                                [
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \tweak style #'cross
+                                                b,16
+                                                % AFTER:
+                                                % MARKUP:
+                                                ^ \markup \center-column { \circle 2 }
+                                                % STOP_BEAM:
+                                                ]
+                                                r16
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \tweak style #'cross
+                                                b,16
+                                                % AFTER:
+                                                % MARKUP:
+                                                ^ \markup \center-column { \circle 3 }
+                                                r16
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 2 0))
+                                            \times 2/3
+                                            {
+                                                r4.
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \triangleStemOn
+                                                bf,8
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \ff
+                                                % START_BEAM:
+                                                [
+                                                % COMMANDS:
+                                                \stemOff
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \tweak style #'cross
+                                                b,8
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \mf
+                                                % MARKUP:
+                                                ^ \markup \center-column { \circle 3 }
+                                                % STOP_BEAM:
+                                                ]
+                                                r8
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 2 0))
+                                            \times 2/3
+                                            {
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \triangleStemOn
+                                                bf,8
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \ff
+                                                % COMMANDS:
+                                                \stemOff
+                                                r2
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \triangleStemOn
+                                                bf,8
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \ff
+                                                % START_BEAM:
+                                                [
+                                                % COMMANDS:
+                                                \stemOff
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 7) (ly:make-duration 4 0))
+                                            \times 7/6
+                                            {
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \tweak style #'cross
+                                                b,16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \mf
+                                                % MARKUP:
+                                                ^ \markup \center-column { \circle 2 }
+                                                % STOP_BEAM:
+                                                ]
+                                                r16
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \tweak style #'cross
+                                                b,16
+                                                % AFTER:
+                                                % MARKUP:
+                                                ^ \markup \center-column { \circle 3 }
+                                                r8.
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            r16
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            \tweak style #'cross
+                                            b,16
+                                            % AFTER:
+                                            % MARKUP:
+                                            ^ \markup \center-column { \circle 1 }
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            \tweak style #'cross
+                                            b,16
+                                            % AFTER:
+                                            % MARKUP:
+                                            ^ \markup \center-column { \circle 3 }
+                                            r16
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            \triangleStemOn
+                                            bf,16
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            \ff
+                                            % COMMANDS:
+                                            \stemOff
+                                            r16
+                                            % OPEN_BRACKETS:
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 7) (ly:make-duration 4 0))
+                                            \times 7/6
+                                            {
+                                                r8.
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \tweak style #'cross
+                                                b,16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \mf
+                                                % MARKUP:
+                                                ^ \markup \center-column { \circle 3 }
+                                                % START_BEAM:
+                                                [
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \triangleStemOn
+                                                bf,16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \ff
+                                                % STOP_BEAM:
+                                                ]
+                                                % COMMANDS:
+                                                \stemOff
+                                                r16
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) (ly:make-duration 4 0))
+                                            \times 15/18
+                                            {
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \triangleStemOn
+                                                bf,16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \ff
+                                                % COMMANDS:
+                                                \stemOff
+                                                r4
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \tweak style #'cross
+                                                b,16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \mf
+                                                % MARKUP:
+                                                ^ \markup \center-column { \circle 1 }
+                                                % START_BEAM:
+                                                [
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) (ly:make-duration 4 0))
+                                            \times 15/18
+                                            {
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \tweak style #'cross
+                                                b,16
+                                                % AFTER:
+                                                % MARKUP:
+                                                ^ \markup \center-column { \circle 3 }
+                                                % STOP_BEAM:
+                                                ]
+                                                r16
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \tweak style #'cross
+                                                b,16
+                                                % AFTER:
+                                                % MARKUP:
+                                                ^ \markup \center-column { \circle 2 }
+                                                r8.
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 0))
+                                            \times 2/3
+                                            {
+                                                r16
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \tweak style #'cross
+                                                b,16
+                                                % AFTER:
+                                                % MARKUP:
+                                                ^ \markup \center-column { \circle 3 }
+                                                % START_BEAM:
+                                                [
+                                                % SPANNER_STARTS:
+                                                - \tweak circled-tip ##t
+                                                \>
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \triangleStemOn
+                                                bf,16
+                                                % AFTER:
+                                                % STOP_BEAM:
+                                                ]
+                                                % COMMANDS:
+                                                \stemOff
+                                                r16
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \tweak style #'cross
+                                                b,16
+                                                % AFTER:
+                                                % MARKUP:
+                                                ^ \markup \center-column { \circle 3 }
+                                                r16
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
+                                            \times 2/3
+                                            {
+                                                r16.
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \triangleStemOn
+                                                bf,32
+                                                % AFTER:
+                                                % START_BEAM:
+                                                [
+                                                % COMMANDS:
+                                                \stemOff
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \triangleStemOn
+                                                bf,32
+                                                % AFTER:
+                                                % STOP_BEAM:
+                                                ]
+                                                % COMMANDS:
+                                                \stemOff
+                                                r32
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
+                                            \times 2/3
+                                            {
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \tweak style #'cross
+                                                b,32
+                                                % AFTER:
+                                                % MARKUP:
+                                                ^ \markup \center-column { \circle 2 }
+                                                r8
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \tweak style #'cross
+                                                b,32
+                                                % AFTER:
+                                                % MARKUP:
+                                                ^ \markup \center-column { \circle 3 }
+                                                % START_BEAM:
+                                                [
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
+                                            \times 2/3
+                                            {
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \tweak style #'cross
+                                                b,32
+                                                % AFTER:
+                                                % MARKUP:
+                                                ^ \markup \center-column { \circle 1 }
+                                                % STOP_BEAM:
+                                                ]
+                                                r32
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \tweak style #'cross
+                                                b,32
+                                                % AFTER:
+                                                % MARKUP:
+                                                ^ \markup \center-column { \circle 3 }
+                                                r16.
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) (ly:make-duration 4 0))
+                                            \times 15/18
+                                            {
+                                                r16
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \triangleStemOn
+                                                bf,16
+                                                % AFTER:
+                                                % START_BEAM:
+                                                [
+                                                % COMMANDS:
+                                                \stemOff
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \tweak style #'cross
+                                                b,16
+                                                % AFTER:
+                                                % MARKUP:
+                                                ^ \markup \center-column { \circle 3 }
+                                                % STOP_BEAM:
+                                                ]
+                                                r16
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \triangleStemOn
+                                                bf,16
+                                                % AFTER:
+                                                % COMMANDS:
+                                                \stemOff
+                                                r16
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 2 0))
+                                            \times 2/3
+                                            {
+                                                r4.
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \triangleStemOn
+                                                bf,8
+                                                % AFTER:
+                                                % START_BEAM:
+                                                [
+                                                % COMMANDS:
+                                                \stemOff
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \tweak style #'cross
+                                                b,8
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \!
+                                                % MARKUP:
+                                                ^ \markup \center-column { \circle 1 }
+                                                % STOP_BEAM:
+                                                ]
+                                                r8
+                                            % CLOSE_BRACKETS:
+                                            }
+                                        % CLOSE_BRACKETS:
+                                        }
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "bassoon imbrication"
+                                        \with
+                                        {
+                                            \override TupletBracket.stencil = ##f
+                                            \override TupletNumber.stencil = ##f
+                                        }
+                                        {
+                                            % OPEN_BRACKETS:
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 7) (ly:make-duration 4 0))
+                                            \times 7/6
+                                            {
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \set stemLeftBeamCount = 0
+                                                \set stemRightBeamCount = 2
+                                                \triangleStemOn
+                                                \voiceOne
+                                                % OPENING:
+                                                % COMMANDS:
+                                                \clef "bass"
+                                                bf,16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                - \accent
+                                                % MARKUP:
+                                                - \markup \center-column { \circle 3 }
+                                                % START_BEAM:
+                                                [
+                                                % COMMANDS:
+                                                \stemOff
+                                                s16
+                                                s16
+                                                s16
+                                                s16
+                                                s16
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 7) (ly:make-duration 4 0))
+                                            \times 7/6
+                                            {
+                                                s16
+                                                s16
+                                                s16
+                                                s16
+                                                s16
+                                                s16
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 2 0))
+                                            \times 2/3
+                                            {
+                                                s8
+                                                s8
+                                                s8
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \set stemLeftBeamCount = 1
+                                                \set stemRightBeamCount = 1
+                                                \triangleStemOn
+                                                bf,8
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                - \accent
+                                                % MARKUP:
+                                                - \markup \center-column { \circle 2 }
+                                                % COMMANDS:
+                                                \stemOff
+                                                s8
+                                                s8
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 2 0))
+                                            \times 2/3
+                                            {
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \set stemLeftBeamCount = 1
+                                                \set stemRightBeamCount = 1
+                                                \triangleStemOn
+                                                bf,8
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                - \accent
+                                                % MARKUP:
+                                                - \markup \center-column { \circle 1 }
+                                                % COMMANDS:
+                                                \stemOff
+                                                s8
+                                                s8
+                                                s8
+                                                s8
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \set stemLeftBeamCount = 1
+                                                \set stemRightBeamCount = 1
+                                                \triangleStemOn
+                                                bf,8
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                - \accent
+                                                % MARKUP:
+                                                - \markup \center-column { \circle 3 }
+                                                % COMMANDS:
+                                                \stemOff
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 7) (ly:make-duration 4 0))
+                                            \times 7/6
+                                            {
+                                                s16
+                                                s16
+                                                s16
+                                                s16
+                                                s16
+                                                s16
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            s16
+                                            s16
+                                            s16
+                                            s16
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            \triangleStemOn
+                                            bf,16
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \accent
+                                            % MARKUP:
+                                            - \markup \center-column { \circle 1 }
+                                            % COMMANDS:
+                                            \stemOff
+                                            s16
+                                            % OPEN_BRACKETS:
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 7) (ly:make-duration 4 0))
+                                            \times 7/6
+                                            {
+                                                s16
+                                                s16
+                                                s16
+                                                s16
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \set stemLeftBeamCount = 2
+                                                \set stemRightBeamCount = 2
+                                                \triangleStemOn
+                                                bf,16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                - \accent
+                                                % MARKUP:
+                                                - \markup \center-column { \circle 1 }
+                                                % COMMANDS:
+                                                \stemOff
+                                                s16
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) (ly:make-duration 4 0))
+                                            \times 15/18
+                                            {
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \set stemLeftBeamCount = 1
+                                                \set stemRightBeamCount = 2
+                                                \triangleStemOn
+                                                bf,16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                - \accent
+                                                % MARKUP:
+                                                - \markup \center-column { \circle 3 }
+                                                % COMMANDS:
+                                                \stemOff
+                                                s16
+                                                s16
+                                                s16
+                                                s16
+                                                s16
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) (ly:make-duration 4 0))
+                                            \times 15/18
+                                            {
+                                                s16
+                                                s16
+                                                s16
+                                                s16
+                                                s16
+                                                s16
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 0))
+                                            \times 2/3
+                                            {
+                                                s16
+                                                s16
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \set stemLeftBeamCount = 2
+                                                \set stemRightBeamCount = 2
+                                                \triangleStemOn
+                                                bf,16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                - \accent
+                                                % MARKUP:
+                                                - \markup \center-column { \circle 2 }
+                                                % COMMANDS:
+                                                \stemOff
+                                                s16
+                                                s16
+                                                s16
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
+                                            \times 2/3
+                                            {
+                                                s32
+                                                s32
+                                                s32
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \set stemLeftBeamCount = 3
+                                                \set stemRightBeamCount = 3
+                                                \triangleStemOn
+                                                bf,32
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                - \accent
+                                                % MARKUP:
+                                                - \markup \center-column { \circle 2 }
+                                                % COMMANDS:
+                                                \stemOff
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \set stemLeftBeamCount = 3
+                                                \set stemRightBeamCount = 3
+                                                \triangleStemOn
+                                                bf,32
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                - \accent
+                                                % MARKUP:
+                                                - \markup \center-column { \circle 3 }
+                                                % COMMANDS:
+                                                \stemOff
+                                                s32
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
+                                            \times 2/3
+                                            {
+                                                s32
+                                                s32
+                                                s32
+                                                s32
+                                                s32
+                                                s32
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 4 0))
+                                            \times 2/3
+                                            {
+                                                s32
+                                                s32
+                                                s32
+                                                s32
+                                                s32
+                                                s32
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) (ly:make-duration 4 0))
+                                            \times 15/18
+                                            {
+                                                s16
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \set stemLeftBeamCount = 2
+                                                \set stemRightBeamCount = 2
+                                                \triangleStemOn
+                                                bf,16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                - \accent
+                                                % MARKUP:
+                                                - \markup \center-column { \circle 2 }
+                                                % COMMANDS:
+                                                \stemOff
+                                                s16
+                                                s16
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \set stemLeftBeamCount = 2
+                                                \set stemRightBeamCount = 2
+                                                \triangleStemOn
+                                                bf,16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                - \accent
+                                                % MARKUP:
+                                                - \markup \center-column { \circle 1 }
+                                                % COMMANDS:
+                                                \stemOff
+                                                s16
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 2 0))
+                                            \times 2/3
+                                            {
+                                                s8
+                                                s8
+                                                s8
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                \set stemLeftBeamCount = 1
+                                                \set stemRightBeamCount = 1
+                                                \triangleStemOn
+                                                bf,8
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                - \accent
+                                                % MARKUP:
+                                                - \markup \center-column { \circle 3 }
+                                                % COMMANDS:
+                                                \stemOff
+                                                s8
+                                                s8
+                                                % AFTER:
+                                                % STOP_BEAM:
+                                                ]
+                                            % CLOSE_BRACKETS:
+                                            }
+                                        % CLOSE_BRACKETS:
+                                        }
+                                    % CLOSE_BRACKETS:
+                                    >>
+                                    % AFTER:
                                     % COMMANDS:
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Fagotte }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { fg.}
-                                    R1 * 7/16
-                                    R1 * 7/16
-                                    R1 * 1/2
-                                    R1 * 1/2
-                                    R1 * 7/16
-                                    R1 * 3/8
-                                    R1 * 7/16
-                                    R1 * 5/16
-                                    R1 * 5/16
-                                    R1 * 1/4
-                                    R1 * 1/8
-                                    R1 * 1/8
-                                    R1 * 1/8
-                                    R1 * 5/16
-                                    R1 * 1/2
+                                    \oneVoice
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -3556,25 +4388,64 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "percussion 2 voice"
                                 {
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \staff-line-count 1
                                     % BEFORE:
                                     % COMMANDS:
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
-                                    R1 * 7/16
-                                    R1 * 7/16
-                                    R1 * 1/2
-                                    R1 * 1/2
-                                    R1 * 7/16
-                                    R1 * 3/8
-                                    R1 * 7/16
-                                    R1 * 5/16
-                                    R1 * 5/16
-                                    R1 * 1/4
-                                    R1 * 1/8
-                                    R1 * 1/8
-                                    R1 * 1/8
-                                    R1 * 5/16
-                                    R1 * 1/2
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "percussion"
+                                    c'4..
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ff
+                                    % COMMANDS:
+                                    \boxed-markup "Bangu mit Bambusstäbchen" 1
+                                    c'4..
+                                    c'2
+                                    c'2
+                                    c'4..
+                                    c'4.
+                                    c'4..
+                                    c'8.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c'8
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    c'8.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c'8
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    c'4
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    c'8
+                                    c'8
+                                    c'8
+                                    c'8.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c'8
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    c'2
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -3592,25 +4463,333 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "percussion 3 voice"
                                 {
-                                    % BEFORE:
+                                    % OPEN_BRACKETS:
+                                    <<
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "percussion 3 voice temp"
+                                        {
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
+                                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
+                                            \voiceTwo
+                                            r8.
+                                            r32
+                                            % ABSOLUTE_BEFORE:
+                                            % COMMANDS:
+                                            \staff-line-count 1
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            \once \override Tie.transparent = ##f
+                                            \once \override Tie.transparent = ##f
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \clef "percussion"
+                                            cs'16.
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            \ff
+                                            % MARKUP:
+                                            ^ \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Amboss mit Hämmerchen }
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            cs'8
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            c'8.
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \stopped
+                                            \f
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            c'32
+                                            % AFTER:
+                                            % SPANNER_STARTS:
+                                            \repeatTie
+                                            r16.
+                                            r8
+                                            r4
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            c'4
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \stopped
+                                            r4
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            cs'4
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            \ff
+                                            r8.
+                                            r32
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            \once \override Tie.transparent = ##f
+                                            \once \override Tie.transparent = ##f
+                                            c'16.
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \stopped
+                                            \f
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            c'8
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            cs'8.
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            \ff
+                                            r8.
+                                            r8.
+                                            r32
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            \once \override Tie.transparent = ##f
+                                            \once \override Tie.transparent = ##f
+                                            c'16.
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \stopped
+                                            \f
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            c'8
+                                            % OPEN_BRACKETS:
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 5) (ly:make-duration 4 0))
+                                            \times 15/12
+                                            {
+                                                r8
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                c'8
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                - \stopped
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 5) (ly:make-duration 4 0))
+                                            \times 15/12
+                                            {
+                                                r8
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                c'8
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                - \stopped
+                                                % START_BEAM:
+                                                [
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            cs'8
+                                            % AFTER:
+                                            % SPANNER_STARTS:
+                                            - \tweak circled-tip ##t
+                                            \>
+                                            r8
+                                            r16
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            c'16
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \stopped
+                                            r16
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            cs'16
+                                            r16
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            cs'16
+                                            % OPEN_BRACKETS:
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 5) (ly:make-duration 4 0))
+                                            \times 15/12
+                                            {
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Staff.Accidental.stencil = ##f
+                                                c'8
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                - \stopped
+                                                % STOP_BEAM:
+                                                ]
+                                                r8
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            r4
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            c'4
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \stopped
+                                            \!
+                                        % CLOSE_BRACKETS:
+                                        }
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "percussion 3 imbrication"
+                                        \with
+                                        {
+                                            \override TupletBracket.stencil = ##f
+                                            \override TupletNumber.stencil = ##f
+                                        }
+                                        {
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \voiceOne
+                                            s8.
+                                            s32
+                                            % ABSOLUTE_BEFORE:
+                                            % COMMANDS:
+                                            \staff-line-count 1
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            \once \override Tie.transparent = ##f
+                                            \once \override Tie.transparent = ##f
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \clef "percussion"
+                                            cs'16.
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \accent
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            cs'8
+                                            s8.
+                                            s32
+                                            s16.
+                                            s8
+                                            s4
+                                            s4
+                                            s4
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            cs'4
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \accent
+                                            s8.
+                                            s32
+                                            s16.
+                                            s8
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            cs'8.
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \accent
+                                            s8.
+                                            s8.
+                                            s32
+                                            s16.
+                                            s8
+                                            % OPEN_BRACKETS:
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 5) (ly:make-duration 4 0))
+                                            \times 15/12
+                                            {
+                                                s8
+                                                s8
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % OPEN_BRACKETS:
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 5) (ly:make-duration 4 0))
+                                            \times 15/12
+                                            {
+                                                s8
+                                                s8
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            cs'8
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \accent
+                                            s8
+                                            s16
+                                            s16
+                                            s16
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            cs'16
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \accent
+                                            s16
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Staff.Accidental.stencil = ##f
+                                            cs'16
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            - \accent
+                                            % OPEN_BRACKETS:
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 5) (ly:make-duration 4 0))
+                                            \times 15/12
+                                            {
+                                                s8
+                                                s8
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            s4
+                                            s4
+                                        % CLOSE_BRACKETS:
+                                        }
+                                    % CLOSE_BRACKETS:
+                                    >>
+                                    % AFTER:
                                     % COMMANDS:
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
-                                    R1 * 7/16
-                                    R1 * 7/16
-                                    R1 * 1/2
-                                    R1 * 1/2
-                                    R1 * 7/16
-                                    R1 * 3/8
-                                    R1 * 7/16
-                                    R1 * 5/16
-                                    R1 * 5/16
-                                    R1 * 1/4
-                                    R1 * 1/8
-                                    R1 * 1/8
-                                    R1 * 1/8
-                                    R1 * 5/16
-                                    R1 * 1/2
+                                    \oneVoice
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
