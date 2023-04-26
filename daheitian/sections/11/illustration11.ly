@@ -1773,12 +1773,11 @@
                             :32
                             % ARTICULATIONS:
                             - \accent
+                            \f
                             % SPANNER_STARTS:
                             \>
                             \glissando
                             ~
-                            % COMMANDS:
-                            _ #(make-dynamic-script (markup #:whiteout #:italic "pf"))
                             % OPEN_BRACKETS:
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 2 0))
                             \times 2/3
@@ -1906,7 +1905,7 @@
                                 :64
                                 % ARTICULATIONS:
                                 - \accent
-                                \p
+                                \pp
                                 % STOP_BEAM:
                                 ]
                                 % SPANNER_STARTS:
@@ -2074,7 +2073,7 @@
                                 :32
                                 % ARTICULATIONS:
                                 - \accent
-                                \ff
+                                \mp
                                 % BEFORE:
                                 % COMMANDS:
                                 \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bb)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bc)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0be)))))))
@@ -4451,11 +4450,13 @@
                                         \revert NoteHead.no-ledgers
                                         \undo \hide NoteHead
                                         ef''''8
+                                            % CLOSING:
+                                            % COMMANDS:
+                                            _ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
                                         - \tenuto
-                                        \ff
                                         % SPANNER_STARTS:
                                         - \abjad-zero-padding-glissando
                                         \glissando
@@ -7443,10 +7444,12 @@
                                         % PITCHED_TRILL:
                                         \pitchedTrill
                                         ef''''4..
+                                            % CLOSING:
+                                            % COMMANDS:
+                                            _ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \accent
-                                        \ff
                                         % SPANNER_STARTS:
                                         - \abjad-zero-padding-glissando
                                         \glissando
@@ -8799,10 +8802,12 @@
                                     % PITCHED_TRILL:
                                     \pitchedTrill
                                     gs'''16
+                                        % CLOSING:
+                                        % COMMANDS:
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \accent
-                                    \ff
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
@@ -9616,9 +9621,10 @@
                                     % SPANNER_STARTS:
                                     ~
                                     bf'''16
+                                        % CLOSING:
+                                        % COMMANDS:
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
                                     % AFTER:
-                                    % ARTICULATIONS:
-                                    \ff
                                     % SPANNER_STOPS:
                                     \stopTrillSpan
                                     % SPANNER_STARTS:

@@ -90,11 +90,11 @@ trinton.make_music(
                 3,
                 right_padding=-3,
             ),
-            trinton.make_custom_dynamic("pf"),
+            abjad.Dynamic("f"),
             abjad.StartHairpin(">"),
-            abjad.Dynamic("p"),
+            abjad.Dynamic("pp"),
             abjad.StartHairpin("<"),
-            abjad.Dynamic("ff"),
+            abjad.Dynamic("mp"),
         ],
         selector=trinton.select_leaves_by_index([0, 0, 0, 0, 9, 9, -2]),
     ),
@@ -171,7 +171,7 @@ trinton.make_music(
         ),
     ),
     trinton.linear_attachment_command(
-        attachments=[abjad.StartHairpin("o<"), abjad.Dynamic("ff")],
+        attachments=[abjad.StartHairpin("o<"), trinton.make_custom_dynamic("pp +")],
         selector=trinton.select_leaves_by_index([0, -7], pitched=True),
     ),
     trinton.hooked_spanner_command(
@@ -248,7 +248,7 @@ trinton.make_music(
     library.change_lines(lines=5, clef="treble"),
     library.unpitched_glissandi(trill=True),
     trinton.linear_attachment_command(
-        attachments=[abjad.StartHairpin("o<"), abjad.Dynamic("ff")],
+        attachments=[abjad.StartHairpin("o<"), trinton.make_custom_dynamic("pp +")],
         selector=trinton.select_leaves_by_index([0, -6], pitched=True),
     ),
     trinton.hooked_spanner_command(
@@ -338,7 +338,10 @@ trinton.make_music(
     library.change_lines(lines=5, clef="treble"),
     library.unpitched_glissandi(trill=True),
     trinton.linear_attachment_command(
-        attachments=[abjad.StartHairpin("o<"), abjad.Dynamic("ff")],
+        attachments=[
+            abjad.StartHairpin("o<"),
+            trinton.make_custom_dynamic("pp +"),
+        ],
         selector=trinton.select_leaves_by_index([0, -7], pitched=True),
     ),
     trinton.hooked_spanner_command(
@@ -422,7 +425,7 @@ trinton.make_music(
         attachments=[
             abjad.Clef("treble"),
             abjad.StartHairpin("o<"),
-            abjad.Dynamic("ff"),
+            trinton.make_custom_dynamic("pp +"),
         ],
         selector=trinton.select_leaves_by_index([0, 0, -6], pitched=True),
     ),
