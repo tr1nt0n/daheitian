@@ -146,8 +146,6 @@
                                     % AFTER:
                                     % STEM_TREMOLOS:
                                     :32
-                                    % ARTICULATIONS:
-                                    \pp
                                     cs''8.
                                     % AFTER:
                                     % STEM_TREMOLOS:
@@ -264,6 +262,8 @@
                                     % AFTER:
                                     % STEM_TREMOLOS:
                                     :128
+                                    % ARTICULATIONS:
+                                    \pp
                                     % STOP_BEAM:
                                     ]
                                     % SPANNER_STARTS:
@@ -461,10 +461,8 @@
                                             \voiceOne
                                             r4.
                                             r4
-                                            bqf8.
+                                            bqf4.
                                             % AFTER:
-                                            % START_BEAM:
-                                            [
                                             % SPANNER_STARTS:
                                             - \tweak circled-tip ##t
                                             ^ \<
@@ -479,149 +477,55 @@
                                             \override NoteColumn.glissando-skip = ##t
                                             \override NoteHead.no-ledgers = ##t
                                             bqf8.
-                                            % AFTER:
-                                            % SPANNER_STARTS:
-                                            - \tweak circled-tip ##t
-                                            ^ \>
+                                            % BEFORE:
                                             % COMMANDS:
-                                            ^ #(make-dynamic-script (markup #:whiteout #:italic "pppp"))
-                                            % OPENING:
+                                            \once \override Dots.staff-position = #2
+                                            bqf4..
+                                            % BEFORE:
                                             % COMMANDS:
-                                            \revert Accidental.stencil
-                                            \revert NoteColumn.glissando-skip
-                                            \revert NoteHead.no-ledgers
-                                            \undo \hide NoteHead
+                                            \once \override Dots.staff-position = #2
                                             bqf8.
-                                            % AFTER:
-                                            % ARTICULATIONS:
-                                            \!
-                                            % STOP_BEAM:
-                                            ]
-                                            r16
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Dots.staff-position = #2
                                             bqf8
-                                            % AFTER:
-                                            % START_BEAM:
-                                            [
-                                            % SPANNER_STARTS:
-                                            - \tweak circled-tip ##t
-                                            ^ \<
-                                            \glissando
                                             % BEFORE:
                                             % COMMANDS:
                                             \once \override Dots.staff-position = #2
                                             % OPENING:
                                             % COMMANDS:
-                                            \hide NoteHead
-                                            \override Accidental.stencil = ##f
-                                            \override NoteColumn.glissando-skip = ##t
-                                            \override NoteHead.no-ledgers = ##t
-                                            bqf8
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            bqf16
                                             % AFTER:
-                                            % SPANNER_STARTS:
-                                            - \tweak circled-tip ##t
-                                            ^ \>
+                                            % START_BEAM:
+                                            [
+                                            % BEFORE:
                                             % COMMANDS:
-                                            ^ #(make-dynamic-script (markup #:whiteout #:italic "pppp"))
+                                            \once \override Dots.staff-position = #2
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \revert Staff.Stem.stemlet-length
+                                            bqf16
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            ^ \ppp
+                                            % STOP_BEAM:
+                                            ]
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Dots.staff-position = #2
+                                            bqf8.
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Dots.staff-position = #2
+                                            bqf8
                                             % OPENING:
                                             % COMMANDS:
                                             \revert Accidental.stencil
                                             \revert NoteColumn.glissando-skip
                                             \revert NoteHead.no-ledgers
                                             \undo \hide NoteHead
-                                            bqf8
-                                            % AFTER:
-                                            % ARTICULATIONS:
-                                            \!
-                                            % STOP_BEAM:
-                                            ]
-                                            r8.
-                                            % OPEN_BRACKETS:
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 0))
-                                            \times 2/3
-                                            {
-                                                bqf8
-                                                % AFTER:
-                                                % START_BEAM:
-                                                [
-                                                % SPANNER_STARTS:
-                                                - \tweak circled-tip ##t
-                                                ^ \<
-                                                \glissando
-                                                % BEFORE:
-                                                % COMMANDS:
-                                                \once \override Dots.staff-position = #2
-                                                % OPENING:
-                                                % COMMANDS:
-                                                \hide NoteHead
-                                                \override Accidental.stencil = ##f
-                                                \override NoteColumn.glissando-skip = ##t
-                                                \override NoteHead.no-ledgers = ##t
-                                                bqf8
-                                                % AFTER:
-                                                % SPANNER_STARTS:
-                                                - \tweak circled-tip ##t
-                                                ^ \>
-                                                % COMMANDS:
-                                                ^ #(make-dynamic-script (markup #:whiteout #:italic "pppp"))
-                                                % OPENING:
-                                                % COMMANDS:
-                                                \revert Accidental.stencil
-                                                \revert NoteColumn.glissando-skip
-                                                \revert NoteHead.no-ledgers
-                                                \undo \hide NoteHead
-                                                bqf8
-                                                % AFTER:
-                                                % ARTICULATIONS:
-                                                \!
-                                                % STOP_BEAM:
-                                                ]
-                                            % CLOSE_BRACKETS:
-                                            }
-                                            r8.
-                                            r16
-                                            % OPEN_BRACKETS:
-                                            \tweak text #tuplet-number::calc-fraction-text
-                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) (ly:make-duration 4 0))
-                                            \times 15/18
-                                            {
-                                                bqf8
-                                                % AFTER:
-                                                % START_BEAM:
-                                                [
-                                                % SPANNER_STARTS:
-                                                - \tweak circled-tip ##t
-                                                ^ \<
-                                                \glissando
-                                                % BEFORE:
-                                                % COMMANDS:
-                                                \once \override Dots.staff-position = #2
-                                                % OPENING:
-                                                % COMMANDS:
-                                                \hide NoteHead
-                                                \override Accidental.stencil = ##f
-                                                \override NoteColumn.glissando-skip = ##t
-                                                \override NoteHead.no-ledgers = ##t
-                                                bqf8
-                                                % AFTER:
-                                                % SPANNER_STARTS:
-                                                - \tweak circled-tip ##t
-                                                ^ \>
-                                                % COMMANDS:
-                                                ^ #(make-dynamic-script (markup #:whiteout #:italic "pppp"))
-                                                % OPENING:
-                                                % COMMANDS:
-                                                \revert Accidental.stencil
-                                                \revert NoteColumn.glissando-skip
-                                                \revert NoteHead.no-ledgers
-                                                \undo \hide NoteHead
-                                                bqf8
-                                                % AFTER:
-                                                % ARTICULATIONS:
-                                                \!
-                                                % STOP_BEAM:
-                                                ]
-                                            % CLOSE_BRACKETS:
-                                            }
+                                            bqf4
                                         % CLOSE_BRACKETS:
                                         }
                                         % OPEN_BRACKETS:
@@ -643,8 +547,6 @@
                                             ~
                                             as4.
                                             % AFTER:
-                                            % ARTICULATIONS:
-                                            \ppp
                                             % SPANNER_STARTS:
                                             \repeatTie
                                             ~
@@ -654,8 +556,13 @@
                                             \repeatTie
                                             ~
                                             as4..
+                                                % CLOSING:
+                                                % COMMANDS:
+                                                _ #(make-dynamic-script (markup #:whiteout #:italic "ppp +"))
                                             % AFTER:
                                             % SPANNER_STARTS:
+                                            - \tweak stencil #constante-hairpin
+                                            \<
                                             \repeatTie
                                             ~
                                             as4..
@@ -675,6 +582,8 @@
                                             ~
                                             as4
                                             % AFTER:
+                                            % ARTICULATIONS:
+                                            \!
                                             % SPANNER_STARTS:
                                             \repeatTie
                                         % CLOSE_BRACKETS:
@@ -1705,11 +1614,12 @@
                                     \undo \hide NoteHead
                                     \revert Staff.Stem.stemlet-length
                                     <a''' bf''' ds'''' e'''' fs''''>32
+                                        % CLOSING:
+                                        % COMMANDS:
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "mf +"))
                                     % AFTER:
                                     % STEM_TREMOLOS:
                                     :256
-                                    % ARTICULATIONS:
-                                    \f
                                     % STOP_BEAM:
                                     ]
                                     % COMMANDS:

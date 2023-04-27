@@ -1802,6 +1802,12 @@ def horn_monolith_attachments(selector=trinton.pleaves()):
     return attach
 
 
+clef_whitespace = abjad.LilyPondLiteral(
+    r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)",
+    "before",
+)
+
+
 def blank_measure_by_hand(score, voice_names, measures, clef_whitespace=False):
     for voice_name in voice_names:
         for measure in measures:

@@ -173,7 +173,9 @@ trinton.make_music(
     rmakers.rewrite_dots,
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(["eqf"]),
-    library.ring_mod_attachments(dynamics=["mp"]),
+    library.ring_mod_attachments(
+        dynamics=["mp", "mp", "mp", "mp", "mp", "mp", "pp", "ppp"]
+    ),
     trinton.notehead_bracket_command(),
     evans.IntermittentVoiceHandler(
         rhythm_handler=evans.RhythmHandler(evans.talea([100], 8)),
@@ -195,8 +197,15 @@ trinton.make_music(
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(["ds"]),
     trinton.attachment_command(
-        attachments=[abjad.Clef("bass"), abjad.Dynamic("mf")],
+        attachments=[library.clef_whitespace, abjad.Clef("bass"), abjad.Dynamic("mf")],
         selector=trinton.select_leaves_by_index([0], pitched=True),
+    ),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.StartHairpin(">o"),
+            abjad.StopHairpin(),
+        ],
+        selector=trinton.select_leaves_by_index([11, -1]),
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
@@ -230,21 +239,10 @@ trinton.make_music(
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(["c'''"]),
     trinton.attachment_command(
-        attachments=[abjad.Clef("treble")],
+        attachments=[library.clef_whitespace, abjad.Clef("treble")],
         selector=trinton.select_leaves_by_index([0], pitched=True),
     ),
     trinton.change_notehead_command(notehead="highest"),
-    trinton.linear_attachment_command(
-        attachments=itertools.cycle(
-            [
-                abjad.StartHairpin("o<"),
-                abjad.Dynamic("mp"),
-            ],
-        ),
-        selector=trinton.patterned_tie_index_selector(
-            [0, 1], 2, pitched=True, first=True
-        ),
-    ),
     trinton.linear_attachment_command(
         attachments=itertools.cycle(
             [
@@ -279,6 +277,38 @@ trinton.make_music(
             8,
         )
     ),
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (1, 9)),
+    trinton.linear_attachment_command(
+        attachments=itertools.cycle(
+            [
+                abjad.StartHairpin("o<"),
+                abjad.Dynamic("mp"),
+            ],
+        ),
+        selector=trinton.patterned_tie_index_selector(
+            [0, 1], 2, pitched=True, first=True
+        ),
+    ),
+    voice=score["tenortrombone voice"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (13, 15)),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.StartHairpin("o<"),
+            abjad.Dynamic("pp"),
+            abjad.StartHairpin("o<"),
+            abjad.Dynamic("ppp"),
+        ],
+        selector=trinton.patterned_tie_index_selector(
+            [0, 1], 2, pitched=True, first=True
+        ),
+    ),
+    voice=score["tenortrombone voice"],
 )
 
 # harp music commands
@@ -334,6 +364,15 @@ trinton.make_music(
     preprocessor=trinton.fuse_preprocessor((15,)),
 )
 
+trinton.make_music(
+    lambda _: trinton.select_target(_, (10, 15)),
+    trinton.linear_attachment_command(
+        attachments=[abjad.StartHairpin(">o"), abjad.StopHairpin()],
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+    ),
+    voice=score["harp 1 voice"],
+)
+
 # percussion 1 music commands
 
 trinton.make_music(
@@ -345,7 +384,8 @@ trinton.make_music(
     library.change_lines(lines=1, clef="percussion"),
     library.boxed_markup(string="Bangu mit Bambusstäbchen"),
     trinton.attachment_command(
-        attachments=[abjad.Dynamic("ff")], selector=trinton.select_leaves_by_index([0])
+        attachments=[library.clef_whitespace, abjad.Dynamic("ff")],
+        selector=trinton.select_leaves_by_index([0]),
     ),
     voice=score["percussion 2 voice"],
 )
@@ -451,7 +491,7 @@ trinton.extract_parts(score)
 # score globals
 
 trinton.make_music(
-    lambda _: trinton.select_target(_, (1, 15)),
+    lambda _: trinton.select_target(_, (1, 14)),
     trinton.spanner_command(
         strings=[
             library.metronome_markups(

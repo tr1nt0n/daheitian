@@ -34,6 +34,25 @@
             % COMMANDS:
             \time 2/4
             s1 * 1/2
+            % ABSOLUTE_BEFORE:
+            % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
+            % BEFORE:
+            % COMMANDS:
+            \once \override MultiMeasureRest.transparent = ##t
+            \once \override Score.TimeSignature.stencil = ##f
+            % OPENING:
+            % COMMANDS:
+            \time 1/4
+            R1 * 1/4
+            % AFTER:
+            % MARKUP:
+            - \tweak padding #-14
+            ^ \markup \fontsize #0.75 \override #'(font-name . "Bodoni72 Book Italic") \center-column { \line { ( Ganz kurz, } \line { nur ein Atemzug ) } }
+            _ \markup \center-column { \abs-fontsize #15 \musicglyph "scripts.uveryshortfermata" }
+            % ABSOLUTE_AFTER:
+            % COMMANDS:
+            \once \override Score.BarLine.transparent = ##f
         % CLOSE_BRACKETS:
         }
         % BEFORE:
@@ -210,13 +229,14 @@
                                             % COMMANDS:
                                             \voiceTwo
                                             ds''4..
+                                                % CLOSING:
+                                                % COMMANDS:
+                                                _ #(make-dynamic-script (markup #:whiteout #:italic "( p )"))
                                             % AFTER:
                                             % STEM_TREMOLOS:
                                             :32
                                             % SPANNER_STARTS:
                                             \<
-                                            % COMMANDS:
-                                            _ #(make-dynamic-script (markup #:whiteout #:italic "( p )"))
                                             % BEFORE:
                                             % COMMANDS:
                                             \once \override Tie.transparent = ##f
@@ -446,6 +466,18 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \oneVoice
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -522,6 +554,18 @@
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/4
                                     s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
@@ -726,13 +770,14 @@
                                             \<
                                             ~
                                             as2.
+                                                % CLOSING:
+                                                % COMMANDS:
+                                                _ #(make-dynamic-script (markup #:whiteout #:italic "ppp +"))
                                             % AFTER:
                                             % SPANNER_STARTS:
                                             \<
                                             \repeatTie
                                             ~
-                                            % COMMANDS:
-                                            _ #(make-dynamic-script (markup #:whiteout #:italic "ppp +"))
                                             as2
                                             % AFTER:
                                             % SPANNER_STARTS:
@@ -759,6 +804,18 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \oneVoice
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -835,6 +892,18 @@
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/4
                                     s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
@@ -918,6 +987,18 @@
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 1/4
                             s1 * 1/4
+                            % AFTER:
+                            % COMMANDS:
+                            \stopStaff \startStaff
+                            % ABSOLUTE_BEFORE:
+                            % COMMANDS:
+                            \once \override Staff.BarLine.transparent = ##f
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Rest.transparent = ##t
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                            r1 * 1/8
+                            s1 * 1/8
                             % AFTER:
                             % COMMANDS:
                             \stopStaff \startStaff
@@ -1008,6 +1089,18 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -1087,6 +1180,18 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -1163,6 +1268,18 @@
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/4
                                     s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
@@ -1253,7 +1370,7 @@
                                     % BEFORE:
                                     % COMMANDS:
                                     \ottava 1
-                                    <fs''' e''''>4
+                                    <fs''' e''''>8
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \pp
@@ -1261,6 +1378,19 @@
                                     )
                                     % COMMANDS:
                                     \ottava 0
+                                    r8
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -1330,13 +1460,26 @@
                                     % BEFORE:
                                     % COMMANDS:
                                     \ottava 1
-                                    <b''>4
+                                    <b''>8
                                     % AFTER:
                                     % SPANNER_STOPS:
                                     )
                                     \sustainOff
                                     % COMMANDS:
                                     \ottava 0
+                                    r8
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -1431,6 +1574,18 @@
                                     % COMMANDS:
                                     \ottava 0
                                     r4.
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -1508,6 +1663,18 @@
                                     \repeatTie
                                     % COMMANDS:
                                     \textSpannerUp
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -1588,6 +1755,18 @@
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 1/4
                             s1 * 1/4
+                            % AFTER:
+                            % COMMANDS:
+                            \stopStaff \startStaff
+                            % ABSOLUTE_BEFORE:
+                            % COMMANDS:
+                            \once \override Staff.BarLine.transparent = ##f
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Rest.transparent = ##t
+                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                            r1 * 1/8
+                            s1 * 1/8
                             % AFTER:
                             % COMMANDS:
                             \stopStaff \startStaff
@@ -1678,6 +1857,18 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -1754,6 +1945,18 @@
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/4
                                     s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
@@ -1848,6 +2051,18 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -1924,6 +2139,18 @@
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/4
                                     s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
@@ -2006,6 +2233,18 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -2085,6 +2324,18 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
                             % CLOSE_BRACKETS:
@@ -2161,6 +2412,18 @@
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/4
                                     s1 * 1/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                    \stopStaff \startStaff
+                                    % ABSOLUTE_BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Rest.transparent = ##t
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r1 * 1/8
+                                    s1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
                                     \stopStaff \startStaff

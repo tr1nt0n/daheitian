@@ -171,13 +171,8 @@ for voice_name, hand in zip(
         lambda _: trinton.select_target(_, (4, 5)),
         evans.RhythmHandler(
             evans.talea(
-                [
-                    -2,
-                    1,
-                    1,
-                    1,
-                ],
-                4,
+                [-4, 2, 2, 1, -1],
+                8,
             )
         ),
         evans.PitchHandler(library.piano_chords(hand=hand, index=0)),
@@ -187,7 +182,8 @@ for voice_name, hand in zip(
                 [
                     -1,
                     -1,
-                ]
+                ],
+                pitched=True,
             )
         ),
         trinton.linear_attachment_command(
@@ -318,6 +314,34 @@ trinton.extract_parts(score)
 # )
 
 # score globals
+
+trinton.fermata_measures(
+    score=score,
+    measures=[
+        0,
+    ],
+    font_size="15",
+    fermata="uveryshortfermata",
+    blank=False,
+    clef_whitespace=False,
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (6,)),
+    trinton.attachment_command(
+        attachments=[
+            abjad.bundle(
+                abjad.Markup(
+                    r"""\markup \fontsize #0.75 \override #'(font-name . "Bodoni72 Book Italic") \center-column { \line { ( Ganz kurz, } \line { nur ein Atemzug ) } }"""
+                ),
+                r"- \tweak padding #-14",
+            ),
+        ],
+        selector=trinton.select_leaves_by_index([0]),
+        direction=abjad.UP,
+    ),
+    voice=score["Global Context"],
+)
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (1,)),

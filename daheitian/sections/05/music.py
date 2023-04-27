@@ -29,7 +29,7 @@ trinton.make_music(
     library.flute_grace_attachments(),
     trinton.linear_attachment_command(
         attachments=[abjad.StartHairpin("o<"), abjad.Dynamic("pp")],
-        selector=trinton.select_leaves_by_index([0, 3]),
+        selector=trinton.select_logical_ties_by_index([0, -2], first=True),
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
@@ -50,29 +50,40 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (1, 7)),
     evans.RhythmHandler(
-        evans.tuplet(
+        evans.talea(
             [
-                (-1,),
-                (
-                    1,
-                    1,
-                    1,
-                ),
-            ]
+                -10,
+                22,
+                10,
+            ],
+            16,
         )
     ),
-    rmakers.rewrite_dots,
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler([-1.5]),
-    library.ring_mod_attachments(dynamics=["pppp"]),
-    trinton.notehead_bracket_command(),
+    trinton.linear_attachment_command(
+        attachments=[abjad.StartHairpin("o<"), abjad.Dynamic("ppp")],
+        selector=trinton.select_logical_ties_by_index(
+            [0, -1], pitched=True, first=True
+        ),
+        direction=abjad.UP,
+    ),
+    trinton.glissando_command(
+        selector=trinton.ranged_selector(ranges=[range(2, 12)], nested=True),
+        no_ties=True,
+    ),
+    voice=score["bassclarinet voice"],
+    beam_meter=True,
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (1, 7)),
     evans.IntermittentVoiceHandler(
         rhythm_handler=evans.RhythmHandler(evans.talea([21], 8)),
         direction=abjad.DOWN,
         voice_name="bassclarinet divisi voice",
     ),
     voice=score["bassclarinet voice"],
-    preprocessor=trinton.fuse_sixteenths_preprocessor((10, 9, 1, 6, 3, 4, 4, 5)),
 )
 
 trinton.make_music(
@@ -80,8 +91,13 @@ trinton.make_music(
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(["as"]),
     trinton.linear_attachment_command(
-        attachments=[abjad.StartHairpin("o<"), abjad.Dynamic("ppp")],
-        selector=trinton.select_leaves_by_index([0, 2]),
+        attachments=[
+            abjad.StartHairpin("o<"),
+            trinton.make_custom_dynamic("ppp +"),
+            abjad.StartHairpin("--"),
+            abjad.StopHairpin(),
+        ],
+        selector=trinton.select_leaves_by_index([0, 4, 4, -1]),
     ),
     voice=score["bassclarinet divisi voice"],
 )
@@ -140,7 +156,11 @@ trinton.make_music(
     ),
     trinton.tremolo_command(),
     trinton.linear_attachment_command(
-        attachments=[abjad.Arpeggio(), abjad.StartHairpin("o<"), abjad.Dynamic("f")],
+        attachments=[
+            abjad.Arpeggio(),
+            abjad.StartHairpin("o<"),
+            trinton.make_custom_dynamic("mf +"),
+        ],
         selector=trinton.select_leaves_by_index([0, 0, -1], pitched=True),
     ),
     voice=score["harp 1 voice"],

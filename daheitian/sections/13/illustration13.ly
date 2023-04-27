@@ -88,13 +88,14 @@
             % COMMANDS:
             \time 5/16
             s1 * 5/16
+            % AFTER:
+            % SPANNER_STOPS:
+            \stopTextSpan
             % OPENING:
             % COMMANDS:
             \time 8/16
             s1 * 1/2
             % AFTER:
-            % SPANNER_STOPS:
-            \stopTextSpan
             % COMMANDS:
             \bar "||"
             \break
@@ -2489,7 +2490,7 @@
                                         - \tweak circled-tip ##t
                                         ^ \>
                                         % COMMANDS:
-                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
+                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
                                         % OPENING:
                                         % COMMANDS:
                                         \revert Accidental.stencil
@@ -2529,7 +2530,7 @@
                                     - \tweak circled-tip ##t
                                     ^ \>
                                     % COMMANDS:
-                                    ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
+                                    ^ #(make-dynamic-script (markup #:whiteout #:italic "ppp"))
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Accidental.stencil
@@ -2547,6 +2548,9 @@
                                 % OPEN_BRACKETS:
                                 \context Voice = "frenchhorn divisi voice"
                                 {
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "bass"
@@ -2615,6 +2619,8 @@
                                     ds4
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
                                     \repeatTie
                                     ~
                                     ds8
@@ -2644,6 +2650,8 @@
                                     ~
                                     ds2
                                     % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
                                     % SPANNER_STOPS:
                                     \stopTextSpan
                                     % SPANNER_STARTS:
@@ -2886,6 +2894,7 @@
                                         % BEFORE:
                                         % COMMANDS:
                                         \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bb)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bc)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0be)))))))
+                                        \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tenorposaunen }
                                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pos. }
                                         % OPENING:
@@ -3177,7 +3186,7 @@
                                         c'''8
                                         % AFTER:
                                         % ARTICULATIONS:
-                                        \mp
+                                        \pp
                                     % CLOSE_BRACKETS:
                                     }
                                     r8.
@@ -3207,7 +3216,7 @@
                                     c'''8
                                     % AFTER:
                                     % ARTICULATIONS:
-                                    \mp
+                                    \ppp
                                     % SPANNER_STOPS:
                                     \stopTextSpan
                                 % CLOSE_BRACKETS:
@@ -3953,6 +3962,9 @@
                                     :32
                                     % ARTICULATIONS:
                                     \arpeggio
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \once \override Staff.BarLine.transparent = ##f
@@ -4023,6 +4035,8 @@
                                     % AFTER:
                                     % STEM_TREMOLOS:
                                     :64
+                                    % ARTICULATIONS:
+                                    \!
                                     % COMMANDS:
                                     \ottava 0
                                 % CLOSE_BRACKETS:
@@ -4399,6 +4413,7 @@
                                     \staff-line-count 1
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
                                     % OPENING:
