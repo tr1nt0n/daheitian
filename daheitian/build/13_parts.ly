@@ -2004,17 +2004,8 @@
                                         c'''8
                                         \mp
                                     }
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 5/32
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 5/32
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    r8.
+                                    r8
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 2 0))
                                     \times 2/3
                                     {
@@ -2033,17 +2024,8 @@
                                         c'''4
                                         \mp
                                     }
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/8
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    r8.
+                                    r16
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) (ly:make-duration 4 0))
                                     \times 15/18
@@ -2064,36 +2046,30 @@
                                         \mp
                                     }
                                       %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
+                                %%% \once \override MultiMeasureRest.transparent = ##t
+                                      %! +SCORE
+                                %%% \once \override Rest.transparent = ##t
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/8
+                                    r4
                                       %! +SCORE
                                 %%% \stopStaff \startStaff
                                       %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
+                                %%% \once \override MultiMeasureRest.transparent = ##t
+                                      %! +SCORE
+                                %%% \once \override Rest.transparent = ##t
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/16
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/16
+                                    r8
                                       %! +SCORE
                                 %%% \stopStaff \startStaff
                                       %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
+                                %%% \once \override MultiMeasureRest.transparent = ##t
+                                      %! +SCORE
+                                %%% \once \override Rest.transparent = ##t
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/16
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/16
+                                    r8
                                       %! +SCORE
                                 %%% \stopStaff \startStaff
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 0))

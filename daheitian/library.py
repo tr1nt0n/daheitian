@@ -1823,6 +1823,10 @@ def blank_measure_by_hand(score, voice_names, measures, clef_whitespace=False):
                             r"\once \override MultiMeasureRest.transparent = ##t",
                             "before",
                         ),
+                        abjad.LilyPondLiteral(
+                            r"\once \override Rest.transparent = ##t",
+                            "before",
+                        ),
                         abjad.LilyPondLiteral(r"\stopStaff \startStaff", "after"),
                     ],
                     selector=trinton.select_leaves_by_index([0]),

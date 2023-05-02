@@ -3345,25 +3345,8 @@
                                         \mp
                                     % CLOSE_BRACKETS:
                                     }
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 5/32
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 5/32
-                                    % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    r8.
+                                    r8
                                     % OPEN_BRACKETS:
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 2 0))
                                     \times 2/3
@@ -3396,25 +3379,8 @@
                                         \mp
                                     % CLOSE_BRACKETS:
                                     }
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    r8.
+                                    r16
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) (ly:make-duration 4 0))
@@ -3448,59 +3414,41 @@
                                         \mp
                                     % CLOSE_BRACKETS:
                                     }
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
                                     % BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/8
+                                      %! +SCORE
+                                    \once \override Rest.transparent = ##t
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r4
                                     % AFTER:
                                     % COMMANDS:
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/16
                                     % BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/16
+                                      %! +SCORE
+                                    \once \override Rest.transparent = ##t
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r8
                                     % AFTER:
                                     % COMMANDS:
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/16
                                     % BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/16
+                                      %! +SCORE
+                                    \once \override Rest.transparent = ##t
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    r8
                                     % AFTER:
                                     % COMMANDS:
                                       %! +SCORE

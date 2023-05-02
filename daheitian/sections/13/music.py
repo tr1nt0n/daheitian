@@ -505,8 +505,19 @@ trinton.whiteout_empty_staves(
         if _ != "bassclarinet voice"
         and _ != "bassoon voice"
         and _ != "frenchhorn voice"
+        and _ != "tenortrombone voice"
         and _ != "percussion 2 voice"
         and _ != "percussion 3 voice"
+    ],
+)
+
+library.blank_measure_by_hand(
+    score=score,
+    voice_names=["tenortrombone voice"],
+    measures=[
+        10,
+        11,
+        12,
     ],
 )
 
