@@ -99,6 +99,9 @@
             % COMMANDS:
             \time 8/16
             s1 * 1/2
+            % AFTER:
+            % COMMANDS:
+            \bar "||"
         % CLOSE_BRACKETS:
         }
         % BEFORE:

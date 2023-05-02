@@ -43,6 +43,7 @@
             \stopTextSpan
             \time 8/16
             s1 * 1/2
+            \bar "||"
         }
         \tag #'group1
         {

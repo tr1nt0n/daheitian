@@ -483,6 +483,17 @@ trinton.make_music(
     voice=score["Global Context"],
 )
 
+trinton.make_music(
+    lambda _: trinton.select_target(_, (15,)),
+    trinton.attachment_command(
+        attachments=[
+            abjad.BarLine("||"),
+        ],
+        selector=trinton.select_leaves_by_index([0]),
+    ),
+    voice=score["Global Context"],
+)
+
 # cutaway
 
 trinton.whiteout_empty_staves(
