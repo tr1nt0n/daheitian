@@ -1,7 +1,7 @@
 \version "2.23.14"
 \language english
-#(set-default-paper-size "11x17portrait")
-#(set-global-staff-size 12)
+#(set-default-paper-size "arch a")
+#(set-global-staff-size 14)
 #(ly:set-option 'relative-includes #t)
 
 \include "../library.ily"
@@ -12,9 +12,9 @@
 afterGraceFraction = #(cons 15 16)
 
 \header {
-    dedication = \markup \fontsize #12 \center-column {\line \override #'(font-name . "Bodoni72 Bold") { { D À H Ē I T I Ā N } } \fontsize #0.25 \with-color #white "."}
-    title = \markup \override #'(font-name . "Source Han Serif SC Bold") \fontsize #16 \center-column { \line { 大 黒 天 } \fontsize #0.01 \with-color #white "."}
-    subtitle = \markup \fontsize #5 \center-column { \line { \override #'(font-name . "Bodoni72 Book Italic") { für } \override #'(font-name . "Bodoni72 Bold") { ORCHESTER } } \fontsize #0.01 \with-color #white "."}
+    dedication = \markup \fontsize #8 \center-column {\line \override #'(font-name . "Bodoni72 Bold") { { D À H Ē I T I Ā N } } \fontsize #0.25 \with-color #white "."}
+    title = \markup \override #'(font-name . "Source Han Serif SC Bold") \fontsize #12 \center-column { \line { 大 黒 天 } \fontsize #0.01 \with-color #white "."}
+    subtitle = \markup \fontsize #1 \center-column { \line { \override #'(font-name . "Bodoni72 Book Italic") { für } \override #'(font-name . "Bodoni72 Bold") { ORCHESTER } } \fontsize #0.01 \with-color #white "."}
     composer = \markup \override #'(font-name . "Bodoni72") \fontsize #4 {"Trinton Hlynn (*2000)"}
 }
 
@@ -38,23 +38,24 @@ afterGraceFraction = #(cons 15 16)
         \consists Measure_spanner_engraver
         \override BarNumber.stencil = #(make-stencil-circler 0.1 0.75 ly:text-interface::print)
         \override BarNumber.Y-extent = ##f
-        \override BarNumber.Y-offset = -8
+        \override BarNumber.Y-offset = -4
         \override BarNumber.extra-offset = #'(-0.5 . 0.5)
-        \override BarNumber.font-size = 4
-        \override BarNumber.padding = 4
+        \override BarNumber.font-size = 2
+        \override BarNumber.padding = 2
         \override BarNumber.font-name = "Bodoni72 Book"
         \override MetronomeMark.stencil = ##f
-		\override TimeSignature.X-extent = #'(0 . -25)
-        \override TimeSignature.Y-extent = #'(25 . 0)
-        \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 14) (minimum-distance . 14) (padding . 10) (stretchability . 0))
+		% \override TimeSignature.X-extent = #'(0 . -25)
+        % \override TimeSignature.Y-extent = #'(25 . 0)
+        \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 2) (minimum-distance . 2) (padding . 2) (stretchability . 0))
         \override TimeSignature.break-visibility = #end-of-line-invisible
-        \override TimeSignature.font-size = 10
-		\override TimeSignature.font-name = "Bodoni72 Book"
-        \override TimeSignature.X-offset = -2.5
-        \override TimeSignature.Y-offset = 3
-        \override TimeSignature.whiteout-style = #'outline
-        \override TimeSignature.whiteout = 1
-        \override TimeSignature.layer = 4
+        \override TimeSignature.transparent = ##t
+        % \override TimeSignature.font-size = 10
+		% \override TimeSignature.font-name = "Bodoni72 Book"
+        % \override TimeSignature.X-offset = -2.5
+        % \override TimeSignature.Y-offset = 3
+        % \override TimeSignature.whiteout-style = #'outline
+        % \override TimeSignature.whiteout = 1
+        % \override TimeSignature.layer = 4
     }
 
     \context {
@@ -71,10 +72,10 @@ afterGraceFraction = #(cons 15 16)
         \override AccidentalSuggestion.avoid-slur = #'ignore
         % \override Accidental.X-extent = ##f
 
-        \override BarLine.hair-thickness = 2.5
+        % \override BarLine.hair-thickness = 2.5
         % \override BarLine.X-extent = #'(0 . 0)
         \override BarLine.thick-thickness = #10
-        \override BarLine.bar-extent = #'(-3 . 3)
+        % \override BarLine.bar-extent = #'(-3 . 3)
 
         autoBeaming = ##f
         \override Beam.breakable = ##t
@@ -168,7 +169,6 @@ afterGraceFraction = #(cons 15 16)
     \context {
         \Staff
         fontSize = #-0.25
-        \remove Time_signature_engraver
         \consists Duration_line_engraver
 
         \override DurationLine.style = #'line
@@ -177,7 +177,12 @@ afterGraceFraction = #(cons 15 16)
         \override DurationLine.breakable = ##t
 
         \override InstrumentName.self-alignment-X = #CENTER
-        \RemoveAllEmptyStaves
+
+        \override TimeSignature.break-visibility = #end-of-line-invisible
+        \override TimeSignature.font-size = 2
+        \override TimeSignature.whiteout-style = #'outline
+        \override TimeSignature.whiteout = 1
+        \override TimeSignature.layer = 4
     }
 
     \context {
@@ -200,8 +205,8 @@ afterGraceFraction = #(cons 15 16)
 %
 \paper {
     % max-systems-per-page = 3
-    system-separator-markup = \markup \fontsize #12 { \tremolo-moderato }
-    system-system-spacing = #'((basic-distance . 22) (minimum-distance . 22) (padding . 16))
+    % system-separator-markup = \markup \fontsize #12 { \tremolo-moderato }
+    system-system-spacing = #'((basic-distance . 20) (minimum-distance . 20) (padding . 10))
     indent = 20\mm
     short-indent = 15\mm
     bottom-margin = 10\mm

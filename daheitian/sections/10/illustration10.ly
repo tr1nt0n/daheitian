@@ -1,8 +1,12 @@
+  %! abjad.LilyPondFile._get_format_pieces()
 \version "2.23.14"
+  %! abjad.LilyPondFile._get_format_pieces()
 \language "english"
 \include "/Users/trintonprater/scores/daheitian/daheitian/build/daheitian-stylesheet.ily"
 \include "/Users/trintonprater/abjad/abjad/scm/abjad.ily"
+  %! abjad.LilyPondFile._get_format_pieces()
 \score
+  %! abjad.LilyPondFile._get_format_pieces()
 {
     % OPEN_BRACKETS:
     \context Score = "Score"
@@ -63,41 +67,62 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/8
-                                    s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/4
-                                    s1 * 1/4
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/8
-                                    s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -375,41 +400,62 @@
                         {
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
+                              %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
                             % BEFORE:
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Hörner in F }
                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hn. }
+                              %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 3/8
-                            s1 * 3/8
+                            % BEFORE:
+                            % COMMANDS:
+                              %! +SCORE
+                            \once \override MultiMeasureRest.transparent = ##t
+                            R1 * 3/8
                             % AFTER:
                             % COMMANDS:
+                              %! +SCORE
                             \stopStaff \startStaff
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
+                              %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
                             % BEFORE:
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
+                              %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 1/4
-                            s1 * 1/4
+                            % BEFORE:
+                            % COMMANDS:
+                              %! +SCORE
+                            \once \override MultiMeasureRest.transparent = ##t
+                            R1 * 1/4
                             % AFTER:
                             % COMMANDS:
+                              %! +SCORE
                             \stopStaff \startStaff
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
+                              %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
                             % BEFORE:
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
+                              %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 3/8
-                            s1 * 3/8
+                            % BEFORE:
+                            % COMMANDS:
+                              %! +SCORE
+                            \once \override MultiMeasureRest.transparent = ##t
+                            R1 * 3/8
                             % AFTER:
                             % COMMANDS:
+                              %! +SCORE
                             \stopStaff \startStaff
                         % CLOSE_BRACKETS:
                         }
@@ -438,41 +484,62 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Trompeten in C }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ tpt. }
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/8
-                                    s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/4
-                                    s1 * 1/4
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/8
-                                    s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -493,41 +560,62 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tenorposaunen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pos. }
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/8
-                                    s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/4
-                                    s1 * 1/4
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/8
-                                    s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -548,41 +636,62 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tuben }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { tb. }
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/8
-                                    s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/4
-                                    s1 * 1/4
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/8
-                                    s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -615,41 +724,62 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Klavier }
                                     \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { klav. }
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/8
-                                    s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/4
-                                    s1 * 1/4
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/8
-                                    s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -670,39 +800,60 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/8
-                                    s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/4
-                                    s1 * 1/4
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/8
-                                    s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -735,41 +886,62 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
                                     \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/8
-                                    s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/4
-                                    s1 * 1/4
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/8
-                                    s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -790,39 +962,60 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/8
-                                    s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/4
-                                    s1 * 1/4
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/8
-                                    s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -861,6 +1054,7 @@
                             % SPANNER_STARTS:
                             - \tweak circled-tip ##t
                             \>
+                              %! abjad.glissando(7)
                             \glissando
                             ~
                             % BEFORE:
@@ -868,9 +1062,13 @@
                             \once \override Dots.staff-position = #2
                             % OPENING:
                             % COMMANDS:
+                              %! abjad.glissando(1)
                             \hide NoteHead
+                              %! abjad.glissando(1)
                             \override Accidental.stencil = ##f
+                              %! abjad.glissando(1)
                             \override NoteColumn.glissando-skip = ##t
+                              %! abjad.glissando(1)
                             \override NoteHead.no-ledgers = ##t
                             c2
                             % AFTER:
@@ -895,9 +1093,13 @@
                                 % OPENING:
                                 % COMMANDS:
                                 \once \override Flag.stroke-style = #"grace"
+                                  %! abjad.glissando(6)
                                 \revert Accidental.stencil
+                                  %! abjad.glissando(6)
                                 \revert NoteColumn.glissando-skip
+                                  %! abjad.glissando(6)
                                 \revert NoteHead.no-ledgers
+                                  %! abjad.glissando(6)
                                 \undo \hide NoteHead
                                 aqs,16
                                 % AFTER:
@@ -986,17 +1188,24 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/8
-                                    s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     r4
                                     c'4
@@ -1006,12 +1215,17 @@
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     _ \<
+                                      %! abjad.glissando(7)
                                     \glissando
                                     % OPENING:
                                     % COMMANDS:
+                                      %! abjad.glissando(1)
                                     \hide NoteHead
+                                      %! abjad.glissando(1)
                                     \override Accidental.stencil = ##f
+                                      %! abjad.glissando(1)
                                     \override NoteColumn.glissando-skip = ##t
+                                      %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
                                     c'4
                                     % AFTER:
@@ -1021,14 +1235,15 @@
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
                                     c'4
+                                        % CLOSING:
+                                        % COMMANDS:
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                     % AFTER:
                                     % STEM_TREMOLOS:
                                     :32
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     _ \>
-                                    % COMMANDS:
-                                    _ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -1043,9 +1258,13 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \once \override Flag.stroke-style = #"grace"
+                                          %! abjad.glissando(6)
                                         \revert Accidental.stencil
+                                          %! abjad.glissando(6)
                                         \revert NoteColumn.glissando-skip
+                                          %! abjad.glissando(6)
                                         \revert NoteHead.no-ledgers
+                                          %! abjad.glissando(6)
                                         \undo \hide NoteHead
                                         c'16
                                         % AFTER:
@@ -1074,41 +1293,62 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/8
-                                    s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/4
-                                    s1 * 1/4
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/8
-                                    s1 * 3/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -1196,14 +1436,19 @@
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { MSP } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -1
                                     \startTextSpan
+                                      %! abjad.glissando(7)
                                     \glissando
                                     % TRILL_SPANNER_STARTS:
                                     \startTrillSpan a'
                                     % OPENING:
                                     % COMMANDS:
+                                      %! abjad.glissando(1)
                                     \hide NoteHead
+                                      %! abjad.glissando(1)
                                     \override Accidental.stencil = ##f
+                                      %! abjad.glissando(1)
                                     \override NoteColumn.glissando-skip = ##t
+                                      %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
                                     \tweak style #'harmonic-mixed
                                     b'4
@@ -1212,12 +1457,13 @@
                                     \once \override Dots.staff-position = #2
                                     \tweak style #'harmonic-mixed
                                     b'4
+                                        % CLOSING:
+                                        % COMMANDS:
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "f"))
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     _ \>
-                                    % COMMANDS:
-                                    _ #(make-dynamic-script (markup #:whiteout #:italic "f"))
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -1231,9 +1477,13 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \once \override Flag.stroke-style = #"grace"
+                                          %! abjad.glissando(6)
                                         \revert Accidental.stencil
+                                          %! abjad.glissando(6)
                                         \revert NoteColumn.glissando-skip
+                                          %! abjad.glissando(6)
                                         \revert NoteHead.no-ledgers
+                                          %! abjad.glissando(6)
                                         \undo \hide NoteHead
                                         \tweak style #'harmonic-mixed
                                         b'16
@@ -1454,14 +1704,19 @@
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { MSP } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -1
                                     \startTextSpan
+                                      %! abjad.glissando(7)
                                     \glissando
                                     % TRILL_SPANNER_STARTS:
                                     \startTrillSpan a
                                     % OPENING:
                                     % COMMANDS:
+                                      %! abjad.glissando(1)
                                     \hide NoteHead
+                                      %! abjad.glissando(1)
                                     \override Accidental.stencil = ##f
+                                      %! abjad.glissando(1)
                                     \override NoteColumn.glissando-skip = ##t
+                                      %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
                                     \tweak style #'harmonic-mixed
                                     gqs'4
@@ -1470,12 +1725,13 @@
                                     \once \override Dots.staff-position = #2
                                     \tweak style #'harmonic-mixed
                                     gqs'4
+                                        % CLOSING:
+                                        % COMMANDS:
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "f"))
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     _ \>
-                                    % COMMANDS:
-                                    _ #(make-dynamic-script (markup #:whiteout #:italic "f"))
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
@@ -1489,9 +1745,13 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \once \override Flag.stroke-style = #"grace"
+                                          %! abjad.glissando(6)
                                         \revert Accidental.stencil
+                                          %! abjad.glissando(6)
                                         \revert NoteColumn.glissando-skip
+                                          %! abjad.glissando(6)
                                         \revert NoteHead.no-ledgers
+                                          %! abjad.glissando(6)
                                         \undo \hide NoteHead
                                         \tweak style #'harmonic-mixed
                                         gqs'16
@@ -1534,15 +1794,20 @@
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     \>
+                                      %! abjad.glissando(7)
                                     \glissando
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
+                                      %! abjad.glissando(1)
                                     \hide NoteHead
+                                      %! abjad.glissando(1)
                                     \override Accidental.stencil = ##f
+                                      %! abjad.glissando(1)
                                     \override NoteColumn.glissando-skip = ##t
+                                      %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
                                     a,2
                                     % BEFORE:
@@ -1557,9 +1822,13 @@
                                         % OPENING:
                                         % COMMANDS:
                                         \once \override Flag.stroke-style = #"grace"
+                                          %! abjad.glissando(6)
                                         \revert Accidental.stencil
+                                          %! abjad.glissando(6)
                                         \revert NoteColumn.glissando-skip
+                                          %! abjad.glissando(6)
                                         \revert NoteHead.no-ledgers
+                                          %! abjad.glissando(6)
                                         \undo \hide NoteHead
                                         a,16
                                         % AFTER:
@@ -1585,4 +1854,5 @@
         }
     % CLOSE_BRACKETS:
     >>
+  %! abjad.LilyPondFile._get_format_pieces()
 }

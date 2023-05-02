@@ -465,26 +465,7 @@ trinton.remove_redundant_time_signatures(score=score)
 
 library.ties(score=score)
 
-# parts globals
-
-# parts
-
-trinton.extract_parts(score)
-
-# render parts file without whiteout_empty_staves
-
-# trinton.render_file(
-#     score=score,
-#     segment_path="/Users/trintonprater/scores/daheitian/daheitian/sections/11",
-#     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
-#     segment_name="11_parts",
-#     includes=[
-#         "/Users/trintonprater/scores/daheitian/daheitian/build/daheitian-stylesheet.ily",
-#         "/Users/trintonprater/abjad/abjad/scm/abjad.ily",
-#     ],
-# )
-
-# score globals
+# globals
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (1,)),
@@ -501,9 +482,23 @@ trinton.make_music(
     voice=score["Global Context"],
 )
 
+trinton.make_music(
+    lambda _: trinton.select_target(_, (3,)),
+    trinton.attachment_command(
+        attachments=[abjad.LilyPondLiteral(r"\pageBreak", "after")],
+        selector=trinton.select_leaves_by_index([0]),
+        tag=abjad.Tag("+SCORE"),
+    ),
+    voice=score["Global Context"],
+)
+
 # cutaway
 
 trinton.whiteout_empty_staves(score=score, cutaway="blank")
+
+# parts
+
+trinton.extract_parts(score)
 
 # render file
 

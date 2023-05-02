@@ -43,14 +43,14 @@ for voice_name in [
         ),
         trinton.linear_attachment_command(
             attachments=[
+                abjad.LilyPondLiteral(r"\-", "after"),
                 abjad.Dynamic("pp"),
                 abjad.StartHairpin("--"),
                 abjad.StopHairpin(),
             ],
-            selector=trinton.select_leaves_by_index([0, 0, -1]),
+            selector=trinton.select_leaves_by_index([0, 0, 0, -1]),
         ),
         voice=score[voice_name],
-        preprocessor=trinton.fuse_preprocessor((2,)),
     )
 
 # timpani music commands
@@ -114,6 +114,7 @@ trinton.make_music(
     ),
     trinton.linear_attachment_command(
         attachments=[
+            abjad.LilyPondLiteral(r"\-", "after"),
             abjad.Dynamic("pp"),
             abjad.StartHairpin("--"),
             abjad.Markup(
@@ -129,6 +130,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index(
             [
+                0,
                 0,
                 0,
                 0,
@@ -205,6 +207,7 @@ trinton.make_music(
     ),
     trinton.linear_attachment_command(
         attachments=[
+            abjad.LilyPondLiteral(r"\-", "after"),
             abjad.Dynamic("pp"),
             abjad.StartHairpin("--"),
             abjad.Markup(
@@ -215,7 +218,7 @@ trinton.make_music(
             abjad.StartHairpin("<"),
             abjad.Dynamic("mp"),
         ],
-        selector=trinton.select_leaves_by_index([0, 0, 0, 1, 2]),
+        selector=trinton.select_leaves_by_index([0, 0, 0, 0, 1, 2]),
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
@@ -287,26 +290,7 @@ trinton.remove_redundant_time_signatures(score=score)
 
 library.ties(score=score)
 
-# parts globals
-
-# parts
-
-trinton.extract_parts(score)
-
-# render parts file without whiteout_empty_staves
-
-# trinton.render_file(
-#     score=score,
-#     segment_path="/Users/trintonprater/scores/daheitian/daheitian/sections/02",
-#     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
-#     segment_name="02_parts",
-#     includes=[
-#         "/Users/trintonprater/scores/daheitian/daheitian/build/daheitian-stylesheet.ily",
-#         "/Users/trintonprater/abjad/abjad/scm/abjad.ily",
-#     ],
-# )
-
-# score globals
+# globals
 
 trinton.fermata_measures(
     score=score,
@@ -356,6 +340,10 @@ trinton.make_music(
 # cutaway
 
 trinton.whiteout_empty_staves(score=score, cutaway="blank")
+
+# parts
+
+trinton.extract_parts(score)
 
 # render file
 

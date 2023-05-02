@@ -1,8 +1,12 @@
+  %! abjad.LilyPondFile._get_format_pieces()
 \version "2.23.14"
+  %! abjad.LilyPondFile._get_format_pieces()
 \language "english"
 \include "/Users/trintonprater/scores/daheitian/daheitian/build/daheitian-stylesheet.ily"
 \include "/Users/trintonprater/abjad/abjad/scm/abjad.ily"
+  %! abjad.LilyPondFile._get_format_pieces()
 \score
+  %! abjad.LilyPondFile._get_format_pieces()
 {
     % OPEN_BRACKETS:
     \context Score = "Score"
@@ -305,15 +309,22 @@
                                     ]
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -334,101 +345,157 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/16
-                                    s1 * 3/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/16
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 9/32
-                                    s1 * 9/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 9/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 5/32
-                                    s1 * 5/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 5/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -466,15 +533,20 @@
                                             % SPANNER_STARTS:
                                             - \tweak circled-tip ##t
                                             ^ \<
+                                              %! abjad.glissando(7)
                                             \glissando
                                             % BEFORE:
                                             % COMMANDS:
                                             \once \override Dots.staff-position = #2
                                             % OPENING:
                                             % COMMANDS:
+                                              %! abjad.glissando(1)
                                             \hide NoteHead
+                                              %! abjad.glissando(1)
                                             \override Accidental.stencil = ##f
+                                              %! abjad.glissando(1)
                                             \override NoteColumn.glissando-skip = ##t
+                                              %! abjad.glissando(1)
                                             \override NoteHead.no-ledgers = ##t
                                             bqf8.
                                             % BEFORE:
@@ -521,9 +593,13 @@
                                             bqf8
                                             % OPENING:
                                             % COMMANDS:
+                                              %! abjad.glissando(6)
                                             \revert Accidental.stencil
+                                              %! abjad.glissando(6)
                                             \revert NoteColumn.glissando-skip
+                                              %! abjad.glissando(6)
                                             \revert NoteHead.no-ledgers
+                                              %! abjad.glissando(6)
                                             \undo \hide NoteHead
                                             bqf4
                                         % CLOSE_BRACKETS:
@@ -595,11 +671,14 @@
                                     \oneVoice
                                     % BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     R1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -620,101 +699,157 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Fagotte }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { fg.}
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/16
-                                    s1 * 3/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/16
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 9/32
-                                    s1 * 9/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 9/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 5/32
-                                    s1 * 5/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 5/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -739,101 +874,157 @@
                         {
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
+                              %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
                             % BEFORE:
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Hörner in F }
                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hn. }
+                              %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 3/16
-                            s1 * 3/16
+                            % BEFORE:
+                            % COMMANDS:
+                              %! +SCORE
+                            \once \override MultiMeasureRest.transparent = ##t
+                            R1 * 3/16
                             % AFTER:
                             % COMMANDS:
+                              %! +SCORE
                             \stopStaff \startStaff
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
+                              %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
                             % BEFORE:
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
+                              %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 1/8
-                            s1 * 1/8
+                            % BEFORE:
+                            % COMMANDS:
+                              %! +SCORE
+                            \once \override MultiMeasureRest.transparent = ##t
+                            R1 * 1/8
                             % AFTER:
                             % COMMANDS:
+                              %! +SCORE
                             \stopStaff \startStaff
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
+                              %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
                             % BEFORE:
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
+                              %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 9/32
-                            s1 * 9/32
+                            % BEFORE:
+                            % COMMANDS:
+                              %! +SCORE
+                            \once \override MultiMeasureRest.transparent = ##t
+                            R1 * 9/32
                             % AFTER:
                             % COMMANDS:
+                              %! +SCORE
                             \stopStaff \startStaff
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
+                              %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
                             % BEFORE:
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
+                              %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 7/32
-                            s1 * 7/32
+                            % BEFORE:
+                            % COMMANDS:
+                              %! +SCORE
+                            \once \override MultiMeasureRest.transparent = ##t
+                            R1 * 7/32
                             % AFTER:
                             % COMMANDS:
+                              %! +SCORE
                             \stopStaff \startStaff
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
+                              %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
                             % BEFORE:
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
+                              %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 7/32
-                            s1 * 7/32
+                            % BEFORE:
+                            % COMMANDS:
+                              %! +SCORE
+                            \once \override MultiMeasureRest.transparent = ##t
+                            R1 * 7/32
                             % AFTER:
                             % COMMANDS:
+                              %! +SCORE
                             \stopStaff \startStaff
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
+                              %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
                             % BEFORE:
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
+                              %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 5/32
-                            s1 * 5/32
+                            % BEFORE:
+                            % COMMANDS:
+                              %! +SCORE
+                            \once \override MultiMeasureRest.transparent = ##t
+                            R1 * 5/32
                             % AFTER:
                             % COMMANDS:
+                              %! +SCORE
                             \stopStaff \startStaff
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
+                              %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
                             % BEFORE:
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
+                              %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 1/8
-                            s1 * 1/8
+                            % BEFORE:
+                            % COMMANDS:
+                              %! +SCORE
+                            \once \override MultiMeasureRest.transparent = ##t
+                            R1 * 1/8
                             % AFTER:
                             % COMMANDS:
+                              %! +SCORE
                             \stopStaff \startStaff
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
+                              %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
                             % BEFORE:
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
+                              %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 1/8
-                            s1 * 1/8
+                            % BEFORE:
+                            % COMMANDS:
+                              %! +SCORE
+                            \once \override MultiMeasureRest.transparent = ##t
+                            R1 * 1/8
                             % AFTER:
                             % COMMANDS:
+                              %! +SCORE
                             \stopStaff \startStaff
                         % CLOSE_BRACKETS:
                         }
@@ -862,101 +1053,157 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Trompeten in C }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ tpt. }
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/16
-                                    s1 * 3/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/16
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 9/32
-                                    s1 * 9/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 9/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 5/32
-                                    s1 * 5/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 5/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -977,101 +1224,157 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tenorposaunen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pos. }
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/16
-                                    s1 * 3/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/16
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 9/32
-                                    s1 * 9/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 9/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 5/32
-                                    s1 * 5/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 5/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -1092,101 +1395,157 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tuben }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { tb. }
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/16
-                                    s1 * 3/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/16
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 9/32
-                                    s1 * 9/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 9/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 5/32
-                                    s1 * 5/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 5/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -1219,101 +1578,157 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Klavier }
                                     \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { klav. }
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/16
-                                    s1 * 3/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/16
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 9/32
-                                    s1 * 9/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 9/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 5/32
-                                    s1 * 5/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 5/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -1334,99 +1749,155 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/16
-                                    s1 * 3/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/16
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 9/32
-                                    s1 * 9/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 9/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 5/32
-                                    s1 * 5/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 5/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -1476,15 +1947,20 @@
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     \<
+                                      %! abjad.glissando(7)
                                     \glissando
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
+                                      %! abjad.glissando(1)
                                     \hide NoteHead
+                                      %! abjad.glissando(1)
                                     \override Accidental.stencil = ##f
+                                      %! abjad.glissando(1)
                                     \override NoteColumn.glissando-skip = ##t
+                                      %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
                                     \revert Staff.Stem.stemlet-length
                                     <a''' bf''' ds'''' e'''' fs''''>16
@@ -1512,9 +1988,13 @@
                                     [
                                     % OPENING:
                                     % COMMANDS:
+                                      %! abjad.glissando(6)
                                     \revert Accidental.stencil
+                                      %! abjad.glissando(6)
                                     \revert NoteColumn.glissando-skip
+                                      %! abjad.glissando(6)
                                     \revert NoteHead.no-ledgers
+                                      %! abjad.glissando(6)
                                     \undo \hide NoteHead
                                     \revert Staff.Stem.stemlet-length
                                     <a''' bf''' ds'''' e'''' fs''''>32
@@ -1530,51 +2010,79 @@
                                     r8
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 9/32
-                                    s1 * 9/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 9/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     r8.
                                     % BEFORE:
@@ -1589,15 +2097,20 @@
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     \<
+                                      %! abjad.glissando(7)
                                     \glissando
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
+                                      %! abjad.glissando(1)
                                     \hide NoteHead
+                                      %! abjad.glissando(1)
                                     \override Accidental.stencil = ##f
+                                      %! abjad.glissando(1)
                                     \override NoteColumn.glissando-skip = ##t
+                                      %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
                                     \override Staff.Stem.stemlet-length = 0.75
                                     <a''' bf''' ds'''' e'''' fs''''>8..
@@ -1608,9 +2121,13 @@
                                     [
                                     % OPENING:
                                     % COMMANDS:
+                                      %! abjad.glissando(6)
                                     \revert Accidental.stencil
+                                      %! abjad.glissando(6)
                                     \revert NoteColumn.glissando-skip
+                                      %! abjad.glissando(6)
                                     \revert NoteHead.no-ledgers
+                                      %! abjad.glissando(6)
                                     \undo \hide NoteHead
                                     \revert Staff.Stem.stemlet-length
                                     <a''' bf''' ds'''' e'''' fs''''>32
@@ -1626,15 +2143,22 @@
                                     \ottava 0
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -1655,99 +2179,155 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/16
-                                    s1 * 3/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/16
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 9/32
-                                    s1 * 9/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 9/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 5/32
-                                    s1 * 5/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 5/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -1772,101 +2352,157 @@
                         {
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
+                              %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
                             % BEFORE:
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Pauken }
                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pk. }
+                              %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 3/16
-                            s1 * 3/16
+                            % BEFORE:
+                            % COMMANDS:
+                              %! +SCORE
+                            \once \override MultiMeasureRest.transparent = ##t
+                            R1 * 3/16
                             % AFTER:
                             % COMMANDS:
+                              %! +SCORE
                             \stopStaff \startStaff
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
+                              %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
                             % BEFORE:
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
+                              %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 1/8
-                            s1 * 1/8
+                            % BEFORE:
+                            % COMMANDS:
+                              %! +SCORE
+                            \once \override MultiMeasureRest.transparent = ##t
+                            R1 * 1/8
                             % AFTER:
                             % COMMANDS:
+                              %! +SCORE
                             \stopStaff \startStaff
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
+                              %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
                             % BEFORE:
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
+                              %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 9/32
-                            s1 * 9/32
+                            % BEFORE:
+                            % COMMANDS:
+                              %! +SCORE
+                            \once \override MultiMeasureRest.transparent = ##t
+                            R1 * 9/32
                             % AFTER:
                             % COMMANDS:
+                              %! +SCORE
                             \stopStaff \startStaff
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
+                              %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
                             % BEFORE:
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
+                              %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 7/32
-                            s1 * 7/32
+                            % BEFORE:
+                            % COMMANDS:
+                              %! +SCORE
+                            \once \override MultiMeasureRest.transparent = ##t
+                            R1 * 7/32
                             % AFTER:
                             % COMMANDS:
+                              %! +SCORE
                             \stopStaff \startStaff
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
+                              %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
                             % BEFORE:
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
+                              %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 7/32
-                            s1 * 7/32
+                            % BEFORE:
+                            % COMMANDS:
+                              %! +SCORE
+                            \once \override MultiMeasureRest.transparent = ##t
+                            R1 * 7/32
                             % AFTER:
                             % COMMANDS:
+                              %! +SCORE
                             \stopStaff \startStaff
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
+                              %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
                             % BEFORE:
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
+                              %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 5/32
-                            s1 * 5/32
+                            % BEFORE:
+                            % COMMANDS:
+                              %! +SCORE
+                            \once \override MultiMeasureRest.transparent = ##t
+                            R1 * 5/32
                             % AFTER:
                             % COMMANDS:
+                              %! +SCORE
                             \stopStaff \startStaff
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
+                              %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
                             % BEFORE:
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
+                              %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 1/8
-                            s1 * 1/8
+                            % BEFORE:
+                            % COMMANDS:
+                              %! +SCORE
+                            \once \override MultiMeasureRest.transparent = ##t
+                            R1 * 1/8
                             % AFTER:
                             % COMMANDS:
+                              %! +SCORE
                             \stopStaff \startStaff
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
+                              %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
                             % BEFORE:
                             % COMMANDS:
                             \once \override Rest.transparent = ##t
+                              %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 1/8
-                            s1 * 1/8
+                            % BEFORE:
+                            % COMMANDS:
+                              %! +SCORE
+                            \once \override MultiMeasureRest.transparent = ##t
+                            R1 * 1/8
                             % AFTER:
                             % COMMANDS:
+                              %! +SCORE
                             \stopStaff \startStaff
                         % CLOSE_BRACKETS:
                         }
@@ -1936,18 +2572,25 @@
                                     c'4
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \!
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -2119,18 +2762,25 @@
                                     - \stopped
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
                                     % AFTER:
                                     % ARTICULATIONS:
                                     \!
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -2163,101 +2813,157 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/16
-                                    s1 * 3/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/16
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 9/32
-                                    s1 * 9/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 9/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 5/32
-                                    s1 * 5/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 5/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -2278,101 +2984,157 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/16
-                                    s1 * 3/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/16
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 9/32
-                                    s1 * 9/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 9/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 5/32
-                                    s1 * 5/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 5/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -2393,101 +3155,157 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/16
-                                    s1 * 3/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/16
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 9/32
-                                    s1 * 9/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 9/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 5/32
-                                    s1 * 5/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 5/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -2508,101 +3326,157 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/16
-                                    s1 * 3/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/16
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 9/32
-                                    s1 * 9/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 9/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 5/32
-                                    s1 * 5/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 5/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -2623,101 +3497,157 @@
                                 {
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Kontrabässe }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kb. }
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 3/16
-                                    s1 * 3/16
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/16
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 9/32
-                                    s1 * 9/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 9/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 7/32
-                                    s1 * 7/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 7/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 5/32
-                                    s1 * 5/32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 5/32
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Rest.transparent = ##t
+                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    s1 * 1/8
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/8
                                     % AFTER:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \stopStaff \startStaff
                                 % CLOSE_BRACKETS:
                                 }
@@ -2735,4 +3665,5 @@
         }
     % CLOSE_BRACKETS:
     >>
+  %! abjad.LilyPondFile._get_format_pieces()
 }

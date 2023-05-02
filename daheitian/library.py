@@ -1826,6 +1826,7 @@ def blank_measure_by_hand(score, voice_names, measures, clef_whitespace=False):
                         abjad.LilyPondLiteral(r"\stopStaff \startStaff", "after"),
                     ],
                     selector=trinton.select_leaves_by_index([0]),
+                    tag=abjad.Tag("+SCORE"),
                 ),
                 voice=score[voice_name],
             )
