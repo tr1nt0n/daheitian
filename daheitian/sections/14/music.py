@@ -70,6 +70,10 @@ for voice_name in [
         rmakers.extract_trivial,
         library.fuse_durations([(3, 8)]),
         trinton.beam_durations([(3, 8)], beam_rests=True),
+        trinton.attachment_command(
+            attachments=[abjad.Dynamic("ff")],
+            selector=trinton.select_leaves_by_index([0], pitched=True),
+        ),
         voice=score[voice_name],
     )
 
@@ -181,6 +185,22 @@ trinton.make_music(
     ),
     voice=score["flute divisi voice"],
     beam_meter=True,
+)
+
+# oboe music commands
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (6,)),
+    evans.PitchHandler(["c''"]),
+    trinton.hooked_spanner_command(
+        string=library._fundamental_to_multiphonic["c''"].string,
+        full_string=True,
+        padding=7.5,
+        style="solid-line-with-hook",
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+        right_padding=1.5,
+    ),
+    voice=score["oboe voice"],
 )
 
 # bass clarinet music commands
@@ -301,6 +321,43 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, 0, -1]),
     ),
     voice=score["bassclarinet div voice"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (6,)),
+    evans.PitchHandler([-3]),
+    trinton.change_notehead_command(notehead="lowest"),
+    library.remove_accidentals(),
+    trinton.hooked_spanner_command(
+        string=library.return_boxed_markup(
+            string="Überblasen",
+        ),
+        full_string=True,
+        padding=4.5,
+        style="solid-line-with-hook",
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+        right_padding=2,
+    ),
+    voice=score["bassclarinet voice"],
+)
+
+# bassoon music commands
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (6,)),
+    evans.PitchHandler(
+        [
+            "d",
+        ]
+    ),
+    trinton.attachment_command(
+        attachments=[
+            abjad.Clef("bass"),
+        ],
+        selector=trinton.select_leaves_by_index([0], pitched=True),
+    ),
+    library.attach_multiphonics(),
+    voice=score["bassoon voice"],
 )
 
 # piano music commands
@@ -441,10 +498,6 @@ for voice_name in ["violin 1 voice", "violin 2 voice", "cello voice"]:
             ],
         ),
         library.change_lines(lines=4, clef="percussion"),
-        trinton.attachment_command(
-            attachments=[abjad.Dynamic("ff")],
-            selector=trinton.select_leaves_by_index([0], pitched=True),
-        ),
         voice=score[voice_name],
     )
 

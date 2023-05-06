@@ -415,15 +415,22 @@
                                     r16
                                     r16
                                     r16
-                                    c'16
+                                    c''16
                                     - \marcato
+                                    \ff
+                                    - \tweak padding #7.5
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1.5
+                                    \startTextSpan
                                     r16
                                     ]
                                     r16
                                     [
                                     r16
-                                    c'16
+                                    c''16
                                     - \marcato
+                                    \stopTextSpan
                                     r16
                                     r16
                                     r16
@@ -758,8 +765,19 @@
                                     r16
                                     [
                                     r16
-                                    c'16
+                                    \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                                    \once \override Staff.Accidental.stencil = ##f
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                                    \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                                    a16
                                     - \marcato
+                                    \ff
+                                    - \tweak padding #4.5
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Überblasen } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2
+                                    \startTextSpan
                                     r16
                                     r16
                                     r16
@@ -768,8 +786,14 @@
                                     [
                                     r16
                                     r16
-                                    c'16
+                                    \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                                    \once \override Staff.Accidental.stencil = ##f
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                                    \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                                    a16
                                     - \marcato
+                                    \stopTextSpan
                                     r16
                                     r16
                                     ]
@@ -911,8 +935,11 @@
                                     r16
                                     [
                                     r16
-                                    c'16
+                                    \clef "bass"
+                                    d16
                                     - \marcato
+                                    \ff
+                                    ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
                                     r16
                                     r16
                                     r16
