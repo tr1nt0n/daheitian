@@ -3285,8 +3285,9 @@
                                     % ARTICULATIONS:
                                     - \espressivo
                                     \arpeggio
-                                    \ff
                                     % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \<
                                     ~
                                     <a''' bf''' ds'''' e'''' fs''''>8
                                     % AFTER:
@@ -3319,6 +3320,7 @@
                                     % ARTICULATIONS:
                                     - \espressivo
                                     \arpeggio
+                                    \ff
                                     % SPANNER_STARTS:
                                     ~
                                     <g''' a''' bf''' ds'''' e''''>8

@@ -423,13 +423,15 @@ trinton.make_music(
         attachments=[abjad.Arpeggio()],
         selector=trinton.logical_ties(pitched=True, first=True),
     ),
-    trinton.attachment_command(
-        attachments=[abjad.Dynamic("ff")],
-        selector=trinton.select_leaves_by_index(
+    trinton.linear_attachment_command(
+        attachments=[abjad.StartHairpin("o<"), abjad.Dynamic("ff")],
+        selector=trinton.select_logical_ties_by_index(
             [
                 0,
+                -1,
             ],
             pitched=True,
+            first=True,
         ),
     ),
     trinton.attachment_command(

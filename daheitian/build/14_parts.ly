@@ -1878,7 +1878,8 @@
                                     :32
                                     - \espressivo
                                     \arpeggio
-                                    \ff
+                                    - \tweak circled-tip ##t
+                                    \<
                                     ~
                                     <a''' bf''' ds'''' e'''' fs''''>8
                                     :64
@@ -1899,6 +1900,7 @@
                                     :32
                                     - \espressivo
                                     \arpeggio
+                                    \ff
                                     ~
                                     <g''' a''' bf''' ds'''' e''''>8
                                     :64
