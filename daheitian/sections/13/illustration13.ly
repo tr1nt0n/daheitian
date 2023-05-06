@@ -2376,12 +2376,13 @@
                                           %! abjad.glissando(1)
                                         \override NoteHead.no-ledgers = ##t
                                         eqf8
+                                            % CLOSING:
+                                            % COMMANDS:
+                                            ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                         % AFTER:
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         ^ \>
-                                        % COMMANDS:
-                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                         % OPENING:
                                         % COMMANDS:
                                           %! abjad.glissando(6)
@@ -2428,12 +2429,13 @@
                                           %! abjad.glissando(1)
                                         \override NoteHead.no-ledgers = ##t
                                         eqf4
+                                            % CLOSING:
+                                            % COMMANDS:
+                                            ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                         % AFTER:
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         ^ \>
-                                        % COMMANDS:
-                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                         % OPENING:
                                         % COMMANDS:
                                           %! abjad.glissando(6)
@@ -2479,12 +2481,13 @@
                                           %! abjad.glissando(1)
                                         \override NoteHead.no-ledgers = ##t
                                         eqf8
+                                            % CLOSING:
+                                            % COMMANDS:
+                                            ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                         % AFTER:
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         ^ \>
-                                        % COMMANDS:
-                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                         % OPENING:
                                         % COMMANDS:
                                           %! abjad.glissando(6)
@@ -2533,12 +2536,13 @@
                                           %! abjad.glissando(1)
                                         \override NoteHead.no-ledgers = ##t
                                         eqf8
+                                            % CLOSING:
+                                            % COMMANDS:
+                                            ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                         % AFTER:
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         ^ \>
-                                        % COMMANDS:
-                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                         % OPENING:
                                         % COMMANDS:
                                           %! abjad.glissando(6)
@@ -2584,12 +2588,13 @@
                                           %! abjad.glissando(1)
                                         \override NoteHead.no-ledgers = ##t
                                         eqf4
+                                            % CLOSING:
+                                            % COMMANDS:
+                                            ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                         % AFTER:
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         ^ \>
-                                        % COMMANDS:
-                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                         % OPENING:
                                         % COMMANDS:
                                           %! abjad.glissando(6)
@@ -2636,12 +2641,13 @@
                                           %! abjad.glissando(1)
                                         \override NoteHead.no-ledgers = ##t
                                         eqf8
+                                            % CLOSING:
+                                            % COMMANDS:
+                                            ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                         % AFTER:
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         ^ \>
-                                        % COMMANDS:
-                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                         % OPENING:
                                         % COMMANDS:
                                           %! abjad.glissando(6)
@@ -2690,12 +2696,13 @@
                                           %! abjad.glissando(1)
                                         \override NoteHead.no-ledgers = ##t
                                         eqf8
+                                            % CLOSING:
+                                            % COMMANDS:
+                                            ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
                                         % AFTER:
                                         % SPANNER_STARTS:
                                         - \tweak circled-tip ##t
                                         ^ \>
-                                        % COMMANDS:
-                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
                                         % OPENING:
                                         % COMMANDS:
                                           %! abjad.glissando(6)
@@ -2739,12 +2746,13 @@
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
                                     eqf8
+                                        % CLOSING:
+                                        % COMMANDS:
+                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "ppp"))
                                     % AFTER:
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     ^ \>
-                                    % COMMANDS:
-                                    ^ #(make-dynamic-script (markup #:whiteout #:italic "ppp"))
                                     % OPENING:
                                     % COMMANDS:
                                       %! abjad.glissando(6)
@@ -4486,6 +4494,7 @@
                                     % STEM_TREMOLOS:
                                     :32
                                     % ARTICULATIONS:
+                                    - \espressivo
                                     \arpeggio
                                     \ff
                                     % SPANNER_STARTS:
@@ -4504,6 +4513,7 @@
                                     % STEM_TREMOLOS:
                                     :32
                                     % ARTICULATIONS:
+                                    - \espressivo
                                     \arpeggio
                                     % SPANNER_STARTS:
                                     ~
@@ -4525,6 +4535,7 @@
                                     % STEM_TREMOLOS:
                                     :128
                                     % ARTICULATIONS:
+                                    - \espressivo
                                     \arpeggio
                                     % SPANNER_STARTS:
                                     ~
@@ -4548,6 +4559,7 @@
                                     % STEM_TREMOLOS:
                                     :64
                                     % ARTICULATIONS:
+                                    - \espressivo
                                     \arpeggio
                                     % SPANNER_STARTS:
                                     ~
@@ -4589,6 +4601,7 @@
                                     % STEM_TREMOLOS:
                                     :32
                                     % ARTICULATIONS:
+                                    - \espressivo
                                     \arpeggio
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
@@ -4636,6 +4649,7 @@
                                     % STEM_TREMOLOS:
                                     :64
                                     % ARTICULATIONS:
+                                    - \espressivo
                                     \arpeggio
                                     % SPANNER_STARTS:
                                     ~
@@ -4670,6 +4684,7 @@
                                     % STEM_TREMOLOS:
                                     :128
                                     % ARTICULATIONS:
+                                    - \espressivo
                                     \arpeggio
                                     % SPANNER_STARTS:
                                     ~

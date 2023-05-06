@@ -17,7 +17,7 @@
             R1 * 1/4
             % AFTER:
             % MARKUP:
-            ^ \markup \fontsize #7.5 \center-column { "37\"" }
+            ^ \markup \override #'(font-name . "Bodoni72 Book") \fontsize #7.5 \center-column { "37\"" }
             _ \markup \center-column { \abs-fontsize #15 \musicglyph "scripts.uverylongfermata" }
             % ABSOLUTE_AFTER:
             % COMMANDS:

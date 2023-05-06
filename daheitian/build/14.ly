@@ -1,13 +1,3 @@
-  %! abjad.LilyPondFile._get_format_pieces()
-\version "2.23.14"
-  %! abjad.LilyPondFile._get_format_pieces()
-\language "english"
-\include "/Users/trintonprater/scores/daheitian/daheitian/build/daheitian-stylesheet.ily"
-\include "/Users/trintonprater/abjad/abjad/scm/abjad.ily"
-  %! abjad.LilyPondFile._get_format_pieces()
-\score
-  %! abjad.LilyPondFile._get_format_pieces()
-{
     % OPEN_BRACKETS:
     \context Score = "Score"
     <<
@@ -5845,4 +5835,3 @@
     % CLOSE_BRACKETS:
     >>
   %! abjad.LilyPondFile._get_format_pieces()
-}

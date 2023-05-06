@@ -315,7 +315,11 @@ trinton.fermata_measures(
 trinton.make_music(
     lambda _: trinton.select_target(_, (1,)),
     trinton.attachment_command(
-        attachments=[abjad.Markup(r'\markup \fontsize #7.5 \center-column { "37\"" }')],
+        attachments=[
+            abjad.Markup(
+                r"""\markup \override #'(font-name . "Bodoni72 Book") \fontsize #7.5 \center-column { "37\"" }"""
+            )
+        ],
         selector=trinton.select_leaves_by_index([0]),
         direction=abjad.UP,
     ),

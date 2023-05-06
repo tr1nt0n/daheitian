@@ -7,7 +7,7 @@
             \once \override Score.TimeSignature.stencil = ##f
             \time 1/4
             R1 * 1/4
-            ^ \markup \fontsize #7.5 \center-column { "37\"" }
+            ^ \markup \override #'(font-name . "Bodoni72 Book") \fontsize #7.5 \center-column { "37\"" }
             _ \markup \center-column { \abs-fontsize #15 \musicglyph "scripts.uverylongfermata" }
             \once \override Score.BarLine.transparent = ##f
             \time 3/4

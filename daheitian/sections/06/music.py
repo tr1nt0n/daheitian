@@ -249,6 +249,10 @@ trinton.make_music(
             pitched=True,
         ),
     ),
+    trinton.attachment_command(
+        attachments=[abjad.Articulation("espressivo")],
+        selector=trinton.logical_ties(pitched=True, first=True),
+    ),
     voice=score["harp 1 voice"],
 )
 

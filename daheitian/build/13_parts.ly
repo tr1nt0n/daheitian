@@ -1392,9 +1392,9 @@
                                           %! abjad.glissando(1)
                                         \override NoteHead.no-ledgers = ##t
                                         eqf8
+                                            ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                         - \tweak circled-tip ##t
                                         ^ \>
-                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                           %! abjad.glissando(6)
                                         \revert Accidental.stencil
                                           %! abjad.glissando(6)
@@ -1428,9 +1428,9 @@
                                           %! abjad.glissando(1)
                                         \override NoteHead.no-ledgers = ##t
                                         eqf4
+                                            ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                         - \tweak circled-tip ##t
                                         ^ \>
-                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                           %! abjad.glissando(6)
                                         \revert Accidental.stencil
                                           %! abjad.glissando(6)
@@ -1463,9 +1463,9 @@
                                           %! abjad.glissando(1)
                                         \override NoteHead.no-ledgers = ##t
                                         eqf8
+                                            ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                         - \tweak circled-tip ##t
                                         ^ \>
-                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                           %! abjad.glissando(6)
                                         \revert Accidental.stencil
                                           %! abjad.glissando(6)
@@ -1500,9 +1500,9 @@
                                           %! abjad.glissando(1)
                                         \override NoteHead.no-ledgers = ##t
                                         eqf8
+                                            ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                         - \tweak circled-tip ##t
                                         ^ \>
-                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                           %! abjad.glissando(6)
                                         \revert Accidental.stencil
                                           %! abjad.glissando(6)
@@ -1535,9 +1535,9 @@
                                           %! abjad.glissando(1)
                                         \override NoteHead.no-ledgers = ##t
                                         eqf4
+                                            ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                         - \tweak circled-tip ##t
                                         ^ \>
-                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                           %! abjad.glissando(6)
                                         \revert Accidental.stencil
                                           %! abjad.glissando(6)
@@ -1571,9 +1571,9 @@
                                           %! abjad.glissando(1)
                                         \override NoteHead.no-ledgers = ##t
                                         eqf8
+                                            ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                         - \tweak circled-tip ##t
                                         ^ \>
-                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
                                           %! abjad.glissando(6)
                                         \revert Accidental.stencil
                                           %! abjad.glissando(6)
@@ -1608,9 +1608,9 @@
                                           %! abjad.glissando(1)
                                         \override NoteHead.no-ledgers = ##t
                                         eqf8
+                                            ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
                                         - \tweak circled-tip ##t
                                         ^ \>
-                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
                                           %! abjad.glissando(6)
                                         \revert Accidental.stencil
                                           %! abjad.glissando(6)
@@ -1641,9 +1641,9 @@
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
                                     eqf8
+                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "ppp"))
                                     - \tweak circled-tip ##t
                                     ^ \>
-                                    ^ #(make-dynamic-script (markup #:whiteout #:italic "ppp"))
                                       %! abjad.glissando(6)
                                     \revert Accidental.stencil
                                       %! abjad.glissando(6)
@@ -2659,6 +2659,7 @@
                                     \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
                                     <a''' bf''' ds'''' e'''' fs''''>4..
                                     :32
+                                    - \espressivo
                                     \arpeggio
                                     \ff
                                     ~
@@ -2670,6 +2671,7 @@
                                     r4
                                     <g''' a''' bf''' ds'''' e''''>4
                                     :32
+                                    - \espressivo
                                     \arpeggio
                                     ~
                                     <g''' a''' bf''' ds'''' e''''>4
@@ -2682,6 +2684,7 @@
                                     \once \override Tie.transparent = ##f
                                     <a''' bf''' ds'''' e'''' fs''''>16
                                     :128
+                                    - \espressivo
                                     \arpeggio
                                     ~
                                     <a''' bf''' ds'''' e'''' fs''''>8.
@@ -2695,6 +2698,7 @@
                                     r8
                                     <g''' a''' bf''' ds'''' e''''>8
                                     :64
+                                    - \espressivo
                                     \arpeggio
                                     ~
                                     <g''' a''' bf''' ds'''' e''''>8.
@@ -2718,6 +2722,7 @@
                                 %%% \stopStaff \startStaff
                                     <a''' bf''' ds'''' e'''' fs''''>4
                                     :32
+                                    - \espressivo
                                     \arpeggio
                                     - \tweak circled-tip ##t
                                     \>
@@ -2745,6 +2750,7 @@
                                 %%% \stopStaff \startStaff
                                     <g''' a''' bf''' ds'''' e''''>8
                                     :64
+                                    - \espressivo
                                     \arpeggio
                                     ~
                                     <g''' a''' bf''' ds'''' e''''>8.
@@ -2764,6 +2770,7 @@
                                     \once \override Tie.transparent = ##f
                                     <a''' bf''' ds'''' e'''' fs''''>16
                                     :128
+                                    - \espressivo
                                     \arpeggio
                                     ~
                                     <a''' bf''' ds'''' e'''' fs''''>8

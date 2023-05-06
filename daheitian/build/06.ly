@@ -675,12 +675,13 @@
                                                   %! abjad.glissando(1)
                                                 \override NoteHead.no-ledgers = ##t
                                                 bqf4
+                                                    % CLOSING:
+                                                    % COMMANDS:
+                                                    ^ #(make-dynamic-script (markup #:whiteout #:italic "pppp"))
                                                 % AFTER:
                                                 % SPANNER_STARTS:
                                                 - \tweak circled-tip ##t
                                                 ^ \>
-                                                % COMMANDS:
-                                                ^ #(make-dynamic-script (markup #:whiteout #:italic "pppp"))
                                                 % OPENING:
                                                 % COMMANDS:
                                                   %! abjad.glissando(6)
@@ -721,12 +722,13 @@
                                               %! abjad.glissando(1)
                                             \override NoteHead.no-ledgers = ##t
                                             bqf8
+                                                % CLOSING:
+                                                % COMMANDS:
+                                                ^ #(make-dynamic-script (markup #:whiteout #:italic "ppp"))
                                             % AFTER:
                                             % SPANNER_STARTS:
                                             - \tweak circled-tip ##t
                                             ^ \>
-                                            % COMMANDS:
-                                            ^ #(make-dynamic-script (markup #:whiteout #:italic "ppp"))
                                             % OPENING:
                                             % COMMANDS:
                                               %! abjad.glissando(6)
@@ -769,12 +771,13 @@
                                                   %! abjad.glissando(1)
                                                 \override NoteHead.no-ledgers = ##t
                                                 bqf4
+                                                    % CLOSING:
+                                                    % COMMANDS:
+                                                    ^ #(make-dynamic-script (markup #:whiteout #:italic "ppp"))
                                                 % AFTER:
                                                 % SPANNER_STARTS:
                                                 - \tweak circled-tip ##t
                                                 ^ \>
-                                                % COMMANDS:
-                                                ^ #(make-dynamic-script (markup #:whiteout #:italic "ppp"))
                                                 % OPENING:
                                                 % COMMANDS:
                                                   %! abjad.glissando(6)
@@ -818,12 +821,13 @@
                                                   %! abjad.glissando(1)
                                                 \override NoteHead.no-ledgers = ##t
                                                 bqf4
+                                                    % CLOSING:
+                                                    % COMMANDS:
+                                                    ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
                                                 % AFTER:
                                                 % SPANNER_STARTS:
                                                 - \tweak circled-tip ##t
                                                 ^ \>
-                                                % COMMANDS:
-                                                ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
                                                 % OPENING:
                                                 % COMMANDS:
                                                   %! abjad.glissando(6)
@@ -1881,6 +1885,7 @@
                                     % STEM_TREMOLOS:
                                     :64
                                     % ARTICULATIONS:
+                                    - \espressivo
                                     \arpeggio
                                     \ppp
                                     % SPANNER_STARTS:
@@ -1905,6 +1910,7 @@
                                     % STEM_TREMOLOS:
                                     :32
                                     % ARTICULATIONS:
+                                    - \espressivo
                                     \arpeggio
                                     r4
                                     <a''' bf''' ds'''' e'''' fs''''>4
@@ -1912,6 +1918,7 @@
                                     % STEM_TREMOLOS:
                                     :32
                                     % ARTICULATIONS:
+                                    - \espressivo
                                     \arpeggio
                                     r4
                                     r4.
@@ -1920,6 +1927,7 @@
                                     % STEM_TREMOLOS:
                                     :32
                                     % ARTICULATIONS:
+                                    - \espressivo
                                     \arpeggio
                                     % SPANNER_STARTS:
                                     ~

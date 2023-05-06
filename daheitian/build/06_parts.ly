@@ -356,9 +356,9 @@
                                                   %! abjad.glissando(1)
                                                 \override NoteHead.no-ledgers = ##t
                                                 bqf4
+                                                    ^ #(make-dynamic-script (markup #:whiteout #:italic "pppp"))
                                                 - \tweak circled-tip ##t
                                                 ^ \>
-                                                ^ #(make-dynamic-script (markup #:whiteout #:italic "pppp"))
                                                   %! abjad.glissando(6)
                                                 \revert Accidental.stencil
                                                   %! abjad.glissando(6)
@@ -387,9 +387,9 @@
                                               %! abjad.glissando(1)
                                             \override NoteHead.no-ledgers = ##t
                                             bqf8
+                                                ^ #(make-dynamic-script (markup #:whiteout #:italic "ppp"))
                                             - \tweak circled-tip ##t
                                             ^ \>
-                                            ^ #(make-dynamic-script (markup #:whiteout #:italic "ppp"))
                                               %! abjad.glissando(6)
                                             \revert Accidental.stencil
                                               %! abjad.glissando(6)
@@ -420,9 +420,9 @@
                                                   %! abjad.glissando(1)
                                                 \override NoteHead.no-ledgers = ##t
                                                 bqf4
+                                                    ^ #(make-dynamic-script (markup #:whiteout #:italic "ppp"))
                                                 - \tweak circled-tip ##t
                                                 ^ \>
-                                                ^ #(make-dynamic-script (markup #:whiteout #:italic "ppp"))
                                                   %! abjad.glissando(6)
                                                 \revert Accidental.stencil
                                                   %! abjad.glissando(6)
@@ -454,9 +454,9 @@
                                                   %! abjad.glissando(1)
                                                 \override NoteHead.no-ledgers = ##t
                                                 bqf4
+                                                    ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
                                                 - \tweak circled-tip ##t
                                                 ^ \>
-                                                ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
                                                   %! abjad.glissando(6)
                                                 \revert Accidental.stencil
                                                   %! abjad.glissando(6)
@@ -1060,6 +1060,7 @@
                                     \ottava 1
                                     <a''' bf''' ds'''' e'''' fs''''>8
                                     :64
+                                    - \espressivo
                                     \arpeggio
                                     \ppp
                                     ~
@@ -1074,15 +1075,18 @@
                                     r4
                                     <g''' a''' bf''' ds'''' e''''>4
                                     :32
+                                    - \espressivo
                                     \arpeggio
                                     r4
                                     <a''' bf''' ds'''' e'''' fs''''>4
                                     :32
+                                    - \espressivo
                                     \arpeggio
                                     r4
                                     r4.
                                     <g''' a''' bf''' ds'''' e''''>4.
                                     :32
+                                    - \espressivo
                                     \arpeggio
                                     ~
                                     <g''' a''' bf''' ds'''' e''''>8

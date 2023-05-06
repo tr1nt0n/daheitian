@@ -1721,16 +1721,24 @@ def handle_clefs(selector=trinton.pleaves()):
     return clefs
 
 
-def piano_pedals(selector=trinton.pleaves()):
+def piano_pedals(selector=trinton.pleaves(), counts=None):
     def pedals(argument):
         selections = selector(argument)
         logical_ties = abjad.select.logical_ties(selections, pitched=True)
 
-        groups = abjad.sequence.partition_by_counts(
-            sequence=logical_ties,
-            counts=[3 for _ in range(len(logical_ties))],
-            overhang=True,
-        )
+        if counts is not None:
+            groups = abjad.sequence.partition_by_counts(
+                sequence=logical_ties,
+                counts=counts,
+                overhang=True,
+            )
+
+        else:
+            groups = abjad.sequence.partition_by_counts(
+                sequence=logical_ties,
+                counts=[3 for _ in range(len(logical_ties))],
+                overhang=True,
+            )
         for group in groups:
             abjad.piano_pedal(group)
 
