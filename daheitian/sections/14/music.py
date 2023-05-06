@@ -215,8 +215,12 @@ trinton.make_music(
         no_ties=True,
     ),
     trinton.linear_attachment_command(
-        attachments=[abjad.StartHairpin("o<"), trinton.make_custom_dynamic("fffff")],
-        selector=trinton.select_leaves_by_index([0, 2]),
+        attachments=[
+            abjad.StartHairpin("o<"),
+            trinton.make_custom_dynamic("fffff"),
+            abjad.StartHairpin("o<"),
+        ],
+        selector=trinton.select_leaves_by_index([0, 2, 3]),
     ),
     trinton.arrow_spanner_command(
         l_string=library.return_boxed_markup(
@@ -227,7 +231,7 @@ trinton.make_music(
         ),
         selector=trinton.select_leaves_by_index([0, 2]),
         style="solid-line-with-arrow",
-        padding=14.5,
+        padding=15.5,
         direction="down",
         tempo=True,
         right_padding=-1,

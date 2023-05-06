@@ -975,7 +975,7 @@
                                             % SPANNER_STARTS:
                                             - \tweak circled-tip ##t
                                             \<
-                                            - \tweak padding #14.5
+                                            - \tweak padding #15.5
                                             - \abjad-solid-line-with-arrow
                                             - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ton } \hspace #0.5 }
                                             - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Überblasen }
@@ -1028,6 +1028,8 @@
                                             % STOP_BEAM:
                                             ]
                                             % SPANNER_STARTS:
+                                            - \tweak circled-tip ##t
+                                            \<
                                             ~
                                             as2
                                             % AFTER:
