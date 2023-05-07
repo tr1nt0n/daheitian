@@ -265,61 +265,333 @@
                                         }
                                     >>
                                     \oneVoice
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/4
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/4
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    r2.
+                                    r4.
+                                    r8.
+                                    \scaleDurations #'(1 . 1) {
+                                    \slashedGrace {
+                                        e''16
+                                        :128
+                                        - \accent
+                                        \ff
+                                        (
+                                        - \tweak padding #9
+                                        - \abjad-solid-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Solo } \hspace #0.5 }
+                                        - \tweak bound-details.right.padding -5
+                                        \startTextSpan
+                                    }
+                                    }
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    ds''16
+                                    :128
+                                    )
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    cs''8
+                                    :64
+                                    \stopTextSpan
+                                    ]
+                                    ~
+                                    <<
+                                        \context Voice = "flute voice temp"
+                                        {
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            \voiceTwo
+                                            cs''8
+                                            :64
+                                            [
+                                            \revert Staff.Stem.stemlet-length
+                                            ds''8
+                                            :64
+                                            ]
+                                            ~
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            ds''8.
+                                            :64
+                                            [
+                                            \repeatTie
+                                            \once \override Tie.transparent = ##f
+                                            \once \override Tie.transparent = ##f
+                                            \revert Staff.Stem.stemlet-length
+                                            cs''16
+                                            :128
+                                            ]
+                                            ~
+                                            cs''4
+                                            :32
+                                            ~
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            cs''8.
+                                            :64
+                                            [
+                                            \repeatTie
+                                            \scaleDurations #'(1 . 1) {
+                                            \slashedGrace {
+                                                e''16
+                                                :128
+                                                - \accent
+                                                (
+                                            }
+                                            }
+                                            \once \override Tie.transparent = ##f
+                                            \once \override Tie.transparent = ##f
+                                            \revert Staff.Stem.stemlet-length
+                                            ds''16
+                                            :128
+                                            ]
+                                            ~
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            ds''8
+                                            :64
+                                            )
+                                            [
+                                            \revert Staff.Stem.stemlet-length
+                                            cs''8
+                                            :64
+                                            ]
+                                            ~
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            cs''16
+                                            :128
+                                            [
+                                            \repeatTie
+                                            \revert Staff.Stem.stemlet-length
+                                            ds''8.
+                                            :64
+                                            ]
+                                            ~
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            ds''8.
+                                            :64
+                                            [
+                                            \repeatTie
+                                            \once \override Tie.transparent = ##f
+                                            \once \override Tie.transparent = ##f
+                                            \revert Staff.Stem.stemlet-length
+                                            cs''16
+                                            :128
+                                            ]
+                                            ~
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            cs''8
+                                            :64
+                                            [
+                                            \revert Staff.Stem.stemlet-length
+                                            ds''8
+                                            :64
+                                            ]
+                                            ~
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            ds''16
+                                            :128
+                                            [
+                                            \repeatTie
+                                            \revert Staff.Stem.stemlet-length
+                                            cs''8.
+                                            :64
+                                            ]
+                                            ~
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            cs''16
+                                            :128
+                                            [
+                                            \repeatTie
+                                            \scaleDurations #'(1 . 1) {
+                                            \slashedGrace {
+                                                e''16
+                                                :128
+                                                - \accent
+                                                (
+                                            }
+                                            }
+                                            \revert Staff.Stem.stemlet-length
+                                            ds''8.
+                                            :64
+                                            )
+                                            ]
+                                            cs''4
+                                            :32
+                                            ~
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            cs''16
+                                            :128
+                                            [
+                                            \repeatTie
+                                            \scaleDurations #'(1 . 1) {
+                                            \slashedGrace {
+                                                e''16
+                                                :128
+                                                - \accent
+                                                (
+                                            }
+                                            }
+                                            \revert Staff.Stem.stemlet-length
+                                            ds''8.
+                                            :64
+                                            )
+                                            ]
+                                        }
+                                        \context Voice = "flute div voice"
+                                        {
+                                            \voiceOne
+                                            f''4
+                                            :32
+                                            :32
+                                            - \tweak padding #11.5
+                                            - \abjad-solid-line-with-hook
+                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Duett } \hspace #0.5 }
+                                            - \tweak bound-details.right.padding -8
+                                            \startTextSpan
+                                            ~
+                                            f''16
+                                            :128
+                                            :128
+                                            \repeatTie
+                                            g''4..
+                                            :32
+                                            :32
+                                            ~
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            g''16
+                                            :128
+                                            :128
+                                            [
+                                            \repeatTie
+                                            \revert Staff.Stem.stemlet-length
+                                            f''8.
+                                            :64
+                                            :64
+                                            ]
+                                            ~
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            f''16
+                                            :128
+                                            :128
+                                            [
+                                            \repeatTie
+                                            \scaleDurations #'(1 . 1) {
+                                            \slashedGrace {
+                                                af''16
+                                                :128
+                                                - \accent
+                                                (
+                                            }
+                                            }
+                                            \revert Staff.Stem.stemlet-length
+                                            g''8.
+                                            :64
+                                            :64
+                                            ]
+                                            ~
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            g''8
+                                            :64
+                                            :64
+                                            )
+                                            [
+                                            \>
+                                            \repeatTie
+                                            \revert Staff.Stem.stemlet-length
+                                            f''8
+                                            :64
+                                            :64
+                                            ]
+                                            ~
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            f''8
+                                            :64
+                                            :64
+                                            [
+                                            \repeatTie
+                                            \revert Staff.Stem.stemlet-length
+                                            g''8
+                                            :64
+                                            :64
+                                            ]
+                                            ~
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            g''8.
+                                            :64
+                                            :64
+                                            \p
+                                            [
+                                            \repeatTie
+                                            \once \override Tie.transparent = ##f
+                                            \once \override Tie.transparent = ##f
+                                            \revert Staff.Stem.stemlet-length
+                                            f''16
+                                            :128
+                                            :128
+                                            ]
+                                            ~
+                                            f''4
+                                            :32
+                                            :32
+                                            ~
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            f''8.
+                                            :64
+                                            :64
+                                            [
+                                            - \tweak circled-tip ##t
+                                            \>
+                                            \repeatTie
+                                            \scaleDurations #'(1 . 1) {
+                                            \slashedGrace {
+                                                af''16
+                                                :128
+                                                :128
+                                                - \accent
+                                                - \accent
+                                                (
+                                            }
+                                            }
+                                            \once \override Tie.transparent = ##f
+                                            \once \override Tie.transparent = ##f
+                                            \revert Staff.Stem.stemlet-length
+                                            g''16
+                                            :128
+                                            :128
+                                            ]
+                                            ~
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            g''8
+                                            :64
+                                            :64
+                                            )
+                                            [
+                                            \revert Staff.Stem.stemlet-length
+                                            f''8
+                                            :64
+                                            :64
+                                            ]
+                                            ~
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            f''16
+                                            :128
+                                            :128
+                                            [
+                                            \repeatTie
+                                            \scaleDurations #'(1 . 1) {
+                                            \slashedGrace {
+                                                af''16
+                                                :128
+                                                - \accent
+                                                (
+                                            }
+                                            }
+                                            \revert Staff.Stem.stemlet-length
+                                            g''8.
+                                            :64
+                                            :64
+                                            \!
+                                            )
+                                            \stopTextSpan
+                                            ]
+                                        }
+                                    >>
+                                    \oneVoice
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                     \once \override Rest.transparent = ##t
@@ -468,34 +740,27 @@
                                     R1 * 1/4
                                       %! +SCORE
                                 %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/8
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    <aqf''' bf'''>2.
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    \-
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    <aqf''' bf'''>4
+                                    \p
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    \-
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                     \once \override Rest.transparent = ##t
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
+                                    \!
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/8
@@ -520,7 +785,7 @@
                                             as2
                                             - \tweak circled-tip ##t
                                             \<
-                                            - \tweak padding #14.5
+                                            - \tweak padding #15.5
                                             - \abjad-solid-line-with-arrow
                                             - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ton } \hspace #0.5 }
                                             - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Überblasen }
@@ -555,6 +820,8 @@
                                             \revert Staff.Stem.stemlet-length
                                             as8
                                             ]
+                                            - \tweak circled-tip ##t
+                                            \<
                                             ~
                                             as2
                                             \repeatTie
@@ -797,70 +1064,130 @@
                                     r16
                                     r16
                                     ]
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
+                                    <<
+                                        \context Voice = "bassclarinet voice temp"
+                                        {
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 9) (ly:make-duration 3 0))
+                                            \times 9/7
+                                            {
+                                                \voiceOne
+                                                bqf2
+                                                - \tweak circled-tip ##t
+                                                ^ \<
+                                                  %! abjad.glissando(7)
+                                                \glissando
+                                                \once \override Dots.staff-position = #2
+                                                  %! abjad.glissando(1)
+                                                \hide NoteHead
+                                                  %! abjad.glissando(1)
+                                                \override Accidental.stencil = ##f
+                                                  %! abjad.glissando(1)
+                                                \override NoteColumn.glissando-skip = ##t
+                                                  %! abjad.glissando(1)
+                                                \override NoteHead.no-ledgers = ##t
+                                                bqf4
+                                                    ^ #(make-dynamic-script (markup #:whiteout #:italic "ff"))
+                                                - \tweak circled-tip ##t
+                                                ^ \>
+                                                  %! abjad.glissando(6)
+                                                \revert Accidental.stencil
+                                                  %! abjad.glissando(6)
+                                                \revert NoteColumn.glissando-skip
+                                                  %! abjad.glissando(6)
+                                                \revert NoteHead.no-ledgers
+                                                  %! abjad.glissando(6)
+                                                \undo \hide NoteHead
+                                                bqf8
+                                                \!
+                                            }
+                                            r2
+                                            r8
+                                        }
+                                        \context Voice = "bass clarinet divisi voice"
+                                        {
+                                            \voiceTwo
+                                            as2
+                                            \ff
+                                            - \tweak stencil #constante-hairpin
+                                            \<
+                                              %! abjad.glissando(7)
+                                            \glissando
+                                            \once \override Dots.staff-position = #2
+                                              %! abjad.glissando(1)
+                                            \hide NoteHead
+                                              %! abjad.glissando(1)
+                                            \override Accidental.stencil = ##f
+                                              %! abjad.glissando(1)
+                                            \override NoteColumn.glissando-skip = ##t
+                                              %! abjad.glissando(1)
+                                            \override NoteHead.no-ledgers = ##t
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            as8
+                                            [
+                                            \once \override Dots.staff-position = #2
+                                            \revert Staff.Stem.stemlet-length
+                                            as8
+                                            ]
+                                            - \tweak circled-tip ##t
+                                            \>
+                                            \once \override Dots.staff-position = #2
+                                            as4
+                                            \once \override Dots.staff-position = #2
+                                            \afterGrace
+                                            as8
+                                            {
+                                                \once \override Flag.stroke-style = #"grace"
+                                                  %! abjad.glissando(6)
+                                                \revert Accidental.stencil
+                                                  %! abjad.glissando(6)
+                                                \revert NoteColumn.glissando-skip
+                                                  %! abjad.glissando(6)
+                                                \revert NoteHead.no-ledgers
+                                                  %! abjad.glissando(6)
+                                                \undo \hide NoteHead
+                                                as16
+                                                \!
+                                            }
+                                            r2
+                                            r8
+                                        }
+                                    >>
+                                    \oneVoice
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
                                       %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
+                                %%% \once \override Rest.transparent = ##t
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                       %! +SCORE
                                 %%% \stopStaff \startStaff
                                       %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
+                                %%% \once \override MultiMeasureRest.transparent = ##t
+                                      %! +SCORE
+                                %%% \once \override Rest.transparent = ##t
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/4
+                                    R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
+                                      %! +SCORE
+                                %%% \once \override Rest.transparent = ##t
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     R1 * 1/4
                                       %! +SCORE
                                 %%% \stopStaff \startStaff
                                       %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
+                                %%% \once \override MultiMeasureRest.transparent = ##t
+                                      %! +SCORE
+                                %%% \once \override Rest.transparent = ##t
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/8
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/8
+                                    R1 * 1/4
                                       %! +SCORE
                                 %%% \stopStaff \startStaff
                                 }
@@ -1122,34 +1449,145 @@
                             R1 * 1/4
                               %! +SCORE
                         %%% \stopStaff \startStaff
-                              %! +SCORE
-                        %%% \once \override Staff.BarLine.transparent = ##f
-                            \once \override Rest.transparent = ##t
-                              %! +SCORE
-                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                            r1 * 3/8
-                              %! +SCORE
-                        %%% \once \override MultiMeasureRest.transparent = ##t
-                            R1 * 3/8
-                              %! +SCORE
-                        %%% \stopStaff \startStaff
+                            \clef "treble"
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''!
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''!
+                            >32
+                            - \staccato
+                            ^ \markup \center-align { \center-column { \line { \concat { C+41 }  }\line { \concat { +35 }  } } }
+                            - \tweak circled-tip ##t
+                            \<
+                            r16.
+                            r16
+                            \override Staff.Stem.stemlet-length = 0.75
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''
+                            >32
+                            - \staccato
+                            [
+                            \revert Staff.Stem.stemlet-length
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''
+                            >32
+                            - \staccato
+                            ]
+                            \override Staff.Stem.stemlet-length = 0.75
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''
+                            >32
+                            - \staccato
+                            [
+                            \revert Staff.Stem.stemlet-length
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''
+                            >32
+                            - \staccato
+                            ]
+                            r16
+                            r32
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''
+                            >32
+                            - \staccato
+                            r32
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''
+                            >32
+                            - \staccato
+                            r8
+                            r32
+                            \override Staff.Stem.stemlet-length = 0.75
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''
+                            >32
+                            - \staccato
+                            [
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''
+                            >32
+                            - \staccato
+                            \revert Staff.Stem.stemlet-length
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''
+                            >32
+                            - \staccato
+                            ]
+                            \once \override Beam.stencil = ##f
+                            \once \override Dots.stencil = ##f
+                            \once \override Flag.stencil = ##f
+                            \once \override NoteHead.duration-log = 2
+                            \once \override Stem.stencil = ##f
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''!
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''!
+                            >4
+                            \mp
+                            ^ \multiple-staccato
+                            - \tweak circled-tip ##t
+                            \>
+                            \-
+                            \boxed-markup "Frei: Aperiodische Staccati" 1
                               %! +SCORE
                         %%% \once \override Staff.BarLine.transparent = ##f
                             \once \override Rest.transparent = ##t
                               %! +SCORE
                         %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 1/8
-                              %! +SCORE
-                        %%% \once \override MultiMeasureRest.transparent = ##t
-                            R1 * 1/8
-                              %! +SCORE
-                        %%% \stopStaff \startStaff
-                              %! +SCORE
-                        %%% \once \override Staff.BarLine.transparent = ##f
-                            \once \override Rest.transparent = ##t
-                              %! +SCORE
-                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                            r1 * 1/8
+                            \!
                               %! +SCORE
                         %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 1/8
@@ -1269,34 +1707,66 @@
                                     R1 * 1/4
                                       %! +SCORE
                                 %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    <d'' f''>32
+                                    - \staccato
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    r16.
+                                    r16
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    <d'' f''>32
+                                    - \staccato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    <d'' f''>32
+                                    - \staccato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    <d'' f''>32
+                                    - \staccato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    <d'' f''>32
+                                    - \staccato
+                                    ]
+                                    r16
+                                    r32
+                                    <d'' f''>32
+                                    - \staccato
+                                    r32
+                                    <d'' f''>32
+                                    - \staccato
+                                    r8
+                                    r32
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    <d'' f''>32
+                                    - \staccato
+                                    [
+                                    <d'' f''>32
+                                    - \staccato
+                                    \revert Staff.Stem.stemlet-length
+                                    <d'' f''>32
+                                    - \staccato
+                                    ]
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    <d'' f''>4
+                                    \mp
+                                    ^ \multiple-staccato
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    \-
+                                    \boxed-markup "Frei: Aperiodische Staccati" 1
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                     \once \override Rest.transparent = ##t
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/8
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
+                                    \!
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/8
@@ -1412,34 +1882,144 @@
                                     R1 * 1/4
                                       %! +SCORE
                                 %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''!
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''!
+                                    >32
+                                    - \staccato
+                                    ^ \markup \center-align { \center-column { \line { \concat { +29 }  }\line { \concat { +47 }  } } }
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    r16.
+                                    r16
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''
+                                    >32
+                                    - \staccato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''
+                                    >32
+                                    - \staccato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''
+                                    >32
+                                    - \staccato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''
+                                    >32
+                                    - \staccato
+                                    ]
+                                    r16
+                                    r32
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''
+                                    >32
+                                    - \staccato
+                                    r32
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''
+                                    >32
+                                    - \staccato
+                                    r8
+                                    r32
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''
+                                    >32
+                                    - \staccato
+                                    [
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''
+                                    >32
+                                    - \staccato
+                                    \revert Staff.Stem.stemlet-length
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''
+                                    >32
+                                    - \staccato
+                                    ]
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''!
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''!
+                                    >4
+                                    \mp
+                                    ^ \multiple-staccato
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    \-
+                                    \boxed-markup "Frei: Aperiodische Staccati" 1
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                     \once \override Rest.transparent = ##t
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/8
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
+                                    \!
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/8
@@ -1647,39 +2227,27 @@
                                     <af''' fs''''>4
                                     \ottava 0
                                     r4
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/4
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    r2.
+                                    r4.
+                                    r8.
+                                    \clef "bass"
+                                    <e, ef>8.
+                                    \ff
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    \clef "treble"
+                                    <ef'' e'' g'' b''>4
+                                    \ottava 1
+                                    <g''' f''''>4
+                                    \ottava 0
+                                    \clef "bass"
+                                    <fs, ef>4
+                                    r4
+                                    \clef "treble"
+                                    <ef'' fs'' g'' b''>8
+                                    r8
+                                    \!
+                                    r2
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                     \once \override Rest.transparent = ##t
@@ -1779,39 +2347,25 @@
                                     \sustainOff
                                     \ottava 0
                                     r4
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/4
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    r2.
+                                    r4.
+                                    r8.
+                                    \clef "bass"
+                                    <cs,>8.
+                                    \sustainOn
+                                    \clef "treble"
+                                    <bf a'>4
+                                    \ottava 1
+                                    <c'''>4
+                                    \sustainOff
+                                    \ottava 0
+                                    \clef "bass"
+                                    <cs,>4
+                                    r4
+                                    \clef "treble"
+                                    <bf a'>8
+                                    r8
+                                    r2
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                     \once \override Rest.transparent = ##t
@@ -1907,28 +2461,29 @@
                                     \repeatTie
                                     \ottava 0
                                     r4.
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/4
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    r2.
+                                    r4.
+                                    r8.
+                                    \ottava 1
+                                    <a''' bf''' ds'''' e'''' fs''''>8.
+                                    :64
+                                    - \espressivo
+                                    \arpeggio
+                                    \ff
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    ~
+                                    <a''' bf''' ds'''' e'''' fs''''>4
+                                    :32
+                                    \repeatTie
+                                    <g''' a''' bf''' ds'''' e''''>8.
+                                    :64
+                                    - \espressivo
+                                    \arpeggio
+                                    \ottava 0
+                                    r16
+                                    \!
+                                    r4
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                     \once \override Rest.transparent = ##t
@@ -2021,39 +2576,33 @@
                                     \stopTextSpan
                                     \repeatTie
                                     \textSpannerUp
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/4
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    r2.
+                                    r4.
+                                    r8.
+                                    \textSpannerDown
+                                    \tweak style #'la
+                                    c'8.
+                                    ^ \ff
+                                    - \tweak circled-tip ##t
+                                    ^ \>
+                                    - \tweak padding #8
+                                    - \abjad-solid-line-with-up-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { ( sim. ) } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -4
+                                    \startTextSpan
+                                    ~
+                                    \tweak style #'la
+                                    c'2.
+                                    \repeatTie
+                                    ~
+                                    \tweak style #'la
+                                    c'4.
+                                    \stopTextSpan
+                                    \repeatTie
+                                    \textSpannerUp
+                                    r8
+                                    \!
+                                    r2
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                     \once \override Rest.transparent = ##t
@@ -2384,34 +2933,34 @@
                                     R1 * 1/4
                                       %! +SCORE
                                 %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    \staff-line-count 1
+                                    \clef "percussion"
+                                    c'2.
+                                    :32
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    \-
+                                    \boxed-markup "Triangel" 1
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    \once \override StemTremolo.X-offset = 0.6
+                                    \once \override StemTremolo.Y-offset = 1.75
+                                    c'4
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
+                                    :32
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    \-
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                     \once \override Rest.transparent = ##t
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/8
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
+                                    \!
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/8
@@ -2527,34 +3076,30 @@
                                     R1 * 1/4
                                       %! +SCORE
                                 %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    \staff-line-count 1
+                                    \clef "percussion"
+                                    c'2.
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    \-
+                                    \boxed-markup "Tam-Tam mit Bogen" 1
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    c'4
+                                    \mf
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    \-
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                     \once \override Rest.transparent = ##t
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/8
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
+                                    \!
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/8

@@ -528,101 +528,676 @@
                                     % AFTER:
                                     % COMMANDS:
                                     \oneVoice
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    r2.
+                                    r4.
+                                    r8.
+                                    % BEFORE:
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/4
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
+                                    \scaleDurations #'(1 . 1) {
+                                    % OPEN_BRACKETS:
+                                    \slashedGrace {
+                                        e''16
+                                        % AFTER:
+                                        % STEM_TREMOLOS:
+                                        :128
+                                        % ARTICULATIONS:
+                                        - \accent
+                                        \ff
+                                        % SPANNER_STARTS:
+                                        (
+                                        - \tweak padding #9
+                                        - \abjad-solid-line-with-hook
+                                        - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Solo } \hspace #0.5 }
+                                        - \tweak bound-details.right.padding -5
+                                        \startTextSpan
+                                    % CLOSE_BRACKETS:
+                                    }
                                     % AFTER:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
+                                    }
+                                    % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    ds''16
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :128
+                                    % SPANNER_STOPS:
+                                    )
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
+                                    \revert Staff.Stem.stemlet-length
+                                    cs''8
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % OPEN_BRACKETS:
+                                    <<
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "flute voice temp"
+                                        {
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            \voiceTwo
+                                            cs''8
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            % START_BEAM:
+                                            [
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \revert Staff.Stem.stemlet-length
+                                            ds''8
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            % STOP_BEAM:
+                                            ]
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            ds''8.
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            \repeatTie
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Tie.transparent = ##f
+                                            \once \override Tie.transparent = ##f
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \revert Staff.Stem.stemlet-length
+                                            cs''16
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :128
+                                            % STOP_BEAM:
+                                            ]
+                                            % SPANNER_STARTS:
+                                            ~
+                                            cs''4
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :32
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            cs''8.
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            \repeatTie
+                                            % BEFORE:
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \scaleDurations #'(1 . 1) {
+                                            % OPEN_BRACKETS:
+                                            \slashedGrace {
+                                                e''16
+                                                % AFTER:
+                                                % STEM_TREMOLOS:
+                                                :128
+                                                % ARTICULATIONS:
+                                                - \accent
+                                                % SPANNER_STARTS:
+                                                (
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % AFTER:
+                                            % COMMANDS:
+                                            }
+                                            % COMMANDS:
+                                            \once \override Tie.transparent = ##f
+                                            \once \override Tie.transparent = ##f
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \revert Staff.Stem.stemlet-length
+                                            ds''16
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :128
+                                            % STOP_BEAM:
+                                            ]
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            ds''8
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            % SPANNER_STOPS:
+                                            )
+                                            % START_BEAM:
+                                            [
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \revert Staff.Stem.stemlet-length
+                                            cs''8
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            % STOP_BEAM:
+                                            ]
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            cs''16
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :128
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            \repeatTie
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \revert Staff.Stem.stemlet-length
+                                            ds''8.
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            % STOP_BEAM:
+                                            ]
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            ds''8.
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            \repeatTie
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Tie.transparent = ##f
+                                            \once \override Tie.transparent = ##f
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \revert Staff.Stem.stemlet-length
+                                            cs''16
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :128
+                                            % STOP_BEAM:
+                                            ]
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            cs''8
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            % START_BEAM:
+                                            [
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \revert Staff.Stem.stemlet-length
+                                            ds''8
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            % STOP_BEAM:
+                                            ]
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            ds''16
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :128
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            \repeatTie
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \revert Staff.Stem.stemlet-length
+                                            cs''8.
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            % STOP_BEAM:
+                                            ]
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            cs''16
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :128
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            \repeatTie
+                                            % BEFORE:
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \scaleDurations #'(1 . 1) {
+                                            % OPEN_BRACKETS:
+                                            \slashedGrace {
+                                                e''16
+                                                % AFTER:
+                                                % STEM_TREMOLOS:
+                                                :128
+                                                % ARTICULATIONS:
+                                                - \accent
+                                                % SPANNER_STARTS:
+                                                (
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % AFTER:
+                                            % COMMANDS:
+                                            }
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \revert Staff.Stem.stemlet-length
+                                            ds''8.
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            % SPANNER_STOPS:
+                                            )
+                                            % STOP_BEAM:
+                                            ]
+                                            cs''4
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :32
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            cs''16
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :128
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            \repeatTie
+                                            % BEFORE:
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \scaleDurations #'(1 . 1) {
+                                            % OPEN_BRACKETS:
+                                            \slashedGrace {
+                                                e''16
+                                                % AFTER:
+                                                % STEM_TREMOLOS:
+                                                :128
+                                                % ARTICULATIONS:
+                                                - \accent
+                                                % SPANNER_STARTS:
+                                                (
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % AFTER:
+                                            % COMMANDS:
+                                            }
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \revert Staff.Stem.stemlet-length
+                                            ds''8.
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            % SPANNER_STOPS:
+                                            )
+                                            % STOP_BEAM:
+                                            ]
+                                        % CLOSE_BRACKETS:
+                                        }
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "flute div voice"
+                                        {
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \voiceOne
+                                            f''4
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :32
+                                            :32
+                                            % SPANNER_STARTS:
+                                            - \tweak padding #11.5
+                                            - \abjad-solid-line-with-hook
+                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Duett } \hspace #0.5 }
+                                            - \tweak bound-details.right.padding -8
+                                            \startTextSpan
+                                            ~
+                                            f''16
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :128
+                                            :128
+                                            % SPANNER_STARTS:
+                                            \repeatTie
+                                            g''4..
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :32
+                                            :32
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            g''16
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :128
+                                            :128
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            \repeatTie
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \revert Staff.Stem.stemlet-length
+                                            f''8.
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            :64
+                                            % STOP_BEAM:
+                                            ]
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            f''16
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :128
+                                            :128
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            \repeatTie
+                                            % BEFORE:
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \scaleDurations #'(1 . 1) {
+                                            % OPEN_BRACKETS:
+                                            \slashedGrace {
+                                                af''16
+                                                % AFTER:
+                                                % STEM_TREMOLOS:
+                                                :128
+                                                % ARTICULATIONS:
+                                                - \accent
+                                                % SPANNER_STARTS:
+                                                (
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % AFTER:
+                                            % COMMANDS:
+                                            }
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \revert Staff.Stem.stemlet-length
+                                            g''8.
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            :64
+                                            % STOP_BEAM:
+                                            ]
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            g''8
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            :64
+                                            % SPANNER_STOPS:
+                                            )
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            \>
+                                            \repeatTie
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \revert Staff.Stem.stemlet-length
+                                            f''8
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            :64
+                                            % STOP_BEAM:
+                                            ]
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            f''8
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            :64
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            \repeatTie
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \revert Staff.Stem.stemlet-length
+                                            g''8
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            :64
+                                            % STOP_BEAM:
+                                            ]
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            g''8.
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            :64
+                                            % ARTICULATIONS:
+                                            \p
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            \repeatTie
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Tie.transparent = ##f
+                                            \once \override Tie.transparent = ##f
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \revert Staff.Stem.stemlet-length
+                                            f''16
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :128
+                                            :128
+                                            % STOP_BEAM:
+                                            ]
+                                            % SPANNER_STARTS:
+                                            ~
+                                            f''4
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :32
+                                            :32
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            f''8.
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            :64
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            - \tweak circled-tip ##t
+                                            \>
+                                            \repeatTie
+                                            % BEFORE:
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \scaleDurations #'(1 . 1) {
+                                            % OPEN_BRACKETS:
+                                            \slashedGrace {
+                                                af''16
+                                                % AFTER:
+                                                % STEM_TREMOLOS:
+                                                :128
+                                                :128
+                                                % ARTICULATIONS:
+                                                - \accent
+                                                - \accent
+                                                % SPANNER_STARTS:
+                                                (
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % AFTER:
+                                            % COMMANDS:
+                                            }
+                                            % COMMANDS:
+                                            \once \override Tie.transparent = ##f
+                                            \once \override Tie.transparent = ##f
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \revert Staff.Stem.stemlet-length
+                                            g''16
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :128
+                                            :128
+                                            % STOP_BEAM:
+                                            ]
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            g''8
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            :64
+                                            % SPANNER_STOPS:
+                                            )
+                                            % START_BEAM:
+                                            [
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \revert Staff.Stem.stemlet-length
+                                            f''8
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            :64
+                                            % STOP_BEAM:
+                                            ]
+                                            % SPANNER_STARTS:
+                                            ~
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            f''16
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :128
+                                            :128
+                                            % START_BEAM:
+                                            [
+                                            % SPANNER_STARTS:
+                                            \repeatTie
+                                            % BEFORE:
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \scaleDurations #'(1 . 1) {
+                                            % OPEN_BRACKETS:
+                                            \slashedGrace {
+                                                af''16
+                                                % AFTER:
+                                                % STEM_TREMOLOS:
+                                                :128
+                                                % ARTICULATIONS:
+                                                - \accent
+                                                % SPANNER_STARTS:
+                                                (
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            % AFTER:
+                                            % COMMANDS:
+                                            }
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \revert Staff.Stem.stemlet-length
+                                            g''8.
+                                            % AFTER:
+                                            % STEM_TREMOLOS:
+                                            :64
+                                            :64
+                                            % ARTICULATIONS:
+                                            \!
+                                            % SPANNER_STOPS:
+                                            )
+                                            \stopTextSpan
+                                            % STOP_BEAM:
+                                            ]
+                                        % CLOSE_BRACKETS:
+                                        }
+                                    % CLOSE_BRACKETS:
+                                    >>
                                     % AFTER:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                    % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/4
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/4
-                                    % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    \oneVoice
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
@@ -873,25 +1448,29 @@
                                     % COMMANDS:
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
+                                    <aqf''' bf'''>2.
                                     % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \<
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    \-
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    <aqf''' bf'''>4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \p
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    % COMMANDS:
+                                    \-
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
@@ -902,25 +1481,9 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/8
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
+                                    % ARTICULATIONS:
+                                    \!
                                     % BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
@@ -965,7 +1528,7 @@
                                             % SPANNER_STARTS:
                                             - \tweak circled-tip ##t
                                             \<
-                                            - \tweak padding #14.5
+                                            - \tweak padding #15.5
                                             - \abjad-solid-line-with-arrow
                                             - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ton } \hspace #0.5 }
                                             - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Überblasen }
@@ -1018,6 +1581,8 @@
                                             % STOP_BEAM:
                                             ]
                                             % SPANNER_STARTS:
+                                            - \tweak circled-tip ##t
+                                            \<
                                             ~
                                             as2
                                             % AFTER:
@@ -1396,116 +1961,200 @@
                                     % AFTER:
                                     % STOP_BEAM:
                                     ]
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
+                                    % OPEN_BRACKETS:
+                                    <<
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "bassclarinet voice temp"
+                                        {
+                                            % OPEN_BRACKETS:
+                                            \tweak text #tuplet-number::calc-fraction-text
+                                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 9) (ly:make-duration 3 0))
+                                            \times 9/7
+                                            {
+                                                % OPENING:
+                                                % COMMANDS:
+                                                \voiceOne
+                                                bqf2
+                                                % AFTER:
+                                                % SPANNER_STARTS:
+                                                - \tweak circled-tip ##t
+                                                ^ \<
+                                                  %! abjad.glissando(7)
+                                                \glissando
+                                                % BEFORE:
+                                                % COMMANDS:
+                                                \once \override Dots.staff-position = #2
+                                                % OPENING:
+                                                % COMMANDS:
+                                                  %! abjad.glissando(1)
+                                                \hide NoteHead
+                                                  %! abjad.glissando(1)
+                                                \override Accidental.stencil = ##f
+                                                  %! abjad.glissando(1)
+                                                \override NoteColumn.glissando-skip = ##t
+                                                  %! abjad.glissando(1)
+                                                \override NoteHead.no-ledgers = ##t
+                                                bqf4
+                                                    % CLOSING:
+                                                    % COMMANDS:
+                                                    ^ #(make-dynamic-script (markup #:whiteout #:italic "ff"))
+                                                % AFTER:
+                                                % SPANNER_STARTS:
+                                                - \tweak circled-tip ##t
+                                                ^ \>
+                                                % OPENING:
+                                                % COMMANDS:
+                                                  %! abjad.glissando(6)
+                                                \revert Accidental.stencil
+                                                  %! abjad.glissando(6)
+                                                \revert NoteColumn.glissando-skip
+                                                  %! abjad.glissando(6)
+                                                \revert NoteHead.no-ledgers
+                                                  %! abjad.glissando(6)
+                                                \undo \hide NoteHead
+                                                bqf8
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \!
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            r2
+                                            r8
+                                        % CLOSE_BRACKETS:
+                                        }
+                                        % OPEN_BRACKETS:
+                                        \context Voice = "bass clarinet divisi voice"
+                                        {
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \voiceTwo
+                                            as2
+                                            % AFTER:
+                                            % ARTICULATIONS:
+                                            \ff
+                                            % SPANNER_STARTS:
+                                            - \tweak stencil #constante-hairpin
+                                            \<
+                                              %! abjad.glissando(7)
+                                            \glissando
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Dots.staff-position = #2
+                                            % OPENING:
+                                            % COMMANDS:
+                                              %! abjad.glissando(1)
+                                            \hide NoteHead
+                                              %! abjad.glissando(1)
+                                            \override Accidental.stencil = ##f
+                                              %! abjad.glissando(1)
+                                            \override NoteColumn.glissando-skip = ##t
+                                              %! abjad.glissando(1)
+                                            \override NoteHead.no-ledgers = ##t
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            as8
+                                            % AFTER:
+                                            % START_BEAM:
+                                            [
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Dots.staff-position = #2
+                                            % OPENING:
+                                            % COMMANDS:
+                                            \revert Staff.Stem.stemlet-length
+                                            as8
+                                            % AFTER:
+                                            % STOP_BEAM:
+                                            ]
+                                            % SPANNER_STARTS:
+                                            - \tweak circled-tip ##t
+                                            \>
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Dots.staff-position = #2
+                                            as4
+                                            % BEFORE:
+                                            % COMMANDS:
+                                            \once \override Dots.staff-position = #2
+                                            % OPENING:
+                                            \afterGrace
+                                            as8
+                                            % AFTER:
+                                            % OPEN_BRACKETS:
+                                            {
+                                                % OPENING:
+                                                % COMMANDS:
+                                                \once \override Flag.stroke-style = #"grace"
+                                                  %! abjad.glissando(6)
+                                                \revert Accidental.stencil
+                                                  %! abjad.glissando(6)
+                                                \revert NoteColumn.glissando-skip
+                                                  %! abjad.glissando(6)
+                                                \revert NoteHead.no-ledgers
+                                                  %! abjad.glissando(6)
+                                                \undo \hide NoteHead
+                                                as16
+                                                % AFTER:
+                                                % ARTICULATIONS:
+                                                \!
+                                            % CLOSE_BRACKETS:
+                                            }
+                                            r2
+                                            r8
+                                        % CLOSE_BRACKETS:
+                                        }
+                                    % CLOSE_BRACKETS:
+                                    >>
                                     % AFTER:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
+                                    \oneVoice
                                     % BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
+                                      %! +SCORE
+                                    \once \override Rest.transparent = ##t
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/4
                                     % BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
+                                      %! +SCORE
+                                    \once \override Rest.transparent = ##t
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    R1 * 3/4
+                                    % AFTER:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                    % BEFORE:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                      %! +SCORE
+                                    \once \override Rest.transparent = ##t
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     R1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
                                     % BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
-                                    % AFTER:
-                                    % COMMANDS:
                                       %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
                                     \once \override Rest.transparent = ##t
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/8
-                                    % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/8
+                                    R1 * 1/4
                                     % AFTER:
                                     % COMMANDS:
                                       %! +SCORE
@@ -1956,25 +2605,187 @@
                             % COMMANDS:
                               %! +SCORE
                             \stopStaff \startStaff
-                            % ABSOLUTE_BEFORE:
+                            % OPENING:
                             % COMMANDS:
-                              %! +SCORE
-                            \once \override Staff.BarLine.transparent = ##f
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override Rest.transparent = ##t
-                              %! +SCORE
-                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                            r1 * 3/8
-                            % BEFORE:
-                            % COMMANDS:
-                              %! +SCORE
-                            \once \override MultiMeasureRest.transparent = ##t
-                            R1 * 3/8
+                            \clef "treble"
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''!
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''!
+                            >32
                             % AFTER:
+                            % ARTICULATIONS:
+                            - \staccato
+                            % MARKUP:
+                            ^ \markup \center-align { \center-column { \line { \concat { C+41 }  }\line { \concat { +35 }  } } }
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            \<
+                            r16.
+                            r16
+                            % OPENING:
                             % COMMANDS:
-                              %! +SCORE
-                            \stopStaff \startStaff
+                            \override Staff.Stem.stemlet-length = 0.75
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''
+                            >32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \staccato
+                            % START_BEAM:
+                            [
+                            % OPENING:
+                            % COMMANDS:
+                            \revert Staff.Stem.stemlet-length
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''
+                            >32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \staccato
+                            % STOP_BEAM:
+                            ]
+                            % OPENING:
+                            % COMMANDS:
+                            \override Staff.Stem.stemlet-length = 0.75
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''
+                            >32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \staccato
+                            % START_BEAM:
+                            [
+                            % OPENING:
+                            % COMMANDS:
+                            \revert Staff.Stem.stemlet-length
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''
+                            >32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \staccato
+                            % STOP_BEAM:
+                            ]
+                            r16
+                            r32
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''
+                            >32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \staccato
+                            r32
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''
+                            >32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \staccato
+                            r8
+                            r32
+                            % OPENING:
+                            % COMMANDS:
+                            \override Staff.Stem.stemlet-length = 0.75
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''
+                            >32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \staccato
+                            % START_BEAM:
+                            [
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''
+                            >32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \staccato
+                            % OPENING:
+                            % COMMANDS:
+                            \revert Staff.Stem.stemlet-length
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''
+                            >32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            - \staccato
+                            % STOP_BEAM:
+                            ]
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Beam.stencil = ##f
+                            \once \override Dots.stencil = ##f
+                            \once \override Flag.stencil = ##f
+                            \once \override NoteHead.duration-log = 2
+                            \once \override Stem.stencil = ##f
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''!
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''!
+                            >4
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \mp
+                            % MARKUP:
+                            ^ \multiple-staccato
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            \>
+                            % COMMANDS:
+                            \-
+                            \boxed-markup "Frei: Aperiodische Staccati" 1
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
                               %! +SCORE
@@ -1985,25 +2796,9 @@
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                             r1 * 1/8
-                            % BEFORE:
-                            % COMMANDS:
-                              %! +SCORE
-                            \once \override MultiMeasureRest.transparent = ##t
-                            R1 * 1/8
                             % AFTER:
-                            % COMMANDS:
-                              %! +SCORE
-                            \stopStaff \startStaff
-                            % ABSOLUTE_BEFORE:
-                            % COMMANDS:
-                              %! +SCORE
-                            \once \override Staff.BarLine.transparent = ##f
-                            % BEFORE:
-                            % COMMANDS:
-                            \once \override Rest.transparent = ##t
-                              %! +SCORE
-                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                            r1 * 1/8
+                            % ARTICULATIONS:
+                            \!
                             % BEFORE:
                             % COMMANDS:
                               %! +SCORE
@@ -2211,25 +3006,105 @@
                                     % COMMANDS:
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
+                                    <d'' f''>32
                                     % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    r16.
+                                    r16
+                                    % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    <d'' f''>32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    <d'' f''>32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    % STOP_BEAM:
+                                    ]
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    <d'' f''>32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    <d'' f''>32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    % STOP_BEAM:
+                                    ]
+                                    r16
+                                    r32
+                                    <d'' f''>32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    r32
+                                    <d'' f''>32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    r8
+                                    r32
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    <d'' f''>32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    % START_BEAM:
+                                    [
+                                    <d'' f''>32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    <d'' f''>32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    % STOP_BEAM:
+                                    ]
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    <d'' f''>4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mp
+                                    % MARKUP:
+                                    ^ \multiple-staccato
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    % COMMANDS:
+                                    \-
+                                    \boxed-markup "Frei: Aperiodische Staccati" 1
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
@@ -2240,25 +3115,9 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/8
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
+                                    % ARTICULATIONS:
+                                    \!
                                     % BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
@@ -2458,25 +3317,184 @@
                                     % COMMANDS:
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''!
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''!
+                                    >32
                                     % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    % MARKUP:
+                                    ^ \markup \center-align { \center-column { \line { \concat { +29 }  }\line { \concat { +47 }  } } }
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    r16.
+                                    r16
+                                    % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''
+                                    >32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''
+                                    >32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    % STOP_BEAM:
+                                    ]
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''
+                                    >32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''
+                                    >32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    % STOP_BEAM:
+                                    ]
+                                    r16
+                                    r32
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''
+                                    >32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    r32
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''
+                                    >32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    r8
+                                    r32
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''
+                                    >32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    % START_BEAM:
+                                    [
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''
+                                    >32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \revert Staff.Stem.stemlet-length
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''
+                                    >32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    - \staccato
+                                    % STOP_BEAM:
+                                    ]
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''!
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''!
+                                    >4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mp
+                                    % MARKUP:
+                                    ^ \multiple-staccato
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    % COMMANDS:
+                                    \-
+                                    \boxed-markup "Frei: Aperiodische Staccati" 1
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
@@ -2487,25 +3505,9 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/8
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
+                                    % ARTICULATIONS:
+                                    \!
                                     % BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
@@ -2872,63 +3874,44 @@
                                     % COMMANDS:
                                     \ottava 0
                                     r4
-                                    % ABSOLUTE_BEFORE:
+                                    r2.
+                                    r4.
+                                    r8.
+                                    % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \clef "bass"
+                                    <e, ef>8.
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \ff
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "treble"
+                                    <ef'' e'' g'' b''>4
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/4
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
+                                    \ottava 1
+                                    <g''' f''''>4
                                     % AFTER:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
+                                    \ottava 0
+                                    % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
+                                    \clef "bass"
+                                    <fs, ef>4
+                                    r4
+                                    % OPENING:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
+                                    \clef "treble"
+                                    <ef'' fs'' g'' b''>8
+                                    r8
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                    % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    % ARTICULATIONS:
+                                    \!
+                                    r2
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
@@ -3111,63 +4094,40 @@
                                     % COMMANDS:
                                     \ottava 0
                                     r4
-                                    % ABSOLUTE_BEFORE:
+                                    r2.
+                                    r4.
+                                    r8.
+                                    % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/4
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
+                                    \clef "bass"
+                                    <cs,>8.
                                     % AFTER:
+                                    % SPANNER_STARTS:
+                                    \sustainOn
+                                    % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \clef "treble"
+                                    <bf a'>4
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
+                                    \ottava 1
+                                    <c'''>4
                                     % AFTER:
+                                    % SPANNER_STOPS:
+                                    \sustainOff
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
+                                    \ottava 0
+                                    % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
+                                    \clef "bass"
+                                    <cs,>4
+                                    r4
+                                    % OPENING:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                    % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    \clef "treble"
+                                    <bf a'>8
+                                    r8
+                                    r2
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
@@ -3332,44 +4292,44 @@
                                     % COMMANDS:
                                     \ottava 0
                                     r4.
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    r2.
+                                    r4.
+                                    r8.
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/4
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
+                                    \ottava 1
+                                    <a''' bf''' ds'''' e'''' fs''''>8.
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % ARTICULATIONS:
+                                    - \espressivo
+                                    \arpeggio
+                                    \ff
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    ~
+                                    <a''' bf''' ds'''' e'''' fs''''>4
                                     % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    <g''' a''' bf''' ds'''' e''''>8.
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :64
+                                    % ARTICULATIONS:
+                                    - \espressivo
+                                    \arpeggio
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    \ottava 0
+                                    r16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    r4
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
@@ -3528,63 +4488,46 @@
                                     \repeatTie
                                     % COMMANDS:
                                     \textSpannerUp
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    r2.
+                                    r4.
+                                    r8.
                                     % BEFORE:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/4
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
+                                    \textSpannerDown
+                                    \tweak style #'la
+                                    c'8.
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
+                                    % ARTICULATIONS:
+                                    ^ \ff
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    ^ \>
+                                    - \tweak padding #8
+                                    - \abjad-solid-line-with-up-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { ( sim. ) } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -4
+                                    \startTextSpan
+                                    ~
+                                    \tweak style #'la
+                                    c'2.
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/2
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    ~
+                                    \tweak style #'la
+                                    c'4.
                                     % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % SPANNER_STARTS:
+                                    \repeatTie
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    \textSpannerUp
+                                    r8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    r2
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
@@ -4151,23 +5094,41 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
+                                    \staff-line-count 1
+                                    % OPENING:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
+                                    \clef "percussion"
+                                    c'2.
                                     % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \<
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    \-
+                                    \boxed-markup "Triangel" 1
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    \once \override StemTremolo.X-offset = 0.6
+                                    \once \override StemTremolo.Y-offset = 1.75
+                                    c'4
+                                        % CLOSING:
+                                        % COMMANDS:
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
+                                    % AFTER:
+                                    % STEM_TREMOLOS:
+                                    :32
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    % COMMANDS:
+                                    \-
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
@@ -4178,25 +5139,9 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/8
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
+                                    % ARTICULATIONS:
+                                    \!
                                     % BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
@@ -4398,23 +5343,34 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
+                                    \staff-line-count 1
+                                    % OPENING:
                                     % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 3/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/8
+                                    \clef "percussion"
+                                    c'2.
                                     % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \<
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    \-
+                                    \boxed-markup "Tam-Tam mit Bogen" 1
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
+                                    \once \override Stem.stencil = ##f
+                                    c'4
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    % COMMANDS:
+                                    \-
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
@@ -4425,25 +5381,9 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     r1 * 1/8
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/8
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Rest.transparent = ##t
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    r1 * 1/8
+                                    % ARTICULATIONS:
+                                    \!
                                     % BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
