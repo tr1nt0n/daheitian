@@ -141,15 +141,6 @@ trinton.make_music(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (1, 5)),
-    trinton.attachment_command(
-        attachments=[abjad.Tie()],
-        selector=trinton.select_logical_ties_by_index(
-            [
-                3,
-            ],
-            first=True,
-        ),
-    ),
     library.flute_graces(
         grace_selector=trinton.patterned_tie_index_selector(
             [
@@ -209,7 +200,26 @@ trinton.make_music(
     trinton.force_rest(selector=trinton.select_tuplets_by_index([0])),
     trinton.treat_tuplets(),
     evans.RewriteMeterCommand(boundary_depth=-2),
-    evans.PitchHandler(["ds''", "cs''"]),
+    evans.PitchHandler(
+        [
+            "ds''",
+            "cs''",
+            "ds''",
+            "cs''",
+            "ds''",
+            "cs''",
+            "ds'",
+            "cs'",
+            "ds'",
+            "cs'",
+            "ds'",
+            "cs'",
+            "ds'",
+            "cs'",
+            "ds'",
+            "cs'",
+        ]
+    ),
     voice=score["flute voice"],
     beam_meter=True,
     preprocessor=trinton.fuse_sixteenths_preprocessor((21, 100)),
@@ -234,6 +244,14 @@ trinton.make_music(
         [
             "f''",
             "g''",
+            "f''",
+            "g''",
+            "f''",
+            "g''",
+            "f'",
+            "g'",
+            "f'",
+            "g'",
         ]
     ),
     library.flute_graces(
@@ -272,7 +290,16 @@ trinton.make_music(
         ),
     ),
     trinton.pitch_with_selector_command(
-        pitch_list=["e''"], selector=trinton.pleaves(grace=True)
+        pitch_list=[
+            "e''",
+            "e''",
+            "e'",
+            "e'",
+            "e'",
+            "e'",
+            "e'",
+        ],
+        selector=trinton.pleaves(grace=True),
     ),
     library.flute_grace_attachments(),
     trinton.linear_attachment_command(
@@ -292,7 +319,15 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (7, 10)),
     trinton.pitch_with_selector_command(
-        pitch_list=["af''"], selector=trinton.pleaves(grace=True)
+        pitch_list=[
+            "af''",
+            "af'",
+            "af'",
+            "af'",
+            "af'",
+            "af'",
+        ],
+        selector=trinton.pleaves(grace=True),
     ),
     trinton.linear_attachment_command(
         attachments=[
@@ -758,12 +793,22 @@ trinton.make_music(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (3, 5)),
-    library.piano_pedals(
-        counts=[
-            3,
-            1,
-            2,
-        ]
+    trinton.linear_attachment_command(
+        attachments=itertools.cycle(
+            [
+                abjad.StartPianoPedal(),
+                abjad.StopPianoPedal(),
+            ]
+        ),
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                2,
+                4,
+                5,
+            ],
+            pitched=True,
+        ),
     ),
     voice=score["piano 2 voice"],
 )

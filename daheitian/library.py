@@ -1117,7 +1117,12 @@ def flute_graces(
         relevant_leaves = []
 
         for leaf in selections:
-            if leaf.written_pitch.number == 15 or leaf.written_pitch.number == 19:
+            if (
+                leaf.written_pitch.number == 15
+                or leaf.written_pitch.number == 19
+                or leaf.written_pitch.number == 3
+                or leaf.written_pitch.number == 7
+            ):
                 relevant_leaves.append(leaf)
 
         grace_ties = grace_selector(relevant_leaves)

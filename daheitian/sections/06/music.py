@@ -23,7 +23,7 @@ trinton.make_music(
         evans.talea([_ for _ in library.logistic_map(11) if _ > 2], 16)
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
-    evans.PitchHandler(["cs''", "ds''"]),
+    evans.PitchHandler(["cs'", "ds'"]),
     voice=score["flute voice"],
     beam_meter=True,
 )
@@ -45,8 +45,8 @@ trinton.make_music(
     evans.RewriteMeterCommand(),
     evans.PitchHandler(
         [
-            "f''",
-            "g''",
+            "f'",
+            "g'",
         ]
     ),
     library.flute_graces(),
@@ -56,7 +56,7 @@ trinton.make_music(
             string="Duett",
         ),
         full_string=True,
-        padding=11.5,
+        padding=8,
         style="solid-line-with-hook",
         selector=trinton.select_logical_ties_by_index([0, -1], first=True),
         right_padding=15,
@@ -69,7 +69,7 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (1, 5)),
     library.flute_graces(),
     trinton.pitch_with_selector_command(
-        pitch_list=["e''"], selector=trinton.pleaves(grace=True)
+        pitch_list=["e'"], selector=trinton.pleaves(grace=True)
     ),
     library.flute_grace_attachments(),
     trinton.linear_attachment_command(
@@ -90,7 +90,7 @@ trinton.make_music(
             string="Solo",
         ),
         full_string=True,
-        padding=8,
+        padding=7,
         style="solid-line-with-hook",
         selector=trinton.select_logical_ties_by_index([0, 5], first=True),
         right_padding=17,
@@ -101,7 +101,7 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (3, 5)),
     trinton.pitch_with_selector_command(
-        pitch_list=["af''"], selector=trinton.pleaves(grace=True)
+        pitch_list=["af'"], selector=trinton.pleaves(grace=True)
     ),
     voice=score["flute divisi voice"],
     beam_meter=True,

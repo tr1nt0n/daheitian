@@ -21,10 +21,10 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (1, 7)),
     evans.RhythmHandler(evans.talea([_ for _ in library.logistic_map(5) if _ > 2], 16)),
     evans.RewriteMeterCommand(boundary_depth=-2),
-    evans.PitchHandler(["cs''", "ds''"]),
+    evans.PitchHandler(["cs'", "ds'"]),
     library.flute_graces(),
     trinton.pitch_with_selector_command(
-        pitch_list=["e''"], selector=trinton.pleaves(grace=True)
+        pitch_list=["e'"], selector=trinton.pleaves(grace=True)
     ),
     library.flute_grace_attachments(),
     trinton.linear_attachment_command(
@@ -36,7 +36,7 @@ trinton.make_music(
             string="Solo",
         ),
         full_string=True,
-        padding=8,
+        padding=7,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1]),
         right_padding=8.5,
