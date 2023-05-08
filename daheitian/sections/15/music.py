@@ -15,6 +15,141 @@ score = library.daheitian_score(ts.section_15_ts)
 
 # commands
 
+# violin 1 music commands
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (1, 3)),
+    evans.RhythmHandler(
+        evans.talea(
+            [
+                1,
+            ],
+            16,
+            treat_tuplets=False,
+        )
+    ),
+    rmakers.force_rest,
+    trinton.force_note(selector=library._moths_selectors[1]["violin 1 voice"]),
+    trinton.replace_with_rhythm_selection(
+        rhythmhandler=evans.RhythmHandler(
+            evans.talea(
+                [
+                    1,
+                    -1,
+                ],
+                8,
+            )
+        ),
+        selector=trinton.select_tuplets_by_index([-1]),
+    ),
+    trinton.treat_tuplets(),
+    evans.PitchHandler([5, 2, -5, 2, -1, 5]),
+    library.change_lines(lines=4, clef="percussion"),
+    library.fuse_durations([(1, 4)]),
+    trinton.beam_durations([(1, 4)], beam_rests=True),
+    trinton.attachment_command(
+        attachments=[abjad.Articulation("marcato")],
+        selector=trinton.logical_ties(pitched=True, first=True),
+    ),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.Dynamic("pppp"),
+            abjad.StartHairpin("<"),
+            abjad.Dynamic("pp"),
+            abjad.StartHairpin("<"),
+        ],
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                0,
+                4,
+                4,
+            ],
+            pitched=True,
+        ),
+    ),
+    voice=score["violin 1 voice"],
+    preprocessor=trinton.fuse_quarters_preprocessor((7, 2)),
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (4, 7)),
+    evans.RhythmHandler(
+        evans.talea(
+            [
+                1,
+            ],
+            16,
+            treat_tuplets=False,
+        )
+    ),
+    rmakers.force_rest,
+    trinton.force_note(selector=library._moths_selectors[2]["violin 1 voice"]),
+    library.fuse_contiguous(),
+    trinton.replace_with_rhythm_selection(
+        rhythmhandler=evans.RhythmHandler(
+            evans.talea(
+                [
+                    1,
+                ],
+                8,
+            )
+        ),
+        selector=trinton.select_tuplets_by_index([-1]),
+    ),
+    trinton.treat_tuplets(),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    evans.PitchHandler([5, 2, -5, 2, -1, 5]),
+    trinton.attachment_command(
+        attachments=[abjad.Articulation("marcato")],
+        selector=trinton.logical_ties(pitched=True, first=True),
+    ),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.Dynamic("mp"),
+            abjad.StartHairpin("<"),
+            abjad.Dynamic("f"),
+            abjad.StartHairpin("<"),
+            abjad.Dynamic("ff"),
+            abjad.StartHairpin("<"),
+            abjad.Dynamic("fff"),
+            abjad.StartHairpin("<"),
+            abjad.Dynamic("ffff"),
+        ],
+        selector=trinton.select_leaves_by_index(
+            [0, 0, 2, 2, 6, 6, 11, 11, -1], pitched=True
+        ),
+    ),
+    voice=score["violin 1 voice"],
+    preprocessor=trinton.fuse_eighths_preprocessor((31, 1)),
+    beam_meter=True,
+)
+
+
+# strings spanners
+
+for voice_name in [
+    "violin 1 voice",
+    # "violin 2 voice",
+    # "viola voice",
+    # "cello voice",
+    # "contrabass voice",
+]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (1, 7)),
+        trinton.hooked_spanner_command(
+            string=library.return_boxed_markup(
+                string="DP, Kratzen",
+            ),
+            full_string=True,
+            padding=7.5,
+            style="solid-line-with-hook",
+            selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+            right_padding=2,
+        ),
+        voice=score[voice_name],
+    )
+
 
 # markups
 

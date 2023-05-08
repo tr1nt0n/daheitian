@@ -43,15 +43,71 @@
                             {
                                 \context Voice = "flute voice"
                                 {
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
                                 }
                             }
                         }
@@ -61,15 +117,71 @@
                             {
                                 \context Voice = "oboe voice"
                                 {
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
                                 }
                             }
                         }
@@ -79,15 +191,71 @@
                             {
                                 \context Voice = "bassclarinet voice"
                                 {
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bassklarinetten }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { bkl. }
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
                                 }
                             }
                         }
@@ -97,15 +265,71 @@
                             {
                                 \context Voice = "bassoon voice"
                                 {
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Fagotte }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { fg.}
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
                                 }
                             }
                         }
@@ -117,15 +341,71 @@
                     {
                         \context Voice = "frenchhorn voice"
                         {
+                              %! +SCORE
+                        %%% \once \override Staff.BarLine.transparent = ##f
                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Hörner in F }
                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hn. }
+                              %! +SCORE
+                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                              %! +SCORE
+                        %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 1/2
+                              %! +SCORE
+                        %%% \stopStaff \startStaff
+                              %! +SCORE
+                        %%% \once \override Staff.BarLine.transparent = ##f
+                              %! +SCORE
+                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                              %! +SCORE
+                        %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 3/4
+                              %! +SCORE
+                        %%% \stopStaff \startStaff
+                              %! +SCORE
+                        %%% \once \override Staff.BarLine.transparent = ##f
+                              %! +SCORE
+                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                              %! +SCORE
+                        %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 1
+                              %! +SCORE
+                        %%% \stopStaff \startStaff
+                              %! +SCORE
+                        %%% \once \override Staff.BarLine.transparent = ##f
+                              %! +SCORE
+                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                              %! +SCORE
+                        %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 3/4
+                              %! +SCORE
+                        %%% \stopStaff \startStaff
+                              %! +SCORE
+                        %%% \once \override Staff.BarLine.transparent = ##f
+                              %! +SCORE
+                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                              %! +SCORE
+                        %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 1
+                              %! +SCORE
+                        %%% \stopStaff \startStaff
+                              %! +SCORE
+                        %%% \once \override Staff.BarLine.transparent = ##f
+                              %! +SCORE
+                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                              %! +SCORE
+                        %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 3/2
+                              %! +SCORE
+                        %%% \stopStaff \startStaff
+                              %! +SCORE
+                        %%% \once \override Staff.BarLine.transparent = ##f
+                              %! +SCORE
+                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                              %! +SCORE
+                        %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 3/4
+                              %! +SCORE
+                        %%% \stopStaff \startStaff
                         }
                     }
                 }
@@ -139,15 +419,71 @@
                             {
                                 \context Voice = "trumpet voice"
                                 {
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Trompeten in C }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ tpt. }
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
                                 }
                             }
                         }
@@ -157,15 +493,71 @@
                             {
                                 \context Voice = "tenortrombone voice"
                                 {
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tenorposaunen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pos. }
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
                                 }
                             }
                         }
@@ -175,15 +567,71 @@
                             {
                                 \context Voice = "tuba voice"
                                 {
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tuben }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { tb. }
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
                                 }
                             }
                         }
@@ -199,15 +647,71 @@
                             {
                                 \context Voice = "piano 1 voice"
                                 {
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
                                     \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Klavier }
                                     \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { klav. }
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
                                 }
                             }
                         }
@@ -217,13 +721,69 @@
                             {
                                 \context Voice = "piano 2 voice"
                                 {
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
                                 }
                             }
                         }
@@ -239,15 +799,71 @@
                             {
                                 \context Voice = "harp 1 voice"
                                 {
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
                                     \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
                                     \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
                                 }
                             }
                         }
@@ -257,13 +873,69 @@
                             {
                                 \context Voice = "harp 2 voice"
                                 {
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
                                 }
                             }
                         }
@@ -275,15 +947,71 @@
                     {
                         \context Voice = "percussion 1 voice"
                         {
+                              %! +SCORE
+                        %%% \once \override Staff.BarLine.transparent = ##f
                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Pauken }
                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pk. }
+                              %! +SCORE
+                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                              %! +SCORE
+                        %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 1/2
+                              %! +SCORE
+                        %%% \stopStaff \startStaff
+                              %! +SCORE
+                        %%% \once \override Staff.BarLine.transparent = ##f
+                              %! +SCORE
+                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                              %! +SCORE
+                        %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 3/4
+                              %! +SCORE
+                        %%% \stopStaff \startStaff
+                              %! +SCORE
+                        %%% \once \override Staff.BarLine.transparent = ##f
+                              %! +SCORE
+                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                              %! +SCORE
+                        %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 1
+                              %! +SCORE
+                        %%% \stopStaff \startStaff
+                              %! +SCORE
+                        %%% \once \override Staff.BarLine.transparent = ##f
+                              %! +SCORE
+                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                              %! +SCORE
+                        %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 3/4
+                              %! +SCORE
+                        %%% \stopStaff \startStaff
+                              %! +SCORE
+                        %%% \once \override Staff.BarLine.transparent = ##f
+                              %! +SCORE
+                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                              %! +SCORE
+                        %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 1
+                              %! +SCORE
+                        %%% \stopStaff \startStaff
+                              %! +SCORE
+                        %%% \once \override Staff.BarLine.transparent = ##f
+                              %! +SCORE
+                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                              %! +SCORE
+                        %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 3/2
+                              %! +SCORE
+                        %%% \stopStaff \startStaff
+                              %! +SCORE
+                        %%% \once \override Staff.BarLine.transparent = ##f
+                              %! +SCORE
+                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                              %! +SCORE
+                        %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 3/4
+                              %! +SCORE
+                        %%% \stopStaff \startStaff
                         }
                     }
                 }
@@ -297,15 +1025,71 @@
                             {
                                 \context Voice = "percussion 2 voice"
                                 {
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
                                 }
                             }
                         }
@@ -315,15 +1099,71 @@
                             {
                                 \context Voice = "percussion 3 voice"
                                 {
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
                                 }
                             }
                         }
@@ -341,13 +1181,126 @@
                                 {
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
-                                    R1 * 1/2
-                                    R1 * 3/4
-                                    R1 * 1
-                                    R1 * 3/4
-                                    R1 * 1
-                                    R1 * 3/2
-                                    R1 * 3/4
+                                    r4
+                                    \staff-line-count 4
+                                    \clef "percussion"
+                                    f'16
+                                    - \marcato
+                                    \pppp
+                                    [
+                                    - \tweak padding #7.5
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { DP, Kratzen } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2
+                                    \startTextSpan
+                                    \<
+                                    r16
+                                    r16
+                                    r16
+                                    ]
+                                    d'16
+                                    - \marcato
+                                    [
+                                    r16
+                                    r16
+                                    r16
+                                    ]
+                                    g16
+                                    - \marcato
+                                    [
+                                    r16
+                                    r16
+                                    r16
+                                    ]
+                                    d'16
+                                    - \marcato
+                                    [
+                                    r16
+                                    r16
+                                    r16
+                                    ]
+                                    b16
+                                    - \marcato
+                                    \pp
+                                    [
+                                    \<
+                                    r16
+                                    r16
+                                    r16
+                                    ]
+                                    f'16
+                                    - \marcato
+                                    [
+                                    r16
+                                    r16
+                                    r16
+                                    ]
+                                    f'8
+                                    - \marcato
+                                    [
+                                    r8
+                                    ]
+                                    d'8
+                                    - \marcato
+                                    [
+                                    r8
+                                    ]
+                                    r4
+                                    f'8
+                                    - \marcato
+                                    \mp
+                                    \<
+                                    r8
+                                    d'8
+                                    - \marcato
+                                    r8
+                                    g8
+                                    - \marcato
+                                    \f
+                                    \<
+                                    r8
+                                    d'8
+                                    - \marcato
+                                    r8
+                                    b8
+                                    - \marcato
+                                    r8
+                                    f'8
+                                    - \marcato
+                                    r8
+                                    r4
+                                    f'8
+                                    - \marcato
+                                    \ff
+                                    \<
+                                    r8
+                                    d'8
+                                    - \marcato
+                                    r8
+                                    g8
+                                    - \marcato
+                                    r8
+                                    d'8
+                                    - \marcato
+                                    r8
+                                    b8
+                                    - \marcato
+                                    r8
+                                    f'8
+                                    - \marcato
+                                    \fff
+                                    \<
+                                    r4.
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    f'8
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    d'8
+                                    - \marcato
+                                    \ffff
+                                    \stopTextSpan
+                                    ]
                                 }
                             }
                         }
@@ -357,15 +1310,71 @@
                             {
                                 \context Voice = "violin 2 voice"
                                 {
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
                                 }
                             }
                         }
@@ -375,15 +1384,71 @@
                             {
                                 \context Voice = "viola voice"
                                 {
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
                                 }
                             }
                         }
@@ -393,15 +1458,71 @@
                             {
                                 \context Voice = "cello voice"
                                 {
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
                                 }
                             }
                         }
@@ -411,15 +1532,71 @@
                             {
                                 \context Voice = "contrabass voice"
                                 {
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Kontrabässe }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kb. }
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
                                 }
                             }
                         }

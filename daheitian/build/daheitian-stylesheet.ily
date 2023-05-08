@@ -177,7 +177,7 @@ afterGraceFraction = #(cons 15 16)
         \override DurationLine.breakable = ##t
 
         \override InstrumentName.self-alignment-X = #CENTER
-        % \RemoveAllEmptyStaves
+        \RemoveAllEmptyStaves
     }
 
     \context {
