@@ -26,7 +26,7 @@ trinton.make_music(
     evans.PitchHandler([-2]),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="Solo",
+            string="1.",
         ),
         full_string=True,
         padding=5.5,
@@ -197,7 +197,7 @@ trinton.make_music(
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="Solo",
+            string="1.",
         ),
         full_string=True,
         padding=10.5,
@@ -278,7 +278,7 @@ trinton.make_music(
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="Solo",
+            string="1.",
         ),
         full_string=True,
         padding=9,
@@ -354,7 +354,7 @@ trinton.make_music(
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="Solo",
+            string="1.",
         ),
         full_string=True,
         padding=7,

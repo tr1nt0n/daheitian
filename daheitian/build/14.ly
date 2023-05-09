@@ -146,7 +146,7 @@
                                     % SPANNER_STARTS:
                                     - \tweak padding #8
                                     - \abjad-solid-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Solo } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1. } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -2.5
                                     \startTextSpan
                                     % BEFORE:
@@ -379,7 +379,7 @@
                                             % SPANNER_STARTS:
                                             - \tweak padding #11.5
                                             - \abjad-solid-line-with-hook
-                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Duett } \hspace #0.5 }
+                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1.|2. } \hspace #0.5 }
                                             - \tweak bound-details.right.padding -15
                                             \startTextSpan
                                             ~
@@ -548,7 +548,7 @@
                                         (
                                         - \tweak padding #9
                                         - \abjad-solid-line-with-hook
-                                        - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Solo } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1. } \hspace #0.5 }
                                         - \tweak bound-details.right.padding -5
                                         \startTextSpan
                                     % CLOSE_BRACKETS:
@@ -898,7 +898,7 @@
                                             % SPANNER_STARTS:
                                             - \tweak padding #11.5
                                             - \abjad-solid-line-with-hook
-                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Duett } \hspace #0.5 }
+                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1.|2. } \hspace #0.5 }
                                             - \tweak bound-details.right.padding -8
                                             \startTextSpan
                                             ~
@@ -2556,10 +2556,10 @@
                             % AFTER:
                             % ARTICULATIONS:
                             - \staccato
+                            \pppp
                             % MARKUP:
                             ^ \markup \center-align { \center-column { \line { \concat { C+41 }  }\line { \concat { +35 }  } } }
                             % SPANNER_STARTS:
-                            - \tweak circled-tip ##t
                             \<
                             r16.
                             r16
@@ -2926,8 +2926,8 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \staccato
+                                    \pppp
                                     % SPANNER_STARTS:
-                                    - \tweak circled-tip ##t
                                     \<
                                     r16.
                                     r16
@@ -3223,10 +3223,10 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \staccato
+                                    \pppp
                                     % MARKUP:
                                     ^ \markup \center-align { \center-column { \line { \concat { +29 }  }\line { \concat { +47 }  } } }
                                     % SPANNER_STARTS:
-                                    - \tweak circled-tip ##t
                                     \<
                                     r16.
                                     r16

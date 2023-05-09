@@ -53,7 +53,7 @@ trinton.make_music(
     library.flute_grace_attachments(),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="Duett",
+            string="1.|2.",
         ),
         full_string=True,
         padding=8,
@@ -87,7 +87,7 @@ trinton.make_music(
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="Solo",
+            string="1.",
         ),
         full_string=True,
         padding=7,

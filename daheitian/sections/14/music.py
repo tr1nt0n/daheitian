@@ -127,7 +127,7 @@ trinton.make_music(
     library.flute_grace_attachments(),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="Duett",
+            string="1.|2.",
         ),
         full_string=True,
         padding=11.5,
@@ -170,7 +170,7 @@ trinton.make_music(
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="Solo",
+            string="1.",
         ),
         full_string=True,
         padding=8,
@@ -267,7 +267,7 @@ trinton.make_music(
     library.flute_grace_attachments(),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="Duett",
+            string="1.|2.",
         ),
         full_string=True,
         padding=11.5,
@@ -657,12 +657,13 @@ for voice_name, fundamental in zip(
         ),
         trinton.linear_attachment_command(
             attachments=[
-                abjad.StartHairpin("o<"),
+                abjad.Dynamic("pppp"),
+                abjad.StartHairpin("<"),
                 abjad.Dynamic("mp"),
                 abjad.StartHairpin(">o"),
                 abjad.LilyPondLiteral("\-", "after"),
             ],
-            selector=trinton.select_leaves_by_index([0, -1, -1, -1]),
+            selector=trinton.select_leaves_by_index([0, 0, -1, -1, -1]),
         ),
         trinton.force_accidentals_command(
             selector=trinton.select_leaves_by_index([0, -1])
@@ -727,12 +728,13 @@ trinton.make_music(
     ),
     trinton.linear_attachment_command(
         attachments=[
-            abjad.StartHairpin("o<"),
+            abjad.Dynamic("pppp"),
+            abjad.StartHairpin("<"),
             abjad.Dynamic("mp"),
             abjad.StartHairpin(">o"),
             abjad.LilyPondLiteral("\-", "after"),
         ],
-        selector=trinton.select_leaves_by_index([0, -1, -1, -1]),
+        selector=trinton.select_leaves_by_index([0, 0, -1, -1, -1]),
     ),
     voice=score["trumpet voice"],
     beam_meter=True,
@@ -1218,7 +1220,7 @@ trinton.make_music(
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="Solo",
+            string="1.",
         ),
         full_string=True,
         padding=9,

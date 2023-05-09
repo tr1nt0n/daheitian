@@ -1011,9 +1011,10 @@ def monolith(score, measure):
         ),
         trinton.hooked_spanner_command(
             string=library.return_boxed_markup(
-                string="Flatternventile",
+                string="Bewegen Sie die Ventile schnell und wahllos.",
             ),
             full_string=True,
+            padding=8.5,
             style="solid-line-with-hook",
             selector=trinton.select_leaves_by_index([0, -1], pitched=True),
             right_padding=2,

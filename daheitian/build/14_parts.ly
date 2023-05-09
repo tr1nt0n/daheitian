@@ -76,7 +76,7 @@
                                     \ff
                                     - \tweak padding #8
                                     - \abjad-solid-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Solo } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1. } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -2.5
                                     \startTextSpan
                                     \scaleDurations #'(1 . 1) {
@@ -188,7 +188,7 @@
                                             :32
                                             - \tweak padding #11.5
                                             - \abjad-solid-line-with-hook
-                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Duett } \hspace #0.5 }
+                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1.|2. } \hspace #0.5 }
                                             - \tweak bound-details.right.padding -15
                                             \startTextSpan
                                             ~
@@ -277,7 +277,7 @@
                                         (
                                         - \tweak padding #9
                                         - \abjad-solid-line-with-hook
-                                        - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Solo } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1. } \hspace #0.5 }
                                         - \tweak bound-details.right.padding -5
                                         \startTextSpan
                                     }
@@ -440,7 +440,7 @@
                                             :32
                                             - \tweak padding #11.5
                                             - \abjad-solid-line-with-hook
-                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Duett } \hspace #0.5 }
+                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1.|2. } \hspace #0.5 }
                                             - \tweak bound-details.right.padding -8
                                             \startTextSpan
                                             ~
@@ -1397,8 +1397,8 @@
                                 cs'''!
                             >32
                             - \staccato
+                            \pppp
                             ^ \markup \center-align { \center-column { \line { \concat { C+41 }  }\line { \concat { +35 }  } } }
-                            - \tweak circled-tip ##t
                             \<
                             r16.
                             r16
@@ -1627,7 +1627,7 @@
                                 %%% \stopStaff \startStaff
                                     <d'' f''>32
                                     - \staccato
-                                    - \tweak circled-tip ##t
+                                    \pppp
                                     \<
                                     r16.
                                     r16
@@ -1789,8 +1789,8 @@
                                         e''!
                                     >32
                                     - \staccato
+                                    \pppp
                                     ^ \markup \center-align { \center-column { \line { \concat { +29 }  }\line { \concat { +47 }  } } }
-                                    - \tweak circled-tip ##t
                                     \<
                                     r16.
                                     r16
