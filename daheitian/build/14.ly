@@ -101,6 +101,8 @@
             % AFTER:
             % MARKUP:
             _ \markup \center-column { \abs-fontsize #15 \musicglyph "scripts.ushortfermata" }
+            % COMMANDS:
+            \break
             % ABSOLUTE_AFTER:
             % COMMANDS:
             \once \override Score.BarLine.transparent = ##f
@@ -223,8 +225,6 @@
                                     % AFTER:
                                     % COMMANDS:
                                     }
-                                    % COMMANDS:
-                                    \once \override Tie.transparent = ##f
                                     ds''16
                                     % AFTER:
                                     % STEM_TREMOLOS:
@@ -232,8 +232,6 @@
                                     % SPANNER_STOPS:
                                     )
                                     \stopTextSpan
-                                    % SPANNER_STARTS:
-                                    ~
                                     % OPEN_BRACKETS:
                                     <<
                                         % OPEN_BRACKETS:
@@ -578,8 +576,6 @@
                                     \stopTextSpan
                                     % STOP_BEAM:
                                     ]
-                                    % SPANNER_STARTS:
-                                    ~
                                     % OPEN_BRACKETS:
                                     <<
                                         % OPEN_BRACKETS:

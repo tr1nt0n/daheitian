@@ -24,7 +24,7 @@ trinton.make_music(
     evans.PitchHandler([12]),
     library.ring_mod_attachments(dynamics=["p"], direction=abjad.DOWN),
     trinton.hooked_spanner_command(
-        string=library._fundamental_to_multiphonic["c'' hspace"].string,
+        string=library._fundamental_to_multiphonic["c''"].string,
         full_string=True,
         padding=7,
         style="solid-line-with-hook",

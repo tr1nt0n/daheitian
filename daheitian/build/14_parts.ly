@@ -53,6 +53,7 @@
             \time 1/4
             R1 * 1/4
             _ \markup \center-column { \abs-fontsize #15 \musicglyph "scripts.ushortfermata" }
+            \break
             \once \override Score.BarLine.transparent = ##f
         }
         \tag #'group1
@@ -112,12 +113,10 @@
                                         (
                                     }
                                     }
-                                    \once \override Tie.transparent = ##f
                                     ds''16
                                     :128
                                     )
                                     \stopTextSpan
-                                    ~
                                     <<
                                         \context Voice = "flute voice temp"
                                         {
@@ -292,7 +291,6 @@
                                     :64
                                     \stopTextSpan
                                     ]
-                                    ~
                                     <<
                                         \context Voice = "flute voice temp"
                                         {

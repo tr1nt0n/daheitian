@@ -341,6 +341,15 @@ trinton.make_music(
     voice=score["flute div voice"],
 )
 
+for measure in [2, 6]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (measure,)),
+        trinton.detach_command(
+            detachments=[abjad.Tie], selector=trinton.select_leaves_by_index([-1])
+        ),
+        voice=score["flute voice"],
+    )
+
 # oboe music commands
 
 trinton.make_music(
@@ -1232,6 +1241,18 @@ trinton.make_music(
 )
 
 # globals
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (12,)),
+    trinton.attachment_command(
+        attachments=[
+            abjad.LilyPondLiteral(r"\break", "after"),
+        ],
+        selector=trinton.select_leaves_by_index([0]),
+        tag=abjad.Tag("+SCORE"),
+    ),
+    voice=score["Global Context"],
+)
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (1,)),

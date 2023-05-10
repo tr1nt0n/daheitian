@@ -117,15 +117,40 @@
                             {
                                 \context Voice = "oboe voice"
                                 {
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
+                                    r4
+                                    c''16
+                                    - \marcato
+                                    \pppp
+                                    [
+                                    - \tweak padding #7.5
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1.5
+                                    \startTextSpan
+                                    r16
+                                    r16
+                                    r16
+                                    ]
+                                    c''16
+                                    - \marcato
+                                    \pp
+                                    \stopTextSpan
+                                    [
+                                    r16
+                                    r16
+                                    r16
+                                    ]
+                                    r4
+                                    r4
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
+                                    R1 * 1
                                       %! +SCORE
                                 %%% \stopStaff \startStaff
                                       %! +SCORE
@@ -146,42 +171,41 @@
                                     R1 * 1
                                       %! +SCORE
                                 %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    r4.
+                                    r4
+                                    r16
+                                    c''16
+                                    - \marcato
+                                    \ff
+                                    - \tweak padding #7.5
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1.5
+                                    \startTextSpan
+                                    \<
+                                    r8.
+                                    c''16
+                                    - \marcato
+                                    r8
+                                    r8
+                                    c''8.
+                                    - \marcato
+                                    r16
+                                    c''8.
+                                    - \marcato
+                                    \fff
+                                    r16
+                                    r4
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c''8
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    c''8
+                                    - \marcato
+                                    \ffff
+                                    \stopTextSpan
+                                    ]
                                 }
                             }
                         }
@@ -238,24 +262,54 @@
                                     R1 * 1
                                       %! +SCORE
                                 %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    r4.
+                                    r16
+                                    \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                                    \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                                    a16
+                                    - \marcato
+                                    \ff
+                                    - \tweak padding #5
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Überblasen } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2
+                                    \startTextSpan
+                                    \<
+                                    r4
+                                    r8
+                                    \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                                    \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                                    a16
+                                    - \marcato
+                                    r8.
+                                    r8.
+                                    \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                                    \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                                    a8.
+                                    - \marcato
+                                    r4
+                                    \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                                    \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                                    a8.
+                                    - \marcato
+                                    r16
+                                    r8
+                                    \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                                    \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                                    a8
+                                    - \marcato
+                                    \ffff
+                                    \stopTextSpan
                                 }
                             }
                         }
@@ -265,71 +319,92 @@
                             {
                                 \context Voice = "bassoon voice"
                                 {
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Fagotte }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { fg.}
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    \clef "bass"
+                                    cqs,16
+                                    - \marcato
+                                    \pppp
+                                    ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }
+                                    [
+                                    r16
+                                    r16
+                                    r16
+                                    ]
+                                    r4
+                                    r16
+                                    [
+                                    r16
+                                    cqs,16
+                                    - \marcato
+                                    \pp
+                                    ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }
+                                    r16
+                                    ]
+                                    r4
+                                    r4
+                                    r4
+                                    r4
+                                    r16
+                                    [
+                                    r16
+                                    d16
+                                    - \marcato
+                                    \p
+                                    ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
+                                    r16
+                                    ]
+                                    r4
+                                    r4
+                                    cqs,8.
+                                    - \marcato
+                                    \mp
+                                    ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }
+                                    [
+                                    r16
+                                    ]
+                                    r4
+                                    d8.
+                                    - \marcato
+                                    \f
+                                    ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
+                                    \<
+                                    r16
+                                    r4.
+                                    d8
+                                    - \marcato
+                                    ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
+                                    ~
+                                    d16
+                                    \repeatTie
+                                    r8.
+                                    r4
+                                    cqs,8
+                                    - \marcato
+                                    \ff
+                                    ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }
+                                    \<
+                                    ~
+                                    cqs,16
+                                    \repeatTie
+                                    r16
+                                    r4
+                                    r8
+                                    cqs,8.
+                                    - \marcato
+                                    ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }
+                                    r16
+                                    r4.
+                                    d8.
+                                    - \marcato
+                                    \fff
+                                    ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
+                                    r16
+                                    r4.
+                                    cqs,8
+                                    - \marcato
+                                    \ffff
+                                    ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }
                                 }
                             }
                         }
@@ -1310,35 +1385,31 @@
                             {
                                 \context Voice = "violin 2 voice"
                                 {
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
+                                    \staff-line-count 4
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    \clef "percussion"
+                                    f'16
+                                    - \marcato
+                                    \pppp
+                                    [
+                                    - \tweak padding #7.5
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { DP, Kratzen } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2
+                                    \startTextSpan
+                                    r16
+                                    r16
+                                    r16
+                                    ]
+                                    r16
+                                    [
+                                    r16
+                                    r16
+                                    b16
+                                    - \marcato
+                                    \pp
+                                    ]
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
@@ -1363,18 +1434,70 @@
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
                                 %%% \stopStaff \startStaff
+                                    r16
+                                    [
+                                    f'16
+                                    - \marcato
+                                    \f
+                                    \<
+                                    r16
+                                    r16
+                                    ]
+                                    r4
+                                    d'16
+                                    - \marcato
+                                    [
+                                    r16
+                                    r16
+                                    r16
+                                    ]
+                                    r16
+                                    [
+                                    r16
+                                    r16
+                                    g16
+                                    - \marcato
+                                    ]
+                                    d'16
+                                    - \marcato
+                                    r16
+                                    f'4
+                                    - \marcato
+                                    \ff
+                                    \<
+                                    r16
+                                    \once \override Tie.transparent = ##f
+                                    b16
+                                    - \marcato
+                                    ~
+                                    b4
+                                    ~
+                                    b16
+                                    \repeatTie
+                                    r16
+                                    f'4
+                                    - \marcato
+                                    ~
+                                    f'8
+                                    \repeatTie
+                                    r16
+                                    d'8.
+                                    - \marcato
+                                    \fff
+                                    \<
+                                    ~
+                                    d'8.
+                                    \repeatTie
+                                    r16
+                                    g4.
+                                    - \marcato
+                                    d'8
+                                    - \marcato
+                                    \ffff
+                                    \stopTextSpan
                                 }
                             }
                         }
@@ -1384,26 +1507,41 @@
                             {
                                 \context Voice = "viola voice"
                                 {
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    r4
+                                    r16
+                                    [
+                                    r16
+                                    \staff-line-count 4
+                                    \clef "percussion"
+                                    d'16
+                                    - \marcato
+                                    \pppp
+                                    - \tweak padding #7.5
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { DP, Kratzen } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2
+                                    \startTextSpan
+                                    \<
+                                    r16
+                                    ]
+                                    r4
+                                    b16
+                                    - \marcato
+                                    [
+                                    r16
+                                    r16
+                                    r16
+                                    ]
+                                    r16
+                                    [
+                                    r16
+                                    d'16
+                                    - \marcato
+                                    \pp
+                                    r16
+                                    ]
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
@@ -1431,24 +1569,31 @@
                                     R1 * 1
                                       %! +SCORE
                                 %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    r2.
+                                    r4.
+                                    r4
+                                    b16
+                                    - \marcato
+                                    \fff
+                                    \<
+                                    r16
+                                    r8
+                                    f'8
+                                    - \marcato
+                                    ~
+                                    f'8
+                                    \repeatTie
+                                    r8
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    d'8
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    f'8
+                                    - \marcato
+                                    \ffff
+                                    \stopTextSpan
+                                    ]
                                 }
                             }
                         }
@@ -1458,71 +1603,112 @@
                             {
                                 \context Voice = "cello voice"
                                 {
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    r4
+                                    r16
+                                    [
+                                    r16
+                                    \staff-line-count 4
+                                    \clef "percussion"
+                                    f'16
+                                    - \marcato
+                                    \pppp
+                                    - \tweak padding #7.5
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { DP, Kratzen } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2
+                                    \startTextSpan
+                                    \<
+                                    r16
+                                    ]
+                                    r4
+                                    f'16
+                                    - \marcato
+                                    [
+                                    r16
+                                    r16
+                                    r16
+                                    ]
+                                    r16
+                                    [
+                                    r16
+                                    d'16
+                                    - \marcato
+                                    r16
+                                    ]
+                                    r4
+                                    g16
+                                    - \marcato
+                                    \pp
+                                    [
+                                    r16
+                                    r16
+                                    r16
+                                    ]
+                                    r4
+                                    r4
+                                    d'16
+                                    - \marcato
+                                    \mp
+                                    [
+                                    \<
+                                    r16
+                                    r16
+                                    r16
+                                    ]
+                                    r16
+                                    [
+                                    r16
+                                    b16
+                                    - \marcato
+                                    r16
+                                    ]
+                                    r8
+                                    [
+                                    b8
+                                    - \marcato
+                                    ]
+                                    r4.
+                                    f'8
+                                    - \marcato
+                                    \f
+                                    \<
+                                    r4
+                                    f'8
+                                    - \marcato
+                                    r8
+                                    r8
+                                    d'8
+                                    - \marcato
+                                    \ff
+                                    \<
+                                    r8
+                                    r8
+                                    g8
+                                    - \marcato
+                                    r8
+                                    r4.
+                                    r8
+                                    d'8
+                                    - \marcato
+                                    r8
+                                    r8
+                                    b8
+                                    - \marcato
+                                    \fff
+                                    \<
+                                    r4
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    b8
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    f'8
+                                    - \marcato
+                                    \ffff
+                                    \stopTextSpan
+                                    ]
                                 }
                             }
                         }
@@ -1532,71 +1718,101 @@
                             {
                                 \context Voice = "contrabass voice"
                                 {
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
+                                    \staff-line-count 4
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Kontrabässe }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kb. }
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    \clef "percussion"
+                                    f'16
+                                    - \marcato
+                                    \pppp
+                                    [
+                                    - \tweak padding #7.5
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { DP, Kratzen } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2
+                                    \startTextSpan
+                                    r16
+                                    r16
+                                    r16
+                                    ]
+                                    r4
+                                    r16
+                                    [
+                                    r16
+                                    b16
+                                    - \marcato
+                                    \pp
+                                    r16
+                                    ]
+                                    r4
+                                    r4
+                                    r4
+                                    r4
+                                    r16
+                                    [
+                                    r16
+                                    b16
+                                    - \marcato
+                                    \p
+                                    r16
+                                    ]
+                                    r4
+                                    r4
+                                    g4
+                                    - \marcato
+                                    \mp
+                                    \<
+                                    ~
+                                    g16
+                                    [
+                                    \repeatTie
+                                    r8.
+                                    ]
+                                    g4
+                                    - \marcato
+                                    \f
+                                    \<
+                                    ~
+                                    g16
+                                    \repeatTie
+                                    r8.
+                                    r8
+                                    d'8
+                                    - \marcato
+                                    ~
+                                    d'8.
+                                    \repeatTie
+                                    r16
+                                    r4
+                                    f'8
+                                    - \marcato
+                                    \ff
+                                    \<
+                                    ~
+                                    f'8.
+                                    \repeatTie
+                                    r8.
+                                    r8
+                                    b4
+                                    - \marcato
+                                    ~
+                                    b16
+                                    \repeatTie
+                                    r16
+                                    r4
+                                    b4
+                                    - \marcato
+                                    \fff
+                                    \<
+                                    ~
+                                    b16
+                                    \repeatTie
+                                    r8.
+                                    r8
+                                    g8
+                                    - \marcato
+                                    \ffff
+                                    \stopTextSpan
                                 }
                             }
                         }
