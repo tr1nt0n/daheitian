@@ -17,12 +17,6 @@ score = library.daheitian_score([(3, 2), (1, 4)])
 
 library.monolith(score=score, measure=1)
 
-trinton.make_music(
-    lambda _: trinton.select_target(_, (1,)),
-    library.change_lines(lines=5, clef="treble"),
-    voice=score["percussion 2 voice"],
-)
-
 # markups
 
 library.write_instrument_names(score=score)

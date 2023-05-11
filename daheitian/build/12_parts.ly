@@ -960,11 +960,9 @@
                                 \context Voice = "percussion 2 voice"
                                 {
                                     \staff-line-count 5
-                                    \staff-line-count 5
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
                                     \clef "bass"
-                                    \clef "treble"
                                     <c' df'>2
                                     \mp
                                     - \tweak stencil #constante-hairpin

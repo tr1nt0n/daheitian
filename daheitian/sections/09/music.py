@@ -46,6 +46,11 @@ trinton.make_music(
         attachments=[abjad.Articulation("tenuto")],
         selector=trinton.logical_ties(pitched=True, first=True),
     ),
+    library.patterned_graces(),
+    trinton.pitch_with_selector_command(
+        pitch_list=[4], selector=trinton.pleaves(grace=True)
+    ),
+    library.grace_attachments(),
     voice=score["oboe voice"],
     beam_meter=True,
 )
@@ -70,7 +75,7 @@ trinton.make_music(
             string="1.",
         ),
         full_string=True,
-        padding=5.5,
+        padding=7,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=2,
@@ -88,6 +93,18 @@ trinton.make_music(
         attachments=[abjad.Articulation("tenuto")],
         selector=trinton.logical_ties(pitched=True, first=True),
     ),
+    library.patterned_graces(
+        grace_selector=trinton.patterned_tie_index_selector(
+            [
+                1,
+            ],
+            4,
+        )
+    ),
+    trinton.pitch_with_selector_command(
+        pitch_list=["fs''"], selector=trinton.pleaves(grace=True)
+    ),
+    library.grace_attachments(),
     voice=score["bassclarinet voice"],
     preprocessor=trinton.fuse_sixteenths_preprocessor((51, 70)),
     beam_meter=True,
@@ -113,7 +130,7 @@ trinton.make_music(
             string="1.",
         ),
         full_string=True,
-        padding=5.5,
+        padding=9,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=2,
@@ -132,6 +149,18 @@ trinton.make_music(
         attachments=[abjad.Articulation("tenuto")],
         selector=trinton.logical_ties(pitched=True, first=True),
     ),
+    library.patterned_graces(
+        grace_selector=trinton.patterned_tie_index_selector(
+            [
+                5,
+            ],
+            8,
+        )
+    ),
+    trinton.pitch_with_selector_command(
+        pitch_list=[4], selector=trinton.pleaves(grace=True)
+    ),
+    library.grace_attachments(),
     voice=score["bassoon voice"],
     preprocessor=trinton.fuse_eighths_preprocessor((18, 20)),
     beam_meter=True,

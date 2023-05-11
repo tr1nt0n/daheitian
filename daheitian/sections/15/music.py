@@ -1057,7 +1057,6 @@ trinton.make_music(
                 met_string=library.metronome_marks["57 3/5"],
                 mod_string=library.metronome_marks["6:5(4)=4"],
                 string_only=True,
-                parenthesis=True,
             ),
             library.metronome_markups(
                 met_string=library.metronome_marks["96"],

@@ -46,6 +46,13 @@ trinton.make_music(
         attachments=[abjad.Articulation("tenuto")],
         selector=trinton.logical_ties(pitched=True, first=True),
     ),
+    library.patterned_graces(
+        grace_selector=trinton.patterned_tie_index_selector([3], 4)
+    ),
+    trinton.pitch_with_selector_command(
+        pitch_list=[4], selector=trinton.pleaves(grace=True)
+    ),
+    library.grace_attachments(),
     voice=score["oboe voice"],
     preprocessor=trinton.fuse_quarters_preprocessor((5, 2)),
 )

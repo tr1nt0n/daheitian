@@ -103,9 +103,17 @@
                                     - \tenuto
                                     bf4
                                     - \tenuto
+                                    \scaleDurations #'(1 . 1) {
+                                    \slashedGrace {
+                                        e'16
+                                        (
+                                        \glissando
+                                    }
+                                    }
                                     bf4
                                     - \tenuto
                                     \!
+                                    )
                                     \stopTextSpan
                                     r2
                                       %! +SCORE

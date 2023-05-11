@@ -1760,7 +1760,6 @@
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 5
-                                    \staff-line-count 5
                                     % BEFORE:
                                     % COMMANDS:
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
@@ -1768,7 +1767,6 @@
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "bass"
-                                    \clef "treble"
                                     <c' df'>2
                                     % AFTER:
                                     % ARTICULATIONS:

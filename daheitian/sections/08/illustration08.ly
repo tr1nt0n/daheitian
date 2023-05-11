@@ -199,12 +199,29 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \tenuto
+                                    % BEFORE:
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \scaleDurations #'(1 . 1) {
+                                    % OPEN_BRACKETS:
+                                    \slashedGrace {
+                                        e'16
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        (
+                                        \glissando
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % AFTER:
+                                    % COMMANDS:
+                                    }
                                     bf4
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \tenuto
                                     \!
                                     % SPANNER_STOPS:
+                                    )
                                     \stopTextSpan
                                     r2
                                     % ABSOLUTE_BEFORE:

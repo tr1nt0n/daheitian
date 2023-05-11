@@ -122,12 +122,20 @@
                                     - \tenuto
                                     ]
                                     r8.
+                                    \scaleDurations #'(1 . 1) {
+                                    \slashedGrace {
+                                        e'16
+                                        (
+                                        \glissando
+                                    }
+                                    }
                                     \once \override Tie.transparent = ##f
                                     bf16
                                     - \tenuto
                                     ~
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
+                                    )
                                     [
                                     \revert Staff.Stem.stemlet-length
                                     bf8.
@@ -175,8 +183,16 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     [
+                                    \scaleDurations #'(1 . 1) {
+                                    \slashedGrace {
+                                        e'16
+                                        (
+                                        \glissando
+                                    }
+                                    }
                                     bf8.
                                     - \tenuto
+                                    )
                                     \revert Staff.Stem.stemlet-length
                                     bf8
                                     - \tenuto
@@ -215,6 +231,13 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     [
+                                    \scaleDurations #'(1 . 1) {
+                                    \slashedGrace {
+                                        e'16
+                                        (
+                                        \glissando
+                                    }
+                                    }
                                     \revert Staff.Stem.stemlet-length
                                     bf8.
                                     - \tenuto
@@ -222,6 +245,7 @@
                                     ~
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
+                                    )
                                     [
                                     \repeatTie
                                     \once \override Tie.transparent = ##f
@@ -288,7 +312,7 @@
                                     - \tenuto
                                     - \tweak circled-tip ##t
                                     \<
-                                    - \tweak padding #5.5
+                                    - \tweak padding #7
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1. } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -2
@@ -297,6 +321,13 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c''16
                                     [
+                                    \scaleDurations #'(1 . 1) {
+                                    \slashedGrace {
+                                        fs''16
+                                        (
+                                        \glissando
+                                    }
+                                    }
                                     \revert Staff.Stem.stemlet-length
                                     c''8.
                                     - \tenuto
@@ -304,6 +335,7 @@
                                     ~
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c''16
+                                    )
                                     [
                                     \repeatTie
                                     \once \override Tie.transparent = ##f
@@ -363,7 +395,7 @@
                                     [
                                     - \tweak circled-tip ##t
                                     \<
-                                    - \tweak padding #5.5
+                                    - \tweak padding #9
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1. } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -2
@@ -398,6 +430,13 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     [
+                                    \scaleDurations #'(1 . 1) {
+                                    \slashedGrace {
+                                        e'16
+                                        (
+                                        \glissando
+                                    }
+                                    }
                                     \revert Staff.Stem.stemlet-length
                                     bf8.
                                     - \tenuto
@@ -405,6 +444,7 @@
                                     ~
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
+                                    )
                                     [
                                     \repeatTie
                                     \once \override Tie.transparent = ##f

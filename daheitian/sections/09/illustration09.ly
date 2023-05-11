@@ -239,6 +239,21 @@
                                     ]
                                     r8.
                                     % BEFORE:
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \scaleDurations #'(1 . 1) {
+                                    % OPEN_BRACKETS:
+                                    \slashedGrace {
+                                        e'16
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        (
+                                        \glissando
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % AFTER:
+                                    % COMMANDS:
+                                    }
                                     % COMMANDS:
                                     \once \override Tie.transparent = ##f
                                     bf16
@@ -252,6 +267,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
                                     % START_BEAM:
                                     [
                                     % OPENING:
@@ -357,10 +374,28 @@
                                     % AFTER:
                                     % START_BEAM:
                                     [
+                                    % BEFORE:
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \scaleDurations #'(1 . 1) {
+                                    % OPEN_BRACKETS:
+                                    \slashedGrace {
+                                        e'16
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        (
+                                        \glissando
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % AFTER:
+                                    % COMMANDS:
+                                    }
                                     bf8.
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \tenuto
+                                    % SPANNER_STOPS:
+                                    )
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Staff.Stem.stemlet-length
@@ -446,6 +481,22 @@
                                     % AFTER:
                                     % START_BEAM:
                                     [
+                                    % BEFORE:
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \scaleDurations #'(1 . 1) {
+                                    % OPEN_BRACKETS:
+                                    \slashedGrace {
+                                        e'16
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        (
+                                        \glissando
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % AFTER:
+                                    % COMMANDS:
+                                    }
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Staff.Stem.stemlet-length
@@ -462,6 +513,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
@@ -586,7 +639,7 @@
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     \<
-                                    - \tweak padding #5.5
+                                    - \tweak padding #7
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1. } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -2
@@ -599,6 +652,22 @@
                                     % AFTER:
                                     % START_BEAM:
                                     [
+                                    % BEFORE:
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \scaleDurations #'(1 . 1) {
+                                    % OPEN_BRACKETS:
+                                    \slashedGrace {
+                                        fs''16
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        (
+                                        \glissando
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % AFTER:
+                                    % COMMANDS:
+                                    }
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Staff.Stem.stemlet-length
@@ -615,6 +684,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c''16
                                     % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
@@ -725,7 +796,7 @@
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     \<
-                                    - \tweak padding #5.5
+                                    - \tweak padding #9
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1. } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -2
@@ -797,6 +868,22 @@
                                     % AFTER:
                                     % START_BEAM:
                                     [
+                                    % BEFORE:
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \scaleDurations #'(1 . 1) {
+                                    % OPEN_BRACKETS:
+                                    \slashedGrace {
+                                        e'16
+                                        % AFTER:
+                                        % SPANNER_STARTS:
+                                        (
+                                        \glissando
+                                    % CLOSE_BRACKETS:
+                                    }
+                                    % AFTER:
+                                    % COMMANDS:
+                                    }
                                     % OPENING:
                                     % COMMANDS:
                                     \revert Staff.Stem.stemlet-length
@@ -813,6 +900,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:

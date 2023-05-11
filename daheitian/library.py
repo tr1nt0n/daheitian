@@ -929,18 +929,15 @@ def monolith(score, measure):
         evans.PitchHandler([["c'", "df'"]]),
         trinton.linear_attachment_command(
             attachments=[
-                abjad.Clef("bass"),
                 abjad.Dynamic("mp"),
                 abjad.StartHairpin("--"),
                 abjad.StopHairpin(),
             ],
-            selector=trinton.select_leaves_by_index([0, 0, 0, -1], pitched=True),
+            selector=trinton.select_leaves_by_index([0, 0, -1], pitched=True),
         ),
         trinton.notehead_bracket_command(),
         library.boxed_markup(string="Röhrenglocken"),
-        library.change_lines(
-            lines=5,
-        ),
+        library.change_lines(lines=5, clef="bass"),
         voice=score["percussion 2 voice"],
         preprocessor=trinton.fuse_quarters_preprocessor((2, 6)),
     )
@@ -1115,6 +1112,35 @@ def flute_graces(
     return graces
 
 
+def patterned_graces(
+    selector=trinton.pleaves(),
+    grace_selector=trinton.patterned_tie_index_selector(
+        [
+            3,
+        ],
+        7,
+    ),
+):
+    def graces(argument):
+        selections = selector(argument)
+
+        handler = evans.GraceHandler(
+            boolean_vector=[1],
+            gesture_lengths=[
+                1,
+            ],
+            remove_skips=True,
+            forget=False,
+        )
+
+        grace_ties = grace_selector(selections)
+
+        for tie in grace_ties:
+            handler(tie[0])
+
+    return graces
+
+
 def oboe_talea(index=0):
     return trinton.rotated_sequence(oboe_chant_talea, index)
 
@@ -1215,6 +1241,25 @@ def flute_grace_attachments(selector=trinton.pleaves()):
 
         for grace in graces:
             abjad.attach(abjad.Articulation(">"), grace)
+
+            with_next_leaf = abjad.select.with_next_leaf(grace)
+
+            tie_group = abjad.select.logical_ties(with_next_leaf)
+
+            abjad.slur(tie_group)
+
+    return attach
+
+
+def grace_attachments(selector=trinton.pleaves(), glissando=True):
+    def attach(argument):
+        selections = selector(argument)
+
+        graces = abjad.select.leaves(selections, grace=True)
+
+        for grace in graces:
+            if glissando is True:
+                abjad.attach(abjad.Glissando(), grace)
 
             with_next_leaf = abjad.select.with_next_leaf(grace)
 
