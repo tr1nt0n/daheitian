@@ -9253,89 +9253,71 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \staff-line-count 1
                                     % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
+                                    \clef "percussion"
+                                    c'2.
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    - \tweak padding #3.5
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Steg } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -4
+                                    \startTextSpan
+                                    ~
+                                    c'2
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    ~
                                     % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c'8.
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    \repeatTie
                                     % BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Tie.transparent = ##f
                                     % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
+                                    \revert Staff.Stem.stemlet-length
+                                    c'16
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    % OPENING:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    ~
+                                    c'4
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    % OPENING:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
+                                    % SPANNER_STARTS:
+                                    ~
+                                    c'2.
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    ~
+                                    c'4.
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    r8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    r2
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
@@ -9612,89 +9594,139 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \staff-line-count 5
                                     % BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
+                                    \clef "treble"
+                                    gqs2.
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    - \tweak padding #4
+                                    - \abjad-solid-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { MSP } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { ST }
+                                    - \tweak bound-details.right.padding 1
+                                    \startTextSpanOne
+                                    - \tweak padding #7
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1. } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2
+                                    \startTextSpan
+                                      %! abjad.glissando(7)
+                                    \glissando
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
+                                      %! abjad.glissando(1)
+                                    \hide NoteHead
+                                      %! abjad.glissando(1)
+                                    \override Accidental.stencil = ##f
+                                      %! abjad.glissando(1)
+                                    \override NoteColumn.glissando-skip = ##t
+                                      %! abjad.glissando(1)
+                                    \override NoteHead.no-ledgers = ##t
+                                    gqs2
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    gqs8.
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    \repeatTie
                                     % BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Dots.staff-position = #2
+                                    \once \override Tie.transparent = ##f
                                     % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
+                                    \revert Staff.Stem.stemlet-length
+                                    gqs16
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    (
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Dots.staff-position = #2
+                                    gqs4
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    gqs2.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    gqs4
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    gqs16
                                     % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                      %! abjad.glissando(6)
+                                    \revert Accidental.stencil
+                                      %! abjad.glissando(6)
+                                    \revert NoteColumn.glissando-skip
+                                      %! abjad.glissando(6)
+                                    \revert NoteHead.no-ledgers
+                                      %! abjad.glissando(6)
+                                    \undo \hide NoteHead
+                                    \revert Staff.Stem.stemlet-length
+                                    aqf16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
+                                    \stopTextSpan
+                                    \stopTextSpanOne
+                                    % STOP_BEAM:
+                                    ]
+                                    r8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    r2
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
@@ -9971,89 +10003,139 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \staff-line-count 5
                                     % BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
+                                    \clef "altovarC"
+                                    af2.
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    - \tweak padding #10
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1. } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2
+                                    \startTextSpan
+                                    - \tweak padding #7
+                                    - \abjad-solid-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { MSP } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { ST }
+                                    - \tweak bound-details.right.padding 1
+                                    \startTextSpanOne
+                                      %! abjad.glissando(7)
+                                    \glissando
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
+                                      %! abjad.glissando(1)
+                                    \hide NoteHead
+                                      %! abjad.glissando(1)
+                                    \override Accidental.stencil = ##f
+                                      %! abjad.glissando(1)
+                                    \override NoteColumn.glissando-skip = ##t
+                                      %! abjad.glissando(1)
+                                    \override NoteHead.no-ledgers = ##t
+                                    af2
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    af8.
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    \repeatTie
                                     % BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Dots.staff-position = #2
+                                    \once \override Tie.transparent = ##f
                                     % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
+                                    \revert Staff.Stem.stemlet-length
+                                    af16
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    (
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    ~
                                     % BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Dots.staff-position = #2
+                                    af4
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    af2.
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    af4
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    ~
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    af16
                                     % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                      %! abjad.glissando(6)
+                                    \revert Accidental.stencil
+                                      %! abjad.glissando(6)
+                                    \revert NoteColumn.glissando-skip
+                                      %! abjad.glissando(6)
+                                    \revert NoteHead.no-ledgers
+                                      %! abjad.glissando(6)
+                                    \undo \hide NoteHead
+                                    \revert Staff.Stem.stemlet-length
+                                    gqs16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    )
+                                    \stopTextSpan
+                                    \stopTextSpanOne
+                                    % STOP_BEAM:
+                                    ]
+                                    r8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    r2
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
@@ -10330,89 +10412,113 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \staff-line-count 5
                                     % BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
+                                    \clef "bass"
+                                    af2.
                                     % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    - \tweak padding #5
+                                    - \abjad-solid-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { MSP } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { ST }
+                                    - \tweak bound-details.right.padding 1
+                                    \startTextSpanOne
+                                    - \tweak padding #8
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1. } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -2
+                                    \startTextSpan
+                                    ~
+                                    af2
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    ~
+                                    % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    af8.
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \revert Staff.Stem.stemlet-length
+                                    af16
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
+                                      %! abjad.glissando(7)
+                                    \glissando
                                     % BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                    % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! abjad.glissando(1)
+                                    \hide NoteHead
+                                      %! abjad.glissando(1)
+                                    \override Accidental.stencil = ##f
+                                      %! abjad.glissando(1)
+                                    \override NoteColumn.glissando-skip = ##t
+                                      %! abjad.glissando(1)
+                                    \override NoteHead.no-ledgers = ##t
+                                    af4
                                     % BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    % OPENING:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                    % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \once \override Dots.staff-position = #2
+                                    af2.
                                     % BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    % OPENING:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                    % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \once \override Dots.staff-position = #2
+                                    af4
                                     % BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Dots.staff-position = #2
                                     % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    af16
                                     % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                      %! abjad.glissando(6)
+                                    \revert Accidental.stencil
+                                      %! abjad.glissando(6)
+                                    \revert NoteColumn.glissando-skip
+                                      %! abjad.glissando(6)
+                                    \revert NoteHead.no-ledgers
+                                      %! abjad.glissando(6)
+                                    \undo \hide NoteHead
+                                    \revert Staff.Stem.stemlet-length
+                                    af16
+                                    % AFTER:
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    \stopTextSpanOne
+                                    % STOP_BEAM:
+                                    ]
+                                    r8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    r2
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
@@ -10689,89 +10795,74 @@
                                     \stopStaff \startStaff
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \staff-line-count 5
                                     % BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
+                                    \clef "treble"
+                                    af'2.
                                     % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    - \tweak padding #7
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { MSP } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -4
+                                    \startTextSpan
+                                    ~
+                                    af'2
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    ~
+                                    % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    af'8.
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    % SPANNER_STARTS:
+                                    \repeatTie
                                     % BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    \once \override Tie.transparent = ##f
                                     % OPENING:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
+                                    \revert Staff.Stem.stemlet-length
+                                    af'16
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    % OPENING:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
+                                    % ARTICULATIONS:
+                                    \mf
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    \>
+                                    ~
+                                    af'4
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    % OPENING:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
+                                    % SPANNER_STARTS:
+                                    ~
+                                    af'2.
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                    % ABSOLUTE_BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    % BEFORE:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    % OPENING:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    ~
+                                    af'4.
                                     % AFTER:
-                                    % COMMANDS:
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    % SPANNER_STOPS:
+                                    \stopTextSpan
+                                    % SPANNER_STARTS:
+                                    \repeatTie
+                                    r8
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
+                                    r2
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
