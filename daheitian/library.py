@@ -309,6 +309,57 @@ moth_talea = eval(
 
 # dictionaries
 
+_climax_pitches = {
+    "violin 1 voice": {
+        1: 11,
+    },
+    "violin 2 voice": {
+        1: "g''''",
+        2: "e''''",
+    },
+    "viola voice": {
+        1: "a'''",
+        2: "e''",
+    },
+    "cello voice": {
+        1: "fqs''",
+        2: "gqs'",
+    },
+    "contrabass voice": {
+        1: "e",
+        2: "a,",
+    },
+}
+
+climax_partials = ["3", "11", "13", "3", "4", "6", "7", "9"]
+
+climax_partials = trinton.return_fraction_string_list(
+    [(rf"{_}°", "A") for _ in climax_partials]
+)
+
+climax_partials = [abjad.Markup(_) for _ in climax_partials]
+
+_climax_partial_markups = {
+    "contrabass voice": {
+        1: climax_partials[0],
+    },
+    "cello voice": {
+        1: climax_partials[2],
+        2: climax_partials[1],
+    },
+    "viola voice": {
+        1: climax_partials[4],
+        2: climax_partials[3],
+    },
+    "violin 2 voice": {
+        1: climax_partials[6],
+        2: climax_partials[5],
+    },
+    "violin 1 voice": {
+        1: climax_partials[7],
+    },
+}
+
 _bloom_pitches = {
     "violin 1 voice": {
         4: [-3.5, "df'"],
@@ -1152,6 +1203,45 @@ def moths_talea(index=0):
 # notation tools
 
 
+def aftergrace_swells(selector=trinton.pleaves(), hairpin="o<|", dynamics=["ff"]):
+    def swells(argument):
+        selections = selector(argument)
+        pties = abjad.select.logical_ties(selections, pitched=True)
+
+        groups = abjad.sequence.partition_by_counts(
+            sequence=pties,
+            counts=[2 for _ in range(len(selections))],
+            overhang=True,
+        )
+
+        for group, dynamic in zip(groups, cycle(dynamics)):
+            abjad.glissando(
+                group,
+                hide_middle_note_heads=True,
+                allow_repeats=True,
+                allow_ties=True,
+            )
+
+            abjad.attach(abjad.StartHairpin(hairpin), group[0][0])
+
+            abjad.attach(trinton.make_custom_dynamic(dynamic), group[-1][0])
+
+            for tie in group:
+                for leaf in tie:
+                    abjad.detach(abjad.Tie, leaf)
+
+            middle_leaves = abjad.select.exclude(abjad.select.leaves(group), [0, -1])
+            for leaf in middle_leaves:
+                abjad.attach(
+                    abjad.LilyPondLiteral(
+                        r"\once \override Dots.staff-position = #2", "before"
+                    ),
+                    leaf,
+                )
+
+    return swells
+
+
 def fuse_durations(divisions):
     def func(selections):
         selections = abjad.select.leaves(selections)
@@ -1263,9 +1353,9 @@ def grace_attachments(selector=trinton.pleaves(), glissando=True):
 
             with_next_leaf = abjad.select.with_next_leaf(grace)
 
-            tie_group = abjad.select.logical_ties(with_next_leaf)
+            slur_group = abjad.select.logical_ties(with_next_leaf)
 
-            abjad.slur(tie_group)
+            abjad.slur(slur_group)
 
     return attach
 
@@ -1351,7 +1441,7 @@ def unpitched_glissandi(selector=trinton.pleaves(), articulation=None, trill=Fal
     return gliss
 
 
-def aftergrace(notes_string, selector=trinton.pleaves()):
+def aftergrace(notes_string="c'16", selector=trinton.pleaves()):
     def grace(argument):
         selections = selector(argument)
 

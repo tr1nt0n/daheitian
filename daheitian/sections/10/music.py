@@ -319,6 +319,11 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, 0, 2, 3, -1], pitched=True),
     ),
     trinton.attachment_command(
+        attachments=[library._climax_partial_markups["violin 1 voice"][1]],
+        selector=trinton.select_leaves_by_index([3], pitched=True),
+        direction=abjad.UP,
+    ),
+    trinton.attachment_command(
         attachments=[abjad.Articulation("marcato")],
         selector=trinton.pleaves(
             exclude=[
@@ -345,7 +350,7 @@ trinton.make_music(
             string="MSP",
         ),
         full_string=True,
-        padding=9.5,
+        padding=13.5,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([3, -1], pitched=True),
     ),
@@ -452,6 +457,11 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, 0, 1, 2, -1], pitched=True),
     ),
     trinton.attachment_command(
+        attachments=[library._climax_partial_markups["cello voice"][2]],
+        selector=trinton.select_leaves_by_index([2], pitched=True),
+        direction=abjad.UP,
+    ),
+    trinton.attachment_command(
         attachments=[abjad.Articulation("marcato")],
         selector=trinton.pleaves(
             exclude=[
@@ -478,7 +488,7 @@ trinton.make_music(
             string="MSP",
         ),
         full_string=True,
-        padding=12,
+        padding=16.5,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([2, -1], pitched=True),
     ),
