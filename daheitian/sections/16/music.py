@@ -1124,6 +1124,10 @@ trinton.make_music(
             extra_counts=[2, -2, -1],
         )
     ),
+    trinton.call_rmaker(
+        rmaker=rmakers.force_diminution,
+        selector=trinton.select_tuplets_by_index([1, 7]),
+    ),
     library.change_lines(lines=1, clef="percussion"),
     library.boxed_markup(string="Tanggu"),
     trinton.linear_attachment_command(

@@ -4494,13 +4494,12 @@
                                         c'4.
                                         ~
                                     }
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 4) (ly:make-duration 3 0))
-                                    \times 4/3
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 2 0))
+                                    \times 2/3
                                     {
-                                        c'8
-                                        \repeatTie
                                         c'4
+                                        \repeatTie
+                                        c'2
                                         ~
                                     }
                                     \tweak text #tuplet-number::calc-fraction-text
@@ -4550,13 +4549,12 @@
                                         c'4
                                         ~
                                     }
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 4) (ly:make-duration 3 0))
-                                    \times 4/3
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 2 0))
+                                    \times 2/3
                                     {
-                                        c'4
+                                        c'2
                                         \repeatTie
-                                        c'8
+                                        c'4
                                         ~
                                     }
                                     \tweak text #tuplet-number::calc-fraction-text

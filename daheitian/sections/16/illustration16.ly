@@ -8504,15 +8504,14 @@
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 4) (ly:make-duration 3 0))
-                                    \times 4/3
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 2 0))
+                                    \times 2/3
                                     {
-                                        c'8
+                                        c'4
                                         % AFTER:
                                         % SPANNER_STARTS:
                                         \repeatTie
-                                        c'4
+                                        c'2
                                         % AFTER:
                                         % SPANNER_STARTS:
                                         ~
@@ -8598,15 +8597,14 @@
                                     % CLOSE_BRACKETS:
                                     }
                                     % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 4) (ly:make-duration 3 0))
-                                    \times 4/3
+                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 2 0))
+                                    \times 2/3
                                     {
-                                        c'4
+                                        c'2
                                         % AFTER:
                                         % SPANNER_STARTS:
                                         \repeatTie
-                                        c'8
+                                        c'4
                                         % AFTER:
                                         % SPANNER_STARTS:
                                         ~
