@@ -108,7 +108,7 @@ afterGraceFraction = #(cons 15 16)
         \override MeasureSpanner.thickness = #1.5
         \override MeasureSpanner.font-size = 7
         \override MeasureSpanner.font-name = "Bodoni72 Book"
-        \override MeasureSpanner.padding = 9
+        \override MeasureSpanner.padding = -5
 
         \override Staff.thickness = #0.5
 

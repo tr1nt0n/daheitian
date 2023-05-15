@@ -1268,7 +1268,11 @@ def fuse_durations(divisions):
 
 
 def ring_mod_attachments(
-    selector=trinton.pleaves(), dynamics=["p"], direction=abjad.UP, clean_swells=False
+    selector=trinton.pleaves(),
+    dynamics=["p"],
+    direction=abjad.UP,
+    clean_swells=False,
+    transparent_head=True,
 ):
     def attach(argument):
         selections = selector(argument)
@@ -1305,7 +1309,8 @@ def ring_mod_attachments(
                         abjad.detach(abjad.Markup, leaf)
                         for head in leaf.note_heads:
                             head.is_forced = False
-                            abjad.tweak(head, r"\tweak Accidental.transparent ##t")
+                            if transparent_head is True:
+                                abjad.tweak(head, r"\tweak Accidental.transparent ##t")
 
             for tie in group:
                 for leaf in tie:
@@ -1451,7 +1456,7 @@ def aftergrace(notes_string="c'16", selector=trinton.pleaves()):
 
         for container in containers:
             literal = abjad.LilyPondLiteral(
-                r'\once \override Flag.stroke-style = #"grace"'
+                r'\once \override Flag.stroke-style = #"grace"',
             )
 
             abjad.attach(literal, container[0])
@@ -1743,8 +1748,15 @@ def aftergrace_attachments(
     return attach
 
 
-def boxed_markup(string, selector=trinton.select_leaves_by_index([0], pitched=True)):
-    literal = abjad.LilyPondLiteral(rf'\boxed-markup "{string}" 1', "after")
+def boxed_markup(
+    string,
+    selector=trinton.select_leaves_by_index(
+        [0],
+        pitched=True,
+    ),
+    site="after",
+):
+    literal = abjad.LilyPondLiteral(rf'\boxed-markup "{string}" 1', site)
     command = trinton.attachment_command(
         attachments=[literal],
         selector=selector,
