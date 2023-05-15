@@ -73,35 +73,147 @@
                             {
                                 \context Voice = "oboe voice"
                                 {
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 5/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    c''4
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
+                                    - \marcato
+                                    - \tweak padding #7.5
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1.5
+                                    \startTextSpan
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c''8
+                                    - \marcato
+                                    [
+                                    c''16
+                                    - \marcato
+                                    \revert Staff.Stem.stemlet-length
+                                    c''16
+                                    - \marcato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c''8
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    c''8
+                                    - \marcato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c''16
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    c''8.
+                                    - \marcato
+                                    ]
+                                    c''4
+                                    - \marcato
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c''8
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    c''8
+                                    - \marcato
+                                    \!
+                                    ]
+                                    c''4
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "fffffpp"))
+                                    - \marcato
+                                    \stopTextSpan
+                                    \<
+                                    \set suggestAccidentals = ##t
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    cqs''8
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    [
+                                    cs''16
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    \revert Staff.Stem.stemlet-length
+                                    dqf''16
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    d''8
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    dqs''8
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    ef''16
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    eqf''8.
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    ]
+                                    e''4
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    eqs''8
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    f''8
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    ]
+                                    fqs''4
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    fs''8
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    [
+                                    g''16
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    \revert Staff.Stem.stemlet-length
+                                    a''16
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    b''8
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    cs'''8
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    d'''16
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    ds'''8.
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    ]
+                                    e'''4
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
+                                    - \marcato
+                                    \set suggestAccidentals = ##f
                                 }
                             }
                         }
@@ -111,35 +223,195 @@
                             {
                                 \context Voice = "bassclarinet voice"
                                 {
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
+                                    \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bassklarinetten }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { bkl. }
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 5/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                                    \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                                    a4
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
+                                    - \marcato
+                                    - \tweak padding #4
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Überblasen } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1.5
+                                    \startTextSpan
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                                    \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    a8
+                                    - \marcato
+                                    [
+                                    \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                                    \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                                    a16
+                                    - \marcato
+                                    \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                                    \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                                    \revert Staff.Stem.stemlet-length
+                                    a16
+                                    - \marcato
+                                    ]
+                                    \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                                    \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    a8
+                                    - \marcato
+                                    [
+                                    \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                                    \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                                    \revert Staff.Stem.stemlet-length
+                                    a8
+                                    - \marcato
+                                    ]
+                                    \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                                    \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    a16
+                                    - \marcato
+                                    [
+                                    \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                                    \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                                    \revert Staff.Stem.stemlet-length
+                                    a8.
+                                    - \marcato
+                                    ]
+                                    \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                                    \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                                    a4
+                                    - \marcato
+                                    \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                                    \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    a8
+                                    - \marcato
+                                    [
+                                    \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                                    \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                                    \revert Staff.Stem.stemlet-length
+                                    a8
+                                    - \marcato
+                                    \!
+                                    ]
+                                    \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                                    \once \override NoteHead.no-ledgers = ##t
+                                    \once \override NoteHead.stem-attachment = #'(0 . 0.75)
+                                    \once \override Staff.AccidentalPlacement.right-padding = #0.6
+                                    a4
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "fffffpp"))
+                                    - \marcato
+                                    \stopTextSpan
+                                    \<
+                                    \set suggestAccidentals = ##t
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    e8
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    [
+                                    fqs16
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    \revert Staff.Stem.stemlet-length
+                                    g16
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    aqf8
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    bf8
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    bqs16
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    cs'8.
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    ]
+                                    dqs'4
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    e'8
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    fqs'8
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    ]
+                                    g'4
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    aqf'8
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    [
+                                    cqs''16
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    \revert Staff.Stem.stemlet-length
+                                    ef''16
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    fs''8
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    aqf''8
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    cs'''16
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    eqs'''8.
+                                    - \bendAfter #'2.5
+                                    - \marcato
+                                    ]
+                                    fs'''4
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
+                                    - \marcato
+                                    \set suggestAccidentals = ##f
                                 }
                             }
                         }
@@ -149,35 +421,148 @@
                             {
                                 \context Voice = "bassoon voice"
                                 {
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Fagotte }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { fg.}
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 5/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    \clef "bass"
+                                    d4
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
+                                    - \marcato
+                                    - \tweak padding #8.5
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \hspace #4 \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -1.5
+                                    \startTextSpan
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    d8
+                                    - \marcato
+                                    [
+                                    d16
+                                    - \marcato
+                                    \revert Staff.Stem.stemlet-length
+                                    d16
+                                    - \marcato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    d8
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    d8
+                                    - \marcato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    d16
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    d8.
+                                    - \marcato
+                                    ]
+                                    d4
+                                    - \marcato
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    d8
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    d8
+                                    - \marcato
+                                    \!
+                                    ]
+                                    d4
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "fffffpp"))
+                                    - \marcato
+                                    \stopTextSpan
+                                    \<
+                                    \set suggestAccidentals = ##t
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    d8
+                                    - \bendAfter #'-2.5
+                                    - \marcato
+                                    [
+                                    dqf16
+                                    - \bendAfter #'-2.5
+                                    - \marcato
+                                    \revert Staff.Stem.stemlet-length
+                                    cs16
+                                    - \bendAfter #'-2.5
+                                    - \marcato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    cqs8
+                                    - \bendAfter #'-2.5
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    c8
+                                    - \bendAfter #'-2.5
+                                    - \marcato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    cqf16
+                                    - \bendAfter #'-2.5
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    b,8.
+                                    - \bendAfter #'-2.5
+                                    - \marcato
+                                    ]
+                                    bqf,4
+                                    - \bendAfter #'-2.5
+                                    - \marcato
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    bf,8
+                                    - \bendAfter #'-2.5
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    aqs,8
+                                    - \bendAfter #'-2.5
+                                    - \marcato
+                                    ]
+                                    a,4
+                                    - \bendAfter #'-2.5
+                                    - \marcato
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    aqf,8
+                                    - \bendAfter #'-2.5
+                                    - \marcato
+                                    [
+                                    af,16
+                                    - \bendAfter #'-2.5
+                                    - \marcato
+                                    \revert Staff.Stem.stemlet-length
+                                    gqs,16
+                                    - \bendAfter #'-2.5
+                                    - \marcato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    g,8
+                                    - \bendAfter #'-2.5
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    gqf,8
+                                    - \bendAfter #'-2.5
+                                    - \marcato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    fs,16
+                                    - \bendAfter #'-2.5
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    f,8.
+                                    - \bendAfter #'-2.5
+                                    - \marcato
+                                    ]
+                                    e,4
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
+                                    - \marcato
+                                    \set suggestAccidentals = ##f
                                 }
                             }
                         }
@@ -426,24 +811,20 @@
                                         \ffff
                                         \stopTextSpan
                                     }
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 5/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    \ottava -1
+                                    \clef "bass"
+                                    e,,1.
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "sffz"))
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    ~
+                                    e,,2.
+                                    \repeatTie
+                                    ~
+                                    e,,2
+                                    \!
+                                    \repeatTie
+                                    \ottava 0
                                 }
                             }
                         }
@@ -464,24 +845,19 @@
                                     R1 * 3/2
                                       %! +SCORE
                                 %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 5/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    \clef "bass"
+                                    fs,1.
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "sffz"))
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    ~
+                                    fs,2.
+                                    \repeatTie
+                                    ~
+                                    fs,4
+                                    \repeatTie
+                                    e,4
+                                    \!
                                 }
                             }
                         }
@@ -635,24 +1011,24 @@
                                         <g,, g,>16
                                         :128
                                     }
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 5/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    <fs,, fs,>1.
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "sffz"))
+                                    :32
+                                    \arpeggio
+                                    - \tweak stencil #constante-hairpin
+                                    \<
+                                    ~
+                                    <fs,, fs,>2.
+                                    :32
+                                    \repeatTie
+                                    ~
+                                    <fs,, fs,>4
+                                    :32
+                                    \repeatTie
+                                    <e,, e,>4
+                                    :32
+                                    \!
+                                    \arpeggio
                                 }
                             }
                         }
@@ -708,24 +1084,45 @@
                                 \!
                             }
                             r8
-                              %! +SCORE
-                        %%% \once \override Staff.BarLine.transparent = ##f
-                              %! +SCORE
-                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                              %! +SCORE
-                        %%% \once \override MultiMeasureRest.transparent = ##t
-                            R1 * 3/2
-                              %! +SCORE
-                        %%% \stopStaff \startStaff
-                              %! +SCORE
-                        %%% \once \override Staff.BarLine.transparent = ##f
-                              %! +SCORE
-                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                              %! +SCORE
-                        %%% \once \override MultiMeasureRest.transparent = ##t
-                            R1 * 5/4
-                              %! +SCORE
-                        %%% \stopStaff \startStaff
+                            c1.
+                                _ #(make-dynamic-script (markup #:whiteout #:italic "fffffpp"))
+                            :32
+                            \<
+                              %! abjad.glissando(7)
+                            \glissando
+                            ~
+                            \once \override Dots.staff-position = #2
+                              %! abjad.glissando(1)
+                            \hide NoteHead
+                              %! abjad.glissando(1)
+                            \override Accidental.stencil = ##f
+                              %! abjad.glissando(1)
+                            \override NoteColumn.glissando-skip = ##t
+                              %! abjad.glissando(1)
+                            \override NoteHead.no-ledgers = ##t
+                            c2.
+                            :32
+                            \repeatTie
+                            ~
+                            \once \override Dots.staff-position = #2
+                            \afterGrace
+                            c2
+                            :32
+                            \repeatTie
+                            {
+                                \once \override Flag.stroke-style = #"grace"
+                                  %! abjad.glissando(6)
+                                \revert Accidental.stencil
+                                  %! abjad.glissando(6)
+                                \revert NoteColumn.glissando-skip
+                                  %! abjad.glissando(6)
+                                \revert NoteHead.no-ledgers
+                                  %! abjad.glissando(6)
+                                \undo \hide NoteHead
+                                e16
+                                    _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
+                                :128
+                            }
                         }
                     }
                 }
@@ -923,8 +1320,8 @@
                                     \stopTextSpanOne
                                     - \tweak padding #11.5
                                     - \abjad-solid-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Steg ( immer noch Kratzen im Übergang ) } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ord., Ton }
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Steg ( kein Kratzen ) } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ord. }
                                     - \tweak bound-details.right.padding 1
                                     \startTextSpanOne
                                     \<
@@ -1103,8 +1500,8 @@
                                     \stopTextSpanOne
                                     - \tweak padding #11.5
                                     - \abjad-solid-line-with-arrow
-                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Steg ( immer noch Kratzen im Übergang ) } \hspace #0.5 }
-                                    - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ord., Ton }
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Steg ( kein Kratzen ) } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ord. }
                                     - \tweak bound-details.right.padding 1
                                     \startTextSpanOne
                                     \<
@@ -1195,6 +1592,11 @@
                                     b4
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
                                     - \marcato
+                                    - \tweak padding #11.5
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { DP, Kratzen } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -11.5
+                                    \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
                                     \override Staff.Stem.stemlet-length = 0.75
@@ -1233,25 +1635,127 @@
                                     b8
                                     - \marcato
                                     \!
+                                    \stopTextSpan
                                     ]
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 5/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    b4
+                                    - \marcato
+                                    - \tweak padding #11.5
+                                    - \abjad-solid-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { { } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding 1
+                                    \startTextSpanOne
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \>
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    b8
+                                    - \marcato
+                                    [
+                                    b16
+                                    - \marcato
+                                    \revert Staff.Stem.stemlet-length
+                                    b16
+                                    - \marcato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    b8
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    b8
+                                    - \marcato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    b16
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    b8.
+                                    - \marcato
+                                    ]
+                                    \staff-line-count 5
+                                    \clef "altovarC"
+                                    g4
+                                    - \marcato
+                                    \pp
+                                    \stopTextSpanOne
+                                    - \tweak padding #11.5
+                                    - \abjad-solid-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Steg ( kein Kratzen ) } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ord. }
+                                    - \tweak bound-details.right.padding 1
+                                    \startTextSpanOne
+                                    \<
+                                      %! abjad.glissando(7)
+                                    \glissando
+                                    \boxed-markup "( Gleichmäßiges Glissando bis zum letzten Ton )" 1
+                                    \once \override Dots.staff-position = #2
+                                      %! abjad.glissando(1)
+                                    \hide NoteHead
+                                      %! abjad.glissando(1)
+                                    \override Accidental.stencil = ##f
+                                      %! abjad.glissando(1)
+                                    \override NoteColumn.glissando-skip = ##t
+                                      %! abjad.glissando(1)
+                                    \override NoteHead.no-ledgers = ##t
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    b8
+                                    - \marcato
+                                    [
+                                    \once \override Dots.staff-position = #2
+                                    \revert Staff.Stem.stemlet-length
+                                    c'8
+                                    - \marcato
+                                    ]
+                                    \once \override Dots.staff-position = #2
+                                    d'4
+                                    - \marcato
+                                    \once \override Dots.staff-position = #2
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    f'8
+                                    - \marcato
+                                    [
+                                    \once \override Dots.staff-position = #2
+                                    g'16
+                                    - \marcato
+                                    \once \override Dots.staff-position = #2
+                                    \revert Staff.Stem.stemlet-length
+                                    a'16
+                                    - \marcato
+                                    ]
+                                    \once \override Dots.staff-position = #2
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    a'8
+                                    - \marcato
+                                    [
+                                    \once \override Dots.staff-position = #2
+                                    \revert Staff.Stem.stemlet-length
+                                    b'8
+                                    - \marcato
+                                    ]
+                                    \once \override Dots.staff-position = #2
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c''16
+                                    - \marcato
+                                    [
+                                    \once \override Dots.staff-position = #2
+                                    \revert Staff.Stem.stemlet-length
+                                    d''8.
+                                    - \marcato
+                                    ]
+                                    \ottava 1
+                                      %! abjad.glissando(6)
+                                    \revert Accidental.stencil
+                                      %! abjad.glissando(6)
+                                    \revert NoteColumn.glissando-skip
+                                      %! abjad.glissando(6)
+                                    \revert NoteHead.no-ledgers
+                                      %! abjad.glissando(6)
+                                    \undo \hide NoteHead
+                                    e'''4
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
+                                    - \marcato
+                                    \stopTextSpanOne
+                                    \ottava 0
                                 }
                             }
                         }
@@ -1268,6 +1772,11 @@
                                     g4
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
                                     - \marcato
+                                    - \tweak padding #10.5
+                                    - \abjad-solid-line-with-hook
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { DP, Kratzen } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding -11.5
+                                    \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
                                     \override Staff.Stem.stemlet-length = 0.75
@@ -1306,25 +1815,127 @@
                                     g8
                                     - \marcato
                                     \!
+                                    \stopTextSpan
                                     ]
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 5/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    g4
+                                    - \marcato
+                                    - \tweak padding #10.5
+                                    - \abjad-solid-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { { } \hspace #0.5 }
+                                    - \tweak bound-details.right.padding 1
+                                    \startTextSpanOne
+                                    - \tweak stencil #abjad-flared-hairpin
+                                    \>
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    g8
+                                    - \marcato
+                                    [
+                                    g16
+                                    - \marcato
+                                    \revert Staff.Stem.stemlet-length
+                                    g16
+                                    - \marcato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    g8
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    g8
+                                    - \marcato
+                                    ]
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    g16
+                                    - \marcato
+                                    [
+                                    \revert Staff.Stem.stemlet-length
+                                    g8.
+                                    - \marcato
+                                    ]
+                                    \staff-line-count 5
+                                    \clef "bass"
+                                    c,4
+                                    - \marcato
+                                    \pp
+                                    \stopTextSpanOne
+                                    - \tweak padding #10.5
+                                    - \abjad-solid-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Steg ( kein Kratzen ) } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ord. }
+                                    - \tweak bound-details.right.padding 1
+                                    \startTextSpanOne
+                                    \<
+                                      %! abjad.glissando(7)
+                                    \glissando
+                                    \boxed-markup "( Gleichmäßiges Glissando bis zum letzten Ton )" 1
+                                    \once \override Dots.staff-position = #2
+                                      %! abjad.glissando(1)
+                                    \hide NoteHead
+                                      %! abjad.glissando(1)
+                                    \override Accidental.stencil = ##f
+                                      %! abjad.glissando(1)
+                                    \override NoteColumn.glissando-skip = ##t
+                                      %! abjad.glissando(1)
+                                    \override NoteHead.no-ledgers = ##t
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    e,8
+                                    - \marcato
+                                    [
+                                    \once \override Dots.staff-position = #2
+                                    \revert Staff.Stem.stemlet-length
+                                    g,8
+                                    - \marcato
+                                    ]
+                                    \once \override Dots.staff-position = #2
+                                    a,4
+                                    - \marcato
+                                    \once \override Dots.staff-position = #2
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    d8
+                                    - \marcato
+                                    [
+                                    \once \override Dots.staff-position = #2
+                                    f16
+                                    - \marcato
+                                    \once \override Dots.staff-position = #2
+                                    \revert Staff.Stem.stemlet-length
+                                    f16
+                                    - \marcato
+                                    ]
+                                    \once \override Dots.staff-position = #2
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    g8
+                                    - \marcato
+                                    [
+                                    \once \override Dots.staff-position = #2
+                                    \revert Staff.Stem.stemlet-length
+                                    a8
+                                    - \marcato
+                                    ]
+                                    \once \override Dots.staff-position = #2
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    c'16
+                                    - \marcato
+                                    [
+                                    \once \override Dots.staff-position = #2
+                                    \revert Staff.Stem.stemlet-length
+                                    c'8.
+                                    - \marcato
+                                    ]
+                                    \ottava 2
+                                      %! abjad.glissando(6)
+                                    \revert Accidental.stencil
+                                      %! abjad.glissando(6)
+                                    \revert NoteColumn.glissando-skip
+                                      %! abjad.glissando(6)
+                                    \revert NoteHead.no-ledgers
+                                      %! abjad.glissando(6)
+                                    \undo \hide NoteHead
+                                    e'''4
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
+                                    - \marcato
+                                    \stopTextSpanOne
+                                    \ottava 0
                                 }
                             }
                         }
@@ -1341,24 +1952,41 @@
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
                                     :32
                                     \boxed-markup "MST" 1
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 5/4
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    a,1.
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "fffffpp"))
+                                    \<
+                                      %! abjad.glissando(7)
+                                    \glissando
+                                    ~
+                                    \once \override Dots.staff-position = #2
+                                      %! abjad.glissando(1)
+                                    \hide NoteHead
+                                      %! abjad.glissando(1)
+                                    \override Accidental.stencil = ##f
+                                      %! abjad.glissando(1)
+                                    \override NoteColumn.glissando-skip = ##t
+                                      %! abjad.glissando(1)
+                                    \override NoteHead.no-ledgers = ##t
+                                    a,2.
+                                    \repeatTie
+                                    ~
+                                    \once \override Dots.staff-position = #2
+                                    \afterGrace
+                                    a,2
+                                    \repeatTie
+                                    {
+                                        \once \override Flag.stroke-style = #"grace"
+                                          %! abjad.glissando(6)
+                                        \revert Accidental.stencil
+                                          %! abjad.glissando(6)
+                                        \revert NoteColumn.glissando-skip
+                                          %! abjad.glissando(6)
+                                        \revert NoteHead.no-ledgers
+                                          %! abjad.glissando(6)
+                                        \undo \hide NoteHead
+                                        e,16
+                                            _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
+                                    }
                                 }
                             }
                         }
