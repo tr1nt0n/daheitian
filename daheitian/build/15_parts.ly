@@ -376,7 +376,8 @@
                                     ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
                                     ~
                                     d16
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r8.
                                     r4
                                     cqs,8
@@ -386,7 +387,8 @@
                                     \<
                                     ~
                                     cqs,16
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r16
                                     r4
                                     r8
@@ -1469,20 +1471,23 @@
                                     \ff
                                     \<
                                     r16
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     b16
                                     - \marcato
                                     ~
                                     b4
                                     ~
                                     b16
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r16
                                     f'4
                                     - \marcato
                                     ~
                                     f'8
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r16
                                     d'8.
                                     - \marcato
@@ -1490,7 +1495,8 @@
                                     \<
                                     ~
                                     d'8.
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r16
                                     g4.
                                     - \marcato
@@ -1582,7 +1588,8 @@
                                     - \marcato
                                     ~
                                     f'8
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r8
                                     \override Staff.Stem.stemlet-length = 0.75
                                     d'8
@@ -1765,7 +1772,8 @@
                                     ~
                                     g16
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r8.
                                     ]
                                     g4
@@ -1774,14 +1782,16 @@
                                     \<
                                     ~
                                     g16
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r8.
                                     r8
                                     d'8
                                     - \marcato
                                     ~
                                     d'8.
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r16
                                     r4
                                     f'8
@@ -1790,14 +1800,16 @@
                                     \<
                                     ~
                                     f'8.
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r8.
                                     r8
                                     b4
                                     - \marcato
                                     ~
                                     b16
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r16
                                     r4
                                     b4
@@ -1806,7 +1818,8 @@
                                     \<
                                     ~
                                     b16
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r8.
                                     r8
                                     g8

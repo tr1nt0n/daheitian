@@ -933,7 +933,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     aqf8.
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                       %! abjad.glissando(6)
                                     \revert Accidental.stencil
                                       %! abjad.glissando(6)

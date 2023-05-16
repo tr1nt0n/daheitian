@@ -795,7 +795,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf8
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \revert Staff.Stem.stemlet-length
                                     bf8
                                     - \tenuto
@@ -822,13 +823,15 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \revert Staff.Stem.stemlet-length
                                     bf8.
                                     - \tenuto
                                     ]
                                     r8.
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     bf16
                                     - \tenuto
                                     ~
@@ -843,8 +846,10 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     [
-                                    \repeatTie
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \repeatTie
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     bf16
                                     - \tenuto
                                     ~
@@ -856,7 +861,8 @@
                                         \glissando
                                     }
                                     }
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -866,7 +872,8 @@
                                     bf8.
                                     )
                                     [
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -883,13 +890,16 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     [
-                                    \repeatTie
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \repeatTie
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     bf16
                                     - \tenuto
                                     ~
                                     bf16
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -915,7 +925,8 @@
                                         \glissando
                                     }
                                     }
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -925,14 +936,16 @@
                                     )
                                     r8
                                     r16
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     - \tenuto
                                     [
                                     ~
                                     bf16
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -941,7 +954,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf8.
                                     [
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -958,13 +972,16 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     [
-                                    \repeatTie
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \repeatTie
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     bf16
                                     - \tenuto
                                     ~
                                     bf16
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -987,7 +1004,8 @@
                                     ~
                                     bf16
                                     )
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r8.
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf8
@@ -1001,7 +1019,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf8
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     bf8
                                     - \tenuto
                                     \revert Staff.Stem.stemlet-length
@@ -1012,7 +1031,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf8
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     bf8
                                     - \tenuto
                                     \revert Staff.Stem.stemlet-length
@@ -1023,7 +1043,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf8
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \scaleDurations #'(1 . 1) {
                                     \slashedGrace {
                                         e'16
@@ -1042,8 +1063,10 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     [
-                                    \repeatTie
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \repeatTie
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     bf16
                                     - \tenuto
                                     ~
@@ -1081,7 +1104,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf8
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \scaleDurations #'(1 . 1) {
                                     \slashedGrace {
                                         e'16
@@ -1099,7 +1123,8 @@
                                     - \tenuto
                                     [
                                     \<
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -1108,14 +1133,16 @@
                                     bf8
                                     r8
                                     r16
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     - \tenuto
                                     [
                                     ~
                                     bf16
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -1124,7 +1151,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf8.
                                     [
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -1141,7 +1169,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \scaleDurations #'(1 . 1) {
                                     \slashedGrace {
                                         e'16
@@ -1149,13 +1178,15 @@
                                         \glissando
                                     }
                                     }
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     bf16
                                     - \tenuto
                                     ~
                                     bf16
                                     )
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -1164,7 +1195,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf8.
                                     [
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -1189,7 +1221,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \revert Staff.Stem.stemlet-length
                                     bf8.
                                     - \tenuto
@@ -1202,7 +1235,8 @@
                                         \glissando
                                     }
                                     }
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     bf16
                                     - \tenuto
                                     ~
@@ -1218,13 +1252,16 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     [
-                                    \repeatTie
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \repeatTie
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     bf16
                                     - \tenuto
                                     ~
                                     bf16
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -1233,7 +1270,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf8.
                                     [
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -1310,7 +1348,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c''8
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \revert Staff.Stem.stemlet-length
                                     c''8
                                     - \tenuto
@@ -1337,13 +1376,15 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c''16
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \revert Staff.Stem.stemlet-length
                                     c''8.
                                     - \tenuto
                                     ]
                                     r8.
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     c''16
                                     - \tenuto
                                     ~
@@ -1358,8 +1399,10 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c''16
                                     [
-                                    \repeatTie
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \repeatTie
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     c''16
                                     - \tenuto
                                     ~
@@ -1371,7 +1414,8 @@
                                         \glissando
                                     }
                                     }
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     c''16
                                     - \tenuto
@@ -1382,7 +1426,8 @@
                                     )
                                     \stopTextSpan
                                     [
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     c''16
                                     - \tenuto
@@ -1399,13 +1444,16 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c''16
                                     [
-                                    \repeatTie
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \repeatTie
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     c''16
                                     - \tenuto
                                     ~
                                     c''16
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     c''16
                                     - \tenuto
@@ -1430,7 +1478,8 @@
                                         \glissando
                                     }
                                     }
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     c''16
                                     - \tenuto
@@ -1440,14 +1489,16 @@
                                     )
                                     r8
                                     r16
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c''16
                                     - \tenuto
                                     [
                                     ~
                                     c''16
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     c''16
                                     - \tenuto
@@ -1456,7 +1507,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c''8.
                                     [
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     c''16
                                     - \tenuto
@@ -1473,13 +1525,16 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c''16
                                     [
-                                    \repeatTie
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \repeatTie
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     c''16
                                     - \tenuto
                                     ~
                                     c''16
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     c''16
                                     - \tenuto
@@ -1502,7 +1557,8 @@
                                     ~
                                     c''16
                                     )
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r8.
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c''8
@@ -1519,7 +1575,8 @@
                                     \times 2/3
                                     {
                                         c''8
-                                        \repeatTie
+                                          %! +SCORE
+                                    %%% \repeatTie
                                         c''4
                                         - \tenuto
                                     }
@@ -1530,7 +1587,8 @@
                                     \times 2/3
                                     {
                                         c''8
-                                        \repeatTie
+                                          %! +SCORE
+                                    %%% \repeatTie
                                         \scaleDurations #'(1 . 1) {
                                         \slashedGrace {
                                             fs''16
@@ -1546,13 +1604,15 @@
                                     - \tenuto
                                     ~
                                     c''8
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 0))
                                     \times 2/3
                                     {
                                         c''8
-                                        \repeatTie
+                                          %! +SCORE
+                                    %%% \repeatTie
                                         c''4
                                         - \tenuto
                                     }
@@ -1593,7 +1653,8 @@
                                             \glissando
                                         }
                                         }
-                                        \once \override Tie.transparent = ##f
+                                          %! +SCORE
+                                    %%% \once \override Tie.transparent = ##f
                                         c''8
                                         - \tenuto
                                         ~
@@ -1605,7 +1666,8 @@
                                     {
                                         c''4
                                         - \tenuto
-                                        \once \override Tie.transparent = ##f
+                                          %! +SCORE
+                                    %%% \once \override Tie.transparent = ##f
                                         c''8
                                         - \tenuto
                                         ~
@@ -1616,7 +1678,8 @@
                                     {
                                         c''4
                                         - \tenuto
-                                        \once \override Tie.transparent = ##f
+                                          %! +SCORE
+                                    %%% \once \override Tie.transparent = ##f
                                         c''8
                                         - \tenuto
                                         ~
@@ -1625,7 +1688,8 @@
                                     \times 2/3
                                     {
                                         c''4
-                                        \once \override Tie.transparent = ##f
+                                          %! +SCORE
+                                    %%% \once \override Tie.transparent = ##f
                                         c''8
                                         - \tenuto
                                         ~
@@ -1640,7 +1704,8 @@
                                     \times 2/3
                                     {
                                         r4
-                                        \once \override Tie.transparent = ##f
+                                          %! +SCORE
+                                    %%% \once \override Tie.transparent = ##f
                                         c''8
                                         - \tenuto
                                         ~
@@ -1665,8 +1730,10 @@
                                     {
                                         c''4
                                         )
-                                        \repeatTie
-                                        \once \override Tie.transparent = ##f
+                                          %! +SCORE
+                                    %%% \repeatTie
+                                          %! +SCORE
+                                    %%% \once \override Tie.transparent = ##f
                                         c''8
                                         - \tenuto
                                         ~
@@ -1683,8 +1750,10 @@
                                     \times 2/3
                                     {
                                         c''4
-                                        \repeatTie
-                                        \once \override Tie.transparent = ##f
+                                          %! +SCORE
+                                    %%% \repeatTie
+                                          %! +SCORE
+                                    %%% \once \override Tie.transparent = ##f
                                         c''8
                                         - \tenuto
                                         ~
@@ -1701,8 +1770,10 @@
                                     \times 2/3
                                     {
                                         c''4
-                                        \repeatTie
-                                        \once \override Tie.transparent = ##f
+                                          %! +SCORE
+                                    %%% \repeatTie
+                                          %! +SCORE
+                                    %%% \once \override Tie.transparent = ##f
                                         c''8
                                         - \tenuto
                                         ~
@@ -1719,7 +1790,8 @@
                                     \times 2/3
                                     {
                                         c''8
-                                        \repeatTie
+                                          %! +SCORE
+                                    %%% \repeatTie
                                         \scaleDurations #'(1 . 1) {
                                         \slashedGrace {
                                             fs''16
@@ -1777,7 +1849,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf8
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \revert Staff.Stem.stemlet-length
                                     bf8
                                     - \tenuto
@@ -1804,14 +1877,16 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \revert Staff.Stem.stemlet-length
                                     bf8.
                                     - \tenuto
                                     \stopTextSpan
                                     ]
                                     r8.
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     bf16
                                     - \tenuto
                                     ~
@@ -1826,8 +1901,10 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     [
-                                    \repeatTie
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \repeatTie
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     bf16
                                     - \tenuto
                                     ~
@@ -1839,7 +1916,8 @@
                                         \glissando
                                     }
                                     }
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -1849,7 +1927,8 @@
                                     bf8.
                                     )
                                     [
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -1866,13 +1945,16 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     [
-                                    \repeatTie
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \repeatTie
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     bf16
                                     - \tenuto
                                     ~
                                     bf16
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -1897,7 +1979,8 @@
                                         \glissando
                                     }
                                     }
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -1920,7 +2003,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf8
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \scaleDurations #'(1 . 1) {
                                     \slashedGrace {
                                         e'16
@@ -1937,7 +2021,8 @@
                                     bf8.
                                     - \tenuto
                                     [
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -1946,14 +2031,16 @@
                                     bf8
                                     r8
                                     r16
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     - \tenuto
                                     [
                                     ~
                                     bf16
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -1962,7 +2049,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf8.
                                     [
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -1971,7 +2059,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     [
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     bf16
                                     - \tenuto
                                     ~
@@ -1983,7 +2072,8 @@
                                         \glissando
                                     }
                                     }
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -1993,12 +2083,14 @@
                                     bf16
                                     )
                                     [
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     bf16
                                     - \tenuto
                                     ~
                                     bf8.
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -2029,7 +2121,8 @@
                                         \glissando
                                     }
                                     }
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     bf16
                                     - \tenuto
                                     ~
@@ -2062,7 +2155,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf8
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \revert Staff.Stem.stemlet-length
                                     bf8
                                     - \tenuto
@@ -2079,7 +2173,8 @@
                                     - \tenuto
                                     )
                                     [
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -2088,7 +2183,8 @@
                                     bf8
                                     r8
                                     r16
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     - \tenuto
@@ -2096,7 +2192,8 @@
                                     \<
                                     ~
                                     bf16
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -2105,7 +2202,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf8.
                                     [
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -2122,8 +2220,10 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     [
-                                    \repeatTie
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \repeatTie
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     bf16
                                     - \tenuto
                                     ~
@@ -2135,7 +2235,8 @@
                                         \glissando
                                     }
                                     }
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -2145,7 +2246,8 @@
                                     bf8.
                                     )
                                     [
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -2170,13 +2272,15 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf16
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \revert Staff.Stem.stemlet-length
                                     bf8.
                                     - \tenuto
                                     ]
                                     r8.
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     bf16
                                     - \tenuto
                                     ~
@@ -2199,13 +2303,16 @@
                                     bf16
                                     )
                                     [
-                                    \repeatTie
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \repeatTie
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     bf16
                                     - \tenuto
                                     ~
                                     bf16
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -2214,7 +2321,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf8.
                                     [
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     bf16
                                     - \tenuto
@@ -2255,7 +2363,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf8
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \revert Staff.Stem.stemlet-length
                                     bf8
                                     - \tenuto
@@ -4458,7 +4567,8 @@
                                     \times 12/13
                                     {
                                         c'8
-                                        \repeatTie
+                                          %! +SCORE
+                                    %%% \repeatTie
                                         c'2
                                         c'2
                                         c'2
@@ -4498,7 +4608,8 @@
                                     \times 2/3
                                     {
                                         c'4
-                                        \repeatTie
+                                          %! +SCORE
+                                    %%% \repeatTie
                                         c'2
                                         ~
                                     }
@@ -4507,7 +4618,8 @@
                                     \times 12/11
                                     {
                                         c'4
-                                        \repeatTie
+                                          %! +SCORE
+                                    %%% \repeatTie
                                         c'4..
                                         ~
                                     }
@@ -4515,9 +4627,11 @@
                                     \times 4/5
                                     {
                                         c'16
-                                        \repeatTie
+                                          %! +SCORE
+                                    %%% \repeatTie
                                         c'2
-                                        \once \override Tie.transparent = ##f
+                                          %! +SCORE
+                                    %%% \once \override Tie.transparent = ##f
                                         c'16
                                         ~
                                     }
@@ -4534,10 +4648,12 @@
                                     \times 8/7
                                     {
                                         c'4
-                                        \repeatTie
+                                          %! +SCORE
+                                    %%% \repeatTie
                                         ~
                                         c'16
-                                        \repeatTie
+                                          %! +SCORE
+                                    %%% \repeatTie
                                         c'8
                                         ~
                                     }
@@ -4545,7 +4661,8 @@
                                     \times 4/5
                                     {
                                         c'4.
-                                        \repeatTie
+                                          %! +SCORE
+                                    %%% \repeatTie
                                         c'4
                                         ~
                                     }
@@ -4553,7 +4670,8 @@
                                     \times 2/3
                                     {
                                         c'2
-                                        \repeatTie
+                                          %! +SCORE
+                                    %%% \repeatTie
                                         c'4
                                         ~
                                     }
@@ -4562,12 +4680,14 @@
                                     \times 12/11
                                     {
                                         c'4.
-                                        \repeatTie
+                                          %! +SCORE
+                                    %%% \repeatTie
                                         c'4
                                         \ffff
                                         ~
                                         c'16
-                                        \repeatTie
+                                          %! +SCORE
+                                    %%% \repeatTie
                                     }
                                 }
                             }
@@ -4602,7 +4722,8 @@
                                         \boxed-markup "Tam-Tam mit Bogen" 1
                                         c'4
                                         - \tenuto
-                                        \once \override Tie.transparent = ##f
+                                          %! +SCORE
+                                    %%% \once \override Tie.transparent = ##f
                                         c'16
                                         - \tenuto
                                         ~
@@ -4622,12 +4743,14 @@
                                         \override Staff.Stem.stemlet-length = 0.75
                                         c'16
                                         [
-                                        \repeatTie
+                                          %! +SCORE
+                                    %%% \repeatTie
                                         c'8
                                         - \tenuto
                                         c'8.
                                         - \tenuto
-                                        \once \override Tie.transparent = ##f
+                                          %! +SCORE
+                                    %%% \once \override Tie.transparent = ##f
                                         \revert Staff.Stem.stemlet-length
                                         c'16
                                         - \tenuto
@@ -4637,14 +4760,16 @@
                                     c'8
                                     r8
                                     r16
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c'16
                                     - \tenuto
                                     [
                                     ~
                                     c'16
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     c'16
                                     - \tenuto
@@ -4668,7 +4793,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c'8
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \revert Staff.Stem.stemlet-length
                                     c'8
                                     - \tenuto
@@ -4683,7 +4809,8 @@
                                         c'8
                                         - \tenuto
                                         [
-                                        \once \override Tie.transparent = ##f
+                                          %! +SCORE
+                                    %%% \once \override Tie.transparent = ##f
                                         \revert Staff.Stem.stemlet-length
                                         c'16
                                         - \tenuto
@@ -4702,7 +4829,8 @@
                                     - \tenuto
                                     \mp
                                     [
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     c'16
                                     - \tenuto
@@ -4727,7 +4855,8 @@
                                         - \tenuto
                                         c'4
                                         - \tenuto
-                                        \once \override Tie.transparent = ##f
+                                          %! +SCORE
+                                    %%% \once \override Tie.transparent = ##f
                                         c'16
                                         - \tenuto
                                         ~
@@ -4764,16 +4893,21 @@
                                             \override Staff.Stem.stemlet-length = 0.75
                                             c'16
                                             [
-                                            \repeatTie
-                                            \once \override Tie.transparent = ##f
-                                            \once \override Tie.transparent = ##f
+                                              %! +SCORE
+                                        %%% \repeatTie
+                                              %! +SCORE
+                                        %%% \once \override Tie.transparent = ##f
+                                              %! +SCORE
+                                        %%% \once \override Tie.transparent = ##f
                                             c'16
                                             - \tenuto
                                             ~
                                             c'16
                                             \staff-line-count 3
-                                            \once \override Tie.transparent = ##f
-                                            \once \override Tie.transparent = ##f
+                                              %! +SCORE
+                                        %%% \once \override Tie.transparent = ##f
+                                              %! +SCORE
+                                        %%% \once \override Tie.transparent = ##f
                                             \clef "percussion"
                                             \revert Staff.Stem.stemlet-length
                                             a16
@@ -4798,7 +4932,8 @@
                                             \override Staff.Stem.stemlet-length = 0.75
                                             a8
                                             [
-                                            \repeatTie
+                                              %! +SCORE
+                                        %%% \repeatTie
                                             \revert Staff.Stem.stemlet-length
                                             a8
                                             - \tenuto
@@ -4807,8 +4942,10 @@
                                             a8.
                                             - \tenuto
                                             [
-                                            \once \override Tie.transparent = ##f
-                                            \once \override Tie.transparent = ##f
+                                              %! +SCORE
+                                        %%% \once \override Tie.transparent = ##f
+                                              %! +SCORE
+                                        %%% \once \override Tie.transparent = ##f
                                             \revert Staff.Stem.stemlet-length
                                             a16
                                             - \tenuto
@@ -4857,15 +4994,20 @@
                                             \override Staff.Stem.stemlet-length = 0.75
                                             a16
                                             [
-                                            \repeatTie
-                                            \once \override Tie.transparent = ##f
-                                            \once \override Tie.transparent = ##f
+                                              %! +SCORE
+                                        %%% \repeatTie
+                                              %! +SCORE
+                                        %%% \once \override Tie.transparent = ##f
+                                              %! +SCORE
+                                        %%% \once \override Tie.transparent = ##f
                                             a16
                                             - \tenuto
                                             ~
                                             a16
-                                            \once \override Tie.transparent = ##f
-                                            \once \override Tie.transparent = ##f
+                                              %! +SCORE
+                                        %%% \once \override Tie.transparent = ##f
+                                              %! +SCORE
+                                        %%% \once \override Tie.transparent = ##f
                                             \revert Staff.Stem.stemlet-length
                                             a16
                                             - \tenuto
@@ -4874,8 +5016,10 @@
                                             \override Staff.Stem.stemlet-length = 0.75
                                             a8.
                                             [
-                                            \once \override Tie.transparent = ##f
-                                            \once \override Tie.transparent = ##f
+                                              %! +SCORE
+                                        %%% \once \override Tie.transparent = ##f
+                                              %! +SCORE
+                                        %%% \once \override Tie.transparent = ##f
                                             \revert Staff.Stem.stemlet-length
                                             a16
                                             - \tenuto
@@ -4897,14 +5041,17 @@
                                             \times 8/7
                                             {
                                                 a16
-                                                \repeatTie
+                                                  %! +SCORE
+                                            %%% \repeatTie
                                                 r8.
                                                 \override Staff.Stem.stemlet-length = 0.75
                                                 a8
                                                 - \tenuto
                                                 [
-                                                \once \override Tie.transparent = ##f
-                                                \once \override Tie.transparent = ##f
+                                                  %! +SCORE
+                                            %%% \once \override Tie.transparent = ##f
+                                                  %! +SCORE
+                                            %%% \once \override Tie.transparent = ##f
                                                 \revert Staff.Stem.stemlet-length
                                                 a16
                                                 - \tenuto
@@ -4914,8 +5061,10 @@
                                             \override Staff.Stem.stemlet-length = 0.75
                                             a8.
                                             [
-                                            \once \override Tie.transparent = ##f
-                                            \once \override Tie.transparent = ##f
+                                              %! +SCORE
+                                        %%% \once \override Tie.transparent = ##f
+                                              %! +SCORE
+                                        %%% \once \override Tie.transparent = ##f
                                             \revert Staff.Stem.stemlet-length
                                             a16
                                             - \tenuto
@@ -4927,8 +5076,10 @@
                                                 a8
                                                 a2
                                                 - \tenuto
-                                                \once \override Tie.transparent = ##f
-                                                \once \override Tie.transparent = ##f
+                                                  %! +SCORE
+                                            %%% \once \override Tie.transparent = ##f
+                                                  %! +SCORE
+                                            %%% \once \override Tie.transparent = ##f
                                                 a8
                                                 - \tenuto
                                                 ~
@@ -4944,7 +5095,8 @@
                                             \override Staff.Stem.stemlet-length = 0.75
                                             a8
                                             [
-                                            \repeatTie
+                                              %! +SCORE
+                                        %%% \repeatTie
                                             \revert Staff.Stem.stemlet-length
                                             a8
                                             - \tenuto
@@ -4953,8 +5105,10 @@
                                             a8.
                                             - \tenuto
                                             [
-                                            \once \override Tie.transparent = ##f
-                                            \once \override Tie.transparent = ##f
+                                              %! +SCORE
+                                        %%% \once \override Tie.transparent = ##f
+                                              %! +SCORE
+                                        %%% \once \override Tie.transparent = ##f
                                             \revert Staff.Stem.stemlet-length
                                             a16
                                             - \tenuto
@@ -4975,14 +5129,17 @@
                                             \times 8/7
                                             {
                                                 a16
-                                                \repeatTie
+                                                  %! +SCORE
+                                            %%% \repeatTie
                                                 r8.
                                                 \override Staff.Stem.stemlet-length = 0.75
                                                 a8
                                                 - \tenuto
                                                 [
-                                                \once \override Tie.transparent = ##f
-                                                \once \override Tie.transparent = ##f
+                                                  %! +SCORE
+                                            %%% \once \override Tie.transparent = ##f
+                                                  %! +SCORE
+                                            %%% \once \override Tie.transparent = ##f
                                                 \revert Staff.Stem.stemlet-length
                                                 a16
                                                 - \tenuto
@@ -4992,8 +5149,10 @@
                                             \override Staff.Stem.stemlet-length = 0.75
                                             a8.
                                             [
-                                            \once \override Tie.transparent = ##f
-                                            \once \override Tie.transparent = ##f
+                                              %! +SCORE
+                                        %%% \once \override Tie.transparent = ##f
+                                              %! +SCORE
+                                        %%% \once \override Tie.transparent = ##f
                                             \revert Staff.Stem.stemlet-length
                                             a16
                                             - \tenuto
@@ -5005,8 +5164,10 @@
                                                 a8
                                                 a2
                                                 - \tenuto
-                                                \once \override Tie.transparent = ##f
-                                                \once \override Tie.transparent = ##f
+                                                  %! +SCORE
+                                            %%% \once \override Tie.transparent = ##f
+                                                  %! +SCORE
+                                            %%% \once \override Tie.transparent = ##f
                                                 a8
                                                 - \tenuto
                                                 ~
@@ -5020,7 +5181,8 @@
                                                 ~
                                             }
                                             a16
-                                            \repeatTie
+                                              %! +SCORE
+                                        %%% \repeatTie
                                             a8.
                                             - \tenuto
                                             \f
@@ -5090,13 +5252,16 @@
                                     \startTextSpan
                                     ~
                                     c'2
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c'8.
                                     [
-                                    \repeatTie
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \repeatTie
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     c'16
                                     \mf
@@ -5107,11 +5272,13 @@
                                     c'4
                                     ~
                                     c'2.
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     c'4.
                                     \stopTextSpan
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r8
                                     \!
                                     r2
@@ -5419,15 +5586,18 @@
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
                                     gqs2
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     \once \override Dots.staff-position = #2
                                     \override Staff.Stem.stemlet-length = 0.75
                                     gqs8.
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \once \override Dots.staff-position = #2
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     gqs16
                                     \mf
@@ -5441,17 +5611,20 @@
                                     ~
                                     \once \override Dots.staff-position = #2
                                     gqs2.
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     \once \override Dots.staff-position = #2
                                     gqs4
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     \once \override Dots.staff-position = #2
                                     \override Staff.Stem.stemlet-length = 0.75
                                     gqs16
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                       %! abjad.glissando(6)
                                     \revert Accidental.stencil
                                       %! abjad.glissando(6)
@@ -5781,15 +5954,18 @@
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
                                     af2
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     \once \override Dots.staff-position = #2
                                     \override Staff.Stem.stemlet-length = 0.75
                                     af8.
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \once \override Dots.staff-position = #2
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     af16
                                     \mf
@@ -5803,17 +5979,20 @@
                                     ~
                                     \once \override Dots.staff-position = #2
                                     af2.
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     \once \override Dots.staff-position = #2
                                     af4
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     \once \override Dots.staff-position = #2
                                     \override Staff.Stem.stemlet-length = 0.75
                                     af16
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                       %! abjad.glissando(6)
                                     \revert Accidental.stencil
                                       %! abjad.glissando(6)
@@ -6123,12 +6302,14 @@
                                     \startTextSpan
                                     ~
                                     af2
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     \override Staff.Stem.stemlet-length = 0.75
                                     af8.
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \revert Staff.Stem.stemlet-length
                                     af16
                                     \mf
@@ -6470,13 +6651,16 @@
                                     \startTextSpan
                                     ~
                                     af'2
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     \override Staff.Stem.stemlet-length = 0.75
                                     af'8.
                                     [
-                                    \repeatTie
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \repeatTie
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     af'16
                                     \mf
@@ -6487,11 +6671,13 @@
                                     af'4
                                     ~
                                     af'2.
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     af'4.
                                     \stopTextSpan
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r8
                                     \!
                                     r2

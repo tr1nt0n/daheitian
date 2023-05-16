@@ -228,6 +228,7 @@
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                                      %! +SCORE
                                     \once \override Tie.transparent = ##f
                                     % OPENING:
                                     % COMMANDS:
@@ -276,6 +277,7 @@
                                     a16
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     r8.
                                     r16
@@ -356,6 +358,7 @@
                                     cqs,16
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     r4..
                                     cqs,8.
@@ -1021,6 +1024,7 @@
                             % STEM_TREMOLOS:
                             :32
                             % SPANNER_STARTS:
+                              %! +SCORE
                             \repeatTie
                             ~
                             % BEFORE:
@@ -1033,6 +1037,7 @@
                             % STEM_TREMOLOS:
                             :64
                             % SPANNER_STARTS:
+                              %! +SCORE
                             \repeatTie
                             % OPEN_BRACKETS:
                             {
@@ -1478,6 +1483,7 @@
                                     r16
                                     % BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Tie.transparent = ##f
                                     f'16
                                     % AFTER:
@@ -1492,6 +1498,7 @@
                                     f'16
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     r16
                                     d'4.
@@ -1508,6 +1515,7 @@
                                     b8.
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     r16
                                     f'4
@@ -1562,6 +1570,7 @@
                                     b8
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     r8
                                     f'4
@@ -1578,6 +1587,7 @@
                                     d'8
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     r8
                                     b4

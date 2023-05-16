@@ -150,6 +150,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % OPENING:
                                     % COMMANDS:
@@ -167,6 +168,7 @@
                                     % STEM_TREMOLOS:
                                     :32
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % BEFORE:
                                     % BEFORE:
@@ -188,6 +190,7 @@
                                     % COMMANDS:
                                     }
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Tie.transparent = ##f
                                     g'''16
                                     % AFTER:
@@ -212,6 +215,7 @@
                                     % STEM_TREMOLOS:
                                     :32
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     ~
                                     % OPENING:
@@ -224,6 +228,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % OPENING:
                                     % COMMANDS:
@@ -246,6 +251,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % OPENING:
                                     % COMMANDS:
@@ -263,6 +269,7 @@
                                     % STEM_TREMOLOS:
                                     :64
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % BEFORE:
                                     % BEFORE:
@@ -301,6 +308,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % OPENING:
                                     % COMMANDS:
@@ -318,6 +326,7 @@
                                     % STEM_TREMOLOS:
                                     :32
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % BEFORE:
                                     % BEFORE:
@@ -351,6 +360,7 @@
                                     % SPANNER_STOPS:
                                     )
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     f'''4
                                     % AFTER:
@@ -363,6 +373,7 @@
                                     % STEM_TREMOLOS:
                                     :64
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     ~
                                     % OPENING:
@@ -375,6 +386,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % OPENING:
                                     % COMMANDS:
@@ -2433,6 +2445,7 @@
                                     c'8
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                 % CLOSE_BRACKETS:
                                 }

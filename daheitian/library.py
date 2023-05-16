@@ -1498,7 +1498,11 @@ def ties(score):
             if abjad.get.has_indicator(leaf, abjad.Tie) and abjad.get.duration(
                 leaf
             ) > abjad.Duration(3, 32):
-                abjad.attach(abjad.RepeatTie(), abjad.select.with_next_leaf(leaf)[-1])
+                abjad.attach(
+                    abjad.RepeatTie(),
+                    abjad.select.with_next_leaf(leaf)[-1],
+                    tag=abjad.Tag("+SCORE"),
+                )
 
             if abjad.get.has_indicator(leaf, abjad.Tie) and abjad.get.duration(
                 leaf
@@ -1508,6 +1512,7 @@ def ties(score):
                         r"\once \override Tie.transparent = ##f", "before"
                     ),
                     leaf,
+                    tag=abjad.Tag("+SCORE"),
                 )
 
 

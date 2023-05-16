@@ -129,7 +129,8 @@
                                     r16
                                     r8.
                                     \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \once \override NoteHead.no-ledgers = ##t
                                     \once \override NoteHead.stem-attachment = #'(0 . 0.75)
                                     \once \override Staff.AccidentalPlacement.right-padding = #0.6
@@ -155,7 +156,8 @@
                                     \once \override NoteHead.stem-attachment = #'(0 . 0.75)
                                     \once \override Staff.AccidentalPlacement.right-padding = #0.6
                                     a16
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r8.
                                     r16
                                     \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
@@ -202,7 +204,8 @@
                                     - \marcato
                                     ~
                                     cqs,16
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r4..
                                     cqs,8.
                                     - \marcato
@@ -563,13 +566,15 @@
                             \override NoteHead.no-ledgers = ##t
                             c2
                             :32
-                            \repeatTie
+                              %! +SCORE
+                        %%% \repeatTie
                             ~
                             \once \override Dots.staff-position = #2
                             \afterGrace
                             c8
                             :64
-                            \repeatTie
+                              %! +SCORE
+                        %%% \repeatTie
                             {
                                 \once \override Flag.stroke-style = #"grace"
                                   %! abjad.glissando(6)
@@ -830,14 +835,16 @@
                                     - \tweak stencil #constante-hairpin
                                     \<
                                     r16
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     f'16
                                     - \marcato
                                     ~
                                     f'4
                                     ~
                                     f'16
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r16
                                     d'4.
                                     - \marcato
@@ -846,7 +853,8 @@
                                     - \marcato
                                     ~
                                     b8.
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r16
                                     f'4
                                     - \marcato
@@ -878,7 +886,8 @@
                                     \<
                                     ~
                                     b8
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r8
                                     f'4
                                     - \marcato
@@ -887,7 +896,8 @@
                                     - \marcato
                                     ~
                                     d'8
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     r8
                                     b4
                                     - \marcato

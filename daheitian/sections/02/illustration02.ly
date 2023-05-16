@@ -1724,6 +1724,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % OPENING:
                                     % COMMANDS:

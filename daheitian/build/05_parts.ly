@@ -65,8 +65,10 @@
                                     cs'8.
                                     :64
                                     [
-                                    \repeatTie
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \repeatTie
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     ds'16
                                     :128
@@ -79,13 +81,15 @@
                                     ~
                                     cs'8.
                                     :64
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     \override Staff.Stem.stemlet-length = 0.75
                                     cs'16
                                     :128
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \scaleDurations #'(1 . 1) {
                                     \slashedGrace {
                                         e'16
@@ -94,7 +98,8 @@
                                         (
                                     }
                                     }
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     ds'16
                                     :128
@@ -108,8 +113,10 @@
                                     :64
                                     )
                                     [
-                                    \repeatTie
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \repeatTie
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     cs'16
                                     :128
@@ -122,8 +129,10 @@
                                     cs'16
                                     :128
                                     [
-                                    \repeatTie
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \repeatTie
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     ds'16
                                     :128
@@ -135,13 +144,15 @@
                                     ~
                                     ds'8
                                     :64
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     \override Staff.Stem.stemlet-length = 0.75
                                     ds'16
                                     :128
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \revert Staff.Stem.stemlet-length
                                     cs'8.
                                     :64
@@ -308,32 +319,40 @@
                                             \<
                                             ~
                                             as4
-                                            \repeatTie
+                                              %! +SCORE
+                                        %%% \repeatTie
                                             ~
                                             as4.
-                                            \repeatTie
+                                              %! +SCORE
+                                        %%% \repeatTie
                                             ~
                                             as8.
-                                            \repeatTie
+                                              %! +SCORE
+                                        %%% \repeatTie
                                             ~
                                             as4..
                                                 _ #(make-dynamic-script (markup #:whiteout #:italic "ppp +"))
                                             - \tweak stencil #constante-hairpin
                                             \<
-                                            \repeatTie
+                                              %! +SCORE
+                                        %%% \repeatTie
                                             ~
                                             as4..
-                                            \repeatTie
+                                              %! +SCORE
+                                        %%% \repeatTie
                                             ~
                                             as8.
-                                            \repeatTie
+                                              %! +SCORE
+                                        %%% \repeatTie
                                             ~
                                             as8
-                                            \repeatTie
+                                              %! +SCORE
+                                        %%% \repeatTie
                                             ~
                                             as4
                                             \!
-                                            \repeatTie
+                                              %! +SCORE
+                                        %%% \repeatTie
                                         }
                                     >>
                                     \oneVoice
@@ -1272,7 +1291,8 @@
                                     c'4.
                                     ~
                                     c'8.
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     c'4..
                                     c'4..
                                     - \tweak circled-tip ##t
@@ -1280,7 +1300,8 @@
                                     c'8.
                                     ~
                                     c'8
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     c'4
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
@@ -1359,7 +1380,8 @@
                                     r8.
                                     r32
                                     \once \override Staff.Accidental.stencil = ##f
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     c'16.
                                     - \stopped
                                     \mp
@@ -1369,7 +1391,8 @@
                                     r8.
                                     r32
                                     \once \override Staff.Accidental.stencil = ##f
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     c'16.
                                     - \stopped
                                     - \tweak circled-tip ##t

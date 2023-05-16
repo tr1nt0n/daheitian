@@ -475,6 +475,7 @@
                                             a''4
                                             % AFTER:
                                             % SPANNER_STARTS:
+                                              %! +SCORE
                                             \repeatTie
                                             r4
                                             % AFTER:
@@ -525,9 +526,11 @@
                                     % COMMANDS:
                                     \key c \major
                                       %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -572,9 +575,11 @@
                                     % COMMANDS:
                                     \key c \major
                                       %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -620,9 +625,11 @@
                             % COMMANDS:
                             \key c \major
                               %! +SCORE
-                            \once \override MultiMeasureRest.transparent = ##t
-                              %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                            % OPENING:
+                            % COMMANDS:
+                              %! +SCORE
+                            \once \override MultiMeasureRest.transparent = ##t
                             R1 * 1/2
                             % AFTER:
                             % COMMANDS:
@@ -672,9 +679,11 @@
                                     % COMMANDS:
                                     \key c \major
                                       %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -704,12 +713,14 @@
                                     % BEFORE:
                                     % COMMANDS:
                                     \key a \major
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tenorposaunen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pos. }
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -723,9 +734,11 @@
                                     % COMMANDS:
                                     \key c \major
                                       %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -755,8 +768,6 @@
                                     % BEFORE:
                                     % COMMANDS:
                                     \key a \major
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tuben }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { tb. }
                                       %! +SCORE
@@ -764,6 +775,8 @@
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "bass"
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -777,9 +790,11 @@
                                     % COMMANDS:
                                     \key c \major
                                       %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -821,12 +836,14 @@
                                     % BEFORE:
                                     % COMMANDS:
                                     \key a \major
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
                                     \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Klavier }
                                     \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { klav. }
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -840,9 +857,11 @@
                                     % COMMANDS:
                                     \key c \major
                                       %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -873,12 +892,12 @@
                                     % COMMANDS:
                                     \key a \major
                                       %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "bass"
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -892,9 +911,11 @@
                                     % COMMANDS:
                                     \key c \major
                                       %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -936,12 +957,14 @@
                                     % BEFORE:
                                     % COMMANDS:
                                     \key a \major
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
                                     \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
                                     \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -955,9 +978,11 @@
                                     % COMMANDS:
                                     \key c \major
                                       %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -988,12 +1013,12 @@
                                     % COMMANDS:
                                     \key a \major
                                       %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "bass"
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -1007,9 +1032,11 @@
                                     % COMMANDS:
                                     \key c \major
                                       %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -1058,9 +1085,11 @@
                             % COMMANDS:
                             \key c \major
                               %! +SCORE
-                            \once \override MultiMeasureRest.transparent = ##t
-                              %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                            % OPENING:
+                            % COMMANDS:
+                              %! +SCORE
+                            \once \override MultiMeasureRest.transparent = ##t
                             R1 * 1/2
                             % AFTER:
                             % COMMANDS:
@@ -1098,8 +1127,6 @@
                                     \staff-line-count 1
                                     % BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
                                       %! +SCORE
@@ -1107,6 +1134,8 @@
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "percussion"
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -1120,9 +1149,11 @@
                                     % COMMANDS:
                                     \key c \major
                                       %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -1152,8 +1183,6 @@
                                     \staff-line-count 1
                                     % BEFORE:
                                     % COMMANDS:
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
                                       %! +SCORE
@@ -1161,6 +1190,8 @@
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "percussion"
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -1174,9 +1205,11 @@
                                     % COMMANDS:
                                     \key c \major
                                       %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -1230,9 +1263,11 @@
                                     % COMMANDS:
                                     \key c \major
                                       %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -1274,9 +1309,11 @@
                                     % COMMANDS:
                                     \key c \major
                                       %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -1321,9 +1358,11 @@
                                     % COMMANDS:
                                     \key c \major
                                       %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -1368,9 +1407,11 @@
                                     % COMMANDS:
                                     \key c \major
                                       %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:
@@ -1415,9 +1456,11 @@
                                     % COMMANDS:
                                     \key c \major
                                       %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                      %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                     % AFTER:
                                     % COMMANDS:

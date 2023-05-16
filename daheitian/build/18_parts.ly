@@ -85,7 +85,8 @@
                                     g'''8
                                     :64
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \revert Staff.Stem.stemlet-length
                                     f'''8
                                     :64
@@ -93,7 +94,8 @@
                                     ~
                                     f'''4..
                                     :32
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \scaleDurations #'(1 . 1) {
                                     \slashedGrace {
                                         af'''16
@@ -102,7 +104,8 @@
                                         (
                                     }
                                     }
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     g'''16
                                     :128
                                     ~
@@ -114,13 +117,15 @@
                                     ~
                                     f'''4
                                     :32
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     \override Staff.Stem.stemlet-length = 0.75
                                     f'''16
                                     :128
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \revert Staff.Stem.stemlet-length
                                     g'''8.
                                     :64
@@ -130,7 +135,8 @@
                                     g'''8
                                     :64
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \revert Staff.Stem.stemlet-length
                                     f'''8
                                     :64
@@ -138,7 +144,8 @@
                                     ~
                                     f'''8
                                     :64
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \scaleDurations #'(1 . 1) {
                                     \slashedGrace {
                                         af'''16
@@ -155,7 +162,8 @@
                                     :64
                                     )
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \revert Staff.Stem.stemlet-length
                                     f'''8.
                                     :64
@@ -163,7 +171,8 @@
                                     ~
                                     f'''4
                                     :32
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \scaleDurations #'(1 . 1) {
                                     \slashedGrace {
                                         af'''16
@@ -178,19 +187,22 @@
                                     g'''4.
                                     :32
                                     )
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     f'''4
                                     :32
                                     ~
                                     f'''8.
                                     :64
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     \override Staff.Stem.stemlet-length = 0.75
                                     f'''16
                                     :128
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \revert Staff.Stem.stemlet-length
                                     g'''16
                                     :128
@@ -1286,7 +1298,8 @@
                                     \ppp
                                     ~
                                     c'8
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                 }
                             }
                         }

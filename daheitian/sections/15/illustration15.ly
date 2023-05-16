@@ -674,6 +674,7 @@
                                     d16
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     r8.
                                     r4
@@ -690,6 +691,7 @@
                                     cqs,16
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     r16
                                     r4
@@ -2684,6 +2686,7 @@
                                     r16
                                     % BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Tie.transparent = ##f
                                     b16
                                     % AFTER:
@@ -2698,6 +2701,7 @@
                                     b16
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     r16
                                     f'4
@@ -2709,6 +2713,7 @@
                                     f'8
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     r16
                                     d'8.
@@ -2722,6 +2727,7 @@
                                     d'8.
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     r16
                                     g4.
@@ -2883,6 +2889,7 @@
                                     f'8
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     r8
                                     % OPENING:
@@ -3195,6 +3202,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     r8.
                                     % AFTER:
@@ -3211,6 +3219,7 @@
                                     g16
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     r8.
                                     r8
@@ -3223,6 +3232,7 @@
                                     d'8.
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     r16
                                     r4
@@ -3237,6 +3247,7 @@
                                     f'8.
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     r8.
                                     r8
@@ -3249,6 +3260,7 @@
                                     b16
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     r16
                                     r4
@@ -3263,6 +3275,7 @@
                                     b16
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     r8.
                                     r8

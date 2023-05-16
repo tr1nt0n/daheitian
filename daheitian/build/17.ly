@@ -1492,6 +1492,7 @@
                                     e,,2.
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     ~
                                     e,,2
@@ -1499,6 +1500,7 @@
                                     % ARTICULATIONS:
                                     \!
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % COMMANDS:
                                     \ottava 0
@@ -1553,11 +1555,13 @@
                                     fs,2.
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     ~
                                     fs,4
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     e,4
                                     % AFTER:
@@ -1873,6 +1877,7 @@
                                     % STEM_TREMOLOS:
                                     :32
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     ~
                                     <fs,, fs,>4
@@ -1880,6 +1885,7 @@
                                     % STEM_TREMOLOS:
                                     :32
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     <e,, e,>4
                                     % AFTER:
@@ -1947,6 +1953,7 @@
                             % STEM_TREMOLOS:
                             :32
                             % SPANNER_STARTS:
+                              %! +SCORE
                             \repeatTie
                             ~
                             % BEFORE:
@@ -1959,6 +1966,7 @@
                             % STEM_TREMOLOS:
                             :64
                             % SPANNER_STARTS:
+                              %! +SCORE
                             \repeatTie
                             % OPEN_BRACKETS:
                             {
@@ -2012,6 +2020,7 @@
                             % STEM_TREMOLOS:
                             :32
                             % SPANNER_STARTS:
+                              %! +SCORE
                             \repeatTie
                             ~
                             % BEFORE:
@@ -2024,6 +2033,7 @@
                             % STEM_TREMOLOS:
                             :32
                             % SPANNER_STARTS:
+                              %! +SCORE
                             \repeatTie
                             % OPEN_BRACKETS:
                             {
@@ -3732,6 +3742,7 @@
                                     a,2.
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     ~
                                     % BEFORE:
@@ -3742,6 +3753,7 @@
                                     a,2
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % OPEN_BRACKETS:
                                     {

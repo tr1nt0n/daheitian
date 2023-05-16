@@ -1392,6 +1392,7 @@
                                         c'4.
                                         % AFTER:
                                         % SPANNER_STARTS:
+                                          %! +SCORE
                                         \repeatTie
                                         c'4
                                         % AFTER:
@@ -1496,6 +1497,7 @@
                                     c'2.
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     ~
                                     c'2
@@ -1505,6 +1507,7 @@
                                     % SPANNER_STOPS:
                                     \stopTextSpan
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
@@ -1568,6 +1571,7 @@
                                     c'2
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     ~
                                     % OPENING:
@@ -1580,12 +1584,14 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 5
                                     % BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Tie.transparent = ##f
                                     % OPENING:
                                     % COMMANDS:
@@ -1709,6 +1715,7 @@
                                     % SPANNER_STOPS:
                                     \stopTextSpan
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
@@ -1754,6 +1761,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % OPENING:
                                     % COMMANDS:
@@ -1793,6 +1801,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % OPENING:
                                     % COMMANDS:
@@ -1834,6 +1843,7 @@
                                     gs4..
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % OPENING:
                                     % COMMANDS:
@@ -1918,6 +1928,7 @@
                                     % SPANNER_STOPS:
                                     \stopTextSpan
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
@@ -2040,6 +2051,7 @@
                                     c'2.
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     ~
                                     c'2
@@ -2049,6 +2061,7 @@
                                     % SPANNER_STOPS:
                                     \stopTextSpan
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:

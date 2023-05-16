@@ -748,7 +748,8 @@
                                     \times 4/5
                                     {
                                         c'4.
-                                        \repeatTie
+                                          %! +SCORE
+                                    %%% \repeatTie
                                         c'4
                                         - \tenuto
                                     }
@@ -805,12 +806,14 @@
                                     \<
                                     ~
                                     c'2.
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     c'2
                                     \!
                                     \stopTextSpan
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
@@ -845,15 +848,18 @@
                                     \<
                                     ~
                                     c'2
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c'8.
                                     \stopTextSpan
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \staff-line-count 5
-                                    \once \override Tie.transparent = ##f
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \clef "treble"
                                     \revert Staff.Stem.stemlet-length
                                     gqs16
@@ -932,7 +938,8 @@
                                     ~
                                     c'8
                                     \stopTextSpan
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \staff-line-count 5
                                     \clef "altovarC"
                                     gs4.
@@ -964,7 +971,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     gs16
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                       %! abjad.glissando(6)
                                     \revert Accidental.stencil
                                       %! abjad.glissando(6)
@@ -991,7 +999,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     aqf8.
                                     [
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                       %! abjad.glissando(6)
                                     \revert Accidental.stencil
                                       %! abjad.glissando(6)
@@ -1019,7 +1028,8 @@
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
                                     gs4..
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                       %! abjad.glissando(6)
                                     \revert Accidental.stencil
                                       %! abjad.glissando(6)
@@ -1068,7 +1078,8 @@
                                     ~
                                     c'8
                                     \stopTextSpan
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \staff-line-count 5
                                     \clef "bass"
                                     gs4.
@@ -1144,12 +1155,14 @@
                                     \<
                                     ~
                                     c'2.
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     c'2
                                     \!
                                     \stopTextSpan
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE

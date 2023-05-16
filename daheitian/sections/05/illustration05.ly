@@ -131,9 +131,11 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Tie.transparent = ##f
                                     % OPENING:
                                     % COMMANDS:
@@ -161,6 +163,7 @@
                                     % STEM_TREMOLOS:
                                     :64
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     ~
                                     % OPENING:
@@ -173,6 +176,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % BEFORE:
                                     % BEFORE:
@@ -194,6 +198,7 @@
                                     % COMMANDS:
                                     }
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Tie.transparent = ##f
                                     % OPENING:
                                     % COMMANDS:
@@ -224,9 +229,11 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Tie.transparent = ##f
                                     % OPENING:
                                     % COMMANDS:
@@ -255,9 +262,11 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % BEFORE:
                                     % COMMANDS:
+                                      %! +SCORE
                                     \once \override Tie.transparent = ##f
                                     % OPENING:
                                     % COMMANDS:
@@ -283,6 +292,7 @@
                                     % STEM_TREMOLOS:
                                     :64
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     ~
                                     % OPENING:
@@ -295,6 +305,7 @@
                                     % START_BEAM:
                                     [
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     % OPENING:
                                     % COMMANDS:
@@ -601,16 +612,19 @@
                                             as4
                                             % AFTER:
                                             % SPANNER_STARTS:
+                                              %! +SCORE
                                             \repeatTie
                                             ~
                                             as4.
                                             % AFTER:
                                             % SPANNER_STARTS:
+                                              %! +SCORE
                                             \repeatTie
                                             ~
                                             as8.
                                             % AFTER:
                                             % SPANNER_STARTS:
+                                              %! +SCORE
                                             \repeatTie
                                             ~
                                             as4..
@@ -621,21 +635,25 @@
                                             % SPANNER_STARTS:
                                             - \tweak stencil #constante-hairpin
                                             \<
+                                              %! +SCORE
                                             \repeatTie
                                             ~
                                             as4..
                                             % AFTER:
                                             % SPANNER_STARTS:
+                                              %! +SCORE
                                             \repeatTie
                                             ~
                                             as8.
                                             % AFTER:
                                             % SPANNER_STARTS:
+                                              %! +SCORE
                                             \repeatTie
                                             ~
                                             as8
                                             % AFTER:
                                             % SPANNER_STARTS:
+                                              %! +SCORE
                                             \repeatTie
                                             ~
                                             as4
@@ -643,6 +661,7 @@
                                             % ARTICULATIONS:
                                             \!
                                             % SPANNER_STARTS:
+                                              %! +SCORE
                                             \repeatTie
                                         % CLOSE_BRACKETS:
                                         }
@@ -2384,6 +2403,7 @@
                                     c'8.
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     c'4..
                                     c'4..
@@ -2398,6 +2418,7 @@
                                     c'8
                                     % AFTER:
                                     % SPANNER_STARTS:
+                                      %! +SCORE
                                     \repeatTie
                                     c'4
                                     % ABSOLUTE_BEFORE:
@@ -2534,6 +2555,7 @@
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Staff.Accidental.stencil = ##f
+                                      %! +SCORE
                                     \once \override Tie.transparent = ##f
                                     c'16.
                                     % AFTER:
@@ -2551,6 +2573,7 @@
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Staff.Accidental.stencil = ##f
+                                      %! +SCORE
                                     \once \override Tie.transparent = ##f
                                     c'16.
                                     % AFTER:

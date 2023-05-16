@@ -130,7 +130,10 @@ afterGraceFraction = #(cons 15 16)
         \override TextScript.font-name = "Bodoni72 Book"
         \override TextSpanner.font-name = "Bodoni72 Book"
 
-        \override Tie.transparent = ##t
+        % \override Tie.transparent = ##t
+        \override Tie.stencil = #flare-tie
+        \override Tie.height-limit = 6
+        \override Tie.thickness = 1.5
 
         \override TrillSpanner.bound-details.right.padding = #-5
 

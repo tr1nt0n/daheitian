@@ -819,11 +819,13 @@
                                     \<
                                     ~
                                     e,,2.
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     e,,2
                                     \!
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     \ottava 0
                                 }
                             }
@@ -852,10 +854,12 @@
                                     \<
                                     ~
                                     fs,2.
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     fs,4
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     e,4
                                     \!
                                 }
@@ -1020,11 +1024,13 @@
                                     ~
                                     <fs,, fs,>2.
                                     :32
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     <fs,, fs,>4
                                     :32
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     <e,, e,>4
                                     :32
                                     \!
@@ -1062,13 +1068,15 @@
                             \override NoteHead.no-ledgers = ##t
                             c2
                             :32
-                            \repeatTie
+                              %! +SCORE
+                        %%% \repeatTie
                             ~
                             \once \override Dots.staff-position = #2
                             \afterGrace
                             c8
                             :64
-                            \repeatTie
+                              %! +SCORE
+                        %%% \repeatTie
                             {
                                 \once \override Flag.stroke-style = #"grace"
                                   %! abjad.glissando(6)
@@ -1102,13 +1110,15 @@
                             \override NoteHead.no-ledgers = ##t
                             c2.
                             :32
-                            \repeatTie
+                              %! +SCORE
+                        %%% \repeatTie
                             ~
                             \once \override Dots.staff-position = #2
                             \afterGrace
                             c2
                             :32
-                            \repeatTie
+                              %! +SCORE
+                        %%% \repeatTie
                             {
                                 \once \override Flag.stroke-style = #"grace"
                                   %! abjad.glissando(6)
@@ -1968,12 +1978,14 @@
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
                                     a,2.
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     ~
                                     \once \override Dots.staff-position = #2
                                     \afterGrace
                                     a,2
-                                    \repeatTie
+                                      %! +SCORE
+                                %%% \repeatTie
                                     {
                                         \once \override Flag.stroke-style = #"grace"
                                           %! abjad.glissando(6)
