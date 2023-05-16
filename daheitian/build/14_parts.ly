@@ -721,7 +721,6 @@
                                     <aqf''' bf'''>2.
                                     - \tweak circled-tip ##t
                                     \<
-                                    \-
                                     \once \override Beam.stencil = ##f
                                     \once \override Dots.stencil = ##f
                                     \once \override Flag.stencil = ##f
@@ -2725,7 +2724,6 @@
                                     :32
                                     - \tweak circled-tip ##t
                                     \<
-                                    \-
                                     \boxed-markup "Triangel" 1
                                     \once \override Beam.stencil = ##f
                                     \once \override Dots.stencil = ##f
@@ -2737,9 +2735,9 @@
                                     c'4
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
                                     :32
+                                    - \bendAfter #'0
                                     - \tweak circled-tip ##t
                                     \>
-                                    \-
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
@@ -2847,7 +2845,6 @@
                                     c'2.
                                     - \tweak circled-tip ##t
                                     \<
-                                    \-
                                     \boxed-markup "Tam-Tam mit Bogen" 1
                                     \once \override Beam.stencil = ##f
                                     \once \override Dots.stencil = ##f
@@ -2855,10 +2852,10 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     c'4
+                                    - \bendAfter #'0
                                     \mf
                                     - \tweak circled-tip ##t
                                     \>
-                                    \-
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE

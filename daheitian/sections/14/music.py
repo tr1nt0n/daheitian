@@ -372,7 +372,8 @@ trinton.make_music(
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler([["bf'''", "aqf'''"]]),
     trinton.attachment_command(
-        attachments=[abjad.LilyPondLiteral(r"\-", "after")], selector=trinton.pleaves()
+        attachments=[abjad.LilyPondLiteral("\-", "after")],
+        selector=trinton.select_leaves_by_index([-1]),
     ),
     trinton.linear_attachment_command(
         attachments=[
@@ -1021,7 +1022,7 @@ trinton.make_music(
     evans.RewriteMeterCommand(boundary_depth=-2),
     library.change_lines(lines=1, clef="percussion"),
     trinton.attachment_command(
-        attachments=[abjad.LilyPondLiteral(r"\-", "after")], selector=trinton.pleaves()
+        attachments=[abjad.BendAfter(0)], selector=trinton.select_leaves_by_index([-1])
     ),
     library.boxed_markup(string="Triangel"),
     trinton.linear_attachment_command(
@@ -1062,7 +1063,7 @@ trinton.make_music(
     evans.RewriteMeterCommand(boundary_depth=-2),
     library.change_lines(lines=1, clef="percussion"),
     trinton.attachment_command(
-        attachments=[abjad.LilyPondLiteral(r"\-", "after")], selector=trinton.pleaves()
+        attachments=[abjad.BendAfter(0)], selector=trinton.select_leaves_by_index([-1])
     ),
     library.boxed_markup(string="Tam-Tam mit Bogen"),
     trinton.linear_attachment_command(

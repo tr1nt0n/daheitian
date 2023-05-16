@@ -83,6 +83,8 @@ afterGraceFraction = #(cons 15 16)
         \override Beam.beam-thickness = #0.75
         \override Beam.length-fraction = 1.5
 
+        \override BendAfter.thickness = #3
+
         \override BreathingSign.text = \markup {
             \fontsize #7.5
             \override #'(font-name . "ekmelos")

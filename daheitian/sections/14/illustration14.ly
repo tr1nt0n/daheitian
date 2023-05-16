@@ -1439,8 +1439,6 @@
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     \<
-                                    % COMMANDS:
-                                    \-
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override Beam.stencil = ##f
@@ -4893,7 +4891,6 @@
                                     - \tweak circled-tip ##t
                                     \<
                                     % COMMANDS:
-                                    \-
                                     \boxed-markup "Triangel" 1
                                     % BEFORE:
                                     % COMMANDS:
@@ -4911,11 +4908,11 @@
                                     % AFTER:
                                     % STEM_TREMOLOS:
                                     :32
+                                    % ARTICULATIONS:
+                                    - \bendAfter #'0
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     \>
-                                    % COMMANDS:
-                                    \-
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
@@ -5119,7 +5116,6 @@
                                     - \tweak circled-tip ##t
                                     \<
                                     % COMMANDS:
-                                    \-
                                     \boxed-markup "Tam-Tam mit Bogen" 1
                                     % BEFORE:
                                     % COMMANDS:
@@ -5131,12 +5127,11 @@
                                     c'4
                                     % AFTER:
                                     % ARTICULATIONS:
+                                    - \bendAfter #'0
                                     \mf
                                     % SPANNER_STARTS:
                                     - \tweak circled-tip ##t
                                     \>
-                                    % COMMANDS:
-                                    \-
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                       %! +SCORE

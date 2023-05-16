@@ -43,7 +43,7 @@ for voice_name in [
         ),
         trinton.linear_attachment_command(
             attachments=[
-                abjad.LilyPondLiteral(r"\-", "after"),
+                abjad.BendAfter(0),
                 abjad.Dynamic("pp"),
                 abjad.StartHairpin("--"),
                 abjad.StopHairpin(),
@@ -114,7 +114,7 @@ trinton.make_music(
     ),
     trinton.linear_attachment_command(
         attachments=[
-            abjad.LilyPondLiteral(r"\-", "after"),
+            abjad.BendAfter(0),
             abjad.Dynamic("pp"),
             abjad.StartHairpin("--"),
             abjad.Markup(
@@ -207,7 +207,7 @@ trinton.make_music(
     ),
     trinton.linear_attachment_command(
         attachments=[
-            abjad.LilyPondLiteral(r"\-", "after"),
+            abjad.BendAfter(0),
             abjad.Dynamic("pp"),
             abjad.StartHairpin("--"),
             abjad.Markup(

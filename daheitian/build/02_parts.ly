@@ -790,6 +790,7 @@
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
                                     \clef "percussion"
                                     c'4
+                                    - \bendAfter #'0
                                     \pp
                                     - \tweak padding #5
                                     ^ \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen und enden }
@@ -800,7 +801,6 @@
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
-                                    \-
                                     c'2.
                                     \!
                                     \stopTextSpan
@@ -841,6 +841,7 @@
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
                                     \clef "percussion"
                                     c'4
+                                    - \bendAfter #'0
                                     \pp
                                     - \tweak padding #5
                                     ^ \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen und enden }
@@ -851,7 +852,6 @@
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
-                                    \-
                                     c'2.
                                     \!
                                     \stopTextSpan
@@ -892,11 +892,11 @@
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
                                     \clef "percussion"
                                     c'4
+                                    - \bendAfter #'0
                                     \pp
                                     - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen und enden }
                                     - \tweak stencil #constante-hairpin
                                     \<
-                                    \-
                                     \boxed-markup "Steg" 1
                                     \staff-line-count 5
                                     \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
@@ -985,11 +985,11 @@
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
                                     \clef "percussion"
                                     c'4
+                                    - \bendAfter #'0
                                     \pp
                                     - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen und enden }
                                     - \tweak stencil #constante-hairpin
                                     \<
-                                    \-
                                     \boxed-markup "Steg" 1
                                     \staff-line-count 5
                                     \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
@@ -1074,6 +1074,7 @@
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kb. }
                                     \clef "percussion"
                                     c'4
+                                    - \bendAfter #'0
                                     \pp
                                     - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen und enden }
                                     - \tweak padding #3
@@ -1083,7 +1084,6 @@
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
-                                    \-
                                     c'2.
                                     \!
                                     \stopTextSpan

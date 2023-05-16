@@ -160,6 +160,15 @@ section_16_ts.insert(0, (1, 4))
 
 section_16_ts.insert(10, (3, 2))
 
+# section 18
+
+section_18_ts = taal_ts_sequence[75:80]
+
+section_18_ts.insert(0, (1, 4))
+
+for _ in map_ts_sequence[25:27]:
+    section_18_ts.append(_)
+
 # sketch_ts_sequence = []
 #
 # for _ in taal_ts_sequence:

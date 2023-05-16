@@ -1486,6 +1486,7 @@
                                     c'4
                                     % AFTER:
                                     % ARTICULATIONS:
+                                    - \bendAfter #'0
                                     \pp
                                     % MARKUP:
                                     - \tweak padding #5
@@ -1498,8 +1499,6 @@
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
-                                    % COMMANDS:
-                                    \-
                                     c'2.
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1575,6 +1574,7 @@
                                     c'4
                                     % AFTER:
                                     % ARTICULATIONS:
+                                    - \bendAfter #'0
                                     \pp
                                     % MARKUP:
                                     - \tweak padding #5
@@ -1587,8 +1587,6 @@
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
-                                    % COMMANDS:
-                                    \-
                                     c'2.
                                     % AFTER:
                                     % ARTICULATIONS:
@@ -1664,6 +1662,7 @@
                                     c'4
                                     % AFTER:
                                     % ARTICULATIONS:
+                                    - \bendAfter #'0
                                     \pp
                                     % MARKUP:
                                     - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen und enden }
@@ -1671,7 +1670,6 @@
                                     - \tweak stencil #constante-hairpin
                                     \<
                                     % COMMANDS:
-                                    \-
                                     \boxed-markup "Steg" 1
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
@@ -1815,6 +1813,7 @@
                                     c'4
                                     % AFTER:
                                     % ARTICULATIONS:
+                                    - \bendAfter #'0
                                     \pp
                                     % MARKUP:
                                     - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen und enden }
@@ -1822,7 +1821,6 @@
                                     - \tweak stencil #constante-hairpin
                                     \<
                                     % COMMANDS:
-                                    \-
                                     \boxed-markup "Steg" 1
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
@@ -1964,6 +1962,7 @@
                                     c'4
                                     % AFTER:
                                     % ARTICULATIONS:
+                                    - \bendAfter #'0
                                     \pp
                                     % MARKUP:
                                     - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen und enden }
@@ -1975,8 +1974,6 @@
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
-                                    % COMMANDS:
-                                    \-
                                     c'2.
                                     % AFTER:
                                     % ARTICULATIONS:

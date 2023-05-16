@@ -1152,6 +1152,7 @@ def flute_graces(
                 or leaf.written_pitch.number == 19
                 or leaf.written_pitch.number == 3
                 or leaf.written_pitch.number == 7
+                or leaf.written_pitch.number == 31
             ):
                 relevant_leaves.append(leaf)
 
