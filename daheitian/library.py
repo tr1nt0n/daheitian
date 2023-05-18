@@ -1204,6 +1204,17 @@ def moths_talea(index=0):
 # notation tools
 
 
+def make_skips(selector):
+    def skips(argument):
+        selections = selector(argument)
+        for selection in selections:
+            duration = abjad.get.duration(selection)
+            skip = abjad.Skip(1, multiplier=duration)
+            abjad.mutate.replace(selection, skip)
+
+    return skips
+
+
 def aftergrace_swells(selector=trinton.pleaves(), hairpin="o<|", dynamics=["ff"]):
     def swells(argument):
         selections = selector(argument)
@@ -1520,6 +1531,8 @@ def timbre_trills(selector=trinton.pleaves(), index=0):
     def trill(argument):
         selections = selector(argument)
 
+        selections = abjad.select.logical_ties(selections)
+
         trill_sequence = trinton.random_walk(
             chord=[
                 1,
@@ -1532,10 +1545,10 @@ def timbre_trills(selector=trinton.pleaves(), index=0):
 
         trill_sequence = trinton.rotated_sequence(trill_sequence, index)
 
-        for leaf, trill in zip(selections, trill_sequence):
+        for tie, trill in zip(selections, trill_sequence):
             abjad.attach(
                 abjad.Markup(rf"\markup \center-column {{ \circle {trill} }}"),
-                leaf,
+                tie[0],
                 direction=abjad.UP,
             )
 
@@ -1861,10 +1874,10 @@ def handle_clefs(selector=trinton.pleaves()):
     return clefs
 
 
-def piano_pedals(selector=trinton.pleaves(), counts=None):
+def piano_pedals(selector=trinton.pleaves(), counts=None, pitched=True):
     def pedals(argument):
         selections = selector(argument)
-        logical_ties = abjad.select.logical_ties(selections, pitched=True)
+        logical_ties = abjad.select.logical_ties(selections, pitched=pitched)
 
         if counts is not None:
             groups = abjad.sequence.partition_by_counts(

@@ -151,9 +151,6 @@ trinton.make_music(
         )
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
-    # evans.PitchHandler(
-    #     ["b'''", "ef''''", "a'''", "fs''''", "cs''''", "e''''", "cs''''", "af''''"]
-    # ),
     evans.PitchHandler(["f''''", "ef''''", "g''''", "b'''", "a''''", "cs''''"]),
     library.unpitched_glissandi(trill=True),
     trinton.call_rmaker(
