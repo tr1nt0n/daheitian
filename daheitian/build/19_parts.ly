@@ -3283,8 +3283,6 @@
                                         \change Staff = "piano 1 staff"
                                     }
                                     \once \override TupletBracket.direction = #UP
-                                      %! +SCORE
-                                %%% \once \override TupletBracket.padding = -6
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 9) (ly:make-duration 4 0))
                                     \times 9/7
@@ -3300,14 +3298,15 @@
                                         - \stopped
                                         c''''16
                                         - \stopped
-                                        e''''16
-                                        - \stopped
                                         \change Staff = "piano 2 staff"
                                         bf,16
                                         - \accent
                                         \ffff
                                         \laissezVibrer
                                         \change Staff = "piano 1 staff"
+                                        c''''16
+                                        - \stopped
+                                        \ff
                                     }
                                     \once \override TupletBracket.direction = #UP
                                     \tweak text #tuplet-number::calc-fraction-text
@@ -3316,7 +3315,6 @@
                                     {
                                         e''''16
                                         - \stopped
-                                        \ff
                                         c''''16
                                         - \stopped
                                         \change Staff = "piano 2 staff"

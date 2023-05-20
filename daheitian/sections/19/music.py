@@ -443,7 +443,7 @@ trinton.make_music(
         selector=trinton.patterned_tie_index_selector(
             [
                 6,
-                13,
+                12,
                 16,
             ],
             27,
@@ -455,7 +455,7 @@ trinton.make_music(
         selector=trinton.patterned_tie_index_selector(
             [
                 6,
-                13,
+                12,
                 16,
             ],
             27,
@@ -473,7 +473,7 @@ trinton.make_music(
         selector=trinton.patterned_tie_index_selector(
             [
                 6,
-                13,
+                12,
                 16,
             ],
             27,
@@ -490,7 +490,7 @@ trinton.make_music(
         selector=trinton.patterned_tie_index_selector(
             [
                 7,
-                14,
+                13,
                 17,
             ],
             27,
@@ -520,19 +520,6 @@ trinton.make_music(
         selector=trinton.select_tuplets_by_index(
             [
                 0,
-            ]
-        ),
-        tag=abjad.Tag("+SCORE"),
-    ),
-    trinton.attachment_command(
-        attachments=[
-            abjad.LilyPondLiteral(
-                r"\once \override TupletBracket.padding = -6", "before"
-            )
-        ],
-        selector=trinton.select_tuplets_by_index(
-            [
-                1,
             ]
         ),
         tag=abjad.Tag("+SCORE"),

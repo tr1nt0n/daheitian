@@ -5813,8 +5813,6 @@
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override TupletBracket.direction = #UP
-                                      %! +SCORE
-                                    \once \override TupletBracket.padding = -6
                                     % OPEN_BRACKETS:
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 9) (ly:make-duration 4 0))
@@ -5838,10 +5836,6 @@
                                         % ARTICULATIONS:
                                         - \stopped
                                         c''''16
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        - \stopped
-                                        e''''16
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \stopped
@@ -5856,6 +5850,11 @@
                                         \laissezVibrer
                                         % COMMANDS:
                                         \change Staff = "piano 1 staff"
+                                        c''''16
+                                        % AFTER:
+                                        % ARTICULATIONS:
+                                        - \stopped
+                                        \ff
                                     % CLOSE_BRACKETS:
                                     }
                                     % BEFORE:
@@ -5870,7 +5869,6 @@
                                         % AFTER:
                                         % ARTICULATIONS:
                                         - \stopped
-                                        \ff
                                         c''''16
                                         % AFTER:
                                         % ARTICULATIONS:
