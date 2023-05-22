@@ -13,9 +13,11 @@
     \removeWithTag #'voice6
     \removeWithTag #'voice7
     \removeWithTag #'voice8
+    \removeWithTag #'voice9
+    \removeWithTag #'voice10
     \removeWithTag #'voice11
     \removeWithTag #'voice12
-    \removeWithTag #'voice13
+   % \removeWithTag #'voice13
     \removeWithTag #'voice14
     \removeWithTag #'voice15
     \removeWithTag #'voice16

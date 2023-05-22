@@ -183,6 +183,20 @@ def metronome_markups(
         return mark
 
 
+ghost_metronome = abjad.LilyPondLiteral(
+    [
+        r"^ \markup {",
+        r"  \raise #9 \with-dimensions-from \null",
+        r"  \override #'(font-size . 5.5)",
+        r"  \concat {",
+        f"      {abjad.MetronomeMark.make_tempo_equation_markup((3, 8), 51).string[8:]}",
+        r"  }",
+        r"}",
+    ],
+    site="after",
+)
+
+
 # movement titles
 
 movements = [
