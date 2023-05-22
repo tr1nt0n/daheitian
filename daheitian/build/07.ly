@@ -906,82 +906,109 @@
                             \stopStaff \startStaff
                             r2
                             r16
-                            % OPEN_BRACKETS:
-                            \tweak text #tuplet-number::calc-fraction-text
-                            \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 16 19) (ly:make-duration 4 0))
-                            \times 19/16
-                            {
-                                <
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
-                                    gs''!
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
-                                    cs'''!
-                                >2
-                                % AFTER:
-                                % MARKUP:
-                                ^ \markup \center-align { \center-column { \line { \concat { C+41 }  }\line { \concat { +35 }  } } }
-                                % SPANNER_STARTS:
-                                - \tweak circled-tip ##t
-                                _ \<
-                                  %! abjad.glissando(7)
-                                \glissando
-                                % BEFORE:
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''!
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''!
+                            >4..
+                            % AFTER:
+                            % MARKUP:
+                            ^ \markup \center-align { \center-column { \line { \concat { C+41 }  }\line { \concat { +35 }  } } }
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            _ \<
+                              %! abjad.glissando(7)
+                            \glissando
+                            % OPENING:
+                            % COMMANDS:
+                              %! abjad.glissando(1)
+                            \hide NoteHead
+                              %! abjad.glissando(1)
+                            \override Accidental.stencil = ##f
+                              %! abjad.glissando(1)
+                            \override NoteColumn.glissando-skip = ##t
+                              %! abjad.glissando(1)
+                            \override NoteHead.no-ledgers = ##t
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''
+                            >8
+                            % AFTER:
+                            % START_BEAM:
+                            [
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                cs'''
+                            >32
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                \tweak Accidental.transparent ##t
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                \tweak Accidental.transparent ##t
+                                cs'''
+                            >16.
+                                % CLOSING:
                                 % COMMANDS:
-                                \once \override Dots.staff-position = #2
-                                % OPENING:
-                                % COMMANDS:
-                                  %! abjad.glissando(1)
-                                \hide NoteHead
-                                  %! abjad.glissando(1)
-                                \override Accidental.stencil = ##f
-                                  %! abjad.glissando(1)
-                                \override NoteColumn.glissando-skip = ##t
-                                  %! abjad.glissando(1)
-                                \override NoteHead.no-ledgers = ##t
-                                <
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
-                                    \tweak Accidental.transparent ##t
-                                    gs''
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
-                                    \tweak Accidental.transparent ##t
-                                    cs'''
-                                >4..
-                                    % CLOSING:
-                                    % COMMANDS:
-                                    _ #(make-dynamic-script (markup #:whiteout #:italic "p +"))
-                                % AFTER:
-                                % SPANNER_STARTS:
-                                - \tweak circled-tip ##t
-                                _ \>
-                                % OPENING:
-                                % COMMANDS:
-                                  %! abjad.glissando(6)
-                                \revert Accidental.stencil
-                                  %! abjad.glissando(6)
-                                \revert NoteColumn.glissando-skip
-                                  %! abjad.glissando(6)
-                                \revert NoteHead.no-ledgers
-                                  %! abjad.glissando(6)
-                                \undo \hide NoteHead
-                                <
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
-                                    \tweak Accidental.transparent ##t
-                                    gs''
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
-                                    \tweak Accidental.transparent ##t
-                                    cs'''
-                                >16
-                                % AFTER:
-                                % ARTICULATIONS:
-                                \!
-                            % CLOSE_BRACKETS:
-                            }
+                                _ #(make-dynamic-script (markup #:whiteout #:italic "p +"))
+                            % AFTER:
+                            % STOP_BEAM:
+                            ]
+                            % SPANNER_STARTS:
+                            - \tweak circled-tip ##t
+                            _ \>
+                            % BEFORE:
+                            % COMMANDS:
+                            \once \override Dots.staff-position = #2
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                \tweak Accidental.transparent ##t
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                \tweak Accidental.transparent ##t
+                                cs'''
+                            >4...
+                            % OPENING:
+                            % COMMANDS:
+                              %! abjad.glissando(6)
+                            \revert Accidental.stencil
+                              %! abjad.glissando(6)
+                            \revert NoteColumn.glissando-skip
+                              %! abjad.glissando(6)
+                            \revert NoteHead.no-ledgers
+                              %! abjad.glissando(6)
+                            \undo \hide NoteHead
+                            <
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
+                                \tweak Accidental.transparent ##t
+                                gs''
+                                \tweak Accidental.stencil #ly:text-interface::print
+                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
+                                \tweak Accidental.transparent ##t
+                                cs'''
+                            >32
+                            % AFTER:
+                            % ARTICULATIONS:
+                            \!
                             % ABSOLUTE_BEFORE:
                             % COMMANDS:
                               %! +SCORE
@@ -1062,55 +1089,59 @@
                                     \stopStaff \startStaff
                                     r2
                                     r16
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 16 19) (ly:make-duration 4 0))
-                                    \times 19/16
-                                    {
-                                        <d'' f''>2
-                                        % AFTER:
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        _ \<
-                                          %! abjad.glissando(7)
-                                        \glissando
-                                        % BEFORE:
+                                    <d'' f''>4..
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    _ \<
+                                      %! abjad.glissando(7)
+                                    \glissando
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! abjad.glissando(1)
+                                    \hide NoteHead
+                                      %! abjad.glissando(1)
+                                    \override Accidental.stencil = ##f
+                                      %! abjad.glissando(1)
+                                    \override NoteColumn.glissando-skip = ##t
+                                      %! abjad.glissando(1)
+                                    \override NoteHead.no-ledgers = ##t
+                                    <d'' f''>8
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    <d'' f''>32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    <d'' f''>16.
+                                        % CLOSING:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                          %! abjad.glissando(1)
-                                        \hide NoteHead
-                                          %! abjad.glissando(1)
-                                        \override Accidental.stencil = ##f
-                                          %! abjad.glissando(1)
-                                        \override NoteColumn.glissando-skip = ##t
-                                          %! abjad.glissando(1)
-                                        \override NoteHead.no-ledgers = ##t
-                                        <d'' f''>4..
-                                            % CLOSING:
-                                            % COMMANDS:
-                                            _ #(make-dynamic-script (markup #:whiteout #:italic "p +"))
-                                        % AFTER:
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        _ \>
-                                        % OPENING:
-                                        % COMMANDS:
-                                          %! abjad.glissando(6)
-                                        \revert Accidental.stencil
-                                          %! abjad.glissando(6)
-                                        \revert NoteColumn.glissando-skip
-                                          %! abjad.glissando(6)
-                                        \revert NoteHead.no-ledgers
-                                          %! abjad.glissando(6)
-                                        \undo \hide NoteHead
-                                        <d'' f''>16
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \!
-                                    % CLOSE_BRACKETS:
-                                    }
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "p +"))
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    _ \>
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    <d'' f''>4...
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! abjad.glissando(6)
+                                    \revert Accidental.stencil
+                                      %! abjad.glissando(6)
+                                    \revert NoteColumn.glissando-skip
+                                      %! abjad.glissando(6)
+                                    \revert NoteHead.no-ledgers
+                                      %! abjad.glissando(6)
+                                    \undo \hide NoteHead
+                                    <d'' f''>32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
@@ -1183,82 +1214,109 @@
                                     \stopStaff \startStaff
                                     r2
                                     r16
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 16 19) (ly:make-duration 4 0))
-                                    \times 19/16
-                                    {
-                                        <
-                                            \tweak Accidental.stencil #ly:text-interface::print
-                                            \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                                            c''!
-                                            \tweak Accidental.stencil #ly:text-interface::print
-                                            \tweak Accidental.text \markup { \one-septimal-comma-up  }
-                                            e''!
-                                        >2
-                                        % AFTER:
-                                        % MARKUP:
-                                        ^ \markup \center-align { \center-column { \line { \concat { +29 }  }\line { \concat { +47 }  } } }
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        _ \<
-                                          %! abjad.glissando(7)
-                                        \glissando
-                                        % BEFORE:
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''!
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''!
+                                    >4..
+                                    % AFTER:
+                                    % MARKUP:
+                                    ^ \markup \center-align { \center-column { \line { \concat { +29 }  }\line { \concat { +47 }  } } }
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    _ \<
+                                      %! abjad.glissando(7)
+                                    \glissando
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! abjad.glissando(1)
+                                    \hide NoteHead
+                                      %! abjad.glissando(1)
+                                    \override Accidental.stencil = ##f
+                                      %! abjad.glissando(1)
+                                    \override NoteColumn.glissando-skip = ##t
+                                      %! abjad.glissando(1)
+                                    \override NoteHead.no-ledgers = ##t
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''
+                                    >8
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        e''
+                                    >32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        \tweak Accidental.transparent ##t
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        \tweak Accidental.transparent ##t
+                                        e''
+                                    >16.
+                                        % CLOSING:
                                         % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                          %! abjad.glissando(1)
-                                        \hide NoteHead
-                                          %! abjad.glissando(1)
-                                        \override Accidental.stencil = ##f
-                                          %! abjad.glissando(1)
-                                        \override NoteColumn.glissando-skip = ##t
-                                          %! abjad.glissando(1)
-                                        \override NoteHead.no-ledgers = ##t
-                                        <
-                                            \tweak Accidental.stencil #ly:text-interface::print
-                                            \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                                            \tweak Accidental.transparent ##t
-                                            c''
-                                            \tweak Accidental.stencil #ly:text-interface::print
-                                            \tweak Accidental.text \markup { \one-septimal-comma-up  }
-                                            \tweak Accidental.transparent ##t
-                                            e''
-                                        >4..
-                                            % CLOSING:
-                                            % COMMANDS:
-                                            _ #(make-dynamic-script (markup #:whiteout #:italic "p +"))
-                                        % AFTER:
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        _ \>
-                                        % OPENING:
-                                        % COMMANDS:
-                                          %! abjad.glissando(6)
-                                        \revert Accidental.stencil
-                                          %! abjad.glissando(6)
-                                        \revert NoteColumn.glissando-skip
-                                          %! abjad.glissando(6)
-                                        \revert NoteHead.no-ledgers
-                                          %! abjad.glissando(6)
-                                        \undo \hide NoteHead
-                                        <
-                                            \tweak Accidental.stencil #ly:text-interface::print
-                                            \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                                            \tweak Accidental.transparent ##t
-                                            c''
-                                            \tweak Accidental.stencil #ly:text-interface::print
-                                            \tweak Accidental.text \markup { \one-septimal-comma-up  }
-                                            \tweak Accidental.transparent ##t
-                                            e''
-                                        >16
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \!
-                                    % CLOSE_BRACKETS:
-                                    }
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "p +"))
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    _ \>
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        \tweak Accidental.transparent ##t
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        \tweak Accidental.transparent ##t
+                                        e''
+                                    >4...
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! abjad.glissando(6)
+                                    \revert Accidental.stencil
+                                      %! abjad.glissando(6)
+                                    \revert NoteColumn.glissando-skip
+                                      %! abjad.glissando(6)
+                                    \revert NoteHead.no-ledgers
+                                      %! abjad.glissando(6)
+                                    \undo \hide NoteHead
+                                    <
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
+                                        \tweak Accidental.transparent ##t
+                                        c''
+                                        \tweak Accidental.stencil #ly:text-interface::print
+                                        \tweak Accidental.text \markup { \one-septimal-comma-up  }
+                                        \tweak Accidental.transparent ##t
+                                        e''
+                                    >32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                       %! +SCORE
@@ -1331,58 +1389,62 @@
                                     \stopStaff \startStaff
                                     r2
                                     r16
-                                    % OPEN_BRACKETS:
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 16 19) (ly:make-duration 4 0))
-                                    \times 19/16
-                                    {
-                                        % OPENING:
+                                    % OPENING:
+                                    % COMMANDS:
+                                    \clef "bass"
+                                    <b,, as,>4..
+                                    % AFTER:
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    _ \<
+                                      %! abjad.glissando(7)
+                                    \glissando
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! abjad.glissando(1)
+                                    \hide NoteHead
+                                      %! abjad.glissando(1)
+                                    \override Accidental.stencil = ##f
+                                      %! abjad.glissando(1)
+                                    \override NoteColumn.glissando-skip = ##t
+                                      %! abjad.glissando(1)
+                                    \override NoteHead.no-ledgers = ##t
+                                    <b,, as,>8
+                                    % AFTER:
+                                    % START_BEAM:
+                                    [
+                                    <b,, as,>32
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    <b,, as,>16.
+                                        % CLOSING:
                                         % COMMANDS:
-                                        \clef "bass"
-                                        <b,, as,>2
-                                        % AFTER:
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        _ \<
-                                          %! abjad.glissando(7)
-                                        \glissando
-                                        % BEFORE:
-                                        % COMMANDS:
-                                        \once \override Dots.staff-position = #2
-                                        % OPENING:
-                                        % COMMANDS:
-                                          %! abjad.glissando(1)
-                                        \hide NoteHead
-                                          %! abjad.glissando(1)
-                                        \override Accidental.stencil = ##f
-                                          %! abjad.glissando(1)
-                                        \override NoteColumn.glissando-skip = ##t
-                                          %! abjad.glissando(1)
-                                        \override NoteHead.no-ledgers = ##t
-                                        <b,, as,>4..
-                                            % CLOSING:
-                                            % COMMANDS:
-                                            _ #(make-dynamic-script (markup #:whiteout #:italic "p +"))
-                                        % AFTER:
-                                        % SPANNER_STARTS:
-                                        - \tweak circled-tip ##t
-                                        _ \>
-                                        % OPENING:
-                                        % COMMANDS:
-                                          %! abjad.glissando(6)
-                                        \revert Accidental.stencil
-                                          %! abjad.glissando(6)
-                                        \revert NoteColumn.glissando-skip
-                                          %! abjad.glissando(6)
-                                        \revert NoteHead.no-ledgers
-                                          %! abjad.glissando(6)
-                                        \undo \hide NoteHead
-                                        <b,, as,>16
-                                        % AFTER:
-                                        % ARTICULATIONS:
-                                        \!
-                                    % CLOSE_BRACKETS:
-                                    }
+                                        _ #(make-dynamic-script (markup #:whiteout #:italic "p +"))
+                                    % AFTER:
+                                    % STOP_BEAM:
+                                    ]
+                                    % SPANNER_STARTS:
+                                    - \tweak circled-tip ##t
+                                    _ \>
+                                    % BEFORE:
+                                    % COMMANDS:
+                                    \once \override Dots.staff-position = #2
+                                    <b,, as,>4...
+                                    % OPENING:
+                                    % COMMANDS:
+                                      %! abjad.glissando(6)
+                                    \revert Accidental.stencil
+                                      %! abjad.glissando(6)
+                                    \revert NoteColumn.glissando-skip
+                                      %! abjad.glissando(6)
+                                    \revert NoteHead.no-ledgers
+                                      %! abjad.glissando(6)
+                                    \undo \hide NoteHead
+                                    <b,, as,>32
+                                    % AFTER:
+                                    % ARTICULATIONS:
+                                    \!
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                       %! +SCORE

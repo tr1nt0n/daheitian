@@ -55,13 +55,17 @@ for voice_name, fundamental in zip(
     trinton.make_music(
         lambda _: trinton.select_target(_, (3, 4)),
         evans.RhythmHandler(
-            evans.tuplet(
+            evans.talea(
                 [
-                    (-1,),
-                    (8, 7, 1),
-                ]
+                    -18,
+                    19,
+                    18,
+                    1,
+                ],
+                32,
             )
         ),
+        evans.RewriteMeterCommand(boundary_depth=-2),
         evans.PitchHandler([fundamental]),
         evans.PitchHandler([library._brass_chord_pitches[voice_name]], as_ratios=True),
         trinton.force_accidentals_command(
@@ -72,20 +76,23 @@ for voice_name, fundamental in zip(
             dynamics=["p +"], direction=abjad.DOWN, clean_swells=True
         ),
         voice=score[voice_name],
-        preprocessor=trinton.fuse_sixteenths_preprocessor((9, 19)),
     )
 
 for voice_name in ["trumpet voice", "tuba voice"]:
     trinton.make_music(
         lambda _: trinton.select_target(_, (3, 4)),
         evans.RhythmHandler(
-            evans.tuplet(
+            evans.talea(
                 [
-                    (-1,),
-                    (8, 7, 1),
-                ]
+                    -18,
+                    19,
+                    18,
+                    1,
+                ],
+                32,
             )
         ),
+        evans.RewriteMeterCommand(boundary_depth=-2),
         evans.PitchHandler([library._brass_chord_pitches[voice_name]]),
         trinton.notehead_bracket_command(),
         library.ring_mod_attachments(
@@ -93,7 +100,6 @@ for voice_name in ["trumpet voice", "tuba voice"]:
             direction=abjad.DOWN,
         ),
         voice=score[voice_name],
-        preprocessor=trinton.fuse_sixteenths_preprocessor((9, 19)),
     )
 
 # tuba music commands
