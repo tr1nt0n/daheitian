@@ -120,7 +120,7 @@
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
                                     r4
-                                    c''16
+                                    bqs'16
                                     - \marcato
                                     \pppp
                                     [
@@ -133,7 +133,7 @@
                                     r16
                                     r16
                                     ]
-                                    c''16
+                                    bqs'16
                                     - \marcato
                                     \pp
                                     \stopTextSpan
@@ -174,7 +174,7 @@
                                     r4.
                                     r4
                                     r16
-                                    c''16
+                                    bqs'16
                                     - \marcato
                                     \ff
                                     - \tweak padding #7.5
@@ -184,24 +184,24 @@
                                     \startTextSpan
                                     \<
                                     r8.
-                                    c''16
+                                    bqs'16
                                     - \marcato
                                     r8
                                     r8
-                                    c''8.
+                                    bqs'8.
                                     - \marcato
                                     r16
-                                    c''8.
+                                    bqs'8.
                                     - \marcato
                                     \fff
                                     r16
                                     r4
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    c''8
+                                    bqs'8
                                     - \marcato
                                     [
                                     \revert Staff.Stem.stemlet-length
-                                    c''8
+                                    bqs'8
                                     - \marcato
                                     \ffff
                                     \stopTextSpan

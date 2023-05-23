@@ -21,10 +21,10 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (1, 4)),
     evans.RhythmHandler(evans.tuplet([(8, 7, 1)])),
     evans.RewriteMeterCommand(),
-    evans.PitchHandler([12]),
+    evans.PitchHandler(["bqs'"]),
     library.ring_mod_attachments(dynamics=["p"], direction=abjad.DOWN),
     trinton.hooked_spanner_command(
-        string=library._fundamental_to_multiphonic["c''"].string,
+        string=library._fundamental_to_multiphonic["bqs'"].string,
         full_string=True,
         padding=7,
         style="solid-line-with-hook",

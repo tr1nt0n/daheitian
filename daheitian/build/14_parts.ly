@@ -711,7 +711,7 @@
                                     r16
                                     r16
                                     r16
-                                    c''16
+                                    bqs'16
                                     - \marcato
                                     \ff
                                     - \tweak padding #7.5
@@ -724,7 +724,7 @@
                                     r16
                                     [
                                     r16
-                                    c''16
+                                    bqs'16
                                     - \marcato
                                     \stopTextSpan
                                     r16

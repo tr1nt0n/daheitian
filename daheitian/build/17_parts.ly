@@ -78,7 +78,7 @@
                                     \once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
-                                    c''4
+                                    bqs'4
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
                                     - \marcato
                                     - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }
@@ -90,43 +90,43 @@
                                     - \tweak stencil #constante-hairpin
                                     \<
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    c''8
+                                    bqs'8
                                     - \marcato
                                     [
-                                    c''16
+                                    bqs'16
                                     - \marcato
                                     \revert Staff.Stem.stemlet-length
-                                    c''16
+                                    bqs'16
                                     - \marcato
                                     ]
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    c''8
+                                    bqs'8
                                     - \marcato
                                     [
                                     \revert Staff.Stem.stemlet-length
-                                    c''8
+                                    bqs'8
                                     - \marcato
                                     ]
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    c''16
+                                    bqs'16
                                     - \marcato
                                     [
                                     \revert Staff.Stem.stemlet-length
-                                    c''8.
+                                    bqs'8.
                                     - \marcato
                                     ]
-                                    c''4
+                                    bqs'4
                                     - \marcato
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    c''8
+                                    bqs'8
                                     - \marcato
                                     [
                                     \revert Staff.Stem.stemlet-length
-                                    c''8
+                                    bqs'8
                                     - \marcato
                                     \!
                                     ]
-                                    c''4
+                                    bqs'4
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "fffffpp"))
                                     - \marcato
                                     \stopTextSpan

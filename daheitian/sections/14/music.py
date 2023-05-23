@@ -354,9 +354,9 @@ for measure in [2, 6]:
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (6,)),
-    evans.PitchHandler(["c''"]),
+    evans.PitchHandler(["bqs'"]),
     trinton.hooked_spanner_command(
-        string=library._fundamental_to_multiphonic["c''"].string,
+        string=library._fundamental_to_multiphonic["bqs'"].string,
         full_string=True,
         padding=7.5,
         style="solid-line-with-hook",

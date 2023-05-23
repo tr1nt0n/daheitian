@@ -108,7 +108,7 @@
                                     {
                                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
-                                        c''2
+                                        bqs'2
                                         - \tweak circled-tip ##t
                                         _ \<
                                         - \tweak padding #7
@@ -127,7 +127,7 @@
                                         \override NoteColumn.glissando-skip = ##t
                                           %! abjad.glissando(1)
                                         \override NoteHead.no-ledgers = ##t
-                                        c''4..
+                                        bqs'4..
                                             _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                         - \tweak circled-tip ##t
                                         _ \>
@@ -139,10 +139,10 @@
                                         \revert NoteHead.no-ledgers
                                           %! abjad.glissando(6)
                                         \undo \hide NoteHead
-                                        c''16
+                                        bqs'16
                                         \!
                                     }
-                                    c''8
+                                    bqs'8
                                     [
                                     - \tweak circled-tip ##t
                                     _ \<
@@ -157,7 +157,7 @@
                                     \override NoteColumn.glissando-skip = ##t
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
-                                    c''16..
+                                    bqs'16..
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                     - \tweak circled-tip ##t
                                     _ \>
@@ -169,10 +169,10 @@
                                     \revert NoteHead.no-ledgers
                                       %! abjad.glissando(6)
                                     \undo \hide NoteHead
-                                    c''64
+                                    bqs'64
                                     \!
                                     ]
-                                    c''8
+                                    bqs'8
                                     [
                                     - \tweak circled-tip ##t
                                     _ \<
@@ -186,9 +186,9 @@
                                     \override NoteColumn.glissando-skip = ##t
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
-                                    c''8
+                                    bqs'8
                                     \once \override Dots.staff-position = #2
-                                    c''8..
+                                    bqs'8..
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                     - \tweak circled-tip ##t
                                     _ \>
@@ -200,10 +200,10 @@
                                     \revert NoteHead.no-ledgers
                                       %! abjad.glissando(6)
                                     \undo \hide NoteHead
-                                    c''32
+                                    bqs'32
                                     \!
                                     ]
-                                    c''8
+                                    bqs'8
                                     [
                                     - \tweak circled-tip ##t
                                     _ \<
@@ -218,7 +218,7 @@
                                     \override NoteColumn.glissando-skip = ##t
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
-                                    c''16..
+                                    bqs'16..
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                     - \tweak circled-tip ##t
                                     _ \>
@@ -230,14 +230,14 @@
                                     \revert NoteHead.no-ledgers
                                       %! abjad.glissando(6)
                                     \undo \hide NoteHead
-                                    c''64
+                                    bqs'64
                                     \!
                                     ]
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 2 0))
                                     \times 12/16
                                     {
-                                        c''2
+                                        bqs'2
                                         - \tweak circled-tip ##t
                                         _ \<
                                           %! abjad.glissando(7)
@@ -251,7 +251,7 @@
                                         \override NoteColumn.glissando-skip = ##t
                                           %! abjad.glissando(1)
                                         \override NoteHead.no-ledgers = ##t
-                                        c''4..
+                                        bqs'4..
                                             _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                         - \tweak circled-tip ##t
                                         _ \>
@@ -263,10 +263,10 @@
                                         \revert NoteHead.no-ledgers
                                           %! abjad.glissando(6)
                                         \undo \hide NoteHead
-                                        c''16
+                                        bqs'16
                                         \!
                                     }
-                                    c''8
+                                    bqs'8
                                     [
                                     - \tweak circled-tip ##t
                                     _ \<
@@ -281,7 +281,7 @@
                                     \override NoteColumn.glissando-skip = ##t
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
-                                    c''16..
+                                    bqs'16..
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                     - \tweak circled-tip ##t
                                     _ \>
@@ -293,10 +293,10 @@
                                     \revert NoteHead.no-ledgers
                                       %! abjad.glissando(6)
                                     \undo \hide NoteHead
-                                    c''64
+                                    bqs'64
                                     \!
                                     ]
-                                    c''4
+                                    bqs'4
                                     - \tweak circled-tip ##t
                                     _ \<
                                       %! abjad.glissando(7)
@@ -310,7 +310,7 @@
                                     \override NoteColumn.glissando-skip = ##t
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
-                                    c''8..
+                                    bqs'8..
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                     [
                                     - \tweak circled-tip ##t
@@ -323,10 +323,10 @@
                                     \revert NoteHead.no-ledgers
                                       %! abjad.glissando(6)
                                     \undo \hide NoteHead
-                                    c''32
+                                    bqs'32
                                     \!
                                     ]
-                                    c''8
+                                    bqs'8
                                     [
                                     - \tweak circled-tip ##t
                                     _ \<
@@ -341,7 +341,7 @@
                                     \override NoteColumn.glissando-skip = ##t
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
-                                    c''16..
+                                    bqs'16..
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                     - \tweak circled-tip ##t
                                     _ \>
@@ -353,10 +353,10 @@
                                     \revert NoteHead.no-ledgers
                                       %! abjad.glissando(6)
                                     \undo \hide NoteHead
-                                    c''64
+                                    bqs'64
                                     \!
                                     ]
-                                    c''4
+                                    bqs'4
                                     - \tweak circled-tip ##t
                                     _ \<
                                       %! abjad.glissando(7)
@@ -370,7 +370,7 @@
                                     \override NoteColumn.glissando-skip = ##t
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
-                                    c''8..
+                                    bqs'8..
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                     [
                                     - \tweak circled-tip ##t
@@ -383,7 +383,7 @@
                                     \revert NoteHead.no-ledgers
                                       %! abjad.glissando(6)
                                     \undo \hide NoteHead
-                                    c''32
+                                    bqs'32
                                     \!
                                     \stopTextSpan
                                     ]

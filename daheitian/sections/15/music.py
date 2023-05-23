@@ -35,7 +35,7 @@ trinton.make_music(
     rmakers.extract_trivial,
     evans.PitchHandler(
         [
-            12,
+            "bqs'",
         ]
     ),
     trinton.attachment_command(
@@ -43,7 +43,7 @@ trinton.make_music(
         selector=trinton.logical_ties(pitched=True, first=True),
     ),
     trinton.hooked_spanner_command(
-        string=library._fundamental_to_multiphonic["c''"].string,
+        string=library._fundamental_to_multiphonic["bqs'"].string,
         full_string=True,
         padding=7.5,
         style="solid-line-with-hook",
@@ -110,7 +110,7 @@ trinton.make_music(
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(
         [
-            12,
+            "bqs'",
         ]
     ),
     trinton.attachment_command(
@@ -129,7 +129,7 @@ trinton.make_music(
         ),
     ),
     trinton.hooked_spanner_command(
-        string=library._fundamental_to_multiphonic["c''"].string,
+        string=library._fundamental_to_multiphonic["bqs'"].string,
         full_string=True,
         padding=7.5,
         style="solid-line-with-hook",

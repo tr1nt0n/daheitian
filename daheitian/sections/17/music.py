@@ -21,7 +21,7 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (1, 3)),
     evans.RhythmHandler(evans.talea(library.moth_talea, 16)),
     trinton.pitch_with_selector_command(
-        selector=trinton.ranged_selector(ranges=[range(0, 12)]), pitch_list=[12]
+        selector=trinton.ranged_selector(ranges=[range(0, 12)]), pitch_list=["bqs'"]
     ),
     trinton.pitch_with_selector_command(
         selector=trinton.ranged_selector(ranges=[range(12, 31)]),
@@ -75,7 +75,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, 0, 0, 0, 10, 11, 11, -1]),
     ),
     trinton.hooked_spanner_command(
-        string=library._fundamental_to_multiphonic["c''"].string,
+        string=library._fundamental_to_multiphonic["bqs'"].string,
         full_string=True,
         padding=7.5,
         style="solid-line-with-hook",
