@@ -525,13 +525,21 @@ trinton.make_music(
     ),
     trinton.linear_attachment_command(
         attachments=[
-            library.clef_whitespace,
+            # library.clef_whitespace,
             abjad.StartHairpin("o<"),
             abjad.Dynamic("mf"),
             abjad.StartHairpin(">o"),
             abjad.StopHairpin(),
         ],
-        selector=trinton.select_leaves_by_index([0, 0, 3, 3, 9]),
+        selector=trinton.select_leaves_by_index(
+            [
+                # 0,
+                0,
+                3,
+                3,
+                9,
+            ],
+        ),
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
@@ -700,13 +708,21 @@ trinton.make_music(
     ),
     trinton.linear_attachment_command(
         attachments=[
-            library.clef_whitespace,
+            # library.clef_whitespace,
             abjad.StartHairpin("o<"),
             abjad.Dynamic("mf"),
             abjad.StartHairpin(">o"),
             abjad.StopHairpin(),
         ],
-        selector=trinton.select_leaves_by_index([0, 0, 3, 3, 9]),
+        selector=trinton.select_leaves_by_index(
+            [
+                # 0,
+                0,
+                3,
+                3,
+                9,
+            ]
+        ),
     ),
     trinton.linear_attachment_command(
         attachments=[
@@ -879,13 +895,21 @@ trinton.make_music(
     ),
     trinton.linear_attachment_command(
         attachments=[
-            library.clef_whitespace,
+            # library.clef_whitespace,
             abjad.StartHairpin("o<"),
             abjad.Dynamic("mf"),
             abjad.StartHairpin(">o"),
             abjad.StopHairpin(),
         ],
-        selector=trinton.select_leaves_by_index([0, 0, 3, 3, 9]),
+        selector=trinton.select_leaves_by_index(
+            [
+                # 0,
+                0,
+                3,
+                3,
+                9,
+            ]
+        ),
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
@@ -1061,13 +1085,21 @@ trinton.make_music(
     library.change_lines(lines=5, clef="treble"),
     trinton.linear_attachment_command(
         attachments=[
-            library.clef_whitespace,
+            # library.clef_whitespace,
             abjad.StartHairpin("o<"),
             abjad.Dynamic("mf"),
             abjad.StartHairpin(">o"),
             abjad.StopHairpin(),
         ],
-        selector=trinton.select_leaves_by_index([0, 0, 3, 3, 7]),
+        selector=trinton.select_leaves_by_index(
+            [
+                # 0,
+                0,
+                3,
+                3,
+                7,
+            ],
+        ),
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(

@@ -4611,7 +4611,7 @@
                                     % SPANNER_STARTS:
                                     - \tweak padding #8
                                     - \abjad-solid-line-with-up-hook
-                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Kratzen Sie langsam die mit Draht umwickelten Saiten mit einer Plastikkarte } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Langsam die mit Draht umwickelten Saiten mit einer Plastikkarte Kratzen } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -4
                                     \startTextSpan
                                     ~

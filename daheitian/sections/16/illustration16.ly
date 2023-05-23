@@ -4880,7 +4880,7 @@
                             \<
                             - \tweak padding #8.5
                             - \abjad-solid-line-with-hook
-                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Bewegen Sie die Ventile schnell und wahllos. } \hspace #0.5 }
+                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Bewegen die Ventile schnell und wahllos. } \hspace #0.5 }
                             - \tweak bound-details.right.padding -2
                             \startTextSpan
                             % BEFORE:
@@ -8573,6 +8573,7 @@
                                     % SPANNER_STARTS:
                                     - \tweak stencil #constante-hairpin
                                     \<
+                                    \sustainOn
                                     % COMMANDS:
                                     \boxed-markup "Röhrenglocken" 1
                                     % OPEN_BRACKETS:
@@ -8584,6 +8585,8 @@
                                         % AFTER:
                                         % ARTICULATIONS:
                                         \!
+                                        % SPANNER_STOPS:
+                                        \sustainOff
                                         r2
                                         r8.
                                     % CLOSE_BRACKETS:
@@ -10270,9 +10273,6 @@
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 5
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "treble"
@@ -10849,9 +10849,6 @@
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 5
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "altovarC"
@@ -11414,9 +11411,6 @@
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 5
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "bass"
@@ -11966,9 +11960,6 @@
                                     % ABSOLUTE_BEFORE:
                                     % COMMANDS:
                                     \staff-line-count 5
-                                    % BEFORE:
-                                    % COMMANDS:
-                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     % OPENING:
                                     % COMMANDS:
                                     \clef "treble"

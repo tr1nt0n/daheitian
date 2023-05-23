@@ -352,7 +352,7 @@ trinton.make_music(
     library.change_lines(lines=1, clef="percussion"),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="Kratzen Sie langsam die mit Draht umwickelten Saiten mit einer Plastikkarte",
+            string="Langsam die mit Draht umwickelten Saiten mit einer Plastikkarte Kratzen",
         ),
         full_string=True,
         padding=8,

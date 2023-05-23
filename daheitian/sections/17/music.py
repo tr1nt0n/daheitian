@@ -58,6 +58,13 @@ trinton.make_music(
     trinton.ficta_command(selector=trinton.select_leaves_by_index([12, -1])),
     trinton.linear_attachment_command(
         attachments=[
+            abjad.LilyPondLiteral(
+                r"\once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2",
+                "before",
+            ),
+            abjad.Markup(
+                r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }"""
+            ),
             trinton.make_custom_dynamic("fffff"),
             abjad.StartHairpin("--"),
             abjad.StopHairpin(),
@@ -65,7 +72,7 @@ trinton.make_music(
             abjad.StartHairpin("<"),
             trinton.make_custom_dynamic("fffff"),
         ],
-        selector=trinton.select_leaves_by_index([0, 0, 10, 11, 11, -1]),
+        selector=trinton.select_leaves_by_index([0, 0, 0, 0, 10, 11, 11, -1]),
     ),
     trinton.hooked_spanner_command(
         string=library._fundamental_to_multiphonic["c''"].string,
@@ -126,6 +133,13 @@ trinton.make_music(
     trinton.ficta_command(selector=trinton.select_leaves_by_index([12, -1])),
     trinton.linear_attachment_command(
         attachments=[
+            abjad.LilyPondLiteral(
+                r"\once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2",
+                "before",
+            ),
+            abjad.Markup(
+                r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }"""
+            ),
             trinton.make_custom_dynamic("fffff"),
             abjad.StartHairpin("--"),
             abjad.StopHairpin(),
@@ -133,7 +147,7 @@ trinton.make_music(
             abjad.StartHairpin("<"),
             trinton.make_custom_dynamic("fffff"),
         ],
-        selector=trinton.select_leaves_by_index([0, 0, 10, 11, 11, -1]),
+        selector=trinton.select_leaves_by_index([0, 0, 0, 0, 10, 11, 11, -1]),
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
@@ -193,6 +207,13 @@ trinton.make_music(
     trinton.linear_attachment_command(
         attachments=[
             abjad.Clef("bass"),
+            abjad.LilyPondLiteral(
+                r"\once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2",
+                "before",
+            ),
+            abjad.Markup(
+                r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }"""
+            ),
             trinton.make_custom_dynamic("fffff"),
             abjad.StartHairpin("--"),
             abjad.StopHairpin(),
@@ -200,7 +221,7 @@ trinton.make_music(
             abjad.StartHairpin("<"),
             trinton.make_custom_dynamic("fffff"),
         ],
-        selector=trinton.select_leaves_by_index([0, 0, 0, 10, 11, 11, -1]),
+        selector=trinton.select_leaves_by_index([0, 0, 0, 0, 0, 10, 11, 11, -1]),
     ),
     trinton.hooked_spanner_command(
         string=library._fundamental_to_multiphonic["d hspace"].string,
@@ -542,11 +563,18 @@ for voice_name, pitch in zip(
         ),
         trinton.linear_attachment_command(
             attachments=[
+                abjad.LilyPondLiteral(
+                    r"\once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2",
+                    "before",
+                ),
+                abjad.Markup(
+                    r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }"""
+                ),
                 trinton.make_custom_dynamic("fffff"),
                 abjad.StartHairpin("--"),
                 abjad.StopHairpin(),
             ],
-            selector=trinton.select_leaves_by_index([0, 0, -1]),
+            selector=trinton.select_leaves_by_index([0, 0, 0, 0, -1]),
         ),
         trinton.attachment_command(
             attachments=[abjad.Articulation("marcato")],
@@ -977,6 +1005,18 @@ trinton.make_music(
                 0,
             ]
         ),
+    ),
+    voice=score["Global Context"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (1,)),
+    trinton.attachment_command(
+        attachments=[
+            abjad.LilyPondLiteral(r"\break", "before"),
+        ],
+        selector=trinton.select_leaves_by_index([0]),
+        tag=abjad.Tag("+SCORE"),
     ),
     voice=score["Global Context"],
 )

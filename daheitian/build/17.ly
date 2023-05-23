@@ -10,6 +10,8 @@
             % BEFORE:
             % COMMANDS:
             \bar ".|:"
+              %! +SCORE
+            \break
             % OPENING:
             % COMMANDS:
             \time 6/4
@@ -142,6 +144,7 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
                                     c''4
@@ -151,6 +154,8 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \marcato
+                                    % MARKUP:
+                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }
                                     % SPANNER_STARTS:
                                     - \tweak padding #7.5
                                     - \abjad-solid-line-with-hook
@@ -444,6 +449,7 @@
                                     % BEFORE:
                                     % COMMANDS:
                                     \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
+                                    \once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bassklarinetten }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { bkl. }
                                     % OPENING:
@@ -458,6 +464,8 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \marcato
+                                    % MARKUP:
+                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }
                                     % SPANNER_STARTS:
                                     - \tweak padding #4
                                     - \abjad-solid-line-with-hook
@@ -822,6 +830,7 @@
                                 {
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Fagotte }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { fg.}
                                     % OPENING:
@@ -834,6 +843,8 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \marcato
+                                    % MARKUP:
+                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }
                                     % SPANNER_STARTS:
                                     - \tweak padding #8.5
                                     - \abjad-solid-line-with-hook
@@ -2257,6 +2268,7 @@
                                     \staff-line-count 4
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
                                     % OPENING:
@@ -2269,6 +2281,8 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \marcato
+                                    % MARKUP:
+                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }
                                     % SPANNER_STARTS:
                                     - \tweak padding #11.5
                                     - \abjad-solid-line-with-hook
@@ -2619,6 +2633,7 @@
                                     \staff-line-count 4
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
                                     % OPENING:
@@ -2631,6 +2646,8 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \marcato
+                                    % MARKUP:
+                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }
                                     % SPANNER_STARTS:
                                     - \tweak padding #11.5
                                     - \abjad-solid-line-with-hook
@@ -2981,6 +2998,7 @@
                                     \staff-line-count 4
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
                                     % OPENING:
@@ -2993,6 +3011,8 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \marcato
+                                    % MARKUP:
+                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }
                                     % SPANNER_STARTS:
                                     - \tweak padding #11.5
                                     - \abjad-solid-line-with-hook
@@ -3343,6 +3363,7 @@
                                     \staff-line-count 4
                                     % BEFORE:
                                     % COMMANDS:
+                                    \once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
                                     % OPENING:
@@ -3355,6 +3376,8 @@
                                     % AFTER:
                                     % ARTICULATIONS:
                                     - \marcato
+                                    % MARKUP:
+                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }
                                     % SPANNER_STARTS:
                                     - \tweak padding #10.5
                                     - \abjad-solid-line-with-hook

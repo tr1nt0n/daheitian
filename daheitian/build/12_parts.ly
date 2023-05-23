@@ -646,7 +646,7 @@
                             \<
                             - \tweak padding #8.5
                             - \abjad-solid-line-with-hook
-                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Bewegen Sie die Ventile schnell und wahllos. } \hspace #0.5 }
+                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Bewegen die Ventile schnell und wahllos. } \hspace #0.5 }
                             - \tweak bound-details.right.padding -2
                             \startTextSpan
                             \once \override NoteHead.no-ledgers = ##t
@@ -967,6 +967,7 @@
                                     \mp
                                     - \tweak stencil #constante-hairpin
                                     \<
+                                    \sustainOn
                                     \boxed-markup "Röhrenglocken" 1
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 2 0))
                                     \times 16/20
@@ -974,6 +975,7 @@
                                         <c' df'>2
                                         <c' df'>16
                                         \!
+                                        \sustainOff
                                         r2
                                         r8.
                                     }

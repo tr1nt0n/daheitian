@@ -1003,6 +1003,7 @@ def monolith(score, measure):
         trinton.notehead_bracket_command(),
         library.boxed_markup(string="Röhrenglocken"),
         library.change_lines(lines=5, clef="bass"),
+        library.piano_pedals(),
         voice=score["percussion 2 voice"],
         preprocessor=trinton.fuse_quarters_preprocessor((2, 6)),
     )
@@ -1054,7 +1055,7 @@ def monolith(score, measure):
         ),
         trinton.hooked_spanner_command(
             string=library.return_boxed_markup(
-                string="Bewegen Sie die Ventile schnell und wahllos.",
+                string="Bewegen die Ventile schnell und wahllos.",
             ),
             full_string=True,
             padding=8.5,
