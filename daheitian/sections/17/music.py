@@ -137,9 +137,6 @@ trinton.make_music(
                 r"\once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2",
                 "before",
             ),
-            abjad.Markup(
-                r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }"""
-            ),
             trinton.make_custom_dynamic("fffff"),
             abjad.StartHairpin("--"),
             abjad.StopHairpin(),
@@ -147,7 +144,29 @@ trinton.make_music(
             abjad.StartHairpin("<"),
             trinton.make_custom_dynamic("fffff"),
         ],
-        selector=trinton.select_leaves_by_index([0, 0, 0, 0, 10, 11, 11, -1]),
+        selector=trinton.select_leaves_by_index([0, 0, 0, 10, 11, 11, -1]),
+    ),
+    trinton.attachment_command(
+        attachments=[
+            abjad.Markup(
+                r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }"""
+            ),
+        ],
+        selector=trinton.select_leaves_by_index([0]),
+        tag=abjad.Tag("+PARTS"),
+    ),
+    trinton.attachment_command(
+        attachments=[
+            abjad.bundle(
+                abjad.Markup(
+                    r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }"""
+                ),
+                r"- \tweak padding #3.5",
+            ),
+        ],
+        selector=trinton.select_leaves_by_index([0]),
+        tag=abjad.Tag("+SCORE"),
+        direction=abjad.UP,
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
@@ -567,14 +586,11 @@ for voice_name, pitch in zip(
                     r"\once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2",
                     "before",
                 ),
-                abjad.Markup(
-                    r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }"""
-                ),
                 trinton.make_custom_dynamic("fffff"),
                 abjad.StartHairpin("--"),
                 abjad.StopHairpin(),
             ],
-            selector=trinton.select_leaves_by_index([0, 0, 0, 0, -1]),
+            selector=trinton.select_leaves_by_index([0, 0, 0, -1]),
         ),
         trinton.attachment_command(
             attachments=[abjad.Articulation("marcato")],
@@ -582,6 +598,20 @@ for voice_name, pitch in zip(
         ),
         voice=score[voice_name],
         beam_meter=True,
+    )
+
+for voice_name in ["violin 2 voice", "viola voice", "cello voice"]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (1,)),
+        trinton.attachment_command(
+            attachments=[
+                abjad.Markup(
+                    r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }"""
+                ),
+            ],
+            selector=trinton.select_leaves_by_index([0]),
+        ),
+        voice=score[voice_name],
     )
 
 for voice_name in ["violin 1 voice", "violin 2 voice", "viola voice"]:
@@ -601,6 +631,30 @@ for voice_name in ["violin 1 voice", "violin 2 voice", "viola voice"]:
     )
 
 # violin 1 music commands
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (1,)),
+    trinton.attachment_command(
+        attachments=[
+            abjad.Markup(
+                r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }"""
+            ),
+        ],
+        selector=trinton.select_leaves_by_index([0]),
+        tag=abjad.Tag("+PARTS"),
+    ),
+    trinton.attachment_command(
+        attachments=[
+            abjad.Markup(
+                r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }"""
+            ),
+        ],
+        selector=trinton.select_leaves_by_index([0]),
+        tag=abjad.Tag("+SCORE"),
+        direction=abjad.UP,
+    ),
+    voice=score["violin 1 voice"],
+)
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (2, 3)),
