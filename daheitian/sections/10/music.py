@@ -57,21 +57,17 @@ for voice_name in [
 
 abjad.attach(abjad.Clef("bass"), abjad.select.leaf(score["bassoon voice"], 0))
 
-for voice_name, pitch, dict_key, padding, in zip(
+for voice_name, pitch, padding in zip(
     [
         "oboe voice",
         "bassoon voice",
     ],
     [
-        "c''",
+        "bqs'",
         "cqs,",
     ],
     [
-        "c''",
-        "cqs, hspace",
-    ],
-    [
-        7.5,
+        8.5,
         9,
     ],
 ):
@@ -79,7 +75,7 @@ for voice_name, pitch, dict_key, padding, in zip(
         lambda _: trinton.select_target(_, (1, 3)),
         evans.PitchHandler([pitch]),
         trinton.hooked_spanner_command(
-            string=library._fundamental_to_multiphonic[dict_key].string,
+            string=library._fundamental_to_multiphonic[rf"{pitch} hspace"].string,
             full_string=True,
             padding=padding,
             style="solid-line-with-hook",

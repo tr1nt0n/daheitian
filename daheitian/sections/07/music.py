@@ -24,9 +24,9 @@ trinton.make_music(
     evans.PitchHandler(["bqs'"]),
     library.ring_mod_attachments(dynamics=["p"], direction=abjad.DOWN),
     trinton.hooked_spanner_command(
-        string=library._fundamental_to_multiphonic["bqs'"].string,
+        string=library._fundamental_to_multiphonic["bqs' hspace"].string,
         full_string=True,
-        padding=7,
+        padding=8,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=1.5,

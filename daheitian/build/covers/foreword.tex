@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc}
+\setmainfont{Bodoni 72 Book}
+\usepackage[paperwidth=11in,paperheight=17in,margin=1in,headheight=0.0in,footskip=0.5in,includehead,includefoot,portrait]{geometry}
+\usepackage[absolute]{textpos}
+\TPGrid[0.5in, 0.25in]{23}{24}
+\parindent=0pt
+\parskip=12pt
+\usepackage{nopageno}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{amsmath}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+
+\begin{document}
+
+\begingroup
+\begin{center}
+\end{center}
+\endgroup
+
+\vspace{13\baselineskip}
+
+\begingroup
+\begin{center}
+\huge V O R W O R T
+\end{center}
+\endgroup
+
+\vspace{6\baselineskip}
+
+\begingroup
+\begin{center}
+{\setmainfont{Source Han Serif SC}\selectfont ,,天地不仁 以万物为刍狗'' }
+\end{center}
+\endgroup
+
+\begingroup
+\begin{center}
+,,Schade! - Schade! - zu spät!'' 
+\end{center}
+\endgroup
+
+\begingroup
+\begin{center}
+Schade. Schade. Zu spät.
+\end{center}
+\endgroup
+
+\end{document}

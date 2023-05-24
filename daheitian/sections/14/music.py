@@ -356,9 +356,9 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (6,)),
     evans.PitchHandler(["bqs'"]),
     trinton.hooked_spanner_command(
-        string=library._fundamental_to_multiphonic["bqs'"].string,
+        string=library._fundamental_to_multiphonic["bqs' hspace"].string,
         full_string=True,
-        padding=7.5,
+        padding=8.5,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=1.5,

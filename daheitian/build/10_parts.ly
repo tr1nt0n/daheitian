@@ -72,30 +72,30 @@
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
                                     r4
-                                    c''8.
+                                    bqs'8.
                                     - \marcato
                                     \ff
-                                    - \tweak padding #7.5
+                                    - \tweak padding #8.5
                                     - \abjad-solid-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \hspace #1.5 \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (two three five six)) (lh . (gis)) (rh . (c))) } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -2
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
                                     r16
-                                    c''8.
+                                    bqs'8.
                                     - \marcato
                                     r16
-                                    c''8.
+                                    bqs'8.
                                     - \marcato
                                     r16
-                                    c''8.
+                                    bqs'8.
                                     - \marcato
                                     r16
-                                    c''8.
+                                    bqs'8.
                                     - \marcato
                                     r16
-                                    c''8.
+                                    bqs'8.
                                     - \marcato
                                     \!
                                     \stopTextSpan

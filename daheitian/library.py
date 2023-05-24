@@ -704,7 +704,7 @@ _fundamental_to_multiphonic = {
         r"\markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }",
     ),
     "bqs'": abjad.Markup(
-        r"\markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }",
+        r"\markup \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (two three five six)) (lh . (gis)) (rh . (c))) }",
     ),
     "cqs, hspace": abjad.Markup(
         r"\markup \hspace #4 \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }",
@@ -713,7 +713,7 @@ _fundamental_to_multiphonic = {
         r"\markup \hspace #4 \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }",
     ),
     "bqs' hspace": abjad.Markup(
-        r"\markup \hspace #1.5 \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (one three four six)) (lh . ()) (rh . ())) }",
+        r"\markup \hspace #1.5 \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (two three five six)) (lh . (gis)) (rh . (c))) }",
     ),
 }
 

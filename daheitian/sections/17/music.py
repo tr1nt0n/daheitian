@@ -75,9 +75,9 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, 0, 0, 0, 10, 11, 11, -1]),
     ),
     trinton.hooked_spanner_command(
-        string=library._fundamental_to_multiphonic["bqs'"].string,
+        string=library._fundamental_to_multiphonic["bqs' hspace"].string,
         full_string=True,
-        padding=7.5,
+        padding=8.5,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, 11]),
         right_padding=1.5,
