@@ -69,7 +69,7 @@ for voice_name, fundamental in zip(
         evans.PitchHandler([fundamental]),
         evans.PitchHandler([library._brass_chord_pitches[voice_name]], as_ratios=True),
         trinton.force_accidentals_command(
-            selector=trinton.logical_ties(first=True, pitched=True)
+            selector=trinton.select_leaves_by_index([0], pitched=True)
         ),
         trinton.notehead_bracket_command(),
         library.ring_mod_attachments(
