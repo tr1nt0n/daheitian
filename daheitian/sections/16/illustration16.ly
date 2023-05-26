@@ -4982,7 +4982,7 @@
                                             e'4.
                                             ^ \pppp
                                             ^ \<
-                                            \boxed-markup "+ Gongs der chinesisch Oper" 1
+                                            \boxed-markup "+ Gongs der chinesische Oper" 1
                                             c'4.
                                             e'4
                                             c'4

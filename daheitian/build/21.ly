@@ -2237,7 +2237,7 @@
                                             \f
                                             - \tweak stencil #constante-hairpin
                                             \<
-                                            \boxed-markup "Tam-Tam mit Bogen, Gongs der chinesisch Oper" 1
+                                            \boxed-markup "Tam-Tam mit Bogen, Gongs der chinesische Oper" 1
                                             r8.
                                               %! +SCORE
                                             \once \override Tie.transparent = ##f

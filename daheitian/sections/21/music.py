@@ -464,7 +464,7 @@ trinton.make_music(
         lines=3,
         clef="percussion",
     ),
-    library.boxed_markup(string="Tam-Tam mit Bogen, Gongs der chinesisch Oper"),
+    library.boxed_markup(string="Tam-Tam mit Bogen, Gongs der chinesische Oper"),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Dynamic("f"),

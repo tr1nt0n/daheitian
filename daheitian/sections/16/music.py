@@ -1254,7 +1254,7 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (9, 10)),
     evans.PitchHandler([4, 0]),
-    library.boxed_markup(string="+ Gongs der chinesisch Oper"),
+    library.boxed_markup(string="+ Gongs der chinesische Oper"),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Dynamic("pppp"),
