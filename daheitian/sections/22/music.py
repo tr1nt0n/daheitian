@@ -100,7 +100,7 @@ trinton.make_music(
     evans.PitchHandler(
         [
             "aqf",
-            "af",
+            "gs",
             "a",
             "a",
             "a",

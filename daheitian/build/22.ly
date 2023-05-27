@@ -605,7 +605,7 @@
                                     \revert NoteHead.no-ledgers
                                       %! abjad.glissando(6)
                                     \undo \hide NoteHead
-                                    af4
+                                    gs4
                                       %! abjad.glissando(7)
                                     \glissando
                                     ~
@@ -618,7 +618,7 @@
                                     \override NoteColumn.glissando-skip = ##t
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
-                                    af4
+                                    gs4
                                       %! +SCORE
                                     \repeatTie
                                       %! abjad.glissando(6)
