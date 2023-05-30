@@ -971,6 +971,18 @@ trinton.make_music(
 )
 
 trinton.make_music(
+    lambda _: trinton.select_target(_, (28,)),
+    trinton.attachment_command(
+        attachments=[
+            abjad.LilyPondLiteral(r"\noBreak", "after"),
+        ],
+        selector=trinton.select_leaves_by_index([0]),
+        tag=abjad.Tag("+SCORE"),
+    ),
+    voice=score["Global Context"],
+)
+
+trinton.make_music(
     lambda _: trinton.select_target(_, (29,)),
     trinton.attachment_command(
         attachments=[

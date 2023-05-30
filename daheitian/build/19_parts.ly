@@ -65,6 +65,8 @@
             s1 * 9/16
             \time 5/4
             s1 * 5/4
+              %! +SCORE
+        %%% \noBreak
             \once \override Score.BarLine.transparent = ##f
             \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
