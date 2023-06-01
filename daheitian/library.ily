@@ -74,3 +74,18 @@ boxed-markup = #(
    (grob-interpret-markup grob
           (markup #:override '(baseline-skip . 2.5) #:number
                   (#:line ((#:fontsize 1 #:column ("X" "X")))))))
+
+#(define ((ghost-time-signature-one) grob)
+    (grob-interpret-markup grob
+        (markup #:override '(baseline-skip . 2.5) #:number
+                (#:line ((#:fontsize 0.2 #:center-column ("6+2" "8")))))))
+
+#(define ((ghost-time-signature-two) grob)
+    (grob-interpret-markup grob
+        (markup #:override '(baseline-skip . 2.5) #:number
+                (#:line ((#:fontsize 0.2 #:center-column ("1+3" "8")))))))
+
+% #(define ((ghost-time-signature-two) grob)
+%     (grob-interpret-markup grob
+%         (markup #:override '(baseline-skip . 2.5) #:number
+%                 (#:line ((#:fontsize 1 #:center-column (#:line (#:fraction '1 '3) #:line (#:note 4. 'DOWN))))))))

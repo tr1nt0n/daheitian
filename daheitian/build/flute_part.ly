@@ -49,5 +49,6 @@
             \include "22_parts.ly"
             \include "23_parts.ly"
             \include "24_parts.ly"
+            \include "25_parts.ly"
         }
 }
