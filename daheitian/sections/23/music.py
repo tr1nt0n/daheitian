@@ -221,6 +221,7 @@ trinton.make_music(
             10,
             first=True,
         ),
+        direction=abjad.UP,
     ),
     trinton.ottava_command(octave=2, selector=trinton.select_leaves_by_index([0, -1])),
     trinton.attachment_command(
@@ -935,7 +936,7 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (7,)),
     trinton.attachment_command(
         attachments=[
-            abjad.LilyPondLiteral(r"\break", "after"),
+            abjad.LilyPondLiteral(r"\pageBreak", "after"),
         ],
         selector=trinton.select_leaves_by_index([0]),
         tag=abjad.Tag("+SCORE"),

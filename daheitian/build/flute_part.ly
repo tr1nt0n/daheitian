@@ -43,5 +43,11 @@
             \include "16_parts.ly"
             \include "17_parts.ly"
             \include "18_parts.ly"
+            \include "19_parts.ly"
+            \include "20_parts.ly"
+            \include "21_parts.ly"
+            \include "22_parts.ly"
+            \include "23_parts.ly"
+            \include "24_parts.ly"
         }
 }

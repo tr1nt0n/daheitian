@@ -43,7 +43,7 @@
             \time 4/4
             s1 * 1
               %! +SCORE
-            \break
+            \pageBreak
         }
         \tag #'group1
         {
@@ -1333,7 +1333,7 @@
                                         - \stopped
                                         \change Staff = "piano 2 staff"
                                         bf,16
-                                        - \accent
+                                        ^ \accent
                                         \change Staff = "piano 1 staff"
                                         af''''16
                                         - \stopped
@@ -1366,7 +1366,7 @@
                                         \change Staff = "piano 2 staff"
                                         \override Staff.Stem.stemlet-length = 0.75
                                         bf,16
-                                        - \accent
+                                        ^ \accent
                                         [
                                         \change Staff = "piano 1 staff"
                                         af''''16
@@ -1390,7 +1390,7 @@
                                         - \stopped
                                         \change Staff = "piano 2 staff"
                                         bf,16
-                                        - \accent
+                                        ^ \accent
                                         \change Staff = "piano 1 staff"
                                         g''''16
                                         - \stopped
@@ -1422,7 +1422,7 @@
                                         - \stopped
                                         \change Staff = "piano 2 staff"
                                         bf,16
-                                        - \accent
+                                        ^ \accent
                                         \change Staff = "piano 1 staff"
                                         c''''16
                                         - \stopped
@@ -1454,7 +1454,7 @@
                                         - \stopped
                                         \change Staff = "piano 2 staff"
                                         bf,32
-                                        - \accent
+                                        ^ \accent
                                         \change Staff = "piano 1 staff"
                                         c''''32
                                         - \stopped
@@ -1476,7 +1476,7 @@
                                         - \stopped
                                         \change Staff = "piano 2 staff"
                                         bf,32
-                                        - \accent
+                                        ^ \accent
                                         \change Staff = "piano 1 staff"
                                         \revert Staff.Stem.stemlet-length
                                         af''''32
@@ -1508,7 +1508,7 @@
                                         - \stopped
                                         \change Staff = "piano 2 staff"
                                         bf,32
-                                        - \accent
+                                        ^ \accent
                                         \change Staff = "piano 1 staff"
                                         af''''32
                                         - \stopped
@@ -1540,7 +1540,7 @@
                                         - \stopped
                                         \change Staff = "piano 2 staff"
                                         bf,16
-                                        - \accent
+                                        ^ \accent
                                         \change Staff = "piano 1 staff"
                                         af''''16
                                         - \stopped
@@ -1573,7 +1573,7 @@
                                         \change Staff = "piano 2 staff"
                                         \override Staff.Stem.stemlet-length = 0.75
                                         bf,16
-                                        - \accent
+                                        ^ \accent
                                         [
                                         \change Staff = "piano 1 staff"
                                         g''''16
@@ -1596,7 +1596,7 @@
                                         - \stopped
                                         \change Staff = "piano 2 staff"
                                         bf,16
-                                        - \accent
+                                        ^ \accent
                                         \change Staff = "piano 1 staff"
                                         c''''16
                                         - \stopped
