@@ -33,13 +33,13 @@ trinton.make_music(
         )
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
-    evans.PitchHandler([-2]),
+    evans.PitchHandler(["f'"]),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
             string="1.",
         ),
         full_string=True,
-        padding=5.5,
+        padding=6.5,
         style="solid-line-with-hook",
         selector=trinton.select_logical_ties_by_index(
             [0, 15], first=True, pitched=True
@@ -58,7 +58,7 @@ trinton.make_music(
     ),
     library.patterned_graces(),
     trinton.pitch_with_selector_command(
-        pitch_list=[4], selector=trinton.pleaves(grace=True)
+        pitch_list=["b'"], selector=trinton.pleaves(grace=True)
     ),
     library.grace_attachments(),
     voice=score["oboe voice"],
@@ -74,7 +74,7 @@ trinton.make_music(
         )
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
-    evans.PitchHandler([-2]),
+    evans.PitchHandler(["f'"]),
     trinton.linear_attachment_command(
         attachments=[abjad.StartHairpin("<"), abjad.Dynamic("ffff")],
         selector=trinton.select_logical_ties_by_index(
@@ -92,9 +92,12 @@ trinton.make_music(
     ),
     library.patterned_graces(),
     trinton.pitch_with_selector_command(
-        pitch_list=[4], selector=trinton.pleaves(grace=True)
+        pitch_list=["b'"], selector=trinton.pleaves(grace=True)
     ),
     library.grace_attachments(),
+    library.boxed_markup(
+        string="( zu Oboe )", selector=trinton.select_leaves_by_index([-1])
+    ),
     voice=score["oboe voice"],
     beam_meter=True,
 )

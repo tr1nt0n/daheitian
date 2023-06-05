@@ -26,10 +26,13 @@ trinton.make_music(
     trinton.hooked_spanner_command(
         string=library._fundamental_to_multiphonic["bqs' hspace"].string,
         full_string=True,
-        padding=8,
+        padding=9,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=1.5,
+    ),
+    library.boxed_markup(
+        string="( zu Cor Anglais) ", selector=trinton.select_leaves_by_index([-1])
     ),
     trinton.notehead_bracket_command(),
     voice=score["oboe voice"],

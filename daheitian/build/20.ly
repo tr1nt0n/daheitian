@@ -61,16 +61,24 @@
                                 \context Voice = "oboe voice"
                                 {
                                       %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
+                                    \afterGrace
                                     R1 * 3/4
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    {
+                                        \once \override Accidental.stencil = ##f
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Flag.stencil = ##f
+                                        \once \override NoteHead.duration-log = 2
+                                        \once \override NoteHead.no-ledgers = ##t
+                                        \once \override Stem.stencil = ##f
+                                        \once \override NoteHead.transparent = ##t
+                                        \once \override Flag.stroke-style = #"grace"
+                                        c'16
+                                        \boxed-markup "( zu Cor Anglais )" 1
+                                    }
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
@@ -489,7 +497,9 @@
                                 \context Voice = "percussion 2 voice"
                                 {
                                     \staff-line-count 1
+                                      %! +SCORE
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
                                     \clef "percussion"
                                     c'2.
@@ -551,7 +561,9 @@
                                 \context Voice = "percussion 3 voice"
                                 {
                                     \staff-line-count 5
+                                      %! +SCORE
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
                                     \clef "treble"
                                     gs''2.
@@ -618,7 +630,9 @@
                             {
                                 \context Voice = "violin 1 voice"
                                 {
+                                      %! +SCORE
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
                                     \pitchedTrill
                                     \tweak style #'harmonic-mixed
@@ -690,7 +704,9 @@
                                 \context Voice = "violin 2 voice"
                                 {
                                     \ottava 1
+                                      %! +SCORE
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
                                     \pitchedTrill
                                     <
@@ -791,7 +807,9 @@
                             {
                                 \context Voice = "viola voice"
                                 {
+                                      %! +SCORE
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
                                     \clef "treble"
                                     \pitchedTrill

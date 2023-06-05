@@ -493,7 +493,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 0))
                                     \times 2/3
                                     {
+                                          %! +SCORE
                                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
+                                          %! +SCORE
                                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
                                         r16
                                         aqf4
@@ -566,7 +568,9 @@
                             {
                                 \context Voice = "violin 2 voice"
                                 {
+                                      %! +SCORE
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
                                     r16
                                       %! +SCORE
@@ -674,7 +678,9 @@
                             {
                                 \context Voice = "viola voice"
                                 {
+                                      %! +SCORE
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
                                     r8
                                     \tweak text #tuplet-number::calc-fraction-text
@@ -764,7 +770,9 @@
                             {
                                 \context Voice = "cello voice"
                                 {
+                                      %! +SCORE
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
                                     \clef "bass"
                                     af1.
@@ -817,7 +825,9 @@
                             {
                                 \context Voice = "contrabass voice"
                                 {
+                                      %! +SCORE
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Kontrabässe }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kb. }
                                     \tweak style #'cross
                                     af'2.

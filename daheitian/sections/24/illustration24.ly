@@ -51,7 +51,9 @@
                                 \context Voice = "flute voice"
                                 {
                                     \ottava 1
+                                      %! +SCORE
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
                                     \set fontSize = #-3
                                     g''''64
@@ -600,16 +602,24 @@
                                 \context Voice = "oboe voice"
                                 {
                                       %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
+                                    \afterGrace
                                     R1 * 3/2
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    {
+                                        \once \override Accidental.stencil = ##f
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Flag.stencil = ##f
+                                        \once \override NoteHead.duration-log = 2
+                                        \once \override NoteHead.no-ledgers = ##t
+                                        \once \override Stem.stencil = ##f
+                                        \once \override NoteHead.transparent = ##t
+                                        \once \override Flag.stroke-style = #"grace"
+                                        c'16
+                                        \boxed-markup "( zu Oboe )" 1
+                                    }
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
@@ -908,7 +918,9 @@
                         {
                             \highest
                             \once \override NoteHead.no-ledgers = ##t
+                              %! +SCORE
                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Hörner in F }
+                              %! +SCORE
                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hn. }
                             \override Staff.Stem.stemlet-length = 0.75
                             c'''8.
@@ -1320,7 +1332,9 @@
                                 \context Voice = "percussion 2 voice"
                                 {
                                     \staff-line-count 5
+                                      %! +SCORE
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
                                     \clef "bass"
                                     <c' df'>2

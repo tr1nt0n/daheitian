@@ -48,13 +48,13 @@ trinton.make_music(
         selector=library._klavierubung_selectors[2]["bassclarinet voice"]
     ),
     rmakers.rewrite_dots,
-    evans.PitchHandler(["c''"]),
+    evans.PitchHandler(["a''"]),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
             string="Slaptongue",
         ),
         full_string=True,
-        padding=8,
+        padding=8.5,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=2,

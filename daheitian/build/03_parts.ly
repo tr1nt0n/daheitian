@@ -43,8 +43,10 @@
                             {
                                 \context Voice = "flute voice"
                                 {
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
+                                      %! +SCORE
+                                %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
                                     r4
                                     r16
                                     \ottava 1
@@ -473,10 +475,10 @@
                                     \times 7/5
                                     {
                                         r8.
-                                        c''16
+                                        a''16
                                         \mp
                                         ^ \markup \center-column { \circle 3 }
-                                        - \tweak padding #8
+                                        - \tweak padding #8.5
                                         - \abjad-solid-line-with-hook
                                         - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Slaptongue } \hspace #0.5 }
                                         - \tweak bound-details.right.padding -2
@@ -488,7 +490,7 @@
                                     \times 6/5
                                     {
                                         r16
-                                        c''16
+                                        a''16
                                         ^ \markup \center-column { \circle 1 }
                                         r8.
                                     }
@@ -497,10 +499,10 @@
                                     \times 7/5
                                     {
                                         r16
-                                        c''16
+                                        a''16
                                         ^ \markup \center-column { \circle 3 }
                                         r8
-                                        c''16
+                                        a''16
                                         ^ \markup \center-column { \circle 1 }
                                         \stopTextSpan
                                     }
@@ -1371,8 +1373,10 @@
                                         \context Voice = "cello voice temp"
                                         {
                                             \staff-line-count 4
-                                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
-                                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
+                                              %! +SCORE
+                                        %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
+                                              %! +SCORE
+                                        %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
                                             \clef "percussion"
                                             \voiceOne
                                             \afterGrace

@@ -68,16 +68,16 @@ trinton.make_music(
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(
         [
-            "c''",
+            "a''",
         ]
     ),
     library.timbre_trills(),
     trinton.pitch_with_selector_command(
-        pitch_list=[13],
+        pitch_list=["as''"],
         selector=trinton.patterned_leaf_index_selector([0, 5, 7], 8, pitched=True),
     ),
     library.imbrication(
-        pitch=13, name="bassclarinet imbrication", dynamic="ff", secondary_dynamic="f"
+        pitch=22, name="bassclarinet imbrication", dynamic="ff", secondary_dynamic="f"
     ),
     library.remove_accidentals(),
     trinton.notehead_bracket_command(),
@@ -91,7 +91,7 @@ trinton.make_music(
             string="Slaptongue",
         ),
         full_string=True,
-        padding=12,
+        padding=14.5,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=15,

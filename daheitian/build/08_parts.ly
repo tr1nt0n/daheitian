@@ -87,30 +87,32 @@
                             {
                                 \context Voice = "oboe voice"
                                 {
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
-                                    bf4
+                                      %! +SCORE
+                                %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
+                                    f'4
                                     - \tenuto
-                                    \mf
-                                    - \tweak padding #5.5
+                                    \mp
+                                    - \tweak padding #7
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1. } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -2
                                     \startTextSpan
                                     - \tweak stencil #constante-hairpin
                                     \<
-                                    bf2
+                                    f'2
                                     - \tenuto
-                                    bf4
+                                    f'4
                                     - \tenuto
                                     \scaleDurations #'(1 . 1) {
                                     \slashedGrace {
-                                        e'16
+                                        b'16
                                         (
                                         \glissando
                                     }
                                     }
-                                    bf4
+                                    f'4
                                     - \tenuto
                                     \!
                                     )
@@ -731,8 +733,10 @@
                                     \times 2/3
                                     {
                                         \staff-line-count 1
-                                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
-                                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
+                                          %! +SCORE
+                                    %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
+                                          %! +SCORE
+                                    %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
                                         \clef "percussion"
                                         c'2
                                         - \tenuto
@@ -791,8 +795,10 @@
                                 \context Voice = "violin 1 voice"
                                 {
                                     \staff-line-count 1
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
+                                      %! +SCORE
+                                %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
                                     \clef "percussion"
                                     c'1
                                     \pp
@@ -833,8 +839,10 @@
                                 \context Voice = "violin 2 voice"
                                 {
                                     \staff-line-count 1
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
+                                      %! +SCORE
+                                %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
                                     \clef "percussion"
                                     c'1
                                     \pp
@@ -922,8 +930,10 @@
                                 \context Voice = "viola voice"
                                 {
                                     \staff-line-count 1
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
+                                      %! +SCORE
+                                %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
                                     \clef "percussion"
                                     c'2
                                     \pp
@@ -1062,8 +1072,10 @@
                                 \context Voice = "cello voice"
                                 {
                                     \staff-line-count 1
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
+                                      %! +SCORE
+                                %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
                                     \clef "percussion"
                                     c'2
                                     \pp
@@ -1140,8 +1152,10 @@
                                 \context Voice = "contrabass voice"
                                 {
                                     \staff-line-count 1
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Kontrabässe }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kb. }
+                                      %! +SCORE
+                                %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Kontrabässe }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kb. }
                                     \clef "percussion"
                                     c'1
                                     \pp

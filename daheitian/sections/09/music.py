@@ -23,20 +23,20 @@ trinton.make_music(
         evans.talea(trinton.rotated_sequence(library.oboe_chant_talea, 4), 16)
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
-    evans.PitchHandler([-2]),
+    evans.PitchHandler(["f'"]),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
             string="1.",
         ),
         full_string=True,
-        padding=5.5,
+        padding=7,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=2,
     ),
     trinton.linear_attachment_command(
         attachments=[
-            abjad.Dynamic("mf"),
+            abjad.Dynamic("mp"),
             abjad.StartHairpin("<"),
             abjad.Dynamic("ff"),
         ],
@@ -48,11 +48,22 @@ trinton.make_music(
     ),
     library.patterned_graces(),
     trinton.pitch_with_selector_command(
-        pitch_list=[4], selector=trinton.pleaves(grace=True)
+        pitch_list=["b'"], selector=trinton.pleaves(grace=True)
     ),
     library.grace_attachments(),
     voice=score["oboe voice"],
     beam_meter=True,
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (5,)),
+    library.aftergrace(selector=trinton.select_leaves_by_index([-1])),
+    trinton.noteheads_only(),
+    trinton.transparent_noteheads(selector=trinton.pleaves()),
+    library.boxed_markup(
+        string="( zu Oboe )", selector=trinton.select_leaves_by_index([-1])
+    ),
+    voice=score["oboe voice"],
 )
 
 # bass clarinet music commands

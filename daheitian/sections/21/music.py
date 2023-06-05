@@ -26,7 +26,7 @@ trinton.make_music(
         )
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
-    evans.PitchHandler([-2]),
+    evans.PitchHandler(["f'"]),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Dynamic("fff"),
@@ -49,7 +49,7 @@ trinton.make_music(
     ),
     library.patterned_graces(),
     trinton.pitch_with_selector_command(
-        pitch_list=[4], selector=trinton.pleaves(grace=True)
+        pitch_list=["b'"], selector=trinton.pleaves(grace=True)
     ),
     library.grace_attachments(),
     voice=score["oboe voice"],
@@ -78,7 +78,7 @@ trinton.make_music(
             extra_counts=[-2],
         )
     ),
-    evans.PitchHandler([-2]),
+    evans.PitchHandler(["f'"]),
     library.timbre_trills(),
     trinton.glissando_command(
         selector=trinton.ranged_selector(ranges=[range(0, 24)], nested=True),
@@ -148,12 +148,8 @@ trinton.make_music(
             32,
         )
     ),
-    evans.PitchHandler([12]),
-    library.timbre_trills(),
-    trinton.glissando_command(
-        selector=trinton.ranged_selector(ranges=[range(0, 59)], nested=True),
-        no_ties=True,
-    ),
+    evans.PitchHandler(["c''", "df''"]),
+    abjad.slur,
     trinton.linear_attachment_command(
         attachments=[
             abjad.StartHairpin(">o"),

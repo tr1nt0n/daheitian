@@ -23,20 +23,20 @@ trinton.make_music(
     trinton.force_rest(selector=trinton.select_tuplets_by_index([-1])),
     trinton.treat_tuplets(),
     evans.RewriteMeterCommand(boundary_depth=-2),
-    evans.PitchHandler([-2]),
+    evans.PitchHandler(["f'"]),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
             string="1.",
         ),
         full_string=True,
-        padding=5.5,
+        padding=7,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=2,
     ),
     trinton.linear_attachment_command(
         attachments=[
-            abjad.Dynamic("mf"),
+            abjad.Dynamic("mp"),
             abjad.StartHairpin("--"),
             abjad.StopHairpin(),
         ],
@@ -50,7 +50,7 @@ trinton.make_music(
         grace_selector=trinton.patterned_tie_index_selector([3], 4)
     ),
     trinton.pitch_with_selector_command(
-        pitch_list=[4], selector=trinton.pleaves(grace=True)
+        pitch_list=["b'"], selector=trinton.pleaves(grace=True)
     ),
     library.grace_attachments(),
     voice=score["oboe voice"],

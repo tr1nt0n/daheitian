@@ -960,12 +960,20 @@ all_short_instrument_names = [
 
 def write_instrument_names(score):
     for voice_name, markup in zip(first_voice_names, all_instrument_names):
-        trinton.attach(voice=score[voice_name], leaves=[0], attachment=markup)
+        trinton.attach(
+            voice=score[voice_name],
+            leaves=[0],
+            attachment=markup,
+        )
 
 
 def write_short_instrument_names(score):
     for voice_name, markup in zip(first_voice_names, all_short_instrument_names):
-        trinton.attach(voice=score[voice_name], leaves=[0], attachment=markup)
+        trinton.attach(
+            voice=score[voice_name],
+            leaves=[0],
+            attachment=markup,
+        )
 
 
 # materials
@@ -1217,6 +1225,15 @@ def moths_talea(index=0):
 
 
 # notation tools
+
+invisible_oboe_grace_handler = evans.GraceHandler(
+    boolean_vector=[1],
+    gesture_lengths=[
+        1,
+    ],
+    remove_skips=True,
+    forget=False,
+)
 
 
 def make_skips(selector):

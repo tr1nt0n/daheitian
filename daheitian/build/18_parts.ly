@@ -61,8 +61,10 @@
                                     \once \override Stem.stencil = ##f
                                     \once \override StemTremolo.X-offset = 0.6
                                     \once \override StemTremolo.Y-offset = 6.75
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
+                                      %! +SCORE
+                                %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
                                     e'''4
                                     :32
                                     - \bendAfter #'0

@@ -15,6 +15,20 @@ score = library.daheitian_score(ts.section_20_ts)
 
 # commands
 
+# oboe music commands
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (1,)),
+    library.aftergrace(selector=trinton.select_leaves_by_index([-1])),
+    trinton.noteheads_only(),
+    trinton.transparent_noteheads(selector=trinton.pleaves()),
+    library.boxed_markup(
+        string="( zu Cor Anglais )",
+        selector=trinton.select_leaves_by_index([-1]),
+    ),
+    voice=score["oboe voice"],
+)
+
 # bass clarinet music commands
 
 trinton.make_music(

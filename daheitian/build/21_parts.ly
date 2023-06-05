@@ -119,70 +119,72 @@
                             {
                                 \context Voice = "oboe voice"
                                 {
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
-                                    bf8.
+                                      %! +SCORE
+                                %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
+                                    f'8.
                                     - \tenuto
                                     \fff
                                     - \tweak stencil #constante-hairpin
                                     \<
                                     r16
                                     r8
-                                    bf8
+                                    f'8
                                     - \tenuto
-                                    bf4
+                                    f'4
                                     - \tenuto
                                     \scaleDurations #'(1 . 1) {
                                     \slashedGrace {
-                                        e'16
+                                        b'16
                                         (
                                         \glissando
                                     }
                                     }
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    bf8
+                                    f'8
                                     - \tenuto
                                     )
                                     [
                                     \revert Staff.Stem.stemlet-length
-                                    bf8
+                                    f'8
                                     - \tenuto
                                     ]
                                     ~
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    bf8
+                                    f'8
                                     [
                                       %! +SCORE
                                 %%% \repeatTie
                                     \revert Staff.Stem.stemlet-length
-                                    bf8
+                                    f'8
                                     - \tenuto
                                     ]
-                                    bf4
+                                    f'4
                                     - \tenuto
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    bf8
+                                    f'8
                                     - \tenuto
                                     [
                                     \revert Staff.Stem.stemlet-length
-                                    bf8
+                                    f'8
                                     - \tenuto
                                     ]
                                     ~
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    bf16
+                                    f'16
                                     [
                                       %! +SCORE
                                 %%% \repeatTie
                                       %! +SCORE
                                 %%% \once \override Tie.transparent = ##f
-                                    bf16
+                                    f'16
                                     - \tenuto
                                     ~
-                                    bf16
+                                    f'16
                                     \scaleDurations #'(1 . 1) {
                                     \slashedGrace {
-                                        e'16
+                                        b'16
                                         (
                                         \glissando
                                     }
@@ -190,82 +192,82 @@
                                       %! +SCORE
                                 %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
-                                    bf16
+                                    f'16
                                     - \tenuto
                                     ]
                                     ~
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    bf8
+                                    f'8
                                     )
                                     [
                                     \revert Staff.Stem.stemlet-length
-                                    bf8
+                                    f'8
                                     - \tenuto
                                     ]
                                     ~
-                                    bf16
+                                    f'16
                                       %! +SCORE
                                 %%% \repeatTie
                                     r8.
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    bf8
+                                    f'8
                                     - \tenuto
                                     [
                                     \revert Staff.Stem.stemlet-length
-                                    bf8
+                                    f'8
                                     - \tenuto
                                     ]
                                     ~
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    bf8
+                                    f'8
                                     [
                                       %! +SCORE
                                 %%% \repeatTie
                                     \revert Staff.Stem.stemlet-length
-                                    bf8
+                                    f'8
                                     - \tenuto
                                     ]
-                                    bf4
+                                    f'4
                                     - \tenuto
                                     - \tweak circled-tip ##t
                                     \>
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    bf8
+                                    f'8
                                     - \tenuto
                                     [
                                     \scaleDurations #'(1 . 1) {
                                     \slashedGrace {
-                                        e'16
+                                        b'16
                                         (
                                         \glissando
                                     }
                                     }
                                     \revert Staff.Stem.stemlet-length
-                                    bf8
+                                    f'8
                                     - \tenuto
                                     ]
                                     ~
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    bf16
+                                    f'16
                                     )
                                     [
                                       %! +SCORE
                                 %%% \repeatTie
                                     \revert Staff.Stem.stemlet-length
-                                    bf8.
+                                    f'8.
                                     - \tenuto
                                     ]
                                     r8.
                                       %! +SCORE
                                 %%% \once \override Tie.transparent = ##f
-                                    bf16
+                                    f'16
                                     - \tenuto
                                     ~
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    bf16
+                                    f'16
                                     [
                                     \revert Staff.Stem.stemlet-length
-                                    bf8.
+                                    f'8.
                                     - \tenuto
                                     ]
                                     \tweak text #tuplet-number::calc-fraction-text
@@ -273,7 +275,7 @@
                                     \times 16/15
                                     {
                                         \override Staff.Stem.stemlet-length = 0.75
-                                        bf32
+                                        f'32
                                         ^ \markup \center-column { \circle 3 }
                                         [
                                           %! abjad.glissando(7)
@@ -287,70 +289,70 @@
                                         \override NoteColumn.glissando-skip = ##t
                                           %! abjad.glissando(1)
                                         \override NoteHead.no-ledgers = ##t
-                                        bf32
+                                        f'32
                                         ^ \markup \center-column { \circle 1 }
                                         \once \override Dots.staff-position = #2
-                                        bf32
+                                        f'32
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
-                                        bf32
+                                        f'32
                                         ^ \markup \center-column { \circle 1 }
                                         \once \override Dots.staff-position = #2
-                                        bf16
+                                        f'16
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
-                                        bf32
+                                        f'32
                                         ^ \markup \center-column { \circle 2 }
                                         \once \override Dots.staff-position = #2
-                                        bf32
+                                        f'32
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
-                                        bf32
+                                        f'32
                                         ^ \markup \center-column { \circle 2 }
                                         \once \override Dots.staff-position = #2
-                                        bf16
+                                        f'16
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
-                                        bf32
+                                        f'32
                                         ^ \markup \center-column { \circle 1 }
                                         \once \override Dots.staff-position = #2
-                                        bf32
+                                        f'32
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
-                                        bf16
+                                        f'16
                                         ^ \markup \center-column { \circle 2 }
                                         \once \override Dots.staff-position = #2
-                                        bf32
+                                        f'32
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
-                                        bf32
+                                        f'32
                                         ^ \markup \center-column { \circle 1 }
                                         \once \override Dots.staff-position = #2
-                                        bf32
+                                        f'32
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
-                                        bf32
+                                        f'32
                                         ^ \markup \center-column { \circle 1 }
                                         \once \override Dots.staff-position = #2
-                                        bf16
+                                        f'16
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
-                                        bf32
+                                        f'32
                                         ^ \markup \center-column { \circle 1 }
                                         \once \override Dots.staff-position = #2
-                                        bf32
+                                        f'32
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
-                                        bf32
+                                        f'32
                                         ^ \markup \center-column { \circle 1 }
                                         \once \override Dots.staff-position = #2
-                                        bf16
+                                        f'16
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
-                                        bf32
+                                        f'32
                                         ^ \markup \center-column { \circle 2 }
                                         \once \override Dots.staff-position = #2
-                                        bf32
+                                        f'32
                                         ^ \markup \center-column { \circle 3 }
                                           %! abjad.glissando(6)
                                         \revert Accidental.stencil
@@ -361,7 +363,7 @@
                                           %! abjad.glissando(6)
                                         \undo \hide NoteHead
                                         \revert Staff.Stem.stemlet-length
-                                        bf16
+                                        f'16
                                         \!
                                         ^ \markup \center-column { \circle 2 }
                                         ]
@@ -378,8 +380,10 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 0))
                                     \times 2/3
                                     {
-                                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bassklarinetten }
-                                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { bkl. }
+                                          %! +SCORE
+                                    %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bassklarinetten }
+                                          %! +SCORE
+                                    %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { bkl. }
                                         \override Staff.Stem.stemlet-length = 0.75
                                         c''8
                                         - \tenuto
@@ -564,234 +568,106 @@
                                     }
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c''32
-                                    ^ \markup \center-column { \circle 3 }
                                     [
+                                    (
                                     - \tweak circled-tip ##t
                                     \>
-                                      %! abjad.glissando(7)
-                                    \glissando
-                                    \once \override Dots.staff-position = #2
-                                      %! abjad.glissando(1)
-                                    \hide NoteHead
-                                      %! abjad.glissando(1)
-                                    \override Accidental.stencil = ##f
-                                      %! abjad.glissando(1)
-                                    \override NoteColumn.glissando-skip = ##t
-                                      %! abjad.glissando(1)
-                                    \override NoteHead.no-ledgers = ##t
+                                    df''32
                                     c''32
-                                    ^ \markup \center-column { \circle 1 }
-                                    \once \override Dots.staff-position = #2
-                                    c''32
-                                    ^ \markup \center-column { \circle 3 }
-                                    \once \override Dots.staff-position = #2
-                                    c''32
-                                    ^ \markup \center-column { \circle 1 }
-                                    \once \override Dots.staff-position = #2
+                                    df''32
                                     c''16
-                                    ^ \markup \center-column { \circle 3 }
-                                    \once \override Dots.staff-position = #2
-                                    c''32
-                                    ^ \markup \center-column { \circle 2 }
-                                    \once \override Dots.staff-position = #2
+                                    df''32
                                     \revert Staff.Stem.stemlet-length
                                     c''32
-                                    ^ \markup \center-column { \circle 3 }
                                     ]
-                                    \once \override Dots.staff-position = #2
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    c''32
-                                    ^ \markup \center-column { \circle 2 }
+                                    df''32
                                     [
-                                    \once \override Dots.staff-position = #2
                                     c''16
-                                    ^ \markup \center-column { \circle 3 }
-                                    \once \override Dots.staff-position = #2
+                                    df''32
                                     c''32
-                                    ^ \markup \center-column { \circle 1 }
-                                    \once \override Dots.staff-position = #2
-                                    c''32
-                                    ^ \markup \center-column { \circle 3 }
-                                    \once \override Dots.staff-position = #2
-                                    c''16
-                                    ^ \markup \center-column { \circle 2 }
-                                    \once \override Dots.staff-position = #2
+                                    df''16
                                     \revert Staff.Stem.stemlet-length
                                     c''32
-                                    ^ \markup \center-column { \circle 3 }
                                     ]
-                                    \once \override Dots.staff-position = #2
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    c''32
-                                    ^ \markup \center-column { \circle 1 }
+                                    df''32
                                     [
-                                    \once \override Dots.staff-position = #2
                                     c''32
-                                    ^ \markup \center-column { \circle 3 }
-                                    \once \override Dots.staff-position = #2
-                                    c''32
-                                    ^ \markup \center-column { \circle 1 }
-                                    \once \override Dots.staff-position = #2
+                                    df''32
                                     c''16
-                                    ^ \markup \center-column { \circle 3 }
-                                    \once \override Dots.staff-position = #2
+                                    df''32
                                     c''32
-                                    ^ \markup \center-column { \circle 1 }
-                                    \once \override Dots.staff-position = #2
-                                    c''32
-                                    ^ \markup \center-column { \circle 3 }
-                                    \once \override Dots.staff-position = #2
                                     \revert Staff.Stem.stemlet-length
-                                    c''32
-                                    ^ \markup \center-column { \circle 1 }
+                                    df''32
                                     ]
-                                    \once \override Dots.staff-position = #2
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c''16
-                                    ^ \markup \center-column { \circle 3 }
                                     [
-                                    \once \override Dots.staff-position = #2
+                                    df''32
                                     c''32
-                                    ^ \markup \center-column { \circle 2 }
-                                    \once \override Dots.staff-position = #2
+                                    df''16
                                     c''32
-                                    ^ \markup \center-column { \circle 3 }
-                                    \once \override Dots.staff-position = #2
-                                    c''16
-                                    ^ \markup \center-column { \circle 2 }
-                                    \once \override Dots.staff-position = #2
-                                    c''32
-                                    ^ \markup \center-column { \circle 3 }
-                                    \once \override Dots.staff-position = #2
                                     \revert Staff.Stem.stemlet-length
-                                    c''32
-                                    ^ \markup \center-column { \circle 2 }
+                                    df''32
                                     ]
-                                    \once \override Dots.staff-position = #2
-                                    \override Staff.Stem.stemlet-length = 0.75
-                                    c''32
-                                    ^ \markup \center-column { \circle 3 }
-                                    [
-                                    \once \override Dots.staff-position = #2
-                                    c''32
-                                    ^ \markup \center-column { \circle 2 }
-                                    \once \override Dots.staff-position = #2
-                                    c''16
-                                    ^ \markup \center-column { \circle 3 }
-                                    \once \override Dots.staff-position = #2
-                                    c''32
-                                    ^ \markup \center-column { \circle 1 }
-                                    \once \override Dots.staff-position = #2
-                                    c''32
-                                    ^ \markup \center-column { \circle 3 }
-                                    \once \override Dots.staff-position = #2
-                                    c''32
-                                    ^ \markup \center-column { \circle 2 }
-                                    \once \override Dots.staff-position = #2
-                                    \revert Staff.Stem.stemlet-length
-                                    c''32
-                                    ^ \markup \center-column { \circle 3 }
-                                    ]
-                                    \once \override Dots.staff-position = #2
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c''32
                                     [
-                                    \once \override Dots.staff-position = #2
-                                    c''32
-                                    ^ \markup \center-column { \circle 1 }
-                                    \once \override Dots.staff-position = #2
-                                    c''32
-                                    ^ \markup \center-column { \circle 3 }
-                                    \once \override Dots.staff-position = #2
+                                    df''32
                                     c''16
-                                    ^ \markup \center-column { \circle 1 }
-                                    \once \override Dots.staff-position = #2
+                                    df''32
                                     c''32
-                                    ^ \markup \center-column { \circle 3 }
-                                    \once \override Dots.staff-position = #2
-                                    c''32
-                                    ^ \markup \center-column { \circle 1 }
-                                    \once \override Dots.staff-position = #2
+                                    df''32
+                                      %! +SCORE
+                                %%% \once \override Tie.transparent = ##f
                                     \revert Staff.Stem.stemlet-length
                                     c''32
-                                    ^ \markup \center-column { \circle 3 }
                                     ]
-                                    \once \override Dots.staff-position = #2
+                                    ~
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c''32
-                                    ^ \markup \center-column { \circle 1 }
                                     [
-                                    \once \override Dots.staff-position = #2
-                                    c''16
-                                    ^ \markup \center-column { \circle 3 }
-                                    \once \override Dots.staff-position = #2
+                                    df''32
                                     c''32
-                                    ^ \markup \center-column { \circle 2 }
-                                    \once \override Dots.staff-position = #2
+                                    df''16
                                     c''32
-                                    ^ \markup \center-column { \circle 3 }
-                                    \once \override Dots.staff-position = #2
-                                    c''32
-                                    ^ \markup \center-column { \circle 2 }
-                                    \once \override Dots.staff-position = #2
+                                    df''32
                                     \revert Staff.Stem.stemlet-length
-                                    c''16
-                                    ^ \markup \center-column { \circle 3 }
+                                    c''32
                                     ]
-                                    \once \override Dots.staff-position = #2
                                     \override Staff.Stem.stemlet-length = 0.75
-                                    c''32
-                                    ^ \markup \center-column { \circle 1 }
+                                    df''32
                                     [
-                                    \once \override Dots.staff-position = #2
-                                    c''32
-                                    ^ \markup \center-column { \circle 3 }
-                                    \once \override Dots.staff-position = #2
                                     c''16
-                                    ^ \markup \center-column { \circle 2 }
-                                    \once \override Dots.staff-position = #2
+                                    df''32
                                     c''32
-                                    ^ \markup \center-column { \circle 3 }
-                                    \once \override Dots.staff-position = #2
-                                    c''32
-                                    ^ \markup \center-column { \circle 1 }
-                                    \once \override Dots.staff-position = #2
-                                    c''32
-                                    ^ \markup \center-column { \circle 3 }
-                                    \once \override Dots.staff-position = #2
+                                    df''32
                                     \revert Staff.Stem.stemlet-length
-                                    c''32
-                                    ^ \markup \center-column { \circle 2 }
+                                    c''16
                                     ]
-                                    \once \override Dots.staff-position = #2
+                                    \override Staff.Stem.stemlet-length = 0.75
+                                    df''32
+                                    [
+                                    c''32
+                                    df''16
+                                    c''32
+                                    df''32
+                                    c''32
+                                    \revert Staff.Stem.stemlet-length
+                                    df''32
+                                    ]
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c''16
-                                    ^ \markup \center-column { \circle 3 }
                                     [
-                                    \once \override Dots.staff-position = #2
+                                    df''32
                                     c''32
-                                    ^ \markup \center-column { \circle 1 }
-                                    \once \override Dots.staff-position = #2
-                                    c''32
-                                    ^ \markup \center-column { \circle 3 }
-                                    \once \override Dots.staff-position = #2
-                                    c''32
-                                    ^ \markup \center-column { \circle 2 }
-                                    \once \override Dots.staff-position = #2
+                                    df''32
                                     c''16
-                                    ^ \markup \center-column { \circle 3 }
-                                      %! abjad.glissando(6)
-                                    \revert Accidental.stencil
-                                      %! abjad.glissando(6)
-                                    \revert NoteColumn.glissando-skip
-                                      %! abjad.glissando(6)
-                                    \revert NoteHead.no-ledgers
-                                      %! abjad.glissando(6)
-                                    \undo \hide NoteHead
                                     \revert Staff.Stem.stemlet-length
-                                    c''32
+                                    df''32
                                     \!
-                                    ^ \markup \center-column { \circle 2 }
+                                    )
                                     ]
                                 }
                             }
@@ -802,8 +678,10 @@
                             {
                                 \context Voice = "bassoon voice"
                                 {
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Fagotte }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { fg.}
+                                      %! +SCORE
+                                %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Fagotte }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { fg.}
                                     r8.
                                       %! +SCORE
                                 %%% \once \override Tie.transparent = ##f
@@ -1130,8 +1008,10 @@
                     {
                         \context Voice = "frenchhorn voice"
                         {
-                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Hörner in F }
-                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hn. }
+                              %! +SCORE
+                        %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Hörner in F }
+                              %! +SCORE
+                        %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hn. }
                             \clef "bass"
                             ef2.
                             \ff
@@ -1412,8 +1292,10 @@
                                 \context Voice = "tenortrombone voice"
                                 {
                                     \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tenorposaunen }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pos. }
+                                      %! +SCORE
+                                %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tenorposaunen }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pos. }
                                     \clef "bass"
                                     \once \override NoteHead.no-ledgers = ##t
                                     \once \override NoteHead.stem-attachment = #'(0 . 0.75)
@@ -1589,8 +1471,10 @@
                             {
                                 \context Voice = "tuba voice"
                                 {
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tuben }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { tb. }
+                                      %! +SCORE
+                                %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tuben }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { tb. }
                                     \clef "bass"
                                     gs,,2.
                                     \ff
@@ -2016,8 +1900,10 @@
                         \context Voice = "percussion 1 voice"
                         {
                             \staff-line-count 5
-                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Pauken }
-                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pk. }
+                              %! +SCORE
+                        %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Pauken }
+                              %! +SCORE
+                        %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pk. }
                             \clef "bass"
                             gs,4
                             \f
@@ -2096,8 +1982,10 @@
                                     \times 6/7
                                     {
                                         \staff-line-count 1
-                                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
-                                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
+                                          %! +SCORE
+                                    %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
+                                          %! +SCORE
+                                    %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
                                         \clef "percussion"
                                         c'4.
                                         \ff
@@ -2228,8 +2116,10 @@
                                         \context Voice = "percussion 3 voice temp"
                                         {
                                             \staff-line-count 3
-                                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
-                                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
+                                              %! +SCORE
+                                        %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
+                                              %! +SCORE
+                                        %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
                                             \clef "percussion"
                                             \voiceTwo
                                             a4
@@ -2431,8 +2321,10 @@
                                         }
                                     \times 1/1
                                     {
-                                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
-                                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
+                                          %! +SCORE
+                                    %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
+                                          %! +SCORE
+                                    %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
                                         \once \override Beam.grow-direction = #left
                                         b'32 * 49/32
                                         \fff
@@ -2632,8 +2524,10 @@
                                         }
                                     \times 1/1
                                     {
-                                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
-                                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
+                                          %! +SCORE
+                                    %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
+                                          %! +SCORE
+                                    %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
                                         \once \override Beam.grow-direction = #left
                                         bqf'32 * 49/32
                                         \fff
@@ -2839,8 +2733,10 @@
                                         }
                                     \times 1/1
                                     {
-                                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
-                                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
+                                          %! +SCORE
+                                    %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
+                                          %! +SCORE
+                                    %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
                                         \once \override Beam.grow-direction = #left
                                         \clef "altovarC"
                                         bqs32 * 49/32
@@ -3047,8 +2943,10 @@
                                         }
                                     \times 1/1
                                     {
-                                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
-                                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
+                                          %! +SCORE
+                                    %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
+                                          %! +SCORE
+                                    %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
                                         \once \override Beam.grow-direction = #left
                                         \clef "tenorvarC"
                                         bf32 * 49/32
@@ -3210,8 +3108,10 @@
                             {
                                 \context Voice = "contrabass voice"
                                 {
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Kontrabässe }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kb. }
+                                      %! +SCORE
+                                %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Kontrabässe }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kb. }
                                     \clef "bass"
                                     gs,2.
                                     \ff

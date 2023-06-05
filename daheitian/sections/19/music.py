@@ -39,9 +39,9 @@ trinton.make_music(
     ),
     rmakers.rewrite_dots,
     evans.RewriteMeterCommand(boundary_depth=-2),
-    evans.PitchHandler([12]),
+    evans.PitchHandler(["a''"]),
     trinton.pitch_with_selector_command(
-        pitch_list=[13],
+        pitch_list=["as''"],
         selector=trinton.patterned_tie_index_selector([0, 4], 7, pitched=True),
     ),
     trinton.linear_attachment_command(
@@ -97,9 +97,9 @@ trinton.make_music(
     ),
     rmakers.rewrite_dots,
     evans.RewriteMeterCommand(boundary_depth=-2),
-    evans.PitchHandler([12]),
+    evans.PitchHandler(["a''"]),
     trinton.pitch_with_selector_command(
-        pitch_list=[13],
+        pitch_list=["as''"],
         selector=trinton.patterned_tie_index_selector([0, 4], 7, pitched=True),
     ),
     trinton.attachment_command(
@@ -128,7 +128,7 @@ trinton.make_music(
             string="Slaptongue",
         ),
         full_string=True,
-        padding=12,
+        padding=15,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=2,
@@ -145,7 +145,7 @@ trinton.make_music(
         ),
     ),
     library.imbrication(
-        pitch=13,
+        pitch=22,
         name="bassclarinet imbrication",
         dynamic="ff",
     ),
@@ -155,7 +155,7 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (25, 27)),
     library.imbrication(
-        pitch=13,
+        pitch=22,
         name="bassclarinet imbrication",
         dynamic="ffff",
     ),

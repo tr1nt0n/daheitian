@@ -75,6 +75,17 @@ trinton.make_music(
 # oboe music commands
 
 trinton.make_music(
+    lambda _: trinton.select_target(_, (1,)),
+    library.aftergrace(selector=trinton.select_leaves_by_index([-1])),
+    trinton.noteheads_only(),
+    trinton.transparent_noteheads(selector=trinton.pleaves()),
+    library.boxed_markup(
+        string="( zu Oboe )", selector=trinton.select_leaves_by_index([-1])
+    ),
+    voice=score["oboe voice"],
+)
+
+trinton.make_music(
     lambda _: trinton.select_target(_, (3,)),
     evans.RhythmHandler(
         evans.tuplet([(1,), (1, 1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1, 1), (1,)]),

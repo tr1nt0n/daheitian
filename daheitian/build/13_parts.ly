@@ -59,8 +59,10 @@
                             {
                                 \context Voice = "flute voice"
                                 {
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
+                                      %! +SCORE
+                                %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
                                     cs''8.
                                     :64
                                     \ff
@@ -463,12 +465,14 @@
                                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 7) (ly:make-duration 4 0))
                                             \times 7/5
                                             {
-                                                \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bassklarinetten }
-                                                \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { bkl. }
+                                                  %! +SCORE
+                                            %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bassklarinetten }
+                                                  %! +SCORE
+                                            %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { bkl. }
                                                 \voiceTwo
                                                 r8.
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                cs''16
+                                                as''16
                                                 \ff
                                                 r16
                                             }
@@ -478,7 +482,7 @@
                                             {
                                                 r16
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                c''16
+                                                a''16
                                                 \f
                                                 ^ \markup \center-column { \circle 1 }
                                                 r8.
@@ -488,11 +492,11 @@
                                             {
                                                 r8
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                c''8
+                                                a''8
                                                 ^ \markup \center-column { \circle 3 }
                                                 r4
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                c''8
+                                                a''8
                                                 ^ \markup \center-column { \circle 1 }
                                             }
                                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 3 0))
@@ -500,7 +504,7 @@
                                             {
                                                 r2
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                c''8
+                                                a''8
                                                 ^ \markup \center-column { \circle 3 }
                                             }
                                             \tweak text #tuplet-number::calc-fraction-text
@@ -509,7 +513,7 @@
                                             {
                                                 r8
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                cs''16
+                                                as''16
                                                 \ff
                                                 r8
                                             }
@@ -519,7 +523,7 @@
                                             {
                                                 r8
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                c''16
+                                                a''16
                                                 \f
                                                 ^ \markup \center-column { \circle 3 }
                                                 r8
@@ -529,22 +533,22 @@
                                             \times 7/5
                                             {
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                cs''16
+                                                as''16
                                                 \ff
                                                 r4
                                             }
                                             \once \override Staff.Accidental.stencil = ##f
-                                            cs''16
+                                            as''16
                                             \ff
                                             r8
                                             \once \override Staff.Accidental.stencil = ##f
-                                            c''16
+                                            a''16
                                             \f
                                             ^ \markup \center-column { \circle 1 }
                                             r16
                                             r8.
                                             \once \override Staff.Accidental.stencil = ##f
-                                            c''16
+                                            a''16
                                             ^ \markup \center-column { \circle 3 }
                                             r16
                                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 4 0))
@@ -552,7 +556,7 @@
                                             {
                                                 r16
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                c''16
+                                                a''16
                                                 ^ \markup \center-column { \circle 2 }
                                                 - \tweak circled-tip ##t
                                                 \>
@@ -563,18 +567,18 @@
                                             {
                                                 r32
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                c''32
+                                                a''32
                                                 ^ \markup \center-column { \circle 3 }
                                                 r16
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                cs''32
+                                                as''32
                                             }
                                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 5 0))
                                             \times 4/5
                                             {
                                                 r8
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                c''32
+                                                a''32
                                                 ^ \markup \center-column { \circle 3 }
                                             }
                                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 5 0))
@@ -582,18 +586,18 @@
                                             {
                                                 r16
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                cs''32
+                                                as''32
                                                 r16
                                             }
                                             r8
                                             \once \override Staff.Accidental.stencil = ##f
-                                            cs''16
+                                            as''16
                                             r8
                                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 3 0))
                                             \times 4/5
                                             {
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                c''8
+                                                a''8
                                                 \!
                                                 ^ \markup \center-column { \circle 1 }
                                                 r2
@@ -621,10 +625,10 @@
                                                 \set stemLeftBeamCount = 2
                                                   %! rmakers.beam_groups()
                                                 \set stemRightBeamCount = 2
-                                                cs''16
+                                                as''16
                                                 - \accent
                                                 - \markup \center-column { \circle 3 }
-                                                - \tweak padding #12
+                                                - \tweak padding #14.5
                                                 - \abjad-solid-line-with-hook
                                                 - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Slaptongue } \hspace #0.5 }
                                                 - \tweak bound-details.right.padding -15
@@ -670,7 +674,7 @@
                                                 \set stemLeftBeamCount = 2
                                                   %! rmakers.beam_groups()
                                                 \set stemRightBeamCount = 2
-                                                cs''16
+                                                as''16
                                                 - \accent
                                                 - \markup \center-column { \circle 2 }
                                                 s16
@@ -695,7 +699,7 @@
                                                 \set stemLeftBeamCount = 1
                                                   %! rmakers.beam_groups()
                                                 \set stemRightBeamCount = 2
-                                                cs''16
+                                                as''16
                                                 - \accent
                                                 - \markup \center-column { \circle 2 }
                                                 s16
@@ -704,7 +708,7 @@
                                                 s16
                                             }
                                             \once \override Staff.Accidental.stencil = ##f
-                                            cs''16
+                                            as''16
                                             - \accent
                                             - \markup \center-column { \circle 3 }
                                             s8
@@ -734,7 +738,7 @@
                                                 \set stemLeftBeamCount = 3
                                                   %! rmakers.beam_groups()
                                                 \set stemRightBeamCount = 1
-                                                cs''32
+                                                as''32
                                                 - \accent
                                                 - \markup \center-column { \circle 1 }
                                             }
@@ -757,7 +761,7 @@
                                                 \set stemLeftBeamCount = 3
                                                   %! rmakers.beam_groups()
                                                 \set stemRightBeamCount = 3
-                                                cs''32
+                                                as''32
                                                 - \accent
                                                 - \markup \center-column { \circle 1 }
                                                 s32
@@ -765,7 +769,7 @@
                                             }
                                             s8
                                             \once \override Staff.Accidental.stencil = ##f
-                                            cs''16
+                                            as''16
                                             - \accent
                                             - \markup \center-column { \circle 3 }
                                             \stopTextSpan
@@ -801,8 +805,10 @@
                                             \times 7/6
                                             {
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Fagotte }
-                                                \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { fg.}
+                                                  %! +SCORE
+                                            %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Fagotte }
+                                                  %! +SCORE
+                                            %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { fg.}
                                                 \triangleStemOn
                                                 \voiceTwo
                                                 \clef "bass"
@@ -1365,8 +1371,10 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 0))
                                     \times 2/3
                                     {
-                                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Hörner in F }
-                                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hn. }
+                                          %! +SCORE
+                                    %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Hörner in F }
+                                          %! +SCORE
+                                    %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hn. }
                                         \voiceOne
                                         eqf8
                                         [
@@ -1899,8 +1907,10 @@
                                     {
                                         \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bb)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bc)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0be)))))))
                                         \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
-                                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tenorposaunen }
-                                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pos. }
+                                          %! +SCORE
+                                    %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tenorposaunen }
+                                          %! +SCORE
+                                    %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pos. }
                                         \clef "treble"
                                         \once \override NoteHead.no-ledgers = ##t
                                         \once \override NoteHead.stem-attachment = #'(0 . 0.75)
@@ -2544,8 +2554,10 @@
                                 \context Voice = "harp 1 voice"
                                 {
                                     \ottava 1
-                                    \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
-                                    \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
+                                      %! +SCORE
+                                %%% \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
+                                      %! +SCORE
+                                %%% \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
                                     <a''' bf''' ds'''' e'''' fs''''>4..
                                     :32
                                     - \espressivo
@@ -2939,8 +2951,10 @@
                                 {
                                     \staff-line-count 1
                                     \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
+                                      %! +SCORE
+                                %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
                                     \clef "percussion"
                                     c'4..
                                     \ff
@@ -2986,8 +3000,10 @@
                                     <<
                                         \context Voice = "percussion 3 voice temp"
                                         {
-                                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
-                                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
+                                              %! +SCORE
+                                        %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
+                                              %! +SCORE
+                                        %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
                                             \voiceTwo
                                             r8.
                                             r32

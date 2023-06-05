@@ -59,7 +59,9 @@
                             {
                                 \context Voice = "flute voice"
                                 {
+                                      %! +SCORE
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
                                     \override Staff.Stem.stemlet-length = 0.75
                                     f''8..
@@ -512,7 +514,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 2 0))
                                     \times 4/5
                                     {
+                                          %! +SCORE
                                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bassklarinetten }
+                                          %! +SCORE
                                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { bkl. }
                                         c''4
                                         - \accent
@@ -689,7 +693,9 @@
                                     \times 2/3
                                     {
                                         \once \override Staff.Accidental.stencil = ##f
+                                          %! +SCORE
                                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Fagotte }
+                                          %! +SCORE
                                         \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { fg.}
                                         \clef "bass"
                                         \tweak style #'cross
@@ -1317,7 +1323,9 @@
                                     \times 8/7
                                     {
                                         \ottava 2
+                                          %! +SCORE
                                         \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Klavier }
+                                          %! +SCORE
                                         \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { klav. }
                                         \override Staff.Stem.stemlet-length = 0.75
                                         cs''''16
@@ -1641,7 +1649,9 @@
                                 \context Voice = "harp 1 voice"
                                 {
                                     \ottava 1
+                                      %! +SCORE
                                     \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
+                                      %! +SCORE
                                     \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
                                     <a''' bf''' ds'''' e'''' fs''''>1
                                     :32
@@ -1752,7 +1762,9 @@
                     {
                         \context Voice = "percussion 1 voice"
                         {
+                              %! +SCORE
                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Pauken }
+                              %! +SCORE
                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pk. }
                             \clef "bass"
                             c1
@@ -1839,7 +1851,9 @@
                                 \context Voice = "percussion 2 voice"
                                 {
                                     \staff-line-count 1
+                                      %! +SCORE
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
                                     \clef "percussion"
                                     c'4
@@ -1898,7 +1912,9 @@
                                 \context Voice = "percussion 3 voice"
                                 {
                                     \staff-line-count 1
+                                      %! +SCORE
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
                                     \clef "percussion"
                                     c'4
@@ -2055,7 +2071,9 @@
                                     <<
                                         \context Voice = "violin 1 voice temp"
                                         {
+                                              %! +SCORE
                                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
+                                              %! +SCORE
                                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
                                             \voiceTwo
                                             r4
@@ -2212,7 +2230,9 @@
                                     <<
                                         \context Voice = "violin 2 voice temp"
                                         {
+                                              %! +SCORE
                                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
+                                              %! +SCORE
                                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
                                             \textSpannerDown
                                             \voiceTwo
@@ -2408,7 +2428,9 @@
                                     <<
                                         \context Voice = "viola voice temp"
                                         {
+                                              %! +SCORE
                                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
+                                              %! +SCORE
                                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
                                             \clef "altovarC"
                                             \voiceTwo
@@ -2596,7 +2618,9 @@
                                     <<
                                         \context Voice = "cello voice temp"
                                         {
+                                              %! +SCORE
                                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
+                                              %! +SCORE
                                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
                                             \clef "bass"
                                             \voiceTwo
@@ -2713,7 +2737,9 @@
                                     <<
                                         \context Voice = "contrabass voice temp"
                                         {
+                                              %! +SCORE
                                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Kontrabässe }
+                                              %! +SCORE
                                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kb. }
                                             \clef "bass"
                                             \voiceTwo

@@ -15,6 +15,8 @@ score = library.daheitian_score(ts.section_15_ts)
 
 # commands
 
+# oboe music commands
+
 trinton.make_music(
     lambda _: trinton.select_target(_, (1, 2)),
     evans.RhythmHandler(
@@ -135,6 +137,9 @@ trinton.make_music(
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=1.5,
+    ),
+    library.boxed_markup(
+        string="( zu Cor Anglais )", selector=trinton.select_leaves_by_index([-1])
     ),
     voice=score["oboe voice"],
     preprocessor=trinton.fuse_sixteenths_preprocessor((11, 8, 15, 2)),
