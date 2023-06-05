@@ -3337,7 +3337,7 @@
                                         \ottava 0
                                     }
                                     \change Staff = "piano 2 staff"
-                                    bf,,,,16
+                                    bf,,,16
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "ffffffffff"))
                                     ^ \accent
                                       %! abjad.glissando(7)
@@ -3364,7 +3364,7 @@
                                     \once \override NoteHead.duration-log = 2
                                     \once \override Stem.stencil = ##f
                                     \afterGrace
-                                    b,,,,4
+                                    b,,,4
                                     {
                                         \once \override Accidental.stencil = ##f
                                         \once \override Beam.stencil = ##f
@@ -3383,7 +3383,7 @@
                                         \revert NoteHead.no-ledgers
                                           %! abjad.glissando(6)
                                         \undo \hide NoteHead
-                                        b,,,,16
+                                        b,,,16
                                         \change Staff = "piano 1 staff"
                                     }
                                 }
@@ -3616,7 +3616,7 @@
                                     \sustainOn
                                     s1 * 9/16
                                     s1 * 9/16
-                                    \clef "F_15"
+                                    \clef "F_8"
                                     s1 * 5/4
                                     \sustainOff
                                     s1 * 1/4

@@ -404,7 +404,7 @@ trinton.make_music(
         selector=abjad.select.leaves,
     ),
     trinton.linear_attachment_command(
-        attachments=[abjad.Clef("bass"), abjad.Clef("F_15")],
+        attachments=[abjad.Clef("bass"), abjad.Clef("F_8")],
         selector=trinton.select_leaves_by_index([0, 3]),
     ),
     voice=score["piano 2 voice"],
@@ -541,7 +541,7 @@ trinton.make_music(
     evans.RhythmHandler(evans.talea([1, -19, 4], 16)),
     library.make_skips(selector=trinton.select_leaves_by_index([1, 2])),
     library.aftergrace(selector=trinton.select_leaves_by_index([-1])),
-    evans.PitchHandler(["bf,,,,", "b,,,,", "b,,,,"]),
+    evans.PitchHandler(["bf,,,", "b,,,", "b,,,"]),
     trinton.glissando_command(
         selector=trinton.ranged_selector(ranges=[range(0, 5)], nested=True),
         zero_padding=True,
