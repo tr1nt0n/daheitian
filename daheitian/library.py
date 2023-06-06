@@ -1217,6 +1217,41 @@ def moths_talea(index=0):
 
 # notation tools
 
+
+def make_timestamp_markups(global_context):
+    measures = abjad.select.group_by_measure(global_context)
+    global_context_length = len(measures)
+    measure_range = range(1, global_context_length + 1)
+
+    for measure, number in zip(measures, measure_range):
+        leaf = abjad.select.leaf(measure, 0)
+        mm_rest = abjad.MultimeasureRest(1, multiplier=(1, 4))
+
+        indicators = abjad.get.indicators(leaf)
+
+        abjad.attach(
+            abjad.Markup(
+                f"""\markup \override #'(font-name . "Bodoni72 Book") \\fontsize #3 \center-column {{ \"{number}\\\"\" }}""",
+            ),
+            mm_rest,
+        )
+
+        abjad.attach(
+            abjad.LilyPondLiteral(
+                r"\once \override MultiMeasureRest.transparent = ##t", "opening"
+            ),
+            mm_rest,
+        )
+
+        for indicator in indicators:
+            abjad.attach(indicator, mm_rest)
+
+        abjad.mutate.replace(
+            leaf,
+            mm_rest,
+        )
+
+
 invisible_oboe_grace_handler = evans.GraceHandler(
     boolean_vector=[1],
     gesture_lengths=[
@@ -1308,6 +1343,7 @@ def ring_mod_attachments(
     direction=abjad.UP,
     clean_swells=False,
     transparent_head=True,
+    zero_padding=False,
 ):
     def attach(argument):
         selections = selector(argument)
@@ -1326,6 +1362,7 @@ def ring_mod_attachments(
                 hide_middle_note_heads=True,
                 allow_repeats=True,
                 allow_ties=True,
+                zero_padding=zero_padding,
             )
             middle_ties = abjad.select.exclude(group, [0, -1])
             for tie in middle_ties:

@@ -703,10 +703,6 @@ trinton.make_music(
     trinton.linear_attachment_command(
         attachments=[
             abjad.BarLine(".|:", site="before"),
-            abjad.LilyPondLiteral(
-                r"\once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2",
-                "absolute_before",
-            ),
             library.ghost_metronome,
             abjad.LilyPondLiteral(
                 r"\once \override Score.TimeSignature.stencil = #(ghost-time-signature-one)",
@@ -733,7 +729,6 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index(
             [
-                0,
                 0,
                 0,
                 0,

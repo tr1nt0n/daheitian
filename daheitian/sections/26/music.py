@@ -15,6 +15,14 @@ score = library.daheitian_score([(5, 4), (1, 4)])
 
 # commands
 
+# revert key signature
+
+for voice_name in library.all_voice_names:
+    abjad.attach(
+        abjad.KeySignature(abjad.NamedPitchClass("c"), abjad.Mode("major")),
+        abjad.select.leaf(score[voice_name], 0),
+    )
+
 # timpani music commands
 
 trinton.make_music(
