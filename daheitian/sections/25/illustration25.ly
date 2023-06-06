@@ -16,14 +16,13 @@
     <<
         \context TimeSignatureContext = "Global Context"
         {
-            \once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2
             \tweak text \markup \center-column {"12" "8"} \startMeasureSpanner
             \bar ".|:"
             \once \override Score.TimeSignature.stencil = #(ghost-time-signature-one)
             \time 8/8
             s1 * 1
             ^ \markup {
-              \raise #5 \with-dimensions-from \null
+              \raise #12 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #1 #1 #"51"
