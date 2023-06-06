@@ -186,10 +186,23 @@ def metronome_markups(
 ghost_metronome = abjad.LilyPondLiteral(
     [
         r"^ \markup {",
-        r"  \raise #9 \with-dimensions-from \null",
+        r"  \raise #5 \with-dimensions-from \null",
         r"  \override #'(font-size . 5.5)",
         r"  \concat {",
         f"      {abjad.MetronomeMark.make_tempo_equation_markup((3, 8), 51).string[8:]}",
+        r"  }",
+        r"}",
+    ],
+    site="after",
+)
+
+post_ghost_metronome = abjad.LilyPondLiteral(
+    [
+        r"^ \markup {",
+        r"  \raise #5 \with-dimensions-from \null",
+        r"  \override #'(font-size . 5.5)",
+        r"  \concat {",
+        f"      {library.metronome_marks['48'].string[8:]}",
         r"  }",
         r"}",
     ],
@@ -378,13 +391,6 @@ _bloom_pitches = {
     "violin 1 voice": {
         4: [-3.5, "df'"],
         5: [
-            "df'",
-            evans.ETPitch(
-                fundamental="af",
-                repeating_ratio="11/8",
-                number_of_divisions=3,
-                scale_degree=3,
-            ),
             evans.ETPitch(
                 fundamental="af",
                 repeating_ratio="11/8",
@@ -428,13 +434,6 @@ _bloom_pitches = {
             -3,
         ],
         5: [
-            -3,
-            evans.ETPitch(
-                fundamental="af",
-                repeating_ratio="11/8",
-                number_of_divisions=3,
-                scale_degree=2,
-            ),
             evans.ETPitch(
                 fundamental="af",
                 repeating_ratio="11/8",
@@ -475,13 +474,6 @@ _bloom_pitches = {
         ],
         4: [-4.5, -5, -5.5],
         5: [
-            -5.5,
-            evans.ETPitch(
-                fundamental="af",
-                repeating_ratio="11/8",
-                number_of_divisions=3,
-                scale_degree=1,
-            ),
             evans.ETPitch(
                 fundamental="af",
                 repeating_ratio="11/8",
@@ -516,7 +508,6 @@ _bloom_pitches = {
     },
     "cello voice": {
         5: [
-            "af",
             "af",
             evans.ETPitch(
                 fundamental="af",

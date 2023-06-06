@@ -20,8 +20,8 @@
     \removeWithTag #'voice13
     \removeWithTag #'voice14
     \removeWithTag #'voice15
-    \removeWithTag #'voice16
     \removeWithTag #'voice17
+    \removeWithTag #'voice18
     \removeWithTag #'voice19
     \removeWithTag #'voice20
         {
