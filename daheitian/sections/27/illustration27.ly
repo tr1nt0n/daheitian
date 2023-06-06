@@ -6684,6 +6684,8 @@
                                     \stopStaff \startStaff
                                       %! +PARTS
                                 %%% \once \override MultiMeasureRest.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     \afterGrace
                                     R1 * 1/4
                                     {
@@ -7087,6 +7089,8 @@
                                     \stopStaff \startStaff
                                       %! +PARTS
                                 %%% \once \override MultiMeasureRest.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     \afterGrace
                                     R1 * 1/4
                                     {
@@ -7491,6 +7495,8 @@
                                     \stopStaff \startStaff
                                       %! +PARTS
                                 %%% \once \override MultiMeasureRest.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     \afterGrace
                                     R1 * 1/4
                                     {
@@ -7895,6 +7901,8 @@
                                     \stopStaff \startStaff
                                       %! +PARTS
                                 %%% \once \override MultiMeasureRest.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     \afterGrace
                                     R1 * 1/4
                                     {

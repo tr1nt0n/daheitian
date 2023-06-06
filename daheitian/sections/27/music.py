@@ -107,6 +107,15 @@ for voice_name in [
 ]:
     trinton.make_music(
         lambda _: trinton.select_target(_, (37,)),
+        trinton.attachment_command(
+            attachments=[
+                abjad.LilyPondLiteral(
+                    r"\once \override MultiMeasureRest.transparent = ##t", "opening"
+                )
+            ],
+            selector=abjad.select.leaves,
+            tag=abjad.Tag("+SCORE"),
+        ),
         library.aftergrace(selector=trinton.select_leaves_by_index([0])),
         trinton.noteheads_only(),
         trinton.transparent_noteheads(selector=trinton.pleaves()),
