@@ -5574,6 +5574,7 @@
                                       %! +SCORE
                                     \stopStaff \startStaff
                                     \staff-line-count 5
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \clef "treble"
                                     gqs2.
                                     - \tweak circled-tip ##t
@@ -5941,6 +5942,7 @@
                                       %! +SCORE
                                     \stopStaff \startStaff
                                     \staff-line-count 5
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \clef "altovarC"
                                     af2.
                                     - \tweak circled-tip ##t
@@ -6299,6 +6301,7 @@
                                       %! +SCORE
                                     \stopStaff \startStaff
                                     \staff-line-count 5
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \clef "bass"
                                     af2.
                                     - \tweak circled-tip ##t
@@ -6653,6 +6656,7 @@
                                       %! +SCORE
                                     \stopStaff \startStaff
                                     \staff-line-count 5
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \clef "treble"
                                     af'2.
                                     - \tweak circled-tip ##t

@@ -181,7 +181,7 @@ trinton.make_music(
     trinton.tremolo_command(),
     trinton.linear_attachment_command(
         attachments=[
-            # library.clef_whitespace,
+            library.clef_whitespace,
             abjad.StartHairpin("o<"),
             abjad.Dynamic("p"),
             abjad.StartHairpin(">o"),
@@ -189,7 +189,7 @@ trinton.make_music(
         ],
         selector=trinton.select_logical_ties_by_index(
             [
-                # 0,
+                0,
                 0,
                 1,
                 1,
@@ -398,7 +398,7 @@ trinton.make_music(
     ),
     trinton.linear_attachment_command(
         attachments=[
-            # library.clef_whitespace,
+            library.clef_whitespace,
             abjad.Clef("treble"),
             abjad.StartTrillSpan(pitch=abjad.NamedPitch("a'")),
             abjad.StartHairpin("o<"),
@@ -409,7 +409,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index(
             [
-                # 0,
+                0,
                 0,
                 0,
                 0,

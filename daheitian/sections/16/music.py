@@ -528,7 +528,7 @@ trinton.make_music(
     ),
     trinton.linear_attachment_command(
         attachments=[
-            # library.clef_whitespace,
+            library.clef_whitespace,
             abjad.StartHairpin("o<"),
             abjad.Dynamic("mf"),
             abjad.StartHairpin(">o"),
@@ -536,7 +536,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index(
             [
-                # 0,
+                0,
                 0,
                 3,
                 3,
@@ -711,7 +711,7 @@ trinton.make_music(
     ),
     trinton.linear_attachment_command(
         attachments=[
-            # library.clef_whitespace,
+            library.clef_whitespace,
             abjad.StartHairpin("o<"),
             abjad.Dynamic("mf"),
             abjad.StartHairpin(">o"),
@@ -719,7 +719,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index(
             [
-                # 0,
+                0,
                 0,
                 3,
                 3,
@@ -898,7 +898,7 @@ trinton.make_music(
     ),
     trinton.linear_attachment_command(
         attachments=[
-            # library.clef_whitespace,
+            library.clef_whitespace,
             abjad.StartHairpin("o<"),
             abjad.Dynamic("mf"),
             abjad.StartHairpin(">o"),
@@ -906,7 +906,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index(
             [
-                # 0,
+                0,
                 0,
                 3,
                 3,
@@ -1088,7 +1088,7 @@ trinton.make_music(
     library.change_lines(lines=5, clef="treble"),
     trinton.linear_attachment_command(
         attachments=[
-            # library.clef_whitespace,
+            library.clef_whitespace,
             abjad.StartHairpin("o<"),
             abjad.Dynamic("mf"),
             abjad.StartHairpin(">o"),
@@ -1096,7 +1096,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index(
             [
-                # 0,
+                0,
                 0,
                 3,
                 3,
