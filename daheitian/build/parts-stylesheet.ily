@@ -12,8 +12,8 @@
 afterGraceFraction = #(cons 15 16)
 
 \header {
-    dedication = \markup \fontsize #8 \center-column {\line \override #'(font-name . "Bodoni72 Bold") { { D À H Ē I T I Ā N } } \fontsize #0.25 \with-color #white "."}
-    title = \markup \override #'(font-name . "Source Han Serif SC Bold") \fontsize #12 \center-column { \line { 大 黒 天 } \fontsize #0.01 \with-color #white "."}
+    dedication = \markup \with-color "lightgray" \column {\line \override #'(font-name . "Bodoni72 Bold") { \fontsize #3 { \hspace #7 D À \hspace #9 H Ē I \hspace #9 T I Ā N } } \line { \fontsize #23 \with-color #white "."} }
+    title = \markup \override #'(font-name . "QIJIFALLBACK") \center-column { \line \fontsize #15 { 大 黑 天 } \fontsize #23 \with-color #white "."}
     subtitle = \markup \fontsize #1 \center-column { \line { \override #'(font-name . "Bodoni72 Book Italic") { für } \override #'(font-name . "Bodoni72 Bold") { ORCHESTER } } \fontsize #0.01 \with-color #white "."}
     composer = \markup \override #'(font-name . "Bodoni72") \fontsize #4 {"Trinton Hlynn (*2000)"}
 }
@@ -224,8 +224,8 @@ afterGraceFraction = #(cons 15 16)
     oddFooterMarkup = \markup
         \fill-line {
             \concat {
-                \override #'(font-name . "Source Han Serif SC Bold")
-                "大黒天"
+                \override #'(font-name . "QIJIFALLBACK")
+                "大黑天"
                 \override #'(font-name . "Bodoni72 Book")
                 " - Trinton Hlynn"
             }
@@ -244,8 +244,8 @@ afterGraceFraction = #(cons 15 16)
                         \fromproperty #'page:page-number-string
                 }
                 \concat {
-                    \override #'(font-name . "Source Han Serif SC Bold")
-                    "大黒天"
+                    \override #'(font-name . "QIJIFALLBACK")
+                    "大黑天"
                     \override #'(font-name . "Bodoni72 Book")
                     " - Trinton Hlynn"
                 }
