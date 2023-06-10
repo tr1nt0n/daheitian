@@ -128,6 +128,7 @@ afterGraceFraction = #(cons 15 16)
         }
 
         \override TextScript.font-name = "Bodoni72 Book"
+        \override TextScript.whiteout = 1
         \override TextSpanner.font-name = "Bodoni72 Book"
 
         % \override Tie.transparent = ##t
