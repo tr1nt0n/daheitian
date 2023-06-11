@@ -221,7 +221,10 @@ trinton.make_music(
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(
         [
-            -5,
+            [
+                -1,
+                -5,
+            ]
         ]
     ),
     library.change_lines(lines=4, clef="percussion"),
@@ -238,7 +241,7 @@ trinton.make_music(
             string="DP, Kratzen",
         ),
         full_string=True,
-        padding=7,
+        padding=7.5,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=2,
