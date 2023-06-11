@@ -1142,6 +1142,23 @@ def fuse_contiguous(selector=trinton.pleaves()):
     return fuse
 
 
+def grace(selector):
+    def graces(argument):
+        selections = selector(argument)
+        handler = evans.GraceHandler(
+            boolean_vector=[1],
+            gesture_lengths=[
+                1,
+            ],
+            remove_skips=True,
+            forget=False,
+        )
+        for selection in selections:
+            handler(selection)
+
+    return graces
+
+
 def flute_graces(
     selector=trinton.pleaves(),
     grace_selector=trinton.patterned_tie_index_selector([1, 3, 4], 5),
@@ -1218,6 +1235,22 @@ def moths_talea(index=0):
 # notation tools
 
 
+def trumpet_glissandi(selector=trinton.pleaves(grace=False)):
+    def glissandi(argument):
+        selections = selector(argument)
+        logical_ties = abjad.select.logical_ties(selections)
+        for tie in logical_ties:
+            with_grace = abjad.select.with_next_leaf(tie)
+            abjad.glissando(
+                with_grace,
+                hide_middle_note_heads=True,
+                allow_repeats=True,
+                allow_ties=True,
+            )
+
+    return glissandi
+
+
 def make_timestamp_markups(global_context):
     measures = abjad.select.group_by_measure(global_context)
     global_context_length = len(measures)
@@ -1250,16 +1283,6 @@ def make_timestamp_markups(global_context):
             leaf,
             mm_rest,
         )
-
-
-invisible_oboe_grace_handler = evans.GraceHandler(
-    boolean_vector=[1],
-    gesture_lengths=[
-        1,
-    ],
-    remove_skips=True,
-    forget=False,
-)
 
 
 def make_skips(selector):

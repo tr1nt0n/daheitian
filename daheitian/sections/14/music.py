@@ -1322,7 +1322,7 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[
             abjad.Markup(
-                r"""\markup \override #'(font-name . "Bodoni72 Book") \fontsize #7.5 \center-column { "18.5\"" }"""
+                r"""\markup \override #'(font-name . "Bodoni72 Book") \center-column { \line { \fontsize #7.5 { "18" } \fontsize #3 { \fraction 1 2 } \fontsize #7.5 { "\"" } } }"""
             )
         ],
         selector=trinton.select_leaves_by_index([0]),
