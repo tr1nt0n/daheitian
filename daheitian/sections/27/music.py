@@ -96,6 +96,14 @@ for voice_name in ["trumpet voice", "tuba voice"]:
 for voice_name, clef in zip(["frenchhorn voice", "tuba voice"], ["treble", "bass"]):
     first_pleaf = abjad.select.leaves(score[voice_name], pitched=True)[0]
     abjad.attach(abjad.Clef(clef), first_pleaf)
+    if voice_name == "frenchhorn voice":
+        whitespace = abjad.LilyPondLiteral(
+            r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-6 . 0)",
+            "before",
+        )
+    else:
+        whitespace = library.clef_whitespace
+    abjad.attach(whitespace, first_pleaf)
 
 # strings final aftergraces
 
@@ -426,6 +434,9 @@ trinton.make_music(
     trinton.linear_attachment_command(
         attachments=[
             abjad.LilyPondLiteral(
+                r"\override Score.Accidental.X-extent = ##f", "before"
+            ),
+            abjad.LilyPondLiteral(
                 r"\once \override Score.TimeSignature.stencil = #(trinton-blank-time-signature)",
                 "before",
             ),
@@ -434,8 +445,9 @@ trinton.make_music(
                 "absolute_before",
             ),
             abjad.LilyPondLiteral(r"\stopMeasureSpanner", "after"),
+            abjad.LilyPondLiteral(r"\revert Score.Accidental.X-extent", "after"),
         ],
-        selector=trinton.select_leaves_by_index([0, 0, -1]),
+        selector=trinton.select_leaves_by_index([0, 0, 0, -1, -1]),
         direction=abjad.UP,
     ),
     trinton.attachment_command(

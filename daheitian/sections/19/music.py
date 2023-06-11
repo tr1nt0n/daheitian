@@ -944,6 +944,11 @@ horn_leaves = abjad.select.leaves(score["frenchhorn voice"])
 
 for leaf in horn_leaves:
     abjad.detach(abjad.RepeatTie, leaf)
+    abjad.attach(
+        abjad.LilyPondLiteral(r"\once \override Tie.transparent = ##t", "before"),
+        leaf,
+        tag=abjad.Tag("+PARTS"),
+    )
 
 # globals
 

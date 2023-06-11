@@ -640,9 +640,7 @@
                                     \once \override MultiMeasureRest.transparent = ##t
                                       %! +SCORE
                                     \once \override Rest.transparent = ##t
-                                      %! +SCORE
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bassklarinetten }
-                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { bkl. }
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -1265,9 +1263,7 @@
                                     \once \override MultiMeasureRest.transparent = ##t
                                       %! +SCORE
                                     \once \override Rest.transparent = ##t
-                                      %! +SCORE
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Fagotte }
-                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { fg.}
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
@@ -1830,6 +1826,7 @@
                         {
                               %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
+                            \once \override Tie.transparent = ##t
                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Hörner in F }
                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hn. }
                               %! +SCORE
@@ -1841,6 +1838,7 @@
                             \stopStaff \startStaff
                               %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
+                            \once \override Tie.transparent = ##t
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
@@ -1850,6 +1848,7 @@
                             \stopStaff \startStaff
                               %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
+                            \once \override Tie.transparent = ##t
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
@@ -1859,6 +1858,7 @@
                             \stopStaff \startStaff
                               %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
+                            \once \override Tie.transparent = ##t
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
@@ -1868,6 +1868,7 @@
                             \stopStaff \startStaff
                               %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
+                            \once \override Tie.transparent = ##t
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
@@ -1877,6 +1878,7 @@
                             \stopStaff \startStaff
                               %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
+                            \once \override Tie.transparent = ##t
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
@@ -1886,6 +1888,7 @@
                             \stopStaff \startStaff
                               %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
+                            \once \override Tie.transparent = ##t
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
@@ -1895,6 +1898,7 @@
                             \stopStaff \startStaff
                               %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
+                            \once \override Tie.transparent = ##t
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
@@ -1904,6 +1908,7 @@
                             \stopStaff \startStaff
                               %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
+                            \once \override Tie.transparent = ##t
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
@@ -1913,6 +1918,7 @@
                             \stopStaff \startStaff
                               %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
+                            \once \override Tie.transparent = ##t
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
@@ -1922,6 +1928,7 @@
                             \stopStaff \startStaff
                               %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
+                            \once \override Tie.transparent = ##t
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
@@ -1931,6 +1938,7 @@
                             \stopStaff \startStaff
                               %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
+                            \once \override Tie.transparent = ##t
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
@@ -1940,6 +1948,7 @@
                             \stopStaff \startStaff
                               %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
+                            \once \override Tie.transparent = ##t
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
@@ -1949,6 +1958,7 @@
                             \stopStaff \startStaff
                               %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
+                            \once \override Tie.transparent = ##t
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
@@ -1958,6 +1968,7 @@
                             \stopStaff \startStaff
                               %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
+                            \once \override Tie.transparent = ##t
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
@@ -1967,6 +1978,7 @@
                             \stopStaff \startStaff
                               %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
+                            \once \override Tie.transparent = ##t
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
@@ -1976,6 +1988,7 @@
                             \stopStaff \startStaff
                               %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
+                            \once \override Tie.transparent = ##t
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
@@ -1985,6 +1998,7 @@
                             \stopStaff \startStaff
                               %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
+                            \once \override Tie.transparent = ##t
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
@@ -1992,6 +2006,8 @@
                             R1 * 5/16
                               %! +SCORE
                             \stopStaff \startStaff
+                              %! +PARTS
+                        %%% \once \override Tie.transparent = ##t
                             <
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \markup { \abjad-sharp  }
@@ -2007,6 +2023,8 @@
                             \glissando
                             ~
                             \once \override Dots.staff-position = #2
+                              %! +PARTS
+                        %%% \once \override Tie.transparent = ##t
                               %! abjad.glissando(1)
                             \hide NoteHead
                               %! abjad.glissando(1)
@@ -2025,6 +2043,8 @@
                             >8.
                             ~
                             \once \override Dots.staff-position = #2
+                              %! +PARTS
+                        %%% \once \override Tie.transparent = ##t
                             <
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \markup { \abjad-sharp  }
@@ -2035,6 +2055,8 @@
                             >8
                             ~
                             \once \override Dots.staff-position = #2
+                              %! +PARTS
+                        %%% \once \override Tie.transparent = ##t
                             <
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \markup { \abjad-sharp  }
@@ -2045,6 +2067,8 @@
                             >4
                             ~
                             \once \override Dots.staff-position = #2
+                              %! +PARTS
+                        %%% \once \override Tie.transparent = ##t
                             <
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \markup { \abjad-sharp  }
@@ -2055,6 +2079,8 @@
                             >2
                             ~
                             \once \override Dots.staff-position = #2
+                              %! +PARTS
+                        %%% \once \override Tie.transparent = ##t
                             <
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \markup { \abjad-sharp  }
@@ -2065,6 +2091,8 @@
                             >8
                             ~
                             \once \override Dots.staff-position = #2
+                              %! +PARTS
+                        %%% \once \override Tie.transparent = ##t
                             <
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \markup { \abjad-sharp  }
@@ -2075,6 +2103,8 @@
                             >4.
                             ~
                             \once \override Dots.staff-position = #2
+                              %! +PARTS
+                        %%% \once \override Tie.transparent = ##t
                             <
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \markup { \abjad-sharp  }
@@ -2085,6 +2115,8 @@
                             >4.
                             ~
                             \once \override Dots.staff-position = #2
+                              %! +PARTS
+                        %%% \once \override Tie.transparent = ##t
                             <
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \markup { \abjad-sharp  }
@@ -2095,6 +2127,8 @@
                             >8.
                             ~
                             \once \override Dots.staff-position = #2
+                              %! +PARTS
+                        %%% \once \override Tie.transparent = ##t
                             <
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \markup { \abjad-sharp  }
@@ -2105,6 +2139,8 @@
                             >4.
                             ~
                             \once \override Dots.staff-position = #2
+                              %! +PARTS
+                        %%% \once \override Tie.transparent = ##t
                             <
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \markup { \abjad-sharp  }
@@ -2115,6 +2151,8 @@
                             >8.
                             ~
                             \once \override Dots.staff-position = #2
+                              %! +PARTS
+                        %%% \once \override Tie.transparent = ##t
                             <
                                 \tweak Accidental.stencil #ly:text-interface::print
                                 \tweak Accidental.text \markup { \abjad-sharp  }
@@ -2124,6 +2162,8 @@
                                 es'
                             >4.
                             ~
+                              %! +PARTS
+                        %%% \once \override Tie.transparent = ##t
                               %! abjad.glissando(6)
                             \revert Accidental.stencil
                               %! abjad.glissando(6)
@@ -2143,6 +2183,7 @@
                                 _ #(make-dynamic-script (markup #:whiteout #:italic "mp +"))
                               %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
+                            \once \override Tie.transparent = ##t
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
@@ -2152,6 +2193,7 @@
                             \stopStaff \startStaff
                               %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
+                            \once \override Tie.transparent = ##t
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
@@ -4431,9 +4473,7 @@
                                 \context Voice = "percussion 2 voice"
                                 {
                                     \staff-line-count 1
-                                      %! +SCORE
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
-                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
                                     \clef "percussion"
                                     c'4
@@ -4526,9 +4566,7 @@
                                     <<
                                         \context Voice = "percussion 3 voice temp"
                                         {
-                                              %! +SCORE
                                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
-                                              %! +SCORE
                                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
                                             \voiceTwo
                                             r8

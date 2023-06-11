@@ -18,6 +18,7 @@
         {
             \tweak text \markup \override #'(font-name . "Bodoni72 Book") \fontsize #1 \center-column { "37\"" } \startMeasureSpanner
             \once \override Score.TimeSignature.stencil = #(trinton-blank-time-signature)
+            \override Score.Accidental.X-extent = ##f
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
@@ -382,6 +383,7 @@
             \time 1/4
             R1 * 1/4
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "37\"" }
+            \revert Score.Accidental.X-extent
             \stopMeasureSpanner
         }
         \tag #'group1
@@ -2260,6 +2262,7 @@
                             \once \override Dots.stencil = ##f
                             \once \override Flag.stencil = ##f
                             \once \override NoteHead.duration-log = 2
+                            \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-6 . 0)
                             \once \override Stem.stencil = ##f
                             \clef "treble"
                             \once \override MultiMeasureRest.transparent = ##t
@@ -3539,6 +3542,7 @@
                                     \once \override Dots.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override NoteHead.duration-log = 2
+                                    \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
                                     \once \override Stem.stencil = ##f
                                     \clef "bass"
                                     \once \override MultiMeasureRest.transparent = ##t
