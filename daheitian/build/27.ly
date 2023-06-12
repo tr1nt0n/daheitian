@@ -14,6 +14,7 @@
             \once \override Score.BarLine.hair-thickness = 0.5
               %! +PARTS
         %%% \once \override Score.BarLine.hair-thickness = 1
+            \override Score.BarLine.X-extent = #'(0 . 0)
             \once \override Score.TimeSignature.stencil = ##f
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
@@ -365,6 +366,7 @@
               %! +PARTS
         %%% \once \override Score.BarLine.hair-thickness = 1
             \once \override Score.TimeSignature.stencil = ##f
+            \revert Score.BarLine.X-extent
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4

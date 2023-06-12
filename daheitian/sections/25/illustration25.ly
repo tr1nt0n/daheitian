@@ -36,6 +36,7 @@
             \once \override Score.BarLine.transparent = ##f
             \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
+            \noBreak
             \time 1/4
             R1 * 1/4
             _ \markup \center-column { \abs-fontsize #15 \musicglyph "scripts.ufermata" }

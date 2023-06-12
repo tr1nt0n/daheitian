@@ -742,6 +742,11 @@ trinton.make_music(
         ),
         direction=abjad.UP,
     ),
+    trinton.attachment_command(
+        attachments=[abjad.LilyPondLiteral(r"\noBreak"), "after"],
+        selector=trinton.select_leaves_by_index([2]),
+        tag=abjad.Tag("+SCORE"),
+    ),
     voice=score["Global Context"],
 )
 

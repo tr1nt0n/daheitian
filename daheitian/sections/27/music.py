@@ -437,6 +437,9 @@ trinton.make_music(
                 r"\override Score.Accidental.X-extent = ##f", "before"
             ),
             abjad.LilyPondLiteral(
+                r"\override Score.BarLine.X-extent = #'(0 . 0)", "after"
+            ),
+            abjad.LilyPondLiteral(
                 r"\once \override Score.TimeSignature.stencil = #(trinton-blank-time-signature)",
                 "before",
             ),
@@ -446,8 +449,9 @@ trinton.make_music(
             ),
             abjad.LilyPondLiteral(r"\stopMeasureSpanner", "after"),
             abjad.LilyPondLiteral(r"\revert Score.Accidental.X-extent", "after"),
+            abjad.LilyPondLiteral(r"\revert Score.BarLine.X-extent", "after"),
         ],
-        selector=trinton.select_leaves_by_index([0, 0, 0, -1, -1]),
+        selector=trinton.select_leaves_by_index([0, 0, 0, 0, -1, -1, -1]),
         direction=abjad.UP,
     ),
     trinton.attachment_command(
