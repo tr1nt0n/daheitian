@@ -32,10 +32,16 @@ trinton.make_music(
         attachments=[
             abjad.Glissando(),
             abjad.Dynamic("mp"),
-            abjad.RepeatTie(),
             abjad.StartHairpin("<"),
         ],
         selector=trinton.select_leaves_by_index([0]),
+    ),
+    trinton.attachment_command(
+        attachments=[
+            abjad.RepeatTie(),
+        ],
+        selector=trinton.select_leaves_by_index([0]),
+        tag=abjad.Tag("+SCORE"),
     ),
     voice=score["frenchhorn voice"],
 )
@@ -83,12 +89,11 @@ trinton.make_music(
         pitch_list=[["c'''", "g''"]], selector=trinton.select_leaves_by_index([0])
     ),
     trinton.pitch_with_selector_command(
-        pitch_list=["e'"], selector=trinton.pleaves(exclude=[0])
-    ),
-    trinton.pitch_with_selector_command(
-        pitch_list=[library._brass_chord_pitches["tenortrombone voice"]],
+        pitch_list=[["a''", "c'''"]],
         selector=trinton.pleaves(exclude=[0]),
-        as_ratios=True,
+    ),
+    trinton.force_accidentals_command(
+        selector=trinton.select_leaves_by_index([0], grace=False)
     ),
     trinton.attachment_command(
         attachments=[
@@ -101,10 +106,7 @@ trinton.make_music(
         detachments=[
             abjad.Markup,
         ],
-        selector=trinton.pleaves(exclude=[1]),
-    ),
-    trinton.force_accidentals_command(
-        selector=trinton.logical_ties(first=True, pitched=True, grace=False)
+        selector=trinton.pleaves(),
     ),
     trinton.noteheads_only(selector=trinton.select_leaves_by_index([0])),
     trinton.transparent_noteheads(selector=trinton.select_leaves_by_index([0])),
@@ -136,10 +138,16 @@ trinton.make_music(
         attachments=[
             abjad.Glissando(),
             abjad.Dynamic("mp"),
-            abjad.RepeatTie(),
             abjad.StartHairpin("<"),
         ],
         selector=trinton.select_leaves_by_index([0]),
+    ),
+    trinton.attachment_command(
+        attachments=[
+            abjad.RepeatTie(),
+        ],
+        selector=trinton.select_leaves_by_index([0]),
+        tag=abjad.Tag("+SCORE"),
     ),
     voice=score["trumpet voice"],
 )
@@ -235,15 +243,21 @@ trinton.make_music(
     trinton.linear_attachment_command(
         attachments=[
             abjad.Dynamic("mp"),
-            abjad.RepeatTie(),
             abjad.StartHairpin("<"),
             abjad.Dynamic("ffff"),
             abjad.Clef("bass"),
             abjad.Articulation("marcato"),
         ],
         selector=trinton.select_logical_ties_by_index(
-            [0, 0, 0, -1, -1, -1], first=True, pitched=True
+            [0, 0, -1, -1, -1], first=True, pitched=True
         ),
+    ),
+    trinton.attachment_command(
+        attachments=[
+            abjad.RepeatTie(),
+        ],
+        selector=trinton.select_leaves_by_index([0]),
+        tag=abjad.Tag("+SCORE"),
     ),
     trinton.glissando_command(
         selector=trinton.ranged_selector(ranges=[range(0, 3)], nested=True),
@@ -286,11 +300,17 @@ trinton.make_music(
         attachments=[
             abjad.Clef("bass"),
             abjad.Dynamic("mp"),
-            abjad.RepeatTie(),
             abjad.StartHairpin("<"),
             abjad.Dynamic("ffff"),
         ],
-        selector=trinton.select_leaves_by_index([0, 0, 0, 0, -1]),
+        selector=trinton.select_leaves_by_index([0, 0, 0, -1]),
+    ),
+    trinton.attachment_command(
+        attachments=[
+            abjad.RepeatTie(),
+        ],
+        selector=trinton.select_leaves_by_index([0]),
+        tag=abjad.Tag("+SCORE"),
     ),
     trinton.glissando_command(
         selector=trinton.ranged_selector(ranges=[range(0, 4)], nested=True),
@@ -377,6 +397,19 @@ trinton.make_music(
                 0,
             ]
         ),
+    ),
+    trinton.attachment_command(
+        attachments=[
+            abjad.LilyPondLiteral(
+                r"\once \override MeasureSpanner.padding = 3", "before"
+            )
+        ],
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+            ]
+        ),
+        tag=abjad.Tag("+PARTS"),
     ),
     voice=score["Global Context"],
 )

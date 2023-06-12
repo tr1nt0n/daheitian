@@ -35,6 +35,8 @@
             s1 * 1
             \tweak text "×3, Rall. sempre" \startMeasureSpanner
             \bar ".|:"
+              %! +PARTS
+        %%% \once \override MeasureSpanner.padding = 3
             \time 12/8
             s1 * 3/2
             \stopTextSpan
@@ -263,6 +265,7 @@
                             \mp
                             \<
                             \glissando
+                              %! +SCORE
                             \repeatTie
                             \scaleDurations #'(1 . 1) {
                             \slashedGrace {
@@ -277,39 +280,17 @@
                                 <g'' c'''>16
                             }
                             }
-                            <
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                                g''!
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-septimal-comma-up  }
-                                b''!
-                            >8
+                            <a''! c'''!>8
                                 _ #(make-dynamic-script (markup #:whiteout #:italic "ffffp"))
                             - \marcato
-                            ^ \markup \center-align { \center-column { \line { \concat { +29 }  }\line { \concat { +47 }  } } }
                             r8
                             \override Staff.Stem.stemlet-length = 0.75
-                            <
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                                g''!
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-septimal-comma-up  }
-                                b''!
-                            >8
+                            <a'' c'''>8
                                 _ #(make-dynamic-script (markup #:whiteout #:italic "ffffp"))
                             - \marcato
                             [
                             \revert Staff.Stem.stemlet-length
-                            <
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                                g''!
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-septimal-comma-up  }
-                                b''!
-                            >8
+                            <a'' c'''>8
                                 _ #(make-dynamic-script (markup #:whiteout #:italic "ffffp"))
                             - \marcato
                             ]
@@ -318,77 +299,35 @@
                             \times 4/5
                             {
                                 \override Staff.Stem.stemlet-length = 0.75
-                                <
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                                    g''
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup { \one-septimal-comma-up  }
-                                    b''
-                                >8.
+                                <a'' c'''>8.
                                 [
                                   %! +SCORE
                                 \repeatTie
                                 \revert Staff.Stem.stemlet-length
-                                <
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                                    g''!
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup { \one-septimal-comma-up  }
-                                    b''!
-                                >8
+                                <a'' c'''>8
                                     _ #(make-dynamic-script (markup #:whiteout #:italic "ffffp"))
                                 - \marcato
                                 ]
                                 ~
                             }
-                            <
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                                g''
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-septimal-comma-up  }
-                                b''
-                            >4
+                            <a'' c'''>4
                               %! +SCORE
                             \repeatTie
                             r4
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 2 0))
                             \times 2/3
                             {
-                                <
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                                    g''!
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup { \one-septimal-comma-up  }
-                                    b''!
-                                >2
+                                <a'' c'''>2
                                     _ #(make-dynamic-script (markup #:whiteout #:italic "ffffp"))
                                 - \marcato
                                 ~
                                 \override Staff.Stem.stemlet-length = 0.75
-                                <
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                                    g''
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup { \one-septimal-comma-up  }
-                                    b''
-                                >8
+                                <a'' c'''>8
                                 [
                                   %! +SCORE
                                 \repeatTie
                                 \revert Staff.Stem.stemlet-length
-                                <
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                                    g''!
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup { \one-septimal-comma-up  }
-                                    b''!
-                                >8
+                                <a'' c'''>8
                                     _ #(make-dynamic-script (markup #:whiteout #:italic "ffffp"))
                                 - \marcato
                                 ]
@@ -397,110 +336,47 @@
                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) (ly:make-duration 3 0))
                             \times 6/7
                             {
-                                <
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                                    g''!
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup { \one-septimal-comma-up  }
-                                    b''!
-                                >8.
+                                <a'' c'''>8.
                                     _ #(make-dynamic-script (markup #:whiteout #:italic "ffffp"))
                                 - \marcato
-                                <
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                                    g''!
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup { \one-septimal-comma-up  }
-                                    b''!
-                                >4
+                                <a'' c'''>4
                                     _ #(make-dynamic-script (markup #:whiteout #:italic "ffffp"))
                                 - \marcato
                                 ~
-                                <
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                                    g''
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup { \one-septimal-comma-up  }
-                                    b''
-                                >16
+                                <a'' c'''>16
                                   %! +SCORE
                                 \repeatTie
                                 r4.
                             }
                             r8
                             \override Staff.Stem.stemlet-length = 0.75
-                            <
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                                g''!
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-septimal-comma-up  }
-                                b''!
-                            >8.
+                            <a'' c'''>8.
                                 _ #(make-dynamic-script (markup #:whiteout #:italic "ffffp"))
                             - \marcato
                             [
                               %! +SCORE
                             \once \override Tie.transparent = ##f
                             \revert Staff.Stem.stemlet-length
-                            <
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                                g''!
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-septimal-comma-up  }
-                                b''!
-                            >16
+                            <a'' c'''>16
                                 _ #(make-dynamic-script (markup #:whiteout #:italic "ffffp"))
                             - \marcato
                             ]
                             ~
                             \override Staff.Stem.stemlet-length = 0.75
-                            <
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                                g''
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-septimal-comma-up  }
-                                b''
-                            >16
+                            <a'' c'''>16
                             [
                               %! +SCORE
                             \once \override Tie.transparent = ##f
-                            <
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                                g''!
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-septimal-comma-up  }
-                                b''!
-                            >16
+                            <a'' c'''>16
                                 _ #(make-dynamic-script (markup #:whiteout #:italic "ffffp"))
                             - \marcato
                             ~
                             \revert Staff.Stem.stemlet-length
-                            <
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                                g''
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-septimal-comma-up  }
-                                b''
-                            >16
+                            <a'' c'''>16
                             ]
                             r16
                             r16
-                            <
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-undecimal-quarter-tone-up  }
-                                g''!
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup { \one-septimal-comma-up  }
-                                b''!
-                            >16
+                            <a'' c'''>16
                                 _ #(make-dynamic-script (markup #:whiteout #:italic "ffffp"))
                             - \marcato
                         }
@@ -527,6 +403,7 @@
                                     \mp
                                     \<
                                     \glissando
+                                      %! +SCORE
                                     \repeatTie
                                     <d'' f''>2.
                                     \fancy-gliss
@@ -906,6 +783,7 @@
                                     \<
                                       %! abjad.glissando(7)
                                     \glissando
+                                      %! +SCORE
                                     \repeatTie
                                     \once \override Dots.staff-position = #2
                                       %! abjad.glissando(1)
@@ -1040,6 +918,7 @@
                                     \<
                                       %! abjad.glissando(7)
                                     \glissando
+                                      %! +SCORE
                                     \repeatTie
                                     \once \override Dots.staff-position = #2
                                       %! abjad.glissando(1)

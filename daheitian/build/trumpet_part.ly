@@ -9,8 +9,8 @@
     \removeWithTag #'voice2
     \removeWithTag #'voice3
     \removeWithTag #'voice4
-    %\removeWithTag #'voice5
-    \removeWithTag #'voice6
+    \removeWithTag #'voice5
+    % \removeWithTag #'voice6
     \removeWithTag #'voice7
     \removeWithTag #'voice8
     \removeWithTag #'voice9
