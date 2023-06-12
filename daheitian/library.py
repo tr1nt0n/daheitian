@@ -209,6 +209,19 @@ post_ghost_metronome = abjad.LilyPondLiteral(
     site="after",
 )
 
+quarter_60 = abjad.LilyPondLiteral(
+    [
+        r"^ \markup {",
+        r"  \raise #9 \with-dimensions-from \null",
+        r"  \override #'(font-size . 5.5)",
+        r"  \concat {",
+        f"      {abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 60).string[8:]}",
+        r"  }",
+        r"}",
+    ],
+    site="after",
+)
+
 
 # movement titles
 
