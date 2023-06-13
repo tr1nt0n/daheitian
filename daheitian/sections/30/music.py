@@ -120,7 +120,7 @@ trinton.make_music(
         ]
     ),
     trinton.force_accidentals_command(
-        selector=trinton.patterned_leaf_index_selector([0], 3, pitched=True)
+        selector=trinton.patterned_leaf_index_selector([0], 4, pitched=True)
     ),
     trinton.notehead_bracket_command(),
     library.ring_mod_attachments(dynamics=["pp", "pp +"]),
