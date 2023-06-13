@@ -38,7 +38,7 @@ afterGraceFraction = #(cons 15 16)
         \consists Measure_spanner_engraver
         \override BarNumber.stencil = #(make-stencil-circler 0.1 0.75 ly:text-interface::print)
         \override BarNumber.Y-extent = ##f
-        \override BarNumber.Y-offset = -0.5
+        \override BarNumber.Y-offset = 1.5
         \override BarNumber.extra-offset = #'(-0.5 . 0.5)
         \override BarNumber.font-size = 2
         \override BarNumber.padding = 2
@@ -75,7 +75,7 @@ afterGraceFraction = #(cons 15 16)
         \override BarLine.hair-thickness = 3
         % \override BarLine.X-extent = #'(0 . 0)
         \override BarLine.thick-thickness = #10
-        % \override BarLine.bar-extent = #'(-3 . 3)
+        \override BarLine.bar-extent = #'(-2 . 2)
 
         autoBeaming = ##f
         \override Beam.breakable = ##t
