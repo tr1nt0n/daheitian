@@ -212,7 +212,7 @@ trinton.make_music(
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="1.",
+            string="1., DP",
         ),
         full_string=True,
         padding=11,
