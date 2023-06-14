@@ -52,5 +52,9 @@
             \include "25_parts.ly"
             \include "26_parts.ly"
             \include "27_parts.ly"
+            \include "28_parts.ly"
+            \include "29_parts.ly"
+            \include "30_parts.ly"
+            \include "31_parts.ly"
         }
 }
