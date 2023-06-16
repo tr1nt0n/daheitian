@@ -360,6 +360,17 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=4,
         direction="down",
+        tag=abjad.Tag("+SCORE"),
+    ),
+    trinton.hooked_spanner_command(
+        string=r"""\markup \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 { \center-column { \line { Langsam die mit Draht } \line { umwickelten Saiten mit } \line { einer Plastikkarte Kratzen } } }""",
+        full_string=True,
+        padding=11,
+        style="solid-line-with-up-hook",
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+        right_padding=4,
+        direction="down",
+        tag=abjad.Tag("+PARTS"),
     ),
     trinton.change_notehead_command(
         notehead="la",

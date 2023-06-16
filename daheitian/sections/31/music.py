@@ -150,6 +150,18 @@ trinton.make_music(
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=68,
+        tag=abjad.Tag("+SCORE"),
+    ),
+    trinton.hooked_spanner_command(
+        string=library.return_boxed_markup(
+            string="Mit Stimmgabel in G",
+        ),
+        full_string=True,
+        padding=11,
+        style="solid-line-with-hook",
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+        right_padding=4,
+        tag=abjad.Tag("+PARTS"),
     ),
     trinton.ottava_command(
         octave=1, selector=trinton.select_leaves_by_index([0, -1], pitched=True)
@@ -244,6 +256,30 @@ trinton.make_music(
         full_string=True,
         right_padding=-2,
         command="Two",
+        tag=abjad.Tag("+SCORE"),
+    ),
+    trinton.spanner_command(
+        strings=[
+            library.return_boxed_markup(
+                string="Ton",
+            ),
+            library.return_boxed_markup(
+                string="Kratzen",
+            ),
+        ],
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+                -1,
+            ],
+            pitched=True,
+        ),
+        style="solid-line-with-arrow",
+        padding=8,
+        full_string=True,
+        right_padding=-4,
+        command="Two",
+        tag=abjad.Tag("+PARTS"),
     ),
     voice=score["contrabass voice"],
 )

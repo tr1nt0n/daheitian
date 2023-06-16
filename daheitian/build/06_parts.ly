@@ -44,10 +44,8 @@
                             {
                                 \context Voice = "flute voice"
                                 {
-                                      %! +SCORE
-                                %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
-                                      %! +SCORE
-                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
                                     cs'4.
                                     :32
                                     \ppp
@@ -335,10 +333,8 @@
                                     <<
                                         \context Voice = "bassclarinet voice temp"
                                         {
-                                              %! +SCORE
-                                        %%% \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bassklarinetten }
-                                              %! +SCORE
-                                        %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { bkl. }
+                                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bassklarinetten }
+                                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { bkl. }
                                             \voiceOne
                                             r4.
                                             r4
@@ -984,10 +980,8 @@
                             {
                                 \context Voice = "harp 1 voice"
                                 {
-                                      %! +SCORE
-                                %%% \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
-                                      %! +SCORE
-                                %%% \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
+                                    \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
+                                    \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
                                     r4.
                                     r4
                                     \ottava 1
@@ -1051,15 +1045,33 @@
                                     r2.
                                     r8.
                                     \staff-line-count 1
+                                      %! +SCORE
+                                %%% \textSpannerDown
+                                      %! +PARTS
                                     \textSpannerDown
                                     \clef "percussion"
                                     \tweak style #'la
                                     c'8.
-                                    - \tweak padding #8
+                                      %! +PARTS
+                                    - \tweak padding #11
+                                      %! +PARTS
                                     - \abjad-solid-line-with-up-hook
-                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Langsam die mit Draht umwickelten Saiten mit einer Plastikkarte Kratzen } \hspace #0.5 }
+                                      %! +PARTS
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 { \center-column { \line { Langsam die mit Draht } \line { umwickelten Saiten mit } \line { einer Plastikkarte Kratzen } } } \hspace #0.5 }
+                                      %! +PARTS
                                     - \tweak bound-details.right.padding -4
+                                      %! +PARTS
                                     \startTextSpan
+                                      %! +SCORE
+                                %%% - \tweak padding #8
+                                      %! +SCORE
+                                %%% - \abjad-solid-line-with-up-hook
+                                      %! +SCORE
+                                %%% - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Langsam die mit Draht umwickelten Saiten mit einer Plastikkarte Kratzen } \hspace #0.5 }
+                                      %! +SCORE
+                                %%% - \tweak bound-details.right.padding -4
+                                      %! +SCORE
+                                %%% \startTextSpan
                                     ^ \<
                                     ~
                                     \tweak style #'la
@@ -1087,9 +1099,15 @@
                                     \tweak style #'la
                                     c'2
                                     ^ \p
+                                      %! +SCORE
+                                %%% \stopTextSpan
+                                      %! +PARTS
                                     \stopTextSpan
                                       %! +SCORE
                                 %%% \repeatTie
+                                      %! +SCORE
+                                %%% \textSpannerUp
+                                      %! +PARTS
                                     \textSpannerUp
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f

@@ -1826,11 +1826,26 @@
                                     :32
                                     \arpeggio
                                     \pp
+                                      %! +PARTS
                                     - \tweak padding #11
+                                      %! +PARTS
                                     - \abjad-solid-line-with-hook
+                                      %! +PARTS
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Mit Stimmgabel in G } \hspace #0.5 }
-                                    - \tweak bound-details.right.padding -68
+                                      %! +PARTS
+                                    - \tweak bound-details.right.padding -4
+                                      %! +PARTS
                                     \startTextSpan
+                                      %! +SCORE
+                                %%% - \tweak padding #11
+                                      %! +SCORE
+                                %%% - \abjad-solid-line-with-hook
+                                      %! +SCORE
+                                %%% - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Mit Stimmgabel in G } \hspace #0.5 }
+                                      %! +SCORE
+                                %%% - \tweak bound-details.right.padding -68
+                                      %! +SCORE
+                                %%% \startTextSpan
                                     ~
                                     <es'''' f''''>2
                                     :32
@@ -1839,6 +1854,9 @@
                                     ~
                                     <es'''' f''''>2.
                                     :32
+                                      %! +SCORE
+                                %%% \stopTextSpan
+                                      %! +PARTS
                                     \stopTextSpan
                                       %! +SCORE
                                 %%% \repeatTie
@@ -2381,11 +2399,29 @@
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1., DP } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -2
                                     \startTextSpanOne
+                                      %! +SCORE
+                                %%% - \tweak padding #8
+                                      %! +SCORE
+                                %%% - \abjad-solid-line-with-arrow
+                                      %! +SCORE
+                                %%% - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ton } \hspace #0.5 }
+                                      %! +SCORE
+                                %%% - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Kratzen }
+                                      %! +SCORE
+                                %%% - \tweak bound-details.right.padding 2
+                                      %! +SCORE
+                                %%% \startTextSpanTwo
+                                      %! +PARTS
                                     - \tweak padding #8
+                                      %! +PARTS
                                     - \abjad-solid-line-with-arrow
+                                      %! +PARTS
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ton } \hspace #0.5 }
+                                      %! +PARTS
                                     - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Kratzen }
-                                    - \tweak bound-details.right.padding 2
+                                      %! +PARTS
+                                    - \tweak bound-details.right.padding 4
+                                      %! +PARTS
                                     \startTextSpanTwo
                                     \glissando
                                     {
@@ -2393,6 +2429,9 @@
                                         f'16
                                         \fff
                                         \stopTextSpanOne
+                                          %! +SCORE
+                                    %%% \stopTextSpanTwo
+                                          %! +PARTS
                                         \stopTextSpanTwo
                                     }
                                     \once \override MultiMeasureRest.transparent = ##t

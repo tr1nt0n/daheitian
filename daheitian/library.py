@@ -209,6 +209,19 @@ post_ghost_metronome = abjad.LilyPondLiteral(
     site="after",
 )
 
+post_ghost_metronome_parts = abjad.LilyPondLiteral(
+    [
+        r"^ \markup {",
+        r"  \raise #23 \with-dimensions-from \null",
+        r"  \override #'(font-size . 5.5)",
+        r"  \concat {",
+        f"      {library.metronome_marks['48'].string[8:]}",
+        r"  }",
+        r"}",
+    ],
+    site="after",
+)
+
 quarter_60 = abjad.LilyPondLiteral(
     [
         r"^ \markup {",

@@ -341,7 +341,6 @@ trinton.make_music(
     trinton.linear_attachment_command(
         attachments=[
             library.movements[4],
-            library.post_ghost_metronome,
             abjad.LilyPondLiteral(
                 r"""\set Score.repeatCommands = #'((volta "2"))""",
                 site="before",
@@ -355,11 +354,24 @@ trinton.make_music(
             [
                 0,
                 0,
-                0,
                 1,
             ]
         ),
         direction=abjad.UP,
+    ),
+    trinton.attachment_command(
+        attachments=[
+            library.post_ghost_metronome,
+        ],
+        selector=trinton.select_leaves_by_index([0]),
+        tag=abjad.Tag("+SCORE"),
+    ),
+    trinton.attachment_command(
+        attachments=[
+            library.post_ghost_metronome_parts,
+        ],
+        selector=trinton.select_leaves_by_index([0]),
+        tag=abjad.Tag("+PARTS"),
     ),
     voice=score["Global Context"],
 )

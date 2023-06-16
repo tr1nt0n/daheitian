@@ -4130,16 +4130,34 @@
                                       %! +SCORE
                                     \stopStaff \startStaff
                                     \staff-line-count 1
+                                      %! +SCORE
                                     \textSpannerDown
+                                      %! +PARTS
+                                %%% \textSpannerDown
                                     \clef "percussion"
                                     \tweak style #'la
                                     c'4.
                                     - \tweak circled-tip ##t
                                     ^ \<
+                                      %! +PARTS
+                                %%% - \tweak padding #11
+                                      %! +PARTS
+                                %%% - \abjad-solid-line-with-up-hook
+                                      %! +PARTS
+                                %%% - \tweak bound-details.left.text \markup \concat { \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 { \center-column { \line { Langsam die mit Draht } \line { umwickelten Saiten mit } \line { einer Plastikkarte Kratzen } } } \hspace #0.5 }
+                                      %! +PARTS
+                                %%% - \tweak bound-details.right.padding -4
+                                      %! +PARTS
+                                %%% \startTextSpan
+                                      %! +SCORE
                                     - \tweak padding #8
+                                      %! +SCORE
                                     - \abjad-solid-line-with-up-hook
+                                      %! +SCORE
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Langsam die mit Draht umwickelten Saiten mit einer Plastikkarte Kratzen } \hspace #0.5 }
+                                      %! +SCORE
                                     - \tweak bound-details.right.padding -4
+                                      %! +SCORE
                                     \startTextSpan
                                       %! abjad.glissando(7)
                                     \glissando
@@ -4195,8 +4213,14 @@
                                     \tweak style #'la
                                     c'8.
                                     ^ \p
+                                      %! +SCORE
                                     \stopTextSpan
+                                      %! +PARTS
+                                %%% \stopTextSpan
+                                      %! +SCORE
                                     \textSpannerUp
+                                      %! +PARTS
+                                %%% \textSpannerUp
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE

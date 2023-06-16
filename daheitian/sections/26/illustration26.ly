@@ -21,12 +21,33 @@
             s1 * 5/4
             - \tweak padding #14
             ^ \markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #8 \box \line  { V. 天（ 二 ）}
+              %! +PARTS
+        %%% ^ \markup {
+              %! +PARTS
+          %%% \raise #23 \with-dimensions-from \null
+              %! +PARTS
+          %%% \override #'(font-size . 5.5)
+              %! +PARTS
+          %%% \concat {
+              %! +PARTS
+              %%% \abjad-metronome-mark-markup #2 #0 #1 #"48"
+              %! +PARTS
+          %%% }
+              %! +PARTS
+        %%% }
+              %! +SCORE
             ^ \markup {
+              %! +SCORE
               \raise #5 \with-dimensions-from \null
+              %! +SCORE
               \override #'(font-size . 5.5)
+              %! +SCORE
               \concat {
+              %! +SCORE
                   \abjad-metronome-mark-markup #2 #0 #1 #"48"
+              %! +SCORE
               }
+              %! +SCORE
             }
             \once \override Score.BarLine.transparent = ##f
             \once \override MultiMeasureRest.transparent = ##t

@@ -1,7 +1,7 @@
 \version "2.23.14"
 \language "english"
 
-\include "parts-stylesheet.ily"
+\include "percussion-stylesheet.ily"
 \include "/Users/trintonprater/abjad/abjad/scm/abjad.ily"
 
 \score {
@@ -17,9 +17,9 @@
     \removeWithTag #'voice10
     \removeWithTag #'voice11
     \removeWithTag #'voice12
-   % \removeWithTag #'voice13
+    \removeWithTag #'voice13
     \removeWithTag #'voice14
-    \removeWithTag #'voice15
+   % \removeWithTag #'voice15
     \removeWithTag #'voice16
     \removeWithTag #'voice17
     \removeWithTag #'voice18
