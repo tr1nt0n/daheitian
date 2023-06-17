@@ -341,7 +341,7 @@ trinton.make_music(
     voice=score["percussion 1 voice"],
 )
 
-# percussion 2 music commands
+# percussion 1 music commands
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (3,)),
@@ -363,7 +363,7 @@ trinton.make_music(
         ),
     ),
     trinton.tremolo_command(),
-    voice=score["percussion 3 voice"],
+    voice=score["percussion 2 voice"],
 )
 
 # violin 1 music commands

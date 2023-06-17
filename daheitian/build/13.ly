@@ -1910,7 +1910,7 @@
                                         \<
                                         - \tweak padding #8
                                         - \abjad-solid-line-with-hook
-                                        - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Solo, Growl } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1., Growl } \hspace #0.5 }
                                         - \tweak bound-details.right.padding -2
                                         \startTextSpan
                                         \glissando

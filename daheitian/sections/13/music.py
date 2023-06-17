@@ -261,7 +261,7 @@ trinton.make_music(
     trinton.notehead_bracket_command(),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="Solo, Growl",
+            string="1., Growl",
         ),
         full_string=True,
         padding=8,

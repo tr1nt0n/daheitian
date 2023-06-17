@@ -262,7 +262,7 @@ trinton.make_music(
     voice=score["percussion 1 voice"],
 )
 
-# percussion 1 music commands
+# percussion 2 music commands
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (1,)),
@@ -277,6 +277,7 @@ trinton.make_music(
         )
     ),
     evans.PitchHandler([["bf'", "g''"]]),
+    library.change_lines(lines=5, clef="treble"),
     library.boxed_markup(string="Glockenspiel"),
     trinton.attachment_command(
         attachments=[
@@ -287,10 +288,10 @@ trinton.make_music(
         ],
         selector=trinton.pleaves(),
     ),
-    voice=score["percussion 2 voice"],
+    voice=score["percussion 3 voice"],
 )
 
-# percussion 2 music commands
+# percussion 1 music commands
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (1,)),
@@ -312,7 +313,7 @@ trinton.make_music(
         attachments=[abjad.Dynamic("f"), abjad.LaissezVibrer()],
         selector=trinton.pleaves(),
     ),
-    voice=score["percussion 3 voice"],
+    voice=score["percussion 2 voice"],
 )
 
 # violin 1 music commands

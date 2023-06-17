@@ -1,0 +1,85 @@
+\documentclass[11pt]{report}
+
+\usepackage[T1]{fontenc}
+\usepackage[papersize={9in, 12in}]{geometry}
+\usepackage{tikz}
+\usepackage{xltxtra,fontspec,xunicode}
+\usetikzlibrary{calc}
+\usepackage{xcolor}
+
+\defaultfontfeatures{Scale=MatchLowercase}
+\setromanfont[Numbers=Uppercase]{Bodoni 72 Book}
+\newlength{\drop}
+\parindent=0pt
+
+\begin{document}
+    \begin{titlepage}
+
+        \begin{tikzpicture}[remember picture, overlay]
+            \draw[line width = 1.6pt]
+                ($(current page.north west) + (1in,-1in)$)
+                rectangle
+                ($(current page.south east) + (-1in,1in)$);
+            \draw[line width = 0.4pt]
+                ($(current page.north west) + (1in,-1in) + (2.8pt,-2.8pt)$)
+                rectangle
+                ($(current page.south east) + (-1in,1in) + (-2.8pt,2.8pt)$);
+        \end{tikzpicture}
+
+        \drop=0.1\textheight
+        \centering
+
+        \vspace*{8\baselineskip}
+
+        \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+        \rule{\textwidth}{0.4pt}\\[\baselineskip]
+        {
+            \fontsize{0.77cm}{1em}\selectfont
+          \textcolor{lightgray}{\hspace{10mm} D À \hspace{20mm} H Ē I \hspace{16mm} T I Ā N} \\
+            \fontsize{3cm}{1em}\selectfont
+            \setmainfont{QIJIFALLBACK}\selectfont
+		大\hspace{13mm}黑\hspace{13mm}天
+        }
+        \rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+        \rule{\textwidth}{1.6pt}\\[\baselineskip]
+        
+
+        \vspace*{1\baselineskip}
+
+        {
+            \itshape
+            für
+        }
+        {
+            \huge
+            O R C H E S T E R
+            \par
+        }
+        
+        \vspace*{2\baselineskip}
+        
+        {
+            \Large
+            VIOLONCELLI
+            \par
+        }
+        
+        \vspace*{12\baselineskip}
+        
+        {
+            \huge
+            T R I N T O N \hspace{2mm} H L Y N N
+            \par
+        }
+
+        \vspace*{4\baselineskip}
+
+        {
+            \huge
+            2022 - 2024
+        }
+
+        \vfill
+
+    \end{titlepage}
+\end{document}

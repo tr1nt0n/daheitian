@@ -540,14 +540,13 @@
                             {
                                 \context Voice = "percussion 2 voice"
                                 {
-                                    \key ef \major
+                                    \staff-line-count 1
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
-                                    \clef "treble"
-                                    <bf' g''>4.
+                                    \clef "percussion"
+                                    c'4.
                                     \f
                                     \laissezVibrer
-                                    \boxed-markup "Glockenspiel" 1
                                     r4.
                                     r4
                                       %! +SCORE
@@ -577,13 +576,15 @@
                             {
                                 \context Voice = "percussion 3 voice"
                                 {
-                                    \staff-line-count 1
+                                    \staff-line-count 5
+                                    \key ef \major
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
-                                    \clef "percussion"
-                                    c'4.
+                                    \clef "treble"
+                                    <bf' g''>4.
                                     \f
                                     \laissezVibrer
+                                    \boxed-markup "Glockenspiel" 1
                                     r4.
                                     r4
                                       %! +SCORE

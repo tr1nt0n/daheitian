@@ -51,9 +51,7 @@
                                 \context Voice = "flute voice"
                                 {
                                     \ottava 1
-                                      %! +SCORE
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
-                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
                                     \set fontSize = #-3
                                     g''''64
@@ -601,9 +599,7 @@
                             {
                                 \context Voice = "oboe voice"
                                 {
-                                      %! +SCORE
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
-                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
                                     \afterGrace
                                     R1 * 3/2
@@ -918,9 +914,7 @@
                         {
                             \highest
                             \once \override NoteHead.no-ledgers = ##t
-                              %! +SCORE
                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Hörner in F }
-                              %! +SCORE
                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hn. }
                             \override Staff.Stem.stemlet-length = 0.75
                             c'''8.
@@ -1332,9 +1326,7 @@
                                 \context Voice = "percussion 2 voice"
                                 {
                                     \staff-line-count 5
-                                      %! +SCORE
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
-                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
                                     \clef "bass"
                                     <c' df'>2
@@ -1362,15 +1354,20 @@
                                     R1 * 1/4
                                       %! +SCORE
                                     \stopStaff \startStaff
+                                    r2.
+                                    r8.
+                                    \staff-line-count 1
+                                    \clef "percussion"
+                                    c'8.
+                                    :64
+                                    - \tweak circled-tip ##t
+                                    \<
+                                    ~
+                                    \boxed-markup "Triangel" 1
+                                    c'4.
+                                    :32
                                       %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    \repeatTie
                                 }
                             }
                         }
@@ -1400,20 +1397,15 @@
                                     R1 * 1/4
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                    r2.
-                                    r8.
-                                    \staff-line-count 1
-                                    \clef "percussion"
-                                    c'8.
-                                    :64
-                                    - \tweak circled-tip ##t
-                                    \<
-                                    ~
-                                    \boxed-markup "Triangel" 1
-                                    c'4.
-                                    :32
                                       %! +SCORE
-                                    \repeatTie
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/2
+                                      %! +SCORE
+                                    \stopStaff \startStaff
                                 }
                             }
                         }
