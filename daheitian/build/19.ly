@@ -693,9 +693,9 @@
                                                 \voiceTwo
                                                 r8.
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                as''16
+                                                as'16
                                                 \ff
-                                                - \tweak padding #15
+                                                - \tweak padding #11.5
                                                 - \abjad-solid-line-with-hook
                                                 - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Slaptongue } \hspace #0.5 }
                                                 - \tweak bound-details.right.padding -2
@@ -708,7 +708,7 @@
                                             {
                                                 r32
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''32
+                                                a'32
                                                 \pp
                                                 ^ \markup \center-column { \circle 1 }
                                                 r16.
@@ -719,11 +719,11 @@
                                             {
                                                 r32
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''32
+                                                a'32
                                                 ^ \markup \center-column { \circle 3 }
                                                 r16
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''32
+                                                a'32
                                                 ^ \markup \center-column { \circle 1 }
                                             }
                                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 5 0))
@@ -731,7 +731,7 @@
                                             {
                                                 r8
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                as''32
+                                                as'32
                                                 \ff
                                             }
                                             \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 5 0))
@@ -739,7 +739,7 @@
                                             {
                                                 r16
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''32
+                                                a'32
                                                 \mp
                                                 ^ \markup \center-column { \circle 2 }
                                                 r16
@@ -749,7 +749,7 @@
                                             {
                                                 r8
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''16
+                                                a'16
                                                 ^ \markup \center-column { \circle 3 }
                                                 r8
                                             }
@@ -757,7 +757,7 @@
                                             \times 4/5
                                             {
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                as''32
+                                                as'32
                                                 \ff
                                                 r8
                                             }
@@ -766,18 +766,18 @@
                                             \times 6/5
                                             {
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''32
+                                                a'32
                                                     _ #(make-dynamic-script (markup #:whiteout #:italic "mp +"))
                                                 ^ \markup \center-column { \circle 3 }
                                                 r16
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''32
+                                                a'32
                                                 ^ \markup \center-column { \circle 1 }
                                                 r32
                                             }
                                             r8.
                                             \once \override Staff.Accidental.stencil = ##f
-                                            a''16
+                                            a'16
                                             ^ \markup \center-column { \circle 3 }
                                             r16
                                             \tweak text #tuplet-number::calc-fraction-text
@@ -786,7 +786,7 @@
                                             {
                                                 r16
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                as''16
+                                                as'16
                                                 \ff
                                                 r8.
                                             }
@@ -795,12 +795,12 @@
                                             {
                                                 r8
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''8
+                                                a'8
                                                 \mf
                                                 ^ \markup \center-column { \circle 3 }
                                                 r4
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''8
+                                                a'8
                                                 ^ \markup \center-column { \circle 1 }
                                             }
                                             \tweak text #tuplet-number::calc-fraction-text
@@ -809,12 +809,12 @@
                                             {
                                                 r4
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                as''16
+                                                as'16
                                                 \ff
                                             }
                                             r8
                                             \once \override Staff.Accidental.stencil = ##f
-                                            a''16
+                                            a'16
                                             \mf
                                             ^ \markup \center-column { \circle 1 }
                                             r8
@@ -824,12 +824,12 @@
                                             {
                                                 r8
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''16
+                                                a'16
                                                 ^ \markup \center-column { \circle 3 }
                                                 r8
                                             }
                                             \once \override Staff.Accidental.stencil = ##f
-                                            a''16
+                                            a'16
                                             ^ \markup \center-column { \circle 1 }
                                             r8
                                             r8
@@ -837,11 +837,11 @@
                                             \times 4/5
                                             {
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                as''16
+                                                as'16
                                                 \ff
                                                 r8
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''16
+                                                a'16
                                                 \f
                                                 ^ \markup \center-column { \circle 1 }
                                                 r16
@@ -851,7 +851,7 @@
                                             {
                                                 r4.
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''8
+                                                a'8
                                                 ^ \markup \center-column { \circle 3 }
                                                 r8
                                             }
@@ -860,7 +860,7 @@
                                             {
                                                 r32
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                as''32
+                                                as'32
                                                 \ff
                                                 r16.
                                             }
@@ -870,12 +870,12 @@
                                             {
                                                 r16
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''16
+                                                a'16
                                                 \f
                                                 ^ \markup \center-column { \circle 3 }
                                                 r8
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''16
+                                                a'16
                                                 ^ \markup \center-column { \circle 2 }
                                             }
                                         }
@@ -899,10 +899,10 @@
                                                 \set stemLeftBeamCount = 1
                                                   %! rmakers.beam_groups()
                                                 \set stemRightBeamCount = 2
-                                                as''16
+                                                as'16
                                                 - \accent
                                                 ^ \markup \center-column { \circle 3 }
-                                                - \tweak padding #15
+                                                - \tweak padding #11.5
                                                 - \abjad-solid-line-with-hook
                                                 - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Slaptongue } \hspace #0.5 }
                                                 - \tweak bound-details.right.padding -2
@@ -935,7 +935,7 @@
                                                 \set stemLeftBeamCount = 3
                                                   %! rmakers.beam_groups()
                                                 \set stemRightBeamCount = 1
-                                                as''32
+                                                as'32
                                                 - \accent
                                                 ^ \markup \center-column { \circle 3 }
                                             }
@@ -961,7 +961,7 @@
                                                 \set stemLeftBeamCount = 1
                                                   %! rmakers.beam_groups()
                                                 \set stemRightBeamCount = 3
-                                                as''32
+                                                as'32
                                                 - \accent
                                                 ^ \markup \center-column { \circle 2 }
                                                 s8
@@ -988,7 +988,7 @@
                                                 \set stemLeftBeamCount = 2
                                                   %! rmakers.beam_groups()
                                                 \set stemRightBeamCount = 1
-                                                as''16
+                                                as'16
                                                 - \accent
                                                 ^ \markup \center-column { \circle 2 }
                                                 s8.
@@ -1011,7 +1011,7 @@
                                                 \set stemLeftBeamCount = 0
                                                   %! rmakers.beam_groups()
                                                 \set stemRightBeamCount = 2
-                                                as''16
+                                                as'16
                                                 - \accent
                                                 ^ \markup \center-column { \circle 3 }
                                             }
@@ -1037,7 +1037,7 @@
                                                 \set stemLeftBeamCount = 1
                                                   %! rmakers.beam_groups()
                                                 \set stemRightBeamCount = 2
-                                                as''16
+                                                as'16
                                                 - \accent
                                                 ^ \markup \center-column { \circle 3 }
                                                 s8
@@ -1060,7 +1060,7 @@
                                                 \set stemLeftBeamCount = 3
                                                   %! rmakers.beam_groups()
                                                 \set stemRightBeamCount = 2
-                                                as''32
+                                                as'32
                                                 - \accent
                                                 ^ \markup \center-column { \circle 2 }
                                                 s16.
@@ -1088,21 +1088,21 @@
                                             {
                                                 \once \override Staff.Accidental.stencil = ##f
                                                 \voiceTwo
-                                                as''8
+                                                as'8
                                                 \ffff
                                                 [
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''8
+                                                a'8
                                                 \ff
                                                 ^ \markup \center-column { \circle 1 }
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''8
+                                                a'8
                                                 ^ \markup \center-column { \circle 3 }
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''8
+                                                a'8
                                                 ^ \markup \center-column { \circle 1 }
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                as''8
+                                                as'8
                                                 \ffff
                                             }
                                             \tweak text #tuplet-number::calc-fraction-text
@@ -1110,21 +1110,21 @@
                                             \times 9/10
                                             {
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''8
+                                                a'8
                                                 \ff
                                                 ^ \markup \center-column { \circle 2 }
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''8
+                                                a'8
                                                 ^ \markup \center-column { \circle 3 }
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                as''8
+                                                as'8
                                                 \ffff
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''8
+                                                a'8
                                                 \ff
                                                 ^ \markup \center-column { \circle 3 }
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''8
+                                                a'8
                                                 ^ \markup \center-column { \circle 1 }
                                             }
                                             \tweak text #tuplet-number::calc-fraction-text
@@ -1132,20 +1132,20 @@
                                             \times 9/10
                                             {
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''8
+                                                a'8
                                                 ^ \markup \center-column { \circle 3 }
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                as''8
+                                                as'8
                                                 \ffff
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''8
+                                                a'8
                                                 \ff
                                                 ^ \markup \center-column { \circle 3 }
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                a''8
+                                                a'8
                                                 ^ \markup \center-column { \circle 1 }
                                                 \once \override Staff.Accidental.stencil = ##f
-                                                as''8
+                                                as'8
                                                 \ffff
                                                 \stopTextSpan
                                                 ]
@@ -1168,7 +1168,7 @@
                                                   %! rmakers.beam_groups()
                                                 \set stemRightBeamCount = 1
                                                 \voiceOne
-                                                as''8
+                                                as'8
                                                 - \accent
                                                 ^ \markup \center-column { \circle 3 }
                                                   %! rmakers.beam_groups()
@@ -1181,7 +1181,7 @@
                                                 \set stemLeftBeamCount = 1
                                                   %! rmakers.beam_groups()
                                                 \set stemRightBeamCount = 1
-                                                as''8
+                                                as'8
                                                 - \accent
                                                 ^ \markup \center-column { \circle 3 }
                                             }
@@ -1196,7 +1196,7 @@
                                                 \set stemLeftBeamCount = 1
                                                   %! rmakers.beam_groups()
                                                 \set stemRightBeamCount = 1
-                                                as''8
+                                                as'8
                                                 - \accent
                                                 ^ \markup \center-column { \circle 2 }
                                                 s8
@@ -1212,7 +1212,7 @@
                                                 \set stemLeftBeamCount = 1
                                                   %! rmakers.beam_groups()
                                                 \set stemRightBeamCount = 1
-                                                as''8
+                                                as'8
                                                 - \accent
                                                 ^ \markup \center-column { \circle 2 }
                                                 s8
@@ -1222,7 +1222,7 @@
                                                 \set stemLeftBeamCount = 1
                                                   %! rmakers.beam_groups()
                                                 \set stemRightBeamCount = 0
-                                                as''8
+                                                as'8
                                                 - \accent
                                                 ^ \markup \center-column { \circle 3 }
                                                 \stopTextSpan

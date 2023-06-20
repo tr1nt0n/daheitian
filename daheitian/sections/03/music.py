@@ -48,13 +48,13 @@ trinton.make_music(
         selector=library._klavierubung_selectors[2]["bassclarinet voice"]
     ),
     rmakers.rewrite_dots,
-    evans.PitchHandler(["a''"]),
+    evans.PitchHandler(["a'"]),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
             string="Slaptongue",
         ),
         full_string=True,
-        padding=8.5,
+        padding=7,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=2,
@@ -63,6 +63,13 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[abjad.Dynamic("mp")],
         selector=trinton.select_leaves_by_index([0], pitched=True),
+    ),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.LilyPondLiteral(r"\override Stem.direction = #DOWN", "before"),
+            abjad.LilyPondLiteral(r"\revert Stem.direction", "after"),
+        ],
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
     ),
     trinton.notehead_bracket_command(),
     voice=score["bassclarinet voice"],
