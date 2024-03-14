@@ -312,7 +312,6 @@ map = trinton.logistic_map(
     x=4,
     r=-1,
     n=12,
-    seed=2,
 )
 
 map = eval("""[i for i in map if i > 1]""")
@@ -732,6 +731,12 @@ _fundamental_to_multiphonic = {
     "bqs' hspace": abjad.Markup(
         r"\markup \hspace #1.5 \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (two three five six)) (lh . (gis)) (rh . (c))) }",
     ),
+}
+
+_fundamental_to_cluster = {
+    "cqs,": abjad.Cluster("d,16 <f, a, c>16 e16"),
+    "d": abjad.Cluster("d16 <f a c'>16 e'16"),
+    "bqs'": "bqs'",
 }
 
 _klavierubung_selectors = {

@@ -591,11 +591,7 @@ trinton.make_music(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (6,)),
-    evans.PitchHandler(
-        [
-            "d",
-        ]
-    ),
+    evans.PitchHandler(["d"]),
     trinton.attachment_command(
         attachments=[
             abjad.Clef("bass"),

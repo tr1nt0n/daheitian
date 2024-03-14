@@ -464,7 +464,7 @@ trinton.make_music(
     ),
     trinton.tremolo_command(selector=trinton.select_leaves_by_index([0, -1])),
     library.boxed_markup(
-        string="Molto flaut., Doppelgriff",
+        string="Molto flaut., Divisi",
     ),
     library.boxed_markup(
         string="( sim )", selector=trinton.select_leaves_by_index([-1])
@@ -604,7 +604,7 @@ trinton.make_music(
     ),
     trinton.tremolo_command(selector=trinton.select_leaves_by_index([0, -1])),
     library.boxed_markup(
-        string="Molto flaut., Doppelgriff",
+        string="Molto flaut., Divisi",
     ),
     library.boxed_markup(
         string="( sim )", selector=trinton.select_leaves_by_index([-1])
