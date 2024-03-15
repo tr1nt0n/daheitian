@@ -50,7 +50,7 @@ trinton.fermata_measures(
         0,
     ],
     font_size="15",
-    fermata="ushortfermata",
+    fermata="short-fermata",
     blank=False,
     clef_whitespace=False,
 )

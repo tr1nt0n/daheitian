@@ -297,7 +297,7 @@ trinton.fermata_measures(
     measures=[
         1,
     ],
-    fermata="uverylongfermata",
+    fermata="very-long-fermata",
     font_size="15",
     blank=False,
 )
@@ -307,7 +307,7 @@ trinton.fermata_measures(
     measures=[
         0,
     ],
-    fermata="ulongfermata",
+    fermata="long-fermata",
     font_size="15",
     blank=False,
 )

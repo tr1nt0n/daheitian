@@ -63,8 +63,8 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (5, 16)),
     evans.RhythmHandler(evans.tuplet([(-1,), (7, 2, 1)])),
     rmakers.rewrite_dots,
-    rmakers.force_augmentation,
     evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler(["bqs"]),
     trinton.notehead_bracket_command(),
     library.ring_mod_attachments(dynamics=["pp +", "pp"]),
@@ -114,6 +114,7 @@ trinton.make_music(
     ),
     rmakers.rewrite_dots,
     evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler(
         [
             fractions.Fraction(31, -4),
@@ -788,7 +789,7 @@ trinton.fermata_measures(
     measures=[
         1,
     ],
-    fermata="uverylongfermata",
+    fermata="very-long-fermata",
     font_size="15",
     blank=False,
     clef_whitespace=False,
@@ -802,7 +803,7 @@ trinton.make_music(
                 abjad.Markup(
                     r"""\markup \fontsize #0.75 \override #'(font-name . "Bodoni72 Book Italic") \center-column { \line { ( bis Klavierresonanz } \line { \underline {fast} aufhört ) } }"""
                 ),
-                r"- \tweak padding #-11",
+                r"- \tweak padding #-13",
             ),
         ],
         selector=trinton.select_leaves_by_index([0]),

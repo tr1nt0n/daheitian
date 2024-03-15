@@ -39,6 +39,7 @@ trinton.make_music(
     ),
     rmakers.rewrite_dots,
     evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler(["a'"]),
     trinton.pitch_with_selector_command(
         pitch_list=["as'"],
@@ -97,6 +98,7 @@ trinton.make_music(
     ),
     rmakers.rewrite_dots,
     evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler(["a'"]),
     trinton.pitch_with_selector_command(
         pitch_list=["as'"],
@@ -181,6 +183,7 @@ trinton.make_music(
     trinton.force_note(selector=library._klavierubung_selectors[2]["bassoon voice"]),
     trinton.treat_tuplets(),
     evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler([-13]),
     trinton.pitch_with_selector_command(
         pitch_list=[-14],
@@ -256,6 +259,7 @@ trinton.make_music(
     ),
     rmakers.rewrite_dots,
     evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler([-13]),
     trinton.pitch_with_selector_command(
         pitch_list=[-14],
@@ -370,6 +374,7 @@ trinton.make_music(
         ),
     ),
     rmakers.rewrite_dots,
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler(library.piano_kb_pitches()),
     trinton.attachment_command(
         attachments=[abjad.Articulation("stopped")],
@@ -378,18 +383,22 @@ trinton.make_music(
     trinton.linear_attachment_command(
         attachments=[
             abjad.Clef("treble"),
+            abjad.LilyPondLiteral(r"\override Staff.DynamicLineSpanner.padding = #6", site="before"),
             abjad.Dynamic("pp"),
             abjad.StartHairpin("<"),
             abjad.Dynamic("mp"),
             abjad.StartHairpin("<"),
+            abjad.LilyPondLiteral(r"\revert Staff.DynamicLineSpanner.padding", site="absolute_after"),
         ],
         selector=trinton.select_leaves_by_index(
             [
                 0,
                 0,
                 0,
+                0,
                 21,
                 21,
+                -1
             ]
         ),
     ),
@@ -434,6 +443,7 @@ trinton.make_music(
         ),
     ),
     rmakers.rewrite_dots,
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler(library.piano_kb_pitches(28)),
     trinton.attachment_command(
         attachments=[abjad.Articulation("stopped")],
@@ -503,13 +513,7 @@ trinton.make_music(
                 r"\once \override TupletBracket.direction = #UP", "before"
             ),
         ],
-        selector=trinton.select_tuplets_by_index(
-            [
-                0,
-                1,
-                2,
-            ]
-        ),
+        selector=abjad.select.tuplets
     ),
     trinton.attachment_command(
         attachments=[
@@ -517,12 +521,7 @@ trinton.make_music(
                 r"\once \override TupletBracket.padding = -8", "before"
             )
         ],
-        selector=trinton.select_tuplets_by_index(
-            [
-                0,
-            ]
-        ),
-        tag=abjad.Tag("+SCORE"),
+        selector=trinton.select_tuplets_by_index([0])
     ),
     trinton.notehead_bracket_command(),
     voice=score["piano 1 voice"],
@@ -696,6 +695,7 @@ trinton.make_music(
         selector=library._klavierubung_selectors[2]["percussion 3 voice"]
     ),
     rmakers.rewrite_dots,
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.RewriteMeterCommand(boundary_depth=-2),
     trinton.pitch_with_selector_command(
         pitch_list=[1],
@@ -748,6 +748,7 @@ trinton.make_music(
         evans.tuplet([(1, 1)]),
     ),
     rmakers.rewrite_dots,
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.RewriteMeterCommand(boundary_depth=-2),
     trinton.pitch_with_selector_command(
         pitch_list=[1],
@@ -968,7 +969,7 @@ trinton.fermata_measures(
     measures=[
         29,
     ],
-    fermata="uverylongfermata",
+    fermata="very-long-fermata",
     font_size="15",
     blank=False,
     clef_whitespace=False,
@@ -1006,7 +1007,7 @@ trinton.make_music(
                 abjad.Markup(
                     r"""\markup \fontsize #0.75 \override #'(font-name . "Bodoni72 Book Italic") \center-column { \line { ( bis Klavierresonanz aufhört,} \line { "dann + ~2\" zusätzliche Stille" ) } }"""
                 ),
-                r"- \tweak padding #-10.5",
+                r"- \tweak padding #-12",
             ),
             abjad.BarLine("||", site="after"),
         ],

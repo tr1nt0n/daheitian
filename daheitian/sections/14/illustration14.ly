@@ -57,8 +57,9 @@
             \once \override Score.TimeSignature.stencil = ##f
             \time 1/4
             R1 * 1/4
+            - \tweak font-size #'15
+            _ \very-long-fermata
             ^ \markup \override #'(font-name . "Bodoni72 Book") \center-column { \line { \fontsize #7.5 { "18" } \fontsize #3 { \fraction 1 2 } \fontsize #7.5 { "\"" } } }
-            _ \markup \center-column { \abs-fontsize #15 \musicglyph "scripts.uverylongfermata" }
             \once \override Score.BarLine.transparent = ##f
             \once \override Score.BarLine.transparent = ##f
             \once \override MultiMeasureRest.transparent = ##t
@@ -66,7 +67,8 @@
             \once \override Score.TimeSignature.stencil = ##f
             \time 1/4
             R1 * 1/4
-            _ \markup \center-column { \abs-fontsize #15 \musicglyph "scripts.ushortfermata" }
+            - \tweak font-size #'15
+            _ \short-fermata
             \break
             \once \override Score.BarLine.transparent = ##f
         }
@@ -85,6 +87,7 @@
                                 \context Voice = "flute voice"
                                 {
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
                                     cs''4.
                                     :32
@@ -739,10 +742,26 @@
                                     r16
                                     r16
                                     r16
-                                    bqs'16
+                                    \once \override NoteHead.X-offset = 0
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >16
                                     - \marcato
                                     \ff
-                                    - \tweak padding #8.5
+                                    - \tweak padding #10.5
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \hspace #1.5 \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (two three five six)) (lh . (gis)) (rh . (c))) } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -1.5
@@ -752,7 +771,23 @@
                                     r16
                                     [
                                     r16
-                                    bqs'16
+                                    \once \override NoteHead.X-offset = 0
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >16
                                     - \marcato
                                     \stopTextSpan
                                     r16
@@ -831,6 +866,7 @@
                                         \context Voice = "bassclarinet voice temp"
                                         {
                                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bassklarinetten }
+                                              %! +SCORE
                                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { bkl. }
                                             \textSpannerDown
                                             \voiceTwo
@@ -1317,10 +1353,27 @@
                                     r16
                                     [
                                     r16
+                                    \once \override NoteHead.X-offset = 0
                                     \clef "bass"
-                                    d16
+                                    <
+                                        \tweak style #'la
+                                        d
+                                        \tweak style #'la
+                                        e
+                                        \tweak style #'la
+                                        f
+                                        \tweak style #'la
+                                        g
+                                        \tweak style #'la
+                                        a
+                                        \tweak style #'la
+                                        b
+                                        \tweak style #'la
+                                        c'
+                                    >16
                                     - \marcato
                                     \ff
+                                    - \tweak padding #1
                                     ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) }
                                     r16
                                     r16
@@ -2483,6 +2536,7 @@
                                 {
                                     \ottava 1
                                     \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
+                                      %! +SCORE
                                     \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
                                     <a''' bf''' ds'''' e'''' fs''''>2
                                     :32

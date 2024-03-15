@@ -77,6 +77,7 @@ trinton.make_music(
         )
     ),
     evans.PitchHandler([24]),
+    trinton.respell_tuplets_command(),
     trinton.notehead_bracket_command(),
     library.horn_monolith_attachments(),
     trinton.attachment_command(
@@ -182,6 +183,7 @@ trinton.make_music(
             ]
         )
     ),
+    trinton.respell_tuplets_command(),
     evans.PitchHandler([["c'", "df'"]]),
     trinton.linear_attachment_command(
         attachments=[
@@ -327,7 +329,7 @@ trinton.fermata_measures(
     measures=[
         5,
     ],
-    fermata="uverylongfermata",
+    fermata="very-long-fermata",
     font_size="15",
     last_measure=True,
 )

@@ -29,7 +29,8 @@
             \once \override Score.TimeSignature.stencil = ##f
             \time 1/4
             R1 * 1/4
-            _ \markup \center-column { \abs-fontsize #15 \musicglyph "scripts.ulongfermata" }
+            - \tweak font-size #'15
+            _ \long-fermata
             \once \override Score.BarLine.transparent = ##f
         }
         \tag #'group1
@@ -53,6 +54,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
                                       %! +SCORE
@@ -62,6 +65,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -70,6 +75,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
@@ -80,6 +87,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -88,6 +97,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4
@@ -104,14 +115,31 @@
                                 {
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 2 0))
-                                    \times 12/16
+                                    \times 3/4
                                     {
+                                        \once \override NoteHead.X-offset = 0
                                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
-                                        \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
-                                        bqs'2
+                                          %! +SCORE
+                                    %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
+                                        <
+                                            \tweak style #'la
+                                            b'
+                                            \tweak style #'la
+                                            c''
+                                            \tweak style #'la
+                                            d''
+                                            \tweak style #'la
+                                            e''
+                                            \tweak style #'la
+                                            f''
+                                            \tweak style #'la
+                                            g''
+                                            \tweak style #'la
+                                            a''
+                                        >2
                                         - \tweak circled-tip ##t
                                         _ \<
-                                        - \tweak padding #9
+                                        - \tweak padding #10.5
                                         - \abjad-solid-line-with-hook
                                         - \tweak bound-details.left.text \markup \concat { \hspace #1.5 \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (two three five six)) (lh . (gis)) (rh . (c))) } \hspace #0.5 }
                                         - \tweak bound-details.right.padding -1.5
@@ -119,6 +147,7 @@
                                           %! abjad.glissando(7)
                                         \glissando
                                         \once \override Dots.staff-position = #2
+                                        \once \override NoteHead.X-offset = 0
                                           %! abjad.glissando(1)
                                         \hide NoteHead
                                           %! abjad.glissando(1)
@@ -127,10 +156,26 @@
                                         \override NoteColumn.glissando-skip = ##t
                                           %! abjad.glissando(1)
                                         \override NoteHead.no-ledgers = ##t
-                                        bqs'4..
+                                        <
+                                            \tweak style #'la
+                                            b'
+                                            \tweak style #'la
+                                            c''
+                                            \tweak style #'la
+                                            d''
+                                            \tweak style #'la
+                                            e''
+                                            \tweak style #'la
+                                            f''
+                                            \tweak style #'la
+                                            g''
+                                            \tweak style #'la
+                                            a''
+                                        >4..
                                             _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                         - \tweak circled-tip ##t
                                         _ \>
+                                        \once \override NoteHead.X-offset = 0
                                           %! abjad.glissando(6)
                                         \revert Accidental.stencil
                                           %! abjad.glissando(6)
@@ -139,16 +184,48 @@
                                         \revert NoteHead.no-ledgers
                                           %! abjad.glissando(6)
                                         \undo \hide NoteHead
-                                        bqs'16
+                                        <
+                                            \tweak style #'la
+                                            b'
+                                            \tweak style #'la
+                                            c''
+                                            \tweak style #'la
+                                            d''
+                                            \tweak style #'la
+                                            e''
+                                            \tweak style #'la
+                                            f''
+                                            \tweak style #'la
+                                            g''
+                                            \tweak style #'la
+                                            a''
+                                        >16
                                         \!
                                     }
-                                    bqs'8
+                                    \once \override NoteHead.X-offset = 0
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >8
                                     [
                                     - \tweak circled-tip ##t
                                     _ \<
                                       %! abjad.glissando(7)
                                     \glissando
                                     \once \override Dots.staff-position = #2
+                                    \once \override NoteHead.X-offset = 0
                                       %! abjad.glissando(1)
                                     \hide NoteHead
                                       %! abjad.glissando(1)
@@ -157,10 +234,26 @@
                                     \override NoteColumn.glissando-skip = ##t
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
-                                    bqs'16..
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >16..
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                     - \tweak circled-tip ##t
                                     _ \>
+                                    \once \override NoteHead.X-offset = 0
                                       %! abjad.glissando(6)
                                     \revert Accidental.stencil
                                       %! abjad.glissando(6)
@@ -169,10 +262,41 @@
                                     \revert NoteHead.no-ledgers
                                       %! abjad.glissando(6)
                                     \undo \hide NoteHead
-                                    bqs'64
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >64
                                     \!
                                     ]
-                                    bqs'8
+                                    \once \override NoteHead.X-offset = 0
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >8
                                     [
                                     - \tweak circled-tip ##t
                                     _ \<
@@ -188,10 +312,27 @@
                                     \override NoteHead.no-ledgers = ##t
                                     bqs'8
                                     \once \override Dots.staff-position = #2
-                                    bqs'8..
+                                    \once \override NoteHead.X-offset = 0
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >8..
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                     - \tweak circled-tip ##t
                                     _ \>
+                                    \once \override NoteHead.X-offset = 0
                                       %! abjad.glissando(6)
                                     \revert Accidental.stencil
                                       %! abjad.glissando(6)
@@ -200,16 +341,48 @@
                                     \revert NoteHead.no-ledgers
                                       %! abjad.glissando(6)
                                     \undo \hide NoteHead
-                                    bqs'32
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >32
                                     \!
                                     ]
-                                    bqs'8
+                                    \once \override NoteHead.X-offset = 0
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >8
                                     [
                                     - \tweak circled-tip ##t
                                     _ \<
                                       %! abjad.glissando(7)
                                     \glissando
                                     \once \override Dots.staff-position = #2
+                                    \once \override NoteHead.X-offset = 0
                                       %! abjad.glissando(1)
                                     \hide NoteHead
                                       %! abjad.glissando(1)
@@ -218,10 +391,26 @@
                                     \override NoteColumn.glissando-skip = ##t
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
-                                    bqs'16..
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >16..
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                     - \tweak circled-tip ##t
                                     _ \>
+                                    \once \override NoteHead.X-offset = 0
                                       %! abjad.glissando(6)
                                     \revert Accidental.stencil
                                       %! abjad.glissando(6)
@@ -230,19 +419,51 @@
                                     \revert NoteHead.no-ledgers
                                       %! abjad.glissando(6)
                                     \undo \hide NoteHead
-                                    bqs'64
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >64
                                     \!
                                     ]
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 2 0))
-                                    \times 12/16
+                                    \times 3/4
                                     {
-                                        bqs'2
+                                        \once \override NoteHead.X-offset = 0
+                                        <
+                                            \tweak style #'la
+                                            b'
+                                            \tweak style #'la
+                                            c''
+                                            \tweak style #'la
+                                            d''
+                                            \tweak style #'la
+                                            e''
+                                            \tweak style #'la
+                                            f''
+                                            \tweak style #'la
+                                            g''
+                                            \tweak style #'la
+                                            a''
+                                        >2
                                         - \tweak circled-tip ##t
                                         _ \<
                                           %! abjad.glissando(7)
                                         \glissando
                                         \once \override Dots.staff-position = #2
+                                        \once \override NoteHead.X-offset = 0
                                           %! abjad.glissando(1)
                                         \hide NoteHead
                                           %! abjad.glissando(1)
@@ -251,10 +472,26 @@
                                         \override NoteColumn.glissando-skip = ##t
                                           %! abjad.glissando(1)
                                         \override NoteHead.no-ledgers = ##t
-                                        bqs'4..
+                                        <
+                                            \tweak style #'la
+                                            b'
+                                            \tweak style #'la
+                                            c''
+                                            \tweak style #'la
+                                            d''
+                                            \tweak style #'la
+                                            e''
+                                            \tweak style #'la
+                                            f''
+                                            \tweak style #'la
+                                            g''
+                                            \tweak style #'la
+                                            a''
+                                        >4..
                                             _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                         - \tweak circled-tip ##t
                                         _ \>
+                                        \once \override NoteHead.X-offset = 0
                                           %! abjad.glissando(6)
                                         \revert Accidental.stencil
                                           %! abjad.glissando(6)
@@ -263,16 +500,48 @@
                                         \revert NoteHead.no-ledgers
                                           %! abjad.glissando(6)
                                         \undo \hide NoteHead
-                                        bqs'16
+                                        <
+                                            \tweak style #'la
+                                            b'
+                                            \tweak style #'la
+                                            c''
+                                            \tweak style #'la
+                                            d''
+                                            \tweak style #'la
+                                            e''
+                                            \tweak style #'la
+                                            f''
+                                            \tweak style #'la
+                                            g''
+                                            \tweak style #'la
+                                            a''
+                                        >16
                                         \!
                                     }
-                                    bqs'8
+                                    \once \override NoteHead.X-offset = 0
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >8
                                     [
                                     - \tweak circled-tip ##t
                                     _ \<
                                       %! abjad.glissando(7)
                                     \glissando
                                     \once \override Dots.staff-position = #2
+                                    \once \override NoteHead.X-offset = 0
                                       %! abjad.glissando(1)
                                     \hide NoteHead
                                       %! abjad.glissando(1)
@@ -281,10 +550,26 @@
                                     \override NoteColumn.glissando-skip = ##t
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
-                                    bqs'16..
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >16..
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                     - \tweak circled-tip ##t
                                     _ \>
+                                    \once \override NoteHead.X-offset = 0
                                       %! abjad.glissando(6)
                                     \revert Accidental.stencil
                                       %! abjad.glissando(6)
@@ -293,15 +578,47 @@
                                     \revert NoteHead.no-ledgers
                                       %! abjad.glissando(6)
                                     \undo \hide NoteHead
-                                    bqs'64
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >64
                                     \!
                                     ]
-                                    bqs'4
+                                    \once \override NoteHead.X-offset = 0
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >4
                                     - \tweak circled-tip ##t
                                     _ \<
                                       %! abjad.glissando(7)
                                     \glissando
                                     \once \override Dots.staff-position = #2
+                                    \once \override NoteHead.X-offset = 0
                                       %! abjad.glissando(1)
                                     \hide NoteHead
                                       %! abjad.glissando(1)
@@ -310,11 +627,27 @@
                                     \override NoteColumn.glissando-skip = ##t
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
-                                    bqs'8..
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >8..
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                     [
                                     - \tweak circled-tip ##t
                                     _ \>
+                                    \once \override NoteHead.X-offset = 0
                                       %! abjad.glissando(6)
                                     \revert Accidental.stencil
                                       %! abjad.glissando(6)
@@ -323,16 +656,48 @@
                                     \revert NoteHead.no-ledgers
                                       %! abjad.glissando(6)
                                     \undo \hide NoteHead
-                                    bqs'32
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >32
                                     \!
                                     ]
-                                    bqs'8
+                                    \once \override NoteHead.X-offset = 0
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >8
                                     [
                                     - \tweak circled-tip ##t
                                     _ \<
                                       %! abjad.glissando(7)
                                     \glissando
                                     \once \override Dots.staff-position = #2
+                                    \once \override NoteHead.X-offset = 0
                                       %! abjad.glissando(1)
                                     \hide NoteHead
                                       %! abjad.glissando(1)
@@ -341,10 +706,26 @@
                                     \override NoteColumn.glissando-skip = ##t
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
-                                    bqs'16..
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >16..
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                     - \tweak circled-tip ##t
                                     _ \>
+                                    \once \override NoteHead.X-offset = 0
                                       %! abjad.glissando(6)
                                     \revert Accidental.stencil
                                       %! abjad.glissando(6)
@@ -353,15 +734,47 @@
                                     \revert NoteHead.no-ledgers
                                       %! abjad.glissando(6)
                                     \undo \hide NoteHead
-                                    bqs'64
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >64
                                     \!
                                     ]
-                                    bqs'4
+                                    \once \override NoteHead.X-offset = 0
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >4
                                     - \tweak circled-tip ##t
                                     _ \<
                                       %! abjad.glissando(7)
                                     \glissando
                                     \once \override Dots.staff-position = #2
+                                    \once \override NoteHead.X-offset = 0
                                       %! abjad.glissando(1)
                                     \hide NoteHead
                                       %! abjad.glissando(1)
@@ -370,11 +783,27 @@
                                     \override NoteColumn.glissando-skip = ##t
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
-                                    bqs'8..
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >8..
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "p"))
                                     [
                                     - \tweak circled-tip ##t
                                     _ \>
+                                    \once \override NoteHead.X-offset = 0
                                       %! abjad.glissando(6)
                                     \revert Accidental.stencil
                                       %! abjad.glissando(6)
@@ -383,7 +812,22 @@
                                     \revert NoteHead.no-ledgers
                                       %! abjad.glissando(6)
                                     \undo \hide NoteHead
-                                    bqs'32
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >32
                                     \!
                                     \stopTextSpan
                                     ]
@@ -392,6 +836,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4
@@ -413,6 +859,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
                                       %! +SCORE
@@ -422,6 +870,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -430,6 +880,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
@@ -440,6 +892,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -448,6 +902,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4
@@ -469,6 +925,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
                                       %! +SCORE
@@ -478,6 +936,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -486,6 +946,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
@@ -496,6 +958,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -504,6 +968,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4
@@ -527,6 +993,8 @@
                               %! +SCORE
                         %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
+                        %%% \once \override Staff.TimeSignature.transparent = ##t
+                              %! +SCORE
                         %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 3/2
                               %! +SCORE
@@ -535,6 +1003,8 @@
                         %%% \once \override Staff.BarLine.transparent = ##f
                               %! +SCORE
                         %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                              %! +SCORE
+                        %%% \once \override Staff.TimeSignature.transparent = ##t
                               %! +SCORE
                         %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 3/4
@@ -630,6 +1100,8 @@
                               %! +SCORE
                         %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
+                        %%% \once \override Staff.TimeSignature.transparent = ##t
+                              %! +SCORE
                         %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 1/4
                               %! +SCORE
@@ -654,6 +1126,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
                                       %! +SCORE
@@ -662,6 +1136,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
@@ -708,6 +1184,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4
                                       %! +SCORE
@@ -728,6 +1206,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
                                       %! +SCORE
@@ -736,6 +1216,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
@@ -831,6 +1313,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4
                                       %! +SCORE
@@ -851,6 +1335,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
                                       %! +SCORE
@@ -859,6 +1345,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
@@ -906,6 +1394,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4
                                       %! +SCORE
@@ -932,6 +1422,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
                                       %! +SCORE
@@ -941,6 +1433,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -949,6 +1443,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
@@ -959,6 +1455,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -967,6 +1465,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4
@@ -986,6 +1486,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
                                       %! +SCORE
@@ -995,6 +1497,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -1003,6 +1507,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
@@ -1013,6 +1519,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -1021,6 +1529,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4
@@ -1048,6 +1558,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
                                       %! +SCORE
@@ -1057,6 +1569,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -1065,6 +1579,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
@@ -1075,6 +1591,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -1083,6 +1601,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4
@@ -1102,6 +1622,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
                                       %! +SCORE
@@ -1111,6 +1633,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -1119,6 +1643,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
@@ -1129,6 +1655,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -1137,6 +1665,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4
@@ -1154,7 +1684,8 @@
                         \context Voice = "percussion 1 voice"
                         {
                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Pauken }
-                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pk. }
+                              %! +SCORE
+                        %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pk. }
                             \clef "bass"
                             \afterGrace
                             c1.
@@ -1174,6 +1705,8 @@
                               %! +SCORE
                         %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
+                        %%% \once \override Staff.TimeSignature.transparent = ##t
+                              %! +SCORE
                         %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 3/4
                               %! +SCORE
@@ -1182,6 +1715,8 @@
                         %%% \once \override Staff.BarLine.transparent = ##f
                               %! +SCORE
                         %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                              %! +SCORE
+                        %%% \once \override Staff.TimeSignature.transparent = ##t
                               %! +SCORE
                         %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 1
@@ -1192,6 +1727,8 @@
                               %! +SCORE
                         %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
+                        %%% \once \override Staff.TimeSignature.transparent = ##t
+                              %! +SCORE
                         %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 3/4
                               %! +SCORE
@@ -1200,6 +1737,8 @@
                         %%% \once \override Staff.BarLine.transparent = ##f
                               %! +SCORE
                         %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                              %! +SCORE
+                        %%% \once \override Staff.TimeSignature.transparent = ##t
                               %! +SCORE
                         %%% \once \override MultiMeasureRest.transparent = ##t
                             R1 * 1/4
@@ -1225,6 +1764,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
                                       %! +SCORE
@@ -1234,6 +1775,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -1242,6 +1785,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
@@ -1252,6 +1797,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -1260,6 +1807,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4
@@ -1281,6 +1830,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
                                       %! +SCORE
@@ -1290,6 +1841,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -1298,6 +1851,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1
@@ -1308,6 +1863,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -1316,6 +1873,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4
@@ -1337,7 +1896,8 @@
                                 \context Voice = "violin 1 voice"
                                 {
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
                                     r16
                                     [
                                     r16
@@ -1428,6 +1988,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -1436,6 +1998,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4
@@ -1452,7 +2016,8 @@
                                 {
                                     \staff-line-count 4
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
                                     \clef "percussion"
                                     b16
                                     \ff
@@ -1535,6 +2100,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -1543,6 +2110,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4
@@ -1558,7 +2127,8 @@
                                 \context Voice = "viola voice"
                                 {
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
                                     r4.
                                     \staff-line-count 4
                                     \clef "percussion"
@@ -1632,6 +2202,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -1640,6 +2212,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4
@@ -1655,7 +2229,8 @@
                                 \context Voice = "cello voice"
                                 {
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
                                     r4.
                                     \staff-line-count 4
                                     \clef "percussion"
@@ -1729,6 +2304,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -1737,6 +2314,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4
@@ -1752,7 +2331,8 @@
                                 \context Voice = "contrabass voice"
                                 {
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Kontrabässe }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kb. }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kb. }
                                     \clef "bass"
                                     \afterGrace
                                     a,1.
@@ -1802,6 +2382,8 @@
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -1810,6 +2392,8 @@
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                 %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                 %%% \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/4

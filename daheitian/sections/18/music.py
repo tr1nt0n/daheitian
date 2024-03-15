@@ -110,6 +110,7 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (8,)),
     evans.RhythmHandler(evans.tuplet([(-1, 1)])),
     rmakers.rewrite_dots,
+    trinton.respell_tuplets_command(),
     library.boxed_markup(string="Amboss mit Hämmerchen"),
     library.change_lines(lines=1, clef="percussion"),
     trinton.attachment_command(

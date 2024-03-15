@@ -167,7 +167,7 @@ trinton.make_music(
     beam_meter=True,
 )
 
-# percussion 1
+# percussion 1 music
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (1, 7)),
@@ -202,6 +202,7 @@ trinton.make_music(
     ),
     rmakers.rewrite_dots,
     evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.respell_tuplets_command(),
     library.change_lines(lines=1, clef="percussion"),
     trinton.attachment_command(
         attachments=[abjad.Articulation("stopped")],

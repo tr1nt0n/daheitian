@@ -125,6 +125,7 @@ trinton.make_music(
     ),
     rmakers.rewrite_dots,
     evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.respell_tuplets_command(),
     evans.PitchHandler([-1.5]),
     library.ring_mod_attachments(dynamics=["pppp", "ppp", "ppp", "pp"]),
     trinton.notehead_bracket_command(),
@@ -317,7 +318,7 @@ trinton.fermata_measures(
         0,
     ],
     font_size="15",
-    fermata="uveryshortfermata",
+    fermata="very-short-fermata",
     blank=False,
     clef_whitespace=False,
 )
@@ -330,7 +331,7 @@ trinton.make_music(
                 abjad.Markup(
                     r"""\markup \fontsize #0.75 \override #'(font-name . "Bodoni72 Book Italic") \center-column { \line { ( Ganz kurz, } \line { nur ein Atemzug ) } }"""
                 ),
-                r"- \tweak padding #-14",
+                r"- \tweak padding #-16",
             ),
         ],
         selector=trinton.select_leaves_by_index([0]),

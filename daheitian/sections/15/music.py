@@ -40,6 +40,7 @@ trinton.make_music(
             "bqs'",
         ]
     ),
+    library.attach_multiphonics(repitch_only=True),
     trinton.attachment_command(
         attachments=[abjad.Articulation("marcato")],
         selector=trinton.logical_ties(pitched=True, first=True),
@@ -47,7 +48,7 @@ trinton.make_music(
     trinton.hooked_spanner_command(
         string=library._fundamental_to_multiphonic["bqs' hspace"].string,
         full_string=True,
-        padding=8.5,
+        padding=10.5,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=1.5,
@@ -115,6 +116,7 @@ trinton.make_music(
             "bqs'",
         ]
     ),
+    library.attach_multiphonics(repitch_only=True),
     trinton.attachment_command(
         attachments=[abjad.Articulation("marcato")],
         selector=trinton.logical_ties(pitched=True, first=True),
@@ -133,7 +135,7 @@ trinton.make_music(
     trinton.hooked_spanner_command(
         string=library._fundamental_to_multiphonic["bqs' hspace"].string,
         full_string=True,
-        padding=8.5,
+        padding=10.5,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=1.5,
@@ -276,7 +278,7 @@ trinton.make_music(
         attachments=[abjad.Clef("bass")],
         selector=trinton.select_leaves_by_index([0], pitched=True),
     ),
-    library.attach_multiphonics(),
+    library.attach_multiphonics(padding=3.25),
     trinton.attachment_command(
         attachments=[abjad.Articulation("marcato")],
         selector=trinton.logical_ties(pitched=True, first=True),

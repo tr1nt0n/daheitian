@@ -36,8 +36,9 @@ trinton.make_music(
             extra_counts=[0, 2, 0, -2],
         )
     ),
-    rmakers.force_diminution,
+    # rmakers.force_diminution,
     evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     library.change_lines(lines=1, clef="percussion"),
     trinton.attachment_command(
         attachments=[abjad.Articulation("marcato"), abjad.Articulation("staccato")],
@@ -503,6 +504,7 @@ trinton.make_music(
         )
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler(["e'"]),
     trinton.call_rmaker(
         rmaker=rmakers.beam,
@@ -867,14 +869,14 @@ trinton.make_music(
             ],
         )
     ),
-    trinton.call_rmaker(
-        rmaker=rmakers.force_diminution,
-        selector=trinton.select_tuplets_by_index(
-            [
-                3,
-            ]
-        ),
-    ),
+    # trinton.call_rmaker(
+    #     rmaker=rmakers.force_diminution,
+    #     selector=trinton.select_tuplets_by_index(
+    #         [
+    #             3,
+    #         ]
+    #     ),
+    # ),
     trinton.force_rest(
         selector=trinton.patterned_tie_index_selector(
             [
@@ -884,6 +886,7 @@ trinton.make_music(
         ),
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler(["e''''", "d'''", "fs''''", "gs'''"]),
     library.change_lines(lines=5, clef="treble"),
     library.unpitched_glissandi(trill=True),
@@ -1076,6 +1079,10 @@ trinton.make_music(
                 ),
                 r"- \tweak padding #13",
             ),
+            abjad.LilyPondLiteral(
+                r"\override Staff.DynamicLineSpanner.padding = #6",
+                site="before"
+            ),
         ],
         selector=trinton.select_logical_ties_by_index(
             [
@@ -1084,6 +1091,7 @@ trinton.make_music(
                 -3,
                 -2,
                 -2,
+                -1,
                 -1,
                 -1,
                 -1,
@@ -1147,6 +1155,7 @@ trinton.make_music(
         selector=trinton.patterned_tie_index_selector([5, 6], 11),
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     trinton.pitch_with_selector_command(
         pitch_list=["fs'''", "e''''", "c''''", "d''''", "d'''", "gs'''", "ef''"],
         selector=trinton.ranged_selector(ranges=[range(0, 21)]),
@@ -1167,10 +1176,15 @@ trinton.make_music(
     trinton.linear_attachment_command(
         attachments=[
             abjad.Ottava(n=0),
+            abjad.LilyPondLiteral(
+                r"\revert Staff.DynamicLineSpanner.padding",
+                site="absolute_after"
+            ),
         ],
         selector=trinton.select_logical_ties_by_index(
             [
                 18,
+                -1,
             ],
             first=True,
             pitched=True,
@@ -1323,6 +1337,10 @@ trinton.make_music(
                 ),
                 r"- \tweak padding #10",
             ),
+            abjad.LilyPondLiteral(
+                r"\override Staff.DynamicLineSpanner.padding = #6.5",
+                site="before"
+            ),
         ],
         selector=trinton.select_logical_ties_by_index(
             [
@@ -1332,6 +1350,7 @@ trinton.make_music(
                 -3,
                 -2,
                 -2,
+                -1,
                 -1,
                 -1,
                 -1,
@@ -1391,12 +1410,13 @@ trinton.make_music(
             ],
         )
     ),
-    rmakers.force_diminution,
+    # rmakers.force_diminution,
     trinton.force_rest(
         selector=trinton.patterned_tie_index_selector([4, 5], 9),
     ),
     trinton.treat_tuplets(),
     evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     trinton.pitch_with_selector_command(
         pitch_list=["d'''", "bf'''", "gf'''", "b'''", "a''"],
         selector=trinton.ranged_selector(ranges=[range(0, 23)]),
@@ -1415,11 +1435,16 @@ trinton.make_music(
         selector=trinton.logical_ties(pitched=True, first=True),
     ),
     trinton.linear_attachment_command(
-        attachments=[abjad.Ottava(n=0), abjad.Clef("altovarC")],
+        attachments=[abjad.Ottava(n=0), abjad.Clef("altovarC"),
+        abjad.LilyPondLiteral(
+            r"\revert Staff.DynamicLineSpanner.padding",
+            site="absolute_after"
+        ),],
         selector=trinton.select_logical_ties_by_index(
             [
                 18,
                 46,
+                -1,
             ],
             first=True,
             pitched=True,
@@ -1588,6 +1613,7 @@ trinton.make_music(
         selector=trinton.select_logical_ties_by_index([-1]),
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     trinton.pitch_with_selector_command(
         pitch_list=[5], selector=trinton.select_leaves_by_index([0])
     ),

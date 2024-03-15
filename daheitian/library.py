@@ -734,9 +734,9 @@ _fundamental_to_multiphonic = {
 }
 
 _fundamental_to_cluster = {
-    "cqs,": abjad.Cluster("d,16 <f, a, c>16 e16"),
-    "d": abjad.Cluster("d16 <f a c'>16 e'16"),
-    "bqs'": "bqs'",
+    "cqs,": r"<c, d, e, f, g, a, b,>",
+    "d": r"<d e f g a b c'>",
+    "bqs'": r"<b' c'' d'' e'' f'' g'' a''>",
 }
 
 _klavierubung_selectors = {
@@ -995,6 +995,7 @@ def write_short_instrument_names(score):
             voice=score[voice_name],
             leaves=[0],
             attachment=markup,
+            tag=abjad.Tag("+SCORE")
         )
 
 
@@ -1021,6 +1022,7 @@ def monolith(score, measure):
                 ]
             )
         ),
+        trinton.respell_tuplets_command(),
         evans.PitchHandler([["c'", "df'"]]),
         trinton.linear_attachment_command(
             attachments=[
@@ -1073,6 +1075,7 @@ def monolith(score, measure):
                 ]
             )
         ),
+        trinton.respell_tuplets_command(),
         evans.PitchHandler([24]),
         trinton.notehead_bracket_command(),
         library.horn_monolith_attachments(),
@@ -1293,10 +1296,15 @@ def make_timestamp_markups(global_context):
 
         indicators = abjad.get.indicators(leaf)
 
-        abjad.attach(
+        markup = abjad.bundle(
             abjad.Markup(
                 f"""\markup \override #'(font-name . "Bodoni72 Book") \\fontsize #3 \center-column {{ \"{number}\\\"\" }}""",
             ),
+            r"- \tweak padding #-4"
+        )
+
+        abjad.attach(
+            markup,
             mm_rest,
         )
 
@@ -1490,15 +1498,45 @@ def grace_attachments(selector=trinton.pleaves(), glissando=True):
 
     return attach
 
-
-def attach_multiphonics(selector=trinton.logical_ties(first=True, pitched=True)):
+def attach_multiphonics(selector=trinton.logical_ties(pitched=True), repitch_only=False, padding=1):
     def attach(argument):
         selections = selector(argument)
         for selection in selections:
-            named_pitch = selection.written_pitch.name
-            abjad.attach(
-                _fundamental_to_multiphonic[named_pitch], selection, direction=abjad.UP
+            first_leaf = selection[0]
+            indicators = abjad.get.indicators(first_leaf)
+            named_pitch = first_leaf.written_pitch.name
+            cluster = _fundamental_to_cluster[named_pitch]
+            markup = _fundamental_to_multiphonic[named_pitch]
+            markup = abjad.bundle(
+                markup,
+                rf"- \tweak padding #{padding}"
             )
+            new_chord = abjad.Chord(cluster)
+            new_chord.written_duration = selection.written_duration
+            for indicator in indicators:
+                if isinstance(indicator, abjad.Tie):
+                    pass
+                else:
+                    abjad.attach(indicator, new_chord)
+            for head in new_chord.note_heads:
+                abjad.tweak(head, r"\tweak style #'la")
+            abjad.attach(
+                abjad.LilyPondLiteral(
+                    [
+                        r"\once \override NoteHead.X-offset = 0",
+                        r"\once \override Staff.Accidental.stencil = ##f",
+                    ],
+                    site="before"
+                ),
+                new_chord
+            )
+
+            if repitch_only is False:
+                abjad.attach(
+                    markup, new_chord, direction=abjad.UP
+                )
+
+            abjad.mutate.replace(selection, new_chord)
 
     return attach
 

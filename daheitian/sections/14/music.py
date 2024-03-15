@@ -355,10 +355,11 @@ for measure in [2, 6]:
 trinton.make_music(
     lambda _: trinton.select_target(_, (6,)),
     evans.PitchHandler(["bqs'"]),
+    library.attach_multiphonics(repitch_only=True),
     trinton.hooked_spanner_command(
         string=library._fundamental_to_multiphonic["bqs' hspace"].string,
         full_string=True,
-        padding=8.5,
+        padding=10.5,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=1.5,
@@ -592,13 +593,13 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (6,)),
     evans.PitchHandler(["d"]),
+    library.attach_multiphonics(),
     trinton.attachment_command(
         attachments=[
             abjad.Clef("bass"),
         ],
         selector=trinton.select_leaves_by_index([0], pitched=True),
     ),
-    library.attach_multiphonics(),
     voice=score["bassoon voice"],
 )
 
@@ -1308,7 +1309,7 @@ trinton.fermata_measures(
         11,
     ],
     font_size="15",
-    fermata="uverylongfermata",
+    fermata="very-long-fermata",
     blank=False,
     clef_whitespace=False,
 )
@@ -1333,7 +1334,7 @@ trinton.fermata_measures(
         12,
     ],
     font_size="15",
-    fermata="ushortfermata",
+    fermata="short-fermata",
     blank=False,
     clef_whitespace=False,
 )

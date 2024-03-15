@@ -118,6 +118,7 @@ trinton.make_music(
     trinton.force_note(selector=library._klavierubung_selectors[2]["bassoon voice"]),
     rmakers.rewrite_dots,
     evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler(
         [
             "b,",
@@ -171,6 +172,7 @@ trinton.make_music(
         )
     ),
     rmakers.rewrite_dots,
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(["eqf"]),
     library.ring_mod_attachments(
@@ -222,61 +224,96 @@ trinton.make_music(
 
 # trombone music commands
 
+# trinton.make_music(
+#     lambda _: trinton.select_target(_, (1, 15)),
+#     evans.RhythmHandler(
+#         evans.tuplet(
+#             [
+#                 (
+#                     2,
+#                     1,
+#                 ),
+#                 (-1,),
+#             ]
+#         )
+#     ),
+#     rmakers.rewrite_dots,
+#     evans.RewriteMeterCommand(boundary_depth=-2),
+#     evans.PitchHandler(["c'''"]),
+#     trinton.attachment_command(
+#         attachments=[library.clef_whitespace, abjad.Clef("treble")],
+#         selector=trinton.select_leaves_by_index([0], pitched=True),
+#     ),
+#     trinton.change_notehead_command(notehead="highest"),
+#     trinton.linear_attachment_command(
+#         attachments=itertools.cycle(
+#             [
+#                 abjad.Glissando(),
+#             ],
+#         ),
+#         selector=trinton.patterned_tie_index_selector(
+#             [
+#                 0,
+#             ],
+#             2,
+#             pitched=True,
+#             first=True,
+#         ),
+#     ),
+#     trinton.notehead_bracket_command(),
+#     trinton.hooked_spanner_command(
+#         string=library.return_boxed_markup(
+#             string="1., Growl",
+#         ),
+#         full_string=True,
+#         padding=8,
+#         style="solid-line-with-hook",
+#         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+#         right_padding=2,
+#     ),
+#     voice=score["tenortrombone voice"],
+#     preprocessor=trinton.fuse_sixteenths_preprocessor(
+#         (
+#             4,
+#             5,
+#             8,
+#         )
+#     ),
+# )
+
 trinton.make_music(
     lambda _: trinton.select_target(_, (1, 15)),
     evans.RhythmHandler(
-        evans.tuplet(
-            [
-                (
-                    2,
-                    1,
-                ),
-                (-1,),
-            ]
+        evans.talea(
+            [4, 5, 8], 16
         )
     ),
-    rmakers.rewrite_dots,
+    trinton.force_rest(
+        selector=trinton.patterned_tie_index_selector([1], 2, pitched=True, grace=False)
+    ),
     evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.aftergrace_command(
+        selector=trinton.logical_ties(pitched=True, grace=False),
+        slash=True
+    ),
     evans.PitchHandler(["c'''"]),
     trinton.attachment_command(
         attachments=[library.clef_whitespace, abjad.Clef("treble")],
         selector=trinton.select_leaves_by_index([0], pitched=True),
     ),
     trinton.change_notehead_command(notehead="highest"),
-    trinton.linear_attachment_command(
-        attachments=itertools.cycle(
-            [
-                abjad.Glissando(),
-            ],
-        ),
-        selector=trinton.patterned_tie_index_selector(
-            [
-                0,
-            ],
-            2,
-            pitched=True,
-            first=True,
-        ),
-    ),
     trinton.notehead_bracket_command(),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="1., Growl",
+            string="1., Kneifen im hinteren Teil der Kehle, wie ein Knurren",
         ),
         full_string=True,
-        padding=8,
+        padding=10.5,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=2,
     ),
     voice=score["tenortrombone voice"],
-    preprocessor=trinton.fuse_sixteenths_preprocessor(
-        (
-            4,
-            5,
-            8,
-        )
-    ),
 )
 
 trinton.make_music(
@@ -292,6 +329,7 @@ trinton.make_music(
             [0, 1], 2, pitched=True, first=True
         ),
     ),
+    trinton.continuous_glissando(no_ties=True,),
     voice=score["tenortrombone voice"],
 )
 
@@ -308,6 +346,7 @@ trinton.make_music(
             [0, 1], 2, pitched=True, first=True
         ),
     ),
+    trinton.continuous_glissando(no_ties=True,),
     voice=score["tenortrombone voice"],
 )
 
@@ -427,6 +466,7 @@ trinton.make_music(
     ),
     rmakers.rewrite_dots,
     evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     trinton.pitch_with_selector_command(
         pitch_list=[1],
         selector=trinton.patterned_leaf_index_selector([0, 5, 7], 8, pitched=True),
@@ -520,19 +560,8 @@ trinton.whiteout_empty_staves(
         if _ != "bassclarinet voice"
         and _ != "bassoon voice"
         and _ != "frenchhorn voice"
-        and _ != "tenortrombone voice"
         and _ != "percussion 2 voice"
         and _ != "percussion 3 voice"
-    ],
-)
-
-library.blank_measure_by_hand(
-    score=score,
-    voice_names=["tenortrombone voice"],
-    measures=[
-        10,
-        11,
-        12,
     ],
 )
 

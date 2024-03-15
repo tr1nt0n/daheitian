@@ -67,13 +67,15 @@ for voice_name, pitch, padding in zip(
         "cqs,",
     ],
     [
-        8.5,
-        9,
+        10.5,
+        10.5,
     ],
 ):
     trinton.make_music(
         lambda _: trinton.select_target(_, (1, 3)),
         evans.PitchHandler([pitch]),
+        library.attach_multiphonics(repitch_only=True),
+        trinton.rewrite_meter_command(),
         trinton.hooked_spanner_command(
             string=library._fundamental_to_multiphonic[rf"{pitch} hspace"].string,
             full_string=True,
@@ -84,6 +86,25 @@ for voice_name, pitch, padding in zip(
         ),
         voice=score[voice_name],
     )
+
+# bassoon music
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (2,)),
+    trinton.attachment_command(
+        attachments=[
+            abjad.LilyPondLiteral(
+                [
+                    r"\once \override NoteHead.X-offset = 0",
+                    r"\once \override Staff.Accidental.stencil = ##f",
+                ],
+                site="before"
+            ),
+        ],
+        selector=trinton.select_leaves_by_index([0], pitched=True)
+    ),
+    voice=score["bassoon voice"]
+)
 
 
 # strings music commands

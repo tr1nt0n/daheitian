@@ -455,6 +455,7 @@ trinton.make_music(
         selector=trinton.select_tuplets_by_index([1, -1]),
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler([-3]),
     library.change_lines(
         lines=3,

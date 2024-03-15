@@ -254,6 +254,12 @@ trinton.make_music(
     ),
     trinton.attachment_command(
         attachments=[
+            abjad.BreathMark()
+        ],
+        selector=trinton.select_leaves_by_index([2]),
+    ),
+    trinton.attachment_command(
+        attachments=[
             abjad.RepeatTie(),
         ],
         selector=trinton.select_leaves_by_index([0]),
@@ -337,7 +343,7 @@ trinton.fermata_measures(
     measures=[
         1,
     ],
-    fermata="uverylongfermata",
+    fermata="very-long-fermata",
     font_size="15",
     blank=False,
 )

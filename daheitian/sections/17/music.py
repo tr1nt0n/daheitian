@@ -47,6 +47,7 @@ trinton.make_music(
             "e'''",
         ],
     ),
+    library.attach_multiphonics(repitch_only=True, selector=trinton.select_logical_ties_by_index([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])),
     trinton.attachment_command(
         attachments=[abjad.Articulation("marcato")],
         selector=trinton.pleaves(),
@@ -77,7 +78,7 @@ trinton.make_music(
     trinton.hooked_spanner_command(
         string=library._fundamental_to_multiphonic["bqs' hspace"].string,
         full_string=True,
-        padding=8.5,
+        padding=10.5,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, 11]),
         right_padding=1.5,
@@ -214,6 +215,7 @@ trinton.make_music(
             "e,",
         ],
     ),
+    library.attach_multiphonics(repitch_only=True, selector=trinton.select_logical_ties_by_index([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])),
     trinton.attachment_command(
         attachments=[abjad.Articulation("marcato")],
         selector=trinton.pleaves(),
@@ -245,7 +247,7 @@ trinton.make_music(
     trinton.hooked_spanner_command(
         string=library._fundamental_to_multiphonic["d hspace"].string,
         full_string=True,
-        padding=8.5,
+        padding=10.5,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, 11]),
         right_padding=1.5,
@@ -358,10 +360,10 @@ trinton.make_music(
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="Growl",
+            string="Kneifen der Kehle, wie ein Knurren",
         ),
         full_string=True,
-        padding=9,
+        padding=10.5,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=1,
@@ -375,7 +377,7 @@ trinton.make_music(
         rmakers.note,
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
-    evans.PitchHandler(["e,,"]),
+    evans.PitchHandler(["e,"]),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Clef("bass"),
@@ -384,10 +386,6 @@ trinton.make_music(
             abjad.StopHairpin(),
         ],
         selector=trinton.select_leaves_by_index([0, 0, 0, -1]),
-    ),
-    trinton.ottava_command(
-        octave=-1,
-        selector=trinton.select_leaves_by_index([0, -1]),
     ),
     voice=score["tenortrombone voice"],
     preprocessor=trinton.fuse_preprocessor((2,)),

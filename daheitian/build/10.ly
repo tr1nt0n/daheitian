@@ -38,6 +38,8 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -47,6 +49,8 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                       %! +SCORE
@@ -55,6 +59,8 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
@@ -70,12 +76,30 @@
                                 \context Voice = "oboe voice"
                                 {
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
                                     r4
-                                    bqs'8.
+                                    \once \override NoteHead.X-offset = 0
+                                    \once \override Staff.Accidental.stencil = ##f
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >8.
                                     - \marcato
                                     \ff
-                                    - \tweak padding #8.5
+                                    - \tweak padding #10.5
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \hspace #1.5 \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (two three five six)) (lh . (gis)) (rh . (c))) } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -2
@@ -83,19 +107,104 @@
                                     - \tweak stencil #constante-hairpin
                                     \<
                                     r16
-                                    bqs'8.
+                                    \once \override NoteHead.X-offset = 0
+                                    \once \override Staff.Accidental.stencil = ##f
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >8.
                                     - \marcato
                                     r16
-                                    bqs'8.
+                                    \once \override NoteHead.X-offset = 0
+                                    \once \override Staff.Accidental.stencil = ##f
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >8.
                                     - \marcato
                                     r16
-                                    bqs'8.
+                                    \once \override NoteHead.X-offset = 0
+                                    \once \override Staff.Accidental.stencil = ##f
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >8.
                                     - \marcato
                                     r16
-                                    bqs'8.
+                                    \once \override NoteHead.X-offset = 0
+                                    \once \override Staff.Accidental.stencil = ##f
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >8.
                                     - \marcato
                                     r16
-                                    bqs'8.
+                                    \once \override NoteHead.X-offset = 0
+                                    \once \override Staff.Accidental.stencil = ##f
+                                    <
+                                        \tweak style #'la
+                                        b'
+                                        \tweak style #'la
+                                        c''
+                                        \tweak style #'la
+                                        d''
+                                        \tweak style #'la
+                                        e''
+                                        \tweak style #'la
+                                        f''
+                                        \tweak style #'la
+                                        g''
+                                        \tweak style #'la
+                                        a''
+                                    >8.
                                     - \marcato
                                     \!
                                     \stopTextSpan
@@ -112,6 +221,7 @@
                                 {
                                     \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c4)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c5)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0c7)))))))
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bassklarinetten }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { bkl. }
                                     \once \override NoteHead.no-ledgers = ##t
                                     \once \override NoteHead.stem-attachment = #'(0 . 0.75)
@@ -185,13 +295,31 @@
                             {
                                 \context Voice = "bassoon voice"
                                 {
+                                    \once \override NoteHead.X-offset = 0
+                                    \once \override Staff.Accidental.stencil = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Fagotte }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { fg.}
                                     \clef "bass"
-                                    cqs,8.
+                                    <
+                                        \tweak style #'la
+                                        c,
+                                        \tweak style #'la
+                                        d,
+                                        \tweak style #'la
+                                        e,
+                                        \tweak style #'la
+                                        f,
+                                        \tweak style #'la
+                                        g,
+                                        \tweak style #'la
+                                        a,
+                                        \tweak style #'la
+                                        b,
+                                    >8.
                                     - \marcato
                                     \ff
-                                    - \tweak padding #9
+                                    - \tweak padding #10.5
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \hspace #4 \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -2
@@ -200,18 +328,86 @@
                                     \<
                                     r16
                                     r4.
-                                    cqs,8
+                                    \once \override NoteHead.X-offset = 0
+                                    \once \override Staff.Accidental.stencil = ##f
+                                    <
+                                        \tweak style #'la
+                                        c,
+                                        \tweak style #'la
+                                        d,
+                                        \tweak style #'la
+                                        e,
+                                        \tweak style #'la
+                                        f,
+                                        \tweak style #'la
+                                        g,
+                                        \tweak style #'la
+                                        a,
+                                        \tweak style #'la
+                                        b,
+                                    >8
                                     - \marcato
                                     ~
-                                    cqs,16
+                                    \once \override NoteHead.X-offset = 0
+                                    \once \override Staff.Accidental.stencil = ##f
+                                    <
+                                        \tweak style #'la
+                                        c,
+                                        \tweak style #'la
+                                        d,
+                                        \tweak style #'la
+                                        e,
+                                        \tweak style #'la
+                                        f,
+                                        \tweak style #'la
+                                        g,
+                                        \tweak style #'la
+                                        a,
+                                        \tweak style #'la
+                                        b,
+                                    >16
                                       %! +SCORE
                                     \repeatTie
                                     r4..
-                                    cqs,8.
+                                    \once \override NoteHead.X-offset = 0
+                                    \once \override Staff.Accidental.stencil = ##f
+                                    <
+                                        \tweak style #'la
+                                        c,
+                                        \tweak style #'la
+                                        d,
+                                        \tweak style #'la
+                                        e,
+                                        \tweak style #'la
+                                        f,
+                                        \tweak style #'la
+                                        g,
+                                        \tweak style #'la
+                                        a,
+                                        \tweak style #'la
+                                        b,
+                                    >8.
                                     - \marcato
                                     r16
                                     r4.
-                                    cqs,8
+                                    \once \override NoteHead.X-offset = 0
+                                    \once \override Staff.Accidental.stencil = ##f
+                                    <
+                                        \tweak style #'la
+                                        c,
+                                        \tweak style #'la
+                                        d,
+                                        \tweak style #'la
+                                        e,
+                                        \tweak style #'la
+                                        f,
+                                        \tweak style #'la
+                                        g,
+                                        \tweak style #'la
+                                        a,
+                                        \tweak style #'la
+                                        b,
+                                    >8
                                     - \marcato
                                     \!
                                     \stopTextSpan
@@ -233,6 +429,8 @@
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
+                            \once \override Staff.TimeSignature.transparent = ##t
+                              %! +SCORE
                             \once \override MultiMeasureRest.transparent = ##t
                             R1 * 3/4
                               %! +SCORE
@@ -242,6 +440,8 @@
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                               %! +SCORE
+                            \once \override Staff.TimeSignature.transparent = ##t
+                              %! +SCORE
                             \once \override MultiMeasureRest.transparent = ##t
                             R1 * 1/2
                               %! +SCORE
@@ -250,6 +450,8 @@
                             \once \override Staff.BarLine.transparent = ##f
                               %! +SCORE
                             \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                              %! +SCORE
+                            \once \override Staff.TimeSignature.transparent = ##t
                               %! +SCORE
                             \once \override MultiMeasureRest.transparent = ##t
                             R1 * 3/4
@@ -275,6 +477,8 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -284,6 +488,8 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                       %! +SCORE
@@ -292,6 +498,8 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
@@ -313,6 +521,8 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -322,6 +532,8 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                       %! +SCORE
@@ -330,6 +542,8 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
@@ -351,6 +565,8 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -360,6 +576,8 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                       %! +SCORE
@@ -368,6 +586,8 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
@@ -395,6 +615,8 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -404,6 +626,8 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                       %! +SCORE
@@ -412,6 +636,8 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
@@ -431,6 +657,8 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -440,6 +668,8 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                       %! +SCORE
@@ -448,6 +678,8 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
@@ -475,6 +707,8 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -484,6 +718,8 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                       %! +SCORE
@@ -492,6 +728,8 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
@@ -511,6 +749,8 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -520,6 +760,8 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                       %! +SCORE
@@ -528,6 +770,8 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
@@ -545,6 +789,7 @@
                         \context Voice = "percussion 1 voice"
                         {
                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Pauken }
+                              %! +SCORE
                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pk. }
                             \clef "bass"
                             c2.
@@ -637,6 +882,8 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -698,6 +945,8 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
                                       %! +SCORE
@@ -707,6 +956,8 @@
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 1/2
                                       %! +SCORE
@@ -715,6 +966,8 @@
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
                                       %! +SCORE
                                     \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
@@ -736,6 +989,7 @@
                                 \context Voice = "violin 1 voice"
                                 {
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
                                     r4
                                     \staff-line-count 4
@@ -764,7 +1018,7 @@
                                     \pitchedTrill
                                     \tweak style #'harmonic-mixed
                                     b'4
-                                    ^ \markup \concat { \upright \fraction 9° A \hspace #0.5 }
+                                    ^ \markup \concat { \upright \fraction 9° A }
                                     - \tweak circled-tip ##t
                                     _ \<
                                     - \tweak padding #13.5
@@ -822,6 +1076,7 @@
                                 {
                                     \staff-line-count 4
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
                                     \clef "percussion"
                                     b4.
@@ -870,6 +1125,7 @@
                                 \context Voice = "viola voice"
                                 {
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
                                     r4.
                                     \staff-line-count 4
@@ -914,6 +1170,7 @@
                                 \context Voice = "cello voice"
                                 {
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
                                     r4.
                                     \staff-line-count 4
@@ -939,7 +1196,7 @@
                                     \pitchedTrill
                                     \tweak style #'harmonic-mixed
                                     gqs'4
-                                    ^ \markup \concat { \upright \fraction 11° A \hspace #0.5 }
+                                    ^ \markup \concat { \upright \fraction 11° A }
                                     - \tweak circled-tip ##t
                                     _ \<
                                     - \tweak padding #16.5
@@ -996,6 +1253,7 @@
                                 \context Voice = "contrabass voice"
                                 {
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Kontrabässe }
+                                      %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { kb. }
                                     \clef "bass"
                                     a,2.

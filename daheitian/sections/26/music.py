@@ -238,7 +238,7 @@ trinton.make_music(
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="DP, Kratzen",
+            string="DP, Kratzen, Doppelgriff",
         ),
         full_string=True,
         padding=7.5,
@@ -381,7 +381,7 @@ trinton.fermata_measures(
     measures=[
         2,
     ],
-    fermata="ushortfermata",
+    fermata="short-fermata",
     font_size="15",
     blank=False,
     clef_whitespace=False,

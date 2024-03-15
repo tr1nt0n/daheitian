@@ -168,6 +168,7 @@ trinton.make_music(
     ),
     rmakers.rewrite_dots,
     evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     library.aftergrace(selector=trinton.select_leaves_by_index([-1])),
     evans.PitchHandler(
         [

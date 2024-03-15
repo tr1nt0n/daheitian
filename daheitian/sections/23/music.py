@@ -54,6 +54,7 @@ trinton.make_music(
     ),
     rmakers.rewrite_dots,
     evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler([12]),
     trinton.attachment_command(
         attachments=[abjad.Articulation(">"), abjad.Articulation("staccato")],
@@ -102,6 +103,7 @@ trinton.make_music(
     ),
     rmakers.rewrite_dots,
     evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.PitchHandler([-13]),
     trinton.pitch_with_selector_command(
         pitch_list=[-14],
@@ -169,6 +171,7 @@ trinton.make_music(
         )
     ),
     rmakers.rewrite_dots,
+    trinton.respell_tuplets_command(rewrite_brackets=False),
     evans.RewriteMeterCommand(boundary_depth=-2),
     trinton.call_rmaker(
         rmaker=rmakers.force_augmentation,
@@ -239,7 +242,6 @@ trinton.make_music(
             )
         ],
         selector=trinton.select_tuplets_by_index([1, -1]),
-        tag=abjad.Tag("+SCORE"),
     ),
     trinton.notehead_bracket_command(),
     voice=score["piano 1 voice"],
