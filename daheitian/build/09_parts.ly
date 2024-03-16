@@ -105,9 +105,9 @@
                             {
                                 \context Voice = "oboe voice"
                                 {
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Cor Anglais }
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                                       %! +SCORE
-                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ca. }
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
                                     \override Staff.Stem.stemlet-length = 0.75
                                     f'8
                                     - \tenuto
@@ -283,17 +283,22 @@
                                     \ff
                                     \stopTextSpan
                                     ]
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
+                                    \afterGrace
                                     R1 * 1
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    {
+                                        \once \override Accidental.stencil = ##f
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Flag.stencil = ##f
+                                        \once \override NoteHead.duration-log = 2
+                                        \once \override NoteHead.no-ledgers = ##t
+                                        \once \override Stem.stencil = ##f
+                                        \once \override Tie.stencil = ##f
+                                        \once \override NoteHead.transparent = ##t
+                                        \once \override Flag.stroke-style = #"grace"
+                                        c'16
+                                        \boxed-markup "( zu Oboe )" 1
+                                    }
                                 }
                             }
                         }
@@ -341,6 +346,7 @@
                                     r8.
                                       %! +SCORE
                                 %%% \once \override Tie.transparent = ##f
+                                    \clef "treble"
                                     c''16
                                     - \tenuto
                                     - \tweak circled-tip ##t

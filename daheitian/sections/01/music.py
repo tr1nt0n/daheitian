@@ -168,7 +168,7 @@ trinton.make_music(
     voice=score["oboe divisi voice"],
 )
 
-# clarinet music commands
+# bass clarinet music commands
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (1,)),

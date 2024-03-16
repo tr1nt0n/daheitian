@@ -116,6 +116,10 @@ trinton.make_music(
         pitch_list=["fs''"], selector=trinton.pleaves(grace=True)
     ),
     library.grace_attachments(),
+    trinton.attachment_command(
+        attachments=[abjad.Clef("treble")],
+        selector=trinton.select_logical_ties_by_index([0], first=True, pitched=True),
+    ),
     voice=score["bassclarinet voice"],
     preprocessor=trinton.fuse_sixteenths_preprocessor((51, 70)),
     beam_meter=True,
