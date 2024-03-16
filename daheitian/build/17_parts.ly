@@ -81,354 +81,41 @@
                             {
                                 \context Voice = "oboe voice"
                                 {
-                                    \once \override NoteHead.X-offset = 0
-                                    \once \override Staff.Accidental.stencil = ##f
-                                    \once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                                       %! +SCORE
-                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
-                                    <
-                                        \tweak style #'la
-                                        b'
-                                        \tweak style #'la
-                                        c''
-                                        \tweak style #'la
-                                        d''
-                                        \tweak style #'la
-                                        e''
-                                        \tweak style #'la
-                                        f''
-                                        \tweak style #'la
-                                        g''
-                                        \tweak style #'la
-                                        a''
-                                    >4
-                                        _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
-                                    - \marcato
-                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }
-                                    - \tweak padding #10.5
-                                    - \abjad-solid-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { \hspace #1.5 \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (two three five six)) (lh . (gis)) (rh . (c))) } \hspace #0.5 }
-                                    - \tweak bound-details.right.padding -1.5
-                                    \startTextSpan
-                                    - \tweak stencil #constante-hairpin
-                                    \<
-                                    \once \override NoteHead.X-offset = 0
-                                    \once \override Staff.Accidental.stencil = ##f
-                                    \override Staff.Stem.stemlet-length = 0.75
-                                    <
-                                        \tweak style #'la
-                                        b'
-                                        \tweak style #'la
-                                        c''
-                                        \tweak style #'la
-                                        d''
-                                        \tweak style #'la
-                                        e''
-                                        \tweak style #'la
-                                        f''
-                                        \tweak style #'la
-                                        g''
-                                        \tweak style #'la
-                                        a''
-                                    >8
-                                    - \marcato
-                                    [
-                                    \once \override NoteHead.X-offset = 0
-                                    \once \override Staff.Accidental.stencil = ##f
-                                    <
-                                        \tweak style #'la
-                                        b'
-                                        \tweak style #'la
-                                        c''
-                                        \tweak style #'la
-                                        d''
-                                        \tweak style #'la
-                                        e''
-                                        \tweak style #'la
-                                        f''
-                                        \tweak style #'la
-                                        g''
-                                        \tweak style #'la
-                                        a''
-                                    >16
-                                    - \marcato
-                                    \once \override NoteHead.X-offset = 0
-                                    \once \override Staff.Accidental.stencil = ##f
-                                    \revert Staff.Stem.stemlet-length
-                                    <
-                                        \tweak style #'la
-                                        b'
-                                        \tweak style #'la
-                                        c''
-                                        \tweak style #'la
-                                        d''
-                                        \tweak style #'la
-                                        e''
-                                        \tweak style #'la
-                                        f''
-                                        \tweak style #'la
-                                        g''
-                                        \tweak style #'la
-                                        a''
-                                    >16
-                                    - \marcato
-                                    ]
-                                    \once \override NoteHead.X-offset = 0
-                                    \once \override Staff.Accidental.stencil = ##f
-                                    \override Staff.Stem.stemlet-length = 0.75
-                                    <
-                                        \tweak style #'la
-                                        b'
-                                        \tweak style #'la
-                                        c''
-                                        \tweak style #'la
-                                        d''
-                                        \tweak style #'la
-                                        e''
-                                        \tweak style #'la
-                                        f''
-                                        \tweak style #'la
-                                        g''
-                                        \tweak style #'la
-                                        a''
-                                    >8
-                                    - \marcato
-                                    [
-                                    \once \override NoteHead.X-offset = 0
-                                    \once \override Staff.Accidental.stencil = ##f
-                                    \revert Staff.Stem.stemlet-length
-                                    <
-                                        \tweak style #'la
-                                        b'
-                                        \tweak style #'la
-                                        c''
-                                        \tweak style #'la
-                                        d''
-                                        \tweak style #'la
-                                        e''
-                                        \tweak style #'la
-                                        f''
-                                        \tweak style #'la
-                                        g''
-                                        \tweak style #'la
-                                        a''
-                                    >8
-                                    - \marcato
-                                    ]
-                                    \once \override NoteHead.X-offset = 0
-                                    \once \override Staff.Accidental.stencil = ##f
-                                    \override Staff.Stem.stemlet-length = 0.75
-                                    <
-                                        \tweak style #'la
-                                        b'
-                                        \tweak style #'la
-                                        c''
-                                        \tweak style #'la
-                                        d''
-                                        \tweak style #'la
-                                        e''
-                                        \tweak style #'la
-                                        f''
-                                        \tweak style #'la
-                                        g''
-                                        \tweak style #'la
-                                        a''
-                                    >16
-                                    - \marcato
-                                    [
-                                    \once \override NoteHead.X-offset = 0
-                                    \once \override Staff.Accidental.stencil = ##f
-                                    \revert Staff.Stem.stemlet-length
-                                    <
-                                        \tweak style #'la
-                                        b'
-                                        \tweak style #'la
-                                        c''
-                                        \tweak style #'la
-                                        d''
-                                        \tweak style #'la
-                                        e''
-                                        \tweak style #'la
-                                        f''
-                                        \tweak style #'la
-                                        g''
-                                        \tweak style #'la
-                                        a''
-                                    >8.
-                                    - \marcato
-                                    ]
-                                    \once \override NoteHead.X-offset = 0
-                                    \once \override Staff.Accidental.stencil = ##f
-                                    <
-                                        \tweak style #'la
-                                        b'
-                                        \tweak style #'la
-                                        c''
-                                        \tweak style #'la
-                                        d''
-                                        \tweak style #'la
-                                        e''
-                                        \tweak style #'la
-                                        f''
-                                        \tweak style #'la
-                                        g''
-                                        \tweak style #'la
-                                        a''
-                                    >4
-                                    - \marcato
-                                    \once \override NoteHead.X-offset = 0
-                                    \once \override Staff.Accidental.stencil = ##f
-                                    \override Staff.Stem.stemlet-length = 0.75
-                                    <
-                                        \tweak style #'la
-                                        b'
-                                        \tweak style #'la
-                                        c''
-                                        \tweak style #'la
-                                        d''
-                                        \tweak style #'la
-                                        e''
-                                        \tweak style #'la
-                                        f''
-                                        \tweak style #'la
-                                        g''
-                                        \tweak style #'la
-                                        a''
-                                    >8
-                                    - \marcato
-                                    [
-                                    \once \override NoteHead.X-offset = 0
-                                    \once \override Staff.Accidental.stencil = ##f
-                                    \revert Staff.Stem.stemlet-length
-                                    <
-                                        \tweak style #'la
-                                        b'
-                                        \tweak style #'la
-                                        c''
-                                        \tweak style #'la
-                                        d''
-                                        \tweak style #'la
-                                        e''
-                                        \tweak style #'la
-                                        f''
-                                        \tweak style #'la
-                                        g''
-                                        \tweak style #'la
-                                        a''
-                                    >8
-                                    - \marcato
-                                    \!
-                                    ]
-                                    \once \override NoteHead.X-offset = 0
-                                    \once \override Staff.Accidental.stencil = ##f
-                                    <
-                                        \tweak style #'la
-                                        b'
-                                        \tweak style #'la
-                                        c''
-                                        \tweak style #'la
-                                        d''
-                                        \tweak style #'la
-                                        e''
-                                        \tweak style #'la
-                                        f''
-                                        \tweak style #'la
-                                        g''
-                                        \tweak style #'la
-                                        a''
-                                    >4
-                                        _ #(make-dynamic-script (markup #:whiteout #:italic "fffffpp"))
-                                    - \marcato
-                                    \stopTextSpan
-                                    \<
-                                    \set suggestAccidentals = ##t
-                                    \override Staff.Stem.stemlet-length = 0.75
-                                    cqs''8
-                                    - \bendAfter #'2.5
-                                    - \marcato
-                                    [
-                                    cs''16
-                                    - \bendAfter #'2.5
-                                    - \marcato
-                                    \revert Staff.Stem.stemlet-length
-                                    dqf''16
-                                    - \bendAfter #'2.5
-                                    - \marcato
-                                    ]
-                                    \override Staff.Stem.stemlet-length = 0.75
-                                    d''8
-                                    - \bendAfter #'2.5
-                                    - \marcato
-                                    [
-                                    \revert Staff.Stem.stemlet-length
-                                    dqs''8
-                                    - \bendAfter #'2.5
-                                    - \marcato
-                                    ]
-                                    \override Staff.Stem.stemlet-length = 0.75
-                                    ef''16
-                                    - \bendAfter #'2.5
-                                    - \marcato
-                                    [
-                                    \revert Staff.Stem.stemlet-length
-                                    eqf''8.
-                                    - \bendAfter #'2.5
-                                    - \marcato
-                                    ]
-                                    e''4
-                                    - \bendAfter #'2.5
-                                    - \marcato
-                                    \override Staff.Stem.stemlet-length = 0.75
-                                    eqs''8
-                                    - \bendAfter #'2.5
-                                    - \marcato
-                                    [
-                                    \revert Staff.Stem.stemlet-length
-                                    f''8
-                                    - \bendAfter #'2.5
-                                    - \marcato
-                                    ]
-                                    fqs''4
-                                    - \bendAfter #'2.5
-                                    - \marcato
-                                    \override Staff.Stem.stemlet-length = 0.75
-                                    fs''8
-                                    - \bendAfter #'2.5
-                                    - \marcato
-                                    [
-                                    g''16
-                                    - \bendAfter #'2.5
-                                    - \marcato
-                                    \revert Staff.Stem.stemlet-length
-                                    a''16
-                                    - \bendAfter #'2.5
-                                    - \marcato
-                                    ]
-                                    \override Staff.Stem.stemlet-length = 0.75
-                                    b''8
-                                    - \bendAfter #'2.5
-                                    - \marcato
-                                    [
-                                    \revert Staff.Stem.stemlet-length
-                                    cs'''8
-                                    - \bendAfter #'2.5
-                                    - \marcato
-                                    ]
-                                    \override Staff.Stem.stemlet-length = 0.75
-                                    d'''16
-                                    - \bendAfter #'2.5
-                                    - \marcato
-                                    [
-                                    \revert Staff.Stem.stemlet-length
-                                    ds'''8.
-                                    - \bendAfter #'2.5
-                                    - \marcato
-                                    ]
-                                    e'''4
-                                        _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
-                                    - \marcato
-                                    \set suggestAccidentals = ##f
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Cor Anglais }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ca. }
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 5/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
                                 }
                             }
                         }

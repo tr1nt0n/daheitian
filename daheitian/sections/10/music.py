@@ -98,12 +98,12 @@ trinton.make_music(
                     r"\once \override NoteHead.X-offset = 0",
                     r"\once \override Staff.Accidental.stencil = ##f",
                 ],
-                site="before"
+                site="before",
             ),
         ],
-        selector=trinton.select_leaves_by_index([0], pitched=True)
+        selector=trinton.select_leaves_by_index([0], pitched=True),
     ),
-    voice=score["bassoon voice"]
+    voice=score["bassoon voice"],
 )
 
 

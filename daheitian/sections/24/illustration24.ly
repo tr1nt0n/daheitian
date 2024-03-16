@@ -603,25 +603,19 @@
                             {
                                 \context Voice = "oboe voice"
                                 {
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                                       %! +SCORE
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
-                                    \afterGrace
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Cor Anglais }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ca. }
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/2
-                                    {
-                                        \once \override Accidental.stencil = ##f
-                                        \once \override Beam.stencil = ##f
-                                        \once \override Dots.stencil = ##f
-                                        \once \override Flag.stencil = ##f
-                                        \once \override NoteHead.duration-log = 2
-                                        \once \override NoteHead.no-ledgers = ##t
-                                        \once \override Stem.stencil = ##f
-                                        \once \override Tie.stencil = ##f
-                                        \once \override NoteHead.transparent = ##t
-                                        \once \override Flag.stroke-style = #"grace"
-                                        c'16
-                                        \boxed-markup "( zu Oboe )" 1
-                                    }
+                                      %! +SCORE
+                                    \stopStaff \startStaff
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
@@ -633,143 +627,17 @@
                                     R1 * 1/4
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                    \fancy-gliss
-                                       #'(
-                                          (0 0 0.5 1 1 0)
-                                          (1 0 1.5 -1 2 0)
-                                          (2 0 2.5 2 3 0)
-                                          (3 0 3.5 -2 4 0)
-                                          (4 0 4.5 3 5 0)
-                                          (5 0 5.5 -3 6 0)
-                                          (6 0 6.5 1 7 0)
-                                          (7 0 7.5 -1 8 0)
-                                          (8 0 8.5 2 9 0)
-                                          (9 0 9.5 -2 10 0)
-                                          (10 0 10.5 3 11 0)
-                                          (11 0 11.5 -3 12 0)
-                                          (12 0 12.5 4 13 0)
-                                          (13 0 13.5 -4 14 0)
-                                          (14 0 14.5 1 15 0)
-                                          (15 0 15.5 -1 16 0)
-                                          (16 0 16.5 2 17 0)
-                                          (17 0 17.5 -2 18 0)
-                                          (18 0 18.5 3 19 0)
-                                          (19 0 19.5 -3 20 0)
-                                          (20 0 20.5 4 21 0)
-                                          (21 0 21.5 -4 22 0)
-                                          (22 0 22.5 5 23 0)
-                                          (23 0 23.5 -5 24 0)
-                                          (24 0 24.5 1 25 0)
-                                          (25 0 25.5 -1 26 0)
-                                          (26 0 26.5 2 27 0)
-                                          (27 0 27.5 -2 28 0)
-                                          (28 0 28.5 3 29 0)
-                                          (29 0 29.5 -3 30 0)
-                                          (30 0 30.5 4 31 0)
-                                          (31 0 31.5 -4 32 0)
-                                          (32 0 32.5 5 33 0)
-                                          (33 0 33.5 -5 34 0)
-                                          (34 0 34.5 6 35 0)
-                                          (35 0 35.5 -6 36 0)
-                                          (36 0 36.5 1 37 0)
-                                          (37 0 37.5 -1 38 0)
-                                          (38 0 38.5 2 39 0)
-                                          (39 0 39.5 -2 40 0)
-                                          (40 0 40.5 3 41 0)
-                                          (41 0 41.5 -3 42 0)
-                                          (42 0 42.5 4 43 0)
-                                          (43 0 43.5 -4 44 0)
-                                          (44 0 44.5 5 45 0)
-                                          (45 0 45.5 -5 46 0)
-                                          (46 0 46.5 6 47 0)
-                                          (47 0 47.5 -6 48 0)
-                                          (48 0 48.5 7 49 0)
-                                          (49 0 49.5 -7 50 0)
-                                          (50 0 50.5 7 51 0)
-                                          (51 0 51.5 -7 52 0)
-                                     )
-                                     #0.5
-                                    \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bb)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bc)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0be)))))))
-                                    \once \override NoteHead.no-ledgers = ##t
-                                    \once \override NoteHead.stem-attachment = #'(0 . 0.75)
-                                    \once \override Staff.AccidentalPlacement.right-padding = #0.6
-                                    c'''2.
-                                    \p
-                                    \<
-                                      %! abjad.glissando(7)
-                                    \glissando
-                                    ~
-                                    \once \override Dots.staff-position = #2
-                                    \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bb)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bc)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0be)))))))
-                                      %! abjad.glissando(1)
-                                    \hide NoteHead
-                                      %! abjad.glissando(1)
-                                    \override Accidental.stencil = ##f
-                                      %! abjad.glissando(1)
-                                    \override NoteColumn.glissando-skip = ##t
-                                      %! abjad.glissando(1)
-                                    \override NoteHead.no-ledgers = ##t
-                                    \once \override NoteHead.no-ledgers = ##t
-                                    \once \override NoteHead.stem-attachment = #'(0 . 0.75)
-                                    \once \override Staff.AccidentalPlacement.right-padding = #0.6
-                                    \afterGrace
-                                    c'''8.
                                       %! +SCORE
-                                    \repeatTie
-                                    {
-                                        \once \override NoteHead.stencil = #(lambda (grob) (let ((dur (ly:grob-property grob 'duration-log))) (if (= dur 0) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bb)) (if (= dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0bc)) (if (> dur 1) (grob-interpret-markup grob (markup #:ekmelos-char #xe0be)))))))
-                                        \once \override Flag.stroke-style = #"grace"
-                                        \once \override NoteHead.no-ledgers = ##t
-                                        \once \override NoteHead.stem-attachment = #'(0 . 0.75)
-                                        \once \override Staff.AccidentalPlacement.right-padding = #0.6
-                                          %! abjad.glissando(6)
-                                        \revert Accidental.stencil
-                                          %! abjad.glissando(6)
-                                        \revert NoteColumn.glissando-skip
-                                          %! abjad.glissando(6)
-                                        \revert NoteHead.no-ledgers
-                                          %! abjad.glissando(6)
-                                        \undo \hide NoteHead
-                                        c'''16
-                                            _ #(make-dynamic-script (markup #:whiteout #:italic "fpp"))
-                                        \<
-                                    }
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 8) (ly:make-duration 5 0))
-                                    \times 8/7
-                                    {
-                                        \key ef \major
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        g'''32
-                                        [
-                                        (
-                                        f'''32
-                                        ef'''32
-                                        d'''32
-                                        ef'''32
-                                        d'''32
-                                        \revert Staff.Stem.stemlet-length
-                                        c'''32
-                                        ]
-                                    }
-                                    \tweak text #tuplet-number::calc-fraction-text
-                                    \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 8) (ly:make-duration 5 0))
-                                    \times 8/7
-                                    {
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        bf''32
-                                        [
-                                        af''32
-                                        bf''32
-                                        af''32
-                                        g''32
-                                        f''32
-                                        \revert Staff.Stem.stemlet-length
-                                        ef''32
-                                        ]
-                                    }
-                                    d''16
-                                    )
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/2
+                                      %! +SCORE
+                                    \stopStaff \startStaff
                                 }
                             }
                         }

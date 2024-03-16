@@ -1080,8 +1080,7 @@ trinton.make_music(
                 r"- \tweak padding #13",
             ),
             abjad.LilyPondLiteral(
-                r"\override Staff.DynamicLineSpanner.padding = #6",
-                site="before"
+                r"\override Staff.DynamicLineSpanner.padding = #6", site="before"
             ),
         ],
         selector=trinton.select_logical_ties_by_index(
@@ -1177,8 +1176,7 @@ trinton.make_music(
         attachments=[
             abjad.Ottava(n=0),
             abjad.LilyPondLiteral(
-                r"\revert Staff.DynamicLineSpanner.padding",
-                site="absolute_after"
+                r"\revert Staff.DynamicLineSpanner.padding", site="absolute_after"
             ),
         ],
         selector=trinton.select_logical_ties_by_index(
@@ -1338,8 +1336,7 @@ trinton.make_music(
                 r"- \tweak padding #10",
             ),
             abjad.LilyPondLiteral(
-                r"\override Staff.DynamicLineSpanner.padding = #6.5",
-                site="before"
+                r"\override Staff.DynamicLineSpanner.padding = #6.5", site="before"
             ),
         ],
         selector=trinton.select_logical_ties_by_index(
@@ -1435,11 +1432,13 @@ trinton.make_music(
         selector=trinton.logical_ties(pitched=True, first=True),
     ),
     trinton.linear_attachment_command(
-        attachments=[abjad.Ottava(n=0), abjad.Clef("altovarC"),
-        abjad.LilyPondLiteral(
-            r"\revert Staff.DynamicLineSpanner.padding",
-            site="absolute_after"
-        ),],
+        attachments=[
+            abjad.Ottava(n=0),
+            abjad.Clef("altovarC"),
+            abjad.LilyPondLiteral(
+                r"\revert Staff.DynamicLineSpanner.padding", site="absolute_after"
+            ),
+        ],
         selector=trinton.select_logical_ties_by_index(
             [
                 18,

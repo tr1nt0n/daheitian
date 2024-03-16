@@ -770,6 +770,12 @@ all_instrument_names = [
             '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Oboen }'
         ),
     ),
+    # abjad.InstrumentName(
+    #     context="Staff",
+    #     markup=abjad.Markup(
+    #         '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Cor Anglais }'
+    #     ),
+    # ),
     abjad.InstrumentName(
         context="Staff",
         markup=abjad.Markup(
@@ -881,6 +887,12 @@ all_short_instrument_names = [
             '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { ob. }'
         ),
     ),
+    # abjad.ShortInstrumentName(
+    #     context="Staff",
+    #     markup=abjad.Markup(
+    #         '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { ca. }'
+    #     ),
+    # ),
     abjad.ShortInstrumentName(
         context="Staff",
         markup=abjad.Markup(
@@ -995,7 +1007,7 @@ def write_short_instrument_names(score):
             voice=score[voice_name],
             leaves=[0],
             attachment=markup,
-            tag=abjad.Tag("+SCORE")
+            tag=abjad.Tag("+SCORE"),
         )
 
 
@@ -1300,7 +1312,7 @@ def make_timestamp_markups(global_context):
             abjad.Markup(
                 f"""\markup \override #'(font-name . "Bodoni72 Book") \\fontsize #3 \center-column {{ \"{number}\\\"\" }}""",
             ),
-            r"- \tweak padding #-4"
+            r"- \tweak padding #-4",
         )
 
         abjad.attach(
@@ -1498,7 +1510,10 @@ def grace_attachments(selector=trinton.pleaves(), glissando=True):
 
     return attach
 
-def attach_multiphonics(selector=trinton.logical_ties(pitched=True), repitch_only=False, padding=1):
+
+def attach_multiphonics(
+    selector=trinton.logical_ties(pitched=True), repitch_only=False, padding=1
+):
     def attach(argument):
         selections = selector(argument)
         for selection in selections:
@@ -1507,10 +1522,7 @@ def attach_multiphonics(selector=trinton.logical_ties(pitched=True), repitch_onl
             named_pitch = first_leaf.written_pitch.name
             cluster = _fundamental_to_cluster[named_pitch]
             markup = _fundamental_to_multiphonic[named_pitch]
-            markup = abjad.bundle(
-                markup,
-                rf"- \tweak padding #{padding}"
-            )
+            markup = abjad.bundle(markup, rf"- \tweak padding #{padding}")
             new_chord = abjad.Chord(cluster)
             new_chord.written_duration = selection.written_duration
             for indicator in indicators:
@@ -1526,15 +1538,13 @@ def attach_multiphonics(selector=trinton.logical_ties(pitched=True), repitch_onl
                         r"\once \override NoteHead.X-offset = 0",
                         r"\once \override Staff.Accidental.stencil = ##f",
                     ],
-                    site="before"
+                    site="before",
                 ),
-                new_chord
+                new_chord,
             )
 
             if repitch_only is False:
-                abjad.attach(
-                    markup, new_chord, direction=abjad.UP
-                )
+                abjad.attach(markup, new_chord, direction=abjad.UP)
 
             abjad.mutate.replace(selection, new_chord)
 

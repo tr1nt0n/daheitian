@@ -283,18 +283,13 @@ trinton.make_music(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (1, 15)),
-    evans.RhythmHandler(
-        evans.talea(
-            [4, 5, 8], 16
-        )
-    ),
+    evans.RhythmHandler(evans.talea([4, 5, 8], 16)),
     trinton.force_rest(
         selector=trinton.patterned_tie_index_selector([1], 2, pitched=True, grace=False)
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
     trinton.aftergrace_command(
-        selector=trinton.logical_ties(pitched=True, grace=False),
-        slash=True
+        selector=trinton.logical_ties(pitched=True, grace=False), slash=True
     ),
     evans.PitchHandler(["c'''"]),
     trinton.attachment_command(
@@ -329,7 +324,9 @@ trinton.make_music(
             [0, 1], 2, pitched=True, first=True
         ),
     ),
-    trinton.continuous_glissando(no_ties=True,),
+    trinton.continuous_glissando(
+        no_ties=True,
+    ),
     voice=score["tenortrombone voice"],
 )
 
@@ -346,7 +343,9 @@ trinton.make_music(
             [0, 1], 2, pitched=True, first=True
         ),
     ),
-    trinton.continuous_glissando(no_ties=True,),
+    trinton.continuous_glissando(
+        no_ties=True,
+    ),
     voice=score["tenortrombone voice"],
 )
 

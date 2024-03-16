@@ -383,24 +383,18 @@ trinton.make_music(
     trinton.linear_attachment_command(
         attachments=[
             abjad.Clef("treble"),
-            abjad.LilyPondLiteral(r"\override Staff.DynamicLineSpanner.padding = #6", site="before"),
+            abjad.LilyPondLiteral(
+                r"\override Staff.DynamicLineSpanner.padding = #6", site="before"
+            ),
             abjad.Dynamic("pp"),
             abjad.StartHairpin("<"),
             abjad.Dynamic("mp"),
             abjad.StartHairpin("<"),
-            abjad.LilyPondLiteral(r"\revert Staff.DynamicLineSpanner.padding", site="absolute_after"),
+            abjad.LilyPondLiteral(
+                r"\revert Staff.DynamicLineSpanner.padding", site="absolute_after"
+            ),
         ],
-        selector=trinton.select_leaves_by_index(
-            [
-                0,
-                0,
-                0,
-                0,
-                21,
-                21,
-                -1
-            ]
-        ),
+        selector=trinton.select_leaves_by_index([0, 0, 0, 0, 21, 21, -1]),
     ),
     abjad.beam,
     trinton.notehead_bracket_command(),
@@ -513,7 +507,7 @@ trinton.make_music(
                 r"\once \override TupletBracket.direction = #UP", "before"
             ),
         ],
-        selector=abjad.select.tuplets
+        selector=abjad.select.tuplets,
     ),
     trinton.attachment_command(
         attachments=[
@@ -521,7 +515,7 @@ trinton.make_music(
                 r"\once \override TupletBracket.padding = -8", "before"
             )
         ],
-        selector=trinton.select_tuplets_by_index([0])
+        selector=trinton.select_tuplets_by_index([0]),
     ),
     trinton.notehead_bracket_command(),
     voice=score["piano 1 voice"],

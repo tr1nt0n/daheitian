@@ -253,9 +253,7 @@ trinton.make_music(
         ),
     ),
     trinton.attachment_command(
-        attachments=[
-            abjad.BreathMark()
-        ],
+        attachments=[abjad.BreathMark()],
         selector=trinton.select_leaves_by_index([2]),
     ),
     trinton.attachment_command(

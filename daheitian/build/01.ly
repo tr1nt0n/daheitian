@@ -238,37 +238,13 @@
                             {
                                 \context Voice = "oboe voice"
                                 {
-                                    <<
-                                        \context Voice = "oboe voice temp"
-                                        {
-                                            \key a \major
-                                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
-                                              %! +SCORE
-                                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
-                                            \voiceTwo
-                                            cs''4
-                                            - \staccato
-                                            \f
-                                            r4
-                                            r2
-                                        }
-                                        \context Voice = "oboe divisi voice"
-                                        {
-                                            \voiceOne
-                                            a''2
-                                            ^ \f
-                                            - \tweak circled-tip ##t
-                                            ^ \>
-                                            ~
-                                            \key c \major
-                                            a''4
-                                              %! +SCORE
-                                            \repeatTie
-                                            r4
-                                            \!
-                                        }
-                                    >>
-                                    \oneVoice
+                                    \key a \major
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Cor Anglais }
+                                      %! +SCORE
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ca. }
+                                    R1 * 1/2
+                                    \key c \major
+                                    R1 * 1/2
                                 }
                             }
                         }

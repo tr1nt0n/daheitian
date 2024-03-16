@@ -96,24 +96,30 @@
                             {
                                 \context Voice = "oboe voice"
                                 {
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                                       %! +SCORE
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
-                                    ef''4.
-                                    \f
-                                    (
-                                    d''4.
-                                    )
-                                    bf'4
-                                    (
-                                    ~
-                                    bf'8
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Cor Anglais }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ca. }
                                       %! +SCORE
-                                    \repeatTie
-                                    c''4.
-                                    )
-                                    - \tweak circled-tip ##t
-                                    \>
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/2
+                                      %! +SCORE
+                                    \stopStaff \startStaff
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
