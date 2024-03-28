@@ -2,245 +2,7 @@ s.boot;
 s.quit;
 
 (
-	// voice 1
-		Pbind(
-			\freq, Pseq(
-				[
-					[
-						Rest(),
-					],
-				],
-			),
-			\dur, Pseq(
-				[
-					7 * 6,
-				]
-			,1),
-			\amp, 0.05263157894736842,
-			\legato, 1,
-		).play;
-	// voice 2
-		Pbind(
-			\freq, Pseq(
-				[
-					[
-						Rest(),
-					],
-				],
-			),
-			\dur, Pseq(
-				[
-					7 * 6,
-				]
-			,1),
-			\amp, 0.05263157894736842,
-			\legato, 1,
-		).play;
-	// voice 3
-		Pbind(
-			\freq, Pseq(
-				[
-					[
-						Rest(),
-					],
-				],
-			),
-			\dur, Pseq(
-				[
-					7 * 6,
-				]
-			,1),
-			\amp, 0.05263157894736842,
-			\legato, 1,
-		).play;
-	// voice 4
-		Pbind(
-			\freq, Pseq(
-				[
-					[
-						Rest(),
-					],
-				],
-			),
-			\dur, Pseq(
-				[
-					7 * 6,
-				]
-			,1),
-			\amp, 0.05263157894736842,
-			\legato, 1,
-		).play;
-	// voice 5
-		Pbind(
-			\freq, Pseq(
-				[
-					[
-						Rest(),
-					],
-				],
-			),
-			\dur, Pseq(
-				[
-					7 * 6,
-				]
-			,1),
-			\amp, 0.05263157894736842,
-			\legato, 1,
-		).play;
-	// voice 6
-		Pbind(
-			\freq, Pseq(
-				[
-					[
-						Rest(),
-					],
-				],
-			),
-			\dur, Pseq(
-				[
-					7 * 6,
-				]
-			,1),
-			\amp, 0.05263157894736842,
-			\legato, 1,
-		).play;
-	// voice 7
-		Pbind(
-			\freq, Pseq(
-				[
-					[
-						Rest(),
-					],
-				],
-			),
-			\dur, Pseq(
-				[
-					7 * 6,
-				]
-			,1),
-			\amp, 0.05263157894736842,
-			\legato, 1,
-		).play;
-	// voice 8
-		Pbind(
-			\freq, Pseq(
-				[
-					[
-						Rest(),
-					],
-				],
-			),
-			\dur, Pseq(
-				[
-					7 * 6,
-				]
-			,1),
-			\amp, 0.05263157894736842,
-			\legato, 1,
-		).play;
-	// voice 9
-		Pbind(
-			\freq, Pseq(
-				[
-					[
-						Rest(),
-					],
-				],
-			),
-			\dur, Pseq(
-				[
-					7 * 6,
-				]
-			,1),
-			\amp, 0.05263157894736842,
-			\legato, 1,
-		).play;
-	// voice 10
-		Pbind(
-			\freq, Pseq(
-				[
-					[
-						Rest(),
-					],
-				],
-			),
-			\dur, Pseq(
-				[
-					7 * 6,
-				]
-			,1),
-			\amp, 0.05263157894736842,
-			\legato, 1,
-		).play;
-	// voice 11
-		Pbind(
-			\freq, Pseq(
-				[
-					[
-						Rest(),
-					],
-				],
-			),
-			\dur, Pseq(
-				[
-					7 * 6,
-				]
-			,1),
-			\amp, 0.05263157894736842,
-			\legato, 1,
-		).play;
-	// voice 12
-		Pbind(
-			\freq, Pseq(
-				[
-					[
-						Rest(),
-					],
-				],
-			),
-			\dur, Pseq(
-				[
-					7 * 6,
-				]
-			,1),
-			\amp, 0.05263157894736842,
-			\legato, 1,
-		).play;
-	// voice 13
-		Pbind(
-			\freq, Pseq(
-				[
-					[
-						Rest(),
-					],
-				],
-			),
-			\dur, Pseq(
-				[
-					7 * 6,
-				]
-			,1),
-			\amp, 0.05263157894736842,
-			\legato, 1,
-		).play;
-	// voice 14
-		Pbind(
-			\freq, Pseq(
-				[
-					[
-						Rest(),
-					],
-				],
-			),
-			\dur, Pseq(
-				[
-					7 * 6,
-				]
-			,1),
-			\amp, 0.05263157894736842,
-			\legato, 1,
-		).play;
-	// voice 15
+	// erste Geige
 		Pbind(
 			\freq, Pseq(
 				[
@@ -278,10 +40,10 @@ s.quit;
 					1 * 6,
 				]
 			,1),
-			\amp, 0.05263157894736842,
+			\amp, 0.5,
 			\legato, 1,
 		).play;
-	// voice 16
+	// zweite Geige
 		Pbind(
 			\freq, Pseq(
 				[
@@ -319,10 +81,10 @@ s.quit;
 					1 * 6,
 				]
 			,1),
-			\amp, 0.05263157894736842,
+			\amp, 0.5,
 			\legato, 1,
 		).play;
-	// voice 17
+	// Bratsche
 		Pbind(
 			\freq, Pseq(
 				[
@@ -360,10 +122,10 @@ s.quit;
 					1 * 6,
 				]
 			,1),
-			\amp, 0.05263157894736842,
+			\amp, 0.5,
 			\legato, 1,
 		).play;
-	// voice 18
+	// Cello
 		Pbind(
 			\freq, Pseq(
 				[
@@ -401,10 +163,10 @@ s.quit;
 					1 * 6,
 				]
 			,1),
-			\amp, 0.05263157894736842,
+			\amp, 0.5,
 			\legato, 1,
 		).play;
-	// voice 19
+	// Kontrabass
 		Pbind(
 			\freq, Pseq(
 				[
@@ -422,6 +184,6 @@ s.quit;
 					5 * 6,
 				]
 			,1),
-			\amp, 0.05263157894736842,
+			\amp, 1.5,
 			\legato, 1,
 		).play;)

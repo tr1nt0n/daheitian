@@ -85,6 +85,20 @@ boxed-markup = #(
         (markup #:override '(baseline-skip . 2.5) #:number
                 (#:line ((#:fontsize 0.2 #:center-column ("1+3" "8")))))))
 
+string-clef = \markup {
+    % \hspace #0.6
+    \fontsize #10
+    \override #'(font-name . "ekmelos")
+    \override #'(whiteout-style . "outline")
+    \override #'(whiteout . 1)
+    \override #'(layer . 2)
+    {
+        \rotate #-90
+        \raise #-2.45
+        \char ##xe62a
+    }
+}
+
 % #(define ((ghost-time-signature-two) grob)
 %     (grob-interpret-markup grob
 %         (markup #:override '(baseline-skip . 2.5) #:number

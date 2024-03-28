@@ -184,13 +184,25 @@ afterGraceFraction = #(cons 15 16)
     }
 
     \context {
+        \Staff
+        \name divisiStaff
+        \type Engraver_group
+        % \consists Measure_spanner_engraver
+
+        \RemoveAllEmptyStaves
+        \alias Staff
+    }
+
+    \context {
         \StaffGroup
         \name SquareBracketGroup
+        \accepts divisiStaff
     }
 
     \context {
         \StaffGroup
         \accepts SquareBracketGroup
+        \accepts divisiStaff
         \remove System_start_delimiter_engraver
     }
 

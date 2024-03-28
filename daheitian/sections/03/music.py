@@ -111,7 +111,7 @@ trinton.make_music(
 trinton.make_music(
     lambda _: trinton.select_target(_, (1,)),
     evans.RhythmHandler(evans.talea([3, -3], 8)),
-    library.change_lines(lines=4, clef="percussion"),
+    library.change_lines(lines=4, clef="strings"),
     evans.PitchHandler(
         [5],
     ),

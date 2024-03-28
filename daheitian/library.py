@@ -20,6 +20,7 @@ def daheitian_score(time_signatures):
         instruments=[
             abjad.Flute(),
             abjad.Oboe(),
+            abjad.EnglishHorn(),
             abjad.BassClarinet(),
             abjad.Bassoon(),
             abjad.FrenchHorn(),
@@ -33,21 +34,64 @@ def daheitian_score(time_signatures):
             abjad.Percussion(),
             abjad.Percussion(),
             abjad.Percussion(),
+            abjad.Guitar(),
             abjad.Violin(),
+            abjad.Guitar(),
             abjad.Violin(),
+            abjad.Guitar(),
             abjad.Viola(),
+            abjad.Guitar(),
             abjad.Cello(),
             abjad.Contrabass(),
         ],
         groups=[
-            4,
+            5,
             1,
             3,
             2,
             2,
             1,
             2,
-            5,
+            9,
+        ],
+        staff_types=[
+            [
+                "Staff",
+                "Staff",
+                "divisiStaff",
+                "Staff",
+                "Staff",
+            ],
+            "Staff",
+            [
+                "Staff",
+                "Staff",
+                "Staff",
+            ],
+            [
+                "Staff",
+                "Staff",
+            ],
+            [
+                "Staff",
+                "Staff",
+            ],
+            "Staff",
+            [
+                "Staff",
+                "Staff",
+            ],
+            [
+                "divisiStaff",
+                "Staff",
+                "divisiStaff",
+                "Staff",
+                "divisiStaff",
+                "Staff",
+                "divisiStaff",
+                "Staff",
+                "Staff",
+            ],
         ],
         inner_staff=[
             "SquareBracketGroup",
@@ -264,6 +308,7 @@ all_voice_names = eval(
     """[
         "flute voice",
         "oboe voice",
+        "englishhorn voice",
         "bassclarinet voice",
         "bassoon voice",
         "frenchhorn voice",
@@ -277,9 +322,13 @@ all_voice_names = eval(
         "percussion 1 voice",
         "percussion 2 voice",
         "percussion 3 voice",
+        "guitar 1 voice",
         "violin 1 voice",
+        "guitar 2 voice",
         "violin 2 voice",
+        "guitar 3 voice",
         "viola voice",
+        "guitar 4 voice",
         "cello voice",
         "contrabass voice",
     ]"""
@@ -289,6 +338,7 @@ first_voice_names = eval(
     """[
         "flute voice",
         "oboe voice",
+        "englishhorn voice",
         "bassclarinet voice",
         "bassoon voice",
         "frenchhorn voice",
@@ -300,9 +350,13 @@ first_voice_names = eval(
         "percussion 1 voice",
         "percussion 2 voice",
         "percussion 3 voice",
+        "guitar 1 voice",
         "violin 1 voice",
+        "guitar 2 voice",
         "violin 2 voice",
+        "guitar 3 voice",
         "viola voice",
+        "guitar 4 voice",
         "cello voice",
         "contrabass voice",
     ]"""
@@ -384,12 +438,14 @@ _climax_pitches = {
 }
 
 climax_partials = ["3", "11", "13", "3", "4", "6", "7", "9"]
+climax_strings = ["III", "I", "I", "I", "I", "II", "II", "II"]
 
-climax_partials = trinton.return_fraction_string_list(
-    [(rf"{_}°", "A") for _ in climax_partials]
-)
-
-climax_partials = [abjad.Markup(_) for _ in climax_partials]
+climax_partials = [
+    abjad.Markup(
+        rf"""\markup {{ \center-column {{ \line {{ "Resultierende Ton:" }} \line {{ \upright \fraction {partial}° "Saite {string}" }} }} }}"""
+    )
+    for partial, string in zip(climax_partials, climax_strings)
+]
 
 _climax_partial_markups = {
     "contrabass voice": {
@@ -770,12 +826,12 @@ all_instrument_names = [
             '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Oboen }'
         ),
     ),
-    # abjad.InstrumentName(
-    #     context="Staff",
-    #     markup=abjad.Markup(
-    #         '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Cor Anglais }'
-    #     ),
-    # ),
+    abjad.InstrumentName(
+        context="Staff",
+        markup=abjad.Markup(
+            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Cor Anglais }'
+        ),
+    ),
     abjad.InstrumentName(
         context="Staff",
         markup=abjad.Markup(
@@ -845,7 +901,19 @@ all_instrument_names = [
     abjad.InstrumentName(
         context="Staff",
         markup=abjad.Markup(
+            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Geige 1 Soli }'
+        ),
+    ),
+    abjad.InstrumentName(
+        context="Staff",
+        markup=abjad.Markup(
             '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Geigen 1 }'
+        ),
+    ),
+    abjad.InstrumentName(
+        context="Staff",
+        markup=abjad.Markup(
+            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Geige 2 Soli }'
         ),
     ),
     abjad.InstrumentName(
@@ -857,7 +925,19 @@ all_instrument_names = [
     abjad.InstrumentName(
         context="Staff",
         markup=abjad.Markup(
+            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Bratsche Soli }'
+        ),
+    ),
+    abjad.InstrumentName(
+        context="Staff",
+        markup=abjad.Markup(
             '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Bratschen }'
+        ),
+    ),
+    abjad.InstrumentName(
+        context="Staff",
+        markup=abjad.Markup(
+            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Violoncello Soli }'
         ),
     ),
     abjad.InstrumentName(
@@ -887,12 +967,12 @@ all_short_instrument_names = [
             '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { ob. }'
         ),
     ),
-    # abjad.ShortInstrumentName(
-    #     context="Staff",
-    #     markup=abjad.Markup(
-    #         '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { ca. }'
-    #     ),
-    # ),
+    abjad.ShortInstrumentName(
+        context="Staff",
+        markup=abjad.Markup(
+            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { ca. }'
+        ),
+    ),
     abjad.ShortInstrumentName(
         context="Staff",
         markup=abjad.Markup(
@@ -962,7 +1042,19 @@ all_short_instrument_names = [
     abjad.ShortInstrumentName(
         context="Staff",
         markup=abjad.Markup(
+            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Geige 1 Soli }'
+        ),
+    ),
+    abjad.ShortInstrumentName(
+        context="Staff",
+        markup=abjad.Markup(
             '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { g. 1 }'
+        ),
+    ),
+    abjad.ShortInstrumentName(
+        context="Staff",
+        markup=abjad.Markup(
+            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Geige 2 Soli }'
         ),
     ),
     abjad.ShortInstrumentName(
@@ -974,7 +1066,19 @@ all_short_instrument_names = [
     abjad.ShortInstrumentName(
         context="Staff",
         markup=abjad.Markup(
+            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Bratsche Soli }'
+        ),
+    ),
+    abjad.ShortInstrumentName(
+        context="Staff",
+        markup=abjad.Markup(
             '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { br. }'
+        ),
+    ),
+    abjad.ShortInstrumentName(
+        context="Staff",
+        markup=abjad.Markup(
+            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Violoncello Soli }'
         ),
     ),
     abjad.ShortInstrumentName(
@@ -1026,19 +1130,12 @@ def monolith(score, measure):
 
     trinton.make_music(
         lambda _: trinton.select_target(_, (measure,)),
-        evans.RhythmHandler(
-            evans.tuplet(
-                [
-                    (1,),
-                    (8, 1, -11),
-                ]
-            )
-        ),
+        evans.RhythmHandler(evans.tuplet([(1,), (8, 1, -1), (-1,)])),
         trinton.respell_tuplets_command(),
         evans.PitchHandler([["c'", "df'"]]),
         trinton.linear_attachment_command(
             attachments=[
-                abjad.Dynamic("mp"),
+                abjad.Dynamic("mf"),
                 abjad.StartHairpin("--"),
                 abjad.StopHairpin(),
             ],
@@ -1049,7 +1146,7 @@ def monolith(score, measure):
         library.change_lines(lines=5, clef="bass"),
         library.piano_pedals(),
         voice=score["percussion 2 voice"],
-        preprocessor=trinton.fuse_quarters_preprocessor((2, 6)),
+        preprocessor=trinton.fuse_quarters_preprocessor((2,)),
     )
 
     # flutes
@@ -1058,6 +1155,18 @@ def monolith(score, measure):
         lambda _: trinton.select_target(_, (measure,)),
         evans.RhythmHandler(evans.even_division([64])),
         library.flute_flageolets(),
+        trinton.attachment_command(
+            attachments=[
+                abjad.bundle(
+                    abjad.Markup(
+                        r"""\markup \fontsize #7 \override #'(font-name . "Bodoni72 Book Italic") { "a2 ( Rhythmen müssen nicht unisono sein )" }"""
+                    ),
+                    r"- \tweak padding 5",
+                ),
+            ],
+            selector=trinton.select_leaves_by_index([0]),
+            direction=abjad.UP,
+        ),
         trinton.linear_attachment_command(
             attachments=[
                 abjad.Dynamic("pp"),
@@ -1083,7 +1192,8 @@ def monolith(score, measure):
                         2,
                         1,
                     ),
-                    (8, 1, -11),
+                    (8, 1, -1),
+                    (-1,),
                 ]
             )
         ),
@@ -1094,13 +1204,16 @@ def monolith(score, measure):
         trinton.attachment_command(
             attachments=[
                 abjad.Articulation(">"),
-                abjad.Articulation("staccato"),
             ],
             selector=trinton.select_leaves_by_index([2, 4, -1], pitched=True),
         ),
+        trinton.attachment_command(
+            attachments=[abjad.Articulation("staccato")],
+            selector=trinton.logical_ties(first=True, pitched=True),
+        ),
         trinton.hooked_spanner_command(
             string=library.return_boxed_markup(
-                string="Bewegen die Ventile schnell und wahllos.",
+                string="Bewegen die Ventile schnell und wahllos + Flatterzunge.",
             ),
             full_string=True,
             padding=8.5,
@@ -1110,23 +1223,15 @@ def monolith(score, measure):
         ),
         trinton.linear_attachment_command(
             attachments=[
-                abjad.Dynamic("ff"),
-                abjad.StartHairpin("o<|"),
-                abjad.Dynamic("f"),
-                abjad.Dynamic("ff"),
                 abjad.Dynamic("mf"),
-                abjad.StartHairpin(">"),
-                trinton.make_custom_dynamic("pf"),
-                abjad.StartHairpin("o<"),
+                abjad.StartHairpin("<|"),
                 abjad.Dynamic("fff"),
             ],
-            selector=trinton.select_leaves_by_index(
-                [0, 0, 1, 2, 3, 3, 4, 5, -1], pitched=True
-            ),
+            selector=trinton.select_leaves_by_index([0, 0, -1], pitched=True),
         ),
         trinton.tremolo_command(selector=trinton.pleaves()),
         voice=score["frenchhorn voice"],
-        preprocessor=trinton.fuse_quarters_preprocessor((2, 6)),
+        preprocessor=trinton.fuse_quarters_preprocessor((2,)),
         beam_meter=True,
     )
 
@@ -1176,6 +1281,17 @@ def piano_chords(hand="rh", index=0):
 
 
 # rhythm tools
+
+
+def tagged_mm_rests(tag=abjad.Tag("+SCORE")):
+    def make_rests(durations):
+        out = []
+        for duration in durations:
+            rest = abjad.MultiMeasureRest(multiplier=duration, tag=tag)
+            out.append(rest)
+        return out
+
+    return make_rests
 
 
 def fuse_contiguous(selector=trinton.pleaves()):
@@ -1499,8 +1615,6 @@ def grace_attachments(selector=trinton.pleaves(), glissando=True):
         graces = abjad.select.leaves(selections, grace=True)
 
         for grace in graces:
-            if glissando is True:
-                abjad.attach(abjad.Glissando(), grace)
 
             with_next_leaf = abjad.select.with_next_leaf(grace)
 
@@ -1667,26 +1781,30 @@ def right_beam(selector=None):
 
 def ties(score):
     for voice in abjad.select.components(score["Staff Group"], abjad.Voice):
-        for leaf in abjad.select.leaves(voice):
-            if abjad.get.has_indicator(leaf, abjad.Tie) and abjad.get.duration(
-                leaf
-            ) > abjad.Duration(3, 32):
-                abjad.attach(
-                    abjad.RepeatTie(),
-                    abjad.select.with_next_leaf(leaf)[-1],
-                    tag=abjad.Tag("+SCORE"),
-                )
+        for leaf in abjad.select.leaves(voice, pitched=True):
+            if isinstance(leaf, abjad.Skip):
+                pass
 
-            if abjad.get.has_indicator(leaf, abjad.Tie) and abjad.get.duration(
-                leaf
-            ) <= abjad.Duration(3, 32):
-                abjad.attach(
-                    abjad.LilyPondLiteral(
-                        r"\once \override Tie.transparent = ##f", "before"
-                    ),
-                    leaf,
-                    tag=abjad.Tag("+SCORE"),
-                )
+            else:
+                if abjad.get.has_indicator(leaf, abjad.Tie) and abjad.get.duration(
+                    leaf
+                ) > abjad.Duration(3, 32):
+                    abjad.attach(
+                        abjad.RepeatTie(),
+                        abjad.select.with_next_leaf(leaf)[-1],
+                        tag=abjad.Tag("+SCORE"),
+                    )
+
+                if abjad.get.has_indicator(leaf, abjad.Tie) and abjad.get.duration(
+                    leaf
+                ) <= abjad.Duration(3, 32):
+                    abjad.attach(
+                        abjad.LilyPondLiteral(
+                            r"\once \override Tie.transparent = ##f", "before"
+                        ),
+                        leaf,
+                        tag=abjad.Tag("+SCORE"),
+                    )
 
 
 def timbre_trills(selector=trinton.pleaves(), index=0):
@@ -1962,7 +2080,13 @@ def change_lines(
     def change(argument):
         selections = selector(argument)
         for selection in selections:
-            abjad.attach(abjad.Clef(clef), selection)
+            if clef == "strings":
+                clef_attachment = abjad.Clef("percussion")
+
+            else:
+                clef_attachment = abjad.Clef(clef)
+
+            abjad.attach(clef_attachment, selection)
             abjad.attach(
                 abjad.LilyPondLiteral(
                     rf"\staff-line-count {lines}",
@@ -1970,6 +2094,29 @@ def change_lines(
                 ),
                 selection,
             )
+
+            if clef == "strings":
+                abjad.attach(
+                    abjad.LilyPondLiteral(
+                        [
+                            r"\override Staff.Clef.stencil = #ly:text-interface::print",
+                            r"\override Staff.Clef.text = \string-clef",
+                        ],
+                        site="before",
+                    ),
+                    selection,
+                )
+
+            else:
+                abjad.attach(
+                    abjad.LilyPondLiteral(
+                        [
+                            r"\revert Staff.Clef.stencil",
+                        ],
+                        site="before",
+                    ),
+                    selection,
+                )
 
     return change
 

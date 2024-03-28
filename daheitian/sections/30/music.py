@@ -14,6 +14,12 @@ from daheitian import ts
 
 score = library.daheitian_score(ts.section_30_ts)
 
+# markup
+
+swelling_markup = abjad.Markup(
+    r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { "( Jede Note al niente dal niente )" }"""
+)
+
 # commands
 
 # flute music commands
@@ -234,8 +240,8 @@ trinton.make_music(
         selector=trinton.logical_ties(first=True, pitched=True),
     ),
     trinton.linear_attachment_command(
-        attachments=[abjad.StartHairpin("o<"), abjad.Dynamic("p")],
-        selector=trinton.select_leaves_by_index([0, 7], pitched=True),
+        attachments=[swelling_markup, abjad.StartHairpin("o<"), abjad.Dynamic("p")],
+        selector=trinton.select_leaves_by_index([0, 0, 7], pitched=True),
     ),
     trinton.tremolo_command(),
     voice=score["percussion 2 voice"],
@@ -269,8 +275,8 @@ trinton.make_music(
         selector=trinton.logical_ties(first=True, pitched=True),
     ),
     trinton.linear_attachment_command(
-        attachments=[abjad.StartHairpin("o<"), abjad.Dynamic("p")],
-        selector=trinton.select_leaves_by_index([0, 1], pitched=True),
+        attachments=[swelling_markup, abjad.StartHairpin("o<"), abjad.Dynamic("p")],
+        selector=trinton.select_leaves_by_index([0, 0, 7], pitched=True),
     ),
     trinton.tremolo_command(),
     voice=score["percussion 3 voice"],
@@ -302,12 +308,13 @@ trinton.make_music(
     ),
     trinton.linear_attachment_command(
         attachments=[
+            swelling_markup,
             abjad.StartTrillSpan(pitch=abjad.NamedPitch("a'")),
             abjad.StartHairpin("o<"),
             abjad.Dynamic("mp"),
             abjad.StopTrillSpan(),
         ],
-        selector=trinton.select_leaves_by_index([0, 0, 5, -1], pitched=True),
+        selector=trinton.select_leaves_by_index([0, 0, 0, 5, -1], pitched=True),
     ),
     trinton.attachment_command(
         attachments=[
@@ -321,7 +328,7 @@ trinton.make_music(
             string="MSP",
         ),
         full_string=True,
-        padding=12.5,
+        padding=14,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=4,
@@ -405,10 +412,11 @@ trinton.make_music(
     ),
     trinton.linear_attachment_command(
         attachments=[
+            swelling_markup,
             abjad.StartTrillSpan(pitch=abjad.NamedPitch("a'")),
             abjad.StopTrillSpan(),
         ],
-        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+        selector=trinton.select_leaves_by_index([0, 0, -1], pitched=True),
     ),
     trinton.attachment_command(
         attachments=[
@@ -501,10 +509,11 @@ trinton.make_music(
     ),
     trinton.linear_attachment_command(
         attachments=[
+            swelling_markup,
             abjad.StartTrillSpan(pitch=abjad.NamedPitch("a'")),
             abjad.StopTrillSpan(),
         ],
-        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+        selector=trinton.select_leaves_by_index([0, 0, -1], pitched=True),
     ),
     trinton.attachment_command(
         attachments=[
@@ -594,10 +603,11 @@ trinton.make_music(
     ),
     trinton.linear_attachment_command(
         attachments=[
+            swelling_markup,
             abjad.StartTrillSpan(pitch=abjad.NamedPitch("a")),
             abjad.StopTrillSpan(),
         ],
-        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+        selector=trinton.select_leaves_by_index([0, 0, -1], pitched=True),
     ),
     trinton.attachment_command(
         attachments=[
@@ -749,9 +759,20 @@ trinton.make_music(
     ),
     trinton.attachment_command(
         attachments=[
+            abjad.Markup(
+                r"""\markup \override #'(font-name . "Bodoni72 Book Italic") {
+                \column { \line { "( Obere Stimme: Jede Note al niente dal niente" }
+                \line { Tiefere Stimme: gleiche Dynamik beibehalten ) } } }"""
+            ),
+        ],
+        selector=trinton.select_leaves_by_index([0], pitched=True),
+        direction=abjad.DOWN,
+    ),
+    trinton.attachment_command(
+        attachments=[
             abjad.bundle(
                 library._climax_partial_markups["contrabass voice"][1],
-                r"- \tweak padding #6",
+                r"- \tweak padding #10.5",
             )
         ],
         selector=trinton.select_leaves_by_index([0], pitched=True),
