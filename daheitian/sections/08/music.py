@@ -15,7 +15,7 @@ score = library.daheitian_score(ts.section_8_ts)
 
 # commands
 
-# oboe music commands
+# cor anglais commands
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (1, 2)),
@@ -24,16 +24,7 @@ trinton.make_music(
     trinton.treat_tuplets(),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(["f'"]),
-    trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="1.",
-        ),
-        full_string=True,
-        padding=7,
-        style="solid-line-with-hook",
-        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
-        right_padding=2,
-    ),
+    library.soli_1(),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Dynamic("mp"),
@@ -53,7 +44,7 @@ trinton.make_music(
         pitch_list=["b'"], selector=trinton.pleaves(grace=True)
     ),
     library.grace_attachments(),
-    voice=score["oboe voice"],
+    voice=score["englishhorn voice"],
     preprocessor=trinton.fuse_quarters_preprocessor((5, 2)),
 )
 
@@ -202,16 +193,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, 2]),
         right_padding=10.5,
     ),
-    trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="1.",
-        ),
-        full_string=True,
-        padding=10.5,
-        style="solid-line-with-hook",
-        selector=trinton.select_leaves_by_index([3, -1]),
-        right_padding=2,
-    ),
+    library.soli_1(padding=6, selector=trinton.select_leaves_by_index([3])),
     trinton.spanner_command(
         strings=[
             "\markup {  }",
@@ -283,16 +265,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, 1]),
         right_padding=8,
     ),
-    trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="1.",
-        ),
-        full_string=True,
-        padding=9,
-        style="solid-line-with-hook",
-        selector=trinton.select_leaves_by_index([2, -1]),
-        right_padding=2,
-    ),
+    library.soli_1(selector=trinton.select_leaves_by_index([2])),
     trinton.spanner_command(
         strings=[
             "\markup {  }",
@@ -359,16 +332,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, 1]),
         right_padding=8,
     ),
-    trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="1.",
-        ),
-        full_string=True,
-        padding=7,
-        style="solid-line-with-hook",
-        selector=trinton.select_leaves_by_index([2, -1]),
-        right_padding=2,
-    ),
+    library.soli_1(padding=3, selector=trinton.select_leaves_by_index([2])),
     trinton.spanner_command(
         strings=[
             "\markup {  }",

@@ -90,6 +90,20 @@ for voice_name, pitch, padding in zip(
 # bassoon music
 
 trinton.make_music(
+    lambda _: trinton.select_target(_, (1,)),
+    trinton.attachment_command(
+        attachments=[
+            abjad.Markup(
+                r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5 "Tutti" }"""
+            ),
+        ],
+        selector=trinton.select_leaves_by_index([0], pitched=True),
+        direction=abjad.UP,
+    ),
+    voice=score["bassoon voice"],
+)
+
+trinton.make_music(
     lambda _: trinton.select_target(_, (2,)),
     trinton.attachment_command(
         attachments=[
@@ -121,7 +135,7 @@ for voice_name in ["violin 2 voice", "viola voice"]:
         ),
         library.change_lines(
             lines=4,
-            clef="percussion",
+            clef="strings",
         ),
         trinton.hooked_spanner_command(
             string=library.return_boxed_markup(
@@ -133,6 +147,7 @@ for voice_name in ["violin 2 voice", "viola voice"]:
             selector=trinton.select_leaves_by_index([0, -1], pitched=True),
             right_padding=2,
         ),
+        library.tutti(padding=8),
         voice=score[voice_name],
     )
 
@@ -151,6 +166,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=2,
     ),
+    library.tutti(direction=abjad.UP),
     trinton.change_notehead_command(notehead="lowest"),
     voice=score["bassclarinet voice"],
 )
@@ -293,7 +309,7 @@ trinton.make_music(
             11,
         ]
     ),
-    library.change_lines(lines=4, clef="percussion"),
+    library.change_lines(lines=4, clef="strings"),
     library.change_lines(
         lines=5,
         clef="treble",
@@ -367,7 +383,7 @@ trinton.make_music(
             string="MSP",
         ),
         full_string=True,
-        padding=13.5,
+        padding=15.5,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([3, -1], pitched=True),
     ),
@@ -433,7 +449,8 @@ trinton.make_music(
             "gqs'",
         ]
     ),
-    library.change_lines(lines=4, clef="percussion"),
+    library.change_lines(lines=4, clef="strings"),
+    library.tutti(),
     library.change_lines(
         lines=5,
         clef="tenorvarC",
@@ -505,7 +522,7 @@ trinton.make_music(
             string="MSP",
         ),
         full_string=True,
-        padding=16.5,
+        padding=18,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([2, -1], pitched=True),
     ),

@@ -33,9 +33,6 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=1.5,
     ),
-    library.boxed_markup(
-        string="( zu Cor Anglais) ", selector=trinton.select_leaves_by_index([-1])
-    ),
     trinton.notehead_bracket_command(),
     voice=score["oboe voice"],
     preprocessor=trinton.fuse_quarters_preprocessor(
@@ -50,13 +47,7 @@ trinton.make_music(
 
 # brass music commands
 
-for voice_name, fundamental in zip(
-    ["frenchhorn voice", "tenortrombone voice"],
-    [
-        "e'",
-        "a",
-    ],
-):
+for voice_name in ["frenchhorn voice", "tenortrombone voice"]:
     trinton.make_music(
         lambda _: trinton.select_target(_, (3, 4)),
         evans.RhythmHandler(
@@ -71,8 +62,7 @@ for voice_name, fundamental in zip(
             )
         ),
         evans.RewriteMeterCommand(boundary_depth=-2),
-        evans.PitchHandler([fundamental]),
-        evans.PitchHandler([library._brass_chord_pitches[voice_name]], as_ratios=True),
+        evans.PitchHandler([library._brass_chord_pitches[voice_name]]),
         trinton.force_accidentals_command(
             selector=trinton.select_leaves_by_index([0], pitched=True)
         ),
@@ -149,6 +139,7 @@ for voice_name in ["violin 1 voice", "violin 2 voice", "viola voice", "cello voi
         ),
         rmakers.force_rest,
         trinton.force_note(selector=library._moths_selectors[1][voice_name]),
+        evans.RewriteMeterCommand(boundary_depth=-1),
         evans.PitchHandler(
             [
                 -1,
@@ -157,7 +148,7 @@ for voice_name in ["violin 1 voice", "violin 2 voice", "viola voice", "cello voi
                 2,
             ]
         ),
-        library.change_lines(lines=4, clef="percussion"),
+        library.change_lines(lines=4, clef="strings"),
         trinton.hooked_spanner_command(
             string=library.return_boxed_markup(
                 string="DP, Kratzen",
@@ -169,20 +160,7 @@ for voice_name in ["violin 1 voice", "violin 2 voice", "viola voice", "cello voi
             right_padding=2,
         ),
         voice=score[voice_name],
-    )
-
-    trinton.make_music(
-        lambda _: trinton.select_target(_, (1,)),
-        trinton.beam_durations([(3, 8)], beam_rests=True),
-        library.fuse_durations([(3, 8)]),
-        voice=score[voice_name],
-    )
-
-    trinton.make_music(
-        lambda _: trinton.select_target(_, (2, 3)),
-        trinton.beam_durations([(1, 4)], beam_rests=True),
-        library.fuse_durations([(1, 4)]),
-        voice=score[voice_name],
+        beam_meter=True,
     )
 
 # violin 1 music commands
@@ -312,8 +290,7 @@ trinton.make_music(
     ),
     rmakers.force_rest,
     trinton.force_note(selector=library._moths_selectors[1]["contrabass voice"]),
-    trinton.beam_durations([(1, 4)], beam_rests=True),
-    library.fuse_durations([(1, 4)]),
+    evans.RewriteMeterCommand(boundary_depth=-1),
     evans.PitchHandler(
         [
             -1,
@@ -322,7 +299,7 @@ trinton.make_music(
             2,
         ]
     ),
-    library.change_lines(lines=4, clef="percussion"),
+    library.change_lines(lines=4, clef="strings"),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
             string="DP, Kratzen",
@@ -374,6 +351,7 @@ trinton.make_music(
                 met_string=library.metronome_marks["96"],
                 mod_string=library.metronome_marks["5:3(4)=4"],
                 string_only=True,
+                interpolation="Rit.",
             ),
             library.metronome_markups(
                 met_string=library.metronome_marks["57 3/5"],

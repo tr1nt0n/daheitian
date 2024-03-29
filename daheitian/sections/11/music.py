@@ -181,6 +181,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=2,
     ),
+    library.soli_1(padding=10),
     trinton.notehead_bracket_command(),
     trinton.ottava_command(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True)
@@ -242,6 +243,7 @@ trinton.make_music(
     evans.PitchHandler(
         ["b'''", "ef''''", "a'''", "fs''''", "cs''''", "e''''", "cs''''", "af''''"]
     ),
+    library.soli_1(padding=12),
     library.change_lines(lines=5, clef="treble"),
     library.unpitched_glissandi(trill=True),
     trinton.linear_attachment_command(
@@ -351,6 +353,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=2,
     ),
+    library.soli_1(padding=12),
     trinton.notehead_bracket_command(),
     trinton.ottava_command(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True)
@@ -414,6 +417,7 @@ trinton.make_music(
     trinton.force_rest(selector=trinton.patterned_tie_index_selector([2, 6], 8)),
     evans.RewriteMeterCommand(boundary_depth=-2),
     rmakers.force_diminution,
+    trinton.respell_tuplets_command(),
     evans.PitchHandler(
         ["bf'''", "a''", "gs'''", "fs'''"],
     ),
@@ -442,6 +446,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=2,
     ),
+    library.soli_1(padding=9),
     trinton.notehead_bracket_command(),
     trinton.ottava_command(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True)

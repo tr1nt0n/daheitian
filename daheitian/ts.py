@@ -115,7 +115,9 @@ section_6_ts.append((1, 4))
 
 # section 7
 
-section_7_ts = taal_ts_sequence[16:20]
+section_7_ts = taal_ts_sequence[17:20]
+
+section_7_ts.insert(0, (6, 4))
 
 section_7_ts.append((1, 4))
 
@@ -145,6 +147,8 @@ section_13_ts = map_ts_sequence[10:25]
 
 section_14_ts = taal_ts_sequence[40:50]
 
+section_14_ts.pop(5)
+section_14_ts.insert(5, (6, 4))
 section_14_ts.append((1, 4))
 section_14_ts.append((1, 4))
 

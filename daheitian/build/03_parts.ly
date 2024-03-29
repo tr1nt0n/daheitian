@@ -10,6 +10,7 @@
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"96"
                   [\abjad-metric-modulation-tuplet-lhs #2 #0 #3 #5 #2 #0 #'(1 . 1)]
+
               }
             }
             \time 2/4
@@ -22,6 +23,7 @@
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"48"
                   [\abjad-metric-modulation #1 #0 #2 #0 #'(1 . 1)]
+
               }
             }
             \time 6/16
@@ -53,6 +55,14 @@
                                     g''''64
                                     - \flageolet
                                     \pp
+                                      %! +PARTS
+                                    - \tweak padding 5
+                                      %! +PARTS
+                                    ^ \markup \fontsize #7 \override #'(font-name . "Bodoni72 Book Italic") { "a2 ( Rhythmen müssen nicht unisono sein )" }
+                                      %! +SCORE
+                                %%% - \tweak padding 5
+                                      %! +SCORE
+                                %%% _ \markup \fontsize #7 \override #'(font-name . "Bodoni72 Book Italic") { "a2 ( Rhythmen müssen nicht unisono sein )" }
                                     [
                                     (
                                     - \tweak stencil #constante-hairpin
@@ -1319,7 +1329,7 @@
                                     \clef "percussion"
                                     c'4..
                                     \mp
-                                    \boxed-markup "Bangu mit Bambusstäbchen" 1
+                                    \boxed-markup "Bangu" 1
                                     c'4.
                                     c'4..
                                 }
@@ -1363,20 +1373,17 @@
                                     \revert Staff.Clef.stencil
                                     \clef "percussion"
                                     c'16.
-                                    - \stopped
                                     \mp
                                     ~
-                                    \boxed-markup "Amboss mit Hämmerchen" 1
+                                    \boxed-markup "Amboss" 1
                                     c'8
                                     c'8.
-                                    - \stopped
                                     r8.
                                     r8.
                                     r32
                                       %! +SCORE
                                 %%% \once \override Tie.transparent = ##f
                                     c'16.
-                                    - \stopped
                                     ~
                                     c'8
                                 }
@@ -1869,6 +1876,8 @@
                                             \voiceOne
                                             \afterGrace
                                             f'4.
+                                            - \tweak padding 12
+                                            ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Tutti | Divisi" }
                                             \glissando
                                             {
                                                 \once \override Flag.stroke-style = #"grace"

@@ -23,6 +23,7 @@ trinton.make_music(
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(["cs'", "ds'"]),
     library.flute_graces(),
+    trinton.change_notehead_command(notehead="la"),
     trinton.pitch_with_selector_command(
         pitch_list=["e'"], selector=trinton.pleaves(grace=True)
     ),
@@ -31,9 +32,10 @@ trinton.make_music(
         attachments=[abjad.StartHairpin("o<"), abjad.Dynamic("pp")],
         selector=trinton.select_logical_ties_by_index([0, -2], first=True),
     ),
+    library.soli_1(padding=7),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="1.",
+            string="Luftklang",
         ),
         full_string=True,
         padding=7,
@@ -104,6 +106,124 @@ trinton.make_music(
 
 # bassoon music commands
 
+trinton.make_music(
+    lambda _: trinton.select_target(_, (3, 7)),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.LilyPondLiteral(
+                r"\override Staff.MultiMeasureRest.transparent = ##t", site="before"
+            ),
+            abjad.LilyPondLiteral(
+                r"\revert Staff.MultiMeasureRest.transparent", site="absolute_after"
+            ),
+        ],
+        selector=trinton.select_leaves_by_index([0, -1]),
+        tag=abjad.Tag("+PARTS"),
+    ),
+    trinton.IntermittentVoiceHandler(
+        evans.RhythmHandler(
+            evans.talea(
+                [
+                    22,
+                    10,
+                ],
+                16,
+            )
+        ),
+        direction=abjad.UP,
+        voice_name="bassoon intermittent voice 1",
+        from_components=False,
+        temp_name="temp",
+    ),
+    voice=score["bassoon voice"],
+),
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (3, 7)),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    evans.PitchHandler(["aqf,"]),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.Clef("bass"),
+            abjad.StartHairpin("o<"),
+            abjad.Dynamic("ppp"),
+        ],
+        selector=trinton.select_logical_ties_by_index(
+            [0, 0, -1], pitched=True, first=True
+        ),
+    ),
+    trinton.glissando_command(
+        selector=trinton.ranged_selector(ranges=[range(0, 10)], nested=True),
+        no_ties=True,
+    ),
+    trinton.attachment_command(
+        attachments=[abjad.Clef("bass")], selector=trinton.select_leaves_by_index([0])
+    ),
+    library.wenn_keine_bk(),
+    library.soli_1(padding=3),
+    library.cue_eraser(),
+    voice=score["bassoon intermittent voice 1"],
+    beam_meter=True,
+)
+
+# trinton.make_music(
+#     lambda _: trinton.select_target(_, (3,)),
+#     # evans.RhythmHandler(rmakers.note),
+#     trinton.attachment_command(
+#         attachments=[
+#             trinton.notation_markup(
+#                 [abjad.TimeSignature(_) for _ in [(9, 16), (7, 16), (7, 16), (5, 16), (4, 16)]],
+#                 evans.RhythmHandler(
+#                     evans.talea(
+#                         [
+#                             22,
+#                             10,
+#                         ],
+#                         16,
+#                     )
+#                 ),
+#                 evans.RewriteMeterCommand(boundary_depth=-2),
+#                 evans.PitchHandler(["aqf,"]),
+#                 trinton.linear_attachment_command(
+#                     attachments=[abjad.Clef("bass"), abjad.StartHairpin("o<"), abjad.Dynamic("ppp")],
+#                     selector=trinton.select_logical_ties_by_index(
+#                         [0, 0, -1], pitched=True, first=True
+#                     ),
+#                 ),
+#                 library.soli_1(padding=3),
+#                 trinton.glissando_command(
+#                     selector=trinton.ranged_selector(ranges=[range(0, 10)], nested=True),
+#                     no_ties=True,
+#                 ),
+#                 trinton.attachment_command(
+#                     attachments=[
+#                         abjad.InstrumentName(
+#                             context="Staff",
+#                             markup=abjad.Markup(
+#                                 '\markup \\fontsize #1 \override #\'(font-name . "Bodoni72 Book Italic") { \center-column { \line { "Wenn keine erste" } \line { "Bassklarinette:" } } }'
+#                             ),
+#                         ),
+#                     ],
+#                     selector=trinton.select_leaves_by_index([0], pitched=True)
+#                 ),
+#                 trinton.attachment_command(
+#                     attachments=[
+#                         abjad.Markup(r"""\markup { \hspace #-12 { "( Takt 21 - 25 )" } }""")
+#                     ],
+#                     selector=trinton.select_leaves_by_index([0], pitched=True),
+#                     direction=abjad.UP
+#                 ),
+#                 tweaks=[r"- \tweak font-size 0.01", r"- \tweak X-extent ##f", r"- \tweak layer 20", r"- \tweak whiteout-style #'outline", r"- \tweak whiteout 3"],
+#                 preprocessor=None,
+#                 beam_meter=True,
+#             ),
+#         ],
+#         selector=trinton.select_leaves_by_index([0]),
+#         direction=abjad.UP,
+#     ),
+#     voice=score["bassoon voice"],
+#     beam_meter=True,
+# )
 
 # harp music commands
 
@@ -207,10 +327,6 @@ trinton.make_music(
     evans.RewriteMeterCommand(boundary_depth=-2),
     trinton.respell_tuplets_command(),
     library.change_lines(lines=1, clef="percussion"),
-    trinton.attachment_command(
-        attachments=[abjad.Articulation("stopped")],
-        selector=trinton.logical_ties(pitched=True, first=True),
-    ),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Dynamic("mp"),

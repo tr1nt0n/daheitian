@@ -51,9 +51,11 @@ trinton.make_music(
     ),
     library.flute_graces(),
     library.flute_grace_attachments(),
+    trinton.change_notehead_command(notehead="la"),
+    library.duet_1_2(padding=8),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="1.|2.",
+            string="Luftklang",
         ),
         full_string=True,
         padding=8,
@@ -72,6 +74,7 @@ trinton.make_music(
         pitch_list=["e'"], selector=trinton.pleaves(grace=True)
     ),
     library.flute_grace_attachments(),
+    trinton.change_notehead_command(notehead="la"),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Dynamic("ppp"),
@@ -87,7 +90,7 @@ trinton.make_music(
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="1.",
+            string="Luftklang",
         ),
         full_string=True,
         padding=7,
@@ -103,6 +106,7 @@ trinton.make_music(
     trinton.pitch_with_selector_command(
         pitch_list=["af'"], selector=trinton.pleaves(grace=True)
     ),
+    trinton.change_notehead_command(notehead="la"),
     voice=score["flute divisi voice"],
     beam_meter=True,
 )
@@ -154,6 +158,81 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, 1, 1, 3, 3, -1]),
     ),
     voice=score["bassclarinet divisi voice"],
+)
+
+# bassoon music
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (1, 5)),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.LilyPondLiteral(
+                r"\override Staff.MultiMeasureRest.transparent = ##t", site="before"
+            ),
+            abjad.LilyPondLiteral(
+                r"\revert Staff.MultiMeasureRest.transparent", site="absolute_after"
+            ),
+        ],
+        selector=trinton.select_leaves_by_index([0, -1]),
+        tag=abjad.Tag("+PARTS"),
+    ),
+    trinton.IntermittentVoiceHandler(
+        evans.RhythmHandler(
+            evans.tuplet(
+                [
+                    (-1,),
+                    (-1,),
+                    (
+                        1,
+                        1,
+                        1,
+                    ),
+                    (-1,),
+                    (
+                        1,
+                        1,
+                        1,
+                    ),
+                    (-1,),
+                    (
+                        1,
+                        1,
+                        1,
+                    ),
+                    (-1,),
+                    (
+                        1,
+                        1,
+                        1,
+                    ),
+                ]
+            )
+        ),
+        direction=abjad.UP,
+        voice_name="bassoon intermittent voice 1",
+        from_components=False,
+        preprocessor=trinton.fuse_eighths_preprocessor((3, 2, 7, 3, 3, 1, 4, 4, 5)),
+        temp_name="temp",
+    ),
+    voice=score["bassoon voice"],
+),
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (1, 5)),
+    rmakers.rewrite_dots,
+    trinton.respell_tuplets_command(),
+    evans.PitchHandler(["aqf,"]),
+    library.ring_mod_attachments(
+        dynamics=["pppp", "ppp", "ppp", "pp"], direction=abjad.DOWN
+    ),
+    trinton.notehead_bracket_command(),
+    trinton.attachment_command(
+        attachments=[abjad.Clef("bass")], selector=trinton.select_leaves_by_index([0])
+    ),
+    library.wenn_keine_bk(),
+    library.soli_1(padding=3),
+    library.cue_eraser(),
+    voice=score["bassoon intermittent voice 1"],
 )
 
 # piano music commands

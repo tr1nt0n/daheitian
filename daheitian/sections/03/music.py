@@ -32,6 +32,8 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, 0, -1], pitched=True),
     ),
     library.flute_flageolets(),
+    library.a2_whistletone(direction=abjad.DOWN, tag=abjad.Tag("+SCORE")),
+    library.a2_whistletone(tag=abjad.Tag("+PARTS")),
     voice=score["flute voice"],
     preprocessor=trinton.fuse_sixteenths_preprocessor((5, 15)),
 )
@@ -115,6 +117,7 @@ trinton.make_music(
     evans.PitchHandler(
         [5],
     ),
+    library.tutti_div(padding=12),
     evans.IntermittentVoiceHandler(
         evans.RhythmHandler(evans.talea([3, -3], 8)),
         direction=abjad.DOWN,
@@ -187,7 +190,7 @@ trinton.make_music(
         rmakers.note,
     ),
     library.change_lines(lines=1, clef="percussion"),
-    library.boxed_markup(string="Bangu mit Bambusstäbchen"),
+    library.boxed_markup(string="Bangu"),
     trinton.attachment_command(
         attachments=[abjad.Dynamic("mp")], selector=trinton.select_leaves_by_index([0])
     ),
@@ -207,14 +210,10 @@ trinton.make_music(
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
     library.change_lines(lines=1, clef="percussion"),
-    library.boxed_markup(string="Amboss mit Hämmerchen"),
+    library.boxed_markup(string="Amboss"),
     trinton.attachment_command(
         attachments=[abjad.Dynamic("mp")],
         selector=trinton.select_leaves_by_index([0], pitched=True),
-    ),
-    trinton.attachment_command(
-        attachments=[abjad.Articulation("stopped")],
-        selector=trinton.logical_ties(pitched=True, first=True),
     ),
     voice=score["percussion 3 voice"],
 )

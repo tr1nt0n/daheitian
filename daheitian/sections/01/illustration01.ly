@@ -25,6 +25,7 @@
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"72"
+
               }
             }
             \once \override Score.TimeSignature.stencil = ##f
@@ -58,6 +59,8 @@
                                     g''''64
                                     - \flageolet
                                     \pppp
+                                    - \tweak padding 5
+                                    ^ \markup \fontsize #7 \override #'(font-name . "Bodoni72 Book Italic") { "a2 ( Rhythmen müssen nicht unisono sein )" }
                                     [
                                     (
                                     - \tweak stencil #constante-hairpin
@@ -364,6 +367,37 @@
                                     <a cs'>4
                                     - \staccato
                                     \f
+                                    - \tweak X-extent ##f
+                                    - \tweak font-size 0.01
+                                    - \tweak layer 20
+                                    - \tweak whiteout 3
+                                    - \tweak whiteout-style #'outline
+                                    ^ \markup { \score {
+                                        \new Staff {
+                                        \context Voice = "RhythmMaker.Music"
+                                    {
+                                        \key a \major
+                                        \set Staff.instrumentName = \markup \fontsize #1 \override #'(font-name . "Bodoni72 Book Italic") { \center-column { \line { "Wenn keine erste Bassklarinette," } \line { "1. Soli während der Tutti" } \line { "der übrigen Fagotte:" } } }
+                                        \time 2/4
+                                        cs''4
+                                        - \staccato
+                                        \f
+                                        ^ \markup { \hspace #-10 { "( Takt 1 )" } }
+                                        \boxed-markup "( Tonhöhe sollte instabil sein )" 1
+                                        r4
+                                    }
+                                        }
+                                        \layout
+                                        { ragged-right = ##t  indent = 0\cm
+                                        \context {
+                                        \Staff
+                                        \consists Time_signature_engraver
+                                        \override TimeSignature.whiteout-style = #'outline
+                                        \override TimeSignature.whiteout = 1
+                                        \override TimeSignature.layer = 20
+                                        }
+                                        }
+                                        } }
                                     r4
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
@@ -710,6 +744,7 @@
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \staff-line-count 1
+                                    \revert Staff.Clef.stencil
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
                                       %! +SCORE
@@ -746,6 +781,7 @@
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \staff-line-count 1
+                                    \revert Staff.Clef.stencil
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
                                       %! +SCORE

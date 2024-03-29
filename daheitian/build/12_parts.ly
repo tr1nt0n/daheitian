@@ -10,6 +10,7 @@
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"72"
                   [\abjad-metric-modulation #1 #0 #2 #0 #'(1 . 1)]
+
               }
             }
             \once \override Score.BarLine.transparent = ##f
@@ -1042,6 +1043,7 @@
                                 \context Voice = "percussion 2 voice"
                                 {
                                     \staff-line-count 5
+                                    \revert Staff.Clef.stencil
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
                                       %! +SCORE
                                 %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }

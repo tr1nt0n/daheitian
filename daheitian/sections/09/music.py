@@ -15,7 +15,7 @@ score = library.daheitian_score(ts.section_9_ts)
 
 # commands
 
-# oboe music commands
+# cor anglais commands
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (1, 4)),
@@ -24,16 +24,6 @@ trinton.make_music(
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler(["f'"]),
-    trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="1.",
-        ),
-        full_string=True,
-        padding=7,
-        style="solid-line-with-hook",
-        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
-        right_padding=2,
-    ),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Dynamic("mp"),
@@ -51,19 +41,8 @@ trinton.make_music(
         pitch_list=["b'"], selector=trinton.pleaves(grace=True)
     ),
     library.grace_attachments(),
-    voice=score["oboe voice"],
+    voice=score["englishhorn voice"],
     beam_meter=True,
-)
-
-trinton.make_music(
-    lambda _: trinton.select_target(_, (5,)),
-    library.aftergrace(selector=trinton.select_leaves_by_index([-1])),
-    trinton.noteheads_only(),
-    trinton.transparent_noteheads(selector=trinton.pleaves()),
-    library.boxed_markup(
-        string="( zu Oboe )", selector=trinton.select_leaves_by_index([-1])
-    ),
-    voice=score["oboe voice"],
 )
 
 # bass clarinet music commands
@@ -81,16 +60,7 @@ trinton.make_music(
     trinton.treat_tuplets(),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler([12]),
-    trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="1.",
-        ),
-        full_string=True,
-        padding=7,
-        style="solid-line-with-hook",
-        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
-        right_padding=2,
-    ),
+    library.soli_1(padding=3),
     trinton.linear_attachment_command(
         attachments=[
             abjad.StartHairpin("o<"),
@@ -140,16 +110,7 @@ trinton.make_music(
     trinton.treat_tuplets(),
     evans.RewriteMeterCommand(boundary_depth=-2),
     evans.PitchHandler([-2]),
-    trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="1.",
-        ),
-        full_string=True,
-        padding=9,
-        style="solid-line-with-hook",
-        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
-        right_padding=2,
-    ),
+    library.soli_1(padding=2),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Clef("bass"),
@@ -405,6 +366,7 @@ trinton.make_music(
         ]
     ),
     trinton.change_lines(lines=1, clef="percussion"),
+    library.tutti(padding=0),
     trinton.change_lines(
         lines=5,
         clef="treble",
@@ -452,21 +414,12 @@ trinton.make_music(
             string="Steg",
         ),
         selector=trinton.select_leaves_by_index([0, 5]),
-        padding=8,
+        padding=9,
         right_padding=5,
         full_string=True,
         style="solid-line-with-hook",
     ),
-    trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="1.",
-        ),
-        full_string=True,
-        padding=11,
-        style="solid-line-with-hook",
-        selector=trinton.select_leaves_by_index([6, -1]),
-        right_padding=2,
-    ),
+    library.soli_1(padding=8, selector=trinton.select_leaves_by_index([6])),
     trinton.spanner_command(
         strings=[
             "\markup {  }",
@@ -555,16 +508,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, 0, 0, 10, 12, 12, -1]),
     ),
-    trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="1.",
-        ),
-        full_string=True,
-        padding=14,
-        style="solid-line-with-hook",
-        selector=trinton.select_leaves_by_index([0, -1]),
-        right_padding=2,
-    ),
+    library.soli_1(padding=3),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
             string="MSP",
@@ -630,16 +574,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, 0, 0, 4, 6, 6, -1]),
     ),
-    trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="1.",
-        ),
-        full_string=True,
-        padding=8,
-        style="solid-line-with-hook",
-        selector=trinton.select_leaves_by_index([0, -1]),
-        right_padding=2,
-    ),
+    library.soli_1(padding=5),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
             string="MSP",
@@ -790,6 +725,7 @@ trinton.make_music(
                 met_string=library.metronome_marks["96"],
                 string_only=True,
                 parenthesis=True,
+                interpolation="Rit.",
             ),
             library.metronome_markups(
                 met_string=library.metronome_marks["57 3/5"],
@@ -814,6 +750,7 @@ trinton.make_music(
                 met_string=library.metronome_marks["57 3/5"],
                 string_only=True,
                 parenthesis=True,
+                interpolation="Rit.",
             ),
             library.metronome_markups(
                 met_string=library.metronome_marks["48"],

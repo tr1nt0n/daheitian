@@ -118,6 +118,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, 0, 1, 1, -1], pitched=True),
     ),
+    library.a2_whistletone(selector=trinton.select_leaves_by_index([1], pitched=True)),
     voice=score["flute voice"],
     preprocessor=trinton.fuse_sixteenths_preprocessor((4, 3, 17)),
 )
@@ -180,6 +181,57 @@ trinton.make_music(
     ),
     library.boxed_markup(string="( Höchste Tonhöhe darf instabil sein )"),
     voice=score["bassclarinet voice"],
+)
+
+# bassoon music commands
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (1,)),
+    trinton.attachment_command(
+        attachments=[
+            trinton.notation_markup(
+                [abjad.TimeSignature((2, 4))],
+                evans.RhythmHandler(evans.talea([1, -1], 4)),
+                evans.PitchHandler(["cs''"]),
+                trinton.attachment_command(
+                    attachments=[
+                        abjad.Articulation("staccato"),
+                        abjad.Dynamic("f"),
+                        abjad.KeySignature(
+                            abjad.NamedPitchClass("a"), abjad.Mode("major")
+                        ),
+                        abjad.InstrumentName(
+                            context="Staff",
+                            markup=abjad.Markup(
+                                '\markup \\fontsize #1 \override #\'(font-name . "Bodoni72 Book Italic") { \center-column { \line { "Wenn keine erste Bassklarinette," } \line { "1. Soli während der Tutti" } \line { "der übrigen Fagotte:" } } }'
+                            ),
+                        ),
+                    ],
+                    selector=trinton.select_leaves_by_index([0], pitched=True),
+                ),
+                trinton.attachment_command(
+                    attachments=[
+                        abjad.Markup(r"""\markup { \hspace #-10 { "( Takt 1 )" } }""")
+                    ],
+                    selector=trinton.select_leaves_by_index([0], pitched=True),
+                    direction=abjad.UP,
+                ),
+                library.boxed_markup(string="( Tonhöhe sollte instabil sein )"),
+                tweaks=[
+                    r"- \tweak font-size 0.01",
+                    r"- \tweak X-extent ##f",
+                    r"- \tweak layer 20",
+                    r"- \tweak whiteout-style #'outline",
+                    r"- \tweak whiteout 3",
+                ],
+                preprocessor=None,
+                beam_meter=False,
+            ),
+        ],
+        selector=trinton.select_leaves_by_index([0]),
+        direction=abjad.UP,
+    ),
+    voice=score["bassoon voice"],
 )
 
 # horn music commands

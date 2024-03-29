@@ -186,7 +186,11 @@ metronome_marks = {
 
 
 def metronome_markups(
-    met_string, mod_string=None, string_only=False, parenthesis=False
+    met_string,
+    mod_string=None,
+    string_only=False,
+    parenthesis=False,
+    interpolation="",
 ):
     if mod_string is None:
         if parenthesis is False:
@@ -197,6 +201,7 @@ def metronome_markups(
                     r"  \override #'(font-size . 5.5)",
                     r"  \concat {",
                     f"      {met_string.string[8:]}",
+                    f" {interpolation}",
                     r"  }",
                     r"}",
                 ],
@@ -204,12 +209,12 @@ def metronome_markups(
             )
             return mark
         else:
-            mark = f"\markup {{ \override #'(font-size . 5.5) \concat {{ ( {met_string.string[8:]} ) }} }}"
+            mark = f"\markup {{ \override #'(font-size . 5.5) \concat {{ ( {met_string.string[8:]} ) {interpolation} }} }}"
             return mark
 
     else:
         if string_only is True:
-            mark = f"\markup {{ \override #'(font-size . 5.5) \concat {{ {met_string.string[8:]} [{abjad.lilypond(mod_string)[8:]}] }} }}"
+            mark = f"\markup {{ \override #'(font-size . 5.5) \concat {{ {met_string.string[8:]} [{abjad.lilypond(mod_string)[8:]}] {interpolation} }} }}"
         else:
             mark = abjad.LilyPondLiteral(
                 [
@@ -219,6 +224,7 @@ def metronome_markups(
                     r"  \concat {",
                     f"      {met_string.string[8:]}",
                     f"      [{abjad.lilypond(mod_string)[8:]}]",
+                    f" {interpolation}",
                     r"  }",
                     r"}",
                 ],
@@ -301,6 +307,251 @@ movements = [
 ]
 
 movements = [abjad.bundle(movement, r"- \tweak padding #14") for movement in movements]
+
+# divisi markups
+
+
+def soli_1(
+    padding=5,
+    selector=trinton.select_leaves_by_index([0], pitched=True),
+    direction=abjad.UP,
+    tag=None,
+):
+    def attach_markup(argument):
+        selections = selector(argument)
+
+        markup = abjad.bundle(
+            abjad.Markup(
+                r"""\markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "1. soli" }"""
+            ),
+            rf"- \tweak padding {padding}",
+        )
+
+        for selection in selections:
+            abjad.attach(markup, selection, direction=direction, tag=tag)
+
+    return attach_markup
+
+
+def soli_1_2(
+    padding=5,
+    selector=trinton.select_leaves_by_index([0], pitched=True),
+    direction=abjad.UP,
+    tag=None,
+):
+    def attach_markup(argument):
+        selections = selector(argument)
+
+        markup = abjad.bundle(
+            abjad.Markup(
+                r"""\markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "1.|2. soli" }"""
+            ),
+            rf"- \tweak padding {padding}",
+        )
+
+        for selection in selections:
+            abjad.attach(markup, selection, direction=direction, tag=tag)
+
+    return attach_markup
+
+
+def duet_1_2(
+    padding=5,
+    selector=trinton.select_leaves_by_index([0], pitched=True),
+    direction=abjad.UP,
+    tag=None,
+):
+    def attach_markup(argument):
+        selections = selector(argument)
+
+        markup = abjad.bundle(
+            abjad.Markup(
+                r"""\markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "1.|2. duet" }"""
+            ),
+            rf"- \tweak padding {padding}",
+        )
+
+        for selection in selections:
+            abjad.attach(markup, selection, direction=direction, tag=tag)
+
+    return attach_markup
+
+
+def tutti(
+    padding=5,
+    selector=trinton.select_leaves_by_index([0], pitched=True),
+    direction=abjad.UP,
+    tag=None,
+):
+    def attach_markup(argument):
+        selections = selector(argument)
+
+        markup = abjad.bundle(
+            abjad.Markup(
+                r"""\markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Tutti" }"""
+            ),
+            rf"- \tweak padding {padding}",
+        )
+
+        for selection in selections:
+            abjad.attach(markup, selection, direction=direction, tag=tag)
+
+    return attach_markup
+
+
+def div(
+    padding=5,
+    selector=trinton.select_leaves_by_index([0], pitched=True),
+    direction=abjad.UP,
+    tag=None,
+):
+    def attach_markup(argument):
+        selections = selector(argument)
+
+        markup = abjad.bundle(
+            abjad.Markup(
+                r"""\markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Divisi" }"""
+            ),
+            rf"- \tweak padding {padding}",
+        )
+
+        for selection in selections:
+            abjad.attach(markup, selection, direction=direction, tag=tag)
+
+    return attach_markup
+
+
+def tutti_div(
+    padding=5,
+    selector=trinton.select_leaves_by_index([0], pitched=True),
+    direction=abjad.UP,
+    tag=None,
+):
+    def attach_markup(argument):
+        selections = selector(argument)
+
+        markup = abjad.bundle(
+            abjad.Markup(
+                r"""\markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Tutti | Divisi" }"""
+            ),
+            rf"- \tweak padding {padding}",
+        )
+
+        for selection in selections:
+            abjad.attach(markup, selection, direction=direction, tag=tag)
+
+    return attach_markup
+
+
+def unis(
+    padding=5,
+    selector=trinton.select_leaves_by_index([0], pitched=True),
+    direction=abjad.UP,
+    tag=None,
+):
+    def attach_markup(argument):
+        selections = selector(argument)
+
+        markup = abjad.bundle(
+            abjad.Markup(
+                r"""\markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Unisono" }"""
+            ),
+            rf"- \tweak padding {padding}",
+        )
+
+        for selection in selections:
+            abjad.attach(markup, selection, direction=direction, tag=tag)
+
+    return attach_markup
+
+
+def tutti_unis(
+    padding=5,
+    selector=trinton.select_leaves_by_index([0], pitched=True),
+    direction=abjad.UP,
+    tag=None,
+):
+    def attach_markup(argument):
+        selections = selector(argument)
+
+        markup = abjad.bundle(
+            abjad.Markup(
+                r"""\markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Tutti | Unisono" }"""
+            ),
+            rf"- \tweak padding {padding}",
+        )
+
+        for selection in selections:
+            abjad.attach(markup, selection, direction=direction, tag=tag)
+
+    return attach_markup
+
+
+def a2(
+    padding=5,
+    selector=trinton.select_leaves_by_index([0], pitched=True),
+    direction=abjad.UP,
+    tag=None,
+):
+    def attach_markup(argument):
+        selections = selector(argument)
+
+        markup = abjad.bundle(
+            abjad.Markup(
+                r"""\markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "a2" }"""
+            ),
+            rf"- \tweak padding {padding}",
+        )
+
+        for selection in selections:
+            abjad.attach(markup, selection, direction=direction, tag=tag)
+
+    return attach_markup
+
+
+def a2_whistletone(
+    padding=5,
+    selector=trinton.select_leaves_by_index([0], pitched=True),
+    direction=abjad.UP,
+    tag=None,
+):
+    def attach_markup(argument):
+        selections = selector(argument)
+
+        markup = abjad.bundle(
+            abjad.Markup(
+                r"""\markup \fontsize #7 \override #'(font-name . "Bodoni72 Book Italic") { "a2 ( Rhythmen müssen nicht unisono sein )" }"""
+            ),
+            rf"- \tweak padding {padding}",
+        )
+
+        for selection in selections:
+            abjad.attach(markup, selection, direction=direction, tag=tag)
+
+    return attach_markup
+
+
+def wenn_keine_bk(
+    padding=5,
+    selector=trinton.select_leaves_by_index([0], pitched=True),
+    direction=abjad.UP,
+    tag=None,
+):
+    def attach_markup(argument):
+        selections = selector(argument)
+
+        markup = abjad.bundle(
+            abjad.Markup(
+                r"""\markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Wenn keine erste Bassklarinette:" }"""
+            ),
+            rf"- \tweak padding {padding}",
+        )
+
+        for selection in selections:
+            abjad.attach(markup, selection, direction=direction, tag=tag)
+
+    return attach_markup
+
 
 # immutables
 
@@ -619,9 +870,17 @@ _bloom_pitches = {
 }
 
 _brass_chord_pitches = {
-    "frenchhorn voice": [quicktions.Fraction(_) for _ in ["13/4", "18/7"]],
-    "trumpet voice": ["d''", "f''"],
-    "tenortrombone voice": [quicktions.Fraction(_) for _ in ["64/21", "22/9"]],
+    # "frenchhorn voice": [quicktions.Fraction(_) for _ in ["13/4", "18/7"]],
+    "frenchhorn voice": [
+        evans.JIPitch(fundamental="e", ratio="13/4", with_quarter_tones=True),
+        evans.JIPitch(fundamental="e", ratio="18/7", with_quarter_tones=True),
+    ],
+    "trumpet voice": ["d'", "f'"],
+    # "tenortrombone voice": [quicktions.Fraction(_) for _ in ["64/21", "22/9"]],
+    "tenortrombone voice": [
+        evans.JIPitch(fundamental="a,", ratio="64/21", with_quarter_tones=True),
+        evans.JIPitch(fundamental="a,", ratio="22/9", with_quarter_tones=True),
+    ],
     "tuba voice": ["as,", "b,,"],
 }
 
@@ -1283,11 +1542,19 @@ def piano_chords(hand="rh", index=0):
 # rhythm tools
 
 
-def tagged_mm_rests(tag=abjad.Tag("+SCORE")):
-    def make_rests(durations):
+def invisible_mm_rests():
+    def make_rests(time_signatures):
         out = []
-        for duration in durations:
-            rest = abjad.MultiMeasureRest(multiplier=duration, tag=tag)
+        for time_signature in time_signatures:
+            rest = abjad.MultimeasureRest(
+                multiplier=abjad.Duration(time_signature.pair)
+            )
+            abjad.attach(
+                abjad.LilyPondLiteral(
+                    r"\once \override MultiMeasureRest.transparent = ##t", site="before"
+                ),
+                rest,
+            )
             out.append(rest)
         return out
 
@@ -1395,6 +1662,66 @@ def moths_talea(index=0):
 
 
 # notation tools
+
+
+def cue_eraser():
+    def erase(argument):
+        components = abjad.select.components(argument)
+        for component in components:
+            if isinstance(component, abjad.Tuplet):
+                tuplet_duration = abjad.get.duration(component)
+                tuplet_multiplier = component.multiplier
+                tuplet_indicators = abjad.get.indicators(component)
+                tuplet_leaves = abjad.select.leaves(component)
+                new_tuplet = abjad.Tuplet(tuplet_multiplier, tag=abjad.Tag("+PARTS"))
+                for leaf in tuplet_leaves:
+                    if isinstance(leaf, abjad.Note):
+                        note_duration = abjad.get.duration(leaf, preprolated=True)
+                        note_pitch = leaf.written_pitch
+                        note_indicators = abjad.get.indicators(leaf)
+                        new_note = abjad.Note(tag=abjad.Tag("+PARTS"))
+                        new_note.written_pitch = note_pitch
+                        new_note.written_duration = note_duration
+                        for indicator in note_indicators:
+                            abjad.attach(indicator, new_note, tag=abjad.Tag("+PARTS"))
+                        new_tuplet.append(new_note)
+
+                    if isinstance(leaf, abjad.Rest):
+                        rest_duration = abjad.get.duration(leaf)
+                        rest_indicators = abjad.get.indicators(leaf)
+                        new_rest = abjad.Rest(rest_duration, tag=abjad.Tag("+PARTS"))
+                        for indicator in rest_indicators:
+                            abjad.attach(indicator, new_rest, tag=abjad.Tag("+PARTS"))
+                        new_tuplet.append(new_rest)
+
+                for indicator in tuplet_indicators:
+                    abjad.attach(indicator, new_tuplet, tag=abjad.Tag("+PARTS"))
+                abjad.mutate.replace(component, new_tuplet)
+            else:
+                if isinstance(component, abjad.Note) and not isinstance(
+                    abjad.get.parentage(component).parent, abjad.Tuplet
+                ):
+                    note_duration = abjad.get.duration(component)
+                    note_pitch = component.written_pitch
+                    note_indicators = abjad.get.indicators(component)
+                    new_note = abjad.Note(tag=abjad.Tag("+PARTS"))
+                    new_note.written_pitch = note_pitch
+                    new_note.written_duration = note_duration
+                    for indicator in note_indicators:
+                        abjad.attach(indicator, new_note, tag=abjad.Tag("+PARTS"))
+                    abjad.mutate.replace(component, new_note)
+
+                if isinstance(component, abjad.Rest) and not isinstance(
+                    abjad.get.parentage(component).parent, abjad.Tuplet
+                ):
+                    rest_duration = abjad.get.duration(component)
+                    rest_indicators = abjad.get.indicators(component)
+                    new_rest = abjad.Rest(rest_duration, tag=abjad.Tag("+PARTS"))
+                    for indicator in rest_indicators:
+                        abjad.attach(indicator, new_rest, tag=abjad.Tag("+PARTS"))
+                    abjad.mutate.replace(component, new_rest)
+
+    return erase
 
 
 def trumpet_glissandi(selector=trinton.pleaves(grace=False)):

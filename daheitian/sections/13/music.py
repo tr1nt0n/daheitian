@@ -39,16 +39,7 @@ trinton.make_music(
             ]
         ),
     ),
-    trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="1.",
-        ),
-        full_string=True,
-        padding=8,
-        style="solid-line-with-hook",
-        selector=trinton.select_leaves_by_index([0, -1]),
-        right_padding=23.5,
-    ),
+    library.soli_1(padding=1),
     voice=score["flute voice"],
     beam_meter=True,
 )
@@ -209,16 +200,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([11, -1]),
     ),
-    trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="1.|2.",
-        ),
-        full_string=True,
-        padding=15,
-        style="solid-line-with-hook",
-        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
-        right_padding=22,
-    ),
+    library.soli_1_2(),
     voice=score["frenchhorn divisi voice"],
 )
 
@@ -313,10 +295,21 @@ trinton.make_music(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (1, 9)),
+    trinton.attachment_command(
+        attachments=[abjad.Dynamic("pp")],
+        selector=trinton.patterned_tie_index_selector(
+            [
+                0,
+            ],
+            2,
+            pitched=True,
+            first=True,
+        ),
+    ),
     trinton.linear_attachment_command(
         attachments=itertools.cycle(
             [
-                abjad.StartHairpin("o<"),
+                abjad.StartHairpin("<"),
                 abjad.Dynamic("mp"),
             ],
         ),
@@ -471,10 +464,6 @@ trinton.make_music(
         selector=trinton.patterned_leaf_index_selector([0, 5, 7], 8, pitched=True),
     ),
     library.change_lines(lines=1, clef="percussion"),
-    trinton.attachment_command(
-        attachments=[abjad.Articulation("stopped")],
-        selector=trinton.logical_ties(pitched=True, first=True),
-    ),
     library.imbrication(
         pitch=1, name="percussion 3 imbrication", dynamic="ff", secondary_dynamic="f"
     ),
@@ -518,13 +507,14 @@ trinton.make_music(
     trinton.spanner_command(
         strings=[
             library.metronome_markups(
-                met_string=library.metronome_marks["144"],
-                mod_string=library.metronome_marks["8=4"],
+                met_string=library.metronome_marks["72"],
                 string_only=True,
+                parenthesis=True,
+                interpolation="Rit.",
             ),
             library.metronome_markups(
                 met_string=library.metronome_marks["48"],
-                mod_string=library.metronome_marks["2.=4"],
+                mod_string=library.metronome_marks["4.=4"],
                 string_only=True,
             ),
         ],
