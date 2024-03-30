@@ -841,6 +841,12 @@ for voice_name in ["frenchhorn voice", "tenortrombone voice"]:
         beam_meter=True,
     )
 
+trinton.make_music(
+    lambda _: trinton.select_target(_, (10,)),
+    library.tutti(padding=2),
+    voice=score["frenchhorn voice"],
+)
+
 abjad.attach(
     abjad.Clef("treble"),
     abjad.select.leaves(score["frenchhorn voice"], pitched=True)[0],

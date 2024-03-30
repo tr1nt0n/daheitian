@@ -35,13 +35,7 @@ for voice_name in library.all_voice_names:
 # brass music commands
 
 
-for voice_name, fundamental in zip(
-    ["frenchhorn voice", "tenortrombone voice"],
-    [
-        "e'",
-        "a",
-    ],
-):
+for voice_name in ["frenchhorn voice", "tenortrombone voice"]:
     trinton.make_music(
         lambda _: trinton.select_target(_, (34, 36)),
         evans.RhythmHandler(
@@ -53,8 +47,7 @@ for voice_name, fundamental in zip(
             )
         ),
         library.aftergrace(selector=trinton.select_leaves_by_index([-1])),
-        evans.PitchHandler([fundamental]),
-        evans.PitchHandler([library._brass_chord_pitches[voice_name]], as_ratios=True),
+        evans.PitchHandler([library._brass_chord_pitches[voice_name]]),
         trinton.noteheads_only(),
         trinton.transparent_noteheads(selector=trinton.select_leaves_by_index([-1])),
         trinton.force_accidentals_command(
@@ -96,13 +89,10 @@ for voice_name in ["trumpet voice", "tuba voice"]:
 for voice_name, clef in zip(["frenchhorn voice", "tuba voice"], ["treble", "bass"]):
     first_pleaf = abjad.select.leaves(score[voice_name], pitched=True)[0]
     abjad.attach(abjad.Clef(clef), first_pleaf)
-    if voice_name == "frenchhorn voice":
-        whitespace = abjad.LilyPondLiteral(
-            r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-6 . 0)",
-            "before",
-        )
-    else:
-        whitespace = library.clef_whitespace
+    whitespace = abjad.LilyPondLiteral(
+        r"\once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-3.5 . 0)",
+        "before",
+    )
     abjad.attach(whitespace, first_pleaf)
 
 # strings final aftergraces
@@ -165,9 +155,7 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (1, 37)),
     evans.PitchHandler(pitch_list=violin1_pitches_doubled),
     trinton.attachment_command(
-        attachments=[
-            abjad.Dynamic("ff"),
-        ],
+        attachments=[trinton.make_custom_dynamic("sffz")],
         selector=trinton.select_leaves_by_index([0]),
     ),
     trinton.attachment_command(
@@ -180,16 +168,6 @@ trinton.make_music(
     trinton.detach_command(
         detachments=[abjad.Markup],
         selector=trinton.select_leaves_by_index([-1]),
-    ),
-    trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="1.",
-        ),
-        full_string=True,
-        padding=6,
-        style="solid-line-with-hook",
-        selector=trinton.select_leaves_by_index([0, -1]),
-        right_padding=1,
     ),
     voice=score["violin 1 voice"],
 )
@@ -220,7 +198,7 @@ trinton.make_music(
     evans.PitchHandler(pitch_list=violin2_pitches_doubled),
     trinton.attachment_command(
         attachments=[
-            abjad.Dynamic("ff"),
+            trinton.make_custom_dynamic("sffz"),
         ],
         selector=trinton.select_leaves_by_index([0]),
     ),
@@ -234,16 +212,6 @@ trinton.make_music(
     trinton.detach_command(
         detachments=[abjad.Markup],
         selector=trinton.select_leaves_by_index([-1]),
-    ),
-    trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="1.",
-        ),
-        full_string=True,
-        padding=6,
-        style="solid-line-with-hook",
-        selector=trinton.select_leaves_by_index([0, -1]),
-        right_padding=1,
     ),
     voice=score["violin 2 voice"],
 )
@@ -275,7 +243,7 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[
             abjad.Clef("altovarC"),
-            abjad.Dynamic("ff"),
+            trinton.make_custom_dynamic("sffz"),
         ],
         selector=trinton.select_leaves_by_index([0]),
     ),
@@ -289,16 +257,6 @@ trinton.make_music(
     trinton.detach_command(
         detachments=[abjad.Markup],
         selector=trinton.select_leaves_by_index([-1]),
-    ),
-    trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="1.",
-        ),
-        full_string=True,
-        padding=6,
-        style="solid-line-with-hook",
-        selector=trinton.select_leaves_by_index([0, -1]),
-        right_padding=1,
     ),
     voice=score["viola voice"],
 )
@@ -332,10 +290,7 @@ trinton.make_music(
         clef="bass",
     ),
     trinton.attachment_command(
-        attachments=[
-            library.clef_whitespace,
-            abjad.Dynamic("ff"),
-        ],
+        attachments=[library.clef_whitespace, trinton.make_custom_dynamic("sffz")],
         selector=trinton.select_leaves_by_index([0]),
     ),
     trinton.attachment_command(
@@ -349,16 +304,7 @@ trinton.make_music(
         detachments=[abjad.Markup],
         selector=trinton.select_leaves_by_index([-1]),
     ),
-    trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="1.",
-        ),
-        full_string=True,
-        padding=6,
-        style="solid-line-with-hook",
-        selector=trinton.select_leaves_by_index([0, -1]),
-        right_padding=1,
-    ),
+    library.soli_1(padding=0),
     voice=score["cello voice"],
 )
 
@@ -403,7 +349,7 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[
             abjad.Clef("bass"),
-            abjad.Dynamic("ff"),
+            trinton.make_custom_dynamic("sffz"),
             abjad.Articulation(">"),
         ],
         selector=trinton.select_leaves_by_index([0]),
@@ -480,6 +426,40 @@ trinton.make_music(
     ),
     voice=score["Global Context"],
 )
+
+for measure, pair in zip(
+    [
+        1,
+        5,
+        9,
+        13,
+        17,
+        21,
+        25,
+        29,
+        34,
+    ],
+    [
+        (1, 4),
+        (5, 8),
+        (9, 12),
+        (13, 16),
+        (17, 20),
+        (21, 24),
+        (25, 28),
+        (29, 33),
+        (34, 37),
+    ],
+):
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (measure,)),
+        trinton.attachment_command(
+            attachments=[library.return_milestone_markup(pair)],
+            selector=trinton.select_leaves_by_index([0]),
+            direction=abjad.DOWN,
+        ),
+        voice=score["Global Context"],
+    )
 
 # cutaway
 

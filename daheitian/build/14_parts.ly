@@ -812,12 +812,13 @@
                                     - \tweak circled-tip ##t
                                     \<
                                     \breathe
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Dots.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override NoteHead.duration-log = 2
+                                    \once \override RepeatTie.transparent = ##t
                                     \once \override Stem.stencil = ##f
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Dots.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
                                     <aqf''' bf'''>4
                                     \p
                                     - \tweak circled-tip ##t
@@ -2023,6 +2024,8 @@
                             <aqf'! cqs''!>32
                             - \staccato
                             \pppp
+                            - \tweak padding 2
+                            ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Tutti" }
                             \<
                             r16.
                             r16
@@ -2061,12 +2064,13 @@
                             <aqf' cqs''>32
                             - \staccato
                             ]
-                            \once \override Beam.stencil = ##f
-                            \once \override Dots.stencil = ##f
-                            \once \override Flag.stencil = ##f
-                            \once \override NoteHead.duration-log = 2
+                            \once \override RepeatTie.transparent = ##t
                             \once \override Stem.stencil = ##f
+                            \once \override Beam.stencil = ##f
+                            \once \override Flag.stencil = ##f
+                            \once \override Dots.stencil = ##f
                             \once \override Tie.stencil = ##f
+                            \once \override NoteHead.duration-log = 2
                             <aqf'! cqs''!>4
                             \mp
                             ^ \multiple-staccato
@@ -2241,12 +2245,13 @@
                                     <d' f'>32
                                     - \staccato
                                     ]
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Dots.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override NoteHead.duration-log = 2
+                                    \once \override RepeatTie.transparent = ##t
                                     \once \override Stem.stencil = ##f
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Dots.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
                                     <d' f'>4
                                     \mp
                                     ^ \multiple-staccato
@@ -2417,12 +2422,13 @@
                                     <cqs' eqs'>32
                                     - \staccato
                                     ]
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Dots.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override NoteHead.duration-log = 2
+                                    \once \override RepeatTie.transparent = ##t
                                     \once \override Stem.stencil = ##f
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Dots.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
                                     <cqs'! eqs'!>4
                                     \mp
                                     ^ \multiple-staccato
@@ -3368,14 +3374,15 @@
                                     - \tweak circled-tip ##t
                                     \<
                                     \boxed-markup "Triangel" 1
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Dots.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override NoteHead.duration-log = 2
+                                    \once \override RepeatTie.transparent = ##t
                                     \once \override Stem.stencil = ##f
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Dots.stencil = ##f
+                                    \once \override Tie.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
                                     \once \override StemTremolo.X-offset = 0.6
                                     \once \override StemTremolo.Y-offset = 1.75
-                                    \once \override Tie.stencil = ##f
                                     c'4
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
                                     :32
@@ -3511,12 +3518,13 @@
                                     - \tweak circled-tip ##t
                                     \<
                                     \boxed-markup "Tam-Tam mit Bogen" 1
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Dots.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override NoteHead.duration-log = 2
+                                    \once \override RepeatTie.transparent = ##t
                                     \once \override Stem.stencil = ##f
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Dots.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
                                     c'4
                                     - \bendAfter #'0
                                     \mf

@@ -28,7 +28,7 @@
             - \tweak whiteout 1
             - \tweak whiteout-style #'outline'
             ^ \markup \override #'(font-name . "Bodoni72 Book Italic")
-                                { \right-column { \line { Leichte Überschneidung }
+                                { \hspace #-8 \center-column { \line { Leichte Überschneidung }
                                 \line { mit dem folgenden Flötenton } } }
             - \tweak font-size #'15
             - \tweak padding 0

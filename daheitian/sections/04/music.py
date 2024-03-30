@@ -94,6 +94,12 @@ for voice_name in ["violin 1 voice", "violin 2 voice", "viola voice", "cello voi
         voice=score[voice_name],
     )
 
+# cello music commands
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (2,)), library.unis(), voice=score["cello voice"]
+)
+
 # contrabass music commands
 
 trinton.make_music(

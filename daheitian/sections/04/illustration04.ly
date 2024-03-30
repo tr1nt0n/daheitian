@@ -2148,6 +2148,8 @@
                                     c'4
                                     \mp
                                     - \markup \override #'(font-name . "Bodoni72 Book Italic") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Abrupt beginnen und enden }
+                                    - \tweak padding 5
+                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Unisono" }
                                     - \tweak padding #3
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Steg } \hspace #0.5 }

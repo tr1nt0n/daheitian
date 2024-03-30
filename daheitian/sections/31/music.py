@@ -54,6 +54,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, 0, -1]),
     ),
+    library.a2_whistletone(),
     voice=score["flute voice"],
 )
 
@@ -72,24 +73,28 @@ trinton.make_music(
                     2,
                     1,
                 ),
-                (8, 1, -11),
+                (8, 1, -1),
+                (-1,),
             ]
         )
     ),
-    evans.PitchHandler([24]),
     trinton.respell_tuplets_command(),
+    evans.PitchHandler([24]),
     trinton.notehead_bracket_command(),
     library.horn_monolith_attachments(),
     trinton.attachment_command(
         attachments=[
             abjad.Articulation(">"),
-            abjad.Articulation("staccato"),
         ],
         selector=trinton.select_leaves_by_index([2, 4, -1], pitched=True),
     ),
+    trinton.attachment_command(
+        attachments=[abjad.Articulation("staccato")],
+        selector=trinton.logical_ties(first=True, pitched=True),
+    ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="Bewegen die Ventile schnell und wahllos.",
+            string="Bewegen die Ventile schnell und wahllos + Flatterzunge.",
         ),
         full_string=True,
         padding=8.5,
@@ -100,23 +105,15 @@ trinton.make_music(
     trinton.linear_attachment_command(
         attachments=[
             abjad.Clef("treble"),
-            abjad.Dynamic("ff"),
-            abjad.StartHairpin("o<|"),
-            abjad.Dynamic("f"),
-            abjad.Dynamic("ff"),
             abjad.Dynamic("mf"),
-            abjad.StartHairpin(">"),
-            trinton.make_custom_dynamic("pf"),
-            abjad.StartHairpin("o<"),
+            abjad.StartHairpin("<|"),
             abjad.Dynamic("fff"),
         ],
-        selector=trinton.select_leaves_by_index(
-            [0, 0, 0, 1, 2, 3, 3, 4, 5, -1], pitched=True
-        ),
+        selector=trinton.select_leaves_by_index([0, 0, 0, -1], pitched=True),
     ),
     trinton.tremolo_command(selector=trinton.pleaves()),
     voice=score["frenchhorn voice"],
-    preprocessor=trinton.fuse_quarters_preprocessor((2, 6)),
+    preprocessor=trinton.fuse_quarters_preprocessor((2,)),
     beam_meter=True,
 )
 
@@ -144,7 +141,7 @@ trinton.make_music(
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="Mit Stimmgabel in G",
+            string="Mit einem Triangelschläger zwischen den Saiten",
         ),
         full_string=True,
         padding=11,
@@ -175,19 +172,12 @@ trinton.make_music(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (2,)),
-    evans.RhythmHandler(
-        evans.tuplet(
-            [
-                (1,),
-                (8, 1, -11),
-            ]
-        )
-    ),
+    evans.RhythmHandler(evans.tuplet([(1,), (8, 1, -1), (-1,)])),
     trinton.respell_tuplets_command(),
     evans.PitchHandler([["c'", "df'"]]),
     trinton.linear_attachment_command(
         attachments=[
-            abjad.Dynamic("mp"),
+            abjad.Dynamic("mf"),
             abjad.StartHairpin("--"),
             abjad.StopHairpin(),
         ],
@@ -198,7 +188,7 @@ trinton.make_music(
     library.change_lines(lines=5, clef="bass"),
     library.piano_pedals(),
     voice=score["percussion 2 voice"],
-    preprocessor=trinton.fuse_quarters_preprocessor((2, 6)),
+    preprocessor=trinton.fuse_quarters_preprocessor((2,)),
 )
 
 # contrabass music commands
@@ -214,7 +204,7 @@ trinton.make_music(
     ),
     library.change_lines(
         lines=4,
-        clef="percussion",
+        clef="strings",
     ),
     trinton.linear_attachment_command(
         attachments=[
@@ -226,7 +216,7 @@ trinton.make_music(
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="1., DP",
+            string="DP",
         ),
         full_string=True,
         padding=11,
@@ -237,6 +227,7 @@ trinton.make_music(
         right_padding=2,
         command="One",
     ),
+    library.soli_1(padding=12),
     trinton.spanner_command(
         strings=[
             library.return_boxed_markup(

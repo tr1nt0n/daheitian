@@ -38,7 +38,7 @@ trinton.make_music(
         attachments=[
             abjad.Clef("bass"),
             trinton.make_custom_dynamic("ffmp"),
-            abjad.StartHairpin("|>o"),
+            abjad.StartHairpin(">o"),
             abjad.StopHairpin(),
         ],
         selector=trinton.select_leaves_by_index([0, 0, 0, -1], pitched=True),
@@ -73,19 +73,11 @@ trinton.make_music(
                 repeating_ratio="11/8",
                 number_of_divisions=3,
                 scale_degree=3,
+                with_quarter_tones=True,
             ),
         ]
     ),
-    trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="1.",
-        ),
-        full_string=True,
-        padding=6,
-        style="solid-line-with-hook",
-        selector=trinton.select_leaves_by_index([0, -1]),
-        right_padding=2,
-    ),
+    library.soli_1(padding=3),
     trinton.glissando_command(
         selector=trinton.ranged_selector(ranges=[range(0, 4)], nested=True),
     ),
@@ -128,19 +120,11 @@ trinton.make_music(
                 repeating_ratio="11/8",
                 number_of_divisions=3,
                 scale_degree=2,
+                with_quarter_tones=True,
             ),
         ]
     ),
-    trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="1.",
-        ),
-        full_string=True,
-        padding=5.5,
-        style="solid-line-with-hook",
-        selector=trinton.select_leaves_by_index([0, -1]),
-        right_padding=2,
-    ),
+    library.soli_1(padding=3),
     trinton.glissando_command(
         selector=trinton.ranged_selector(ranges=[range(0, 4)], nested=True),
     ),
@@ -183,19 +167,11 @@ trinton.make_music(
                 repeating_ratio="11/8",
                 number_of_divisions=3,
                 scale_degree=1,
+                with_quarter_tones=True,
             ),
         ]
     ),
-    trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="1.",
-        ),
-        full_string=True,
-        padding=8,
-        style="solid-line-with-hook",
-        selector=trinton.select_leaves_by_index([0, -1]),
-        right_padding=2,
-    ),
+    library.soli_1(padding=3),
     trinton.glissando_command(
         selector=trinton.ranged_selector(ranges=[range(0, 4)], nested=True),
     ),
@@ -338,27 +314,6 @@ library.ties(score=score)
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (1, 2)),
-    trinton.linear_attachment_command(
-        attachments=[
-            library.movements[4],
-            abjad.LilyPondLiteral(
-                r"""\set Score.repeatCommands = #'((volta "2"))""",
-                site="before",
-            ),
-            abjad.LilyPondLiteral(
-                r"""\set Score.repeatCommands = #'((volta #f))""",
-                site="before",
-            ),
-        ],
-        selector=trinton.select_leaves_by_index(
-            [
-                0,
-                0,
-                1,
-            ]
-        ),
-        direction=abjad.UP,
-    ),
     trinton.attachment_command(
         attachments=[
             library.post_ghost_metronome,

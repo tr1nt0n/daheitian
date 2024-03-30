@@ -737,30 +737,35 @@ _bloom_pitches = {
                 repeating_ratio="11/8",
                 number_of_divisions=3,
                 scale_degree=3,
+                with_quarter_tones=True,
             ),
             evans.ETPitch(
                 fundamental="af",
                 repeating_ratio="11/8",
                 number_of_divisions=3,
                 scale_degree=6,
+                with_quarter_tones=True,
             ),
             evans.ETPitch(
                 fundamental="af",
                 repeating_ratio="11/8",
                 number_of_divisions=6,
                 scale_degree=15,
+                with_quarter_tones=True,
             ),
             evans.ETPitch(
                 fundamental="af,",
                 repeating_ratio="11/8",
                 number_of_divisions=4,
                 scale_degree=22,
+                with_quarter_tones=True,
             ),
             evans.ETPitch(
                 fundamental="af'",
                 repeating_ratio="11/8",
                 number_of_divisions=3,
                 scale_degree=3,
+                with_quarter_tones=True,
             ),
         ],
     },
@@ -780,30 +785,35 @@ _bloom_pitches = {
                 repeating_ratio="11/8",
                 number_of_divisions=3,
                 scale_degree=2,
+                with_quarter_tones=True,
             ),
             evans.ETPitch(
                 fundamental="af",
                 repeating_ratio="11/8",
                 number_of_divisions=3,
                 scale_degree=3,
+                with_quarter_tones=True,
             ),
             evans.ETPitch(
                 fundamental="af",
                 repeating_ratio="11/8",
                 number_of_divisions=6,
                 scale_degree=13,
+                with_quarter_tones=True,
             ),
             evans.ETPitch(
                 fundamental="af,",
                 repeating_ratio="11/8",
                 number_of_divisions=4,
                 scale_degree=18,
+                with_quarter_tones=True,
             ),
             evans.ETPitch(
                 fundamental="af'",
                 repeating_ratio="11/8",
                 number_of_divisions=3,
                 scale_degree=2,
+                with_quarter_tones=True,
             ),
         ],
     },
@@ -820,30 +830,35 @@ _bloom_pitches = {
                 repeating_ratio="11/8",
                 number_of_divisions=3,
                 scale_degree=1,
+                with_quarter_tones=True,
             ),
             evans.ETPitch(
                 fundamental="af",
                 repeating_ratio="11/8",
                 number_of_divisions=3,
                 scale_degree=2,
+                with_quarter_tones=True,
             ),
             evans.ETPitch(
                 fundamental="af",
                 repeating_ratio="11/8",
                 number_of_divisions=6,
                 scale_degree=12,
+                with_quarter_tones=True,
             ),
             evans.ETPitch(
                 fundamental="af",
                 repeating_ratio="11/8",
                 number_of_divisions=4,
                 scale_degree=8,
+                with_quarter_tones=True,
             ),
             evans.ETPitch(
                 fundamental="af",
                 repeating_ratio="11/8",
                 number_of_divisions=3,
                 scale_degree=1,
+                with_quarter_tones=True,
             ),
         ],
     },
@@ -855,24 +870,28 @@ _bloom_pitches = {
                 repeating_ratio="11/8",
                 number_of_divisions=3,
                 scale_degree=-1,
+                with_quarter_tones=True,
             ),
             evans.ETPitch(
                 fundamental="af,",
                 repeating_ratio="11/8",
                 number_of_divisions=3,
                 scale_degree=4,
+                with_quarter_tones=True,
             ),
             evans.ETPitch(
                 fundamental="af,",
                 repeating_ratio="11/8",
                 number_of_divisions=6,
                 scale_degree=5,
+                with_quarter_tones=True,
             ),
             evans.ETPitch(
                 fundamental="af,",
                 repeating_ratio="11/8",
                 number_of_divisions=3,
                 scale_degree=3,
+                with_quarter_tones=True,
             ),
         ]
     },
@@ -1671,6 +1690,36 @@ def moths_talea(index=0):
 
 
 # notation tools
+
+
+def return_milestone_markup(measure_pair, tweaks=None):
+    string = rf"""\markup
+    {{
+        \hspace #3
+        \override #'(font-name . "ekmelos")
+        \fontsize #10
+        {{
+            \char ##x2B07
+        }}
+        \override #'(font-name . "Bodoni72 Book")
+        \fontsize #2
+        {{
+            " ( {measure_pair[0]}\" - {measure_pair[-1]}\" )"
+        }}
+    }}"""
+
+    markup = abjad.Markup(string)
+
+    markup = abjad.bundle(
+        markup,
+        r"- \tweak Y-offset -10",
+    )
+
+    if tweaks is not None:
+        for tweak in tweaks:
+            markup = abjad.bundle(markup, tweak)
+
+    return markup
 
 
 def cue_eraser():

@@ -60,6 +60,10 @@ trinton.make_music(
             15,
         ),
     ),
+    library.a2(
+        padding=14,
+        selector=trinton.select_leaves_by_index([0], pitched=True, grace=False),
+    ),
     voice=score["flute voice"],
 )
 
@@ -107,6 +111,53 @@ trinton.make_music(
         attachments=[abjad.Tie()], selector=trinton.select_leaves_by_index([-2])
     ),
     voice=score["bassclarinet divisi voice"],
+)
+
+# bassoon music commands
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (5, 16)),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.LilyPondLiteral(
+                r"\override Staff.MultiMeasureRest.transparent = ##t", site="before"
+            ),
+            abjad.LilyPondLiteral(
+                r"\revert Staff.MultiMeasureRest.transparent", site="absolute_after"
+            ),
+        ],
+        selector=trinton.select_leaves_by_index([0, -1]),
+        tag=abjad.Tag("+PARTS"),
+    ),
+    trinton.IntermittentVoiceHandler(
+        evans.RhythmHandler(evans.tuplet([(-1,), (7, 2, 1)])),
+        direction=abjad.UP,
+        voice_name="bassoon intermittent voice",
+        from_components=False,
+        preprocessor=trinton.fuse_quarters_preprocessor((2, 3)),
+        temp_name="temp",
+    ),
+    voice=score["bassoon voice"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (5, 16)),
+    rmakers.rewrite_dots,
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.respell_tuplets_command(rewrite_brackets=False),
+    evans.PitchHandler(["aqs,"]),
+    trinton.notehead_bracket_command(),
+    library.ring_mod_attachments(dynamics=["pp +", "pp"]),
+    trinton.attachment_command(
+        attachments=[abjad.Clef("bass")],
+        selector=trinton.select_leaves_by_index([0], pitched=True),
+    ),
+    library.wenn_keine_bk(),
+    library.soli_1(
+        padding=3,
+    ),
+    library.cue_eraser(),
+    voice=score["bassoon intermittent voice"],
 )
 
 # horn music commands
@@ -182,7 +233,7 @@ trinton.make_music(
     ),
     evans.PitchHandler(["a"]),
     trinton.attachment_command(
-        attachments=[abjad.Clef("bass"), abjad.Dynamic("mf")],
+        attachments=[abjad.Clef("bass"), abjad.Dynamic("f")],
         selector=trinton.select_leaves_by_index([0]),
     ),
     trinton.attachment_command(
@@ -237,11 +288,21 @@ trinton.make_music(
     library.boxed_markup(string="Triangel"),
     trinton.attachment_command(
         attachments=[abjad.Articulation("espressivo")],
-        selector=trinton.logical_ties(first=True, pitched=True),
+        selector=trinton.logical_ties(exclude=[-1], first=True, pitched=True),
     ),
     trinton.linear_attachment_command(
         attachments=[swelling_markup, abjad.StartHairpin("o<"), abjad.Dynamic("p")],
         selector=trinton.select_leaves_by_index([0, 0, 7], pitched=True),
+    ),
+    trinton.attachment_command(
+        attachments=[
+            abjad.LaissezVibrer(),
+        ],
+        selector=trinton.select_leaves_by_index([-1]),
+    ),
+    library.boxed_markup(
+        string="Das Triangel bis nach der folgenden Fermate klingen lassen",
+        selector=trinton.select_logical_ties_by_index([-1], pitched=True, first=True),
     ),
     trinton.tremolo_command(),
     voice=score["percussion 2 voice"],
@@ -272,13 +333,23 @@ trinton.make_music(
     library.boxed_markup(string="Glockenspiel"),
     trinton.attachment_command(
         attachments=[abjad.Articulation("espressivo")],
-        selector=trinton.logical_ties(first=True, pitched=True),
+        selector=trinton.logical_ties(exclude=[-1], first=True, pitched=True),
     ),
     trinton.linear_attachment_command(
         attachments=[swelling_markup, abjad.StartHairpin("o<"), abjad.Dynamic("p")],
         selector=trinton.select_leaves_by_index([0, 0, 7], pitched=True),
     ),
     trinton.tremolo_command(),
+    trinton.attachment_command(
+        attachments=[
+            abjad.LaissezVibrer(),
+        ],
+        selector=trinton.select_leaves_by_index([-1]),
+    ),
+    library.boxed_markup(
+        string="Das Glockenspiel bis nach der folgenden Fermate klingen lassen",
+        selector=trinton.select_logical_ties_by_index([-1], pitched=True, first=True),
+    ),
     voice=score["percussion 3 voice"],
     beam_meter=True,
     preprocessor=trinton.fuse_sixteenths_preprocessor((5, 1000)),

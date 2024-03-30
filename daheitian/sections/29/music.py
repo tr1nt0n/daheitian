@@ -20,10 +20,7 @@ score = library.daheitian_score(ts.section_29_ts)
 trinton.make_music(
     lambda _: trinton.select_target(_, (1,)),
     evans.RhythmHandler(rmakers.note),
-    evans.PitchHandler(["e'"]),
-    evans.PitchHandler(
-        [library._brass_chord_pitches["frenchhorn voice"]], as_ratios=True
-    ),
+    evans.PitchHandler([library._brass_chord_pitches["frenchhorn voice"]]),
     trinton.detach_command(
         detachments=[abjad.Markup], selector=trinton.select_leaves_by_index([0])
     ),
@@ -85,15 +82,22 @@ trinton.make_music(
     library.grace(
         selector=trinton.select_leaves_by_index([0]),
     ),
+    evans.PitchHandler(["c'''"]),
     trinton.pitch_with_selector_command(
-        pitch_list=[["c'''", "g''"]], selector=trinton.select_leaves_by_index([0])
+        pitch_list=[library._brass_chord_pitches["frenchhorn voice"]],
+        selector=trinton.select_leaves_by_index([0]),
     ),
-    trinton.pitch_with_selector_command(
-        pitch_list=[["a''", "c'''"]],
-        selector=trinton.pleaves(exclude=[0]),
+    trinton.invisible_accidentals_command(
+        selector=trinton.select_leaves_by_index([0], grace=False, pitched=True)
     ),
-    trinton.force_accidentals_command(
-        selector=trinton.select_leaves_by_index([0], grace=False)
+    trinton.change_notehead_command(
+        notehead="highest", selector=trinton.pleaves(exclude=[0])
+    ),
+    trinton.attachment_command(
+        attachments=[
+            abjad.BreathMark(),
+        ],
+        selector=trinton.select_leaves_by_index([0]),
     ),
     trinton.attachment_command(
         attachments=[
@@ -107,6 +111,17 @@ trinton.make_music(
             abjad.Markup,
         ],
         selector=trinton.pleaves(),
+    ),
+    trinton.tremolo_command(selector=trinton.pleaves(exclude=[0])),
+    trinton.hooked_spanner_command(
+        string=library.return_boxed_markup(
+            string="Bewegen die Ventile schnell und wahllos + Flatterzunge.",
+        ),
+        full_string=True,
+        padding=8.5,
+        style="solid-line-with-hook",
+        selector=trinton.select_leaves_by_index([1, -1], pitched=True),
+        right_padding=2,
     ),
     trinton.noteheads_only(selector=trinton.select_leaves_by_index([0])),
     trinton.transparent_noteheads(selector=trinton.select_leaves_by_index([0])),
@@ -148,6 +163,16 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0]),
         tag=abjad.Tag("+SCORE"),
+    ),
+    trinton.attachment_command(
+        attachments=[
+            abjad.BreathMark(),
+        ],
+        selector=trinton.select_leaves_by_index(
+            [
+                1,
+            ]
+        ),
     ),
     voice=score["trumpet voice"],
 )
@@ -202,6 +227,18 @@ trinton.make_music(
         ),
         selector=trinton.logical_ties(pitched=True, first=True, grace=False),
     ),
+    trinton.attachment_command(
+        attachments=[
+            abjad.BreathMark(),
+        ],
+        selector=trinton.select_leaves_by_index(
+            [
+                1,
+                -5,
+                -3,
+            ]
+        ),
+    ),
     trinton.notehead_bracket_command(),
     voice=score["trumpet voice"],
     preprocessor=trinton.fuse_eighths_preprocessor(
@@ -222,11 +259,9 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (1, 3)),
     evans.RhythmHandler(evans.talea([2, 10, 3, -1], 8)),
     evans.RewriteMeterCommand(boundary_depth=-2),
-    evans.PitchHandler(["a"]),
     trinton.pitch_with_selector_command(
         pitch_list=[library._brass_chord_pitches["tenortrombone voice"]],
         selector=trinton.logical_ties(pitched=True, exclude=[-1]),
-        as_ratios=True,
     ),
     trinton.pitch_with_selector_command(
         pitch_list=[-24],
@@ -252,6 +287,7 @@ trinton.make_music(
             [0, 0, -1, -1, -1], first=True, pitched=True
         ),
     ),
+    trinton.invisible_accidentals_command(selector=trinton.select_leaves_by_index([3])),
     trinton.attachment_command(
         attachments=[abjad.BreathMark()],
         selector=trinton.select_leaves_by_index([2]),
@@ -368,6 +404,7 @@ trinton.make_music(
                 met_string=library.metronome_marks["48"],
                 string_only=True,
                 parenthesis=True,
+                interpolation="Accel.",
             ),
             library.metronome_markups(
                 met_string=library.metronome_marks["72"],
@@ -391,7 +428,7 @@ trinton.make_music(
             abjad.BarLine(".|:", "before"),
             abjad.BarLine(":|.", "after"),
             abjad.LilyPondLiteral(
-                r'\tweak text "×3, Rall. sempre" \startMeasureSpanner',
+                r'\tweak text "×3, Rall. moltiss. sempre" \startMeasureSpanner',
                 "absolute_before",
             ),
             abjad.LilyPondLiteral(r"\stopMeasureSpanner", "after"),

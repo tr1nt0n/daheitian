@@ -1080,9 +1080,12 @@
                             {
                                 \context Voice = "violin 1 voice"
                                 {
+                                    \staff-line-count 5
+                                    \revert Staff.Clef.stencil
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
                                       %! +SCORE
                                 %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
+                                    \clef "treble"
                                     r4
                                     \staff-line-count 4
                                     \override Staff.Clef.stencil = #ly:text-interface::print
@@ -1113,6 +1116,8 @@
                                     \pitchedTrill
                                     \tweak style #'harmonic-mixed
                                     b'4
+                                    - \tweak whiteout 1
+                                    - \tweak whiteout-style #'outline
                                     ^ \markup { \center-column { \line { "Resultierende Ton:" } \line { \upright \fraction 9° "Saite II" } } }
                                     - \tweak circled-tip ##t
                                     _ \<
@@ -1436,6 +1441,8 @@
                                     \pitchedTrill
                                     \tweak style #'harmonic-mixed
                                     gqs'4
+                                    - \tweak whiteout 1
+                                    - \tweak whiteout-style #'outline
                                     ^ \markup { \center-column { \line { "Resultierende Ton:" } \line { \upright \fraction 11° "Saite I" } } }
                                     - \tweak circled-tip ##t
                                     _ \<

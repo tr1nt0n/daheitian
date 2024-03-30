@@ -1047,7 +1047,7 @@ trinton.make_music(
             abjad.bundle(
                 abjad.Markup(
                     r"""\markup \override #'(font-name . "Bodoni72 Book Italic")
-                    { \right-column { \line { Leichte Überschneidung }
+                    { \hspace #-8 \center-column { \line { Leichte Überschneidung }
                     \line { mit dem folgenden Flötenton } } }"""
                 ),
                 r"- \tweak font-size #'2",

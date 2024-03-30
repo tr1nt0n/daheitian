@@ -33,6 +33,7 @@
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"72"
+
               }
             }
             \time 2/4
@@ -222,6 +223,8 @@
                                             a'1
                                             - \espressivo
                                             \fp
+                                            - \tweak padding 14
+                                            ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "a2" }
                                         }
                                     >>
                                     <<
@@ -1526,138 +1529,638 @@
                                     R1 * 3/4
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 5/4
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "bassoon voice temp"
+                                        {
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                            \override Staff.MultiMeasureRest.transparent = ##t
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            \voiceTwo
+                                            R1 * 1/2
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 3/4
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 3/4
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 1
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 1
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 1
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 1
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 1
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 1
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 1
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 1
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 5/4
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                            \revert Staff.MultiMeasureRest.transparent
+                                        }
+                                        \context Voice = "bassoon intermittent voice"
+                                        {
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            \voiceOne
+                                            R1 * 1/2
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +PARTS
+                                        %%% \tweak text #tuplet-number::calc-fraction-text
+                                              %! +PARTS
+                                        %%% \times 6/5
+                                              %! +PARTS
+                                        %%% {
+                                                  %! +PARTS
+                                            %%% \clef "bass"
+                                                  %! +PARTS
+                                            %%% aqs,4..
+                                                  %! +PARTS
+                                            %%% - \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "1. soli" }
+                                                  %! +PARTS
+                                            %%% - \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Wenn keine erste Bassklarinette:" }
+                                                  %! +PARTS
+                                            %%% - \tweak circled-tip ##t
+                                                  %! +PARTS
+                                            %%% \<
+                                                  %! +PARTS
+                                            %%% \glissando
+                                                  %! +PARTS
+                                            %%% \once \override Dots.staff-position = #2
+                                                  %! +PARTS
+                                            %%% \hide NoteHead
+                                                  %! +PARTS
+                                            %%% \override Accidental.stencil = ##f
+                                                  %! +PARTS
+                                            %%% \override NoteColumn.glissando-skip = ##t
+                                                  %! +PARTS
+                                            %%% \override NoteHead.no-ledgers = ##t
+                                                  %! +PARTS
+                                            %%% aqs,8
+                                                      %! +PARTS
+                                                %%% ^ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
+                                                  %! +PARTS
+                                            %%% [
+                                                  %! +PARTS
+                                            %%% - \tweak circled-tip ##t
+                                                  %! +PARTS
+                                            %%% \>
+                                                  %! +PARTS
+                                            %%% \revert Accidental.stencil
+                                                  %! +PARTS
+                                            %%% \revert NoteColumn.glissando-skip
+                                                  %! +PARTS
+                                            %%% \revert NoteHead.no-ledgers
+                                                  %! +PARTS
+                                            %%% \undo \hide NoteHead
+                                                  %! +PARTS
+                                            %%% aqs,16
+                                                  %! +PARTS
+                                            %%% \!
+                                                  %! +PARTS
+                                            %%% ]
+                                              %! +PARTS
+                                        %%% }
+                                              %! +PARTS
+                                        %%% r2
+                                              %! +PARTS
+                                        %%% \tweak text #tuplet-number::calc-fraction-text
+                                              %! +PARTS
+                                        %%% \times 6/5
+                                              %! +PARTS
+                                        %%% {
+                                                  %! +PARTS
+                                            %%% aqs,4..
+                                                  %! +PARTS
+                                            %%% - \tweak circled-tip ##t
+                                                  %! +PARTS
+                                            %%% \<
+                                                  %! +PARTS
+                                            %%% \glissando
+                                                  %! +PARTS
+                                            %%% \once \override Dots.staff-position = #2
+                                                  %! +PARTS
+                                            %%% \hide NoteHead
+                                                  %! +PARTS
+                                            %%% \override Accidental.stencil = ##f
+                                                  %! +PARTS
+                                            %%% \override NoteColumn.glissando-skip = ##t
+                                                  %! +PARTS
+                                            %%% \override NoteHead.no-ledgers = ##t
+                                                  %! +PARTS
+                                            %%% aqs,8
+                                                      %! +PARTS
+                                                %%% ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
+                                                  %! +PARTS
+                                            %%% [
+                                                  %! +PARTS
+                                            %%% - \tweak circled-tip ##t
+                                                  %! +PARTS
+                                            %%% \>
+                                                  %! +PARTS
+                                            %%% \revert Accidental.stencil
+                                                  %! +PARTS
+                                            %%% \revert NoteColumn.glissando-skip
+                                                  %! +PARTS
+                                            %%% \revert NoteHead.no-ledgers
+                                                  %! +PARTS
+                                            %%% \undo \hide NoteHead
+                                                  %! +PARTS
+                                            %%% aqs,16
+                                                  %! +PARTS
+                                            %%% \!
+                                                  %! +PARTS
+                                            %%% ]
+                                              %! +PARTS
+                                        %%% }
+                                              %! +PARTS
+                                        %%% r2
+                                              %! +PARTS
+                                        %%% \tweak text #tuplet-number::calc-fraction-text
+                                              %! +PARTS
+                                        %%% \times 6/5
+                                              %! +PARTS
+                                        %%% {
+                                                  %! +PARTS
+                                            %%% aqs,4..
+                                                  %! +PARTS
+                                            %%% - \tweak circled-tip ##t
+                                                  %! +PARTS
+                                            %%% \<
+                                                  %! +PARTS
+                                            %%% \glissando
+                                                  %! +PARTS
+                                            %%% \once \override Dots.staff-position = #2
+                                                  %! +PARTS
+                                            %%% \hide NoteHead
+                                                  %! +PARTS
+                                            %%% \override Accidental.stencil = ##f
+                                                  %! +PARTS
+                                            %%% \override NoteColumn.glissando-skip = ##t
+                                                  %! +PARTS
+                                            %%% \override NoteHead.no-ledgers = ##t
+                                                  %! +PARTS
+                                            %%% aqs,8
+                                                      %! +PARTS
+                                                %%% ^ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
+                                                  %! +PARTS
+                                            %%% [
+                                                  %! +PARTS
+                                            %%% - \tweak circled-tip ##t
+                                                  %! +PARTS
+                                            %%% \>
+                                                  %! +PARTS
+                                            %%% \revert Accidental.stencil
+                                                  %! +PARTS
+                                            %%% \revert NoteColumn.glissando-skip
+                                                  %! +PARTS
+                                            %%% \revert NoteHead.no-ledgers
+                                                  %! +PARTS
+                                            %%% \undo \hide NoteHead
+                                                  %! +PARTS
+                                            %%% aqs,16
+                                                  %! +PARTS
+                                            %%% \!
+                                                  %! +PARTS
+                                            %%% ]
+                                              %! +PARTS
+                                        %%% }
+                                              %! +PARTS
+                                        %%% r4
+                                              %! +PARTS
+                                        %%% r4
+                                              %! +PARTS
+                                        %%% \tweak text #tuplet-number::calc-fraction-text
+                                              %! +PARTS
+                                        %%% \times 6/5
+                                              %! +PARTS
+                                        %%% {
+                                                  %! +PARTS
+                                            %%% aqs,4..
+                                                  %! +PARTS
+                                            %%% - \tweak circled-tip ##t
+                                                  %! +PARTS
+                                            %%% \<
+                                                  %! +PARTS
+                                            %%% \glissando
+                                                  %! +PARTS
+                                            %%% \once \override Dots.staff-position = #2
+                                                  %! +PARTS
+                                            %%% \hide NoteHead
+                                                  %! +PARTS
+                                            %%% \override Accidental.stencil = ##f
+                                                  %! +PARTS
+                                            %%% \override NoteColumn.glissando-skip = ##t
+                                                  %! +PARTS
+                                            %%% \override NoteHead.no-ledgers = ##t
+                                                  %! +PARTS
+                                            %%% aqs,8
+                                                      %! +PARTS
+                                                %%% ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
+                                                  %! +PARTS
+                                            %%% [
+                                                  %! +PARTS
+                                            %%% - \tweak circled-tip ##t
+                                                  %! +PARTS
+                                            %%% \>
+                                                  %! +PARTS
+                                            %%% \revert Accidental.stencil
+                                                  %! +PARTS
+                                            %%% \revert NoteColumn.glissando-skip
+                                                  %! +PARTS
+                                            %%% \revert NoteHead.no-ledgers
+                                                  %! +PARTS
+                                            %%% \undo \hide NoteHead
+                                                  %! +PARTS
+                                            %%% aqs,16
+                                                  %! +PARTS
+                                            %%% \!
+                                                  %! +PARTS
+                                            %%% ]
+                                              %! +PARTS
+                                        %%% }
+                                              %! +PARTS
+                                        %%% r2
+                                              %! +PARTS
+                                        %%% \tweak text #tuplet-number::calc-fraction-text
+                                              %! +PARTS
+                                        %%% \times 6/5
+                                              %! +PARTS
+                                        %%% {
+                                                  %! +PARTS
+                                            %%% aqs,4..
+                                                  %! +PARTS
+                                            %%% - \tweak circled-tip ##t
+                                                  %! +PARTS
+                                            %%% \<
+                                                  %! +PARTS
+                                            %%% \glissando
+                                                  %! +PARTS
+                                            %%% \once \override Dots.staff-position = #2
+                                                  %! +PARTS
+                                            %%% \hide NoteHead
+                                                  %! +PARTS
+                                            %%% \override Accidental.stencil = ##f
+                                                  %! +PARTS
+                                            %%% \override NoteColumn.glissando-skip = ##t
+                                                  %! +PARTS
+                                            %%% \override NoteHead.no-ledgers = ##t
+                                                  %! +PARTS
+                                            %%% aqs,8
+                                                      %! +PARTS
+                                                %%% ^ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
+                                                  %! +PARTS
+                                            %%% [
+                                                  %! +PARTS
+                                            %%% - \tweak circled-tip ##t
+                                                  %! +PARTS
+                                            %%% \>
+                                                  %! +PARTS
+                                            %%% \revert Accidental.stencil
+                                                  %! +PARTS
+                                            %%% \revert NoteColumn.glissando-skip
+                                                  %! +PARTS
+                                            %%% \revert NoteHead.no-ledgers
+                                                  %! +PARTS
+                                            %%% \undo \hide NoteHead
+                                                  %! +PARTS
+                                            %%% aqs,16
+                                                  %! +PARTS
+                                            %%% \!
+                                                  %! +PARTS
+                                            %%% ]
+                                              %! +PARTS
+                                        %%% }
+                                              %! +PARTS
+                                        %%% r2
+                                              %! +PARTS
+                                        %%% \tweak text #tuplet-number::calc-fraction-text
+                                              %! +PARTS
+                                        %%% \times 6/5
+                                              %! +PARTS
+                                        %%% {
+                                                  %! +PARTS
+                                            %%% aqs,4..
+                                                  %! +PARTS
+                                            %%% - \tweak circled-tip ##t
+                                                  %! +PARTS
+                                            %%% \<
+                                                  %! +PARTS
+                                            %%% \glissando
+                                                  %! +PARTS
+                                            %%% \once \override Dots.staff-position = #2
+                                                  %! +PARTS
+                                            %%% \hide NoteHead
+                                                  %! +PARTS
+                                            %%% \override Accidental.stencil = ##f
+                                                  %! +PARTS
+                                            %%% \override NoteColumn.glissando-skip = ##t
+                                                  %! +PARTS
+                                            %%% \override NoteHead.no-ledgers = ##t
+                                                  %! +PARTS
+                                            %%% aqs,8
+                                                      %! +PARTS
+                                                %%% ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
+                                                  %! +PARTS
+                                            %%% [
+                                                  %! +PARTS
+                                            %%% - \tweak circled-tip ##t
+                                                  %! +PARTS
+                                            %%% \>
+                                                  %! +PARTS
+                                            %%% \revert Accidental.stencil
+                                                  %! +PARTS
+                                            %%% \revert NoteColumn.glissando-skip
+                                                  %! +PARTS
+                                            %%% \revert NoteHead.no-ledgers
+                                                  %! +PARTS
+                                            %%% \undo \hide NoteHead
+                                                  %! +PARTS
+                                            %%% aqs,16
+                                                  %! +PARTS
+                                            %%% \!
+                                                  %! +PARTS
+                                            %%% ]
+                                              %! +PARTS
+                                        %%% }
+                                              %! +PARTS
+                                        %%% r2
+                                              %! +PARTS
+                                        %%% \tweak text #tuplet-number::calc-fraction-text
+                                              %! +PARTS
+                                        %%% \times 6/5
+                                              %! +PARTS
+                                        %%% {
+                                                  %! +PARTS
+                                            %%% aqs,4..
+                                                  %! +PARTS
+                                            %%% - \tweak circled-tip ##t
+                                                  %! +PARTS
+                                            %%% \<
+                                                  %! +PARTS
+                                            %%% \glissando
+                                                  %! +PARTS
+                                            %%% \once \override Dots.staff-position = #2
+                                                  %! +PARTS
+                                            %%% \hide NoteHead
+                                                  %! +PARTS
+                                            %%% \override Accidental.stencil = ##f
+                                                  %! +PARTS
+                                            %%% \override NoteColumn.glissando-skip = ##t
+                                                  %! +PARTS
+                                            %%% \override NoteHead.no-ledgers = ##t
+                                                  %! +PARTS
+                                            %%% aqs,8
+                                                      %! +PARTS
+                                                %%% ^ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
+                                                  %! +PARTS
+                                            %%% [
+                                                  %! +PARTS
+                                            %%% - \tweak circled-tip ##t
+                                                  %! +PARTS
+                                            %%% \>
+                                                  %! +PARTS
+                                            %%% \revert Accidental.stencil
+                                                  %! +PARTS
+                                            %%% \revert NoteColumn.glissando-skip
+                                                  %! +PARTS
+                                            %%% \revert NoteHead.no-ledgers
+                                                  %! +PARTS
+                                            %%% \undo \hide NoteHead
+                                                  %! +PARTS
+                                            %%% aqs,16
+                                                  %! +PARTS
+                                            %%% \!
+                                                  %! +PARTS
+                                            %%% ]
+                                              %! +PARTS
+                                        %%% }
+                                              %! +PARTS
+                                        %%% r4
+                                              %! +PARTS
+                                        %%% r4
+                                              %! +PARTS
+                                        %%% \tweak text #tuplet-number::calc-fraction-text
+                                              %! +PARTS
+                                        %%% \times 6/5
+                                              %! +PARTS
+                                        %%% {
+                                                  %! +PARTS
+                                            %%% aqs,4..
+                                                  %! +PARTS
+                                            %%% - \tweak circled-tip ##t
+                                                  %! +PARTS
+                                            %%% \<
+                                                  %! +PARTS
+                                            %%% \glissando
+                                                  %! +PARTS
+                                            %%% \once \override Dots.staff-position = #2
+                                                  %! +PARTS
+                                            %%% \hide NoteHead
+                                                  %! +PARTS
+                                            %%% \override Accidental.stencil = ##f
+                                                  %! +PARTS
+                                            %%% \override NoteColumn.glissando-skip = ##t
+                                                  %! +PARTS
+                                            %%% \override NoteHead.no-ledgers = ##t
+                                                  %! +PARTS
+                                            %%% aqs,8
+                                                      %! +PARTS
+                                                %%% ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
+                                                  %! +PARTS
+                                            %%% [
+                                                  %! +PARTS
+                                            %%% - \tweak circled-tip ##t
+                                                  %! +PARTS
+                                            %%% \>
+                                                  %! +PARTS
+                                            %%% \revert Accidental.stencil
+                                                  %! +PARTS
+                                            %%% \revert NoteColumn.glissando-skip
+                                                  %! +PARTS
+                                            %%% \revert NoteHead.no-ledgers
+                                                  %! +PARTS
+                                            %%% \undo \hide NoteHead
+                                                  %! +PARTS
+                                            %%% aqs,16
+                                                  %! +PARTS
+                                            %%% \!
+                                                  %! +PARTS
+                                            %%% ]
+                                              %! +PARTS
+                                        %%% }
+                                              %! +PARTS
+                                        %%% r2
+                                              %! +PARTS
+                                        %%% \tweak text #tuplet-number::calc-fraction-text
+                                              %! +PARTS
+                                        %%% \times 6/5
+                                              %! +PARTS
+                                        %%% {
+                                                  %! +PARTS
+                                            %%% aqs,4..
+                                                  %! +PARTS
+                                            %%% - \tweak circled-tip ##t
+                                                  %! +PARTS
+                                            %%% \<
+                                                  %! +PARTS
+                                            %%% \glissando
+                                                  %! +PARTS
+                                            %%% \once \override Dots.staff-position = #2
+                                                  %! +PARTS
+                                            %%% \hide NoteHead
+                                                  %! +PARTS
+                                            %%% \override Accidental.stencil = ##f
+                                                  %! +PARTS
+                                            %%% \override NoteColumn.glissando-skip = ##t
+                                                  %! +PARTS
+                                            %%% \override NoteHead.no-ledgers = ##t
+                                                  %! +PARTS
+                                            %%% aqs,8
+                                                      %! +PARTS
+                                                %%% ^ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
+                                                  %! +PARTS
+                                            %%% [
+                                                  %! +PARTS
+                                            %%% - \tweak circled-tip ##t
+                                                  %! +PARTS
+                                            %%% \>
+                                                  %! +PARTS
+                                            %%% \revert Accidental.stencil
+                                                  %! +PARTS
+                                            %%% \revert NoteColumn.glissando-skip
+                                                  %! +PARTS
+                                            %%% \revert NoteHead.no-ledgers
+                                                  %! +PARTS
+                                            %%% \undo \hide NoteHead
+                                                  %! +PARTS
+                                            %%% aqs,16
+                                                  %! +PARTS
+                                            %%% \!
+                                                  %! +PARTS
+                                            %%% ]
+                                              %! +PARTS
+                                        %%% }
+                                        }
+                                    >>
+                                    \oneVoice
                                 }
                             }
                         }
@@ -2954,12 +3457,13 @@
                             {
                                 \context Voice = "piano 2 voice"
                                 {
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Dots.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override NoteHead.duration-log = 2
+                                    \once \override RepeatTie.transparent = ##t
                                     \once \override Stem.stencil = ##f
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Dots.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
                                     \ottava -1
                                     \clef "bass"
                                     a,,,4
@@ -3414,8 +3918,8 @@
                                     \clef "bass"
                                     a1
                                     - \tenuto
+                                    \f
                                     \laissezVibrer
-                                    \mf
                                     a1
                                     - \tenuto
                                     \laissezVibrer
@@ -4066,11 +4570,12 @@
                                     \revert Staff.Stem.stemlet-length
                                     c'16
                                     :128
-                                    - \espressivo
                                     ]
                                     ~
+                                    \boxed-markup "Das Triangel bis nach der folgenden Fermate klingen lassen" 1
                                     c'4
                                     :32
+                                    \laissezVibrer
                                 }
                             }
                         }
@@ -4405,8 +4910,9 @@
                                     \revert Staff.Stem.stemlet-length
                                     a8.
                                     :64
-                                    - \espressivo
+                                    \laissezVibrer
                                     ]
+                                    \boxed-markup "Das Glockenspiel bis nach der folgenden Fermate klingen lassen" 1
                                 }
                             }
                         }
@@ -4671,6 +5177,8 @@
                                     b'2
                                     - \espressivo
                                     - \markup \override #'(font-name . "Bodoni72 Book Italic") { "( Jede Note al niente dal niente )" }
+                                    - \tweak whiteout 1
+                                    - \tweak whiteout-style #'outline
                                     ^ \markup { \center-column { \line { "Resultierende Ton:" } \line { \upright \fraction 9° "Saite II" } } }
                                     - \tweak circled-tip ##t
                                     \<
@@ -5117,6 +5625,8 @@
                                             \tweak style #'harmonic-mixed
                                             g''''4..
                                             - \espressivo
+                                            - \tweak whiteout 1
+                                            - \tweak whiteout-style #'outline
                                             ^ \markup { \center-column { \line { "Resultierende Ton:" } \line { \upright \fraction 7° "Saite II" } } }
                                             - \tweak circled-tip ##t
                                             \<
@@ -5341,6 +5851,8 @@
                                             e''''4.
                                             - \espressivo
                                             - \markup \override #'(font-name . "Bodoni72 Book Italic") { "( Jede Note al niente dal niente )" }
+                                            - \tweak whiteout 1
+                                            - \tweak whiteout-style #'outline
                                             _ \markup { \center-column { \line { "Resultierende Ton:" } \line { \upright \fraction 6° "Saite II" } } }
                                             \startTrillSpan a'
                                             \tweak style #'harmonic-mixed
@@ -5720,6 +6232,8 @@
                                             \tweak style #'harmonic-mixed
                                             a'''4
                                             - \espressivo
+                                            - \tweak whiteout 1
+                                            - \tweak whiteout-style #'outline
                                             ^ \markup { \center-column { \line { "Resultierende Ton:" } \line { \upright \fraction 4° "Saite I" } } }
                                             - \tweak circled-tip ##t
                                             \<
@@ -5881,6 +6395,8 @@
                                             e''8.
                                             - \espressivo
                                             - \markup \override #'(font-name . "Bodoni72 Book Italic") { "( Jede Note al niente dal niente )" }
+                                            - \tweak whiteout 1
+                                            - \tweak whiteout-style #'outline
                                             _ \markup { \center-column { \line { "Resultierende Ton:" } \line { \upright \fraction 3° "Saite I" } } }
                                             [
                                             \startTrillSpan a'
@@ -6682,6 +7198,8 @@
                                             \tweak style #'harmonic-mixed
                                             fqs''2
                                             - \espressivo
+                                            - \tweak whiteout 1
+                                            - \tweak whiteout-style #'outline
                                             ^ \markup { \center-column { \line { "Resultierende Ton:" } \line { \upright \fraction 13° "Saite I" } } }
                                             - \tweak circled-tip ##t
                                             \<
@@ -6906,6 +7424,8 @@
                                             gqs'2
                                             - \espressivo
                                             - \markup \override #'(font-name . "Bodoni72 Book Italic") { "( Jede Note al niente dal niente )" }
+                                            - \tweak whiteout 1
+                                            - \tweak whiteout-style #'outline
                                             _ \markup { \center-column { \line { "Resultierende Ton:" } \line { \upright \fraction 11° "Saite I" } } }
                                             ~
                                             \startTrillSpan a
@@ -7223,64 +7743,70 @@
                                         \context Voice = "contrabass divisi voice"
                                         {
                                             \once \override Accidental.stencil = ##f
-                                            \once \override Beam.stencil = ##f
-                                            \once \override Dots.stencil = ##f
-                                            \once \override Flag.stencil = ##f
-                                            \once \override NoteHead.duration-log = 2
                                             \once \override NoteHead.no-ledgers = ##t
+                                            \once \override RepeatTie.transparent = ##t
                                             \once \override Stem.stencil = ##f
+                                            \once \override Beam.stencil = ##f
+                                            \once \override Flag.stencil = ##f
+                                            \once \override Dots.stencil = ##f
                                             \once \override Tie.stencil = ##f
+                                            \once \override NoteHead.duration-log = 2
                                             \once \override NoteHead.transparent = ##t
                                             \voiceOne
                                             c'8.
                                             \once \override Accidental.stencil = ##f
-                                            \once \override Beam.stencil = ##f
-                                            \once \override Dots.stencil = ##f
-                                            \once \override Flag.stencil = ##f
-                                            \once \override NoteHead.duration-log = 2
                                             \once \override NoteHead.no-ledgers = ##t
+                                            \once \override RepeatTie.transparent = ##t
                                             \once \override Stem.stencil = ##f
+                                            \once \override Beam.stencil = ##f
+                                            \once \override Flag.stencil = ##f
+                                            \once \override Dots.stencil = ##f
                                             \once \override Tie.stencil = ##f
+                                            \once \override NoteHead.duration-log = 2
                                             \once \override NoteHead.transparent = ##t
                                             c'16
                                             \once \override Accidental.stencil = ##f
-                                            \once \override Beam.stencil = ##f
-                                            \once \override Dots.stencil = ##f
-                                            \once \override Flag.stencil = ##f
-                                            \once \override NoteHead.duration-log = 2
                                             \once \override NoteHead.no-ledgers = ##t
+                                            \once \override RepeatTie.transparent = ##t
                                             \once \override Stem.stencil = ##f
+                                            \once \override Beam.stencil = ##f
+                                            \once \override Flag.stencil = ##f
+                                            \once \override Dots.stencil = ##f
                                             \once \override Tie.stencil = ##f
+                                            \once \override NoteHead.duration-log = 2
                                             \once \override NoteHead.transparent = ##t
                                             c'8
                                             \once \override Accidental.stencil = ##f
-                                            \once \override Beam.stencil = ##f
-                                            \once \override Dots.stencil = ##f
-                                            \once \override Flag.stencil = ##f
-                                            \once \override NoteHead.duration-log = 2
                                             \once \override NoteHead.no-ledgers = ##t
+                                            \once \override RepeatTie.transparent = ##t
                                             \once \override Stem.stencil = ##f
+                                            \once \override Beam.stencil = ##f
+                                            \once \override Flag.stencil = ##f
+                                            \once \override Dots.stencil = ##f
                                             \once \override Tie.stencil = ##f
+                                            \once \override NoteHead.duration-log = 2
                                             \once \override NoteHead.transparent = ##t
                                             c'8
                                             \once \override Accidental.stencil = ##f
-                                            \once \override Beam.stencil = ##f
-                                            \once \override Dots.stencil = ##f
-                                            \once \override Flag.stencil = ##f
-                                            \once \override NoteHead.duration-log = 2
                                             \once \override NoteHead.no-ledgers = ##t
+                                            \once \override RepeatTie.transparent = ##t
                                             \once \override Stem.stencil = ##f
+                                            \once \override Beam.stencil = ##f
+                                            \once \override Flag.stencil = ##f
+                                            \once \override Dots.stencil = ##f
                                             \once \override Tie.stencil = ##f
+                                            \once \override NoteHead.duration-log = 2
                                             \once \override NoteHead.transparent = ##t
                                             c'16
                                             \once \override Accidental.stencil = ##f
-                                            \once \override Beam.stencil = ##f
-                                            \once \override Dots.stencil = ##f
-                                            \once \override Flag.stencil = ##f
-                                            \once \override NoteHead.duration-log = 2
                                             \once \override NoteHead.no-ledgers = ##t
+                                            \once \override RepeatTie.transparent = ##t
                                             \once \override Stem.stencil = ##f
+                                            \once \override Beam.stencil = ##f
+                                            \once \override Flag.stencil = ##f
+                                            \once \override Dots.stencil = ##f
                                             \once \override Tie.stencil = ##f
+                                            \once \override NoteHead.duration-log = 2
                                             \once \override NoteHead.transparent = ##t
                                             c'8.
                                             r8.
@@ -7293,6 +7819,8 @@
                                             e16
                                             - \espressivo
                                             - \tweak padding #10.5
+                                            - \tweak whiteout 1
+                                            - \tweak whiteout-style #'outline
                                             ^ \markup { \center-column { \line { "Resultierende Ton:" } \line { \upright \fraction 3° "Saite III" } } }
                                             _ \markup \override #'(font-name . "Bodoni72 Book Italic") {
                                                             \column { \line { "( Obere Stimme: Jede Note al niente dal niente" }

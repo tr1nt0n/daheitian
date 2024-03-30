@@ -309,6 +309,15 @@ trinton.make_music(
             11,
         ]
     ),
+    library.change_lines(
+        lines=5,
+        clef="treble",
+        selector=trinton.select_leaves_by_index(
+            [
+                0,
+            ],
+        ),
+    ),
     library.change_lines(lines=4, clef="strings"),
     library.change_lines(
         lines=5,
