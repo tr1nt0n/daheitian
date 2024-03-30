@@ -166,65 +166,6 @@ trinton.make_music(
     beam_meter=True,
 )
 
-# trinton.make_music(
-#     lambda _: trinton.select_target(_, (3,)),
-#     # evans.RhythmHandler(rmakers.note),
-#     trinton.attachment_command(
-#         attachments=[
-#             trinton.notation_markup(
-#                 [abjad.TimeSignature(_) for _ in [(9, 16), (7, 16), (7, 16), (5, 16), (4, 16)]],
-#                 evans.RhythmHandler(
-#                     evans.talea(
-#                         [
-#                             22,
-#                             10,
-#                         ],
-#                         16,
-#                     )
-#                 ),
-#                 evans.RewriteMeterCommand(boundary_depth=-2),
-#                 evans.PitchHandler(["aqf,"]),
-#                 trinton.linear_attachment_command(
-#                     attachments=[abjad.Clef("bass"), abjad.StartHairpin("o<"), abjad.Dynamic("ppp")],
-#                     selector=trinton.select_logical_ties_by_index(
-#                         [0, 0, -1], pitched=True, first=True
-#                     ),
-#                 ),
-#                 library.soli_1(padding=3),
-#                 trinton.glissando_command(
-#                     selector=trinton.ranged_selector(ranges=[range(0, 10)], nested=True),
-#                     no_ties=True,
-#                 ),
-#                 trinton.attachment_command(
-#                     attachments=[
-#                         abjad.InstrumentName(
-#                             context="Staff",
-#                             markup=abjad.Markup(
-#                                 '\markup \\fontsize #1 \override #\'(font-name . "Bodoni72 Book Italic") { \center-column { \line { "Wenn keine erste" } \line { "Bassklarinette:" } } }'
-#                             ),
-#                         ),
-#                     ],
-#                     selector=trinton.select_leaves_by_index([0], pitched=True)
-#                 ),
-#                 trinton.attachment_command(
-#                     attachments=[
-#                         abjad.Markup(r"""\markup { \hspace #-12 { "( Takt 21 - 25 )" } }""")
-#                     ],
-#                     selector=trinton.select_leaves_by_index([0], pitched=True),
-#                     direction=abjad.UP
-#                 ),
-#                 tweaks=[r"- \tweak font-size 0.01", r"- \tweak X-extent ##f", r"- \tweak layer 20", r"- \tweak whiteout-style #'outline", r"- \tweak whiteout 3"],
-#                 preprocessor=None,
-#                 beam_meter=True,
-#             ),
-#         ],
-#         selector=trinton.select_leaves_by_index([0]),
-#         direction=abjad.UP,
-#     ),
-#     voice=score["bassoon voice"],
-#     beam_meter=True,
-# )
-
 # harp music commands
 
 trinton.make_music(

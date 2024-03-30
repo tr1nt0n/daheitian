@@ -26,6 +26,7 @@
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"72"
                   [\abjad-metric-modulation-tuplet-lhs #2 #0 #4 #3 #2 #0 #'(1 . 1)]
+
               }
             }
             \time 3/4
@@ -65,6 +66,8 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     f''8..
                                     :64
+                                    - \tweak padding 0
+                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "a2" }
                                     [
                                     - \tweak circled-tip ##t
                                     \<
@@ -520,6 +523,94 @@
                         }
                         \tag #'voice3
                         {
+                            \context divisiStaff = "englishhorn staff"
+                            {
+                                \context Voice = "englishhorn voice"
+                                {
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Cor Anglais }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ca. }
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/4
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/4
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/2
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1/2
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/4
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                }
+                            }
+                        }
+                        \tag #'voice4
+                        {
                             \context Staff = "bassclarinet staff"
                             {
                                 \context Voice = "bassclarinet voice"
@@ -695,7 +786,7 @@
                                 }
                             }
                         }
-                        \tag #'voice4
+                        \tag #'voice5
                         {
                             \context Staff = "bassoon staff"
                             {
@@ -1016,7 +1107,7 @@
                         }
                     >>
                 }
-                \tag #'voice5
+                \tag #'voice6
                 {
                     \context Staff = "frenchhorn staff"
                     {
@@ -1108,7 +1199,7 @@
                 {
                     \context SquareBracketGroup = "sub group 2"
                     <<
-                        \tag #'voice6
+                        \tag #'voice7
                         {
                             \context Staff = "trumpet staff"
                             {
@@ -1196,7 +1287,7 @@
                                 }
                             }
                         }
-                        \tag #'voice7
+                        \tag #'voice8
                         {
                             \context Staff = "tenortrombone staff"
                             {
@@ -1284,7 +1375,7 @@
                                 }
                             }
                         }
-                        \tag #'voice8
+                        \tag #'voice9
                         {
                             \context Staff = "tuba staff"
                             {
@@ -1378,7 +1469,7 @@
                 {
                     \context GrandStaff = "sub group 3"
                     <<
-                        \tag #'voice9
+                        \tag #'voice10
                         {
                             \context Staff = "piano 1 staff"
                             {
@@ -1395,43 +1486,30 @@
                                         \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { klav. }
                                         \override Staff.Stem.stemlet-length = 0.75
                                         cs''''16
-                                        - \stopped
                                         \pppp
                                         [
                                         \<
                                         g''''16
-                                        - \stopped
                                         cs''''16
-                                        - \stopped
                                         af''''16
-                                        - \stopped
                                         \change Staff = "piano 2 staff"
                                         bf,16
                                         ^ \accent
                                         \change Staff = "piano 1 staff"
                                         af''''16
-                                        - \stopped
                                         d''''16
-                                        - \stopped
                                         c''''16
-                                        - \stopped
                                         e''''16
-                                        - \stopped
                                         c''''16
-                                        - \stopped
                                         d''''16
-                                        - \stopped
                                         c''''16
-                                        - \stopped
                                         d''''16
-                                        - \stopped
                                         \revert Staff.Stem.stemlet-length
                                         af''''16
-                                        - \stopped
                                         ]
                                     }
                                     \once \override TupletBracket.direction = #UP
-                                    \once \override TupletBracket.padding = -6
+                                    \once \override TupletBracket.padding = -4
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) (ly:make-duration 3 0))
                                     \times 6/7
@@ -1443,35 +1521,23 @@
                                         [
                                         \change Staff = "piano 1 staff"
                                         af''''16
-                                        - \stopped
                                         \ff
                                         d''''16
-                                        - \stopped
                                         af''''16
-                                        - \stopped
                                         d''''16
-                                        - \stopped
                                         af''''16
-                                        - \stopped
                                         d''''16
-                                        - \stopped
                                         af''''16
-                                        - \stopped
                                         d''''16
-                                        - \stopped
                                         c''''16
-                                        - \stopped
                                         \change Staff = "piano 2 staff"
                                         bf,16
                                         ^ \accent
                                         \change Staff = "piano 1 staff"
                                         g''''16
-                                        - \stopped
                                         cs''''16
-                                        - \stopped
                                         \revert Staff.Stem.stemlet-length
                                         g''''16
-                                        - \stopped
                                         ]
                                     }
                                     \once \override TupletBracket.direction = #UP
@@ -1481,37 +1547,24 @@
                                     {
                                         \override Staff.Stem.stemlet-length = 0.75
                                         cs''''16
-                                        - \stopped
                                         [
                                         af''''16
-                                        - \stopped
                                         cs''''16
-                                        - \stopped
                                         af''''16
-                                        - \stopped
                                         cs''''16
-                                        - \stopped
                                         af''''16
-                                        - \stopped
                                         \change Staff = "piano 2 staff"
                                         bf,16
                                         ^ \accent
                                         \change Staff = "piano 1 staff"
                                         c''''16
-                                        - \stopped
                                         d''''16
-                                        - \stopped
                                         af''''16
-                                        - \stopped
                                         cs''''16
-                                        - \stopped
                                         af''''16
-                                        - \stopped
                                         d''''16
-                                        - \stopped
                                         \revert Staff.Stem.stemlet-length
                                         c''''16
-                                        - \stopped
                                         ]
                                     }
                                     \once \override TupletBracket.direction = #UP
@@ -1521,39 +1574,27 @@
                                     {
                                         \override Staff.Stem.stemlet-length = 0.75
                                         e''''32
-                                        - \stopped
                                         [
                                         c''''32
-                                        - \stopped
                                         \change Staff = "piano 2 staff"
                                         bf,32
                                         ^ \accent
                                         \change Staff = "piano 1 staff"
                                         c''''32
-                                        - \stopped
                                         e''''32
-                                        - \stopped
                                         c''''32
-                                        - \stopped
                                         e''''32
-                                        - \stopped
                                         c''''32
-                                        - \stopped
                                         e''''32
-                                        - \stopped
                                         c''''32
-                                        - \stopped
                                         e''''32
-                                        - \stopped
                                         c''''32
-                                        - \stopped
                                         \change Staff = "piano 2 staff"
                                         bf,32
                                         ^ \accent
                                         \change Staff = "piano 1 staff"
                                         \revert Staff.Stem.stemlet-length
                                         af''''32
-                                        - \stopped
                                         ]
                                     }
                                     \once \override TupletBracket.direction = #UP
@@ -1563,37 +1604,24 @@
                                     {
                                         \override Staff.Stem.stemlet-length = 0.75
                                         d''''32
-                                        - \stopped
                                         [
                                         af''''32
-                                        - \stopped
                                         cs''''32
-                                        - \stopped
                                         af''''32
-                                        - \stopped
                                         cs''''32
-                                        - \stopped
                                         g''''32
-                                        - \stopped
                                         cs''''32
-                                        - \stopped
                                         af''''32
-                                        - \stopped
                                         \change Staff = "piano 2 staff"
                                         bf,32
                                         ^ \accent
                                         \change Staff = "piano 1 staff"
                                         af''''32
-                                        - \stopped
                                         d''''32
-                                        - \stopped
                                         c''''32
-                                        - \stopped
                                         e''''32
-                                        - \stopped
                                         \revert Staff.Stem.stemlet-length
                                         c''''32
-                                        - \stopped
                                         ]
                                     }
                                     \once \override TupletBracket.direction = #UP
@@ -1603,41 +1631,28 @@
                                     {
                                         \override Staff.Stem.stemlet-length = 0.75
                                         d''''16
-                                        - \stopped
                                         [
                                         c''''16
-                                        - \stopped
                                         d''''16
-                                        - \stopped
                                         af''''16
-                                        - \stopped
                                         \change Staff = "piano 2 staff"
                                         bf,16
                                         ^ \accent
                                         \change Staff = "piano 1 staff"
                                         af''''16
-                                        - \stopped
                                         d''''16
-                                        - \stopped
                                         af''''16
-                                        - \stopped
                                         d''''16
-                                        - \stopped
                                         af''''16
-                                        - \stopped
                                         d''''16
-                                        - \stopped
                                         af''''16
-                                        - \stopped
                                         d''''16
-                                        - \stopped
                                         \revert Staff.Stem.stemlet-length
                                         c''''16
-                                        - \stopped
                                         ]
                                     }
                                     \once \override TupletBracket.direction = #UP
-                                    \once \override TupletBracket.padding = -6
+                                    \once \override TupletBracket.padding = -4
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 8) (ly:make-duration 3 0))
                                     \times 8/7
@@ -1649,41 +1664,29 @@
                                         [
                                         \change Staff = "piano 1 staff"
                                         g''''16
-                                        - \stopped
                                         cs''''16
-                                        - \stopped
                                         g''''16
-                                        - \stopped
                                         cs''''16
-                                        - \stopped
                                         af''''16
-                                        - \stopped
                                         cs''''16
-                                        - \stopped
                                         af''''16
-                                        - \stopped
                                         cs''''16
-                                        - \stopped
                                         af''''16
-                                        - \stopped
                                         \change Staff = "piano 2 staff"
                                         bf,16
                                         ^ \accent
                                         \change Staff = "piano 1 staff"
                                         c''''16
-                                        - \stopped
                                         d''''16
-                                        - \stopped
                                         \revert Staff.Stem.stemlet-length
                                         af''''16
-                                        - \stopped
                                         ]
                                         \ottava 0
                                     }
                                 }
                             }
                         }
-                        \tag #'voice10
+                        \tag #'voice11
                         {
                             \context Staff = "piano 2 staff"
                             {
@@ -1706,7 +1709,7 @@
                 {
                     \context GrandStaff = "sub group 4"
                     <<
-                        \tag #'voice11
+                        \tag #'voice12
                         {
                             \context Staff = "harp 1 staff"
                             {
@@ -1761,13 +1764,14 @@
                                 }
                             }
                         }
-                        \tag #'voice12
+                        \tag #'voice13
                         {
                             \context Staff = "harp 2 staff"
                             {
                                 \context Voice = "harp 2 voice"
                                 {
                                     \staff-line-count 1
+                                    \revert Staff.Clef.stencil
                                       %! +SCORE
                                     \textSpannerDown
                                       %! +PARTS
@@ -1843,7 +1847,7 @@
                         }
                     >>
                 }
-                \tag #'voice13
+                \tag #'voice14
                 {
                     \context Staff = "percussion 1 staff"
                     {
@@ -1930,13 +1934,14 @@
                 {
                     \context SquareBracketGroup = "sub group 5"
                     <<
-                        \tag #'voice14
+                        \tag #'voice15
                         {
                             \context Staff = "percussion 2 staff"
                             {
                                 \context Voice = "percussion 2 voice"
                                 {
                                     \staff-line-count 1
+                                    \revert Staff.Clef.stencil
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
                                       %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
@@ -1945,7 +1950,7 @@
                                     - \accent
                                     \pppp
                                     \<
-                                    \boxed-markup "Bangu mit Bambusstäbchen" 1
+                                    \boxed-markup "Bangu" 1
                                     c'4
                                     - \accent
                                     c'4
@@ -1990,13 +1995,14 @@
                                 }
                             }
                         }
-                        \tag #'voice15
+                        \tag #'voice16
                         {
                             \context Staff = "percussion 3 staff"
                             {
                                 \context Voice = "percussion 3 voice"
                                 {
                                     \staff-line-count 1
+                                    \revert Staff.Clef.stencil
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
                                       %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
@@ -2043,7 +2049,7 @@
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c'8.
                                     - \accent
-                                    \ff
+                                    \mf
                                     [
                                       %! +SCORE
                                     \once \override Tie.transparent = ##f
@@ -2146,669 +2152,627 @@
                 {
                     \context SquareBracketGroup = "sub group 6"
                     <<
-                        \tag #'voice16
-                        {
-                            \context Staff = "violin 1 staff"
-                            {
-                                \context Voice = "violin 1 voice"
-                                {
-                                    <<
-                                        \context Voice = "violin 1 voice temp"
-                                        {
-                                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
-                                              %! +SCORE
-                                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
-                                            \voiceTwo
-                                            r4
-                                            \textSpannerDown
-                                            df'8
-                                            - \twist-bow
-                                            \pppp
-                                            - \tweak padding #13.5
-                                            - \abjad-solid-line-with-up-hook
-                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 2.|: } \hspace #0.5 }
-                                            - \tweak bound-details.right.padding -11
-                                            \startTextSpanTwo
-                                            \<
-                                            r8
-                                            df'8
-                                            - \twist-bow
-                                            r8
-                                            df'8
-                                            - \twist-bow
-                                            r8
-                                            df'8
-                                            - \twist-bow
-                                            r8
-                                            df'8
-                                            - \twist-bow
-                                            r8
-                                            df'8
-                                            - \twist-bow
-                                            r8
-                                            r4
-                                            df'8
-                                            - \twist-bow
-                                            r8
-                                            df'8
-                                            - \twist-bow
-                                            \ff
-                                            r8
-                                            df'8
-                                            - \twist-bow
-                                            r8
-                                            df'8
-                                            - \twist-bow
-                                            r8
-                                            df'8
-                                            - \twist-bow
-                                            r8
-                                            df'8
-                                            - \twist-bow
-                                            r8
-                                            r4
-                                            df'8
-                                            - \twist-bow
-                                            r8
-                                            df'8
-                                            - \twist-bow
-                                            r8
-                                            df'8
-                                            - \twist-bow
-                                            r8
-                                            df'8
-                                            - \twist-bow
-                                            r8
-                                            df'8
-                                            - \twist-bow
-                                            r8
-                                            df'8
-                                            - \twist-bow
-                                            \stopTextSpanTwo
-                                            \textSpannerUp
-                                            r8
-                                        }
-                                        \context Voice = "violin 1 divisi voice"
-                                        {
-                                            \voiceOne
-                                            df'1
-                                            - \tweak padding #11
-                                            - \abjad-solid-line-with-hook
-                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1. } \hspace #0.5 }
-                                            - \tweak bound-details.right.padding -2
-                                            \startTextSpanOne
-                                            - \tweak padding #8
-                                            - \abjad-solid-line-with-arrow
-                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ord. } \hspace #0.5 }
-                                            - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Steg }
-                                            - \tweak bound-details.right.padding 1
-                                            \startTextSpanThree
-                                              %! abjad.glissando(7)
-                                            \glissando
-                                            ^ (
-                                            ^ \<
-                                            ~
-                                            \once \override Dots.staff-position = #2
-                                              %! abjad.glissando(1)
-                                            \hide NoteHead
-                                              %! abjad.glissando(1)
-                                            \override Accidental.stencil = ##f
-                                              %! abjad.glissando(1)
-                                            \override NoteColumn.glissando-skip = ##t
-                                              %! abjad.glissando(1)
-                                            \override NoteHead.no-ledgers = ##t
-                                            df'2.
-                                              %! +SCORE
-                                            \repeatTie
-                                            ~
-                                            \once \override Dots.staff-position = #2
-                                            df'2.
-                                            ^ \ffff
-                                              %! +SCORE
-                                            \repeatTie
-                                            ~
-                                            \once \override Dots.staff-position = #2
-                                            df'2
-                                              %! +SCORE
-                                            \repeatTie
-                                            ~
-                                            \once \override Dots.staff-position = #2
-                                            df'2
-                                              %! +SCORE
-                                            \repeatTie
-                                            ~
-                                            \once \override Dots.staff-position = #2
-                                            df'2.
-                                              %! +SCORE
-                                            \repeatTie
-                                            ~
-                                            \once \override Dots.staff-position = #2
-                                            df'2...
-                                              %! +SCORE
-                                            \repeatTie
-                                              %! abjad.glissando(6)
-                                            \revert Accidental.stencil
-                                              %! abjad.glissando(6)
-                                            \revert NoteColumn.glissando-skip
-                                              %! abjad.glissando(6)
-                                            \revert NoteHead.no-ledgers
-                                              %! abjad.glissando(6)
-                                            \undo \hide NoteHead
-                                            aqf16
-                                            )
-                                            \stopTextSpanOne
-                                            \stopTextSpanThree
-                                        }
-                                    >>
-                                    \oneVoice
-                                }
-                            }
-                        }
                         \tag #'voice17
                         {
-                            \context Staff = "violin 2 staff"
+                            \context divisiStaff = "guitar 1 staff"
                             {
-                                \context Voice = "violin 2 voice"
+                                \context Voice = "guitar 1 voice"
                                 {
-                                    <<
-                                        \context Voice = "violin 2 voice temp"
-                                        {
-                                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
-                                              %! +SCORE
-                                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
-                                            \textSpannerDown
-                                            \voiceTwo
-                                            a4.
-                                            - \twist-bow
-                                            \pppp
-                                            - \tweak padding #15
-                                            - \abjad-solid-line-with-up-hook
-                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 2.|: } \hspace #0.5 }
-                                            - \tweak bound-details.right.padding -11
-                                            \startTextSpanTwo
-                                            \<
-                                            r16
-                                              %! +SCORE
-                                            \once \override Tie.transparent = ##f
-                                              %! +SCORE
-                                            \once \override Tie.transparent = ##f
-                                            a16
-                                            - \twist-bow
-                                            ~
-                                            a4
-                                            ~
-                                            a16
-                                              %! +SCORE
-                                            \repeatTie
-                                            r16
-                                            a8
-                                            - \twist-bow
-                                            ~
-                                            a4
-                                              %! +SCORE
-                                            \repeatTie
-                                            r16
-                                            a8.
-                                            - \twist-bow
-                                            ~
-                                            a8.
-                                              %! +SCORE
-                                            \repeatTie
-                                            r16
-                                            a4.
-                                            - \twist-bow
-                                            \ff
-                                            r16
-                                              %! +SCORE
-                                            \once \override Tie.transparent = ##f
-                                              %! +SCORE
-                                            \once \override Tie.transparent = ##f
-                                            a16
-                                            - \twist-bow
-                                            ~
-                                            a4
-                                            ~
-                                            a16
-                                              %! +SCORE
-                                            \repeatTie
-                                            r16
-                                            a4.
-                                            - \twist-bow
-                                            r16
-                                            a8.
-                                            - \twist-bow
-                                            ~
-                                            a8.
-                                              %! +SCORE
-                                            \repeatTie
-                                            r16
-                                            a4.
-                                            - \twist-bow
-                                            r16
-                                              %! +SCORE
-                                            \once \override Tie.transparent = ##f
-                                              %! +SCORE
-                                            \once \override Tie.transparent = ##f
-                                            a16
-                                            - \twist-bow
-                                            ~
-                                            a4
-                                            ~
-                                            a16
-                                              %! +SCORE
-                                            \repeatTie
-                                            r16
-                                            a4.
-                                            - \twist-bow
-                                            r16
-                                            a8.
-                                            - \twist-bow
-                                            ~
-                                            a8.
-                                            \stopTextSpanTwo
-                                              %! +SCORE
-                                            \repeatTie
-                                            \textSpannerUp
-                                            r16
-                                        }
-                                        \context Voice = "violin 2 divisi voice"
-                                        {
-                                            \voiceOne
-                                            a1
-                                            - \tweak padding #11
-                                            - \abjad-solid-line-with-hook
-                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1. } \hspace #0.5 }
-                                            - \tweak bound-details.right.padding -2
-                                            \startTextSpanOne
-                                            - \tweak padding #8
-                                            - \abjad-solid-line-with-arrow
-                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ord. } \hspace #0.5 }
-                                            - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Steg }
-                                            - \tweak bound-details.right.padding 1
-                                            \startTextSpanThree
-                                              %! abjad.glissando(7)
-                                            \glissando
-                                            ^ (
-                                            ^ \<
-                                            ~
-                                            \once \override Dots.staff-position = #2
-                                              %! abjad.glissando(1)
-                                            \hide NoteHead
-                                              %! abjad.glissando(1)
-                                            \override Accidental.stencil = ##f
-                                              %! abjad.glissando(1)
-                                            \override NoteColumn.glissando-skip = ##t
-                                              %! abjad.glissando(1)
-                                            \override NoteHead.no-ledgers = ##t
-                                            a2.
-                                              %! +SCORE
-                                            \repeatTie
-                                            ~
-                                            \once \override Dots.staff-position = #2
-                                            a2.
-                                            ^ \ffff
-                                              %! +SCORE
-                                            \repeatTie
-                                              %! abjad.glissando(6)
-                                            \revert Accidental.stencil
-                                              %! abjad.glissando(6)
-                                            \revert NoteColumn.glissando-skip
-                                              %! abjad.glissando(6)
-                                            \revert NoteHead.no-ledgers
-                                              %! abjad.glissando(6)
-                                            \undo \hide NoteHead
-                                            gs2
-                                              %! abjad.glissando(7)
-                                            \glissando
-                                            ~
-                                            \once \override Dots.staff-position = #2
-                                              %! abjad.glissando(1)
-                                            \hide NoteHead
-                                              %! abjad.glissando(1)
-                                            \override Accidental.stencil = ##f
-                                              %! abjad.glissando(1)
-                                            \override NoteColumn.glissando-skip = ##t
-                                              %! abjad.glissando(1)
-                                            \override NoteHead.no-ledgers = ##t
-                                            gs2
-                                              %! +SCORE
-                                            \repeatTie
-                                            ~
-                                            \once \override Dots.staff-position = #2
-                                            gs2.
-                                              %! +SCORE
-                                            \repeatTie
-                                            ~
-                                            \once \override Dots.staff-position = #2
-                                            gs2...
-                                              %! +SCORE
-                                            \repeatTie
-                                              %! abjad.glissando(6)
-                                            \revert Accidental.stencil
-                                              %! abjad.glissando(6)
-                                            \revert NoteColumn.glissando-skip
-                                              %! abjad.glissando(6)
-                                            \revert NoteHead.no-ledgers
-                                              %! abjad.glissando(6)
-                                            \undo \hide NoteHead
-                                            aqf16
-                                            )
-                                            \stopTextSpanOne
-                                            \stopTextSpanThree
-                                        }
-                                    >>
-                                    \oneVoice
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 1 Soli }
+                                      %! +SCORE
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 1 Soli }
+                                    df'1
+                                    - \tweak padding 0
+                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "1. soli" }
+                                    (
+                                    - \tweak padding #7
+                                    - \abjad-solid-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ord. } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Steg }
+                                    - \tweak bound-details.right.padding 1
+                                    \startTextSpanThree
+                                    \<
+                                      %! abjad.glissando(7)
+                                    \glissando
+                                    ~
+                                    \once \override Dots.staff-position = #2
+                                      %! abjad.glissando(1)
+                                    \hide NoteHead
+                                      %! abjad.glissando(1)
+                                    \override Accidental.stencil = ##f
+                                      %! abjad.glissando(1)
+                                    \override NoteColumn.glissando-skip = ##t
+                                      %! abjad.glissando(1)
+                                    \override NoteHead.no-ledgers = ##t
+                                    df'2.
+                                      %! +SCORE
+                                    \repeatTie
+                                    ~
+                                    \once \override Dots.staff-position = #2
+                                    df'2.
+                                    \ffff
+                                      %! +SCORE
+                                    \repeatTie
+                                    ~
+                                    \once \override Dots.staff-position = #2
+                                    df'2
+                                      %! +SCORE
+                                    \repeatTie
+                                    ~
+                                    \once \override Dots.staff-position = #2
+                                    df'2
+                                      %! +SCORE
+                                    \repeatTie
+                                    ~
+                                    \once \override Dots.staff-position = #2
+                                    df'2.
+                                      %! +SCORE
+                                    \repeatTie
+                                    ~
+                                    \once \override Dots.staff-position = #2
+                                    df'2...
+                                      %! +SCORE
+                                    \repeatTie
+                                      %! abjad.glissando(6)
+                                    \revert Accidental.stencil
+                                      %! abjad.glissando(6)
+                                    \revert NoteColumn.glissando-skip
+                                      %! abjad.glissando(6)
+                                    \revert NoteHead.no-ledgers
+                                      %! abjad.glissando(6)
+                                    \undo \hide NoteHead
+                                    aqf16
+                                    )
+                                    \stopTextSpanThree
                                 }
                             }
                         }
                         \tag #'voice18
                         {
-                            \context Staff = "viola staff"
+                            \context Staff = "violin 1 staff"
                             {
-                                \context Voice = "viola voice"
+                                \context Voice = "violin 1 voice"
                                 {
-                                    <<
-                                        \context Voice = "viola voice temp"
-                                        {
-                                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
-                                              %! +SCORE
-                                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
-                                            \clef "altovarC"
-                                            \voiceTwo
-                                            r4.
-                                            \textSpannerDown
-                                            gs8
-                                            - \twist-bow
-                                            \pppp
-                                            - \tweak padding #12.5
-                                            - \abjad-solid-line-with-up-hook
-                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 2.|: } \hspace #0.5 }
-                                            - \tweak bound-details.right.padding -11
-                                            \startTextSpanTwo
-                                            \<
-                                            ~
-                                            gs8
-                                              %! +SCORE
-                                            \repeatTie
-                                            r8
-                                            gs4
-                                            - \twist-bow
-                                            r8
-                                            gs8
-                                            - \twist-bow
-                                            ~
-                                            gs8
-                                              %! +SCORE
-                                            \repeatTie
-                                            r8
-                                            gs4
-                                            - \twist-bow
-                                            \ff
-                                            r2
-                                            gs4
-                                            - \twist-bow
-                                            r8
-                                            gs8
-                                            - \twist-bow
-                                            ~
-                                            gs8
-                                              %! +SCORE
-                                            \repeatTie
-                                            r8
-                                            gs4
-                                            - \twist-bow
-                                            r8
-                                            gs8
-                                            - \twist-bow
-                                            ~
-                                            gs8
-                                              %! +SCORE
-                                            \repeatTie
-                                            r8
-                                            r4.
-                                            gs8
-                                            - \twist-bow
-                                            ~
-                                            gs8
-                                              %! +SCORE
-                                            \repeatTie
-                                            r8
-                                            gs4
-                                            - \twist-bow
-                                            r8
-                                            gs8
-                                            - \twist-bow
-                                            ~
-                                            gs8
-                                            \stopTextSpanTwo
-                                              %! +SCORE
-                                            \repeatTie
-                                            \textSpannerUp
-                                            r8
-                                        }
-                                        \context Voice = "viola divisi voice"
-                                        {
-                                            \voiceOne
-                                            aqf1
-                                            - \tweak padding #12.5
-                                            - \abjad-solid-line-with-hook
-                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1. } \hspace #0.5 }
-                                            - \tweak bound-details.right.padding -2
-                                            \startTextSpanOne
-                                            - \tweak padding #9.5
-                                            - \abjad-solid-line-with-arrow
-                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ord. } \hspace #0.5 }
-                                            - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Steg }
-                                            - \tweak bound-details.right.padding 1
-                                            \startTextSpanThree
-                                              %! abjad.glissando(7)
-                                            \glissando
-                                            ^ (
-                                            ^ \<
-                                            ~
-                                            \once \override Dots.staff-position = #2
-                                              %! abjad.glissando(1)
-                                            \hide NoteHead
-                                              %! abjad.glissando(1)
-                                            \override Accidental.stencil = ##f
-                                              %! abjad.glissando(1)
-                                            \override NoteColumn.glissando-skip = ##t
-                                              %! abjad.glissando(1)
-                                            \override NoteHead.no-ledgers = ##t
-                                            aqf2.
-                                              %! +SCORE
-                                            \repeatTie
-                                            ~
-                                            \once \override Dots.staff-position = #2
-                                            aqf2
-                                            ^ \ffff
-                                              %! +SCORE
-                                            \repeatTie
-                                            ~
-                                            \once \override Dots.staff-position = #2
-                                            \override Staff.Stem.stemlet-length = 0.75
-                                            aqf8
-                                            [
-                                              %! +SCORE
-                                            \repeatTie
-                                              %! abjad.glissando(6)
-                                            \revert Accidental.stencil
-                                              %! abjad.glissando(6)
-                                            \revert NoteColumn.glissando-skip
-                                              %! abjad.glissando(6)
-                                            \revert NoteHead.no-ledgers
-                                              %! abjad.glissando(6)
-                                            \undo \hide NoteHead
-                                            \revert Staff.Stem.stemlet-length
-                                            a8
-                                            ]
-                                              %! abjad.glissando(7)
-                                            \glissando
-                                            ~
-                                            \once \override Dots.staff-position = #2
-                                              %! abjad.glissando(1)
-                                            \hide NoteHead
-                                              %! abjad.glissando(1)
-                                            \override Accidental.stencil = ##f
-                                              %! abjad.glissando(1)
-                                            \override NoteColumn.glissando-skip = ##t
-                                              %! abjad.glissando(1)
-                                            \override NoteHead.no-ledgers = ##t
-                                            a2
-                                              %! +SCORE
-                                            \repeatTie
-                                            ~
-                                            \once \override Dots.staff-position = #2
-                                            a2
-                                              %! +SCORE
-                                            \repeatTie
-                                            ~
-                                            \once \override Dots.staff-position = #2
-                                            a2.
-                                              %! +SCORE
-                                            \repeatTie
-                                            ~
-                                            \once \override Dots.staff-position = #2
-                                            a2...
-                                              %! +SCORE
-                                            \repeatTie
-                                              %! abjad.glissando(6)
-                                            \revert Accidental.stencil
-                                              %! abjad.glissando(6)
-                                            \revert NoteColumn.glissando-skip
-                                              %! abjad.glissando(6)
-                                            \revert NoteHead.no-ledgers
-                                              %! abjad.glissando(6)
-                                            \undo \hide NoteHead
-                                            aqs16
-                                            )
-                                            \stopTextSpanOne
-                                            \stopTextSpanThree
-                                        }
-                                    >>
-                                    \oneVoice
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
+                                      %! +SCORE
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
+                                    r4
+                                    df'8
+                                    - \twist-bow
+                                    \pppp
+                                    - \tweak padding 0
+                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Tutti" }
+                                    \<
+                                    r8
+                                    df'8
+                                    - \twist-bow
+                                    r8
+                                    df'8
+                                    - \twist-bow
+                                    r8
+                                    df'8
+                                    - \twist-bow
+                                    r8
+                                    df'8
+                                    - \twist-bow
+                                    r8
+                                    df'8
+                                    - \twist-bow
+                                    r8
+                                    r4
+                                    df'8
+                                    - \twist-bow
+                                    r8
+                                    df'8
+                                    - \twist-bow
+                                    \ff
+                                    r8
+                                    df'8
+                                    - \twist-bow
+                                    r8
+                                    df'8
+                                    - \twist-bow
+                                    r8
+                                    df'8
+                                    - \twist-bow
+                                    r8
+                                    df'8
+                                    - \twist-bow
+                                    r8
+                                    r4
+                                    df'8
+                                    - \twist-bow
+                                    r8
+                                    df'8
+                                    - \twist-bow
+                                    r8
+                                    df'8
+                                    - \twist-bow
+                                    r8
+                                    df'8
+                                    - \twist-bow
+                                    r8
+                                    df'8
+                                    - \twist-bow
+                                    r8
+                                    df'8
+                                    - \twist-bow
+                                    r8
                                 }
                             }
                         }
                         \tag #'voice19
                         {
-                            \context Staff = "cello staff"
+                            \context divisiStaff = "guitar 2 staff"
                             {
-                                \context Voice = "cello voice"
+                                \context Voice = "guitar 2 voice"
                                 {
-                                    <<
-                                        \context Voice = "cello voice temp"
-                                        {
-                                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
-                                              %! +SCORE
-                                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
-                                            \clef "bass"
-                                            \voiceTwo
-                                            r4.
-                                            \textSpannerDown
-                                            af8
-                                            - \twist-bow
-                                            \pppp
-                                            - \tweak padding #9.5
-                                            - \abjad-solid-line-with-up-hook
-                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 2.|: } \hspace #0.5 }
-                                            - \tweak bound-details.right.padding -17
-                                            \startTextSpanTwo
-                                            \<
-                                            r4
-                                            af8
-                                            - \twist-bow
-                                            r8
-                                            r8
-                                            af8
-                                            - \twist-bow
-                                            r4
-                                            af8
-                                            - \twist-bow
-                                            \ff
-                                            r8
-                                            r2
-                                            af8
-                                            - \twist-bow
-                                            r8
-                                            r8
-                                            af8
-                                            - \twist-bow
-                                            r4
-                                            af8
-                                            - \twist-bow
-                                            r8
-                                            r8
-                                            af8
-                                            - \twist-bow
-                                            r2
-                                            r8
-                                            af8
-                                            - \twist-bow
-                                            r4
-                                            af8
-                                            - \twist-bow
-                                            r8
-                                            r8
-                                            af8
-                                            - \twist-bow
-                                            \stopTextSpanTwo
-                                            \textSpannerUp
-                                            r4
-                                        }
-                                        \context Voice = "cello divisi voice"
-                                        {
-                                            \voiceOne
-                                            af1
-                                            - \tweak padding #12
-                                            - \abjad-solid-line-with-arrow
-                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ord. } \hspace #0.5 }
-                                            - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Steg }
-                                            - \tweak bound-details.right.padding 1
-                                            \startTextSpanThree
-                                            - \tweak padding #15
-                                            - \abjad-solid-line-with-hook
-                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1. } \hspace #0.5 }
-                                            - \tweak bound-details.right.padding -2
-                                            \startTextSpanOne
-                                            ^ (
-                                            ^ \<
-                                            ~
-                                            af2.
-                                              %! +SCORE
-                                            \repeatTie
-                                            ~
-                                            af2.
-                                            ^ \ffff
-                                              %! +SCORE
-                                            \repeatTie
-                                            ~
-                                            af2
-                                              %! +SCORE
-                                            \repeatTie
-                                            ~
-                                            af2
-                                              %! +SCORE
-                                            \repeatTie
-                                            ~
-                                            af2.
-                                              %! +SCORE
-                                            \repeatTie
-                                            ~
-                                            af2...
-                                              %! +SCORE
-                                            \repeatTie
-                                            af16
-                                            )
-                                            \stopTextSpanOne
-                                            \stopTextSpanThree
-                                        }
-                                    >>
-                                    \oneVoice
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 2 Soli }
+                                      %! +SCORE
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 2 Soli }
+                                    a1
+                                    - \tweak padding 0
+                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "1. soli" }
+                                    (
+                                    - \tweak padding #7
+                                    - \abjad-solid-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ord. } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Steg }
+                                    - \tweak bound-details.right.padding 1
+                                    \startTextSpanThree
+                                    \<
+                                      %! abjad.glissando(7)
+                                    \glissando
+                                    ~
+                                    \once \override Dots.staff-position = #2
+                                      %! abjad.glissando(1)
+                                    \hide NoteHead
+                                      %! abjad.glissando(1)
+                                    \override Accidental.stencil = ##f
+                                      %! abjad.glissando(1)
+                                    \override NoteColumn.glissando-skip = ##t
+                                      %! abjad.glissando(1)
+                                    \override NoteHead.no-ledgers = ##t
+                                    a2.
+                                      %! +SCORE
+                                    \repeatTie
+                                    ~
+                                    \once \override Dots.staff-position = #2
+                                    a2.
+                                    \ffff
+                                      %! +SCORE
+                                    \repeatTie
+                                      %! abjad.glissando(6)
+                                    \revert Accidental.stencil
+                                      %! abjad.glissando(6)
+                                    \revert NoteColumn.glissando-skip
+                                      %! abjad.glissando(6)
+                                    \revert NoteHead.no-ledgers
+                                      %! abjad.glissando(6)
+                                    \undo \hide NoteHead
+                                    gs2
+                                      %! abjad.glissando(7)
+                                    \glissando
+                                    ~
+                                    \once \override Dots.staff-position = #2
+                                      %! abjad.glissando(1)
+                                    \hide NoteHead
+                                      %! abjad.glissando(1)
+                                    \override Accidental.stencil = ##f
+                                      %! abjad.glissando(1)
+                                    \override NoteColumn.glissando-skip = ##t
+                                      %! abjad.glissando(1)
+                                    \override NoteHead.no-ledgers = ##t
+                                    gs2
+                                      %! +SCORE
+                                    \repeatTie
+                                    ~
+                                    \once \override Dots.staff-position = #2
+                                    gs2.
+                                      %! +SCORE
+                                    \repeatTie
+                                    ~
+                                    \once \override Dots.staff-position = #2
+                                    gs2...
+                                      %! +SCORE
+                                    \repeatTie
+                                      %! abjad.glissando(6)
+                                    \revert Accidental.stencil
+                                      %! abjad.glissando(6)
+                                    \revert NoteColumn.glissando-skip
+                                      %! abjad.glissando(6)
+                                    \revert NoteHead.no-ledgers
+                                      %! abjad.glissando(6)
+                                    \undo \hide NoteHead
+                                    aqf16
+                                    )
+                                    \stopTextSpanThree
                                 }
                             }
                         }
                         \tag #'voice20
+                        {
+                            \context Staff = "violin 2 staff"
+                            {
+                                \context Voice = "violin 2 voice"
+                                {
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
+                                      %! +SCORE
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
+                                    a4.
+                                    - \twist-bow
+                                    \pppp
+                                    - \tweak padding 0
+                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Tutti" }
+                                    \<
+                                    r16
+                                      %! +SCORE
+                                    \once \override Tie.transparent = ##f
+                                    a16
+                                    - \twist-bow
+                                    ~
+                                    a4
+                                    ~
+                                    a16
+                                      %! +SCORE
+                                    \repeatTie
+                                    r16
+                                    a8
+                                    - \twist-bow
+                                    ~
+                                    a4
+                                      %! +SCORE
+                                    \repeatTie
+                                    r16
+                                    a8.
+                                    - \twist-bow
+                                    ~
+                                    a8.
+                                      %! +SCORE
+                                    \repeatTie
+                                    r16
+                                    a4.
+                                    - \twist-bow
+                                    \ff
+                                    r16
+                                      %! +SCORE
+                                    \once \override Tie.transparent = ##f
+                                    a16
+                                    - \twist-bow
+                                    ~
+                                    a4
+                                    ~
+                                    a16
+                                      %! +SCORE
+                                    \repeatTie
+                                    r16
+                                    a4.
+                                    - \twist-bow
+                                    r16
+                                    a8.
+                                    - \twist-bow
+                                    ~
+                                    a8.
+                                      %! +SCORE
+                                    \repeatTie
+                                    r16
+                                    a4.
+                                    - \twist-bow
+                                    r16
+                                      %! +SCORE
+                                    \once \override Tie.transparent = ##f
+                                    a16
+                                    - \twist-bow
+                                    ~
+                                    a4
+                                    ~
+                                    a16
+                                      %! +SCORE
+                                    \repeatTie
+                                    r16
+                                    a4.
+                                    - \twist-bow
+                                    r16
+                                    a8.
+                                    - \twist-bow
+                                    ~
+                                    a8.
+                                      %! +SCORE
+                                    \repeatTie
+                                    r16
+                                }
+                            }
+                        }
+                        \tag #'voice21
+                        {
+                            \context divisiStaff = "guitar 3 staff"
+                            {
+                                \context Voice = "guitar 3 voice"
+                                {
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratsche Soli }
+                                      %! +SCORE
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratsche Soli }
+                                    aqf1
+                                    - \tweak padding 0
+                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "1. soli" }
+                                    (
+                                    - \tweak padding #7
+                                    - \abjad-solid-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ord. } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Steg }
+                                    - \tweak bound-details.right.padding 1
+                                    \startTextSpanThree
+                                    \<
+                                      %! abjad.glissando(7)
+                                    \glissando
+                                    ~
+                                    \once \override Dots.staff-position = #2
+                                      %! abjad.glissando(1)
+                                    \hide NoteHead
+                                      %! abjad.glissando(1)
+                                    \override Accidental.stencil = ##f
+                                      %! abjad.glissando(1)
+                                    \override NoteColumn.glissando-skip = ##t
+                                      %! abjad.glissando(1)
+                                    \override NoteHead.no-ledgers = ##t
+                                    aqf2.
+                                      %! +SCORE
+                                    \repeatTie
+                                    ~
+                                    \once \override Dots.staff-position = #2
+                                    aqf2
+                                    \ffff
+                                      %! +SCORE
+                                    \repeatTie
+                                    ~
+                                    \once \override Dots.staff-position = #2
+                                    \override divisiStaff.Stem.stemlet-length = 0.75
+                                    aqf8
+                                    [
+                                      %! +SCORE
+                                    \repeatTie
+                                      %! abjad.glissando(6)
+                                    \revert Accidental.stencil
+                                      %! abjad.glissando(6)
+                                    \revert NoteColumn.glissando-skip
+                                      %! abjad.glissando(6)
+                                    \revert NoteHead.no-ledgers
+                                      %! abjad.glissando(6)
+                                    \undo \hide NoteHead
+                                    \revert divisiStaff.Stem.stemlet-length
+                                    a8
+                                    ]
+                                      %! abjad.glissando(7)
+                                    \glissando
+                                    ~
+                                    \once \override Dots.staff-position = #2
+                                      %! abjad.glissando(1)
+                                    \hide NoteHead
+                                      %! abjad.glissando(1)
+                                    \override Accidental.stencil = ##f
+                                      %! abjad.glissando(1)
+                                    \override NoteColumn.glissando-skip = ##t
+                                      %! abjad.glissando(1)
+                                    \override NoteHead.no-ledgers = ##t
+                                    a2
+                                      %! +SCORE
+                                    \repeatTie
+                                    ~
+                                    \once \override Dots.staff-position = #2
+                                    a2
+                                      %! +SCORE
+                                    \repeatTie
+                                    ~
+                                    \once \override Dots.staff-position = #2
+                                    a2.
+                                      %! +SCORE
+                                    \repeatTie
+                                    ~
+                                    \once \override Dots.staff-position = #2
+                                    a2...
+                                      %! +SCORE
+                                    \repeatTie
+                                      %! abjad.glissando(6)
+                                    \revert Accidental.stencil
+                                      %! abjad.glissando(6)
+                                    \revert NoteColumn.glissando-skip
+                                      %! abjad.glissando(6)
+                                    \revert NoteHead.no-ledgers
+                                      %! abjad.glissando(6)
+                                    \undo \hide NoteHead
+                                    aqs16
+                                    )
+                                    \stopTextSpanThree
+                                }
+                            }
+                        }
+                        \tag #'voice22
+                        {
+                            \context Staff = "viola staff"
+                            {
+                                \context Voice = "viola voice"
+                                {
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
+                                      %! +SCORE
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
+                                    \clef "altovarC"
+                                    r4.
+                                    gs8
+                                    - \twist-bow
+                                    \pppp
+                                    - \tweak padding 0
+                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Tutti" }
+                                    \<
+                                    ~
+                                    gs8
+                                      %! +SCORE
+                                    \repeatTie
+                                    r8
+                                    gs4
+                                    - \twist-bow
+                                    r8
+                                    gs8
+                                    - \twist-bow
+                                    ~
+                                    gs8
+                                      %! +SCORE
+                                    \repeatTie
+                                    r8
+                                    gs4
+                                    - \twist-bow
+                                    \ff
+                                    r2
+                                    gs4
+                                    - \twist-bow
+                                    r8
+                                    gs8
+                                    - \twist-bow
+                                    ~
+                                    gs8
+                                      %! +SCORE
+                                    \repeatTie
+                                    r8
+                                    gs4
+                                    - \twist-bow
+                                    r8
+                                    gs8
+                                    - \twist-bow
+                                    ~
+                                    gs8
+                                      %! +SCORE
+                                    \repeatTie
+                                    r8
+                                    r4.
+                                    gs8
+                                    - \twist-bow
+                                    ~
+                                    gs8
+                                      %! +SCORE
+                                    \repeatTie
+                                    r8
+                                    gs4
+                                    - \twist-bow
+                                    r8
+                                    gs8
+                                    - \twist-bow
+                                    ~
+                                    gs8
+                                      %! +SCORE
+                                    \repeatTie
+                                    r8
+                                }
+                            }
+                        }
+                        \tag #'voice23
+                        {
+                            \context divisiStaff = "guitar 4 staff"
+                            {
+                                \context Voice = "guitar 4 voice"
+                                {
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncello Soli }
+                                      %! +SCORE
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncello Soli }
+                                    af1
+                                    - \tweak padding 0
+                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "1. soli" }
+                                    (
+                                    - \tweak padding #7
+                                    - \abjad-solid-line-with-arrow
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ord. } \hspace #0.5 }
+                                    - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Steg }
+                                    - \tweak bound-details.right.padding 1
+                                    \startTextSpanThree
+                                    \<
+                                    ~
+                                    af2.
+                                      %! +SCORE
+                                    \repeatTie
+                                    ~
+                                    af2.
+                                    \ffff
+                                      %! +SCORE
+                                    \repeatTie
+                                    ~
+                                    af2
+                                      %! +SCORE
+                                    \repeatTie
+                                    ~
+                                    af2
+                                      %! +SCORE
+                                    \repeatTie
+                                    ~
+                                    af2.
+                                      %! +SCORE
+                                    \repeatTie
+                                    ~
+                                    af2...
+                                      %! +SCORE
+                                    \repeatTie
+                                    af16
+                                    )
+                                    \stopTextSpanThree
+                                }
+                            }
+                        }
+                        \tag #'voice24
+                        {
+                            \context Staff = "cello staff"
+                            {
+                                \context Voice = "cello voice"
+                                {
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
+                                      %! +SCORE
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
+                                    \clef "bass"
+                                    r4.
+                                    af8
+                                    - \twist-bow
+                                    \pppp
+                                    - \tweak padding 0
+                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Tutti" }
+                                    \<
+                                    r4
+                                    af8
+                                    - \twist-bow
+                                    r8
+                                    r8
+                                    af8
+                                    - \twist-bow
+                                    r4
+                                    af8
+                                    - \twist-bow
+                                    \ff
+                                    r8
+                                    r2
+                                    af8
+                                    - \twist-bow
+                                    r8
+                                    r8
+                                    af8
+                                    - \twist-bow
+                                    r4
+                                    af8
+                                    - \twist-bow
+                                    r8
+                                    r8
+                                    af8
+                                    - \twist-bow
+                                    r2
+                                    r8
+                                    af8
+                                    - \twist-bow
+                                    r4
+                                    af8
+                                    - \twist-bow
+                                    r8
+                                    r8
+                                    af8
+                                    - \twist-bow
+                                    r4
+                                }
+                            }
+                        }
+                        \tag #'voice25
                         {
                             \context Staff = "contrabass staff"
                             {

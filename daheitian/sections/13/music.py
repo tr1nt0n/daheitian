@@ -428,7 +428,7 @@ trinton.make_music(
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
     library.change_lines(lines=1, clef="percussion"),
-    library.boxed_markup(string="Bangu mit Bambusstäbchen"),
+    library.boxed_markup(string="Bangu"),
     trinton.attachment_command(
         attachments=[library.clef_whitespace, abjad.Dynamic("ff")],
         selector=trinton.select_leaves_by_index([0]),

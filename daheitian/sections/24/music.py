@@ -66,6 +66,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
     ),
+    library.a2(padding=1),
     trinton.notehead_bracket_command(),
     voice=score["flute voice"],
     beam_meter=True,
@@ -73,17 +74,6 @@ trinton.make_music(
 )
 
 # oboe music commands
-
-trinton.make_music(
-    lambda _: trinton.select_target(_, (1,)),
-    library.aftergrace(selector=trinton.select_leaves_by_index([-1])),
-    trinton.noteheads_only(),
-    trinton.transparent_noteheads(selector=trinton.pleaves()),
-    library.boxed_markup(
-        string="( zu Oboe )", selector=trinton.select_leaves_by_index([-1])
-    ),
-    voice=score["oboe voice"],
-)
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (3,)),
@@ -445,6 +435,8 @@ trinton.make_music(
     trinton.ottava_command(
         octave=2, selector=trinton.select_leaves_by_index([0, -1], pitched=True)
     ),
+    trinton.noteheads_only(),
+    library.tutti(padding=8.5),
     voice=score["violin 1 voice"],
     beam_meter=True,
 )
@@ -549,7 +541,9 @@ trinton.make_music(
     trinton.ottava_command(
         selector=trinton.select_leaves_by_index([0, 9], pitched=True)
     ),
-    trinton.notehead_bracket_command(),
+    trinton.noteheads_only(),
+    trinton.invisible_tuplet_brackets(),
+    library.tutti(padding=9.5),
     voice=score["violin 2 voice"],
     preprocessor=trinton.fuse_eighths_preprocessor((3,)),
     beam_meter=True,
@@ -643,7 +637,9 @@ trinton.make_music(
         end_hook=True,
         end_hook_style="solid-line-with-hook",
     ),
-    trinton.notehead_bracket_command(),
+    trinton.noteheads_only(),
+    trinton.invisible_tuplet_brackets(),
+    library.tutti(padding=6.5),
     voice=score["viola voice"],
     preprocessor=trinton.fuse_eighths_preprocessor((3,)),
     beam_meter=True,
@@ -713,7 +709,9 @@ trinton.make_music(
             pitched=True,
         )
     ),
-    trinton.notehead_bracket_command(),
+    trinton.noteheads_only(),
+    trinton.invisible_tuplet_brackets(),
+    library.tutti(padding=10),
     voice=score["cello voice"],
     preprocessor=trinton.fuse_eighths_preprocessor(
         (

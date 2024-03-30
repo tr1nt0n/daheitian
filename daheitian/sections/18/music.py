@@ -66,16 +66,7 @@ trinton.make_music(
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (1, 8)),
-    trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="1.",
-        ),
-        full_string=True,
-        padding=13,
-        style="solid-line-with-hook",
-        selector=trinton.select_leaves_by_index([0, -1]),
-        right_padding=2,
-    ),
+    library.soli_1(),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Dynamic("pppp"),
@@ -95,7 +86,7 @@ trinton.make_music(
         rmakers.note,
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
-    library.boxed_markup(string="Bangu mit Bambusstäbchen"),
+    library.boxed_markup(string="Bangu"),
     library.change_lines(lines=1, clef="percussion"),
     trinton.linear_attachment_command(
         attachments=[abjad.Dynamic("pppp"), abjad.Dynamic("ppp")],
@@ -112,11 +103,11 @@ trinton.make_music(
     rmakers.rewrite_dots,
     trinton.respell_tuplets_command(),
     library.boxed_markup(string="Amboss mit Hämmerchen"),
-    library.change_lines(lines=1, clef="percussion"),
     trinton.attachment_command(
-        attachments=[abjad.Dynamic("ppp"), abjad.Articulation("stopped")],
-        selector=trinton.logical_ties(first=True, pitched=True),
+        attachments=[abjad.Dynamic("p")],
+        selector=trinton.select_leaves_by_index([0], pitched=True),
     ),
+    library.change_lines(lines=1, clef="percussion"),
     trinton.notehead_bracket_command(),
     voice=score["percussion 3 voice"],
 )

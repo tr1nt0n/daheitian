@@ -2,7 +2,7 @@
     <<
         \context TimeSignatureContext = "Global Context"
         {
-            \time 12/8
+            \time 6/4
             s1 * 3/2
             ^ \markup {
               \raise #9 \with-dimensions-from \null
@@ -10,6 +10,7 @@
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"96"
                   [\abjad-metric-modulation-tuplet-lhs #2 #0 #3 #4 #2 #0 #'(1 . 1)]
+
               }
             }
             \time 3/4
@@ -91,6 +92,39 @@
                         }
                         \tag #'voice3
                         {
+                            \context divisiStaff = "englishhorn staff"
+                            {
+                                \context Voice = "englishhorn voice"
+                                {
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Cor Anglais }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ca. }
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                }
+                            }
+                        }
+                        \tag #'voice4
+                        {
                             \context Staff = "bassclarinet staff"
                             {
                                 \context Voice = "bassclarinet voice"
@@ -122,7 +156,7 @@
                                 }
                             }
                         }
-                        \tag #'voice4
+                        \tag #'voice5
                         {
                             \context Staff = "bassoon staff"
                             {
@@ -157,7 +191,7 @@
                         }
                     >>
                 }
-                \tag #'voice5
+                \tag #'voice6
                 {
                     \context Staff = "frenchhorn staff"
                     {
@@ -194,7 +228,7 @@
                 {
                     \context SquareBracketGroup = "sub group 2"
                     <<
-                        \tag #'voice6
+                        \tag #'voice7
                         {
                             \context Staff = "trumpet staff"
                             {
@@ -227,7 +261,7 @@
                                 }
                             }
                         }
-                        \tag #'voice7
+                        \tag #'voice8
                         {
                             \context Staff = "tenortrombone staff"
                             {
@@ -260,7 +294,7 @@
                                 }
                             }
                         }
-                        \tag #'voice8
+                        \tag #'voice9
                         {
                             \context Staff = "tuba staff"
                             {
@@ -299,7 +333,7 @@
                 {
                     \context GrandStaff = "sub group 3"
                     <<
-                        \tag #'voice9
+                        \tag #'voice10
                         {
                             \context Staff = "piano 1 staff"
                             {
@@ -332,7 +366,7 @@
                                 }
                             }
                         }
-                        \tag #'voice10
+                        \tag #'voice11
                         {
                             \context Staff = "piano 2 staff"
                             {
@@ -369,7 +403,7 @@
                 {
                     \context GrandStaff = "sub group 4"
                     <<
-                        \tag #'voice11
+                        \tag #'voice12
                         {
                             \context Staff = "harp 1 staff"
                             {
@@ -402,7 +436,7 @@
                                 }
                             }
                         }
-                        \tag #'voice12
+                        \tag #'voice13
                         {
                             \context Staff = "harp 2 staff"
                             {
@@ -435,7 +469,7 @@
                         }
                     >>
                 }
-                \tag #'voice13
+                \tag #'voice14
                 {
                     \context Staff = "percussion 1 staff"
                     {
@@ -472,7 +506,7 @@
                 {
                     \context SquareBracketGroup = "sub group 5"
                     <<
-                        \tag #'voice14
+                        \tag #'voice15
                         {
                             \context Staff = "percussion 2 staff"
                             {
@@ -505,7 +539,7 @@
                                 }
                             }
                         }
-                        \tag #'voice15
+                        \tag #'voice16
                         {
                             \context Staff = "percussion 3 staff"
                             {
@@ -544,31 +578,31 @@
                 {
                     \context SquareBracketGroup = "sub group 6"
                     <<
-                        \tag #'voice16
+                        \tag #'voice17
                         {
-                            \context Staff = "violin 1 staff"
+                            \context divisiStaff = "guitar 1 staff"
                             {
-                                \context Voice = "violin 1 voice"
+                                \context Voice = "guitar 1 voice"
                                 {
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 0))
                                     \times 2/3
                                     {
-                                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
+                                        \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 1 Soli }
                                           %! +SCORE
-                                    %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
+                                    %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 1 Soli }
                                         r16
+                                        \override Dots.staff-position = #2
                                         aqf4
                                         \p
                                         - \tweak padding #9
                                         - \abjad-solid-line-with-hook
-                                        - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1., MST } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { MST } \hspace #0.5 }
                                         - \tweak bound-details.right.padding -2
                                         \startTextSpan
                                         \<
                                           %! abjad.glissando(7)
                                         \glissando
                                         ~
-                                        \once \override Dots.staff-position = #2
                                           %! +SCORE
                                     %%% \once \override Tie.transparent = ##f
                                           %! abjad.glissando(1)
@@ -584,20 +618,12 @@
                                     %%% \repeatTie
                                         ~
                                     }
-                                    \once \override Dots.staff-position = #2
-                                    aqf8
+                                    aqf2
                                     ~
-                                    \once \override Dots.staff-position = #2
                                     aqf2.
                                       %! +SCORE
                                 %%% \repeatTie
                                     ~
-                                    \once \override Dots.staff-position = #2
-                                    aqf4.
-                                      %! +SCORE
-                                %%% \repeatTie
-                                    ~
-                                    \once \override Dots.staff-position = #2
                                     \afterGrace
                                     aqf2.
                                     \mp
@@ -605,6 +631,7 @@
                                       %! +SCORE
                                 %%% \repeatTie
                                     {
+                                        \revert Dots.staff-position
                                         \once \override Flag.stroke-style = #"grace"
                                           %! abjad.glissando(6)
                                         \revert Accidental.stencil
@@ -621,57 +648,64 @@
                                 }
                             }
                         }
-                        \tag #'voice17
+                        \tag #'voice18
                         {
-                            \context Staff = "violin 2 staff"
+                            \context Staff = "violin 1 staff"
                             {
-                                \context Voice = "violin 2 voice"
+                                \context Voice = "violin 1 voice"
                                 {
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
                                       %! +SCORE
-                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                }
+                            }
+                        }
+                        \tag #'voice19
+                        {
+                            \context divisiStaff = "guitar 2 staff"
+                            {
+                                \context Voice = "guitar 2 voice"
+                                {
+                                    \override Dots.staff-position = #2
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 2 Soli }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 2 Soli }
                                     r16
-                                      %! +SCORE
-                                %%% \once \override Tie.transparent = ##f
-                                    aqf16
+                                    \glissando
+                                    aqf4..
                                     \p
                                     - \tweak padding #4
                                     - \abjad-solid-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1., MST } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { MST } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -1
                                     \startTextSpan
                                     \<
-                                      %! abjad.glissando(7)
                                     \glissando
-                                    ~
-                                    \once \override Dots.staff-position = #2
-                                      %! abjad.glissando(1)
-                                    \hide NoteHead
-                                      %! abjad.glissando(1)
-                                    \override Accidental.stencil = ##f
-                                      %! abjad.glissando(1)
-                                    \override NoteColumn.glissando-skip = ##t
-                                      %! abjad.glissando(1)
-                                    \override NoteHead.no-ledgers = ##t
-                                    aqf4
-                                    ~
-                                    \once \override Dots.staff-position = #2
-                                    aqf8
-                                      %! +SCORE
-                                %%% \repeatTie
-                                      %! abjad.glissando(6)
-                                    \revert Accidental.stencil
-                                      %! abjad.glissando(6)
-                                    \revert NoteColumn.glissando-skip
-                                      %! abjad.glissando(6)
-                                    \revert NoteHead.no-ledgers
-                                      %! abjad.glissando(6)
-                                    \undo \hide NoteHead
                                     gs4
                                       %! abjad.glissando(7)
                                     \glissando
                                     ~
-                                    \once \override Dots.staff-position = #2
                                       %! abjad.glissando(1)
                                     \hide NoteHead
                                       %! abjad.glissando(1)
@@ -683,6 +717,7 @@
                                     gs4
                                       %! +SCORE
                                 %%% \repeatTie
+                                    \revert Dots.staff-position
                                       %! abjad.glissando(6)
                                     \revert Accidental.stencil
                                       %! abjad.glissando(6)
@@ -691,7 +726,7 @@
                                     \revert NoteHead.no-ledgers
                                       %! abjad.glissando(6)
                                     \undo \hide NoteHead
-                                    a8
+                                    a2
                                       %! abjad.glissando(7)
                                     \glissando
                                     \once \override Dots.staff-position = #2
@@ -703,8 +738,6 @@
                                     \override NoteColumn.glissando-skip = ##t
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
-                                    a4.
-                                    \once \override Dots.staff-position = #2
                                     a4
                                     \mp
                                     \<
@@ -730,16 +763,51 @@
                                 }
                             }
                         }
-                        \tag #'voice18
+                        \tag #'voice20
                         {
-                            \context Staff = "viola staff"
+                            \context Staff = "violin 2 staff"
                             {
-                                \context Voice = "viola voice"
+                                \context Voice = "violin 2 voice"
                                 {
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
                                       %! +SCORE
-                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                }
+                            }
+                        }
+                        \tag #'voice21
+                        {
+                            \context divisiStaff = "guitar 3 staff"
+                            {
+                                \context Voice = "guitar 3 voice"
+                                {
+                                    \override Dots.staff-position = #2
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratsche Soli }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratsche Soli }
                                     r8
+                                    \glissando
                                     \tweak text #tuplet-number::calc-fraction-text
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) (ly:make-duration 3 0))
                                     \times 6/7
@@ -749,7 +817,7 @@
                                         \p
                                         - \tweak padding #10
                                         - \abjad-solid-line-with-hook
-                                        - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1., MST } \hspace #0.5 }
+                                        - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { MST } \hspace #0.5 }
                                         - \tweak bound-details.right.padding -1
                                         \startTextSpan
                                         \<
@@ -763,7 +831,6 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 5) (ly:make-duration 3 0))
                                     \times 5/6
                                     {
-                                        \once \override Dots.staff-position = #2
                                           %! abjad.glissando(1)
                                         \hide NoteHead
                                           %! abjad.glissando(1)
@@ -775,6 +842,7 @@
                                         g2
                                           %! +SCORE
                                     %%% \repeatTie
+                                        \revert Dots.staff-position
                                           %! abjad.glissando(6)
                                         \revert Accidental.stencil
                                           %! abjad.glissando(6)
@@ -821,21 +889,54 @@
                                 }
                             }
                         }
-                        \tag #'voice19
+                        \tag #'voice22
                         {
-                            \context Staff = "cello staff"
+                            \context Staff = "viola staff"
                             {
-                                \context Voice = "cello voice"
+                                \context Voice = "viola voice"
                                 {
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
                                       %! +SCORE
-                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                }
+                            }
+                        }
+                        \tag #'voice23
+                        {
+                            \context divisiStaff = "guitar 4 staff"
+                            {
+                                \context Voice = "guitar 4 voice"
+                                {
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncello Soli }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncello Soli }
                                     \clef "bass"
                                     af1.
                                     \p
                                     - \tweak padding #7
                                     - \abjad-solid-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1., MST } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { MST } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -1
                                     \startTextSpan
                                     \<
@@ -875,7 +976,40 @@
                                 }
                             }
                         }
-                        \tag #'voice20
+                        \tag #'voice24
+                        {
+                            \context Staff = "cello staff"
+                            {
+                                \context Voice = "cello voice"
+                                {
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/4
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                }
+                            }
+                        }
+                        \tag #'voice25
                         {
                             \context Staff = "contrabass staff"
                             {
@@ -911,9 +1045,26 @@
                                     - \tweak bound-details.right.padding -1.5
                                     \startTextSpan
                                     \<
+                                      %! abjad.glissando(7)
                                     \glissando
                                     {
+                                          %! abjad.glissando(1)
+                                        \hide NoteHead
+                                          %! abjad.glissando(1)
+                                        \override Accidental.stencil = ##f
+                                          %! abjad.glissando(1)
+                                        \override NoteColumn.glissando-skip = ##t
+                                          %! abjad.glissando(1)
+                                        \override NoteHead.no-ledgers = ##t
                                         \once \override Flag.stroke-style = #"grace"
+                                          %! abjad.glissando(6)
+                                        \revert Accidental.stencil
+                                          %! abjad.glissando(6)
+                                        \revert NoteColumn.glissando-skip
+                                          %! abjad.glissando(6)
+                                        \revert NoteHead.no-ledgers
+                                          %! abjad.glissando(6)
+                                        \undo \hide NoteHead
                                         \tweak style #'cross
                                         af'16
                                         \f

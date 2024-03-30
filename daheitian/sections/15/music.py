@@ -31,10 +31,9 @@ trinton.make_music(
     rmakers.force_rest,
     trinton.force_note(selector=library._moths_selectors[1]["oboe voice"]),
     trinton.force_rest(selector=trinton.select_tuplets_by_index([-1])),
-    library.fuse_durations([(1, 4)]),
-    trinton.beam_durations([(1, 4)], beam_rests=True),
     rmakers.trivialize,
     rmakers.extract_trivial,
+    trinton.rewrite_meter_command(),
     evans.PitchHandler(
         [
             "bqs'",
@@ -139,9 +138,6 @@ trinton.make_music(
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=1.5,
-    ),
-    library.boxed_markup(
-        string="( zu Cor Anglais )", selector=trinton.select_leaves_by_index([-1])
     ),
     voice=score["oboe voice"],
     preprocessor=trinton.fuse_sixteenths_preprocessor((11, 8, 15, 2)),
@@ -262,6 +258,7 @@ trinton.make_music(
         selector=trinton.select_tuplets_by_index([-1]),
     ),
     trinton.treat_tuplets(),
+    trinton.rewrite_meter_command(),
     evans.PitchHandler(
         [
             "cqs,",
@@ -272,8 +269,6 @@ trinton.make_music(
             "d",
         ]
     ),
-    library.fuse_durations([(1, 4)]),
-    trinton.beam_durations([(1, 4)], beam_rests=True),
     trinton.attachment_command(
         attachments=[abjad.Clef("bass")],
         selector=trinton.select_leaves_by_index([0], pitched=True),
@@ -393,9 +388,8 @@ trinton.make_music(
     ),
     trinton.treat_tuplets(),
     evans.PitchHandler([5, 2, -5, 2, -1, 5]),
-    library.change_lines(lines=4, clef="percussion"),
-    library.fuse_durations([(1, 4)]),
-    trinton.beam_durations([(1, 4)], beam_rests=True),
+    library.change_lines(lines=4, clef="strings"),
+    trinton.rewrite_meter_command(),
     trinton.attachment_command(
         attachments=[abjad.Articulation("marcato")],
         selector=trinton.logical_ties(pitched=True, first=True),
@@ -514,9 +508,8 @@ trinton.make_music(
             2,
         ]
     ),
-    library.change_lines(lines=4, clef="percussion"),
-    library.fuse_durations([(1, 4)]),
-    trinton.beam_durations([(1, 4)], beam_rests=True),
+    library.change_lines(lines=4, clef="strings"),
+    trinton.rewrite_meter_command(),
     trinton.attachment_command(
         attachments=[abjad.Articulation("marcato")],
         selector=trinton.logical_ties(pitched=True, first=True),
@@ -638,9 +631,8 @@ trinton.make_music(
     trinton.force_note(selector=library._moths_selectors[1]["viola voice"]),
     trinton.treat_tuplets(),
     evans.PitchHandler([2, -1, 2, -1, 5, 2, 5, -5]),
-    library.change_lines(lines=4, clef="percussion"),
-    library.fuse_durations([(1, 4)]),
-    trinton.beam_durations([(1, 4)], beam_rests=True),
+    library.change_lines(lines=4, clef="strings"),
+    trinton.rewrite_meter_command(),
     trinton.attachment_command(
         attachments=[abjad.Articulation("marcato")],
         selector=trinton.logical_ties(pitched=True, first=True),
@@ -775,9 +767,8 @@ trinton.make_music(
             -1,
         ]
     ),
-    library.change_lines(lines=4, clef="percussion"),
-    library.fuse_durations([(1, 4)]),
-    trinton.beam_durations([(1, 4)], beam_rests=True),
+    library.change_lines(lines=4, clef="strings"),
+    trinton.rewrite_meter_command(),
     trinton.attachment_command(
         attachments=[abjad.Articulation("marcato")],
         selector=trinton.logical_ties(pitched=True, first=True),
@@ -900,13 +891,12 @@ trinton.make_music(
             2,
         ]
     ),
-    library.change_lines(lines=4, clef="percussion"),
+    library.change_lines(lines=4, clef="strings"),
     # trinton.attachment_command(
     #     attachments=[library.clef_whitespace],
     #     selector=trinton.select_leaves_by_index([0])
     # ),
-    library.fuse_durations([(1, 4)]),
-    trinton.beam_durations([(1, 4)], beam_rests=True),
+    trinton.rewrite_meter_command(),
     trinton.attachment_command(
         attachments=[abjad.Articulation("marcato")],
         selector=trinton.logical_ties(pitched=True, first=True),
@@ -1040,6 +1030,7 @@ trinton.make_music(
                 mod_string=library.metronome_marks["5:4(8)=4"],
                 string_only=True,
                 parenthesis=True,
+                interpolation="Rit.",
             ),
             library.metronome_markups(
                 met_string=library.metronome_marks["48"],
@@ -1064,6 +1055,7 @@ trinton.make_music(
                 met_string=library.metronome_marks["57 3/5"],
                 mod_string=library.metronome_marks["6:5(4)=4"],
                 string_only=True,
+                interpolation="Accel.",
             ),
             library.metronome_markups(
                 met_string=library.metronome_marks["96"],

@@ -3535,7 +3535,7 @@
                                     \clef "percussion"
                                     c'4..
                                     \ff
-                                    \boxed-markup "Bangu mit Bambusstäbchen" 1
+                                    \boxed-markup "Bangu" 1
                                     c'4..
                                     c'2
                                     c'2

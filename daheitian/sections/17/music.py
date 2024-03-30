@@ -58,7 +58,7 @@ trinton.make_music(
         selector=trinton.pleaves(),
     ),
     trinton.attachment_command(
-        attachments=[abjad.BendAfter(2.5)],
+        attachments=[abjad.BendAfter(3.5)],
         selector=trinton.ranged_selector(ranges=[range(12, 30)]),
     ),
     trinton.ficta_command(selector=trinton.select_leaves_by_index([12, -1])),
@@ -69,7 +69,7 @@ trinton.make_music(
                 "before",
             ),
             abjad.Markup(
-                r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }"""
+                r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Immer die gleiche Artikulation, } \line { ohne hörbare Grundschläge } } }"""
             ),
             trinton.make_custom_dynamic("fffff"),
             abjad.StartHairpin("--"),
@@ -133,7 +133,7 @@ trinton.make_music(
         selector=trinton.pleaves(),
     ),
     trinton.attachment_command(
-        attachments=[abjad.BendAfter(2.5)],
+        attachments=[abjad.BendAfter(3.5)],
         selector=trinton.ranged_selector(ranges=[range(12, 30)]),
     ),
     trinton.ficta_command(selector=trinton.select_leaves_by_index([12, -1])),
@@ -155,7 +155,7 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[
             abjad.Markup(
-                r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }"""
+                r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Immer die gleiche Artikulation, } \line { ohne hörbare Grundschläge } } }"""
             ),
         ],
         selector=trinton.select_leaves_by_index([0]),
@@ -165,7 +165,7 @@ trinton.make_music(
         attachments=[
             abjad.bundle(
                 abjad.Markup(
-                    r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }"""
+                    r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Immer die gleiche Artikulation, } \line { ohne hörbare Grundschläge } } }"""
                 ),
                 r"- \tweak padding #3.5",
             ),
@@ -231,7 +231,7 @@ trinton.make_music(
         selector=trinton.pleaves(),
     ),
     trinton.attachment_command(
-        attachments=[abjad.BendAfter(-2.5)],
+        attachments=[abjad.BendAfter(-3.5)],
         selector=trinton.ranged_selector(ranges=[range(12, 30)]),
     ),
     trinton.ficta_command(selector=trinton.select_leaves_by_index([12, -1])),
@@ -243,7 +243,7 @@ trinton.make_music(
                 "before",
             ),
             abjad.Markup(
-                r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }"""
+                r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Immer die gleiche Artikulation, } \line { ohne hörbare Grundschläge } } }"""
             ),
             trinton.make_custom_dynamic("fffff"),
             abjad.StartHairpin("--"),
@@ -287,9 +287,8 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0], pitched=True),
     ),
-    evans.PitchHandler(["e'"]),
     evans.PitchHandler(
-        [library._brass_chord_pitches["frenchhorn voice"]], as_ratios=True
+        [library._brass_chord_pitches["frenchhorn voice"]],
     ),
     trinton.glissando_command(
         selector=trinton.ranged_selector(ranges=[range(1, 4)], nested=True),
@@ -365,8 +364,9 @@ trinton.make_music(
             abjad.Dynamic("p"),
             abjad.StartHairpin("<"),
             abjad.Dynamic("ffff"),
+            abjad.BreathMark(),
         ],
-        selector=trinton.select_leaves_by_index([0, 0, -1], pitched=True),
+        selector=trinton.select_leaves_by_index([0, 0, -1, -1], pitched=True),
     ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
@@ -614,7 +614,7 @@ for voice_name in ["violin 2 voice", "viola voice", "cello voice"]:
         trinton.attachment_command(
             attachments=[
                 abjad.Markup(
-                    r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }"""
+                    r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Immer die gleiche Artikulation, } \line { ohne hörbare Grundschläge } } }"""
                 ),
             ],
             selector=trinton.select_leaves_by_index([0]),
@@ -645,7 +645,7 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[
             abjad.Markup(
-                r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }"""
+                r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Immer die gleiche Artikulation, } \line { ohne hörbare Grundschläge } } }"""
             ),
         ],
         selector=trinton.select_leaves_by_index([0]),
@@ -654,7 +654,7 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[
             abjad.Markup(
-                r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }"""
+                r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Immer die gleiche Artikulation, } \line { ohne hörbare Grundschläge } } }"""
             ),
         ],
         selector=trinton.select_leaves_by_index([0]),
@@ -1039,14 +1039,45 @@ library.ties(score=score)
 # globals
 
 trinton.make_music(
+    lambda _: trinton.select_target(_, (3,)),
+    evans.RhythmHandler(evans.talea([4, 1], 4)),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.LilyPondLiteral(r"\hideNotes", site="before"),
+            abjad.bundle(
+                abjad.Markup(
+                    r"""\markup \override #'(font-name . "Bodoni72 Book Italic")
+                    { \right-column { \line { Leichte Überschneidung }
+                    \line { mit dem folgenden Flötenton } } }"""
+                ),
+                r"- \tweak font-size #'2",
+                r"- \tweak padding 0",
+                r"- \tweak whiteout-style #'outline'",
+                r"- \tweak whiteout 1",
+                r"- \tweak X-extent ##f",
+            ),
+            abjad.bundle(
+                abjad.Markup(r"\middle-fermata"),
+                r"- \tweak font-size #'15",
+                r"- \tweak padding 0",
+            ),
+            abjad.LilyPondLiteral(r"\unHideNotes", site="absolute_after"),
+        ],
+        selector=trinton.select_leaves_by_index([0, 1, 1, -1]),
+        direction=abjad.UP,
+    ),
+    voice=score["Global Context"],
+)
+
+trinton.make_music(
     lambda _: trinton.select_target(_, (2, 3)),
     trinton.hooked_spanner_command(
-        string=r"\markup \fontsize #5.5 { Rall. }",
+        string=r"""\markup \fontsize #5.5 { "Rall. moltiss." }""",
         full_string=True,
         padding=11.5,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1]),
-        right_padding=60,
+        right_padding=0,
     ),
     voice=score["Global Context"],
 )

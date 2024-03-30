@@ -698,6 +698,15 @@ climax_partials = [
     for partial, string in zip(climax_partials, climax_strings)
 ]
 
+climax_partials = [
+    abjad.bundle(
+        markup,
+        r"- \tweak whiteout-style #'outline",
+        r"- \tweak whiteout 1",
+    )
+    for markup in climax_partials
+]
+
 _climax_partial_markups = {
     "contrabass voice": {
         1: climax_partials[0],

@@ -155,6 +155,8 @@ section_14_ts.append((1, 4))
 # section 15
 
 section_15_ts = taal_ts_sequence[50:57]
+section_15_ts.pop(5)
+section_15_ts.insert(5, (6, 4))
 
 # section 16
 
@@ -191,7 +193,9 @@ section_21_ts = taal_ts_sequence[82:89]
 
 # section 22
 
-section_22_ts = taal_ts_sequence[89:91]
+# section_22_ts = taal_ts_sequence[89:91]
+
+section_22_ts = [(6, 4), (3, 4)]
 
 # section 23
 
@@ -199,9 +203,9 @@ section_23_ts = taal_ts_sequence[91:98]
 
 # section 24
 
-section_24_ts = [(3, 2), (1, 4)]
+section_24_ts = [(3, 2), (1, 4), (6, 4)]
 
-section_24_ts.append(taal_ts_sequence[98])
+# section_24_ts.append(taal_ts_sequence[98])
 
 # section 28
 

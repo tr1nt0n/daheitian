@@ -30,12 +30,25 @@
             s1 * 3/2
             - \tweak padding #11.5
             - \abjad-solid-line-with-hook
-            - \tweak bound-details.left.text \markup \concat { \fontsize #5.5 { Rall. } \hspace #0.5 }
-            - \tweak bound-details.right.padding -60
+            - \tweak bound-details.left.text \markup \concat { \fontsize #5.5 { "Rall. moltiss." } \hspace #0.5 }
             \startTextSpan
+            \hideNotes
             \time 5/4
-            s1 * 5/4
+            c'1
+            c'4
+            - \tweak X-extent ##f
+            - \tweak font-size #'2
+            - \tweak padding 0
+            - \tweak whiteout 1
+            - \tweak whiteout-style #'outline'
+            ^ \markup \override #'(font-name . "Bodoni72 Book Italic")
+                                { \right-column { \line { Leichte Überschneidung }
+                                \line { mit dem folgenden Flötenton } } }
+            - \tweak font-size #'15
+            - \tweak padding 0
+            ^ \middle-fermata
             \stopTextSpan
+            \unHideNotes
         }
         \tag #'group1
         {
@@ -119,7 +132,7 @@
                                     >4
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
                                     - \marcato
-                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }
+                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Immer die gleiche Artikulation, } \line { ohne hörbare Grundschläge } } }
                                     - \tweak padding #10.5
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \hspace #1.5 \override #'(size . .6) { \woodwind-diagram #'oboe #'((cc . (two three five six)) (lh . (gis)) (rh . (c))) } \hspace #0.5 }
@@ -359,84 +372,84 @@
                                     \set suggestAccidentals = ##t
                                     \override Staff.Stem.stemlet-length = 0.75
                                     cqs''8
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     [
                                     cs''16
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     \revert Staff.Stem.stemlet-length
                                     dqf''16
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     ]
                                     \override Staff.Stem.stemlet-length = 0.75
                                     d''8
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     [
                                     \revert Staff.Stem.stemlet-length
                                     dqs''8
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     ]
                                     \override Staff.Stem.stemlet-length = 0.75
                                     ef''16
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     [
                                     \revert Staff.Stem.stemlet-length
                                     eqf''8.
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     ]
                                     e''4
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     \override Staff.Stem.stemlet-length = 0.75
                                     eqs''8
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     [
                                     \revert Staff.Stem.stemlet-length
                                     f''8
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     ]
                                     fqs''4
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     \override Staff.Stem.stemlet-length = 0.75
                                     fs''8
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     [
                                     g''16
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     \revert Staff.Stem.stemlet-length
                                     a''16
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     ]
                                     \override Staff.Stem.stemlet-length = 0.75
                                     b''8
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     [
                                     \revert Staff.Stem.stemlet-length
                                     cs'''8
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     ]
                                     \override Staff.Stem.stemlet-length = 0.75
                                     d'''16
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     [
                                     \revert Staff.Stem.stemlet-length
                                     ds'''8.
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     ]
                                     e'''4
@@ -447,6 +460,50 @@
                             }
                         }
                         \tag #'voice3
+                        {
+                            \context divisiStaff = "englishhorn staff"
+                            {
+                                \context Voice = "englishhorn voice"
+                                {
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Cor Anglais }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ca. }
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/2
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/2
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 5/4
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                }
+                            }
+                        }
+                        \tag #'voice4
                         {
                             \context Staff = "bassclarinet staff"
                             {
@@ -464,11 +521,11 @@
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
                                     - \marcato
                                       %! +PARTS
-                                %%% - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }
+                                %%% - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Immer die gleiche Artikulation, } \line { ohne hörbare Grundschläge } } }
                                       %! +SCORE
                                     - \tweak padding #3.5
                                       %! +SCORE
-                                    ^ \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }
+                                    ^ \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Immer die gleiche Artikulation, } \line { ohne hörbare Grundschläge } } }
                                     - \tweak padding #4
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Überblasen } \hspace #0.5 }
@@ -565,84 +622,84 @@
                                     \set suggestAccidentals = ##t
                                     \override Staff.Stem.stemlet-length = 0.75
                                     e8
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     [
                                     fqs16
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     \revert Staff.Stem.stemlet-length
                                     g16
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     ]
                                     \override Staff.Stem.stemlet-length = 0.75
                                     aqf8
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     [
                                     \revert Staff.Stem.stemlet-length
                                     bf8
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     ]
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bqs16
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     [
                                     \revert Staff.Stem.stemlet-length
                                     cs'8.
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     ]
                                     dqs'4
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     \override Staff.Stem.stemlet-length = 0.75
                                     e'8
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     [
                                     \revert Staff.Stem.stemlet-length
                                     fqs'8
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     ]
                                     g'4
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     \override Staff.Stem.stemlet-length = 0.75
                                     aqf'8
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     [
                                     cqs''16
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     \revert Staff.Stem.stemlet-length
                                     ef''16
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     ]
                                     \override Staff.Stem.stemlet-length = 0.75
                                     fs''8
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     [
                                     \revert Staff.Stem.stemlet-length
                                     aqf''8
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     ]
                                     \override Staff.Stem.stemlet-length = 0.75
                                     cs'''16
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     [
                                     \revert Staff.Stem.stemlet-length
                                     eqs'''8.
-                                    - \bendAfter #'2.5
+                                    - \bendAfter #'3.5
                                     - \marcato
                                     ]
                                     fs'''4
@@ -652,7 +709,7 @@
                                 }
                             }
                         }
-                        \tag #'voice4
+                        \tag #'voice5
                         {
                             \context Staff = "bassoon staff"
                             {
@@ -683,7 +740,7 @@
                                     >4
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
                                     - \marcato
-                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }
+                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Immer die gleiche Artikulation, } \line { ohne hörbare Grundschläge } } }
                                     - \tweak padding #10.5
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \hspace #4 \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one three four five)) (lh . (w eesT cisT)) (rh . (thumb-bes))) } \hspace #0.5 }
@@ -923,84 +980,84 @@
                                     \set suggestAccidentals = ##t
                                     \override Staff.Stem.stemlet-length = 0.75
                                     d8
-                                    - \bendAfter #'-2.5
+                                    - \bendAfter #'-3.5
                                     - \marcato
                                     [
                                     dqf16
-                                    - \bendAfter #'-2.5
+                                    - \bendAfter #'-3.5
                                     - \marcato
                                     \revert Staff.Stem.stemlet-length
                                     cs16
-                                    - \bendAfter #'-2.5
+                                    - \bendAfter #'-3.5
                                     - \marcato
                                     ]
                                     \override Staff.Stem.stemlet-length = 0.75
                                     cqs8
-                                    - \bendAfter #'-2.5
+                                    - \bendAfter #'-3.5
                                     - \marcato
                                     [
                                     \revert Staff.Stem.stemlet-length
                                     c8
-                                    - \bendAfter #'-2.5
+                                    - \bendAfter #'-3.5
                                     - \marcato
                                     ]
                                     \override Staff.Stem.stemlet-length = 0.75
                                     cqf16
-                                    - \bendAfter #'-2.5
+                                    - \bendAfter #'-3.5
                                     - \marcato
                                     [
                                     \revert Staff.Stem.stemlet-length
                                     b,8.
-                                    - \bendAfter #'-2.5
+                                    - \bendAfter #'-3.5
                                     - \marcato
                                     ]
                                     bqf,4
-                                    - \bendAfter #'-2.5
+                                    - \bendAfter #'-3.5
                                     - \marcato
                                     \override Staff.Stem.stemlet-length = 0.75
                                     bf,8
-                                    - \bendAfter #'-2.5
+                                    - \bendAfter #'-3.5
                                     - \marcato
                                     [
                                     \revert Staff.Stem.stemlet-length
                                     aqs,8
-                                    - \bendAfter #'-2.5
+                                    - \bendAfter #'-3.5
                                     - \marcato
                                     ]
                                     a,4
-                                    - \bendAfter #'-2.5
+                                    - \bendAfter #'-3.5
                                     - \marcato
                                     \override Staff.Stem.stemlet-length = 0.75
                                     aqf,8
-                                    - \bendAfter #'-2.5
+                                    - \bendAfter #'-3.5
                                     - \marcato
                                     [
                                     af,16
-                                    - \bendAfter #'-2.5
+                                    - \bendAfter #'-3.5
                                     - \marcato
                                     \revert Staff.Stem.stemlet-length
                                     gqs,16
-                                    - \bendAfter #'-2.5
+                                    - \bendAfter #'-3.5
                                     - \marcato
                                     ]
                                     \override Staff.Stem.stemlet-length = 0.75
                                     g,8
-                                    - \bendAfter #'-2.5
+                                    - \bendAfter #'-3.5
                                     - \marcato
                                     [
                                     \revert Staff.Stem.stemlet-length
                                     gqf,8
-                                    - \bendAfter #'-2.5
+                                    - \bendAfter #'-3.5
                                     - \marcato
                                     ]
                                     \override Staff.Stem.stemlet-length = 0.75
                                     fs,16
-                                    - \bendAfter #'-2.5
+                                    - \bendAfter #'-3.5
                                     - \marcato
                                     [
                                     \revert Staff.Stem.stemlet-length
                                     f,8.
-                                    - \bendAfter #'-2.5
+                                    - \bendAfter #'-3.5
                                     - \marcato
                                     ]
                                     e,4
@@ -1012,7 +1069,7 @@
                         }
                     >>
                 }
-                \tag #'voice5
+                \tag #'voice6
                 {
                     \context Staff = "frenchhorn staff"
                     {
@@ -1023,15 +1080,7 @@
                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hn. }
                             r1
                             \clef "treble"
-                            <
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
-                                gs''
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
-                                cs'''
-                            >4
-                            ^ \markup \center-align { \center-column { \line { \concat { C+41 }  }\line { \concat { +35 }  } } }
+                            <aqf' cqs''>4
                             - \tweak circled-tip ##t
                             _ \<
                               %! abjad.glissando(7)
@@ -1055,14 +1104,7 @@
                               %! abjad.glissando(1)
                             \override NoteHead.no-ledgers = ##t
                             \afterGrace
-                            <
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
-                                gs''
-                                \tweak Accidental.stencil #ly:text-interface::print
-                                \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
-                                cs'''
-                            >4
+                            <aqf' cqs''>4
                                 _ #(make-dynamic-script (markup #:whiteout #:italic "mf"))
                             - \tweak circled-tip ##t
                             _ \>
@@ -1084,14 +1126,7 @@
                                 \revert NoteHead.no-ledgers
                                   %! abjad.glissando(6)
                                 \undo \hide NoteHead
-                                <
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup \concat { \one-septimal-comma-up \hspace #0.125 \abjad-sharp  }
-                                    gs''
-                                    \tweak Accidental.stencil #ly:text-interface::print
-                                    \tweak Accidental.text \markup \concat { \one-tridecimal-third-tone-down \hspace #0.125 \abjad-sharp  }
-                                    cs'''
-                                >16
+                                <aqf' cqs''>16
                                 \!
                             }
                               %! +SCORE
@@ -1123,7 +1158,7 @@
                 {
                     \context SquareBracketGroup = "sub group 2"
                     <<
-                        \tag #'voice6
+                        \tag #'voice7
                         {
                             \context Staff = "trumpet staff"
                             {
@@ -1133,7 +1168,7 @@
                                       %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ tpt. }
                                     r1
-                                    <d'' f''>4
+                                    <d' f'>4
                                     - \tweak circled-tip ##t
                                     _ \<
                                       %! abjad.glissando(7)
@@ -1157,7 +1192,7 @@
                                       %! abjad.glissando(1)
                                     \override NoteHead.no-ledgers = ##t
                                     \afterGrace
-                                    <d'' f''>4
+                                    <d' f'>4
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "mf"))
                                     - \tweak circled-tip ##t
                                     _ \>
@@ -1179,7 +1214,7 @@
                                         \revert NoteHead.no-ledgers
                                           %! abjad.glissando(6)
                                         \undo \hide NoteHead
-                                        <d'' f''>16
+                                        <d' f'>16
                                         \!
                                     }
                                       %! +SCORE
@@ -1207,7 +1242,7 @@
                                 }
                             }
                         }
-                        \tag #'voice7
+                        \tag #'voice8
                         {
                             \context Staff = "tenortrombone staff"
                             {
@@ -1265,6 +1300,7 @@
                                         c'''16
                                         \ffff
                                         \stopTextSpan
+                                        \breathe
                                     }
                                     \clef "bass"
                                     e,1.
@@ -1283,7 +1319,7 @@
                                 }
                             }
                         }
-                        \tag #'voice8
+                        \tag #'voice9
                         {
                             \context Staff = "tuba staff"
                             {
@@ -1326,7 +1362,7 @@
                 {
                     \context GrandStaff = "sub group 3"
                     <<
-                        \tag #'voice9
+                        \tag #'voice10
                         {
                             \context Staff = "piano 1 staff"
                             {
@@ -1370,7 +1406,7 @@
                                 }
                             }
                         }
-                        \tag #'voice10
+                        \tag #'voice11
                         {
                             \context Staff = "piano 2 staff"
                             {
@@ -1418,7 +1454,7 @@
                 {
                     \context GrandStaff = "sub group 4"
                     <<
-                        \tag #'voice11
+                        \tag #'voice12
                         {
                             \context Staff = "harp 1 staff"
                             {
@@ -1468,7 +1504,7 @@
                                 }
                             }
                         }
-                        \tag #'voice12
+                        \tag #'voice13
                         {
                             \context Staff = "harp 2 staff"
                             {
@@ -1476,6 +1512,7 @@
                                 {
                                     r1
                                     \staff-line-count 5
+                                    \revert Staff.Clef.stencil
                                     \clef "bass"
                                     \afterGrace
                                     <g,, g,>2
@@ -1512,7 +1549,7 @@
                         }
                     >>
                 }
-                \tag #'voice13
+                \tag #'voice14
                 {
                     \context Staff = "percussion 1 staff"
                     {
@@ -1613,7 +1650,7 @@
                 {
                     \context SquareBracketGroup = "sub group 5"
                     <<
-                        \tag #'voice14
+                        \tag #'voice15
                         {
                             \context Staff = "percussion 2 staff"
                             {
@@ -1657,7 +1694,7 @@
                                 }
                             }
                         }
-                        \tag #'voice15
+                        \tag #'voice16
                         {
                             \context Staff = "percussion 3 staff"
                             {
@@ -1669,6 +1706,7 @@
                                     r1
                                     \staff-line-count 5
                                     \boxed-markup "Glockenspiel" 1
+                                    \revert Staff.Clef.stencil
                                     \clef "treble"
                                     \afterGrace
                                     d''2
@@ -1713,7 +1751,51 @@
                 {
                     \context SquareBracketGroup = "sub group 6"
                     <<
-                        \tag #'voice16
+                        \tag #'voice17
+                        {
+                            \context divisiStaff = "guitar 1 staff"
+                            {
+                                \context Voice = "guitar 1 voice"
+                                {
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 1 Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 1 Soli }
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/2
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/2
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 5/4
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                }
+                            }
+                        }
+                        \tag #'voice18
                         {
                             \context Staff = "violin 1 staff"
                             {
@@ -1721,6 +1803,7 @@
                                 {
                                     \staff-line-count 4
                                     \once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2
+                                    \revert Staff.Clef.stencil
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
                                       %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
@@ -1729,9 +1812,9 @@
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
                                     - \marcato
                                       %! +PARTS
-                                %%% - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }
+                                %%% - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Immer die gleiche Artikulation, } \line { ohne hörbare Grundschläge } } }
                                       %! +SCORE
-                                    ^ \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }
+                                    ^ \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Immer die gleiche Artikulation, } \line { ohne hörbare Grundschläge } } }
                                     - \tweak padding #11.5
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { DP, Kratzen } \hspace #0.5 }
@@ -1813,6 +1896,7 @@
                                     - \marcato
                                     ]
                                     \staff-line-count 5
+                                    \revert Staff.Clef.stencil
                                     \clef "treble"
                                     e''4
                                     - \marcato
@@ -1899,7 +1983,51 @@
                                 }
                             }
                         }
-                        \tag #'voice17
+                        \tag #'voice19
+                        {
+                            \context divisiStaff = "guitar 2 staff"
+                            {
+                                \context Voice = "guitar 2 voice"
+                                {
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 2 Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 2 Soli }
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/2
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/2
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 5/4
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                }
+                            }
+                        }
+                        \tag #'voice20
                         {
                             \context Staff = "violin 2 staff"
                             {
@@ -1907,6 +2035,7 @@
                                 {
                                     \staff-line-count 4
                                     \once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2
+                                    \revert Staff.Clef.stencil
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
                                       %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
@@ -1914,7 +2043,7 @@
                                     d'4
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
                                     - \marcato
-                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }
+                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Immer die gleiche Artikulation, } \line { ohne hörbare Grundschläge } } }
                                     - \tweak padding #11.5
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { DP, Kratzen } \hspace #0.5 }
@@ -1996,6 +2125,7 @@
                                     - \marcato
                                     ]
                                     \staff-line-count 5
+                                    \revert Staff.Clef.stencil
                                     \clef "treble"
                                     a'4
                                     - \marcato
@@ -2082,7 +2212,51 @@
                                 }
                             }
                         }
-                        \tag #'voice18
+                        \tag #'voice21
+                        {
+                            \context divisiStaff = "guitar 3 staff"
+                            {
+                                \context Voice = "guitar 3 voice"
+                                {
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratsche Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratsche Soli }
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/2
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/2
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 5/4
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                }
+                            }
+                        }
+                        \tag #'voice22
                         {
                             \context Staff = "viola staff"
                             {
@@ -2090,6 +2264,7 @@
                                 {
                                     \staff-line-count 4
                                     \once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2
+                                    \revert Staff.Clef.stencil
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
                                       %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
@@ -2097,7 +2272,7 @@
                                     b4
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
                                     - \marcato
-                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }
+                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Immer die gleiche Artikulation, } \line { ohne hörbare Grundschläge } } }
                                     - \tweak padding #11.5
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { DP, Kratzen } \hspace #0.5 }
@@ -2179,6 +2354,7 @@
                                     - \marcato
                                     ]
                                     \staff-line-count 5
+                                    \revert Staff.Clef.stencil
                                     \clef "altovarC"
                                     g4
                                     - \marcato
@@ -2265,7 +2441,51 @@
                                 }
                             }
                         }
-                        \tag #'voice19
+                        \tag #'voice23
+                        {
+                            \context divisiStaff = "guitar 4 staff"
+                            {
+                                \context Voice = "guitar 4 voice"
+                                {
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncello Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncello Soli }
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/2
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/2
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 5/4
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                }
+                            }
+                        }
+                        \tag #'voice24
                         {
                             \context Staff = "cello staff"
                             {
@@ -2273,6 +2493,7 @@
                                 {
                                     \staff-line-count 4
                                     \once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2
+                                    \revert Staff.Clef.stencil
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
                                       %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }
@@ -2280,7 +2501,7 @@
                                     g4
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
                                     - \marcato
-                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Kein Hauptpuls, } \line { jede Note gleich } } }
+                                    - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Immer die gleiche Artikulation, } \line { ohne hörbare Grundschläge } } }
                                     - \tweak padding #10.5
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { DP, Kratzen } \hspace #0.5 }
@@ -2362,6 +2583,7 @@
                                     - \marcato
                                     ]
                                     \staff-line-count 5
+                                    \revert Staff.Clef.stencil
                                     \clef "bass"
                                     c,4
                                     - \marcato
@@ -2448,7 +2670,7 @@
                                 }
                             }
                         }
-                        \tag #'voice20
+                        \tag #'voice25
                         {
                             \context Staff = "contrabass staff"
                             {

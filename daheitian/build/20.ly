@@ -12,6 +12,7 @@
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"144"
                   [\abjad-metric-modulation-tuplet-lhs #3 #0 #2 #3 #2 #0 #'(1 . 1)]
+
               }
             }
             \time 4/4
@@ -64,25 +65,19 @@
                             {
                                 \context Voice = "oboe voice"
                                 {
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                                       %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
-                                    \afterGrace
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
                                     R1 * 3/4
-                                    {
-                                        \once \override Accidental.stencil = ##f
-                                        \once \override Beam.stencil = ##f
-                                        \once \override Dots.stencil = ##f
-                                        \once \override Flag.stencil = ##f
-                                        \once \override NoteHead.duration-log = 2
-                                        \once \override NoteHead.no-ledgers = ##t
-                                        \once \override Stem.stencil = ##f
-                                        \once \override Tie.stencil = ##f
-                                        \once \override NoteHead.transparent = ##t
-                                        \once \override Flag.stroke-style = #"grace"
-                                        c'16
-                                        \boxed-markup "( zu Cor Anglais )" 1
-                                    }
+                                      %! +SCORE
+                                    \stopStaff \startStaff
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
@@ -98,6 +93,39 @@
                             }
                         }
                         \tag #'voice3
+                        {
+                            \context divisiStaff = "englishhorn staff"
+                            {
+                                \context Voice = "englishhorn voice"
+                                {
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Cor Anglais }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ca. }
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/4
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                }
+                            }
+                        }
+                        \tag #'voice4
                         {
                             \context Staff = "bassclarinet staff"
                             {
@@ -162,7 +190,7 @@
                                 }
                             }
                         }
-                        \tag #'voice4
+                        \tag #'voice5
                         {
                             \context Staff = "bassoon staff"
                             {
@@ -181,23 +209,69 @@
                                     R1 * 3/4
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "bassoon voice temp"
+                                        {
+                                              %! +PARTS
+                                        %%% \override Staff.MultiMeasureRest.transparent = ##t
+                                            \voiceOne
+                                            R1 * 1
+                                              %! +PARTS
+                                        %%% \revert Staff.MultiMeasureRest.transparent
+                                        }
+                                        \context Voice = "bassoon intermittent voice 1"
+                                        {
+                                              %! +PARTS
+                                        %%% \clef "bass"
+                                              %! +PARTS
+                                        %%% \voiceTwo
+                                              %! +PARTS
+                                        %%% r4..
+                                              %! +PARTS
+                                        %%% aqf16
+                                              %! +PARTS
+                                        %%% - \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "1. soli" }
+                                              %! +PARTS
+                                        %%% - \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Wenn keine erste Bassklarinette:" }
+                                              %! +PARTS
+                                        %%% - \tweak circled-tip ##t
+                                              %! +PARTS
+                                        %%% \<
+                                              %! +PARTS
+                                        %%% \glissando
+                                              %! +PARTS
+                                        %%% \once \override Dots.staff-position = #2
+                                              %! +PARTS
+                                        %%% \hide NoteHead
+                                              %! +PARTS
+                                        %%% \override Accidental.stencil = ##f
+                                              %! +PARTS
+                                        %%% \override NoteColumn.glissando-skip = ##t
+                                              %! +PARTS
+                                        %%% \override NoteHead.no-ledgers = ##t
+                                              %! +PARTS
+                                        %%% aqf4..
+                                              %! +PARTS
+                                        %%% \revert Accidental.stencil
+                                              %! +PARTS
+                                        %%% \revert NoteColumn.glissando-skip
+                                              %! +PARTS
+                                        %%% \revert NoteHead.no-ledgers
+                                              %! +PARTS
+                                        %%% \undo \hide NoteHead
+                                              %! +PARTS
+                                        %%% aqf16
+                                              %! +PARTS
+                                        %%% \mf
+                                        }
+                                    >>
+                                    \oneVoice
                                 }
                             }
                         }
                     >>
                 }
-                \tag #'voice5
+                \tag #'voice6
                 {
                     \context Staff = "frenchhorn staff"
                     {
@@ -234,7 +308,7 @@
                 {
                     \context SquareBracketGroup = "sub group 2"
                     <<
-                        \tag #'voice6
+                        \tag #'voice7
                         {
                             \context Staff = "trumpet staff"
                             {
@@ -264,9 +338,11 @@
                                     - \bendAfter #'4
                                     \pppp
                                     - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-4 \center-column { \line { Anspannen } } }
+                                    - \tweak padding 8
+                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "1. soli" }
                                     - \tweak padding #8
                                     - \abjad-solid-line-with-hook
-                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { 1., con sordino } \hspace #0.5 }
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { con sordino } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -1
                                     \startTextSpan
                                     \<
@@ -288,7 +364,7 @@
                                 }
                             }
                         }
-                        \tag #'voice7
+                        \tag #'voice8
                         {
                             \context Staff = "tenortrombone staff"
                             {
@@ -321,7 +397,7 @@
                                 }
                             }
                         }
-                        \tag #'voice8
+                        \tag #'voice9
                         {
                             \context Staff = "tuba staff"
                             {
@@ -360,7 +436,7 @@
                 {
                     \context GrandStaff = "sub group 3"
                     <<
-                        \tag #'voice9
+                        \tag #'voice10
                         {
                             \context Staff = "piano 1 staff"
                             {
@@ -393,7 +469,7 @@
                                 }
                             }
                         }
-                        \tag #'voice10
+                        \tag #'voice11
                         {
                             \context Staff = "piano 2 staff"
                             {
@@ -430,7 +506,7 @@
                 {
                     \context GrandStaff = "sub group 4"
                     <<
-                        \tag #'voice11
+                        \tag #'voice12
                         {
                             \context Staff = "harp 1 staff"
                             {
@@ -463,7 +539,7 @@
                                 }
                             }
                         }
-                        \tag #'voice12
+                        \tag #'voice13
                         {
                             \context Staff = "harp 2 staff"
                             {
@@ -496,7 +572,7 @@
                         }
                     >>
                 }
-                \tag #'voice13
+                \tag #'voice14
                 {
                     \context Staff = "percussion 1 staff"
                     {
@@ -517,6 +593,7 @@
                             \stopStaff \startStaff
                             r4.
                             \staff-line-count 1
+                            \revert Staff.Clef.stencil
                             \clef "percussion"
                             c'8
                             :64
@@ -535,13 +612,14 @@
                 {
                     \context SquareBracketGroup = "sub group 5"
                     <<
-                        \tag #'voice14
+                        \tag #'voice15
                         {
                             \context Staff = "percussion 2 staff"
                             {
                                 \context Voice = "percussion 2 voice"
                                 {
                                     \staff-line-count 1
+                                    \revert Staff.Clef.stencil
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
                                       %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
@@ -598,7 +676,7 @@
                                 }
                             }
                         }
-                        \tag #'voice15
+                        \tag #'voice16
                         {
                             \context Staff = "percussion 3 staff"
                             {
@@ -606,6 +684,7 @@
                                 {
                                     \staff-line-count 5
                                     \once \override Staff.Clef.X-extent = ##f \once \override Staff.Clef.extra-offset = #'(-2.25 . 0)
+                                    \revert Staff.Clef.stencil
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 2 }
                                       %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 2 }
@@ -668,7 +747,40 @@
                 {
                     \context SquareBracketGroup = "sub group 6"
                     <<
-                        \tag #'voice16
+                        \tag #'voice17
+                        {
+                            \context divisiStaff = "guitar 1 staff"
+                            {
+                                \context Voice = "guitar 1 voice"
+                                {
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 1 Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 1 Soli }
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/4
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                }
+                            }
+                        }
+                        \tag #'voice18
                         {
                             \context Staff = "violin 1 staff"
                             {
@@ -680,10 +792,12 @@
                                     \pitchedTrill
                                     \tweak style #'harmonic-mixed
                                     b'2.
-                                    ^ \markup \concat { \upright \fraction 9° A }
+                                    - \tweak whiteout 1
+                                    - \tweak whiteout-style #'outline
+                                    ^ \markup { \center-column { \line { "Resultierende Ton:" } \line { \upright \fraction 9° "Saite II" } } }
                                     - \tweak circled-tip ##t
                                     \<
-                                    - \tweak padding #12
+                                    - \tweak padding #13.5
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { MSP } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -2
@@ -740,7 +854,40 @@
                                 }
                             }
                         }
-                        \tag #'voice17
+                        \tag #'voice19
+                        {
+                            \context divisiStaff = "guitar 2 staff"
+                            {
+                                \context Voice = "guitar 2 voice"
+                                {
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 2 Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 2 Soli }
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/4
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                }
+                            }
+                        }
+                        \tag #'voice20
                         {
                             \context Staff = "violin 2 staff"
                             {
@@ -757,11 +904,17 @@
                                         \tweak style #'harmonic-mixed
                                         g''''
                                     >2.
-                                    - \markup \concat { \upright \fraction 6° A }
-                                    ^ \markup \concat { \upright \fraction 7° A }
+                                    - \tweak padding 5
+                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Divisi" }
+                                    - \tweak whiteout 1
+                                    - \tweak whiteout-style #'outline
+                                    - \markup { \center-column { \line { "Resultierende Ton:" } \line { \upright \fraction 6° "Saite II" } } }
+                                    - \tweak whiteout 1
+                                    - \tweak whiteout-style #'outline
+                                    ^ \markup { \center-column { \line { "Resultierende Ton:" } \line { \upright \fraction 7° "Saite II" } } }
                                     - \tweak circled-tip ##t
                                     \<
-                                    - \tweak padding #18.5
+                                    - \tweak padding #22.5
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { MSP } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -2
@@ -843,7 +996,40 @@
                                 }
                             }
                         }
-                        \tag #'voice18
+                        \tag #'voice21
+                        {
+                            \context divisiStaff = "guitar 3 staff"
+                            {
+                                \context Voice = "guitar 3 voice"
+                                {
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratsche Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratsche Soli }
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/4
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                }
+                            }
+                        }
+                        \tag #'voice22
                         {
                             \context Staff = "viola staff"
                             {
@@ -861,11 +1047,17 @@
                                         \tweak style #'harmonic-mixed
                                         a'''
                                     >2.
-                                    - \markup \concat { \upright \fraction 3° A }
-                                    ^ \markup \concat { \upright \fraction 4° A }
+                                    - \tweak padding 5
+                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Divisi" }
+                                    - \tweak whiteout 1
+                                    - \tweak whiteout-style #'outline
+                                    - \markup { \center-column { \line { "Resultierende Ton:" } \line { \upright \fraction 3° "Saite I" } } }
+                                    - \tweak whiteout 1
+                                    - \tweak whiteout-style #'outline
+                                    ^ \markup { \center-column { \line { "Resultierende Ton:" } \line { \upright \fraction 4° "Saite I" } } }
                                     - \tweak circled-tip ##t
                                     \<
-                                    - \tweak padding #16.5
+                                    - \tweak padding #20.5
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { MSP } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -2
@@ -946,7 +1138,40 @@
                                 }
                             }
                         }
-                        \tag #'voice19
+                        \tag #'voice23
+                        {
+                            \context divisiStaff = "guitar 4 staff"
+                            {
+                                \context Voice = "guitar 4 voice"
+                                {
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncello Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncello Soli }
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/4
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                }
+                            }
+                        }
+                        \tag #'voice24
                         {
                             \context Staff = "cello staff"
                             {
@@ -1019,7 +1244,7 @@
                                 }
                             }
                         }
-                        \tag #'voice20
+                        \tag #'voice25
                         {
                             \context Staff = "contrabass staff"
                             {

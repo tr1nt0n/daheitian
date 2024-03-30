@@ -200,6 +200,20 @@ trinton.make_music(
             "cs'",
         ]
     ),
+    trinton.hooked_spanner_command(
+        string=library.return_boxed_markup(string="Beide Luftklang"),
+        full_string=True,
+        padding=12,
+        style="solid-line-with-hook",
+        selector=trinton.select_logical_ties_by_index(
+            [-5, -1], first=True, grace=False, pitched=True
+        ),
+        right_padding=1.5,
+    ),
+    trinton.change_notehead_command(
+        notehead="la",
+        selector=trinton.select_leaves_by_index([-8, -7, -6, -5, -4, -3, -2, -1]),
+    ),
     voice=score["flute voice"],
     beam_meter=True,
     preprocessor=trinton.fuse_sixteenths_preprocessor((21, 100)),
@@ -281,6 +295,9 @@ trinton.make_music(
             pitched=True,
         ),
     ),
+    trinton.change_notehead_command(
+        notehead="la", selector=trinton.pleaves(exclude=[0, 1, 4], grace=True)
+    ),
     voice=score["flute voice"],
 )
 
@@ -318,6 +335,14 @@ for measure in [2, 6]:
         voice=score["flute voice"],
     )
 
+trinton.make_music(
+    lambda _: trinton.select_target(_, (9, 10)),
+    trinton.change_notehead_command(
+        notehead="la", selector=trinton.pleaves(exclude=[0])
+    ),
+    voice=score["flute div voice"],
+)
+
 # oboe music commands
 
 trinton.make_music(
@@ -347,16 +372,22 @@ trinton.make_music(
     trinton.linear_attachment_command(
         attachments=[
             abjad.StartHairpin("o<"),
+            abjad.BreathMark(),
             abjad.Dynamic("p"),
             abjad.StartHairpin(">o"),
         ],
         selector=trinton.select_leaves_by_index(
             [
                 0,
+                0,
                 1,
                 1,
             ]
         ),
+    ),
+    library.boxed_markup(
+        string="( Anhalten des Klangs zum Atmen, wenn nötig )",
+        selector=trinton.select_leaves_by_index([-1]),
     ),
     trinton.noteheads_only(selector=trinton.select_leaves_by_index([-1])),
     voice=score["oboe voice"],
@@ -1243,6 +1274,7 @@ for voice_name in [
             selector=trinton.select_leaves_by_index([0, -1], pitched=True),
             right_padding=2,
         ),
+        library.tutti(padding=0.5),
         voice=score[voice_name],
     )
 
@@ -1295,6 +1327,7 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=2,
     ),
+    library.tutti(padding=0.5),
     voice=score["viola voice"],
     beam_meter=True,
 )
@@ -1306,6 +1339,7 @@ trinton.make_music(
     library.boxed_markup(
         string="DP, Kratzen",
     ),
+    library.tutti(padding=0),
     voice=score["cello voice"],
 )
 

@@ -44,17 +44,10 @@ trinton.make_music(
             "df'",
         ]
     ),
-    trinton.glissando_command(
-        selector=trinton.ranged_selector(
-            ranges=[
-                range(1, 8),
-            ],
-            nested=True,
-        )
-    ),
+    trinton.continuous_glissando(),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="1., MST",
+            string="MST",
         ),
         full_string=True,
         padding=9,
@@ -70,10 +63,10 @@ trinton.make_music(
             abjad.StartHairpin("<"),
             abjad.Dynamic("f"),
         ],
-        selector=trinton.select_leaves_by_index([0, 0, 5, 5, -1], pitched=True),
+        selector=trinton.select_leaves_by_index([0, 0, 4, 4, -1], pitched=True),
     ),
     trinton.notehead_bracket_command(),
-    voice=score["violin 1 voice"],
+    voice=score["guitar 1 voice"],
     preprocessor=trinton.fuse_quarters_preprocessor((1,)),
 )
 
@@ -108,27 +101,9 @@ trinton.make_music(
             "a",
         ]
     ),
-    trinton.glissando_command(
-        selector=trinton.ranged_selector(
-            ranges=[
-                range(1, 5),
-                range(4, 7),
-            ],
-            nested=True,
-        )
-    ),
-    trinton.glissando_command(
-        selector=trinton.ranged_selector(
-            ranges=[
-                range(6, 12),
-            ],
-            nested=True,
-        ),
-        no_ties=True,
-    ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="1., MST",
+            string="MST",
         ),
         full_string=True,
         padding=4,
@@ -145,11 +120,17 @@ trinton.make_music(
             abjad.Dynamic("f"),
         ],
         selector=trinton.select_logical_ties_by_index(
-            [0, 0, 4, 4, -1], pitched=True, first=True
+            [0, 0, 3, 3, -1], pitched=True, first=True
         ),
     ),
+    trinton.continuous_glissando(
+        selector=trinton.logical_ties(exclude=[-4, -3, -2, -1])
+    ),
+    trinton.glissando_command(
+        selector=trinton.ranged_selector(ranges=[range(4, 9)], nested=True)
+    ),
     trinton.notehead_bracket_command(),
-    voice=score["violin 2 voice"],
+    voice=score["guitar 2 voice"],
 )
 
 # viola music commands
@@ -182,18 +163,9 @@ trinton.make_music(
             "aqf",
         ]
     ),
-    trinton.glissando_command(
-        selector=trinton.ranged_selector(
-            ranges=[
-                range(2, 5),
-                range(4, 9),
-            ],
-            nested=True,
-        )
-    ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="1., MST",
+            string="MST",
         ),
         full_string=True,
         padding=10,
@@ -204,7 +176,6 @@ trinton.make_music(
     trinton.linear_attachment_command(
         attachments=[
             abjad.Clef("altovarC"),
-            abjad.Glissando(),
             abjad.Dynamic("p"),
             abjad.StartHairpin("<"),
             abjad.Tie(),
@@ -212,12 +183,16 @@ trinton.make_music(
             abjad.StartHairpin("<"),
             abjad.Dynamic("f"),
         ],
-        selector=trinton.select_leaves_by_index(
-            [0, 0, 0, 0, 1, 4, 4, -1], pitched=True
-        ),
+        selector=trinton.select_leaves_by_index([0, 0, 0, 1, 4, 4, -1], pitched=True),
+    ),
+    trinton.continuous_glissando(
+        selector=trinton.logical_ties(exclude=[-1, -2, -3, -4])
+    ),
+    trinton.glissando_command(
+        selector=trinton.ranged_selector(ranges=[range(4, 9)], nested=True)
     ),
     trinton.notehead_bracket_command(),
-    voice=score["viola voice"],
+    voice=score["guitar 3 voice"],
     preprocessor=trinton.fuse_eighths_preprocessor((1, 6, 5, 6)),
 )
 
@@ -243,12 +218,9 @@ trinton.make_music(
             "af",
         ]
     ),
-    trinton.glissando_command(
-        selector=trinton.ranged_selector(ranges=[range(0, 5)], nested=True)
-    ),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="1., MST",
+            string="MST",
         ),
         full_string=True,
         padding=7,
@@ -267,7 +239,10 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, 0, 0, 1, 1, -1]),
     ),
-    voice=score["cello voice"],
+    trinton.glissando_command(
+        selector=trinton.ranged_selector(ranges=[range(0, 5)], nested=True)
+    ),
+    voice=score["guitar 4 voice"],
 )
 
 # contrabass music commands
@@ -298,11 +273,10 @@ trinton.make_music(
             abjad.Dynamic("p"),
             abjad.StartHairpin("<"),
             abjad.Dynamic("mp"),
-            abjad.Glissando(),
             abjad.StartHairpin("<"),
             abjad.Dynamic("f"),
         ],
-        selector=trinton.select_leaves_by_index([0, 0, 2, 2, 2, -1]),
+        selector=trinton.select_leaves_by_index([0, 0, 2, 2, -1]),
     ),
     trinton.spanner_command(
         strings=[
@@ -324,7 +298,9 @@ trinton.make_music(
         end_hook=True,
         end_hook_style="solid-line-with-hook",
     ),
-    trinton.notehead_bracket_command(),
+    trinton.glissando_command(
+        selector=trinton.ranged_selector(ranges=[range(2, 4)], nested=True)
+    ),
     voice=score["contrabass voice"],
     preprocessor=trinton.fuse_preprocessor((2,)),
 )

@@ -403,22 +403,31 @@
                                             :64
                                             [
                                             \revert Staff.Stem.stemlet-length
+                                            \tweak style #'la
                                             ds'8
                                             :64
                                             ]
+                                            - \tweak padding #12
+                                            - \abjad-solid-line-with-hook
+                                            - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Beide Luftklang } \hspace #0.5 }
+                                            - \tweak bound-details.right.padding -1.5
+                                            \startTextSpan
                                             ~
                                             \override Staff.Stem.stemlet-length = 0.75
+                                            \tweak style #'la
                                             ds'16
                                             :128
                                             [
                                               %! +SCORE
                                             \repeatTie
                                             \revert Staff.Stem.stemlet-length
+                                            \tweak style #'la
                                             cs'8.
                                             :64
                                             ]
                                             ~
                                             \override Staff.Stem.stemlet-length = 0.75
+                                            \tweak style #'la
                                             cs'16
                                             :128
                                             [
@@ -426,6 +435,7 @@
                                             \repeatTie
                                             \scaleDurations #'(1 . 1) {
                                             \slashedGrace {
+                                                \tweak style #'la
                                                 e'16
                                                 :128
                                                 - \accent
@@ -433,14 +443,17 @@
                                             }
                                             }
                                             \revert Staff.Stem.stemlet-length
+                                            \tweak style #'la
                                             ds'8.
                                             :64
                                             )
                                             ]
+                                            \tweak style #'la
                                             cs'4
                                             :32
                                             ~
                                             \override Staff.Stem.stemlet-length = 0.75
+                                            \tweak style #'la
                                             cs'16
                                             :128
                                             [
@@ -448,6 +461,7 @@
                                             \repeatTie
                                             \scaleDurations #'(1 . 1) {
                                             \slashedGrace {
+                                                \tweak style #'la
                                                 e'16
                                                 :128
                                                 - \accent
@@ -455,9 +469,11 @@
                                             }
                                             }
                                             \revert Staff.Stem.stemlet-length
+                                            \tweak style #'la
                                             ds'8.
                                             :64
                                             )
+                                            \stopTextSpan
                                             ]
                                         }
                                         \context Voice = "flute div voice"
@@ -551,16 +567,19 @@
                                               %! +SCORE
                                             \once \override Tie.transparent = ##f
                                             \revert Staff.Stem.stemlet-length
+                                            \tweak style #'la
                                             f'16
                                             :128
                                             :128
                                             ]
                                             ~
+                                            \tweak style #'la
                                             f'4
                                             :32
                                             :32
                                             ~
                                             \override Staff.Stem.stemlet-length = 0.75
+                                            \tweak style #'la
                                             f'8.
                                             :64
                                             :64
@@ -571,6 +590,7 @@
                                             \repeatTie
                                             \scaleDurations #'(1 . 1) {
                                             \slashedGrace {
+                                                \tweak style #'la
                                                 af'16
                                                 :128
                                                 :128
@@ -584,24 +604,28 @@
                                               %! +SCORE
                                             \once \override Tie.transparent = ##f
                                             \revert Staff.Stem.stemlet-length
+                                            \tweak style #'la
                                             g'16
                                             :128
                                             :128
                                             ]
                                             ~
                                             \override Staff.Stem.stemlet-length = 0.75
+                                            \tweak style #'la
                                             g'8
                                             :64
                                             :64
                                             )
                                             [
                                             \revert Staff.Stem.stemlet-length
+                                            \tweak style #'la
                                             f'8
                                             :64
                                             :64
                                             ]
                                             ~
                                             \override Staff.Stem.stemlet-length = 0.75
+                                            \tweak style #'la
                                             f'16
                                             :128
                                             :128
@@ -610,6 +634,7 @@
                                             \repeatTie
                                             \scaleDurations #'(1 . 1) {
                                             \slashedGrace {
+                                                \tweak style #'la
                                                 af'16
                                                 :128
                                                 - \accent
@@ -617,6 +642,7 @@
                                             }
                                             }
                                             \revert Staff.Stem.stemlet-length
+                                            \tweak style #'la
                                             g'8.
                                             :64
                                             :64
@@ -799,6 +825,7 @@
                                     <aqf''' bf'''>2.
                                     - \tweak circled-tip ##t
                                     \<
+                                    \breathe
                                     \once \override Beam.stencil = ##f
                                     \once \override Dots.stencil = ##f
                                     \once \override Flag.stencil = ##f
@@ -810,6 +837,7 @@
                                     - \tweak circled-tip ##t
                                     \>
                                     \-
+                                    \boxed-markup "( Anhalten des Klangs zum Atmen, wenn nötig )" 1
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
@@ -3743,6 +3771,8 @@
                                     <d' f'>16
                                     - \marcato
                                     \ff
+                                    - \tweak padding 0.5
+                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Tutti" }
                                     - \tweak padding #8
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { DP, Kratzen } \hspace #0.5 }
@@ -4036,6 +4066,8 @@
                                     <d' f'>16
                                     - \marcato
                                     \ff
+                                    - \tweak padding 0.5
+                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Tutti" }
                                     - \tweak padding #8
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { DP, Kratzen } \hspace #0.5 }
@@ -4329,6 +4361,8 @@
                                     \revert Staff.Clef.stencil
                                     \clef "percussion"
                                     <d' f'>8.
+                                    - \tweak padding 0.5
+                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Tutti" }
                                     - \tweak circled-tip ##t
                                     - \tweak stencil #abjad-flared-hairpin
                                     \<
@@ -4653,6 +4687,8 @@
                                     <d' f'>16
                                     - \marcato
                                     \ff
+                                    - \tweak padding 0
+                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Tutti" }
                                     \boxed-markup "DP, Kratzen" 1
                                     r16
                                     r4

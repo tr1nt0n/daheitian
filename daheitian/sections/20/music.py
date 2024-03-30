@@ -15,20 +15,6 @@ score = library.daheitian_score(ts.section_20_ts)
 
 # commands
 
-# oboe music commands
-
-trinton.make_music(
-    lambda _: trinton.select_target(_, (1,)),
-    library.aftergrace(selector=trinton.select_leaves_by_index([-1])),
-    trinton.noteheads_only(),
-    trinton.transparent_noteheads(selector=trinton.pleaves()),
-    library.boxed_markup(
-        string="( zu Cor Anglais )",
-        selector=trinton.select_leaves_by_index([-1]),
-    ),
-    voice=score["oboe voice"],
-)
-
 # bass clarinet music commands
 
 trinton.make_music(
@@ -63,6 +49,53 @@ trinton.make_music(
     voice=score["bassclarinet divisi voice"],
 )
 
+# bassoon music
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (2,)),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.LilyPondLiteral(
+                r"\override Staff.MultiMeasureRest.transparent = ##t", site="before"
+            ),
+            abjad.LilyPondLiteral(
+                r"\revert Staff.MultiMeasureRest.transparent", site="absolute_after"
+            ),
+        ],
+        selector=trinton.select_leaves_by_index([0, -1]),
+        tag=abjad.Tag("+PARTS"),
+    ),
+    trinton.IntermittentVoiceHandler(
+        evans.RhythmHandler(evans.talea([-7, 8, 1], 16)),
+        direction=abjad.DOWN,
+        voice_name="bassoon intermittent voice 1",
+        from_components=False,
+        temp_name="temp",
+    ),
+    voice=score["bassoon voice"],
+),
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (2,)),
+    evans.PitchHandler(["aqf"]),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    trinton.glissando_command(
+        selector=trinton.ranged_selector(ranges=[range(1, 4)], nested=True),
+        no_ties=True,
+    ),
+    trinton.linear_attachment_command(
+        attachments=[abjad.StartHairpin("o<"), abjad.Dynamic("mf")],
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+    ),
+    trinton.attachment_command(
+        attachments=[abjad.Clef("bass")], selector=trinton.select_leaves_by_index([0])
+    ),
+    library.wenn_keine_bk(),
+    library.soli_1(padding=3),
+    library.cue_eraser(),
+    voice=score["bassoon intermittent voice 1"],
+)
+
 # trumpet music commands
 
 trinton.make_music(
@@ -88,9 +121,10 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, 0, 0, 0, -1], pitched=True),
     ),
+    library.soli_1(padding=8),
     trinton.hooked_spanner_command(
         string=library.return_boxed_markup(
-            string="1., con sordino",
+            string="con sordino",
         ),
         full_string=True,
         padding=8,
@@ -264,7 +298,7 @@ trinton.make_music(
             string="MSP",
         ),
         full_string=True,
-        padding=12,
+        padding=13.5,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=2,
@@ -344,11 +378,12 @@ trinton.make_music(
             string="MSP",
         ),
         full_string=True,
-        padding=18.5,
+        padding=22.5,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1]),
         right_padding=2,
     ),
+    library.div(),
     trinton.ottava_command(selector=trinton.select_leaves_by_index([0, -1])),
     voice=score["violin 2 voice"],
     beam_meter=True,
@@ -429,11 +464,12 @@ trinton.make_music(
             string="MSP",
         ),
         full_string=True,
-        padding=16.5,
+        padding=20.5,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1]),
         right_padding=2,
     ),
+    library.div(),
     voice=score["viola voice"],
     beam_meter=True,
 )
