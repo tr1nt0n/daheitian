@@ -3074,6 +3074,7 @@
                                     \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
                                       %! +SCORE
                                     \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
+                                    \clef "treble"
                                     <a''' bf''' ds'''' e'''' fs''''>4..
                                     :32
                                     - \espressivo

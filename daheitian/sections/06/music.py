@@ -434,6 +434,97 @@ trinton.make_music(
     voice=score["Global Context"],
 )
 
+# cues
+
+for voice_name in [
+    "oboe voice",
+    "percussion 1 voice",
+    "violin 1 voice",
+    "violin 2 voice",
+    "viola voice",
+    "cello voice",
+    "contrabass voice",
+]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (4, 5)),
+        trinton.attachment_command(
+            attachments=[
+                abjad.LilyPondLiteral(
+                    r"\override Staff.MultiMeasureRest.transparent = ##t", site="before"
+                ),
+                abjad.LilyPondLiteral(
+                    r"\revert Staff.MultiMeasureRest.transparent", site="absolute_after"
+                ),
+            ],
+            selector=trinton.select_leaves_by_index(
+                [
+                    0,
+                ]
+            ),
+            tag=abjad.Tag("+PARTS"),
+        ),
+        trinton.IntermittentVoiceHandler(
+            rhythm_handler=evans.RhythmHandler(
+                evans.talea(
+                    [-4, 2, 2, 1, -1],
+                    8,
+                )
+            ),
+            direction=abjad.UP,
+            voice_name=f"{voice_name} cue",
+            from_components=False,
+            temp_name="secondary",
+        ),
+        voice=score[voice_name],
+    )
+
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (4, 5)),
+        evans.PitchHandler(library.piano_chords(hand="rh", index=0)),
+        library.handle_clefs(),
+        library.change_lines(lines=5, clef="bass"),
+        trinton.ottava_command(
+            selector=trinton.select_leaves_by_index(
+                [
+                    -1,
+                    -1,
+                ],
+                pitched=True,
+            )
+        ),
+        trinton.linear_attachment_command(
+            attachments=[
+                abjad.StartSlur(),
+                abjad.StopSlur(),
+            ],
+            selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+        ),
+        trinton.linear_attachment_command(
+            attachments=[
+                abjad.Dynamic("ppp"),
+                abjad.Dynamic("p"),
+                abjad.Dynamic("pp"),
+            ],
+            selector=trinton.select_leaves_by_index(
+                [
+                    0,
+                    1,
+                    -1,
+                ],
+                pitched=True,
+            ),
+        ),
+        library.einsatz(
+            following_text="Klavier RH",
+            selector=trinton.pleaves(),
+            direction=abjad.UP,
+            tweaks=None,
+            padding=0,
+        ),
+        library.cue_eraser(),
+        voice=score[f"{voice_name} cue"],
+    )
+
 # cutaway
 
 trinton.whiteout_empty_staves(score=score, cutaway="blank")

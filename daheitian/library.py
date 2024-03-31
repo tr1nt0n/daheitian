@@ -262,7 +262,7 @@ post_ghost_metronome = abjad.LilyPondLiteral(
 post_ghost_metronome_parts = abjad.LilyPondLiteral(
     [
         r"^ \markup {",
-        r"  \raise #23 \with-dimensions-from \null",
+        r"  \raise #5 \with-dimensions-from \null",
         r"  \override #'(font-size . 5.5)",
         r"  \concat {",
         f"      {library.metronome_marks['48'].string[8:]}",
@@ -1764,184 +1764,204 @@ def return_milestone_markup(measure_pair, tweaks=None):
     return markup
 
 
+#
+#
+# def cue_eraser():
+#     def erase(argument):
+#         components = abjad.select.components(argument)
+#         for component in components:
+#             if isinstance(component, abjad.Tuplet):
+#                 tuplet = component
+#                 tuplet_duration = abjad.get.duration(tuplet)
+#                 tuplet_multiplier = tuplet.multiplier
+#                 tuplet_indicators = abjad.get.indicators(tuplet)
+#                 tuplet_leaves = abjad.select.leaves(tuplet)
+#                 new_tuplet = abjad.Tuplet(tuplet_multiplier, tag=abjad.Tag("+PARTS"))
+#                 for leaf in tuplet_leaves:
+#                     if isinstance(leaf, abjad.Note):
+#                         note_duration = abjad.get.duration(leaf, preprolated=True)
+#                         note_pitch = leaf.written_pitch
+#                         note_indicators = abjad.get.indicators(leaf)
+#                         new_note = abjad.Note(tag=abjad.Tag("+PARTS"))
+#                         new_note.written_pitch = note_pitch
+#                         new_note.written_duration = note_duration
+#
+#                         next_leaf = abjad.select.with_next_leaf(leaf)[-1]
+#                         previous_leaf = abjad.select.with_previous_leaf(leaf)[0]
+#
+#                         if isinstance(
+#                             abjad.get.parentage(next_leaf).parent,
+#                             abjad.AfterGraceContainer,
+#                         ):
+#                             grace_duration = abjad.get.duration(
+#                                 next_leaf, preprolated=True
+#                             )
+#                             grace_pitch = next_leaf.written_pitch
+#                             grace_indicators = abjad.get.indicators(next_leaf)
+#                             new_grace = abjad.Note(tag=abjad.Tag("+PARTS"))
+#                             new_grace.written_pitch = grace_pitch
+#                             new_grace.written_duration = grace_duration
+#                             for indicator in grace_indicators:
+#                                 abjad.attach(
+#                                     indicator, new_grace, tag=abjad.Tag("+PARTS")
+#                                 )
+#                             new_container = abjad.AfterGraceContainer(
+#                                 [new_grace], tag=abjad.Tag("+PARTS")
+#                             )
+#                             new_container_indicators = abjad.get.indicators(
+#                                 new_container
+#                             )
+#                             for indicator in new_container_indicators:
+#                                 abjad.detach(indicator, new_container)
+#                                 abjad.attach(
+#                                     indicator, new_container, tag=abjad.Tag("+PARTS")
+#                                 )
+#                             abjad.attach(
+#                                 new_container, new_note, tag=abjad.Tag("+PARTS")
+#                             )
+#                         if isinstance(
+#                             abjad.get.parentage(previous_leaf).parent,
+#                             abjad.BeforeGraceContainer,
+#                         ):
+#                             grace_duration = abjad.get.duration(
+#                                 previous_leaf, preprolated=True
+#                             )
+#                             grace_pitch = previous_leaf.written_pitch
+#                             grace_indicators = abjad.get.indicators(previous_leaf)
+#                             new_grace = abjad.Note(tag=abjad.Tag("+PARTS"))
+#                             new_grace.written_pitch = grace_pitch
+#                             new_grace.written_duration = grace_duration
+#                             for indicator in grace_indicators:
+#                                 abjad.attach(
+#                                     indicator, new_grace, tag=abjad.Tag("+PARTS")
+#                                 )
+#                             new_container = abjad.BeforeGraceContainer(
+#                                 [new_grace], tag=abjad.Tag("+PARTS")
+#                             )
+#                             new_container_indicators = abjad.get.indicators(
+#                                 new_container
+#                             )
+#                             for indicator in new_container_indicators:
+#                                 abjad.detach(indicator, new_container)
+#                                 abjad.attach(
+#                                     indicator, new_container, tag=abjad.Tag("+PARTS")
+#                                 )
+#                             abjad.attach(
+#                                 new_container, new_note, tag=abjad.Tag("+PARTS")
+#                             )
+#
+#                         for indicator in note_indicators:
+#                             abjad.attach(indicator, new_note, tag=abjad.Tag("+PARTS"))
+#                         new_tuplet.append(new_note)
+#
+#                     if isinstance(leaf, abjad.Rest):
+#                         rest_duration = abjad.get.duration(leaf)
+#                         rest_indicators = abjad.get.indicators(leaf)
+#                         new_rest = abjad.Rest(rest_duration, tag=abjad.Tag("+PARTS"))
+#                         for indicator in rest_indicators:
+#                             abjad.attach(indicator, new_rest, tag=abjad.Tag("+PARTS"))
+#                         new_tuplet.append(new_rest)
+#
+#                 for indicator in tuplet_indicators:
+#                     abjad.attach(indicator, new_tuplet, tag=abjad.Tag("+PARTS"))
+#                 abjad.mutate.replace(tuplet, new_tuplet)
+#
+#             if (
+#                 isinstance(component, abjad.Note)
+#                 and not isinstance(abjad.get.parentage(component).parent, abjad.Tuplet)
+#                 and not isinstance(
+#                     abjad.get.parentage(component).parent, abjad.AfterGraceContainer
+#                 )
+#                 and not isinstance(
+#                     abjad.get.parentage(component).parent, abjad.BeforeGraceContainer
+#                 )
+#                 and abjad.get.parentage(component).parent is not None
+#             ):
+#                 leaf = component
+#                 note_duration = abjad.get.duration(leaf)
+#                 note_pitch = leaf.written_pitch
+#                 note_indicators = abjad.get.indicators(leaf)
+#                 new_note = abjad.Note(tag=abjad.Tag("+PARTS"))
+#                 new_note.written_pitch = note_pitch
+#                 new_note.written_duration = note_duration
+#
+#                 next_leaf = abjad.select.with_next_leaf(leaf)[-1]
+#                 previous_leaf = abjad.select.with_previous_leaf(leaf)[0]
+#
+#                 if isinstance(
+#                     abjad.get.parentage(next_leaf).parent, abjad.AfterGraceContainer
+#                 ):
+#                     grace_duration = abjad.get.duration(next_leaf, preprolated=True)
+#                     grace_pitch = next_leaf.written_pitch
+#                     grace_indicators = abjad.get.indicators(next_leaf)
+#                     new_grace = abjad.Note(tag=abjad.Tag("+PARTS"))
+#                     new_grace.written_pitch = grace_pitch
+#                     new_grace.written_duration = grace_duration
+#                     for indicator in grace_indicators:
+#                         abjad.attach(indicator, new_grace, tag=abjad.Tag("+PARTS"))
+#                     new_container = abjad.AfterGraceContainer(
+#                         [new_grace], tag=abjad.Tag("+PARTS")
+#                     )
+#                     new_container_indicators = abjad.get.indicators(new_container)
+#                     for indicator in new_container_indicators:
+#                         abjad.detach(indicator, new_container)
+#                         abjad.attach(indicator, new_container, tag=abjad.Tag("+PARTS"))
+#                     abjad.attach(new_container, new_note, tag=abjad.Tag("+PARTS"))
+#                 if isinstance(
+#                     abjad.get.parentage(previous_leaf).parent,
+#                     abjad.BeforeGraceContainer,
+#                 ):
+#                     grace_duration = abjad.get.duration(previous_leaf, preprolated=True)
+#                     grace_pitch = previous_leaf.written_pitch
+#                     grace_indicators = abjad.get.indicators(previous_leaf)
+#                     new_grace = abjad.Note(tag=abjad.Tag("+PARTS"))
+#                     new_grace.written_pitch = grace_pitch
+#                     new_grace.written_duration = grace_duration
+#                     for indicator in grace_indicators:
+#                         abjad.attach(indicator, new_grace, tag=abjad.Tag("+PARTS"))
+#                     new_container = abjad.BeforeGraceContainer(
+#                         [new_grace], tag=abjad.Tag("+PARTS")
+#                     )
+#                     new_container_indicators = abjad.get.indicators(new_container)
+#                     for indicator in new_container_indicators:
+#                         abjad.detach(indicator, new_container)
+#                         abjad.attach(indicator, new_container, tag=abjad.Tag("+PARTS"))
+#                     abjad.attach(new_container, new_note, tag=abjad.Tag("+PARTS"))
+#
+#                 for indicator in note_indicators:
+#                     abjad.attach(indicator, new_note, tag=abjad.Tag("+PARTS"))
+#                 abjad.mutate.replace(leaf, new_note)
+#
+#             if isinstance(component, abjad.Rest) and not isinstance(
+#                 abjad.get.parentage(component).parent, abjad.Tuplet
+#             ):
+#                 leaf = component
+#                 rest_duration = abjad.get.duration(leaf)
+#                 rest_indicators = abjad.get.indicators(leaf)
+#                 new_rest = abjad.Rest(rest_duration, tag=abjad.Tag("+PARTS"))
+#                 for indicator in rest_indicators:
+#                     abjad.attach(indicator, new_rest, tag=abjad.Tag("+PARTS"))
+#                 abjad.mutate.replace(leaf, new_rest)
+#
+#     return erase
+
+
 def cue_eraser():
-    def erase(argument):
-        components = abjad.select.components(argument)
-        for component in components:
-            if isinstance(component, abjad.Tuplet):
-                tuplet = component
-                tuplet_duration = abjad.get.duration(tuplet)
-                tuplet_multiplier = tuplet.multiplier
-                tuplet_indicators = abjad.get.indicators(tuplet)
-                tuplet_leaves = abjad.select.leaves(tuplet)
-                new_tuplet = abjad.Tuplet(tuplet_multiplier, tag=abjad.Tag("+PARTS"))
-                for leaf in tuplet_leaves:
-                    if isinstance(leaf, abjad.Note):
-                        note_duration = abjad.get.duration(leaf, preprolated=True)
-                        note_pitch = leaf.written_pitch
-                        note_indicators = abjad.get.indicators(leaf)
-                        new_note = abjad.Note(tag=abjad.Tag("+PARTS"))
-                        new_note.written_pitch = note_pitch
-                        new_note.written_duration = note_duration
+    def extract(argument):
+        print("Extracting cues ...")
+        lily_tag = r"\tag #'einsatz"
+        tag_literal = abjad.LilyPondLiteral(lily_tag, site="before")
+        container = abjad.Container()
+        abjad.attach(tag_literal, container)
+        score = abjad.get.parentage(abjad.select.components(argument)[0]).root
+        voice_name = abjad.get.parentage(
+            abjad.select.components(argument)[0]
+        ).logical_voice()["voice"]
+        voice_name = voice_name[7:-1]
 
-                        next_leaf = abjad.select.with_next_leaf(leaf)[-1]
-                        previous_leaf = abjad.select.with_previous_leaf(leaf)[0]
+        abjad.mutate.wrap(score[voice_name], container)
 
-                        if isinstance(
-                            abjad.get.parentage(next_leaf).parent,
-                            abjad.AfterGraceContainer,
-                        ):
-                            grace_duration = abjad.get.duration(
-                                next_leaf, preprolated=True
-                            )
-                            grace_pitch = next_leaf.written_pitch
-                            grace_indicators = abjad.get.indicators(next_leaf)
-                            new_grace = abjad.Note(tag=abjad.Tag("+PARTS"))
-                            new_grace.written_pitch = grace_pitch
-                            new_grace.written_duration = grace_duration
-                            for indicator in grace_indicators:
-                                abjad.attach(
-                                    indicator, new_grace, tag=abjad.Tag("+PARTS")
-                                )
-                            new_container = abjad.AfterGraceContainer(
-                                [new_grace], tag=abjad.Tag("+PARTS")
-                            )
-                            new_container_indicators = abjad.get.indicators(
-                                new_container
-                            )
-                            for indicator in new_container_indicators:
-                                abjad.detach(indicator, new_container)
-                                abjad.attach(
-                                    indicator, new_container, tag=abjad.Tag("+PARTS")
-                                )
-                            abjad.attach(
-                                new_container, new_note, tag=abjad.Tag("+PARTS")
-                            )
-                        if isinstance(
-                            abjad.get.parentage(previous_leaf).parent,
-                            abjad.BeforeGraceContainer,
-                        ):
-                            grace_duration = abjad.get.duration(
-                                previous_leaf, preprolated=True
-                            )
-                            grace_pitch = previous_leaf.written_pitch
-                            grace_indicators = abjad.get.indicators(previous_leaf)
-                            new_grace = abjad.Note(tag=abjad.Tag("+PARTS"))
-                            new_grace.written_pitch = grace_pitch
-                            new_grace.written_duration = grace_duration
-                            for indicator in grace_indicators:
-                                abjad.attach(
-                                    indicator, new_grace, tag=abjad.Tag("+PARTS")
-                                )
-                            new_container = abjad.BeforeGraceContainer(
-                                [new_grace], tag=abjad.Tag("+PARTS")
-                            )
-                            new_container_indicators = abjad.get.indicators(
-                                new_container
-                            )
-                            for indicator in new_container_indicators:
-                                abjad.detach(indicator, new_container)
-                                abjad.attach(
-                                    indicator, new_container, tag=abjad.Tag("+PARTS")
-                                )
-                            abjad.attach(
-                                new_container, new_note, tag=abjad.Tag("+PARTS")
-                            )
-
-                        for indicator in note_indicators:
-                            abjad.attach(indicator, new_note, tag=abjad.Tag("+PARTS"))
-                        new_tuplet.append(new_note)
-
-                    if isinstance(leaf, abjad.Rest):
-                        rest_duration = abjad.get.duration(leaf)
-                        rest_indicators = abjad.get.indicators(leaf)
-                        new_rest = abjad.Rest(rest_duration, tag=abjad.Tag("+PARTS"))
-                        for indicator in rest_indicators:
-                            abjad.attach(indicator, new_rest, tag=abjad.Tag("+PARTS"))
-                        new_tuplet.append(new_rest)
-
-                for indicator in tuplet_indicators:
-                    abjad.attach(indicator, new_tuplet, tag=abjad.Tag("+PARTS"))
-                abjad.mutate.replace(tuplet, new_tuplet)
-
-            if (
-                isinstance(component, abjad.Note)
-                and not isinstance(abjad.get.parentage(component).parent, abjad.Tuplet)
-                and not isinstance(
-                    abjad.get.parentage(component).parent, abjad.AfterGraceContainer
-                )
-                and not isinstance(
-                    abjad.get.parentage(component).parent, abjad.BeforeGraceContainer
-                )
-                and abjad.get.parentage(component).parent is not None
-            ):
-                leaf = component
-                note_duration = abjad.get.duration(leaf)
-                note_pitch = leaf.written_pitch
-                note_indicators = abjad.get.indicators(leaf)
-                new_note = abjad.Note(tag=abjad.Tag("+PARTS"))
-                new_note.written_pitch = note_pitch
-                new_note.written_duration = note_duration
-
-                next_leaf = abjad.select.with_next_leaf(leaf)[-1]
-                previous_leaf = abjad.select.with_previous_leaf(leaf)[0]
-
-                if isinstance(
-                    abjad.get.parentage(next_leaf).parent, abjad.AfterGraceContainer
-                ):
-                    grace_duration = abjad.get.duration(next_leaf, preprolated=True)
-                    grace_pitch = next_leaf.written_pitch
-                    grace_indicators = abjad.get.indicators(next_leaf)
-                    new_grace = abjad.Note(tag=abjad.Tag("+PARTS"))
-                    new_grace.written_pitch = grace_pitch
-                    new_grace.written_duration = grace_duration
-                    for indicator in grace_indicators:
-                        abjad.attach(indicator, new_grace, tag=abjad.Tag("+PARTS"))
-                    new_container = abjad.AfterGraceContainer(
-                        [new_grace], tag=abjad.Tag("+PARTS")
-                    )
-                    new_container_indicators = abjad.get.indicators(new_container)
-                    for indicator in new_container_indicators:
-                        abjad.detach(indicator, new_container)
-                        abjad.attach(indicator, new_container, tag=abjad.Tag("+PARTS"))
-                    abjad.attach(new_container, new_note, tag=abjad.Tag("+PARTS"))
-                if isinstance(
-                    abjad.get.parentage(previous_leaf).parent,
-                    abjad.BeforeGraceContainer,
-                ):
-                    grace_duration = abjad.get.duration(previous_leaf, preprolated=True)
-                    grace_pitch = previous_leaf.written_pitch
-                    grace_indicators = abjad.get.indicators(previous_leaf)
-                    new_grace = abjad.Note(tag=abjad.Tag("+PARTS"))
-                    new_grace.written_pitch = grace_pitch
-                    new_grace.written_duration = grace_duration
-                    for indicator in grace_indicators:
-                        abjad.attach(indicator, new_grace, tag=abjad.Tag("+PARTS"))
-                    new_container = abjad.BeforeGraceContainer(
-                        [new_grace], tag=abjad.Tag("+PARTS")
-                    )
-                    new_container_indicators = abjad.get.indicators(new_container)
-                    for indicator in new_container_indicators:
-                        abjad.detach(indicator, new_container)
-                        abjad.attach(indicator, new_container, tag=abjad.Tag("+PARTS"))
-                    abjad.attach(new_container, new_note, tag=abjad.Tag("+PARTS"))
-
-                for indicator in note_indicators:
-                    abjad.attach(indicator, new_note, tag=abjad.Tag("+PARTS"))
-                abjad.mutate.replace(leaf, new_note)
-
-            if isinstance(component, abjad.Rest) and not isinstance(
-                abjad.get.parentage(component).parent, abjad.Tuplet
-            ):
-                leaf = component
-                rest_duration = abjad.get.duration(leaf)
-                rest_indicators = abjad.get.indicators(leaf)
-                new_rest = abjad.Rest(rest_duration, tag=abjad.Tag("+PARTS"))
-                for indicator in rest_indicators:
-                    abjad.attach(indicator, new_rest, tag=abjad.Tag("+PARTS"))
-                abjad.mutate.replace(leaf, new_rest)
-
-    return erase
+    return extract
 
 
 def trumpet_glissandi(selector=trinton.pleaves(grace=False)):

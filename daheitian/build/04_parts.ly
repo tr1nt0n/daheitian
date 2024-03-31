@@ -137,42 +137,34 @@
                                             \override Staff.MultiMeasureRest.transparent = ##t
                                             \voiceTwo
                                             R1 * 1
+                                              %! +PARTS
+                                            \revert Staff.MultiMeasureRest.transparent
                                         }
-                                        \context Voice = "flute voice cue"
+                                        \tag #'einsatz
                                         {
-                                              %! +PARTS
-                                            \set fontSize = #-3
-                                              %! +PARTS
-                                            \clef "bass"
-                                              %! +PARTS
-                                            \voiceOne
-                                            \afterGrace
-                                              %! +PARTS
-                                            c1
-                                              %! +PARTS
-                                            :32
-                                              %! +PARTS
-                                            \mp
-                                              %! +PARTS
-                                            - \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Pauken " } } }
-                                              %! +PARTS
-                                            - \tweak circled-tip ##t
-                                              %! +PARTS
-                                            \>
-                                              %! +PARTS
-                                            \glissando
+                                            \context Voice = "flute voice cue"
                                             {
-                                                  %! +PARTS
-                                                \once \override Flag.stroke-style = #"grace"
-                                                  %! +PARTS
-                                                aqs,16
-                                                  %! +PARTS
-                                                :128
-                                                  %! +PARTS
-                                                \!
-                                                  %! +PARTS
-                                                \set fontSize = #-0.25
-                                              %! +PARTS
+                                                \set fontSize = #-3
+                                                \clef "bass"
+                                                \voiceOne
+                                                \afterGrace
+                                                c1
+                                                :32
+                                                \mp
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Pauken " } } }
+                                                - \tweak circled-tip ##t
+                                                \>
+                                                \glissando
+                                                {
+                                                    \once \override Flag.stroke-style = #"grace"
+                                                    aqs,16
+                                                    :128
+                                                    \!
+                                                    \set fontSize = #-0.25
+                                                }
                                             }
                                         }
                                     >>
@@ -437,42 +429,34 @@
                                             \override Staff.MultiMeasureRest.transparent = ##t
                                             \voiceTwo
                                             R1 * 1
+                                              %! +PARTS
+                                            \revert Staff.MultiMeasureRest.transparent
                                         }
-                                        \context Voice = "bassclarinet voice cue"
+                                        \tag #'einsatz
                                         {
-                                              %! +PARTS
-                                            \set fontSize = #-3
-                                              %! +PARTS
-                                            \clef "bass"
-                                              %! +PARTS
-                                            \voiceOne
-                                            \afterGrace
-                                              %! +PARTS
-                                            c1
-                                              %! +PARTS
-                                            :32
-                                              %! +PARTS
-                                            \mp
-                                              %! +PARTS
-                                            - \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Pauken " } } }
-                                              %! +PARTS
-                                            - \tweak circled-tip ##t
-                                              %! +PARTS
-                                            \>
-                                              %! +PARTS
-                                            \glissando
+                                            \context Voice = "bassclarinet voice cue"
                                             {
-                                                  %! +PARTS
-                                                \once \override Flag.stroke-style = #"grace"
-                                                  %! +PARTS
-                                                aqs,16
-                                                  %! +PARTS
-                                                :128
-                                                  %! +PARTS
-                                                \!
-                                                  %! +PARTS
-                                                \set fontSize = #-0.25
-                                              %! +PARTS
+                                                \set fontSize = #-3
+                                                \clef "bass"
+                                                \voiceOne
+                                                \afterGrace
+                                                c1
+                                                :32
+                                                \mp
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Pauken " } } }
+                                                - \tweak circled-tip ##t
+                                                \>
+                                                \glissando
+                                                {
+                                                    \once \override Flag.stroke-style = #"grace"
+                                                    aqs,16
+                                                    :128
+                                                    \!
+                                                    \set fontSize = #-0.25
+                                                }
                                             }
                                         }
                                     >>
@@ -1193,42 +1177,34 @@
                                             \override Staff.MultiMeasureRest.transparent = ##t
                                             \voiceTwo
                                             R1 * 1
+                                              %! +PARTS
+                                            \revert Staff.MultiMeasureRest.transparent
                                         }
-                                        \context Voice = "harp 1 voice cue"
+                                        \tag #'einsatz
                                         {
-                                              %! +PARTS
-                                            \set fontSize = #-3
-                                              %! +PARTS
-                                            \clef "bass"
-                                              %! +PARTS
-                                            \voiceOne
-                                            \afterGrace
-                                              %! +PARTS
-                                            c1
-                                              %! +PARTS
-                                            :32
-                                              %! +PARTS
-                                            \mp
-                                              %! +PARTS
-                                            - \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Pauken " } } }
-                                              %! +PARTS
-                                            - \tweak circled-tip ##t
-                                              %! +PARTS
-                                            \>
-                                              %! +PARTS
-                                            \glissando
+                                            \context Voice = "harp 1 voice cue"
                                             {
-                                                  %! +PARTS
-                                                \once \override Flag.stroke-style = #"grace"
-                                                  %! +PARTS
-                                                aqs,16
-                                                  %! +PARTS
-                                                :128
-                                                  %! +PARTS
-                                                \!
-                                                  %! +PARTS
-                                                \set fontSize = #-0.25
-                                              %! +PARTS
+                                                \set fontSize = #-3
+                                                \clef "bass"
+                                                \voiceOne
+                                                \afterGrace
+                                                c1
+                                                :32
+                                                \mp
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Pauken " } } }
+                                                - \tweak circled-tip ##t
+                                                \>
+                                                \glissando
+                                                {
+                                                    \once \override Flag.stroke-style = #"grace"
+                                                    aqs,16
+                                                    :128
+                                                    \!
+                                                    \set fontSize = #-0.25
+                                                }
                                             }
                                         }
                                     >>

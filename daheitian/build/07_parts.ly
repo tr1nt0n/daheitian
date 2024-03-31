@@ -118,11 +118,14 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 4 3) (ly:make-duration 2 0))
                                     \times 3/4
                                     {
+                                        \staff-line-count 5
                                         \once \override NoteHead.X-offset = 0
                                         \once \override Staff.Accidental.stencil = ##f
+                                        \revert Staff.Clef.stencil
                                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Oboen }
                                           %! +SCORE
                                     %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { ob. }
+                                        \clef "treble"
                                         <
                                             \tweak style #'la
                                             b'
@@ -1078,19 +1081,48 @@
                     {
                         \context Voice = "frenchhorn voice"
                         {
-                              %! +SCORE
-                        %%% \once \override Staff.BarLine.transparent = ##f
-                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Hörner in F }
-                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hn. }
-                              %! +SCORE
-                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                              %! +SCORE
-                        %%% \once \override Staff.TimeSignature.transparent = ##t
-                              %! +SCORE
-                        %%% \once \override MultiMeasureRest.transparent = ##t
-                            R1 * 3/2
-                              %! +SCORE
-                        %%% \stopStaff \startStaff
+                            <<
+                                \context Voice = "frenchhorn voice secondary"
+                                {
+                                      %! +PARTS
+                                    \override Staff.MultiMeasureRest.transparent = ##t
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Hörner in F }
+                                      %! +SCORE
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hn. }
+                                    \voiceTwo
+                                    R1 * 3/2
+                                      %! +PARTS
+                                    \revert Staff.MultiMeasureRest.transparent
+                                }
+                                \tag #'einsatz
+                                {
+                                    \context Voice = "frenchhorn voice cue"
+                                    {
+                                        \set fontSize = #-3
+                                        \clef "bass"
+                                        \voiceOne
+                                        \afterGrace
+                                        c1.
+                                            _ #(make-dynamic-script (markup #:whiteout #:italic "ffmf"))
+                                        :32
+                                        - \tweak padding 0
+                                        - \tweak whiteout 1
+                                        - \tweak whiteout-style #'outline
+                                        ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Pauken " } } }
+                                        - \tweak circled-tip ##t
+                                        \>
+                                        \glissando
+                                        {
+                                            \once \override Flag.stroke-style = #"grace"
+                                            aqs,16
+                                            :128
+                                            \!
+                                            \set fontSize = #-0.25
+                                        }
+                                    }
+                                }
+                            >>
+                            \oneVoice
                               %! +SCORE
                         %%% \once \override Staff.BarLine.transparent = ##f
                               %! +SCORE
@@ -1104,6 +1136,7 @@
                         %%% \stopStaff \startStaff
                             r2
                             r16
+                            \clef "treble"
                             <aqf'! cqs''!>4..
                             - \tweak circled-tip ##t
                             _ \<
@@ -1177,19 +1210,48 @@
                             {
                                 \context Voice = "trumpet voice"
                                 {
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Trompeten in C }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ tpt. }
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "trumpet voice secondary"
+                                        {
+                                              %! +PARTS
+                                            \override Staff.MultiMeasureRest.transparent = ##t
+                                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Trompeten in C }
+                                              %! +SCORE
+                                        %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ tpt. }
+                                            \voiceTwo
+                                            R1 * 3/2
+                                              %! +PARTS
+                                            \revert Staff.MultiMeasureRest.transparent
+                                        }
+                                        \tag #'einsatz
+                                        {
+                                            \context Voice = "trumpet voice cue"
+                                            {
+                                                \set fontSize = #-3
+                                                \clef "bass"
+                                                \voiceOne
+                                                \afterGrace
+                                                c1.
+                                                    _ #(make-dynamic-script (markup #:whiteout #:italic "ffmf"))
+                                                :32
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Pauken " } } }
+                                                - \tweak circled-tip ##t
+                                                \>
+                                                \glissando
+                                                {
+                                                    \once \override Flag.stroke-style = #"grace"
+                                                    aqs,16
+                                                    :128
+                                                    \!
+                                                    \set fontSize = #-0.25
+                                                }
+                                            }
+                                        }
+                                    >>
+                                    \oneVoice
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
@@ -1203,6 +1265,7 @@
                                 %%% \stopStaff \startStaff
                                     r2
                                     r16
+                                    \clef "treble"
                                     <d' f'>4..
                                     - \tweak circled-tip ##t
                                     _ \<
@@ -1257,19 +1320,48 @@
                             {
                                 \context Voice = "tenortrombone voice"
                                 {
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tenorposaunen }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pos. }
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "tenortrombone voice secondary"
+                                        {
+                                              %! +PARTS
+                                            \override Staff.MultiMeasureRest.transparent = ##t
+                                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tenorposaunen }
+                                              %! +SCORE
+                                        %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pos. }
+                                            \voiceTwo
+                                            R1 * 3/2
+                                              %! +PARTS
+                                            \revert Staff.MultiMeasureRest.transparent
+                                        }
+                                        \tag #'einsatz
+                                        {
+                                            \context Voice = "tenortrombone voice cue"
+                                            {
+                                                \set fontSize = #-3
+                                                \clef "bass"
+                                                \voiceOne
+                                                \afterGrace
+                                                c1.
+                                                    _ #(make-dynamic-script (markup #:whiteout #:italic "ffmf"))
+                                                :32
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Pauken " } } }
+                                                - \tweak circled-tip ##t
+                                                \>
+                                                \glissando
+                                                {
+                                                    \once \override Flag.stroke-style = #"grace"
+                                                    aqs,16
+                                                    :128
+                                                    \!
+                                                    \set fontSize = #-0.25
+                                                }
+                                            }
+                                        }
+                                    >>
+                                    \oneVoice
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
@@ -1283,6 +1375,7 @@
                                 %%% \stopStaff \startStaff
                                     r2
                                     r16
+                                    \clef "treble"
                                     <cqs'! eqs'!>4..
                                     - \tweak circled-tip ##t
                                     _ \<
@@ -1352,19 +1445,48 @@
                             {
                                 \context Voice = "tuba voice"
                                 {
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tuben }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { tb. }
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "tuba voice secondary"
+                                        {
+                                              %! +PARTS
+                                            \override Staff.MultiMeasureRest.transparent = ##t
+                                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Tuben }
+                                              %! +SCORE
+                                        %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { tb. }
+                                            \voiceTwo
+                                            R1 * 3/2
+                                              %! +PARTS
+                                            \revert Staff.MultiMeasureRest.transparent
+                                        }
+                                        \tag #'einsatz
+                                        {
+                                            \context Voice = "tuba voice cue"
+                                            {
+                                                \set fontSize = #-3
+                                                \clef "bass"
+                                                \voiceOne
+                                                \afterGrace
+                                                c1.
+                                                    _ #(make-dynamic-script (markup #:whiteout #:italic "ffmf"))
+                                                :32
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Pauken " } } }
+                                                - \tweak circled-tip ##t
+                                                \>
+                                                \glissando
+                                                {
+                                                    \once \override Flag.stroke-style = #"grace"
+                                                    aqs,16
+                                                    :128
+                                                    \!
+                                                    \set fontSize = #-0.25
+                                                }
+                                            }
+                                        }
+                                    >>
+                                    \oneVoice
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE

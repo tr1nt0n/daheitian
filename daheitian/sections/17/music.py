@@ -230,6 +230,19 @@ trinton.make_music(
         attachments=[abjad.Articulation("marcato")],
         selector=trinton.pleaves(),
     ),
+    # trinton.attachment_command(
+    #     attachments=[
+    #         abjad.bundle(
+    #             abjad.Markup(
+    #                 r"""\markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5 "Tutti" }"""
+    #             ),
+    #             r"- \tweak whiteout-style #'outline",
+    #             r"- \tweak whiteout 1"
+    #         )
+    #     ],
+    #     selector=trinton.select_leaves_by_index([0], pitched=True),
+    #     direction=abjad.UP,
+    # ),
     trinton.attachment_command(
         attachments=[abjad.BendAfter(-3.5)],
         selector=trinton.ranged_selector(ranges=[range(12, 30)]),

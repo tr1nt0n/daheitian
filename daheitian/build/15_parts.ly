@@ -589,6 +589,8 @@
                                     \pppp
                                     - \tweak padding #3.25
                                     ^ \markup \override #'(size . .6) { \woodwind-diagram #'bassoon #'((cc . (one two three five)) (lh . (a thumb-cis cisT)) (rh . (thumb-e))) }
+                                    - \tweak padding 12
+                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Tutti" }
                                     r4..
                                     r8
                                     \once \override NoteHead.X-offset = 0

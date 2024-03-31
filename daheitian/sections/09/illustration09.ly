@@ -1008,52 +1008,142 @@
                             {
                                 \context Voice = "harp 1 voice"
                                 {
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
-                                    \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "harp 1 voice secondary"
+                                        {
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                            \override Staff.MultiMeasureRest.transparent = ##t
+                                            \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
+                                            \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            \voiceOne
+                                            R1 * 1/2
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                            \revert Staff.MultiMeasureRest.transparent
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 1
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 3/2
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 3/4
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                        }
+                                        \tag #'einsatz
+                                        {
+                                            \context Voice = "harp 1 voice cue"
+                                            {
+                                                  %! +SCORE
+                                                \once \override Staff.BarLine.transparent = ##f
+                                                  %! +SCORE
+                                                \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                                  %! +SCORE
+                                                \once \override Staff.TimeSignature.transparent = ##t
+                                                  %! +SCORE
+                                                \once \override MultiMeasureRest.transparent = ##t
+                                                R1 * 1/2
+                                                  %! +SCORE
+                                                \stopStaff \startStaff
+                                                  %! +SCORE
+                                                \once \override Staff.BarLine.transparent = ##f
+                                                  %! +SCORE
+                                                \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                                  %! +SCORE
+                                                \once \override Staff.TimeSignature.transparent = ##t
+                                                  %! +SCORE
+                                                \once \override MultiMeasureRest.transparent = ##t
+                                                R1 * 1
+                                                  %! +SCORE
+                                                \stopStaff \startStaff
+                                                  %! +SCORE
+                                                \once \override Staff.BarLine.transparent = ##f
+                                                  %! +SCORE
+                                                \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                                  %! +SCORE
+                                                \once \override Staff.TimeSignature.transparent = ##t
+                                                  %! +SCORE
+                                                \once \override MultiMeasureRest.transparent = ##t
+                                                R1 * 3/2
+                                                  %! +SCORE
+                                                \stopStaff \startStaff
+                                                r8.
+                                                \staff-line-count 5
+                                                \revert Staff.Clef.stencil
+                                                \set fontSize = #-3
+                                                \clef "treble"
+                                                c''16
+                                                - \tenuto
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Bassklarinette ( 1. soli ) " } } }
+                                                - \tweak circled-tip ##t
+                                                \<
+                                                ~
+                                                \override Staff.Stem.stemlet-length = 0.75
+                                                c''16
+                                                [
+                                                \scaleDurations #'(1 . 1) {
+                                                \slashedGrace {
+                                                    fs''16
+                                                    (
+                                                }
+                                                }
+                                                \revert Staff.Stem.stemlet-length
+                                                c''8.
+                                                - \tenuto
+                                                ]
+                                                ~
+                                                \override Staff.Stem.stemlet-length = 0.75
+                                                c''16
+                                                )
+                                                [
+                                                c''16
+                                                - \tenuto
+                                                ~
+                                                c''16
+                                                \revert Staff.Stem.stemlet-length
+                                                c''16
+                                                - \tenuto
+                                                \ff
+                                                ]
+                                                \set fontSize = #-0.25
+                                            }
+                                        }
+                                    >>
+                                    \oneVoice
                                     r2
                                     r32
                                     \ottava 1
@@ -1243,54 +1333,147 @@
                             {
                                 \context Voice = "percussion 2 voice"
                                 {
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "percussion 2 voice secondary"
+                                        {
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                            \override Staff.MultiMeasureRest.transparent = ##t
+                                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Schlagzeug 1 }
+                                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { schlz. 1 }
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            \voiceOne
+                                            R1 * 1/2
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                            \revert Staff.MultiMeasureRest.transparent
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 1
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 3/2
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 3/4
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                        }
+                                        \tag #'einsatz
+                                        {
+                                            \context Voice = "percussion 2 voice cue"
+                                            {
+                                                  %! +SCORE
+                                                \once \override Staff.BarLine.transparent = ##f
+                                                  %! +SCORE
+                                                \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                                  %! +SCORE
+                                                \once \override Staff.TimeSignature.transparent = ##t
+                                                  %! +SCORE
+                                                \once \override MultiMeasureRest.transparent = ##t
+                                                R1 * 1/2
+                                                  %! +SCORE
+                                                \stopStaff \startStaff
+                                                  %! +SCORE
+                                                \once \override Staff.BarLine.transparent = ##f
+                                                  %! +SCORE
+                                                \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                                  %! +SCORE
+                                                \once \override Staff.TimeSignature.transparent = ##t
+                                                  %! +SCORE
+                                                \once \override MultiMeasureRest.transparent = ##t
+                                                R1 * 1
+                                                  %! +SCORE
+                                                \stopStaff \startStaff
+                                                  %! +SCORE
+                                                \once \override Staff.BarLine.transparent = ##f
+                                                  %! +SCORE
+                                                \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                                  %! +SCORE
+                                                \once \override Staff.TimeSignature.transparent = ##t
+                                                  %! +SCORE
+                                                \once \override MultiMeasureRest.transparent = ##t
+                                                R1 * 3/2
+                                                  %! +SCORE
+                                                \stopStaff \startStaff
+                                                r8.
+                                                \staff-line-count 5
+                                                \revert Staff.Clef.stencil
+                                                \set fontSize = #-3
+                                                \clef "treble"
+                                                c''16
+                                                - \tenuto
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Bassklarinette ( 1. soli ) " } } }
+                                                - \tweak circled-tip ##t
+                                                \<
+                                                ~
+                                                \override Staff.Stem.stemlet-length = 0.75
+                                                c''16
+                                                [
+                                                \scaleDurations #'(1 . 1) {
+                                                \slashedGrace {
+                                                    fs''16
+                                                    (
+                                                }
+                                                }
+                                                \revert Staff.Stem.stemlet-length
+                                                c''8.
+                                                - \tenuto
+                                                ]
+                                                ~
+                                                \override Staff.Stem.stemlet-length = 0.75
+                                                c''16
+                                                )
+                                                [
+                                                c''16
+                                                - \tenuto
+                                                ~
+                                                c''16
+                                                \revert Staff.Stem.stemlet-length
+                                                c''16
+                                                - \tenuto
+                                                \ff
+                                                ]
+                                                \set fontSize = #-0.25
+                                            }
+                                        }
+                                    >>
+                                    \oneVoice
                                     r2
                                     r32
+                                    \staff-line-count 1
+                                    \revert Staff.Clef.stencil
+                                    \clef "percussion"
                                     \override Staff.Stem.stemlet-length = 0.75
                                     c'16.
                                     :128

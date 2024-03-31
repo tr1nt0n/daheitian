@@ -335,7 +335,7 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (2,)),
     trinton.attachment_command(
         attachments=[
-            abjad.LilyPondLiteral(r"\break", "after"),
+            abjad.LilyPondLiteral(r"\break", site="absolute_after"),
         ],
         selector=trinton.select_leaves_by_index([0]),
         tag=abjad.Tag("+SCORE"),

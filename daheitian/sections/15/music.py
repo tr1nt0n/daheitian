@@ -295,6 +295,7 @@ trinton.make_music(
             pitched=True,
         ),
     ),
+    library.tutti(padding=12),
     voice=score["bassoon voice"],
     preprocessor=trinton.fuse_eighths_preprocessor((7, 1, 2, 2, 2, 5, 7)),
 )

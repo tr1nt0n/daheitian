@@ -707,39 +707,78 @@
                                     R1 * 3/4
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "oboe voice secondary"
+                                        {
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                            \override Staff.MultiMeasureRest.transparent = ##t
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            \voiceTwo
+                                            R1 * 1/2
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 3/4
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 1
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                            \revert Staff.MultiMeasureRest.transparent
+                                        }
+                                        \tag #'einsatz
+                                        {
+                                            \context Voice = "oboe voice cue"
+                                            {
+                                                \set fontSize = #-3
+                                                \clef "bass"
+                                                \voiceOne
+                                                <ef, c>4
+                                                - \tweak padding 5
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Klavier RH " } } }
+                                                \clef "treble"
+                                                <c'' ef'' e'' af''>4
+                                                \ottava 1
+                                                <fs''' e''''>4
+                                                \ottava 0
+                                                r4
+                                                \clef "bass"
+                                                <e, cs>4
+                                                r4
+                                                \clef "treble"
+                                                <ef'' e'' g'' b''>4
+                                                \ottava 1
+                                                <af''' fs''''>4
+                                                \ottava 0
+                                                \set fontSize = #-0.25
+                                                r4
+                                            }
+                                        }
+                                    >>
+                                    \oneVoice
                                     r2.
                                     r4
                                     \once \override NoteHead.X-offset = 0
@@ -1452,72 +1491,57 @@
                                             \stopStaff \startStaff
                                             \revert Staff.MultiMeasureRest.transparent
                                         }
-                                        \context Voice = "bassoon intermittent voice 1"
+                                        \tag #'einsatz
                                         {
-                                              %! +PARTS
-                                        %%% \clef "bass"
-                                              %! +PARTS
-                                        %%% \voiceOne
-                                              %! +PARTS
-                                        %%% r4
-                                              %! +PARTS
-                                        %%% r16
-                                              %! +PARTS
-                                        %%% aqf,8.
-                                              %! +PARTS
-                                        %%% - \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "1. soli" }
-                                              %! +PARTS
-                                        %%% - \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Wenn keine erste Bassklarinette:" }
-                                              %! +PARTS
-                                        %%% - \abjad-solid-line-with-arrow
-                                              %! +PARTS
-                                        %%% - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ton } \hspace #0.5 }
-                                              %! +PARTS
-                                        %%% - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Überblasen }
-                                              %! +PARTS
-                                        %%% - \tweak bound-details.right.padding 1
-                                              %! +PARTS
-                                        %%% \startTextSpanOne
-                                              %! +PARTS
-                                        %%% - \tweak circled-tip ##t
-                                              %! +PARTS
-                                        %%% \<
-                                              %! +PARTS
-                                        %%% \glissando
-                                              %! +PARTS
-                                        %%% \once \override Dots.staff-position = #2
-                                              %! +PARTS
-                                        %%% \hide NoteHead
-                                              %! +PARTS
-                                        %%% \override Accidental.stencil = ##f
-                                              %! +PARTS
-                                        %%% \override NoteColumn.glissando-skip = ##t
-                                              %! +PARTS
-                                        %%% \override NoteHead.no-ledgers = ##t
-                                            \override Staff.Stem.stemlet-length = 0.75
-                                              %! +PARTS
-                                        %%% aqf,16
-                                            [
-                                              %! +PARTS
-                                        %%% \revert Accidental.stencil
-                                              %! +PARTS
-                                        %%% \revert NoteColumn.glissando-skip
-                                              %! +PARTS
-                                        %%% \revert NoteHead.no-ledgers
-                                              %! +PARTS
-                                        %%% \undo \hide NoteHead
-                                            \revert Staff.Stem.stemlet-length
-                                              %! +PARTS
-                                        %%% aqf,16
-                                                  %! +PARTS
-                                            %%% _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
-                                              %! +PARTS
-                                        %%% \stopTextSpanOne
-                                            ]
-                                              %! +PARTS
-                                        %%% r8
-                                              %! +PARTS
-                                        %%% r2
+                                            \context Voice = "bassoon intermittent voice 1"
+                                            {
+                                                \clef "bass"
+                                                \voiceOne
+                                                r4
+                                                r16
+                                                aqf,8.
+                                                - \tweak padding 3
+                                                ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "1. soli" }
+                                                - \tweak padding 5
+                                                ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Wenn keine erste Bassklarinette:" }
+                                                - \tweak circled-tip ##t
+                                                \<
+                                                - \tweak padding #11
+                                                - \abjad-solid-line-with-arrow
+                                                - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ton } \hspace #0.5 }
+                                                - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Überblasen }
+                                                - \tweak bound-details.right.padding 1
+                                                \startTextSpanOne
+                                                  %! abjad.glissando(7)
+                                                \glissando
+                                                \once \override Dots.staff-position = #2
+                                                  %! abjad.glissando(1)
+                                                \hide NoteHead
+                                                  %! abjad.glissando(1)
+                                                \override Accidental.stencil = ##f
+                                                  %! abjad.glissando(1)
+                                                \override NoteColumn.glissando-skip = ##t
+                                                  %! abjad.glissando(1)
+                                                \override NoteHead.no-ledgers = ##t
+                                                \override Staff.Stem.stemlet-length = 0.75
+                                                aqf,16
+                                                [
+                                                  %! abjad.glissando(6)
+                                                \revert Accidental.stencil
+                                                  %! abjad.glissando(6)
+                                                \revert NoteColumn.glissando-skip
+                                                  %! abjad.glissando(6)
+                                                \revert NoteHead.no-ledgers
+                                                  %! abjad.glissando(6)
+                                                \undo \hide NoteHead
+                                                \revert Staff.Stem.stemlet-length
+                                                aqf,16
+                                                    _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
+                                                \stopTextSpanOne
+                                                ]
+                                                r8
+                                                r2
+                                            }
                                         }
                                     >>
                                     \oneVoice
@@ -1561,202 +1585,147 @@
                                             \stopStaff \startStaff
                                             \revert Staff.MultiMeasureRest.transparent
                                         }
-                                        \context Voice = "bassoon intermittent voice 2"
+                                        \tag #'einsatz
                                         {
-                                              %! +PARTS
-                                        %%% \voiceOne
-                                              %! +PARTS
-                                        %%% aqf,8
-                                              %! +PARTS
-                                        %%% - \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "1. soli" }
-                                              %! +PARTS
-                                        %%% [
-                                              %! +PARTS
-                                        %%% - \tweak circled-tip ##t
-                                              %! +PARTS
-                                        %%% \<
-                                              %! +PARTS
-                                        %%% \glissando
-                                              %! +PARTS
-                                        %%% \once \override Dots.staff-position = #2
-                                              %! +PARTS
-                                        %%% \hide NoteHead
-                                              %! +PARTS
-                                        %%% \override Accidental.stencil = ##f
-                                              %! +PARTS
-                                        %%% \override NoteColumn.glissando-skip = ##t
-                                              %! +PARTS
-                                        %%% \override NoteHead.no-ledgers = ##t
-                                              %! +PARTS
-                                        %%% aqf,8
-                                                  %! +PARTS
-                                            %%% _ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
-                                              %! +PARTS
-                                        %%% - \tweak circled-tip ##t
-                                              %! +PARTS
-                                        %%% \>
-                                              %! +PARTS
-                                        %%% \revert Accidental.stencil
-                                              %! +PARTS
-                                        %%% \revert NoteColumn.glissando-skip
-                                              %! +PARTS
-                                        %%% \revert NoteHead.no-ledgers
-                                              %! +PARTS
-                                        %%% \undo \hide NoteHead
-                                              %! +PARTS
-                                        %%% aqf,8
-                                              %! +PARTS
-                                        %%% \!
-                                              %! +PARTS
-                                        %%% ]
-                                              %! +PARTS
-                                        %%% r8
-                                              %! +PARTS
-                                        %%% r8
-                                              %! +PARTS
-                                        %%% aqf,8
-                                              %! +PARTS
-                                        %%% [
-                                              %! +PARTS
-                                        %%% - \tweak circled-tip ##t
-                                              %! +PARTS
-                                        %%% \<
-                                              %! +PARTS
-                                        %%% \glissando
-                                              %! +PARTS
-                                        %%% \once \override Dots.staff-position = #2
-                                              %! +PARTS
-                                        %%% \hide NoteHead
-                                              %! +PARTS
-                                        %%% \override Accidental.stencil = ##f
-                                              %! +PARTS
-                                        %%% \override NoteColumn.glissando-skip = ##t
-                                              %! +PARTS
-                                        %%% \override NoteHead.no-ledgers = ##t
-                                              %! +PARTS
-                                        %%% aqf,8
-                                                  %! +PARTS
-                                            %%% _ #(make-dynamic-script (markup #:whiteout #:italic "mp +"))
-                                              %! +PARTS
-                                        %%% - \tweak circled-tip ##t
-                                              %! +PARTS
-                                        %%% \>
-                                              %! +PARTS
-                                        %%% \revert Accidental.stencil
-                                              %! +PARTS
-                                        %%% \revert NoteColumn.glissando-skip
-                                              %! +PARTS
-                                        %%% \revert NoteHead.no-ledgers
-                                              %! +PARTS
-                                        %%% \undo \hide NoteHead
-                                              %! +PARTS
-                                        %%% aqf,8
-                                              %! +PARTS
-                                        %%% \!
-                                              %! +PARTS
-                                        %%% ]
-                                              %! +PARTS
-                                        %%% r4
-                                              %! +PARTS
-                                        %%% r8
-                                              %! +PARTS
-                                        %%% \times 2/3
-                                              %! +PARTS
-                                        %%% {
-                                                  %! +PARTS
-                                            %%% aqf,8
-                                                  %! +PARTS
-                                            %%% [
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \<
-                                                  %! +PARTS
-                                            %%% \glissando
-                                                  %! +PARTS
-                                            %%% \once \override Dots.staff-position = #2
-                                                  %! +PARTS
-                                            %%% \hide NoteHead
-                                                  %! +PARTS
-                                            %%% \override Accidental.stencil = ##f
-                                                  %! +PARTS
-                                            %%% \override NoteColumn.glissando-skip = ##t
-                                                  %! +PARTS
-                                            %%% \override NoteHead.no-ledgers = ##t
-                                                  %! +PARTS
-                                            %%% aqf,8
-                                                      %! +PARTS
-                                                %%% _ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \>
-                                                  %! +PARTS
-                                            %%% \revert Accidental.stencil
-                                                  %! +PARTS
-                                            %%% \revert NoteColumn.glissando-skip
-                                                  %! +PARTS
-                                            %%% \revert NoteHead.no-ledgers
-                                                  %! +PARTS
-                                            %%% \undo \hide NoteHead
-                                                  %! +PARTS
-                                            %%% aqf,8
-                                                  %! +PARTS
-                                            %%% \!
-                                                  %! +PARTS
-                                            %%% ]
-                                              %! +PARTS
-                                        %%% }
-                                              %! +PARTS
-                                        %%% r4.
-                                              %! +PARTS
-                                        %%% \times 2/3
-                                              %! +PARTS
-                                        %%% {
-                                                  %! +PARTS
-                                            %%% aqf,8
-                                                  %! +PARTS
-                                            %%% [
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \<
-                                                  %! +PARTS
-                                            %%% \glissando
-                                                  %! +PARTS
-                                            %%% \once \override Dots.staff-position = #2
-                                                  %! +PARTS
-                                            %%% \hide NoteHead
-                                                  %! +PARTS
-                                            %%% \override Accidental.stencil = ##f
-                                                  %! +PARTS
-                                            %%% \override NoteColumn.glissando-skip = ##t
-                                                  %! +PARTS
-                                            %%% \override NoteHead.no-ledgers = ##t
-                                                  %! +PARTS
-                                            %%% aqf,8
-                                                      %! +PARTS
-                                                %%% _ #(make-dynamic-script (markup #:whiteout #:italic "mp +"))
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \>
-                                                  %! +PARTS
-                                            %%% \revert Accidental.stencil
-                                                  %! +PARTS
-                                            %%% \revert NoteColumn.glissando-skip
-                                                  %! +PARTS
-                                            %%% \revert NoteHead.no-ledgers
-                                                  %! +PARTS
-                                            %%% \undo \hide NoteHead
-                                                  %! +PARTS
-                                            %%% aqf,8
-                                                  %! +PARTS
-                                            %%% \!
-                                                  %! +PARTS
-                                            %%% ]
-                                              %! +PARTS
-                                        %%% }
+                                            \context Voice = "bassoon intermittent voice 2"
+                                            {
+                                                \voiceOne
+                                                aqf,8
+                                                - \tweak padding 3
+                                                ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "1. soli" }
+                                                [
+                                                - \tweak circled-tip ##t
+                                                _ \<
+                                                  %! abjad.glissando(7)
+                                                \glissando
+                                                \once \override Dots.staff-position = #2
+                                                  %! abjad.glissando(1)
+                                                \hide NoteHead
+                                                  %! abjad.glissando(1)
+                                                \override Accidental.stencil = ##f
+                                                  %! abjad.glissando(1)
+                                                \override NoteColumn.glissando-skip = ##t
+                                                  %! abjad.glissando(1)
+                                                \override NoteHead.no-ledgers = ##t
+                                                aqf,8
+                                                    _ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
+                                                - \tweak circled-tip ##t
+                                                _ \>
+                                                  %! abjad.glissando(6)
+                                                \revert Accidental.stencil
+                                                  %! abjad.glissando(6)
+                                                \revert NoteColumn.glissando-skip
+                                                  %! abjad.glissando(6)
+                                                \revert NoteHead.no-ledgers
+                                                  %! abjad.glissando(6)
+                                                \undo \hide NoteHead
+                                                aqf,8
+                                                \!
+                                                ]
+                                                r8
+                                                r8
+                                                aqf,8
+                                                [
+                                                - \tweak circled-tip ##t
+                                                _ \<
+                                                  %! abjad.glissando(7)
+                                                \glissando
+                                                \once \override Dots.staff-position = #2
+                                                  %! abjad.glissando(1)
+                                                \hide NoteHead
+                                                  %! abjad.glissando(1)
+                                                \override Accidental.stencil = ##f
+                                                  %! abjad.glissando(1)
+                                                \override NoteColumn.glissando-skip = ##t
+                                                  %! abjad.glissando(1)
+                                                \override NoteHead.no-ledgers = ##t
+                                                aqf,8
+                                                    _ #(make-dynamic-script (markup #:whiteout #:italic "mp +"))
+                                                - \tweak circled-tip ##t
+                                                _ \>
+                                                  %! abjad.glissando(6)
+                                                \revert Accidental.stencil
+                                                  %! abjad.glissando(6)
+                                                \revert NoteColumn.glissando-skip
+                                                  %! abjad.glissando(6)
+                                                \revert NoteHead.no-ledgers
+                                                  %! abjad.glissando(6)
+                                                \undo \hide NoteHead
+                                                aqf,8
+                                                \!
+                                                ]
+                                                r4
+                                                r8
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 0))
+                                                \times 2/3
+                                                {
+                                                    aqf,8
+                                                    [
+                                                    - \tweak circled-tip ##t
+                                                    _ \<
+                                                      %! abjad.glissando(7)
+                                                    \glissando
+                                                    \once \override Dots.staff-position = #2
+                                                      %! abjad.glissando(1)
+                                                    \hide NoteHead
+                                                      %! abjad.glissando(1)
+                                                    \override Accidental.stencil = ##f
+                                                      %! abjad.glissando(1)
+                                                    \override NoteColumn.glissando-skip = ##t
+                                                      %! abjad.glissando(1)
+                                                    \override NoteHead.no-ledgers = ##t
+                                                    aqf,8
+                                                        _ #(make-dynamic-script (markup #:whiteout #:italic "mp"))
+                                                    - \tweak circled-tip ##t
+                                                    _ \>
+                                                      %! abjad.glissando(6)
+                                                    \revert Accidental.stencil
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteColumn.glissando-skip
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteHead.no-ledgers
+                                                      %! abjad.glissando(6)
+                                                    \undo \hide NoteHead
+                                                    aqf,8
+                                                    \!
+                                                    ]
+                                                }
+                                                r4.
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 3 2) (ly:make-duration 3 0))
+                                                \times 2/3
+                                                {
+                                                    aqf,8
+                                                    [
+                                                    - \tweak circled-tip ##t
+                                                    _ \<
+                                                      %! abjad.glissando(7)
+                                                    \glissando
+                                                    \once \override Dots.staff-position = #2
+                                                      %! abjad.glissando(1)
+                                                    \hide NoteHead
+                                                      %! abjad.glissando(1)
+                                                    \override Accidental.stencil = ##f
+                                                      %! abjad.glissando(1)
+                                                    \override NoteColumn.glissando-skip = ##t
+                                                      %! abjad.glissando(1)
+                                                    \override NoteHead.no-ledgers = ##t
+                                                    aqf,8
+                                                        _ #(make-dynamic-script (markup #:whiteout #:italic "mp +"))
+                                                    - \tweak circled-tip ##t
+                                                    _ \>
+                                                      %! abjad.glissando(6)
+                                                    \revert Accidental.stencil
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteColumn.glissando-skip
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteHead.no-ledgers
+                                                      %! abjad.glissando(6)
+                                                    \undo \hide NoteHead
+                                                    aqf,8
+                                                    \!
+                                                    ]
+                                                }
+                                            }
                                         }
                                     >>
                                     \oneVoice
@@ -1817,64 +1786,51 @@
                                             \stopStaff \startStaff
                                             \revert Staff.MultiMeasureRest.transparent
                                         }
-                                        \context Voice = "bassoon intermittent voice 3"
+                                        \tag #'einsatz
                                         {
-                                              %! +PARTS
-                                        %%% \tweak text #tuplet-number::calc-fraction-text
-                                              %! +PARTS
-                                        %%% \times 9/7
-                                              %! +PARTS
-                                        %%% {
-                                                  %! +PARTS
-                                            %%% \voiceOne
-                                                  %! +PARTS
-                                            %%% aqf,2
-                                                  %! +PARTS
-                                            %%% - \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "1. soli" }
-                                                  %! +PARTS
-                                            %%% - \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Wenn keine erste Bassklarinette:" }
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \<
-                                                  %! +PARTS
-                                            %%% \glissando
-                                                  %! +PARTS
-                                            %%% \once \override Dots.staff-position = #2
-                                                  %! +PARTS
-                                            %%% \hide NoteHead
-                                                  %! +PARTS
-                                            %%% \override Accidental.stencil = ##f
-                                                  %! +PARTS
-                                            %%% \override NoteColumn.glissando-skip = ##t
-                                                  %! +PARTS
-                                            %%% \override NoteHead.no-ledgers = ##t
-                                                  %! +PARTS
-                                            %%% aqf,4
-                                                      %! +PARTS
-                                                %%% ^ #(make-dynamic-script (markup #:whiteout #:italic "ff"))
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \>
-                                                  %! +PARTS
-                                            %%% \revert Accidental.stencil
-                                                  %! +PARTS
-                                            %%% \revert NoteColumn.glissando-skip
-                                                  %! +PARTS
-                                            %%% \revert NoteHead.no-ledgers
-                                                  %! +PARTS
-                                            %%% \undo \hide NoteHead
-                                                  %! +PARTS
-                                            %%% aqf,8
-                                                  %! +PARTS
-                                            %%% \!
-                                              %! +PARTS
-                                        %%% }
-                                              %! +PARTS
-                                        %%% r2
-                                              %! +PARTS
-                                        %%% r8
+                                            \context Voice = "bassoon intermittent voice 3"
+                                            {
+                                                \tweak text #tuplet-number::calc-fraction-text
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 9) (ly:make-duration 3 0))
+                                                \times 9/7
+                                                {
+                                                    \voiceOne
+                                                    aqf,2
+                                                    - \tweak padding 3
+                                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "1. soli" }
+                                                    - \tweak padding 5
+                                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Wenn keine erste Bassklarinette:" }
+                                                    - \tweak circled-tip ##t
+                                                    _ \<
+                                                      %! abjad.glissando(7)
+                                                    \glissando
+                                                    \once \override Dots.staff-position = #2
+                                                      %! abjad.glissando(1)
+                                                    \hide NoteHead
+                                                      %! abjad.glissando(1)
+                                                    \override Accidental.stencil = ##f
+                                                      %! abjad.glissando(1)
+                                                    \override NoteColumn.glissando-skip = ##t
+                                                      %! abjad.glissando(1)
+                                                    \override NoteHead.no-ledgers = ##t
+                                                    aqf,4
+                                                        _ #(make-dynamic-script (markup #:whiteout #:italic "ff"))
+                                                    - \tweak circled-tip ##t
+                                                    _ \>
+                                                      %! abjad.glissando(6)
+                                                    \revert Accidental.stencil
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteColumn.glissando-skip
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteHead.no-ledgers
+                                                      %! abjad.glissando(6)
+                                                    \undo \hide NoteHead
+                                                    aqf,8
+                                                    \!
+                                                }
+                                                r2
+                                                r8
+                                            }
                                         }
                                     >>
                                     \oneVoice
@@ -2012,17 +1968,33 @@
                             R1 * 3/4
                               %! +SCORE
                             \stopStaff \startStaff
-                              %! +SCORE
-                            \once \override Staff.BarLine.transparent = ##f
-                              %! +SCORE
-                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                              %! +SCORE
-                            \once \override Staff.TimeSignature.transparent = ##t
-                              %! +SCORE
-                            \once \override MultiMeasureRest.transparent = ##t
-                            R1 * 1
-                              %! +SCORE
-                            \stopStaff \startStaff
+                            <<
+                                \context Voice = "frenchhorn voice secondary"
+                                {
+                                      %! +PARTS
+                                %%% \override Staff.MultiMeasureRest.transparent = ##t
+                                    \voiceTwo
+                                    R1 * 1
+                                      %! +PARTS
+                                %%% \revert Staff.MultiMeasureRest.transparent
+                                }
+                                \tag #'einsatz
+                                {
+                                    \context Voice = "frenchhorn voice cue"
+                                    {
+                                        \voiceOne
+                                        r2
+                                        \set fontSize = #-3
+                                        r2
+                                        - \tweak padding 5
+                                        - \tweak whiteout 1
+                                        - \tweak whiteout-style #'outline
+                                        ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Ab hier bis Takt 85 nur Flöte " } } }
+                                        \set fontSize = #-0.25
+                                    }
+                                }
+                            >>
+                            \oneVoice
                               %! +SCORE
                             \once \override Staff.BarLine.transparent = ##f
                               %! +SCORE
@@ -2196,17 +2168,33 @@
                                     R1 * 3/4
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "trumpet voice secondary"
+                                        {
+                                              %! +PARTS
+                                        %%% \override Staff.MultiMeasureRest.transparent = ##t
+                                            \voiceTwo
+                                            R1 * 1
+                                              %! +PARTS
+                                        %%% \revert Staff.MultiMeasureRest.transparent
+                                        }
+                                        \tag #'einsatz
+                                        {
+                                            \context Voice = "trumpet voice cue"
+                                            {
+                                                \voiceOne
+                                                r2
+                                                \set fontSize = #-3
+                                                r2
+                                                - \tweak padding 5
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Ab hier bis Takt 85 nur Flöte " } } }
+                                                \set fontSize = #-0.25
+                                            }
+                                        }
+                                    >>
+                                    \oneVoice
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
@@ -2373,17 +2361,33 @@
                                     R1 * 3/4
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "tenortrombone voice secondary"
+                                        {
+                                              %! +PARTS
+                                        %%% \override Staff.MultiMeasureRest.transparent = ##t
+                                            \voiceTwo
+                                            R1 * 1
+                                              %! +PARTS
+                                        %%% \revert Staff.MultiMeasureRest.transparent
+                                        }
+                                        \tag #'einsatz
+                                        {
+                                            \context Voice = "tenortrombone voice cue"
+                                            {
+                                                \voiceOne
+                                                r2
+                                                \set fontSize = #-3
+                                                r2
+                                                - \tweak padding 5
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Ab hier bis Takt 85 nur Flöte " } } }
+                                                \set fontSize = #-0.25
+                                            }
+                                        }
+                                    >>
+                                    \oneVoice
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
@@ -2620,30 +2624,93 @@
                             {
                                 \context Voice = "piano 1 voice"
                                 {
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                    \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Klavier }
-                                    \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { klav. }
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "piano 1 voice secondary"
+                                        {
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                            \override Staff.MultiMeasureRest.transparent = ##t
+                                            \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Klavier }
+                                            \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { klav. }
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            \voiceTwo
+                                            R1 * 1/2
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 3/4
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                            \revert Staff.MultiMeasureRest.transparent
+                                        }
+                                        \tag #'einsatz
+                                        {
+                                            \context Voice = "piano 1 voice cue"
+                                            {
+                                                \clef "bass"
+                                                \voiceOne
+                                                r4
+                                                r16
+                                                \set fontSize = #-3
+                                                bqf8.
+                                                - \tweak padding 12
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Erste Bassklarinette " } } }
+                                                - \tweak circled-tip ##t
+                                                \<
+                                                - \tweak padding #9.5
+                                                - \abjad-solid-line-with-arrow
+                                                - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Ton } \hspace #0.5 }
+                                                - \tweak bound-details.right.text \markup \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Überblasen }
+                                                - \tweak bound-details.right.padding 1
+                                                \startTextSpanOne
+                                                  %! abjad.glissando(7)
+                                                \glissando
+                                                \once \override Dots.staff-position = #2
+                                                  %! abjad.glissando(1)
+                                                \hide NoteHead
+                                                  %! abjad.glissando(1)
+                                                \override Accidental.stencil = ##f
+                                                  %! abjad.glissando(1)
+                                                \override NoteColumn.glissando-skip = ##t
+                                                  %! abjad.glissando(1)
+                                                \override NoteHead.no-ledgers = ##t
+                                                \override Staff.Stem.stemlet-length = 0.75
+                                                bqf16
+                                                [
+                                                  %! abjad.glissando(6)
+                                                \revert Accidental.stencil
+                                                  %! abjad.glissando(6)
+                                                \revert NoteColumn.glissando-skip
+                                                  %! abjad.glissando(6)
+                                                \revert NoteHead.no-ledgers
+                                                  %! abjad.glissando(6)
+                                                \undo \hide NoteHead
+                                                \revert Staff.Stem.stemlet-length
+                                                bqf16
+                                                    _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
+                                                \stopTextSpanOne
+                                                ]
+                                                \set fontSize = #-0.25
+                                                r8
+                                                r2
+                                            }
+                                        }
+                                    >>
+                                    \oneVoice
                                     \clef "bass"
                                     <ef, c>4
                                     \pp
@@ -3128,39 +3195,78 @@
                             R1 * 3/4
                               %! +SCORE
                             \stopStaff \startStaff
-                              %! +SCORE
-                            \once \override Staff.BarLine.transparent = ##f
-                              %! +SCORE
-                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                              %! +SCORE
-                            \once \override Staff.TimeSignature.transparent = ##t
-                              %! +SCORE
-                            \once \override MultiMeasureRest.transparent = ##t
-                            R1 * 1/2
-                              %! +SCORE
-                            \stopStaff \startStaff
-                              %! +SCORE
-                            \once \override Staff.BarLine.transparent = ##f
-                              %! +SCORE
-                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                              %! +SCORE
-                            \once \override Staff.TimeSignature.transparent = ##t
-                              %! +SCORE
-                            \once \override MultiMeasureRest.transparent = ##t
-                            R1 * 3/4
-                              %! +SCORE
-                            \stopStaff \startStaff
-                              %! +SCORE
-                            \once \override Staff.BarLine.transparent = ##f
-                              %! +SCORE
-                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                              %! +SCORE
-                            \once \override Staff.TimeSignature.transparent = ##t
-                              %! +SCORE
-                            \once \override MultiMeasureRest.transparent = ##t
-                            R1 * 1
-                              %! +SCORE
-                            \stopStaff \startStaff
+                            <<
+                                \context Voice = "percussion 1 voice secondary"
+                                {
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \override Staff.MultiMeasureRest.transparent = ##t
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    \voiceTwo
+                                    R1 * 1/2
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 3/4
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    R1 * 1
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                    \revert Staff.MultiMeasureRest.transparent
+                                }
+                                \tag #'einsatz
+                                {
+                                    \context Voice = "percussion 1 voice cue"
+                                    {
+                                        \set fontSize = #-3
+                                        \clef "bass"
+                                        \voiceOne
+                                        <ef, c>4
+                                        - \tweak padding 5
+                                        - \tweak whiteout 1
+                                        - \tweak whiteout-style #'outline
+                                        ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Klavier RH " } } }
+                                        \clef "treble"
+                                        <c'' ef'' e'' af''>4
+                                        \ottava 1
+                                        <fs''' e''''>4
+                                        \ottava 0
+                                        r4
+                                        \clef "bass"
+                                        <e, cs>4
+                                        r4
+                                        \clef "treble"
+                                        <ef'' e'' g'' b''>4
+                                        \ottava 1
+                                        <af''' fs''''>4
+                                        \ottava 0
+                                        \set fontSize = #-0.25
+                                        r4
+                                    }
+                                }
+                            >>
+                            \oneVoice
                             \clef "bass"
                             c2.
                             :32
@@ -3358,17 +3464,33 @@
                                     R1 * 3/4
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "percussion 2 voice secondary"
+                                        {
+                                              %! +PARTS
+                                        %%% \override Staff.MultiMeasureRest.transparent = ##t
+                                            \voiceTwo
+                                            R1 * 1
+                                              %! +PARTS
+                                        %%% \revert Staff.MultiMeasureRest.transparent
+                                        }
+                                        \tag #'einsatz
+                                        {
+                                            \context Voice = "percussion 2 voice cue"
+                                            {
+                                                \voiceOne
+                                                r2
+                                                \set fontSize = #-3
+                                                r2
+                                                - \tweak padding 5
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Ab hier bis Takt 85 nur Flöte " } } }
+                                                \set fontSize = #-0.25
+                                            }
+                                        }
+                                    >>
+                                    \oneVoice
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
@@ -3503,17 +3625,33 @@
                                     R1 * 3/4
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "percussion 3 voice secondary"
+                                        {
+                                              %! +PARTS
+                                        %%% \override Staff.MultiMeasureRest.transparent = ##t
+                                            \voiceTwo
+                                            R1 * 1
+                                              %! +PARTS
+                                        %%% \revert Staff.MultiMeasureRest.transparent
+                                        }
+                                        \tag #'einsatz
+                                        {
+                                            \context Voice = "percussion 3 voice cue"
+                                            {
+                                                \voiceOne
+                                                r2
+                                                \set fontSize = #-3
+                                                r2
+                                                - \tweak padding 5
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Ab hier bis Takt 85 nur Flöte " } } }
+                                                \set fontSize = #-0.25
+                                            }
+                                        }
+                                    >>
+                                    \oneVoice
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
@@ -3738,39 +3876,78 @@
                                     R1 * 3/4
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "violin 1 voice secondary"
+                                        {
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                            \override Staff.MultiMeasureRest.transparent = ##t
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            \voiceTwo
+                                            R1 * 1/2
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 3/4
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 1
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                            \revert Staff.MultiMeasureRest.transparent
+                                        }
+                                        \tag #'einsatz
+                                        {
+                                            \context Voice = "violin 1 voice cue"
+                                            {
+                                                \set fontSize = #-3
+                                                \clef "bass"
+                                                \voiceOne
+                                                <ef, c>4
+                                                - \tweak padding 5
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Klavier RH " } } }
+                                                \clef "treble"
+                                                <c'' ef'' e'' af''>4
+                                                \ottava 1
+                                                <fs''' e''''>4
+                                                \ottava 0
+                                                r4
+                                                \clef "bass"
+                                                <e, cs>4
+                                                r4
+                                                \clef "treble"
+                                                <ef'' e'' g'' b''>4
+                                                \ottava 1
+                                                <af''' fs''''>4
+                                                \ottava 0
+                                                \set fontSize = #-0.25
+                                                r4
+                                            }
+                                        }
+                                    >>
+                                    \oneVoice
                                     r2.
                                     r4
                                     \staff-line-count 4
@@ -4033,39 +4210,78 @@
                                     R1 * 3/4
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "violin 2 voice secondary"
+                                        {
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                            \override Staff.MultiMeasureRest.transparent = ##t
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            \voiceTwo
+                                            R1 * 1/2
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 3/4
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 1
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                            \revert Staff.MultiMeasureRest.transparent
+                                        }
+                                        \tag #'einsatz
+                                        {
+                                            \context Voice = "violin 2 voice cue"
+                                            {
+                                                \set fontSize = #-3
+                                                \clef "bass"
+                                                \voiceOne
+                                                <ef, c>4
+                                                - \tweak padding 5
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Klavier RH " } } }
+                                                \clef "treble"
+                                                <c'' ef'' e'' af''>4
+                                                \ottava 1
+                                                <fs''' e''''>4
+                                                \ottava 0
+                                                r4
+                                                \clef "bass"
+                                                <e, cs>4
+                                                r4
+                                                \clef "treble"
+                                                <ef'' e'' g'' b''>4
+                                                \ottava 1
+                                                <af''' fs''''>4
+                                                \ottava 0
+                                                \set fontSize = #-0.25
+                                                r4
+                                            }
+                                        }
+                                    >>
+                                    \oneVoice
                                     r2.
                                     r8
                                     \staff-line-count 4
@@ -4330,39 +4546,78 @@
                                     R1 * 3/4
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "viola voice secondary"
+                                        {
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                            \override Staff.MultiMeasureRest.transparent = ##t
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            \voiceTwo
+                                            R1 * 1/2
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 3/4
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 1
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                            \revert Staff.MultiMeasureRest.transparent
+                                        }
+                                        \tag #'einsatz
+                                        {
+                                            \context Voice = "viola voice cue"
+                                            {
+                                                \set fontSize = #-3
+                                                \clef "bass"
+                                                \voiceOne
+                                                <ef, c>4
+                                                - \tweak padding 5
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Klavier RH " } } }
+                                                \clef "treble"
+                                                <c'' ef'' e'' af''>4
+                                                \ottava 1
+                                                <fs''' e''''>4
+                                                \ottava 0
+                                                r4
+                                                \clef "bass"
+                                                <e, cs>4
+                                                r4
+                                                \clef "treble"
+                                                <ef'' e'' g'' b''>4
+                                                \ottava 1
+                                                <af''' fs''''>4
+                                                \ottava 0
+                                                \set fontSize = #-0.25
+                                                r4
+                                            }
+                                        }
+                                    >>
+                                    \oneVoice
                                     r2
                                     r16
                                     \staff-line-count 4
@@ -4799,39 +5054,78 @@
                                     R1 * 3/4
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/4
-                                      %! +SCORE
-                                    \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "contrabass voice secondary"
+                                        {
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                            \override Staff.MultiMeasureRest.transparent = ##t
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            \voiceTwo
+                                            R1 * 1/2
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 3/4
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            R1 * 1
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                            \revert Staff.MultiMeasureRest.transparent
+                                        }
+                                        \tag #'einsatz
+                                        {
+                                            \context Voice = "contrabass voice cue"
+                                            {
+                                                \set fontSize = #-3
+                                                \clef "bass"
+                                                \voiceOne
+                                                <ef, c>4
+                                                - \tweak padding 5
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Klavier RH " } } }
+                                                \clef "treble"
+                                                <c'' ef'' e'' af''>4
+                                                \ottava 1
+                                                <fs''' e''''>4
+                                                \ottava 0
+                                                r4
+                                                \clef "bass"
+                                                <e, cs>4
+                                                r4
+                                                \clef "treble"
+                                                <ef'' e'' g'' b''>4
+                                                \ottava 1
+                                                <af''' fs''''>4
+                                                \ottava 0
+                                                \set fontSize = #-0.25
+                                                r4
+                                            }
+                                        }
+                                    >>
+                                    \oneVoice
                                     \clef "bass"
                                     a,2.
                                     \mp

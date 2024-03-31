@@ -1,7 +1,7 @@
 \version "2.23.14"
 \language english
 #(set-default-paper-size "arch a")
-#(set-global-staff-size 14)
+#(set-global-staff-size 19)
 #(ly:set-option 'relative-includes #t)
 
 \include "../library.ily"
@@ -20,9 +20,9 @@ afterGraceFraction = #(cons 15 16)
 
 \layout {
     \accidentalStyle neo-modern
-    ragged-bottom = ##t
+    % ragged-bottom = ##t
     ragged-last = ##t
-    ragged-right = ##t
+    % ragged-right = ##t
     \context {
         \name TimeSignatureContext
         \numericTimeSignature
@@ -46,7 +46,7 @@ afterGraceFraction = #(cons 15 16)
         \override MetronomeMark.stencil = ##f
 		% \override TimeSignature.X-extent = #'(0 . -25)
         % \override TimeSignature.Y-extent = #'(25 . 0)
-        \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 2) (minimum-distance . 2) (padding . 2) (stretchability . 0))
+        \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 0.0001) (minimum-distance . 0.0001) (padding . 0.0001) (stretchability . 0))
         \override TimeSignature.break-visibility = #end-of-line-invisible
         \override TimeSignature.transparent = ##t
         % \override TimeSignature.font-size = 10
@@ -66,8 +66,8 @@ afterGraceFraction = #(cons 15 16)
         proportionalNotationDuration = #(ly:make-moment 1 20)
         pedalSustainStyle = #'bracket
 
-        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 0) (minimum distance . 5) (padding . 8) (stretchability . 28))
-        \override StaffGrouper.staffgroup-staff-spacing = #'((basic-distance . 0) (minimum distance . 5) (padding . 8) (stretchability . 28))
+        \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 0) (minimum distance . 0) (padding . 1) (stretchability . 0))
+        \override StaffGrouper.staffgroup-staff-spacing = #'((basic-distance . 0) (minimum distance . 0) (padding . 1) (stretchability . 0))
 
         \override AccidentalSuggestion.avoid-slur = #'ignore
         % \override Accidental.X-extent = ##f
@@ -84,7 +84,7 @@ afterGraceFraction = #(cons 15 16)
         \override Beam.beam-thickness = #0.75
         \override Beam.length-fraction = 1.5
 
-        \override BendAfter.thickness = #3
+        \override BendAfter.thickness = #4.5
 
         \override BreathingSign.text = \markup {
             \fontsize #7.5
@@ -102,7 +102,7 @@ afterGraceFraction = #(cons 15 16)
         \override DynamicText.whiteout = 1
         \override DynamicLineSpanner.staff-padding = 4
 
-        \override Glissando.thickness = #3
+        \override Glissando.thickness = #4.5
         \override Glissando.breakable = ##t
 
         \override Hairpin.to-barline = ##f
@@ -175,8 +175,13 @@ afterGraceFraction = #(cons 15 16)
     \context {
         \Staff
         fontSize = #-0.25
-        \remove Time_signature_engraver
+        % \remove Time_signature_engraver
         \consists Duration_line_engraver
+
+        \override TimeSignature.font-size = 3
+        \override TimeSignature.whiteout-style = #'outline
+        \override TimeSignature.whiteout = 1
+        \override TimeSignature.layer = 20
 
         \override DurationLine.style = #'line
         \override DurationLine.thickness = #3
@@ -217,15 +222,15 @@ afterGraceFraction = #(cons 15 16)
 }
 %
 \paper {
-    % max-systems-per-page = 3
+    % min-systems-per-page = 5
     % system-separator-markup = \markup \fontsize #12 { \tremolo-moderato }
     system-system-spacing = #'((basic-distance . 20) (minimum-distance . 20) (padding . 10))
-    indent = 20\mm
-    short-indent = 15\mm
+    indent = 25\mm
+    short-indent = 25\mm
     bottom-margin = 10\mm
     left-margin = 10\mm
     right-margin = 10\mm
-    top-margin = 17\mm
+    top-margin = 25\mm
 
     oddHeaderMarkup = \markup ""
     evenHeaderMarkup = \markup ""

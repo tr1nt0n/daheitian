@@ -4,20 +4,6 @@
         {
             \time 5/4
             s1 * 5/4
-              %! +PARTS
-        %%% ^ \markup {
-              %! +PARTS
-          %%% \raise #23 \with-dimensions-from \null
-              %! +PARTS
-          %%% \override #'(font-size . 5.5)
-              %! +PARTS
-          %%% \concat {
-              %! +PARTS
-              %%% \abjad-metronome-mark-markup #2 #0 #1 #"48"
-              %! +PARTS
-          %%% }
-              %! +PARTS
-        %%% }
               %! +SCORE
             ^ \markup {
               %! +SCORE
@@ -32,6 +18,20 @@
               }
               %! +SCORE
             }
+              %! +PARTS
+        %%% ^ \markup {
+              %! +PARTS
+          %%% \raise #5 \with-dimensions-from \null
+              %! +PARTS
+          %%% \override #'(font-size . 5.5)
+              %! +PARTS
+          %%% \concat {
+              %! +PARTS
+              %%% \abjad-metronome-mark-markup #2 #0 #1 #"48"
+              %! +PARTS
+          %%% }
+              %! +PARTS
+        %%% }
             \once \override Score.BarLine.transparent = ##f
             \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
@@ -39,6 +39,7 @@
             R1 * 1/4
             - \tweak font-size #'15
             _ \short-fermata
+            \break
             \once \override Score.BarLine.transparent = ##f
         }
         \tag #'group1

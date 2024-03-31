@@ -210,6 +210,7 @@ trinton.make_music(
         ),
     ),
     evans.RewriteMeterCommand(boundary_depth=-2),
+    library.change_lines(lines=1, clef="percussion"),
     library.boxed_markup(string="Triangel"),
     library.ring_mod_attachments(dynamics=["ppp +"], direction=abjad.DOWN),
     trinton.tremolo_command(),
@@ -766,6 +767,95 @@ trinton.make_music(
     ),
     voice=score["Global Context"],
 )
+
+# cues
+
+for voice_name in ["harp 1 voice", "percussion 2 voice"]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (1, 4)),
+        trinton.attachment_command(
+            attachments=[
+                abjad.LilyPondLiteral(
+                    r"\override Staff.MultiMeasureRest.transparent = ##t", site="before"
+                ),
+                abjad.LilyPondLiteral(
+                    r"\revert Staff.MultiMeasureRest.transparent", site="absolute_after"
+                ),
+            ],
+            selector=trinton.select_leaves_by_index(
+                [
+                    0,
+                ]
+            ),
+            tag=abjad.Tag("+PARTS"),
+        ),
+        trinton.IntermittentVoiceHandler(
+            rhythm_handler=evans.RhythmHandler(
+                evans.talea(
+                    trinton.rotated_sequence(library.oboe_chant_talea, 4),
+                    16,
+                    treat_tuplets=False,
+                ),
+            ),
+            direction=abjad.DOWN,
+            voice_name=f"{voice_name} cue",
+            from_components=False,
+            preprocessor=trinton.fuse_sixteenths_preprocessor((51, 70)),
+            temp_name="secondary",
+        ),
+        voice=score[voice_name],
+    )
+
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (1, 4)),
+        trinton.force_rest(selector=trinton.select_tuplets_by_index([0])),
+        trinton.treat_tuplets(),
+        evans.RewriteMeterCommand(boundary_depth=-2),
+        evans.PitchHandler([12]),
+        library.change_lines(lines=5, clef="treble"),
+        trinton.linear_attachment_command(
+            attachments=[
+                abjad.StartHairpin("o<"),
+                abjad.Dynamic("ff"),
+            ],
+            selector=trinton.select_logical_ties_by_index(
+                [0, -1], first=True, pitched=True
+            ),
+        ),
+        trinton.attachment_command(
+            attachments=[abjad.Articulation("tenuto")],
+            selector=trinton.logical_ties(pitched=True, first=True),
+        ),
+        library.patterned_graces(
+            grace_selector=trinton.patterned_tie_index_selector(
+                [
+                    1,
+                ],
+                4,
+            )
+        ),
+        trinton.pitch_with_selector_command(
+            pitch_list=["fs''"], selector=trinton.pleaves(grace=True)
+        ),
+        library.grace_attachments(),
+        trinton.attachment_command(
+            attachments=[abjad.Clef("treble")],
+            selector=trinton.select_logical_ties_by_index(
+                [0], first=True, pitched=True
+            ),
+        ),
+        library.einsatz(
+            following_text="Bassklarinette ( 1. soli )",
+            selector=trinton.pleaves(),
+            direction=abjad.UP,
+            tweaks=None,
+            padding=0,
+        ),
+        library.cue_eraser(),
+        voice=score[f"{voice_name} cue"],
+        beam_meter=True,
+    )
+
 
 # cutaway
 

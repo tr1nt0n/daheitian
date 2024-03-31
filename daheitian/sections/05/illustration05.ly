@@ -68,6 +68,7 @@
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
                                       %! +SCORE
                                     \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
+                                    \clef "treble"
                                     \tweak style #'la
                                     cs'4.
                                     :32
@@ -419,6 +420,7 @@
                                             \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bassklarinetten }
                                               %! +SCORE
                                             \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { bkl. }
+                                            \clef "treble"
                                             \voiceOne
                                             r4.
                                             r4
@@ -615,80 +617,60 @@
                                             \stopStaff \startStaff
                                             \revert Staff.MultiMeasureRest.transparent
                                         }
-                                        \context Voice = "bassoon intermittent voice 1"
+                                        \tag #'einsatz
                                         {
-                                              %! +PARTS
-                                        %%% \clef "bass"
-                                              %! +PARTS
-                                        %%% \voiceOne
-                                              %! +PARTS
-                                        %%% aqf,4.
-                                              %! +PARTS
-                                        %%% - \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "1. soli" }
-                                              %! +PARTS
-                                        %%% - \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Wenn keine erste Bassklarinette:" }
-                                              %! +PARTS
-                                        %%% - \tweak circled-tip ##t
-                                              %! +PARTS
-                                        %%% \<
-                                              %! +PARTS
-                                        %%% \glissando
-                                              %! +PARTS
-                                        %%% \once \override Dots.staff-position = #2
-                                              %! +PARTS
-                                        %%% \hide NoteHead
-                                              %! +PARTS
-                                        %%% \override Accidental.stencil = ##f
-                                              %! +PARTS
-                                        %%% \override NoteColumn.glissando-skip = ##t
-                                              %! +PARTS
-                                        %%% \override NoteHead.no-ledgers = ##t
-                                              %! +PARTS
-                                        %%% aqf,8.
-                                              %! +PARTS
-                                        %%% \once \override Dots.staff-position = #2
-                                              %! +PARTS
-                                        %%% aqf,4..
-                                              %! +PARTS
-                                        %%% \once \override Dots.staff-position = #2
-                                              %! +PARTS
-                                        %%% aqf,8.
-                                              %! +PARTS
-                                        %%% \once \override Dots.staff-position = #2
-                                              %! +PARTS
-                                        %%% aqf,8
-                                              %! +PARTS
-                                        %%% \once \override Dots.staff-position = #2
-                                            \override Staff.Stem.stemlet-length = 0.75
-                                              %! +PARTS
-                                        %%% aqf,16
-                                            [
-                                              %! +PARTS
-                                        %%% \once \override Dots.staff-position = #2
-                                            \revert Staff.Stem.stemlet-length
-                                              %! +PARTS
-                                        %%% aqf,16
-                                              %! +PARTS
-                                        %%% \ppp
-                                            ]
-                                              %! +PARTS
-                                        %%% \once \override Dots.staff-position = #2
-                                              %! +PARTS
-                                        %%% aqf,8.
-                                              %! +PARTS
-                                        %%% \once \override Dots.staff-position = #2
-                                              %! +PARTS
-                                        %%% aqf,8
-                                              %! +PARTS
-                                        %%% \revert Accidental.stencil
-                                              %! +PARTS
-                                        %%% \revert NoteColumn.glissando-skip
-                                              %! +PARTS
-                                        %%% \revert NoteHead.no-ledgers
-                                              %! +PARTS
-                                        %%% \undo \hide NoteHead
-                                              %! +PARTS
-                                        %%% aqf,4
+                                            \context Voice = "bassoon intermittent voice 1"
+                                            {
+                                                \clef "bass"
+                                                \voiceOne
+                                                aqf,4.
+                                                - \tweak padding 3
+                                                ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "1. soli" }
+                                                - \tweak padding 5
+                                                ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Wenn keine erste Bassklarinette:" }
+                                                - \tweak circled-tip ##t
+                                                \<
+                                                  %! abjad.glissando(7)
+                                                \glissando
+                                                \once \override Dots.staff-position = #2
+                                                  %! abjad.glissando(1)
+                                                \hide NoteHead
+                                                  %! abjad.glissando(1)
+                                                \override Accidental.stencil = ##f
+                                                  %! abjad.glissando(1)
+                                                \override NoteColumn.glissando-skip = ##t
+                                                  %! abjad.glissando(1)
+                                                \override NoteHead.no-ledgers = ##t
+                                                aqf,8.
+                                                \once \override Dots.staff-position = #2
+                                                aqf,4..
+                                                \once \override Dots.staff-position = #2
+                                                aqf,8.
+                                                \once \override Dots.staff-position = #2
+                                                aqf,8
+                                                \once \override Dots.staff-position = #2
+                                                \override Staff.Stem.stemlet-length = 0.75
+                                                aqf,16
+                                                [
+                                                \once \override Dots.staff-position = #2
+                                                \revert Staff.Stem.stemlet-length
+                                                aqf,16
+                                                \ppp
+                                                ]
+                                                \once \override Dots.staff-position = #2
+                                                aqf,8.
+                                                \once \override Dots.staff-position = #2
+                                                aqf,8
+                                                  %! abjad.glissando(6)
+                                                \revert Accidental.stencil
+                                                  %! abjad.glissando(6)
+                                                \revert NoteColumn.glissando-skip
+                                                  %! abjad.glissando(6)
+                                                \revert NoteHead.no-ledgers
+                                                  %! abjad.glissando(6)
+                                                \undo \hide NoteHead
+                                                aqf,4
+                                            }
                                         }
                                     >>
                                     \oneVoice
@@ -1326,6 +1308,7 @@
                                     \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
                                       %! +SCORE
                                     \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
+                                    \clef "treble"
                                     \override Staff.Stem.stemlet-length = 0.75
                                     <a''' bf''' ds'''' e'''' fs''''>8
                                     :64

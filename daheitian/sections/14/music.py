@@ -762,7 +762,7 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (7, 8)),
     rmakers.rewrite_dots,
     evans.PitchHandler(["aqf,"]),
-    library.ring_mod_attachments(dynamics=["ff"]),
+    library.ring_mod_attachments(dynamics=["ff"], direction=abjad.DOWN),
     trinton.notehead_bracket_command(),
     library.wenn_keine_bk(),
     library.soli_1(
@@ -1500,6 +1500,198 @@ trinton.fermata_measures(
     blank=False,
     clef_whitespace=False,
 )
+
+# cues
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (1, 2)),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.LilyPondLiteral(
+                r"\override Staff.MultiMeasureRest.transparent = ##t", site="before"
+            ),
+            abjad.LilyPondLiteral(
+                r"\revert Staff.MultiMeasureRest.transparent", site="absolute_after"
+            ),
+        ],
+        selector=trinton.select_leaves_by_index([0, -1]),
+        tag=abjad.Tag("+PARTS"),
+    ),
+    trinton.IntermittentVoiceHandler(
+        evans.RhythmHandler(
+            evans.RhythmHandler(
+                evans.talea([-5, 4, 1, -10], 16),
+            ),
+        ),
+        direction=abjad.UP,
+        voice_name="piano 1 voice cue",
+        from_components=False,
+        preprocessor=trinton.fuse_eighths_preprocessor(
+            (
+                3,
+                2,
+                3,
+            )
+        ),
+        temp_name="secondary",
+    ),
+    voice=score["piano 1 voice"],
+)
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (1, 2)),
+    evans.RewriteMeterCommand(boundary_depth=-2),
+    evans.PitchHandler(["bqf"]),
+    trinton.glissando_command(
+        selector=trinton.ranged_selector(ranges=[range(2, 5)], nested=True),
+        no_ties=True,
+    ),
+    trinton.linear_attachment_command(
+        attachments=[
+            abjad.StartHairpin("o<"),
+            trinton.make_custom_dynamic(
+                "fffff",
+            ),
+        ],
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+    ),
+    trinton.spanner_command(
+        strings=[
+            library.return_boxed_markup(
+                string="Ton",
+            ),
+            library.return_boxed_markup(
+                string="Überblasen",
+            ),
+        ],
+        selector=trinton.select_leaves_by_index([0, -1], pitched=True),
+        style="solid-line-with-arrow",
+        padding=9.5,
+        full_string=True,
+        command="One",
+        right_padding=-1,
+    ),
+    trinton.attachment_command(
+        attachments=[abjad.Clef("bass")], selector=trinton.select_leaves_by_index([0])
+    ),
+    library.einsatz(following_text="Erste Bassklarinette", padding=12),
+    library.cue_eraser(),
+    voice=score["piano 1 voice cue"],
+    beam_meter=True,
+)
+
+for voice_name in [
+    "violin 1 voice",
+    "violin 2 voice",
+    "viola voice",
+    "contrabass voice",
+    "oboe voice",
+    "percussion 1 voice",
+]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (3, 5)),
+        trinton.linear_attachment_command(
+            attachments=[
+                abjad.LilyPondLiteral(
+                    r"\override Staff.MultiMeasureRest.transparent = ##t", site="before"
+                ),
+                abjad.LilyPondLiteral(
+                    r"\revert Staff.MultiMeasureRest.transparent", site="absolute_after"
+                ),
+            ],
+            selector=trinton.select_leaves_by_index([0, -1]),
+            tag=abjad.Tag("+PARTS"),
+        ),
+        trinton.IntermittentVoiceHandler(
+            evans.RhythmHandler(
+                evans.talea([1, 1, 1, -1, 1, -1, 1, 1, -1], 4),
+            ),
+            direction=abjad.UP,
+            voice_name=f"{voice_name} cue",
+            from_components=False,
+            preprocessor=None,
+            temp_name="secondary",
+        ),
+        voice=score[voice_name],
+    )
+
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (3, 5)),
+        evans.PitchHandler(library.piano_chords(hand="rh", index=3)),
+        library.handle_clefs(),
+        trinton.ottava_command(
+            selector=trinton.select_leaves_by_index(
+                [
+                    2,
+                    2,
+                    5,
+                    5,
+                ],
+                pitched=True,
+            )
+        ),
+        trinton.attachment_command(
+            attachments=[
+                abjad.Clef("bass"),
+            ],
+            selector=trinton.select_leaves_by_index([0], pitched=True),
+        ),
+        library.einsatz(
+            following_text="Klavier RH",
+            # padding=12
+        ),
+        library.cue_eraser(),
+        voice=score[f"{voice_name} cue"],
+        beam_meter=True,
+    )
+
+for voice_name in [
+    "frenchhorn voice",
+    "trumpet voice",
+    "tenortrombone voice",
+    "percussion 2 voice",
+    "percussion 3 voice",
+]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (8,)),
+        trinton.linear_attachment_command(
+            attachments=[
+                abjad.LilyPondLiteral(
+                    r"\override Staff.MultiMeasureRest.transparent = ##t", site="before"
+                ),
+                abjad.LilyPondLiteral(
+                    r"\revert Staff.MultiMeasureRest.transparent", site="absolute_after"
+                ),
+            ],
+            selector=trinton.select_leaves_by_index([0, -1]),
+            tag=abjad.Tag("+PARTS"),
+        ),
+        trinton.IntermittentVoiceHandler(
+            evans.RhythmHandler(
+                evans.talea([-1, -1], 2, treat_tuplets=False),
+            ),
+            direction=abjad.UP,
+            voice_name=f"{voice_name} cue",
+            from_components=False,
+            preprocessor=None,
+            temp_name="secondary",
+        ),
+        voice=score[voice_name],
+    )
+
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (8,)),
+        rmakers.trivialize,
+        rmakers.extract_trivial,
+        library.einsatz(
+            following_text="Ab hier bis Takt 85 nur Flöte",
+            selector=trinton.select_leaves_by_index([-1]),
+        ),
+        library.cue_eraser(),
+        voice=score[f"{voice_name} cue"],
+        beam_meter=True,
+    )
+
 
 # cutaway
 

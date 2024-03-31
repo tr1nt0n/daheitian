@@ -361,7 +361,7 @@ trinton.make_music(
         selector=trinton.logical_ties(pitched=True, first=True),
     ),
     trinton.attachment_command(
-        attachments=[abjad.Dynamic("ff")],
+        attachments=[abjad.Clef("treble"), abjad.Dynamic("ff")],
         selector=trinton.select_leaves_by_index(
             [
                 0,

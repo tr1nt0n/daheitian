@@ -256,7 +256,7 @@ for measure, tempo in zip(
 for voice_name in ["flute voice", "bassclarinet voice", "harp 1 voice"]:
     trinton.make_music(
         lambda _: trinton.select_target(_, (6,)),
-        trinton.linear_attachment_command(
+        trinton.attachment_command(
             attachments=[
                 abjad.LilyPondLiteral(
                     r"\override Staff.MultiMeasureRest.transparent = ##t", site="before"

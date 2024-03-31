@@ -5,6 +5,7 @@
 \include "/Users/trintonprater/abjad/abjad/scm/abjad.ily"
 
 \score {
+    \removeWithTag #'einsatz
     {
         \include "01.ly"
         \include "02.ly"

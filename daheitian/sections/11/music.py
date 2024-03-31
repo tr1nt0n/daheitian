@@ -494,6 +494,137 @@ trinton.make_music(
     voice=score["Global Context"],
 )
 
+# cues
+
+for voice_name in ["flute voice", "frenchhorn voice", "percussion 2 voice"]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (4, 9)),
+        trinton.attachment_command(
+            attachments=[
+                abjad.LilyPondLiteral(
+                    r"\override Staff.MultiMeasureRest.transparent = ##t", site="before"
+                ),
+                abjad.LilyPondLiteral(
+                    r"\revert Staff.MultiMeasureRest.transparent", site="absolute_after"
+                ),
+            ],
+            selector=trinton.select_leaves_by_index(
+                [
+                    0,
+                ]
+            ),
+            tag=abjad.Tag("+PARTS"),
+        ),
+        trinton.IntermittentVoiceHandler(
+            rhythm_handler=evans.RhythmHandler(
+                evans.talea(
+                    [
+                        2,
+                        5,
+                        1,
+                        1,
+                        1,
+                        1,
+                        1,
+                        6,
+                        7,
+                        1,
+                        1,
+                        1,
+                    ],
+                    16,
+                    extra_counts=[
+                        2,
+                        0,
+                        4,
+                        0,
+                    ],
+                )
+            ),
+            direction=abjad.DOWN,
+            voice_name=f"{voice_name} cue",
+            from_components=False,
+            preprocessor=trinton.fuse_quarters_preprocessor((3, 2)),
+            temp_name="secondary",
+        ),
+        voice=score[voice_name],
+    )
+
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (4, 9)),
+        trinton.force_rest(
+            selector=trinton.patterned_tie_index_selector(
+                [
+                    2,
+                ],
+                5,
+            )
+        ),
+        evans.RewriteMeterCommand(boundary_depth=-2),
+        evans.PitchHandler(["f''''", "ef''''", "g''''", "b'''", "a''''", "cs''''"]),
+        library.change_lines(lines=5, clef="treble"),
+        library.unpitched_glissandi(trill=True),
+        trinton.call_rmaker(
+            rmaker=rmakers.beam,
+            selector=trinton.ranged_selector(
+                ranges=[
+                    range(22, 24),
+                    range(
+                        31,
+                        33,
+                    ),
+                    range(33, 37),
+                ],
+                nested=True,
+            ),
+        ),
+        trinton.linear_attachment_command(
+            attachments=[
+                abjad.LilyPondLiteral(
+                    r"\once \override DynamicLineSpanner.padding = 6", site="before"
+                ),
+                abjad.StartHairpin("o<"),
+                trinton.make_custom_dynamic("pp +"),
+            ],
+            selector=trinton.select_leaves_by_index([0, 0, -7], pitched=True),
+        ),
+        trinton.notehead_bracket_command(),
+        trinton.ottava_command(
+            selector=trinton.select_leaves_by_index([0, -1], pitched=True)
+        ),
+        library.einsatz(
+            following_text="Erste Geige ( 1. soli )",
+            selector=trinton.pleaves(),
+            direction=abjad.UP,
+            tweaks=None,
+            padding=0,
+        ),
+        library.cue_eraser(),
+        voice=score[f"{voice_name} cue"],
+        beam_meter=True,
+    )
+
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (4, 8)),
+        trinton.attachment_command(
+            attachments=[abjad.Articulation("tenuto")],
+            selector=trinton.logical_ties(first=True, pitched=True),
+            direction=abjad.UP,
+        ),
+        voice=score[f"{voice_name} cue"],
+    )
+
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (9,)),
+        trinton.attachment_command(
+            attachments=[abjad.Articulation(">")],
+            selector=trinton.logical_ties(first=True, pitched=True),
+            direction=abjad.UP,
+        ),
+        voice=score[f"{voice_name} cue"],
+    )
+
+
 # cutaway
 
 trinton.whiteout_empty_staves(score=score, cutaway="blank")

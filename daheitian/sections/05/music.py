@@ -335,6 +335,11 @@ trinton.make_music(
     voice=score["Global Context"],
 )
 
+# cues
+
+for voice_name in ["flute voice", "harp 1 voice", "bassclarinet voice"]:
+    abjad.attach(abjad.Clef("treble"), abjad.select.leaf(score[voice_name], 0))
+
 # cutaway
 
 trinton.whiteout_empty_staves(
