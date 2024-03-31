@@ -3947,6 +3947,7 @@
                                     a4
                                     - \tenuto
                                     \laissezVibrer
+                                    \boxed-markup "Die Harfe bis nach der folgenden Fermate klingen lassen" 1
                                 }
                             }
                         }

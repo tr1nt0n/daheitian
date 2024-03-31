@@ -251,6 +251,63 @@ for measure, tempo in zip(
         voice=score["Global Context"],
     )
 
+# cues
+
+for voice_name in ["flute voice", "bassclarinet voice", "harp 1 voice"]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (6,)),
+        trinton.linear_attachment_command(
+            attachments=[
+                abjad.LilyPondLiteral(
+                    r"\override Staff.MultiMeasureRest.transparent = ##t", site="before"
+                ),
+                abjad.LilyPondLiteral(
+                    r"\revert Staff.MultiMeasureRest.transparent", site="absolute_after"
+                ),
+            ],
+            selector=trinton.select_leaves_by_index(
+                [
+                    0,
+                ]
+            ),
+            tag=abjad.Tag("+PARTS"),
+        ),
+        trinton.IntermittentVoiceHandler(
+            rhythm_handler=evans.RhythmHandler(evans.talea([1], 1)),
+            direction=abjad.UP,
+            voice_name=f"{voice_name} cue",
+            from_components=False,
+            temp_name="secondary",
+        ),
+        voice=score[voice_name],
+    ),
+
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (6,)),
+        library.aftergrace("aqs,16"),
+        evans.PitchHandler(["c", "aqs,"]),
+        trinton.linear_attachment_command(
+            attachments=[
+                abjad.Clef("bass"),
+                abjad.Glissando(),
+                abjad.Dynamic("mp"),
+                abjad.StartHairpin(">o"),
+                abjad.StopHairpin(),
+            ],
+            selector=trinton.select_leaves_by_index([0, 0, 0, 0, -1]),
+        ),
+        trinton.tremolo_command(),
+        library.einsatz(
+            following_text="Pauken",
+            selector=trinton.pleaves(),
+            direction=abjad.UP,
+            tweaks=None,
+            padding=0,
+        ),
+        library.cue_eraser(),
+        voice=score[f"{voice_name} cue"],
+    )
+
 # cutaway
 
 trinton.whiteout_empty_staves(score=score, cutaway="blank")

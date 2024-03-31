@@ -175,6 +175,7 @@ afterGraceFraction = #(cons 15 16)
     \context {
         \Staff
         fontSize = #-0.25
+        \remove Time_signature_engraver
         \consists Duration_line_engraver
 
         \override DurationLine.style = #'line
@@ -183,22 +184,28 @@ afterGraceFraction = #(cons 15 16)
         \override DurationLine.breakable = ##t
 
         \override InstrumentName.self-alignment-X = #CENTER
+    }
 
-        \override TimeSignature.break-visibility = #end-of-line-invisible
-        \override TimeSignature.font-size = 2
-        \override TimeSignature.whiteout-style = #'outline
-        \override TimeSignature.whiteout = 1
-        \override TimeSignature.layer = 4
+    \context {
+        \Staff
+        \name divisiStaff
+        \type Engraver_group
+        % \consists Measure_spanner_engraver
+
+        \RemoveAllEmptyStaves
+        \alias Staff
     }
 
     \context {
         \StaffGroup
         \name SquareBracketGroup
+        \accepts divisiStaff
     }
 
     \context {
         \StaffGroup
         \accepts SquareBracketGroup
+        \accepts divisiStaff
         \remove System_start_delimiter_engraver
     }
 

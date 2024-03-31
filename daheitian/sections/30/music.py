@@ -243,6 +243,10 @@ trinton.make_music(
         ],
         selector=trinton.logical_ties(first=True, pitched=True),
     ),
+    library.boxed_markup(
+        string="Die Harfe bis nach der folgenden Fermate klingen lassen",
+        selector=trinton.select_logical_ties_by_index([-1], pitched=True, first=True),
+    ),
     voice=score["harp 2 voice"],
 )
 

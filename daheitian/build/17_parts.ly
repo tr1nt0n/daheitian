@@ -1788,8 +1788,10 @@
                                 \context Voice = "violin 1 voice"
                                 {
                                     \staff-line-count 4
+                                    \once \override Accidental.stencil = ##f
                                     \once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2
-                                    \revert Staff.Clef.stencil
+                                    \override Staff.Clef.stencil = #ly:text-interface::print
+                                    \override Staff.Clef.text = \string-clef
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
                                       %! +SCORE
                                 %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 }
@@ -2020,8 +2022,10 @@
                                 \context Voice = "violin 2 voice"
                                 {
                                     \staff-line-count 4
+                                    \once \override Accidental.stencil = ##f
                                     \once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2
-                                    \revert Staff.Clef.stencil
+                                    \override Staff.Clef.stencil = #ly:text-interface::print
+                                    \override Staff.Clef.text = \string-clef
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
                                       %! +SCORE
                                 %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 }
@@ -2249,8 +2253,10 @@
                                 \context Voice = "viola voice"
                                 {
                                     \staff-line-count 4
+                                    \once \override Accidental.stencil = ##f
                                     \once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2
-                                    \revert Staff.Clef.stencil
+                                    \override Staff.Clef.stencil = #ly:text-interface::print
+                                    \override Staff.Clef.text = \string-clef
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
                                       %! +SCORE
                                 %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. }
@@ -2478,8 +2484,10 @@
                                 \context Voice = "cello voice"
                                 {
                                     \staff-line-count 4
+                                    \once \override Accidental.stencil = ##f
                                     \once \override TextScript.whiteout-style = #'outline \once \override TextScript.whiteout = 1 \once \override TextScript.layer = 2
-                                    \revert Staff.Clef.stencil
+                                    \override Staff.Clef.stencil = #ly:text-interface::print
+                                    \override Staff.Clef.text = \string-clef
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
                                       %! +SCORE
                                 %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. }

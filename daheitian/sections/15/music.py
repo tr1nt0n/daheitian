@@ -1026,15 +1026,15 @@ trinton.make_music(
     trinton.spanner_command(
         strings=[
             library.metronome_markups(
-                met_string=library.metronome_marks["144"],
-                mod_string=library.metronome_marks["5:4(8)=4"],
+                met_string=library.metronome_marks["96"],
+                mod_string=library.metronome_marks["5:3(4)=4"],
                 string_only=True,
                 parenthesis=True,
                 interpolation="Rit.",
             ),
             library.metronome_markups(
                 met_string=library.metronome_marks["48"],
-                mod_string=library.metronome_marks["2.=4"],
+                mod_string=library.metronome_marks["2=4"],
                 string_only=True,
             ),
         ],

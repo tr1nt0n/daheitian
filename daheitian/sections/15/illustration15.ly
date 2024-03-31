@@ -20,8 +20,8 @@
             s1 * 1/2
             - \tweak padding #11.5
             - \abjad-solid-line-with-arrow
-            - \tweak bound-details.left.text \markup \concat { { \override #'(font-size . 5.5) \concat { \abjad-metronome-mark-markup #2 #0 #1 #"144" [\abjad-metric-modulation-tuplet-lhs #3 #0 #4 #5 #2 #0 #'(1 . 1)] Rit. } } \hspace #0.5 }
-            - \tweak bound-details.right.text \markup { \override #'(font-size . 5.5) \concat { \abjad-metronome-mark-markup #2 #0 #1 #"48" [\abjad-metric-modulation #1 #1 #2 #0 #'(1 . 1)]  } }
+            - \tweak bound-details.left.text \markup \concat { { \override #'(font-size . 5.5) \concat { \abjad-metronome-mark-markup #2 #0 #1 #"96" [\abjad-metric-modulation-tuplet-lhs #2 #0 #3 #5 #2 #0 #'(1 . 1)] Rit. } } \hspace #0.5 }
+            - \tweak bound-details.right.text \markup { \override #'(font-size . 5.5) \concat { \abjad-metronome-mark-markup #2 #0 #1 #"48" [\abjad-metric-modulation #1 #0 #2 #0 #'(1 . 1)]  } }
             \startTextSpan
             \time 3/4
             s1 * 3/4

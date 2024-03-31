@@ -144,17 +144,53 @@
                                     R1 * 1/4
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "flute voice secondary"
+                                        {
+                                              %! +PARTS
+                                        %%% \override Staff.MultiMeasureRest.transparent = ##t
+                                            \voiceTwo
+                                            R1 * 1
+                                        }
+                                        \context Voice = "flute voice cue"
+                                        {
+                                              %! +PARTS
+                                        %%% \set fontSize = #-3
+                                              %! +PARTS
+                                        %%% \clef "bass"
+                                              %! +PARTS
+                                        %%% \voiceOne
+                                            \afterGrace
+                                              %! +PARTS
+                                        %%% c1
+                                              %! +PARTS
+                                        %%% :32
+                                              %! +PARTS
+                                        %%% \mp
+                                              %! +PARTS
+                                        %%% - \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Pauken " } } }
+                                              %! +PARTS
+                                        %%% - \tweak circled-tip ##t
+                                              %! +PARTS
+                                        %%% \>
+                                              %! +PARTS
+                                        %%% \glissando
+                                            {
+                                                  %! +PARTS
+                                            %%% \once \override Flag.stroke-style = #"grace"
+                                                  %! +PARTS
+                                            %%% aqs,16
+                                                  %! +PARTS
+                                            %%% :128
+                                                  %! +PARTS
+                                            %%% \!
+                                                  %! +PARTS
+                                            %%% \set fontSize = #-0.25
+                                              %! +PARTS
+                                        %%% }
+                                        }
+                                    >>
+                                    \oneVoice
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
@@ -408,17 +444,53 @@
                                     R1 * 1/4
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "bassclarinet voice secondary"
+                                        {
+                                              %! +PARTS
+                                        %%% \override Staff.MultiMeasureRest.transparent = ##t
+                                            \voiceTwo
+                                            R1 * 1
+                                        }
+                                        \context Voice = "bassclarinet voice cue"
+                                        {
+                                              %! +PARTS
+                                        %%% \set fontSize = #-3
+                                              %! +PARTS
+                                        %%% \clef "bass"
+                                              %! +PARTS
+                                        %%% \voiceOne
+                                            \afterGrace
+                                              %! +PARTS
+                                        %%% c1
+                                              %! +PARTS
+                                        %%% :32
+                                              %! +PARTS
+                                        %%% \mp
+                                              %! +PARTS
+                                        %%% - \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Pauken " } } }
+                                              %! +PARTS
+                                        %%% - \tweak circled-tip ##t
+                                              %! +PARTS
+                                        %%% \>
+                                              %! +PARTS
+                                        %%% \glissando
+                                            {
+                                                  %! +PARTS
+                                            %%% \once \override Flag.stroke-style = #"grace"
+                                                  %! +PARTS
+                                            %%% aqs,16
+                                                  %! +PARTS
+                                            %%% :128
+                                                  %! +PARTS
+                                            %%% \!
+                                                  %! +PARTS
+                                            %%% \set fontSize = #-0.25
+                                              %! +PARTS
+                                        %%% }
+                                        }
+                                    >>
+                                    \oneVoice
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
@@ -1128,17 +1200,53 @@
                                     R1 * 1/4
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "harp 1 voice secondary"
+                                        {
+                                              %! +PARTS
+                                        %%% \override Staff.MultiMeasureRest.transparent = ##t
+                                            \voiceTwo
+                                            R1 * 1
+                                        }
+                                        \context Voice = "harp 1 voice cue"
+                                        {
+                                              %! +PARTS
+                                        %%% \set fontSize = #-3
+                                              %! +PARTS
+                                        %%% \clef "bass"
+                                              %! +PARTS
+                                        %%% \voiceOne
+                                            \afterGrace
+                                              %! +PARTS
+                                        %%% c1
+                                              %! +PARTS
+                                        %%% :32
+                                              %! +PARTS
+                                        %%% \mp
+                                              %! +PARTS
+                                        %%% - \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Pauken " } } }
+                                              %! +PARTS
+                                        %%% - \tweak circled-tip ##t
+                                              %! +PARTS
+                                        %%% \>
+                                              %! +PARTS
+                                        %%% \glissando
+                                            {
+                                                  %! +PARTS
+                                            %%% \once \override Flag.stroke-style = #"grace"
+                                                  %! +PARTS
+                                            %%% aqs,16
+                                                  %! +PARTS
+                                            %%% :128
+                                                  %! +PARTS
+                                            %%% \!
+                                                  %! +PARTS
+                                            %%% \set fontSize = #-0.25
+                                              %! +PARTS
+                                        %%% }
+                                        }
+                                    >>
+                                    \oneVoice
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE

@@ -586,7 +586,7 @@ for voice_name, pitch in zip(
         evans.PitchHandler([pitch]),
         library.change_lines(
             lines=4,
-            clef="percussion",
+            clef="strings",
         ),
         trinton.linear_attachment_command(
             attachments=[
@@ -603,6 +603,9 @@ for voice_name, pitch in zip(
         trinton.attachment_command(
             attachments=[abjad.Articulation("marcato")],
             selector=trinton.pleaves(),
+        ),
+        trinton.invisible_accidentals_command(
+            selector=trinton.select_leaves_by_index([0], pitched=True)
         ),
         voice=score[voice_name],
         beam_meter=True,
