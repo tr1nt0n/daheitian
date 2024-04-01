@@ -1636,10 +1636,7 @@ for voice_name in [
             ],
             selector=trinton.select_leaves_by_index([0], pitched=True),
         ),
-        library.einsatz(
-            following_text="Klavier RH",
-            # padding=12
-        ),
+        library.einsatz(following_text="Klavier RH", column="halign #0.05"),
         library.cue_eraser(),
         voice=score[f"{voice_name} cue"],
         beam_meter=True,
@@ -1686,6 +1683,7 @@ for voice_name in [
         library.einsatz(
             following_text="Ab hier bis Takt 85 nur Flöte",
             selector=trinton.select_leaves_by_index([-1]),
+            termination=False,
         ),
         library.cue_eraser(),
         voice=score[f"{voice_name} cue"],

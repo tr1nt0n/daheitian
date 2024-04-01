@@ -191,13 +191,16 @@ def metronome_markups(
     string_only=False,
     parenthesis=False,
     interpolation="",
+    padding=9,
+    hspace="",
 ):
     if mod_string is None:
         if parenthesis is False:
             mark = abjad.LilyPondLiteral(
                 [
                     r"^ \markup {",
-                    r"  \raise #9 \with-dimensions-from \null",
+                    rf"{hspace}",
+                    rf"  \raise #{padding} \with-dimensions-from \null",
                     r"  \override #'(font-size . 5.5)",
                     r"  \concat {",
                     f"      {met_string.string[8:]}",
@@ -219,7 +222,8 @@ def metronome_markups(
             mark = abjad.LilyPondLiteral(
                 [
                     r"^ \markup {",
-                    r"  \raise #9 \with-dimensions-from \null",
+                    rf"{hspace}",
+                    rf"  \raise #{padding} \with-dimensions-from \null",
                     r"  \override #'(font-size . 5.5)",
                     r"  \concat {",
                     f"      {met_string.string[8:]}",
@@ -307,6 +311,28 @@ movements = [
 ]
 
 movements = [abjad.bundle(movement, r"- \tweak padding #14") for movement in movements]
+
+parts_movements = [
+    abjad.Markup(
+        r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #4 \box \line { I. 天（ 一 ）}""",
+    ),
+    abjad.Markup(
+        r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #4 \box \line { II. 鬼 }""",
+    ),
+    abjad.Markup(
+        r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #4 \box \line { III. 化 }""",
+    ),
+    abjad.Markup(
+        r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #4 \box \line { IV. 神 }""",
+    ),
+    abjad.Markup(
+        r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #4 \box \line  { V. 天（ 二 ）}""",
+    ),
+]
+
+parts_movements = [
+    abjad.bundle(movement, r"- \tweak padding #4") for movement in parts_movements
+]
 
 # divisi markups
 
@@ -1692,12 +1718,32 @@ def moths_talea(index=0):
 # notation tools
 
 
+def line_break(
+    score,
+    measure_range,
+    break_method="break",
+):
+    trinton.make_music(
+        lambda _: trinton.select_target(_, measure_range),
+        trinton.attachment_command(
+            attachments=[
+                abjad.LilyPondLiteral(f"\\{break_method}", site="absolute_after")
+            ],
+            selector=abjad.select.leaves,
+            tag=abjad.Tag("+PARTS"),
+        ),
+        voice=score["Global Context"],
+    )
+
+
 def einsatz(
     following_text,
     selector=trinton.pleaves(),
     direction=abjad.UP,
     tweaks=None,
     padding=5,
+    termination=True,
+    column="right-column",
 ):
     def attach(argument):
         selections = selector(argument)
@@ -1707,6 +1753,17 @@ def einsatz(
 
         markup = abjad.bundle(
             markup,
+            r"- \tweak whiteout-style #'outline",
+            r"- \tweak whiteout 1",
+            rf"- \tweak padding {padding}",
+        )
+
+        cancellation = abjad.Markup(
+            f"""\markup \\fontsize #4 {{ \\{column} {{ \\override #'(font-name . "Bodoni72 Bold") \\line {{ "Ende des Einsatzes" }} }} }}"""
+        )
+
+        cancellation = abjad.bundle(
+            cancellation,
             r"- \tweak whiteout-style #'outline",
             r"- \tweak whiteout 1",
             rf"- \tweak padding {padding}",
@@ -1729,6 +1786,8 @@ def einsatz(
                 selections[0],
                 direction=direction,
             )
+        if len(abjad.select.leaves(selections)) > 1 and termination is True:
+            abjad.attach(cancellation, selections[-1], direction=direction)
         abjad.attach(start_font_size_literal, selections[0])
         abjad.attach(stop_font_size_literal, selections[-1])
 

@@ -5,7 +5,8 @@
             \time 3/4
             s1 * 3/4
             ^ \markup {
-              \raise #9 \with-dimensions-from \null
+            \hspace #-5
+              \raise #-2 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"144"
@@ -19,7 +20,8 @@
             \time 4/4
             s1 * 1
             ^ \markup {
-              \raise #9 \with-dimensions-from \null
+
+              \raise #-1 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"96"
@@ -36,11 +38,14 @@
             R1 * 1/4
             - \tweak font-size #'15
             _ \middle-fermata
+              %! +PARTS
+            \noBreak
             \once \override Score.BarLine.transparent = ##f
             \time 4/4
             s1 * 1
             ^ \markup {
-              \raise #9 \with-dimensions-from \null
+
+              \raise #-2 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"144"
@@ -48,6 +53,8 @@
 
               }
             }
+              %! +PARTS
+            \noBreak
             \once \override Score.BarLine.transparent = ##f
             \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
@@ -57,6 +64,8 @@
             _ \long-fermata
             \bar "||"
             \break
+              %! +PARTS
+            \noBreak
             \once \override Score.BarLine.transparent = ##f
         }
         \tag #'group1
@@ -163,6 +172,10 @@
                                                     aqs,16
                                                     :128
                                                     \!
+                                                    - \tweak padding 0
+                                                    - \tweak whiteout 1
+                                                    - \tweak whiteout-style #'outline
+                                                    ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                     \set fontSize = #-0.25
                                                 }
                                             }
@@ -455,6 +468,10 @@
                                                     aqs,16
                                                     :128
                                                     \!
+                                                    - \tweak padding 0
+                                                    - \tweak whiteout 1
+                                                    - \tweak whiteout-style #'outline
+                                                    ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                     \set fontSize = #-0.25
                                                 }
                                             }
@@ -1203,6 +1220,10 @@
                                                     aqs,16
                                                     :128
                                                     \!
+                                                    - \tweak padding 0
+                                                    - \tweak whiteout 1
+                                                    - \tweak whiteout-style #'outline
+                                                    ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                     \set fontSize = #-0.25
                                                 }
                                             }

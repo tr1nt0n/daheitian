@@ -426,6 +426,7 @@ trinton.make_music(
             library.metronome_markups(
                 met_string=library.metronome_marks["57 3/5"],
                 mod_string=library.metronome_marks["6:5(4)=4"],
+                padding=-2,
             ),
         ],
         selector=trinton.select_leaves_by_index([0]),
@@ -520,11 +521,15 @@ for voice_name in [
             direction=abjad.UP,
             tweaks=None,
             padding=0,
-            column="halign #0.2",
+            column="halign #0.6",
         ),
         library.cue_eraser(),
         voice=score[f"{voice_name} cue"],
     )
+
+# violin 1 line breaking
+
+library.line_break(score=score, measure_range=(1, 3), break_method="noBreak")
 
 # cutaway
 
@@ -536,13 +541,13 @@ trinton.extract_parts(score)
 
 # render file
 
-trinton.render_file(
+trinton.render_parts(
     score=score,
-    segment_path="/Users/trintonprater/scores/daheitian/daheitian/sections/06",
+    part_name="violin1",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="06",
     includes=[
-        "/Users/trintonprater/scores/daheitian/daheitian/build/daheitian-stylesheet.ily",
+        "/Users/trintonprater/scores/daheitian/daheitian/build/parts-stylesheet.ily",
         "/Users/trintonprater/abjad/abjad/scm/abjad.ily",
     ],
 )

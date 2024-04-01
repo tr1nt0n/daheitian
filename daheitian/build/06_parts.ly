@@ -5,7 +5,8 @@
             \time 12/8
             s1 * 3/2
             ^ \markup {
-              \raise #9 \with-dimensions-from \null
+
+              \raise #-2 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-mixed-number-markup #2 #0 #1 #"57" #"3" #"5"
@@ -13,10 +14,16 @@
 
               }
             }
+              %! +PARTS
+            \noBreak
             \time 3/4
             s1 * 3/4
+              %! +PARTS
+            \noBreak
             \time 2/4
             s1 * 1/2
+              %! +PARTS
+            \noBreak
             \time 3/4
             s1 * 3/4
             \time 2/4
@@ -391,6 +398,10 @@
                                                 \ottava 1
                                                 <fs''' e''''>8
                                                 \pp
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \halign #0.6 { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                 )
                                                 \ottava 0
                                                 \set fontSize = #-0.25
@@ -1621,6 +1632,10 @@
                                         \ottava 1
                                         <fs''' e''''>8
                                         \pp
+                                        - \tweak padding 0
+                                        - \tweak whiteout 1
+                                        - \tweak whiteout-style #'outline
+                                        ^ \markup \fontsize #4 { \halign #0.6 { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                         )
                                         \ottava 0
                                         \set fontSize = #-0.25
@@ -1977,6 +1992,10 @@
                                                 \ottava 1
                                                 <fs''' e''''>8
                                                 \pp
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \halign #0.6 { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                 )
                                                 \ottava 0
                                                 \set fontSize = #-0.25
@@ -2169,6 +2188,10 @@
                                                 \ottava 1
                                                 <fs''' e''''>8
                                                 \pp
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \halign #0.6 { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                 )
                                                 \ottava 0
                                                 \set fontSize = #-0.25
@@ -2361,6 +2384,10 @@
                                                 \ottava 1
                                                 <fs''' e''''>8
                                                 \pp
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \halign #0.6 { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                 )
                                                 \ottava 0
                                                 \set fontSize = #-0.25
@@ -2553,6 +2580,10 @@
                                                 \ottava 1
                                                 <fs''' e''''>8
                                                 \pp
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \halign #0.6 { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                 )
                                                 \ottava 0
                                                 \set fontSize = #-0.25
@@ -2668,6 +2699,10 @@
                                                 \ottava 1
                                                 <fs''' e''''>8
                                                 \pp
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \halign #0.6 { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                 )
                                                 \ottava 0
                                                 \set fontSize = #-0.25

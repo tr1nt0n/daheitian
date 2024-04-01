@@ -378,6 +378,7 @@ for voice_name in [
             direction=abjad.UP,
             tweaks=None,
             padding=0,
+            termination=False,
         ),
         library.cue_eraser(),
         voice=score[f"{voice_name} cue"],

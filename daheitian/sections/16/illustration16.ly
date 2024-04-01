@@ -262,6 +262,10 @@
                                                 e'4
                                                 c'4
                                                 _ \p
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                 \set fontSize = #-0.25
                                             }
                                         }
@@ -2845,6 +2849,10 @@
                                         e'4
                                         c'4
                                         _ \p
+                                        - \tweak padding 0
+                                        - \tweak whiteout 1
+                                        - \tweak whiteout-style #'outline
+                                        ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                         \set fontSize = #-0.25
                                     }
                                 }
@@ -3984,6 +3992,10 @@
                                                     \fff
                                                     ^ \accent
                                                     ^ \staccato
+                                                    - \tweak padding 5
+                                                    - \tweak whiteout 1
+                                                    - \tweak whiteout-style #'outline
+                                                    ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                     \stopTextSpan
                                                     \revert-noteheads
                                                     \set fontSize = #-0.25
@@ -6363,6 +6375,10 @@
                                                     \fff
                                                     ^ \accent
                                                     ^ \staccato
+                                                    - \tweak padding 5
+                                                    - \tweak whiteout 1
+                                                    - \tweak whiteout-style #'outline
+                                                    ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                     \stopTextSpan
                                                     \revert-noteheads
                                                     \set fontSize = #-0.25
@@ -7050,6 +7066,10 @@
                                                     \fff
                                                     ^ \accent
                                                     ^ \staccato
+                                                    - \tweak padding 5
+                                                    - \tweak whiteout 1
+                                                    - \tweak whiteout-style #'outline
+                                                    ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                     \stopTextSpan
                                                     \revert-noteheads
                                                     \set fontSize = #-0.25
@@ -7748,6 +7768,10 @@
                                                     \fff
                                                     ^ \accent
                                                     ^ \staccato
+                                                    - \tweak padding 5
+                                                    - \tweak whiteout 1
+                                                    - \tweak whiteout-style #'outline
+                                                    ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                     \stopTextSpan
                                                     \revert-noteheads
                                                     \set fontSize = #-0.25
@@ -8420,6 +8444,10 @@
                                                     \fff
                                                     ^ \accent
                                                     ^ \staccato
+                                                    - \tweak padding 5
+                                                    - \tweak whiteout 1
+                                                    - \tweak whiteout-style #'outline
+                                                    ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                     \stopTextSpan
                                                     \revert-noteheads
                                                     \set fontSize = #-0.25
@@ -8852,6 +8880,10 @@
                                                     \fff
                                                     ^ \accent
                                                     ^ \staccato
+                                                    - \tweak padding 5
+                                                    - \tweak whiteout 1
+                                                    - \tweak whiteout-style #'outline
+                                                    ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                     \stopTextSpan
                                                     \revert-noteheads
                                                     \set fontSize = #-0.25

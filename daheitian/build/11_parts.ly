@@ -4667,6 +4667,10 @@
                                                 \undo \hide NoteHead
                                                 f''''16
                                                 ^ \accent
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                 \stopTrillSpan
                                                   %! rmakers.beam()
                                                 ]
@@ -9745,6 +9749,10 @@
                                         \undo \hide NoteHead
                                         f''''16
                                         ^ \accent
+                                        - \tweak padding 0
+                                        - \tweak whiteout 1
+                                        - \tweak whiteout-style #'outline
+                                        ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                         \stopTrillSpan
                                           %! rmakers.beam()
                                         ]
@@ -15463,6 +15471,10 @@
                                                 \undo \hide NoteHead
                                                 f''''16
                                                 ^ \accent
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                 \stopTrillSpan
                                                   %! rmakers.beam()
                                                 ]

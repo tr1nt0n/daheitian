@@ -5,7 +5,7 @@
             \time 3/4
             s1 * 3/4
             ^ \markup {
-              \raise #9 \with-dimensions-from \null
+              \raise #-2 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"96"
@@ -13,12 +13,16 @@
 
               }
             }
+              %! +PARTS
+            \noBreak
             \time 2/4
             s1 * 1/2
+              %! +PARTS
+            \noBreak
             \time 7/16
             s1 * 7/16
             ^ \markup {
-              \raise #9 \with-dimensions-from \null
+              \raise #-2 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"48"
@@ -26,10 +30,16 @@
 
               }
             }
+              %! +PARTS
+            \noBreak
             \time 6/16
             s1 * 3/8
+              %! +PARTS
+            \noBreak
             \time 7/16
             s1 * 7/16
+              %! +PARTS
+            \noBreak
         }
         \tag #'group1
         {

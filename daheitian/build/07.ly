@@ -1118,6 +1118,10 @@
                                             aqs,16
                                             :128
                                             \!
+                                            - \tweak padding 0
+                                            - \tweak whiteout 1
+                                            - \tweak whiteout-style #'outline
+                                            ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                             \set fontSize = #-0.25
                                         }
                                     }
@@ -1247,6 +1251,10 @@
                                                     aqs,16
                                                     :128
                                                     \!
+                                                    - \tweak padding 0
+                                                    - \tweak whiteout 1
+                                                    - \tweak whiteout-style #'outline
+                                                    ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                     \set fontSize = #-0.25
                                                 }
                                             }
@@ -1357,6 +1365,10 @@
                                                     aqs,16
                                                     :128
                                                     \!
+                                                    - \tweak padding 0
+                                                    - \tweak whiteout 1
+                                                    - \tweak whiteout-style #'outline
+                                                    ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                     \set fontSize = #-0.25
                                                 }
                                             }
@@ -1482,6 +1494,10 @@
                                                     aqs,16
                                                     :128
                                                     \!
+                                                    - \tweak padding 0
+                                                    - \tweak whiteout 1
+                                                    - \tweak whiteout-style #'outline
+                                                    ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                     \set fontSize = #-0.25
                                                 }
                                             }

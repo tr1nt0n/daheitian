@@ -1159,6 +1159,10 @@
                                                 c'8.
                                                 c'8.
                                                 \!
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                 \set fontSize = #-0.25
                                             }
                                         }
@@ -1921,6 +1925,10 @@
                                                 c'8
                                                 c'4
                                                 \!
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                 \set fontSize = #-0.25
                                             }
                                         }
@@ -2744,6 +2752,10 @@
                                             \once \override Staff.Accidental.stencil = ##f
                                             \triangleStemOn
                                             bf,8
+                                            - \tweak padding 0
+                                            - \tweak whiteout 1
+                                            - \tweak whiteout-style #'outline
+                                            ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                             \stemOff
                                             \set fontSize = #-0.25
                                             r4
@@ -4144,6 +4156,10 @@
                                                 \tweak style #'la
                                                 c'8
                                                 \!
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                 \stopTextSpan
                                                 \textSpannerUp
                                                 \set fontSize = #-0.25
@@ -5221,6 +5237,10 @@
                                                     \once \override Staff.Accidental.stencil = ##f
                                                     \triangleStemOn
                                                     bf,8
+                                                    - \tweak padding 0
+                                                    - \tweak whiteout 1
+                                                    - \tweak whiteout-style #'outline
+                                                    ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                     \stemOff
                                                     \set fontSize = #-0.25
                                                     r4
@@ -5657,6 +5677,10 @@
                                             \once \override Staff.Accidental.stencil = ##f
                                             \triangleStemOn
                                             bf,8
+                                            - \tweak padding 0
+                                            - \tweak whiteout 1
+                                            - \tweak whiteout-style #'outline
+                                            ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                             \stemOff
                                             \set fontSize = #-0.25
                                             r4
@@ -6879,6 +6903,10 @@
                                                 \undo \hide NoteHead
                                                 d''''8.
                                                 \!
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \halign #0.5 { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                 \ottava 0
                                                 \set fontSize = #-0.25
                                             }
@@ -9136,6 +9164,10 @@
                                                     \once \override Staff.Accidental.stencil = ##f
                                                     \triangleStemOn
                                                     bf,8
+                                                    - \tweak padding 0
+                                                    - \tweak whiteout 1
+                                                    - \tweak whiteout-style #'outline
+                                                    ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                     \stemOff
                                                     \set fontSize = #-0.25
                                                     r4
@@ -9863,6 +9895,10 @@
                                                     \once \override Staff.Accidental.stencil = ##f
                                                     \triangleStemOn
                                                     bf,8
+                                                    - \tweak padding 0
+                                                    - \tweak whiteout 1
+                                                    - \tweak whiteout-style #'outline
+                                                    ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                     \stemOff
                                                     \set fontSize = #-0.25
                                                     r4
@@ -10964,6 +11000,10 @@
                                                     \once \override Staff.Accidental.stencil = ##f
                                                     \triangleStemOn
                                                     bf,8
+                                                    - \tweak padding 0
+                                                    - \tweak whiteout 1
+                                                    - \tweak whiteout-style #'outline
+                                                    ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                     \stemOff
                                                     \set fontSize = #-0.25
                                                     r4

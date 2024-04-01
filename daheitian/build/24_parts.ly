@@ -675,6 +675,10 @@
                                                     \fff
                                                     ^ \accent
                                                     ^ \staccato
+                                                    - \tweak padding 5
+                                                    - \tweak whiteout 1
+                                                    - \tweak whiteout-style #'outline
+                                                    ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                     \stopTextSpan
                                                     \revert-noteheads
                                                     \set fontSize = #-0.25
@@ -1206,6 +1210,10 @@
                                                     \fff
                                                     ^ \accent
                                                     ^ \staccato
+                                                    - \tweak padding 5
+                                                    - \tweak whiteout 1
+                                                    - \tweak whiteout-style #'outline
+                                                    ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                     \stopTextSpan
                                                     \revert-noteheads
                                                     \set fontSize = #-0.25

@@ -758,6 +758,10 @@
                                                 <ef'' e'' g'' b''>4
                                                 \ottava 1
                                                 <af''' fs''''>4
+                                                - \tweak padding 5
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \halign #0.05 { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                 \ottava 0
                                                 \set fontSize = #-0.25
                                                 r4
@@ -2688,6 +2692,10 @@
                                                 \revert Staff.Stem.stemlet-length
                                                 bqf16
                                                     _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
+                                                - \tweak padding 12
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                 \stopTextSpanOne
                                                 ]
                                                 \set fontSize = #-0.25
@@ -3246,6 +3254,10 @@
                                         <ef'' e'' g'' b''>4
                                         \ottava 1
                                         <af''' fs''''>4
+                                        - \tweak padding 5
+                                        - \tweak whiteout 1
+                                        - \tweak whiteout-style #'outline
+                                        ^ \markup \fontsize #4 { \halign #0.05 { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                         \ottava 0
                                         \set fontSize = #-0.25
                                         r4
@@ -3927,6 +3939,10 @@
                                                 <ef'' e'' g'' b''>4
                                                 \ottava 1
                                                 <af''' fs''''>4
+                                                - \tweak padding 5
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \halign #0.05 { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                 \ottava 0
                                                 \set fontSize = #-0.25
                                                 r4
@@ -4261,6 +4277,10 @@
                                                 <ef'' e'' g'' b''>4
                                                 \ottava 1
                                                 <af''' fs''''>4
+                                                - \tweak padding 5
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \halign #0.05 { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                 \ottava 0
                                                 \set fontSize = #-0.25
                                                 r4
@@ -4597,6 +4617,10 @@
                                                 <ef'' e'' g'' b''>4
                                                 \ottava 1
                                                 <af''' fs''''>4
+                                                - \tweak padding 5
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \halign #0.05 { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                 \ottava 0
                                                 \set fontSize = #-0.25
                                                 r4
@@ -5105,6 +5129,10 @@
                                                 <ef'' e'' g'' b''>4
                                                 \ottava 1
                                                 <af''' fs''''>4
+                                                - \tweak padding 5
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \halign #0.05 { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
                                                 \ottava 0
                                                 \set fontSize = #-0.25
                                                 r4
