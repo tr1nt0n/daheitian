@@ -8,7 +8,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak Y-offset -10
+            - \tweak Y-offset -3
             _ \markup
                 {
                     \hspace #3
@@ -23,7 +23,7 @@
                         " ( 1\" - 4\" )"
                     }
                 }
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "1\"" }
             \bar "!"
               %! +SCORE
@@ -35,7 +35,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "2\"" }
             \bar "!"
               %! +SCORE
@@ -46,7 +46,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "3\"" }
             \bar "!"
               %! +SCORE
@@ -57,7 +57,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "4\"" }
             \bar "!"
               %! +SCORE
@@ -68,7 +68,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak Y-offset -10
+            - \tweak Y-offset -3
             _ \markup
                 {
                     \hspace #3
@@ -83,7 +83,7 @@
                         " ( 5\" - 8\" )"
                     }
                 }
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "5\"" }
             \bar "!"
               %! +SCORE
@@ -94,7 +94,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "6\"" }
             \bar "!"
               %! +SCORE
@@ -105,7 +105,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "7\"" }
             \bar "!"
               %! +SCORE
@@ -116,7 +116,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "8\"" }
             \bar "!"
               %! +SCORE
@@ -127,7 +127,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak Y-offset -10
+            - \tweak Y-offset -3
             _ \markup
                 {
                     \hspace #3
@@ -142,7 +142,7 @@
                         " ( 9\" - 12\" )"
                     }
                 }
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "9\"" }
             \bar "!"
               %! +SCORE
@@ -153,7 +153,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "10\"" }
             \bar "!"
               %! +SCORE
@@ -164,7 +164,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "11\"" }
             \bar "!"
               %! +SCORE
@@ -175,7 +175,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "12\"" }
             \bar "!"
               %! +SCORE
@@ -186,7 +186,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak Y-offset -10
+            - \tweak Y-offset -3
             _ \markup
                 {
                     \hspace #3
@@ -201,7 +201,7 @@
                         " ( 13\" - 16\" )"
                     }
                 }
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "13\"" }
             \bar "!"
               %! +SCORE
@@ -212,7 +212,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "14\"" }
             \bar "!"
               %! +SCORE
@@ -223,7 +223,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "15\"" }
             \bar "!"
               %! +SCORE
@@ -234,7 +234,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "16\"" }
             \bar "!"
               %! +SCORE
@@ -245,7 +245,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak Y-offset -10
+            - \tweak Y-offset -3
             _ \markup
                 {
                     \hspace #3
@@ -260,7 +260,7 @@
                         " ( 17\" - 20\" )"
                     }
                 }
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "17\"" }
             \bar "!"
               %! +SCORE
@@ -271,7 +271,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "18\"" }
             \bar "!"
               %! +SCORE
@@ -282,7 +282,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "19\"" }
             \bar "!"
               %! +SCORE
@@ -293,7 +293,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "20\"" }
             \bar "!"
               %! +SCORE
@@ -304,7 +304,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak Y-offset -10
+            - \tweak Y-offset -3
             _ \markup
                 {
                     \hspace #3
@@ -319,7 +319,7 @@
                         " ( 21\" - 24\" )"
                     }
                 }
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "21\"" }
             \bar "!"
               %! +SCORE
@@ -330,7 +330,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "22\"" }
             \bar "!"
               %! +SCORE
@@ -341,7 +341,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "23\"" }
             \bar "!"
               %! +SCORE
@@ -352,7 +352,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "24\"" }
             \bar "!"
               %! +SCORE
@@ -363,7 +363,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak Y-offset -10
+            - \tweak Y-offset -3
             _ \markup
                 {
                     \hspace #3
@@ -378,7 +378,7 @@
                         " ( 25\" - 28\" )"
                     }
                 }
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "25\"" }
             \bar "!"
               %! +SCORE
@@ -389,7 +389,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "26\"" }
             \bar "!"
               %! +SCORE
@@ -400,7 +400,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "27\"" }
             \bar "!"
               %! +SCORE
@@ -411,7 +411,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "28\"" }
             \bar "!"
               %! +SCORE
@@ -422,7 +422,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak Y-offset -10
+            - \tweak Y-offset -3
             _ \markup
                 {
                     \hspace #3
@@ -437,7 +437,7 @@
                         " ( 29\" - 33\" )"
                     }
                 }
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "29\"" }
             \bar "!"
               %! +SCORE
@@ -448,7 +448,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "30\"" }
             \bar "!"
               %! +SCORE
@@ -459,7 +459,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "31\"" }
             \bar "!"
               %! +SCORE
@@ -470,7 +470,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "32\"" }
             \bar "!"
               %! +SCORE
@@ -481,7 +481,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "33\"" }
             \bar "!"
               %! +SCORE
@@ -492,7 +492,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak Y-offset -10
+            - \tweak Y-offset -3
             _ \markup
                 {
                     \hspace #3
@@ -507,7 +507,7 @@
                         " ( 34\" - 37\" )"
                     }
                 }
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "34\"" }
             \bar "!"
               %! +SCORE
@@ -518,7 +518,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "35\"" }
             \bar "!"
               %! +SCORE
@@ -529,7 +529,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "36\"" }
             \bar "!"
               %! +SCORE
@@ -540,7 +540,7 @@
             \once \override MultiMeasureRest.transparent = ##t
             \time 1/4
             R1 * 1/4
-            - \tweak padding #-4
+            - \tweak padding #0
             - \markup \override #'(font-name . "Bodoni72 Book") \fontsize #3 \center-column { "37\"" }
             \revert Score.Accidental.X-extent
             \revert Score.BarLine.X-extent

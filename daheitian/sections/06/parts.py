@@ -529,7 +529,7 @@ for voice_name in [
 
 # violin 1 line breaking
 
-library.line_break(score=score, measure_range=(1, 3), break_method="noBreak")
+library.line_break(score=score, measure_range=(1, 2), break_method="noBreak")
 
 # cutaway
 

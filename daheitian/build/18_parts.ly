@@ -13,7 +13,8 @@
             \time 2/4
             s1 * 1/2
             ^ \markup {
-              \raise #9 \with-dimensions-from \null
+
+              \raise #-2 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"72"
@@ -32,7 +33,8 @@
             \time 4/16
             s1 * 1/4
             ^ \markup {
-              \raise #9 \with-dimensions-from \null
+
+              \raise #-1 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"48"

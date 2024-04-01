@@ -22,8 +22,6 @@
             \noBreak
             \time 2/4
             s1 * 1/2
-              %! +PARTS
-            \noBreak
             \time 3/4
             s1 * 3/4
             \time 2/4

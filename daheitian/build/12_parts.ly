@@ -5,7 +5,8 @@
             \time 3/2
             s1 * 3/2
             ^ \markup {
-              \raise #9 \with-dimensions-from \null
+
+              \raise #-2 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"72"
@@ -13,6 +14,8 @@
 
               }
             }
+              %! +PARTS
+            \noBreak
             \once \override Score.BarLine.transparent = ##f
             \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
@@ -20,6 +23,8 @@
             R1 * 1/4
             - \tweak font-size #'15
             _ \short-fermata
+              %! +PARTS
+            \noBreak
             \once \override Score.BarLine.transparent = ##f
         }
         \tag #'group1

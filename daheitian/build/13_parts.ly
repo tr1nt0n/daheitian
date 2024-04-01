@@ -4,7 +4,7 @@
         {
             \time 7/16
             s1 * 7/16
-            - \tweak padding #11.5
+            - \tweak padding #4
             - \abjad-solid-line-with-arrow
             - \tweak bound-details.left.text \markup \concat { { \override #'(font-size . 5.5) \concat { ( \abjad-metronome-mark-markup #2 #0 #1 #"72" ) Rit. } } \hspace #0.5 }
             - \tweak bound-details.right.text \markup { \override #'(font-size . 5.5) \concat { \abjad-metronome-mark-markup #2 #0 #1 #"48" [\abjad-metric-modulation #2 #1 #2 #0 #'(1 . 1)]  } }

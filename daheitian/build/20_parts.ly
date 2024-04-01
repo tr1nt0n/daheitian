@@ -5,8 +5,9 @@
             \time 3/4
             s1 * 3/4
             - \tweak padding #14
-            ^ \markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #8 \box \line { IV. 神 }
+            ^ \markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #4 \box \line { IV. 神 }
             ^ \markup {
+
               \raise #9 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {

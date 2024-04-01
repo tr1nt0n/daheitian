@@ -4,20 +4,25 @@
         {
             \time 6/4
             s1 * 3/2
-            - \tweak padding #11.5
+            - \tweak padding #8
             - \abjad-solid-line-with-arrow
             - \tweak bound-details.left.text \markup \concat { { \override #'(font-size . 5.5) \concat { \abjad-metronome-mark-markup #2 #0 #1 #"96" [\abjad-metric-modulation-tuplet-lhs #2 #0 #3 #5 #2 #0 #'(1 . 1)] Rit. } } \hspace #0.5 }
             - \tweak bound-details.right.text \markup { \override #'(font-size . 5.5) \concat { \abjad-metronome-mark-mixed-number-markup #2 #0 #1 #"57" #"3" #"5" [\abjad-metric-modulation-tuplet-lhs #2 #0 #5 #3 #2 #0 #'(1 . 1)]  } }
             \startTextSpan
+              %! +PARTS
+            \noBreak
             \time 3/4
             s1 * 3/4
+              %! +PARTS
+            \noBreak
             \time 4/4
             s1 * 1
             \stopTextSpan
             \time 3/4
             s1 * 3/4
             ^ \markup {
-              \raise #9 \with-dimensions-from \null
+
+              \raise #-2 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"72"

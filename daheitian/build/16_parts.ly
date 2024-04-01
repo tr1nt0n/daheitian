@@ -13,7 +13,8 @@
             \time 3/4
             s1 * 3/4
             ^ \markup {
-              \raise #9 \with-dimensions-from \null
+
+              \raise #-1 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-mixed-number-markup #2 #0 #1 #"57" #"3" #"5"
@@ -41,7 +42,8 @@
             \time 3/2
             s1 * 3/2
             ^ \markup {
-              \raise #9 \with-dimensions-from \null
+
+              \raise #12 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"72"
@@ -52,7 +54,8 @@
             \time 3/4
             s1 * 3/4
             ^ \markup {
-              \raise #9 \with-dimensions-from \null
+
+              \raise #-1 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-mixed-number-markup #2 #0 #1 #"57" #"3" #"5"
@@ -66,6 +69,8 @@
             s1 * 3/4
             \time 2/4
             s1 * 1/2
+              %! +PARTS
+            \pageBreak
             \time 3/4
             s1 * 3/4
             \time 2/4

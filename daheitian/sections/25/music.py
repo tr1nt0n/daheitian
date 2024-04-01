@@ -1372,19 +1372,19 @@ trinton.make_music(
     voice=score["Global Context"],
 )
 
-trinton.make_music(
-    lambda _: trinton.select_target(_, (3,)),
-    trinton.attachment_command(
-        attachments=[
-            abjad.LilyPondLiteral(
-                r"\once \override TimeSignature.stencil = #(ghost-time-signature-one)",
-                site="before",
-            ),
-        ],
-        selector=trinton.select_leaves_by_index([0]),
-    ),
-    voice=score["Global Context"],
-)
+# trinton.make_music(
+#     lambda _: trinton.select_target(_, (3,)),
+#     trinton.attachment_command(
+#         attachments=[
+#             abjad.LilyPondLiteral(
+#                 r"\once \override TimeSignature.stencil = #(ghost-time-signature-one)",
+#                 site="before",
+#             ),
+#         ],
+#         selector=trinton.select_leaves_by_index([0]),
+#     ),
+#     voice=score["Global Context"],
+# )
 
 trinton.fermata_measures(
     score=score,

@@ -4,8 +4,8 @@
         {
             \time 2/4
             s1 * 1/2
-            - \tweak padding #14
-            ^ \markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #8 \box \line { III. 化 }
+            - \tweak padding #4
+            ^ \markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #4 \box \line { III. 化 }
             \time 3/4
             s1 * 3/4
             \time 2/4
@@ -25,7 +25,8 @@
             \time 3/4
             s1 * 3/4
             ^ \markup {
-              \raise #9 \with-dimensions-from \null
+
+              \raise #-2 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-mixed-number-markup #2 #0 #1 #"57" #"3" #"5"

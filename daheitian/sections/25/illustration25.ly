@@ -34,7 +34,6 @@
             _ \middle-fermata
             \noBreak
             \once \override Score.BarLine.transparent = ##f
-            \once \override TimeSignature.stencil = #(ghost-time-signature-one)
             \time 8/8
             s1 * 1
         }

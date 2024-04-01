@@ -14,9 +14,10 @@
             \once \override Score.TimeSignature.stencil = ##f
             \time 6/4
             s1 * 3/2
-            - \tweak padding #11.5
+            - \tweak padding #4
             - \abjad-solid-line-with-hook
             - \tweak bound-details.left.text \markup \concat { \fontsize #5.5 { "Rall. moltiss." } \hspace #0.5 }
+            - \tweak bound-details.right.padding 3
             \startTextSpan
             \hideNotes
             \time 5/4
@@ -24,14 +25,14 @@
             c'4
             - \tweak X-extent ##f
             - \tweak font-size #'2
-            - \tweak padding 0
+            - \tweak padding 2
             - \tweak whiteout 1
             - \tweak whiteout-style #'outline'
             ^ \markup \override #'(font-name . "Bodoni72 Book Italic")
-                                { \hspace #-8 \center-column { \line { Leichte Überschneidung }
+                                { \hspace #-20 \center-column { \line { Leichte Überschneidung }
                                 \line { mit dem folgenden Flötenton } } }
             - \tweak font-size #'15
-            - \tweak padding 0
+            - \tweak padding 2
             ^ \middle-fermata
             \stopTextSpan
             \unHideNotes
@@ -1803,7 +1804,7 @@
                                     - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Immer die gleiche Artikulation, } \line { ohne hörbare Grundschläge } } }
                                       %! +SCORE
                                 %%% ^ \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Immer die gleiche Artikulation, } \line { ohne hörbare Grundschläge } } }
-                                    - \tweak padding #11.5
+                                    - \tweak padding #8
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { DP, Kratzen } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -11.5
@@ -2034,7 +2035,7 @@
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
                                     - \marcato
                                     - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Immer die gleiche Artikulation, } \line { ohne hörbare Grundschläge } } }
-                                    - \tweak padding #11.5
+                                    - \tweak padding #8
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { DP, Kratzen } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -11.5
@@ -2265,7 +2266,7 @@
                                         _ #(make-dynamic-script (markup #:whiteout #:italic "fffff"))
                                     - \marcato
                                     - \markup \override #'(font-name . "Bodoni72 Book Italic") { \hspace #-5.5 \center-column { \line { Immer die gleiche Artikulation, } \line { ohne hörbare Grundschläge } } }
-                                    - \tweak padding #11.5
+                                    - \tweak padding #8
                                     - \abjad-solid-line-with-hook
                                     - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { DP, Kratzen } \hspace #0.5 }
                                     - \tweak bound-details.right.padding -11.5

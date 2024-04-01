@@ -263,10 +263,23 @@ post_ghost_metronome = abjad.LilyPondLiteral(
     site="after",
 )
 
+ghost_metronome_parts = abjad.LilyPondLiteral(
+    [
+        r"^ \markup {",
+        r"  \raise #3 \with-dimensions-from \null",
+        r"  \override #'(font-size . 5.5)",
+        r"  \concat {",
+        f"      {abjad.MetronomeMark.make_tempo_equation_markup((3, 8), 51).string[8:]}",
+        r"  }",
+        r"}",
+    ],
+    site="after",
+)
+
 post_ghost_metronome_parts = abjad.LilyPondLiteral(
     [
         r"^ \markup {",
-        r"  \raise #5 \with-dimensions-from \null",
+        r"  \raise #0 \with-dimensions-from \null",
         r"  \override #'(font-size . 5.5)",
         r"  \concat {",
         f"      {library.metronome_marks['48'].string[8:]}",
@@ -280,6 +293,20 @@ quarter_60 = abjad.LilyPondLiteral(
     [
         r"^ \markup {",
         r"  \raise #9 \with-dimensions-from \null",
+        r"  \override #'(font-size . 5.5)",
+        r"  \concat {",
+        f"      {abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 60).string[8:]}",
+        r"  }",
+        r"}",
+    ],
+    site="after",
+)
+
+
+quarter_60_parts = abjad.LilyPondLiteral(
+    [
+        r"^ \markup {",
+        r"  \raise #1 \with-dimensions-from \null",
         r"  \override #'(font-size . 5.5)",
         r"  \concat {",
         f"      {abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 60).string[8:]}",
@@ -329,6 +356,8 @@ parts_movements = [
         r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #4 \box \line  { V. 天（ 二 ）}""",
     ),
 ]
+
+parts_movements_4 = abjad.bundle(parts_movements[3], r"- \tweak padding #14")
 
 parts_movements = [
     abjad.bundle(movement, r"- \tweak padding #4") for movement in parts_movements
@@ -1794,7 +1823,7 @@ def einsatz(
     return attach
 
 
-def return_milestone_markup(measure_pair, tweaks=None):
+def return_milestone_markup(measure_pair, tweaks=None, y_offset=-10):
     string = rf"""\markup
     {{
         \hspace #3
@@ -1814,7 +1843,7 @@ def return_milestone_markup(measure_pair, tweaks=None):
 
     markup = abjad.bundle(
         markup,
-        r"- \tweak Y-offset -10",
+        rf"- \tweak Y-offset {y_offset}",
     )
 
     if tweaks is not None:
@@ -2040,7 +2069,7 @@ def trumpet_glissandi(selector=trinton.pleaves(grace=False)):
     return glissandi
 
 
-def make_timestamp_markups(global_context):
+def make_timestamp_markups(global_context, padding=-4):
     measures = abjad.select.group_by_measure(global_context)
     global_context_length = len(measures)
     measure_range = range(1, global_context_length + 1)
@@ -2055,7 +2084,7 @@ def make_timestamp_markups(global_context):
             abjad.Markup(
                 f"""\markup \override #'(font-name . "Bodoni72 Book") \\fontsize #3 \center-column {{ \"{number}\\\"\" }}""",
             ),
-            r"- \tweak padding #-4",
+            rf"- \tweak padding #{padding}",
         )
 
         abjad.attach(

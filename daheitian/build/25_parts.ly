@@ -4,12 +4,19 @@
         {
             \time 12/8
             s1 * 3/2
+              %! +PARTS
             ^ \markup {
-              \raise #12 \with-dimensions-from \null
+              %! +PARTS
+              \raise #3 \with-dimensions-from \null
+              %! +PARTS
               \override #'(font-size . 5.5)
+              %! +PARTS
               \concat {
+              %! +PARTS
                   \abjad-metronome-mark-markup #2 #1 #1 #"51"
+              %! +PARTS
               }
+              %! +PARTS
             }
             \once \override Score.BarLine.transparent = ##f
             \once \override MultiMeasureRest.transparent = ##t
