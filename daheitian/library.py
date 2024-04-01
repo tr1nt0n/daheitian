@@ -279,7 +279,7 @@ ghost_metronome_parts = abjad.LilyPondLiteral(
 post_ghost_metronome_parts = abjad.LilyPondLiteral(
     [
         r"^ \markup {",
-        r"  \raise #0 \with-dimensions-from \null",
+        r"  \raise #-10 \with-dimensions-from \null",
         r"  \override #'(font-size . 5.5)",
         r"  \concat {",
         f"      {library.metronome_marks['48'].string[8:]}",
@@ -306,7 +306,7 @@ quarter_60 = abjad.LilyPondLiteral(
 quarter_60_parts = abjad.LilyPondLiteral(
     [
         r"^ \markup {",
-        r"  \raise #1 \with-dimensions-from \null",
+        r"  \raise #13 \with-dimensions-from \null",
         r"  \override #'(font-size . 5.5)",
         r"  \concat {",
         f"      {abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 60).string[8:]}",
@@ -357,7 +357,7 @@ parts_movements = [
     ),
 ]
 
-parts_movements_4 = abjad.bundle(parts_movements[3], r"- \tweak padding #14")
+parts_movements_4 = abjad.bundle(parts_movements[3], r"- \tweak padding #16")
 
 parts_movements = [
     abjad.bundle(movement, r"- \tweak padding #4") for movement in parts_movements
@@ -1755,9 +1755,7 @@ def line_break(
     trinton.make_music(
         lambda _: trinton.select_target(_, measure_range),
         trinton.attachment_command(
-            attachments=[
-                abjad.LilyPondLiteral(f"\\{break_method}", site="absolute_after")
-            ],
+            attachments=[abjad.LilyPondLiteral(f"\\{break_method}", site="after")],
             selector=abjad.select.leaves,
             tag=abjad.Tag("+PARTS"),
         ),

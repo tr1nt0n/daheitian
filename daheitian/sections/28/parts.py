@@ -1846,6 +1846,10 @@ trinton.make_music(
     voice=score["Global Context"],
 )
 
+# violin 2 line break
+
+library.line_break(score=score, measure_range=(5,), break_method="break")
+
 # cutaway
 
 trinton.whiteout_empty_staves(
@@ -1861,7 +1865,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="violin1",
+    part_name="violin2",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="28",
     includes=[
