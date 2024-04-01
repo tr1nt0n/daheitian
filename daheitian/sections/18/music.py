@@ -163,6 +163,116 @@ trinton.make_music(
     voice=score["Global Context"],
 )
 
+# cues
+
+for voice_name, measure_pair in zip(
+    [
+        "percussion 2 voice",
+        "percussion 3 voice",
+    ],
+    [(2, 6), (2, 7)],
+):
+    trinton.make_music(
+        lambda _: trinton.select_target(_, measure_pair),
+        trinton.linear_attachment_command(
+            attachments=[
+                abjad.LilyPondLiteral(
+                    r"\override Staff.MultiMeasureRest.transparent = ##t", site="before"
+                ),
+                abjad.LilyPondLiteral(
+                    r"\revert Staff.MultiMeasureRest.transparent", site="absolute_after"
+                ),
+            ],
+            selector=trinton.select_leaves_by_index([0, -1]),
+            tag=abjad.Tag("+PARTS"),
+        ),
+        trinton.IntermittentVoiceHandler(
+            rhythm_handler=evans.RhythmHandler(
+                evans.talea([_ for _ in library.logistic_map(3) if _ > 2], 16)
+            ),
+            direction=abjad.DOWN,
+            voice_name=f"{voice_name} cue",
+            from_components=False,
+            temp_name="secondary",
+        ),
+        voice=score[voice_name],
+    )
+
+    trinton.make_music(
+        lambda _: trinton.select_target(_, measure_pair),
+        evans.RewriteMeterCommand(boundary_depth=-2),
+        evans.PitchHandler(["f'''", "g'''"]),
+        library.change_lines(lines=5, clef="treble"),
+        library.flute_graces(),
+        trinton.pitch_with_selector_command(
+            selector=trinton.pleaves(grace=True), pitch_list=["af'''"]
+        ),
+        library.flute_grace_attachments(),
+        trinton.attachment_command(
+            attachments=[abjad.Dynamic("pp")],
+            selector=trinton.select_leaves_by_index([0]),
+        ),
+        library.einsatz(
+            following_text="Flöte Solo",
+            selector=trinton.pleaves(),
+            direction=abjad.UP,
+            tweaks=None,
+            padding=0,
+        ),
+        library.cue_eraser(),
+        voice=score[f"{voice_name} cue"],
+        beam_meter=True,
+    )
+
+for voice_name in ["bassclarinet voice", "bassoon voice"]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (7, 8)),
+        trinton.linear_attachment_command(
+            attachments=[
+                abjad.LilyPondLiteral(
+                    r"\override Staff.MultiMeasureRest.transparent = ##t", site="before"
+                ),
+                abjad.LilyPondLiteral(
+                    r"\revert Staff.MultiMeasureRest.transparent", site="absolute_after"
+                ),
+            ],
+            selector=trinton.select_leaves_by_index([0, -1]),
+            tag=abjad.Tag("+PARTS"),
+        ),
+        trinton.IntermittentVoiceHandler(
+            rhythm_handler=evans.RhythmHandler(
+                evans.tuplet([(1,)]),
+            ),
+            direction=abjad.DOWN,
+            voice_name=f"{voice_name} cue",
+            from_components=False,
+            temp_name="secondary",
+            preprocessor=trinton.fuse_sixteenths_preprocessor((4, 5)),
+        ),
+        voice=score[voice_name],
+    )
+
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (7, 8)),
+        evans.RewriteMeterCommand(boundary_depth=-2),
+        library.change_lines(lines=1, clef="percussion"),
+        trinton.linear_attachment_command(
+            attachments=[abjad.Dynamic("pppp"), abjad.Dynamic("ppp")],
+            selector=trinton.select_leaves_by_index([0, 1]),
+        ),
+        library.einsatz(
+            following_text="Schlagzeug | Bangu",
+            selector=trinton.pleaves(),
+            direction=abjad.UP,
+            tweaks=None,
+            padding=0,
+        ),
+        library.cue_eraser(),
+        voice=score[f"{voice_name} cue"],
+        beam_meter=True,
+    )
+
+
 # cutaway
 
 trinton.whiteout_empty_staves(

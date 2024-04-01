@@ -973,7 +973,7 @@
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 1 Soli }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 1 Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 soli }
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
@@ -1026,12 +1026,13 @@
                                 \context Voice = "violin 1 voice"
                                 {
                                     \staff-line-count 1
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Dots.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override NoteHead.duration-log = 2
+                                    \once \override RepeatTie.transparent = ##t
                                     \once \override Stem.stencil = ##f
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Dots.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
                                     \revert Staff.Clef.stencil
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 1 }
                                       %! +SCORE
@@ -1050,13 +1051,14 @@
                                     \<
                                       %! abjad.glissando(7)
                                     \glissando
-                                    \once \override Beam.stencil = ##f
                                     \once \override Dots.staff-position = #2
-                                    \once \override Dots.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override NoteHead.duration-log = 2
+                                    \once \override RepeatTie.transparent = ##t
                                     \once \override Stem.stencil = ##f
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Dots.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
                                       %! abjad.glissando(1)
                                     \hide NoteHead
                                       %! abjad.glissando(1)
@@ -1068,16 +1070,17 @@
                                     \afterGrace
                                     c'2.
                                     {
-                                        \once \override Beam.stencil = ##f
-                                        \once \override Dots.stencil = ##f
-                                        \once \override Flag.stencil = ##f
-                                        \once \override NoteHead.duration-log = 2
+                                        \once \override RepeatTie.transparent = ##t
                                         \once \override Stem.stencil = ##f
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Flag.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Tie.stencil = ##f
+                                        \once \override NoteHead.duration-log = 2
                                         \once \override Stem.stencil = ##f
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.no-ledgers = ##t
                                         \once \override Accidental.stencil = ##f
-                                        \once \override Tie.stencil = ##f
                                         \once \override NoteHead.transparent = ##t
                                           %! abjad.glissando(6)
                                         \revert Accidental.stencil
@@ -1125,7 +1128,7 @@
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 2 Soli }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 2 Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 soli }
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
@@ -1178,12 +1181,13 @@
                                 \context Voice = "violin 2 voice"
                                 {
                                     \staff-line-count 1
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Dots.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override NoteHead.duration-log = 2
+                                    \once \override RepeatTie.transparent = ##t
                                     \once \override Stem.stencil = ##f
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Dots.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
                                     \revert Staff.Clef.stencil
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geigen 2 }
                                       %! +SCORE
@@ -1202,13 +1206,14 @@
                                     \<
                                       %! abjad.glissando(7)
                                     \glissando
-                                    \once \override Beam.stencil = ##f
                                     \once \override Dots.staff-position = #2
-                                    \once \override Dots.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override NoteHead.duration-log = 2
+                                    \once \override RepeatTie.transparent = ##t
                                     \once \override Stem.stencil = ##f
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Dots.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
                                       %! abjad.glissando(1)
                                     \hide NoteHead
                                       %! abjad.glissando(1)
@@ -1220,16 +1225,17 @@
                                     \afterGrace
                                     c'2.
                                     {
-                                        \once \override Beam.stencil = ##f
-                                        \once \override Dots.stencil = ##f
-                                        \once \override Flag.stencil = ##f
-                                        \once \override NoteHead.duration-log = 2
+                                        \once \override RepeatTie.transparent = ##t
                                         \once \override Stem.stencil = ##f
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Flag.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Tie.stencil = ##f
+                                        \once \override NoteHead.duration-log = 2
                                         \once \override Stem.stencil = ##f
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.no-ledgers = ##t
                                         \once \override Accidental.stencil = ##f
-                                        \once \override Tie.stencil = ##f
                                         \once \override NoteHead.transparent = ##t
                                           %! abjad.glissando(6)
                                         \revert Accidental.stencil
@@ -1277,7 +1283,7 @@
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratsche Soli }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratsche Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. soli }
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
@@ -1367,12 +1373,13 @@
                                 \context Voice = "viola voice"
                                 {
                                     \staff-line-count 1
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Dots.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override NoteHead.duration-log = 2
+                                    \once \override RepeatTie.transparent = ##t
                                     \once \override Stem.stencil = ##f
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Dots.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
                                     \revert Staff.Clef.stencil
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratschen }
                                       %! +SCORE
@@ -1389,13 +1396,14 @@
                                     \<
                                       %! abjad.glissando(7)
                                     \glissando
-                                    \once \override Beam.stencil = ##f
                                     \once \override Dots.staff-position = #2
-                                    \once \override Dots.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override NoteHead.duration-log = 2
+                                    \once \override RepeatTie.transparent = ##t
                                     \once \override Stem.stencil = ##f
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Dots.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
                                       %! abjad.glissando(1)
                                     \hide NoteHead
                                       %! abjad.glissando(1)
@@ -1409,16 +1417,17 @@
                                     - \tweak padding 1
                                     ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Tutti" }
                                     {
-                                        \once \override Beam.stencil = ##f
-                                        \once \override Dots.stencil = ##f
-                                        \once \override Flag.stencil = ##f
-                                        \once \override NoteHead.duration-log = 2
+                                        \once \override RepeatTie.transparent = ##t
                                         \once \override Stem.stencil = ##f
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Flag.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Tie.stencil = ##f
+                                        \once \override NoteHead.duration-log = 2
                                         \once \override Stem.stencil = ##f
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.no-ledgers = ##t
                                         \once \override Accidental.stencil = ##f
-                                        \once \override Tie.stencil = ##f
                                         \once \override NoteHead.transparent = ##t
                                           %! abjad.glissando(6)
                                         \revert Accidental.stencil
@@ -1466,7 +1475,7 @@
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncello Soli }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncello Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. soli }
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
@@ -1551,12 +1560,13 @@
                                 \context Voice = "cello voice"
                                 {
                                     \staff-line-count 1
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Dots.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override NoteHead.duration-log = 2
+                                    \once \override RepeatTie.transparent = ##t
                                     \once \override Stem.stencil = ##f
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Dots.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
                                     \revert Staff.Clef.stencil
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncelli }
                                       %! +SCORE
@@ -1573,13 +1583,14 @@
                                     \<
                                       %! abjad.glissando(7)
                                     \glissando
-                                    \once \override Beam.stencil = ##f
                                     \once \override Dots.staff-position = #2
-                                    \once \override Dots.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override NoteHead.duration-log = 2
+                                    \once \override RepeatTie.transparent = ##t
                                     \once \override Stem.stencil = ##f
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Dots.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
                                       %! abjad.glissando(1)
                                     \hide NoteHead
                                       %! abjad.glissando(1)
@@ -1593,16 +1604,17 @@
                                     - \tweak padding 1
                                     ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Tutti" }
                                     {
-                                        \once \override Beam.stencil = ##f
-                                        \once \override Dots.stencil = ##f
-                                        \once \override Flag.stencil = ##f
-                                        \once \override NoteHead.duration-log = 2
+                                        \once \override RepeatTie.transparent = ##t
                                         \once \override Stem.stencil = ##f
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Flag.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Tie.stencil = ##f
+                                        \once \override NoteHead.duration-log = 2
                                         \once \override Stem.stencil = ##f
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.no-ledgers = ##t
                                         \once \override Accidental.stencil = ##f
-                                        \once \override Tie.stencil = ##f
                                         \once \override NoteHead.transparent = ##t
                                           %! abjad.glissando(6)
                                         \revert Accidental.stencil
@@ -1648,12 +1660,13 @@
                                 \context Voice = "contrabass voice"
                                 {
                                     \staff-line-count 1
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Dots.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override NoteHead.duration-log = 2
+                                    \once \override RepeatTie.transparent = ##t
                                     \once \override Stem.stencil = ##f
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Dots.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
                                     \revert Staff.Clef.stencil
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Kontrabässe }
                                       %! +SCORE
@@ -1671,13 +1684,14 @@
                                     \<
                                       %! abjad.glissando(7)
                                     \glissando
-                                    \once \override Beam.stencil = ##f
                                     \once \override Dots.staff-position = #2
-                                    \once \override Dots.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override NoteHead.duration-log = 2
+                                    \once \override RepeatTie.transparent = ##t
                                     \once \override Stem.stencil = ##f
+                                    \once \override Beam.stencil = ##f
+                                    \once \override Flag.stencil = ##f
+                                    \once \override Dots.stencil = ##f
                                     \once \override Tie.stencil = ##f
+                                    \once \override NoteHead.duration-log = 2
                                       %! abjad.glissando(1)
                                     \hide NoteHead
                                       %! abjad.glissando(1)
@@ -1689,16 +1703,17 @@
                                     \afterGrace
                                     c'2.
                                     {
-                                        \once \override Beam.stencil = ##f
-                                        \once \override Dots.stencil = ##f
-                                        \once \override Flag.stencil = ##f
-                                        \once \override NoteHead.duration-log = 2
+                                        \once \override RepeatTie.transparent = ##t
                                         \once \override Stem.stencil = ##f
+                                        \once \override Beam.stencil = ##f
+                                        \once \override Flag.stencil = ##f
+                                        \once \override Dots.stencil = ##f
+                                        \once \override Tie.stencil = ##f
+                                        \once \override NoteHead.duration-log = 2
                                         \once \override Stem.stencil = ##f
                                         \once \override Flag.stencil = ##f
                                         \once \override NoteHead.no-ledgers = ##t
                                         \once \override Accidental.stencil = ##f
-                                        \once \override Tie.stencil = ##f
                                         \once \override NoteHead.transparent = ##t
                                           %! abjad.glissando(6)
                                         \revert Accidental.stencil

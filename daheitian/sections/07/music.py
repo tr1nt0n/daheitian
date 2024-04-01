@@ -24,6 +24,10 @@ trinton.make_music(
     trinton.respell_tuplets_command(),
     evans.PitchHandler(["bqs'"]),
     library.change_lines(lines=5, clef="treble"),
+    trinton.attachment_command(
+        attachments=[library.clef_whitespace],
+        selector=trinton.select_leaves_by_index([0]),
+    ),
     library.attach_multiphonics(repitch_only=True),
     library.ring_mod_attachments(dynamics=["p"], direction=abjad.DOWN),
     trinton.hooked_spanner_command(

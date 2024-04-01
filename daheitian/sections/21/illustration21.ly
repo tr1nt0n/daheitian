@@ -391,6 +391,7 @@
                                     {
                                         \override divisiStaff.Stem.stemlet-length = 0.75
                                         f'32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         [
                                           %! abjad.glissando(7)
@@ -405,69 +406,91 @@
                                           %! abjad.glissando(1)
                                         \override NoteHead.no-ledgers = ##t
                                         f'32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 1 }
                                         \once \override Dots.staff-position = #2
                                         f'32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
                                         f'32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 1 }
                                         \once \override Dots.staff-position = #2
                                         f'16
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
                                         f'32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 2 }
                                         \once \override Dots.staff-position = #2
                                         f'32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
                                         f'32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 2 }
                                         \once \override Dots.staff-position = #2
                                         f'16
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
                                         f'32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 1 }
                                         \once \override Dots.staff-position = #2
                                         f'32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
                                         f'16
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 2 }
                                         \once \override Dots.staff-position = #2
                                         f'32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
                                         f'32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 1 }
                                         \once \override Dots.staff-position = #2
                                         f'32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
                                         f'32
-                                        ^ \markup \center-column { \circle 1 }
-                                        \once \override Dots.staff-position = #2
-                                        f'16
-                                        ^ \markup \center-column { \circle 3 }
-                                        \once \override Dots.staff-position = #2
-                                        f'32
-                                        ^ \markup \center-column { \circle 1 }
-                                        \once \override Dots.staff-position = #2
-                                        f'32
-                                        ^ \markup \center-column { \circle 3 }
-                                        \once \override Dots.staff-position = #2
-                                        f'32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 1 }
                                         \once \override Dots.staff-position = #2
                                         f'16
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
                                         f'32
+                                        - \tweak layer 20
+                                        ^ \markup \center-column { \circle 1 }
+                                        \once \override Dots.staff-position = #2
+                                        f'32
+                                        - \tweak layer 20
+                                        ^ \markup \center-column { \circle 3 }
+                                        \once \override Dots.staff-position = #2
+                                        f'32
+                                        - \tweak layer 20
+                                        ^ \markup \center-column { \circle 1 }
+                                        \once \override Dots.staff-position = #2
+                                        f'16
+                                        - \tweak layer 20
+                                        ^ \markup \center-column { \circle 3 }
+                                        \once \override Dots.staff-position = #2
+                                        f'32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 2 }
                                         \once \override Dots.staff-position = #2
                                         f'32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                           %! abjad.glissando(6)
                                         \revert Accidental.stencil
@@ -480,6 +503,7 @@
                                         \revert divisiStaff.Stem.stemlet-length
                                         f'16
                                         \!
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 2 }
                                         ]
                                     }
@@ -978,6 +1002,7 @@
                                     {
                                         \override Staff.Stem.stemlet-length = 0.75
                                         bf16
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         [
                                           %! abjad.glissando(7)
@@ -992,31 +1017,40 @@
                                           %! abjad.glissando(1)
                                         \override NoteHead.no-ledgers = ##t
                                         bf16
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 1 }
                                         \once \override Dots.staff-position = #2
                                         bf16
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
                                         bf16
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 1 }
                                         \once \override Dots.staff-position = #2
                                         bf8
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
                                         bf16
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 2 }
                                         \once \override Dots.staff-position = #2
                                         bf16
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
                                         bf16
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 2 }
                                         \once \override Dots.staff-position = #2
                                         bf8
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
                                         \revert Staff.Stem.stemlet-length
                                         bf16
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 1 }
                                         ]
                                     }
@@ -1027,70 +1061,92 @@
                                         \once \override Dots.staff-position = #2
                                         \override Staff.Stem.stemlet-length = 0.75
                                         bf32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         [
                                         \once \override Dots.staff-position = #2
                                         bf16
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 2 }
                                         \once \override Dots.staff-position = #2
                                         bf32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
                                         bf32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 1 }
                                         \once \override Dots.staff-position = #2
                                         bf32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
                                         bf32
-                                        ^ \markup \center-column { \circle 1 }
-                                        \once \override Dots.staff-position = #2
-                                        bf16
-                                        ^ \markup \center-column { \circle 3 }
-                                        \once \override Dots.staff-position = #2
-                                        bf32
-                                        ^ \markup \center-column { \circle 1 }
-                                        \once \override Dots.staff-position = #2
-                                        bf32
-                                        ^ \markup \center-column { \circle 3 }
-                                        \once \override Dots.staff-position = #2
-                                        bf32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 1 }
                                         \once \override Dots.staff-position = #2
                                         bf16
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
                                         bf32
-                                        ^ \markup \center-column { \circle 2 }
-                                        \once \override Dots.staff-position = #2
-                                        bf32
-                                        ^ \markup \center-column { \circle 3 }
-                                        \once \override Dots.staff-position = #2
-                                        bf16
-                                        ^ \markup \center-column { \circle 2 }
-                                        \once \override Dots.staff-position = #2
-                                        bf32
-                                        ^ \markup \center-column { \circle 3 }
-                                        \once \override Dots.staff-position = #2
-                                        bf32
-                                        ^ \markup \center-column { \circle 2 }
-                                        \once \override Dots.staff-position = #2
-                                        bf32
-                                        ^ \markup \center-column { \circle 3 }
-                                        \once \override Dots.staff-position = #2
-                                        bf32
-                                        ^ \markup \center-column { \circle 2 }
-                                        \once \override Dots.staff-position = #2
-                                        bf16
-                                        ^ \markup \center-column { \circle 3 }
-                                        \once \override Dots.staff-position = #2
-                                        bf32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 1 }
                                         \once \override Dots.staff-position = #2
                                         bf32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         \once \override Dots.staff-position = #2
                                         bf32
+                                        - \tweak layer 20
+                                        ^ \markup \center-column { \circle 1 }
+                                        \once \override Dots.staff-position = #2
+                                        bf16
+                                        - \tweak layer 20
+                                        ^ \markup \center-column { \circle 3 }
+                                        \once \override Dots.staff-position = #2
+                                        bf32
+                                        - \tweak layer 20
+                                        ^ \markup \center-column { \circle 2 }
+                                        \once \override Dots.staff-position = #2
+                                        bf32
+                                        - \tweak layer 20
+                                        ^ \markup \center-column { \circle 3 }
+                                        \once \override Dots.staff-position = #2
+                                        bf16
+                                        - \tweak layer 20
+                                        ^ \markup \center-column { \circle 2 }
+                                        \once \override Dots.staff-position = #2
+                                        bf32
+                                        - \tweak layer 20
+                                        ^ \markup \center-column { \circle 3 }
+                                        \once \override Dots.staff-position = #2
+                                        bf32
+                                        - \tweak layer 20
+                                        ^ \markup \center-column { \circle 2 }
+                                        \once \override Dots.staff-position = #2
+                                        bf32
+                                        - \tweak layer 20
+                                        ^ \markup \center-column { \circle 3 }
+                                        \once \override Dots.staff-position = #2
+                                        bf32
+                                        - \tweak layer 20
+                                        ^ \markup \center-column { \circle 2 }
+                                        \once \override Dots.staff-position = #2
+                                        bf16
+                                        - \tweak layer 20
+                                        ^ \markup \center-column { \circle 3 }
+                                        \once \override Dots.staff-position = #2
+                                        bf32
+                                        - \tweak layer 20
+                                        ^ \markup \center-column { \circle 1 }
+                                        \once \override Dots.staff-position = #2
+                                        bf32
+                                        - \tweak layer 20
+                                        ^ \markup \center-column { \circle 3 }
+                                        \once \override Dots.staff-position = #2
+                                        bf32
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 2 }
                                           %! abjad.glissando(6)
                                         \revert Accidental.stencil
@@ -1103,6 +1159,7 @@
                                         \revert Staff.Stem.stemlet-length
                                         bf32
                                         \!
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         ]
                                     }
@@ -1169,17 +1226,61 @@
                             R1 * 3/4
                               %! +SCORE
                             \stopStaff \startStaff
-                              %! +SCORE
-                            \once \override Staff.BarLine.transparent = ##f
-                              %! +SCORE
-                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                              %! +SCORE
-                            \once \override Staff.TimeSignature.transparent = ##t
-                              %! +SCORE
-                            \once \override MultiMeasureRest.transparent = ##t
-                            R1 * 1/2
-                              %! +SCORE
-                            \stopStaff \startStaff
+                            <<
+                                \context Voice = "frenchhorn voice secondary"
+                                {
+                                      %! +SCORE
+                                    \once \override Staff.BarLine.transparent = ##f
+                                    \override Staff.MultiMeasureRest.transparent = ##t
+                                      %! +SCORE
+                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                    \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                    \once \override MultiMeasureRest.transparent = ##t
+                                    \voiceOne
+                                    R1 * 1/2
+                                      %! +SCORE
+                                    \stopStaff \startStaff
+                                    \revert Staff.MultiMeasureRest.transparent
+                                }
+                                \tag #'einsatz
+                                {
+                                    \context Voice = "frenchhorn voice cue"
+                                    {
+                                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 4) (ly:make-duration 3 0))
+                                        \times 4/6
+                                        {
+                                            \set fontSize = #-3
+                                            \clef "bass"
+                                            \override Staff.Stem.stemlet-length = 0.75
+                                            \voiceTwo
+                                            bf16
+                                            \mf
+                                            - \tweak padding 0
+                                            - \tweak whiteout 1
+                                            - \tweak whiteout-style #'outline
+                                            ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Fagotte " } } }
+                                            [
+                                            \>
+                                            bf16
+                                            bf16
+                                            bf16
+                                            bf8
+                                            bf16
+                                            bf16
+                                            bf16
+                                            bf8
+                                            \revert Staff.Stem.stemlet-length
+                                            bf16
+                                            \!
+                                            ]
+                                            \set fontSize = #-0.25
+                                        }
+                                    }
+                                }
+                            >>
+                            \oneVoice
                             \clef "treble"
                             \override Staff.Stem.stemlet-length = 0.75
                             <aqf'! cqs''!>8..
@@ -1313,17 +1414,62 @@
                                     R1 * 3/4
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "trumpet voice secondary"
+                                        {
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                            \override Staff.MultiMeasureRest.transparent = ##t
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            \voiceOne
+                                            R1 * 1/2
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                            \revert Staff.MultiMeasureRest.transparent
+                                        }
+                                        \tag #'einsatz
+                                        {
+                                            \context Voice = "trumpet voice cue"
+                                            {
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 4) (ly:make-duration 3 0))
+                                                \times 4/6
+                                                {
+                                                    \set fontSize = #-3
+                                                    \clef "bass"
+                                                    \override Staff.Stem.stemlet-length = 0.75
+                                                    \voiceTwo
+                                                    bf16
+                                                    \mf
+                                                    - \tweak padding 0
+                                                    - \tweak whiteout 1
+                                                    - \tweak whiteout-style #'outline
+                                                    ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Fagotte " } } }
+                                                    [
+                                                    \>
+                                                    bf16
+                                                    bf16
+                                                    bf16
+                                                    bf8
+                                                    bf16
+                                                    bf16
+                                                    bf16
+                                                    bf8
+                                                    \revert Staff.Stem.stemlet-length
+                                                    bf16
+                                                    \!
+                                                    ]
+                                                    \set fontSize = #-0.25
+                                                }
+                                            }
+                                        }
+                                    >>
+                                    \oneVoice
+                                    \clef "treble"
                                     \override Staff.Stem.stemlet-length = 0.75
                                     <d' f'>8..
                                     [
@@ -1475,17 +1621,61 @@
                                     R1 * 3/4
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "tenortrombone voice secondary"
+                                        {
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                            \override Staff.MultiMeasureRest.transparent = ##t
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            \voiceOne
+                                            R1 * 1/2
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                            \revert Staff.MultiMeasureRest.transparent
+                                        }
+                                        \tag #'einsatz
+                                        {
+                                            \context Voice = "tenortrombone voice cue"
+                                            {
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 4) (ly:make-duration 3 0))
+                                                \times 4/6
+                                                {
+                                                    \set fontSize = #-3
+                                                    \clef "bass"
+                                                    \override Staff.Stem.stemlet-length = 0.75
+                                                    \voiceTwo
+                                                    bf16
+                                                    \mf
+                                                    - \tweak padding 0
+                                                    - \tweak whiteout 1
+                                                    - \tweak whiteout-style #'outline
+                                                    ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Fagotte " } } }
+                                                    [
+                                                    \>
+                                                    bf16
+                                                    bf16
+                                                    bf16
+                                                    bf8
+                                                    bf16
+                                                    bf16
+                                                    bf16
+                                                    bf8
+                                                    \revert Staff.Stem.stemlet-length
+                                                    bf16
+                                                    \!
+                                                    ]
+                                                    \set fontSize = #-0.25
+                                                }
+                                            }
+                                        }
+                                    >>
+                                    \oneVoice
                                     \clef "treble"
                                     \override Staff.Stem.stemlet-length = 0.75
                                     <cqs'! eqs'!>8..
@@ -1605,17 +1795,61 @@
                                     R1 * 3/4
                                       %! +SCORE
                                     \stopStaff \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.BarLine.transparent = ##f
-                                      %! +SCORE
-                                    \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                    \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                    \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 1/2
-                                      %! +SCORE
-                                    \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "tuba voice secondary"
+                                        {
+                                              %! +SCORE
+                                            \once \override Staff.BarLine.transparent = ##f
+                                            \override Staff.MultiMeasureRest.transparent = ##t
+                                              %! +SCORE
+                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                            \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                            \once \override MultiMeasureRest.transparent = ##t
+                                            \voiceOne
+                                            R1 * 1/2
+                                              %! +SCORE
+                                            \stopStaff \startStaff
+                                            \revert Staff.MultiMeasureRest.transparent
+                                        }
+                                        \tag #'einsatz
+                                        {
+                                            \context Voice = "tuba voice cue"
+                                            {
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 6 4) (ly:make-duration 3 0))
+                                                \times 4/6
+                                                {
+                                                    \set fontSize = #-3
+                                                    \clef "bass"
+                                                    \override Staff.Stem.stemlet-length = 0.75
+                                                    \voiceTwo
+                                                    bf16
+                                                    \mf
+                                                    - \tweak padding 0
+                                                    - \tweak whiteout 1
+                                                    - \tweak whiteout-style #'outline
+                                                    ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Fagotte " } } }
+                                                    [
+                                                    \>
+                                                    bf16
+                                                    bf16
+                                                    bf16
+                                                    bf8
+                                                    bf16
+                                                    bf16
+                                                    bf16
+                                                    bf8
+                                                    \revert Staff.Stem.stemlet-length
+                                                    bf16
+                                                    \!
+                                                    ]
+                                                    \set fontSize = #-0.25
+                                                }
+                                            }
+                                        }
+                                    >>
+                                    \oneVoice
                                     \override Staff.Stem.stemlet-length = 0.75
                                     <b,, as,>8..
                                     [
@@ -2244,7 +2478,7 @@
                                     \>
                                       %! abjad.glissando(7)
                                     \glissando
-                                    \boxed-markup "Tanggu + Bangu mit dem Holz der Schlegel" 1
+                                    \boxed-markup "Tanggu + Bangu mit dem Holz des Schlägels" 1
                                     \once \override Dots.staff-position = #2
                                       %! abjad.glissando(1)
                                     \hide NoteHead
@@ -2437,7 +2671,7 @@
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 1 Soli }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 1 Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 soli }
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
@@ -2726,7 +2960,7 @@
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 2 Soli }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 2 Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 soli }
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
@@ -3023,7 +3257,7 @@
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratsche Soli }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratsche Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. soli }
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
@@ -3321,7 +3555,7 @@
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncello Soli }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncello Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. soli }
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE

@@ -307,6 +307,24 @@ trinton.make_music(
     voice=score["frenchhorn voice"],
 )
 
+trinton.make_music(
+    lambda _: trinton.select_target(_, (7,)),
+    trinton.attachment_command(
+        attachments=[abjad.Clef("treble")], selector=trinton.select_leaves_by_index([0])
+    ),
+    voice=score["frenchhorn voice"],
+)
+
+# trumpet music commands
+
+trinton.make_music(
+    lambda _: trinton.select_target(_, (7,)),
+    trinton.attachment_command(
+        attachments=[abjad.Clef("treble")], selector=trinton.select_leaves_by_index([0])
+    ),
+    voice=score["trumpet voice"],
+)
+
 # trombone music commands
 
 trinton.make_music(
@@ -413,7 +431,7 @@ trinton.make_music(
     library.aftergrace(selector=trinton.select_leaves_by_index([-1])),
     evans.PitchHandler([[2, -1]]),
     library.change_lines(lines=2, clef="percussion"),
-    library.boxed_markup(string="Tanggu + Bangu mit dem Holz der Schlegel"),
+    library.boxed_markup(string="Tanggu + Bangu mit dem Holz des Schlägels"),
     trinton.linear_attachment_command(
         attachments=[
             abjad.Arpeggio(),
@@ -1238,9 +1256,106 @@ trinton.make_music(
     voice=score["Global Context"],
 )
 
+# cues
+
+for voice_name in [
+    "frenchhorn voice",
+    "trumpet voice",
+    "tenortrombone voice",
+    "tuba voice",
+]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (6,)),
+        trinton.linear_attachment_command(
+            attachments=[
+                abjad.LilyPondLiteral(
+                    r"\override Staff.MultiMeasureRest.transparent = ##t", site="before"
+                ),
+                abjad.LilyPondLiteral(
+                    r"\revert Staff.MultiMeasureRest.transparent", site="absolute_after"
+                ),
+            ],
+            selector=trinton.select_leaves_by_index([0, -1]),
+            tag=abjad.Tag("+PARTS"),
+        ),
+        trinton.IntermittentVoiceHandler(
+            rhythm_handler=evans.RhythmHandler(
+                evans.talea(
+                    [
+                        1,
+                        1,
+                        1,
+                        1,
+                        2,
+                        1,
+                        1,
+                        1,
+                        2,
+                        1,
+                        1,
+                        2,
+                    ],
+                    32,
+                    extra_counts=[-4],
+                )
+            ),
+            direction=abjad.DOWN,
+            voice_name=f"{voice_name} cue",
+            from_components=False,
+            temp_name="secondary",
+            preprocessor=None,
+        ),
+        voice=score[voice_name],
+    )
+
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (6,)),
+        evans.PitchHandler([-2]),
+        trinton.call_rmaker(
+            rmaker=rmakers.force_diminution,
+            selector=trinton.select_tuplets_by_index([0]),
+        ),
+        trinton.respell_tuplets_command(),
+        trinton.linear_attachment_command(
+            attachments=[
+                abjad.Clef("bass"),
+                abjad.Dynamic("mf"),
+                abjad.StartHairpin(">"),
+                abjad.StopHairpin(),
+            ],
+            selector=trinton.select_leaves_by_index([0, 0, 0, -1]),
+        ),
+        trinton.notehead_bracket_command(),
+        library.einsatz(
+            following_text="Fagotte",
+            selector=trinton.pleaves(),
+            direction=abjad.UP,
+            tweaks=None,
+            padding=0,
+        ),
+        library.cue_eraser(),
+        voice=score[f"{voice_name} cue"],
+        beam_meter=True,
+    )
+
+
 # cutaway
 
-trinton.whiteout_empty_staves(score=score, cutaway="blank")
+trinton.whiteout_empty_staves(
+    score=score,
+    cutaway="blank",
+)
+
+trinton.whiteout_empty_staves(
+    score=score,
+    cutaway="blank",
+    voice_names=[
+        "frenchhorn voice secondary",
+        "trumpet voice secondary",
+        "tenortrombone voice secondary",
+        "tuba voice secondary",
+    ],
+)
 
 # parts
 

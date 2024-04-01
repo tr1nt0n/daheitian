@@ -1329,7 +1329,7 @@ all_short_instrument_names = [
     abjad.ShortInstrumentName(
         context="Staff",
         markup=abjad.Markup(
-            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Geige 1 Soli }'
+            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { g. 1 soli }'
         ),
     ),
     abjad.ShortInstrumentName(
@@ -1341,7 +1341,7 @@ all_short_instrument_names = [
     abjad.ShortInstrumentName(
         context="Staff",
         markup=abjad.Markup(
-            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Geige 2 Soli }'
+            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { g. 2 soli }'
         ),
     ),
     abjad.ShortInstrumentName(
@@ -1353,7 +1353,7 @@ all_short_instrument_names = [
     abjad.ShortInstrumentName(
         context="Staff",
         markup=abjad.Markup(
-            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Bratsche Soli }'
+            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { br. soli }'
         ),
     ),
     abjad.ShortInstrumentName(
@@ -1365,7 +1365,7 @@ all_short_instrument_names = [
     abjad.ShortInstrumentName(
         context="Staff",
         markup=abjad.Markup(
-            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { Violoncello Soli }'
+            '\markup \\fontsize #4 \override #\'(font-name . "Bodoni72 Book Italic") { vc. soli }'
         ),
     ),
     abjad.ShortInstrumentName(
@@ -1723,11 +1723,12 @@ def einsatz(
             r"\set fontSize = #-0.25", site="absolute_after"
         )
 
-        abjad.attach(
-            markup,
-            selections[0],
-            direction=direction,
-        )
+        if following_text is not None:
+            abjad.attach(
+                markup,
+                selections[0],
+                direction=direction,
+            )
         abjad.attach(start_font_size_literal, selections[0])
         abjad.attach(stop_font_size_literal, selections[-1])
 
@@ -2394,7 +2395,10 @@ def timbre_trills(selector=trinton.pleaves(), index=0):
 
         for tie, trill in zip(selections, trill_sequence):
             abjad.attach(
-                abjad.Markup(rf"\markup \center-column {{ \circle {trill} }}"),
+                abjad.bundle(
+                    abjad.Markup(rf"\markup \center-column {{ \circle {trill} }}"),
+                    r"- \tweak layer 20",
+                ),
                 tie[0],
                 direction=abjad.UP,
             )

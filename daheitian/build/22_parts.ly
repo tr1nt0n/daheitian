@@ -30,19 +30,42 @@
                             {
                                 \context Voice = "flute voice"
                                 {
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "flute voice secondary"
+                                        {
+                                              %! +SCORE
+                                        %%% \once \override Staff.BarLine.transparent = ##f
+                                            \override Staff.MultiMeasureRest.transparent = ##t
+                                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Flöten }
+                                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
+                                              %! +SCORE
+                                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                        %%% \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                        %%% \once \override MultiMeasureRest.transparent = ##t
+                                            \voiceOne
+                                            R1 * 3/2
+                                              %! +SCORE
+                                        %%% \stopStaff \startStaff
+                                            \revert Staff.MultiMeasureRest.transparent
+                                        }
+                                        \tag #'einsatz
+                                        {
+                                            \context Voice = "flute voice cue"
+                                            {
+                                                \set fontSize = #-3
+                                                \voiceTwo
+                                                r1.
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Ab hier bis Takt 166 nur Streicher " } } }
+                                                \set fontSize = #-0.25
+                                            }
+                                        }
+                                    >>
+                                    \oneVoice
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
@@ -339,19 +362,42 @@
                             {
                                 \context Voice = "piano 1 voice"
                                 {
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Klavier }
-                                    \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { klav. }
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "piano 1 voice secondary"
+                                        {
+                                              %! +SCORE
+                                        %%% \once \override Staff.BarLine.transparent = ##f
+                                            \override Staff.MultiMeasureRest.transparent = ##t
+                                            \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Klavier }
+                                            \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { klav. }
+                                              %! +SCORE
+                                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                        %%% \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                        %%% \once \override MultiMeasureRest.transparent = ##t
+                                            \voiceOne
+                                            R1 * 3/2
+                                              %! +SCORE
+                                        %%% \stopStaff \startStaff
+                                            \revert Staff.MultiMeasureRest.transparent
+                                        }
+                                        \tag #'einsatz
+                                        {
+                                            \context Voice = "piano 1 voice cue"
+                                            {
+                                                \set fontSize = #-3
+                                                \voiceTwo
+                                                r1.
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Ab hier bis Takt 166 nur Streicher " } } }
+                                                \set fontSize = #-0.25
+                                            }
+                                        }
+                                    >>
+                                    \oneVoice
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
@@ -409,19 +455,42 @@
                             {
                                 \context Voice = "harp 1 voice"
                                 {
-                                      %! +SCORE
-                                %%% \once \override Staff.BarLine.transparent = ##f
-                                    \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
-                                    \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                      %! +SCORE
-                                %%% \once \override Staff.TimeSignature.transparent = ##t
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
+                                    <<
+                                        \context Voice = "harp 1 voice secondary"
+                                        {
+                                              %! +SCORE
+                                        %%% \once \override Staff.BarLine.transparent = ##f
+                                            \override Staff.MultiMeasureRest.transparent = ##t
+                                            \set GrandStaff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Harfe }
+                                            \set GrandStaff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { hf. }
+                                              %! +SCORE
+                                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                              %! +SCORE
+                                        %%% \once \override Staff.TimeSignature.transparent = ##t
+                                              %! +SCORE
+                                        %%% \once \override MultiMeasureRest.transparent = ##t
+                                            \voiceOne
+                                            R1 * 3/2
+                                              %! +SCORE
+                                        %%% \stopStaff \startStaff
+                                            \revert Staff.MultiMeasureRest.transparent
+                                        }
+                                        \tag #'einsatz
+                                        {
+                                            \context Voice = "harp 1 voice cue"
+                                            {
+                                                \set fontSize = #-3
+                                                \voiceTwo
+                                                r1.
+                                                - \tweak padding 0
+                                                - \tweak whiteout 1
+                                                - \tweak whiteout-style #'outline
+                                                ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Ab hier bis Takt 166 nur Streicher " } } }
+                                                \set fontSize = #-0.25
+                                            }
+                                        }
+                                    >>
+                                    \oneVoice
                                       %! +SCORE
                                 %%% \once \override Staff.BarLine.transparent = ##f
                                       %! +SCORE
@@ -475,19 +544,42 @@
                     {
                         \context Voice = "percussion 1 voice"
                         {
-                              %! +SCORE
-                        %%% \once \override Staff.BarLine.transparent = ##f
-                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Pauken }
-                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pk. }
-                              %! +SCORE
-                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                              %! +SCORE
-                        %%% \once \override Staff.TimeSignature.transparent = ##t
-                              %! +SCORE
-                        %%% \once \override MultiMeasureRest.transparent = ##t
-                            R1 * 3/2
-                              %! +SCORE
-                        %%% \stopStaff \startStaff
+                            <<
+                                \context Voice = "percussion 1 voice secondary"
+                                {
+                                      %! +SCORE
+                                %%% \once \override Staff.BarLine.transparent = ##f
+                                    \override Staff.MultiMeasureRest.transparent = ##t
+                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Pauken }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pk. }
+                                      %! +SCORE
+                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                      %! +SCORE
+                                %%% \once \override Staff.TimeSignature.transparent = ##t
+                                      %! +SCORE
+                                %%% \once \override MultiMeasureRest.transparent = ##t
+                                    \voiceOne
+                                    R1 * 3/2
+                                      %! +SCORE
+                                %%% \stopStaff \startStaff
+                                    \revert Staff.MultiMeasureRest.transparent
+                                }
+                                \tag #'einsatz
+                                {
+                                    \context Voice = "percussion 1 voice cue"
+                                    {
+                                        \set fontSize = #-3
+                                        \voiceTwo
+                                        r1.
+                                        - \tweak padding 0
+                                        - \tweak whiteout 1
+                                        - \tweak whiteout-style #'outline
+                                        ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Ab hier bis Takt 166 nur Streicher " } } }
+                                        \set fontSize = #-0.25
+                                    }
+                                }
+                            >>
+                            \oneVoice
                               %! +SCORE
                         %%% \once \override Staff.BarLine.transparent = ##f
                               %! +SCORE
@@ -589,7 +681,7 @@
                                     {
                                         \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 1 Soli }
                                           %! +SCORE
-                                    %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 1 Soli }
+                                    %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 soli }
                                         r16
                                         \override Dots.staff-position = #2
                                         aqf4
@@ -690,7 +782,7 @@
                                     \override Dots.staff-position = #2
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 2 Soli }
                                       %! +SCORE
-                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 2 Soli }
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 soli }
                                     r16
                                     \glissando
                                     aqf4..
@@ -805,7 +897,7 @@
                                     \override Dots.staff-position = #2
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratsche Soli }
                                       %! +SCORE
-                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratsche Soli }
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. soli }
                                     r8
                                     \glissando
                                     \tweak text #tuplet-number::calc-fraction-text
@@ -930,7 +1022,7 @@
                                 {
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncello Soli }
                                       %! +SCORE
-                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncello Soli }
+                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. soli }
                                     \clef "bass"
                                     af1.
                                     \p

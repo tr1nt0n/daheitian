@@ -332,9 +332,72 @@ trinton.make_music(
     voice=score["Global Context"],
 )
 
+# cues
+
+for voice_name in [
+    "flute voice",
+    "harp 1 voice",
+    "piano 1 voice",
+    "percussion 1 voice",
+]:
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (1,)),
+        trinton.linear_attachment_command(
+            attachments=[
+                abjad.LilyPondLiteral(
+                    r"\override Staff.MultiMeasureRest.transparent = ##t", site="before"
+                ),
+                abjad.LilyPondLiteral(
+                    r"\revert Staff.MultiMeasureRest.transparent", site="absolute_after"
+                ),
+            ],
+            selector=trinton.select_leaves_by_index([0, -1]),
+            tag=abjad.Tag("+PARTS"),
+        ),
+        trinton.IntermittentVoiceHandler(
+            rhythm_handler=evans.RhythmHandler(
+                evans.talea(
+                    [-100],
+                    4,
+                )
+            ),
+            direction=abjad.DOWN,
+            voice_name=f"{voice_name} cue",
+            from_components=False,
+            temp_name="secondary",
+            preprocessor=None,
+        ),
+        voice=score[voice_name],
+    )
+
+    trinton.make_music(
+        lambda _: trinton.select_target(_, (1,)),
+        library.einsatz(
+            following_text="Ab hier bis Takt 166 nur Streicher",
+            selector=abjad.select.leaves,
+            direction=abjad.UP,
+            tweaks=None,
+            padding=0,
+        ),
+        library.cue_eraser(),
+        voice=score[f"{voice_name} cue"],
+        beam_meter=True,
+    )
+
 # cutaway
 
 trinton.whiteout_empty_staves(score=score, cutaway="blank")
+
+trinton.whiteout_empty_staves(
+    score=score,
+    cutaway="blank",
+    voice_names=[
+        "flute voice secondary",
+        "piano 1 voice secondary",
+        "harp 1 voice secondary",
+        "percussion 1 voice secondary",
+    ],
+)
 
 # parts
 

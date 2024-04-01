@@ -573,6 +573,7 @@
                                         \override Stem.direction = #DOWN
                                         a'16
                                         \mp
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         - \tweak padding #7
                                         - \abjad-solid-line-with-hook
@@ -587,6 +588,7 @@
                                     {
                                         r16
                                         a'16
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 1 }
                                         r8.
                                     }
@@ -596,9 +598,11 @@
                                     {
                                         r16
                                         a'16
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         r8
                                         a'16
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 1 }
                                         \stopTextSpan
                                         \revert Stem.direction
@@ -644,10 +648,12 @@
                                         \tweak style #'cross
                                         b,8
                                         \mp
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 1 }
                                         r8
                                         \tweak style #'cross
                                         b,8
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                     }
                                       %! +SCORE
@@ -669,11 +675,13 @@
                                         \override Staff.Stem.stemlet-length = 0.75
                                         \tweak style #'cross
                                         b,8
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 2 }
                                         [
                                         \revert Staff.Stem.stemlet-length
                                         \tweak style #'cross
                                         b,8
+                                        - \tweak layer 20
                                         ^ \markup \center-column { \circle 3 }
                                         ]
                                     }
@@ -1404,7 +1412,7 @@
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 1 Soli }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 1 Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 soli }
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
@@ -1536,7 +1544,7 @@
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 2 Soli }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 2 Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 soli }
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
@@ -1668,7 +1676,7 @@
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratsche Soli }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratsche Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. soli }
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
@@ -1800,7 +1808,7 @@
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncello Soli }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncello Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. soli }
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE

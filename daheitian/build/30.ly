@@ -1654,496 +1654,353 @@
                                             \stopStaff \startStaff
                                             \revert Staff.MultiMeasureRest.transparent
                                         }
-                                        \context Voice = "bassoon intermittent voice"
+                                        \tag #'einsatz
                                         {
-                                              %! +SCORE
-                                            \once \override Staff.BarLine.transparent = ##f
-                                              %! +SCORE
-                                            \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                              %! +SCORE
-                                            \once \override Staff.TimeSignature.transparent = ##t
-                                              %! +SCORE
-                                            \once \override MultiMeasureRest.transparent = ##t
-                                            \voiceOne
-                                            R1 * 1/2
-                                              %! +SCORE
-                                            \stopStaff \startStaff
-                                              %! +PARTS
-                                        %%% \tweak text #tuplet-number::calc-fraction-text
-                                              %! +PARTS
-                                        %%% \times 6/5
-                                              %! +PARTS
-                                        %%% {
-                                                  %! +PARTS
-                                            %%% \clef "bass"
-                                                  %! +PARTS
-                                            %%% aqs,4..
-                                                  %! +PARTS
-                                            %%% - \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "1. soli" }
-                                                  %! +PARTS
-                                            %%% - \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Wenn keine erste Bassklarinette:" }
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \<
-                                                  %! +PARTS
-                                            %%% \glissando
-                                                  %! +PARTS
-                                            %%% \once \override Dots.staff-position = #2
-                                                  %! +PARTS
-                                            %%% \hide NoteHead
-                                                  %! +PARTS
-                                            %%% \override Accidental.stencil = ##f
-                                                  %! +PARTS
-                                            %%% \override NoteColumn.glissando-skip = ##t
-                                                  %! +PARTS
-                                            %%% \override NoteHead.no-ledgers = ##t
-                                                  %! +PARTS
-                                            %%% aqs,8
-                                                      %! +PARTS
-                                                %%% ^ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
-                                                  %! +PARTS
-                                            %%% [
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \>
-                                                  %! +PARTS
-                                            %%% \revert Accidental.stencil
-                                                  %! +PARTS
-                                            %%% \revert NoteColumn.glissando-skip
-                                                  %! +PARTS
-                                            %%% \revert NoteHead.no-ledgers
-                                                  %! +PARTS
-                                            %%% \undo \hide NoteHead
-                                                  %! +PARTS
-                                            %%% aqs,16
-                                                  %! +PARTS
-                                            %%% \!
-                                                  %! +PARTS
-                                            %%% ]
-                                              %! +PARTS
-                                        %%% }
-                                              %! +PARTS
-                                        %%% r2
-                                              %! +PARTS
-                                        %%% \tweak text #tuplet-number::calc-fraction-text
-                                              %! +PARTS
-                                        %%% \times 6/5
-                                              %! +PARTS
-                                        %%% {
-                                                  %! +PARTS
-                                            %%% aqs,4..
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \<
-                                                  %! +PARTS
-                                            %%% \glissando
-                                                  %! +PARTS
-                                            %%% \once \override Dots.staff-position = #2
-                                                  %! +PARTS
-                                            %%% \hide NoteHead
-                                                  %! +PARTS
-                                            %%% \override Accidental.stencil = ##f
-                                                  %! +PARTS
-                                            %%% \override NoteColumn.glissando-skip = ##t
-                                                  %! +PARTS
-                                            %%% \override NoteHead.no-ledgers = ##t
-                                                  %! +PARTS
-                                            %%% aqs,8
-                                                      %! +PARTS
-                                                %%% ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
-                                                  %! +PARTS
-                                            %%% [
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \>
-                                                  %! +PARTS
-                                            %%% \revert Accidental.stencil
-                                                  %! +PARTS
-                                            %%% \revert NoteColumn.glissando-skip
-                                                  %! +PARTS
-                                            %%% \revert NoteHead.no-ledgers
-                                                  %! +PARTS
-                                            %%% \undo \hide NoteHead
-                                                  %! +PARTS
-                                            %%% aqs,16
-                                                  %! +PARTS
-                                            %%% \!
-                                                  %! +PARTS
-                                            %%% ]
-                                              %! +PARTS
-                                        %%% }
-                                              %! +PARTS
-                                        %%% r2
-                                              %! +PARTS
-                                        %%% \tweak text #tuplet-number::calc-fraction-text
-                                              %! +PARTS
-                                        %%% \times 6/5
-                                              %! +PARTS
-                                        %%% {
-                                                  %! +PARTS
-                                            %%% aqs,4..
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \<
-                                                  %! +PARTS
-                                            %%% \glissando
-                                                  %! +PARTS
-                                            %%% \once \override Dots.staff-position = #2
-                                                  %! +PARTS
-                                            %%% \hide NoteHead
-                                                  %! +PARTS
-                                            %%% \override Accidental.stencil = ##f
-                                                  %! +PARTS
-                                            %%% \override NoteColumn.glissando-skip = ##t
-                                                  %! +PARTS
-                                            %%% \override NoteHead.no-ledgers = ##t
-                                                  %! +PARTS
-                                            %%% aqs,8
-                                                      %! +PARTS
-                                                %%% ^ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
-                                                  %! +PARTS
-                                            %%% [
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \>
-                                                  %! +PARTS
-                                            %%% \revert Accidental.stencil
-                                                  %! +PARTS
-                                            %%% \revert NoteColumn.glissando-skip
-                                                  %! +PARTS
-                                            %%% \revert NoteHead.no-ledgers
-                                                  %! +PARTS
-                                            %%% \undo \hide NoteHead
-                                                  %! +PARTS
-                                            %%% aqs,16
-                                                  %! +PARTS
-                                            %%% \!
-                                                  %! +PARTS
-                                            %%% ]
-                                              %! +PARTS
-                                        %%% }
-                                              %! +PARTS
-                                        %%% r4
-                                              %! +PARTS
-                                        %%% r4
-                                              %! +PARTS
-                                        %%% \tweak text #tuplet-number::calc-fraction-text
-                                              %! +PARTS
-                                        %%% \times 6/5
-                                              %! +PARTS
-                                        %%% {
-                                                  %! +PARTS
-                                            %%% aqs,4..
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \<
-                                                  %! +PARTS
-                                            %%% \glissando
-                                                  %! +PARTS
-                                            %%% \once \override Dots.staff-position = #2
-                                                  %! +PARTS
-                                            %%% \hide NoteHead
-                                                  %! +PARTS
-                                            %%% \override Accidental.stencil = ##f
-                                                  %! +PARTS
-                                            %%% \override NoteColumn.glissando-skip = ##t
-                                                  %! +PARTS
-                                            %%% \override NoteHead.no-ledgers = ##t
-                                                  %! +PARTS
-                                            %%% aqs,8
-                                                      %! +PARTS
-                                                %%% ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
-                                                  %! +PARTS
-                                            %%% [
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \>
-                                                  %! +PARTS
-                                            %%% \revert Accidental.stencil
-                                                  %! +PARTS
-                                            %%% \revert NoteColumn.glissando-skip
-                                                  %! +PARTS
-                                            %%% \revert NoteHead.no-ledgers
-                                                  %! +PARTS
-                                            %%% \undo \hide NoteHead
-                                                  %! +PARTS
-                                            %%% aqs,16
-                                                  %! +PARTS
-                                            %%% \!
-                                                  %! +PARTS
-                                            %%% ]
-                                              %! +PARTS
-                                        %%% }
-                                              %! +PARTS
-                                        %%% r2
-                                              %! +PARTS
-                                        %%% \tweak text #tuplet-number::calc-fraction-text
-                                              %! +PARTS
-                                        %%% \times 6/5
-                                              %! +PARTS
-                                        %%% {
-                                                  %! +PARTS
-                                            %%% aqs,4..
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \<
-                                                  %! +PARTS
-                                            %%% \glissando
-                                                  %! +PARTS
-                                            %%% \once \override Dots.staff-position = #2
-                                                  %! +PARTS
-                                            %%% \hide NoteHead
-                                                  %! +PARTS
-                                            %%% \override Accidental.stencil = ##f
-                                                  %! +PARTS
-                                            %%% \override NoteColumn.glissando-skip = ##t
-                                                  %! +PARTS
-                                            %%% \override NoteHead.no-ledgers = ##t
-                                                  %! +PARTS
-                                            %%% aqs,8
-                                                      %! +PARTS
-                                                %%% ^ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
-                                                  %! +PARTS
-                                            %%% [
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \>
-                                                  %! +PARTS
-                                            %%% \revert Accidental.stencil
-                                                  %! +PARTS
-                                            %%% \revert NoteColumn.glissando-skip
-                                                  %! +PARTS
-                                            %%% \revert NoteHead.no-ledgers
-                                                  %! +PARTS
-                                            %%% \undo \hide NoteHead
-                                                  %! +PARTS
-                                            %%% aqs,16
-                                                  %! +PARTS
-                                            %%% \!
-                                                  %! +PARTS
-                                            %%% ]
-                                              %! +PARTS
-                                        %%% }
-                                              %! +PARTS
-                                        %%% r2
-                                              %! +PARTS
-                                        %%% \tweak text #tuplet-number::calc-fraction-text
-                                              %! +PARTS
-                                        %%% \times 6/5
-                                              %! +PARTS
-                                        %%% {
-                                                  %! +PARTS
-                                            %%% aqs,4..
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \<
-                                                  %! +PARTS
-                                            %%% \glissando
-                                                  %! +PARTS
-                                            %%% \once \override Dots.staff-position = #2
-                                                  %! +PARTS
-                                            %%% \hide NoteHead
-                                                  %! +PARTS
-                                            %%% \override Accidental.stencil = ##f
-                                                  %! +PARTS
-                                            %%% \override NoteColumn.glissando-skip = ##t
-                                                  %! +PARTS
-                                            %%% \override NoteHead.no-ledgers = ##t
-                                                  %! +PARTS
-                                            %%% aqs,8
-                                                      %! +PARTS
-                                                %%% ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
-                                                  %! +PARTS
-                                            %%% [
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \>
-                                                  %! +PARTS
-                                            %%% \revert Accidental.stencil
-                                                  %! +PARTS
-                                            %%% \revert NoteColumn.glissando-skip
-                                                  %! +PARTS
-                                            %%% \revert NoteHead.no-ledgers
-                                                  %! +PARTS
-                                            %%% \undo \hide NoteHead
-                                                  %! +PARTS
-                                            %%% aqs,16
-                                                  %! +PARTS
-                                            %%% \!
-                                                  %! +PARTS
-                                            %%% ]
-                                              %! +PARTS
-                                        %%% }
-                                              %! +PARTS
-                                        %%% r2
-                                              %! +PARTS
-                                        %%% \tweak text #tuplet-number::calc-fraction-text
-                                              %! +PARTS
-                                        %%% \times 6/5
-                                              %! +PARTS
-                                        %%% {
-                                                  %! +PARTS
-                                            %%% aqs,4..
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \<
-                                                  %! +PARTS
-                                            %%% \glissando
-                                                  %! +PARTS
-                                            %%% \once \override Dots.staff-position = #2
-                                                  %! +PARTS
-                                            %%% \hide NoteHead
-                                                  %! +PARTS
-                                            %%% \override Accidental.stencil = ##f
-                                                  %! +PARTS
-                                            %%% \override NoteColumn.glissando-skip = ##t
-                                                  %! +PARTS
-                                            %%% \override NoteHead.no-ledgers = ##t
-                                                  %! +PARTS
-                                            %%% aqs,8
-                                                      %! +PARTS
-                                                %%% ^ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
-                                                  %! +PARTS
-                                            %%% [
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \>
-                                                  %! +PARTS
-                                            %%% \revert Accidental.stencil
-                                                  %! +PARTS
-                                            %%% \revert NoteColumn.glissando-skip
-                                                  %! +PARTS
-                                            %%% \revert NoteHead.no-ledgers
-                                                  %! +PARTS
-                                            %%% \undo \hide NoteHead
-                                                  %! +PARTS
-                                            %%% aqs,16
-                                                  %! +PARTS
-                                            %%% \!
-                                                  %! +PARTS
-                                            %%% ]
-                                              %! +PARTS
-                                        %%% }
-                                              %! +PARTS
-                                        %%% r4
-                                              %! +PARTS
-                                        %%% r4
-                                              %! +PARTS
-                                        %%% \tweak text #tuplet-number::calc-fraction-text
-                                              %! +PARTS
-                                        %%% \times 6/5
-                                              %! +PARTS
-                                        %%% {
-                                                  %! +PARTS
-                                            %%% aqs,4..
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \<
-                                                  %! +PARTS
-                                            %%% \glissando
-                                                  %! +PARTS
-                                            %%% \once \override Dots.staff-position = #2
-                                                  %! +PARTS
-                                            %%% \hide NoteHead
-                                                  %! +PARTS
-                                            %%% \override Accidental.stencil = ##f
-                                                  %! +PARTS
-                                            %%% \override NoteColumn.glissando-skip = ##t
-                                                  %! +PARTS
-                                            %%% \override NoteHead.no-ledgers = ##t
-                                                  %! +PARTS
-                                            %%% aqs,8
-                                                      %! +PARTS
-                                                %%% ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
-                                                  %! +PARTS
-                                            %%% [
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \>
-                                                  %! +PARTS
-                                            %%% \revert Accidental.stencil
-                                                  %! +PARTS
-                                            %%% \revert NoteColumn.glissando-skip
-                                                  %! +PARTS
-                                            %%% \revert NoteHead.no-ledgers
-                                                  %! +PARTS
-                                            %%% \undo \hide NoteHead
-                                                  %! +PARTS
-                                            %%% aqs,16
-                                                  %! +PARTS
-                                            %%% \!
-                                                  %! +PARTS
-                                            %%% ]
-                                              %! +PARTS
-                                        %%% }
-                                              %! +PARTS
-                                        %%% r2
-                                              %! +PARTS
-                                        %%% \tweak text #tuplet-number::calc-fraction-text
-                                              %! +PARTS
-                                        %%% \times 6/5
-                                              %! +PARTS
-                                        %%% {
-                                                  %! +PARTS
-                                            %%% aqs,4..
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \<
-                                                  %! +PARTS
-                                            %%% \glissando
-                                                  %! +PARTS
-                                            %%% \once \override Dots.staff-position = #2
-                                                  %! +PARTS
-                                            %%% \hide NoteHead
-                                                  %! +PARTS
-                                            %%% \override Accidental.stencil = ##f
-                                                  %! +PARTS
-                                            %%% \override NoteColumn.glissando-skip = ##t
-                                                  %! +PARTS
-                                            %%% \override NoteHead.no-ledgers = ##t
-                                                  %! +PARTS
-                                            %%% aqs,8
-                                                      %! +PARTS
-                                                %%% ^ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
-                                                  %! +PARTS
-                                            %%% [
-                                                  %! +PARTS
-                                            %%% - \tweak circled-tip ##t
-                                                  %! +PARTS
-                                            %%% \>
-                                                  %! +PARTS
-                                            %%% \revert Accidental.stencil
-                                                  %! +PARTS
-                                            %%% \revert NoteColumn.glissando-skip
-                                                  %! +PARTS
-                                            %%% \revert NoteHead.no-ledgers
-                                                  %! +PARTS
-                                            %%% \undo \hide NoteHead
-                                                  %! +PARTS
-                                            %%% aqs,16
-                                                  %! +PARTS
-                                            %%% \!
-                                                  %! +PARTS
-                                            %%% ]
-                                              %! +PARTS
-                                        %%% }
+                                            \context Voice = "bassoon intermittent voice"
+                                            {
+                                                  %! +SCORE
+                                                \once \override Staff.BarLine.transparent = ##f
+                                                  %! +SCORE
+                                                \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                                                  %! +SCORE
+                                                \once \override Staff.TimeSignature.transparent = ##t
+                                                  %! +SCORE
+                                                \once \override MultiMeasureRest.transparent = ##t
+                                                \voiceOne
+                                                R1 * 1/2
+                                                  %! +SCORE
+                                                \stopStaff \startStaff
+                                                \tweak text #tuplet-number::calc-fraction-text
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) (ly:make-duration 3 0))
+                                                \times 6/5
+                                                {
+                                                    \clef "bass"
+                                                    aqs,4..
+                                                    - \tweak padding 3
+                                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "1. soli" }
+                                                    - \tweak padding 5
+                                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Wenn keine erste Bassklarinette:" }
+                                                    - \tweak circled-tip ##t
+                                                    ^ \<
+                                                      %! abjad.glissando(7)
+                                                    \glissando
+                                                    \once \override Dots.staff-position = #2
+                                                      %! abjad.glissando(1)
+                                                    \hide NoteHead
+                                                      %! abjad.glissando(1)
+                                                    \override Accidental.stencil = ##f
+                                                      %! abjad.glissando(1)
+                                                    \override NoteColumn.glissando-skip = ##t
+                                                      %! abjad.glissando(1)
+                                                    \override NoteHead.no-ledgers = ##t
+                                                    aqs,8
+                                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
+                                                    [
+                                                    - \tweak circled-tip ##t
+                                                    ^ \>
+                                                      %! abjad.glissando(6)
+                                                    \revert Accidental.stencil
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteColumn.glissando-skip
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteHead.no-ledgers
+                                                      %! abjad.glissando(6)
+                                                    \undo \hide NoteHead
+                                                    aqs,16
+                                                    \!
+                                                    ]
+                                                }
+                                                r2
+                                                \tweak text #tuplet-number::calc-fraction-text
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) (ly:make-duration 3 0))
+                                                \times 6/5
+                                                {
+                                                    aqs,4..
+                                                    - \tweak circled-tip ##t
+                                                    ^ \<
+                                                      %! abjad.glissando(7)
+                                                    \glissando
+                                                    \once \override Dots.staff-position = #2
+                                                      %! abjad.glissando(1)
+                                                    \hide NoteHead
+                                                      %! abjad.glissando(1)
+                                                    \override Accidental.stencil = ##f
+                                                      %! abjad.glissando(1)
+                                                    \override NoteColumn.glissando-skip = ##t
+                                                      %! abjad.glissando(1)
+                                                    \override NoteHead.no-ledgers = ##t
+                                                    aqs,8
+                                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
+                                                    [
+                                                    - \tweak circled-tip ##t
+                                                    ^ \>
+                                                      %! abjad.glissando(6)
+                                                    \revert Accidental.stencil
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteColumn.glissando-skip
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteHead.no-ledgers
+                                                      %! abjad.glissando(6)
+                                                    \undo \hide NoteHead
+                                                    aqs,16
+                                                    \!
+                                                    ]
+                                                }
+                                                r2
+                                                \tweak text #tuplet-number::calc-fraction-text
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) (ly:make-duration 3 0))
+                                                \times 6/5
+                                                {
+                                                    aqs,4..
+                                                    - \tweak circled-tip ##t
+                                                    ^ \<
+                                                      %! abjad.glissando(7)
+                                                    \glissando
+                                                    \once \override Dots.staff-position = #2
+                                                      %! abjad.glissando(1)
+                                                    \hide NoteHead
+                                                      %! abjad.glissando(1)
+                                                    \override Accidental.stencil = ##f
+                                                      %! abjad.glissando(1)
+                                                    \override NoteColumn.glissando-skip = ##t
+                                                      %! abjad.glissando(1)
+                                                    \override NoteHead.no-ledgers = ##t
+                                                    aqs,8
+                                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
+                                                    [
+                                                    - \tweak circled-tip ##t
+                                                    ^ \>
+                                                      %! abjad.glissando(6)
+                                                    \revert Accidental.stencil
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteColumn.glissando-skip
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteHead.no-ledgers
+                                                      %! abjad.glissando(6)
+                                                    \undo \hide NoteHead
+                                                    aqs,16
+                                                    \!
+                                                    ]
+                                                }
+                                                r4
+                                                r4
+                                                \tweak text #tuplet-number::calc-fraction-text
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) (ly:make-duration 3 0))
+                                                \times 6/5
+                                                {
+                                                    aqs,4..
+                                                    - \tweak circled-tip ##t
+                                                    ^ \<
+                                                      %! abjad.glissando(7)
+                                                    \glissando
+                                                    \once \override Dots.staff-position = #2
+                                                      %! abjad.glissando(1)
+                                                    \hide NoteHead
+                                                      %! abjad.glissando(1)
+                                                    \override Accidental.stencil = ##f
+                                                      %! abjad.glissando(1)
+                                                    \override NoteColumn.glissando-skip = ##t
+                                                      %! abjad.glissando(1)
+                                                    \override NoteHead.no-ledgers = ##t
+                                                    aqs,8
+                                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
+                                                    [
+                                                    - \tweak circled-tip ##t
+                                                    ^ \>
+                                                      %! abjad.glissando(6)
+                                                    \revert Accidental.stencil
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteColumn.glissando-skip
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteHead.no-ledgers
+                                                      %! abjad.glissando(6)
+                                                    \undo \hide NoteHead
+                                                    aqs,16
+                                                    \!
+                                                    ]
+                                                }
+                                                r2
+                                                \tweak text #tuplet-number::calc-fraction-text
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) (ly:make-duration 3 0))
+                                                \times 6/5
+                                                {
+                                                    aqs,4..
+                                                    - \tweak circled-tip ##t
+                                                    ^ \<
+                                                      %! abjad.glissando(7)
+                                                    \glissando
+                                                    \once \override Dots.staff-position = #2
+                                                      %! abjad.glissando(1)
+                                                    \hide NoteHead
+                                                      %! abjad.glissando(1)
+                                                    \override Accidental.stencil = ##f
+                                                      %! abjad.glissando(1)
+                                                    \override NoteColumn.glissando-skip = ##t
+                                                      %! abjad.glissando(1)
+                                                    \override NoteHead.no-ledgers = ##t
+                                                    aqs,8
+                                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
+                                                    [
+                                                    - \tweak circled-tip ##t
+                                                    ^ \>
+                                                      %! abjad.glissando(6)
+                                                    \revert Accidental.stencil
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteColumn.glissando-skip
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteHead.no-ledgers
+                                                      %! abjad.glissando(6)
+                                                    \undo \hide NoteHead
+                                                    aqs,16
+                                                    \!
+                                                    ]
+                                                }
+                                                r2
+                                                \tweak text #tuplet-number::calc-fraction-text
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) (ly:make-duration 3 0))
+                                                \times 6/5
+                                                {
+                                                    aqs,4..
+                                                    - \tweak circled-tip ##t
+                                                    ^ \<
+                                                      %! abjad.glissando(7)
+                                                    \glissando
+                                                    \once \override Dots.staff-position = #2
+                                                      %! abjad.glissando(1)
+                                                    \hide NoteHead
+                                                      %! abjad.glissando(1)
+                                                    \override Accidental.stencil = ##f
+                                                      %! abjad.glissando(1)
+                                                    \override NoteColumn.glissando-skip = ##t
+                                                      %! abjad.glissando(1)
+                                                    \override NoteHead.no-ledgers = ##t
+                                                    aqs,8
+                                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
+                                                    [
+                                                    - \tweak circled-tip ##t
+                                                    ^ \>
+                                                      %! abjad.glissando(6)
+                                                    \revert Accidental.stencil
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteColumn.glissando-skip
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteHead.no-ledgers
+                                                      %! abjad.glissando(6)
+                                                    \undo \hide NoteHead
+                                                    aqs,16
+                                                    \!
+                                                    ]
+                                                }
+                                                r2
+                                                \tweak text #tuplet-number::calc-fraction-text
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) (ly:make-duration 3 0))
+                                                \times 6/5
+                                                {
+                                                    aqs,4..
+                                                    - \tweak circled-tip ##t
+                                                    ^ \<
+                                                      %! abjad.glissando(7)
+                                                    \glissando
+                                                    \once \override Dots.staff-position = #2
+                                                      %! abjad.glissando(1)
+                                                    \hide NoteHead
+                                                      %! abjad.glissando(1)
+                                                    \override Accidental.stencil = ##f
+                                                      %! abjad.glissando(1)
+                                                    \override NoteColumn.glissando-skip = ##t
+                                                      %! abjad.glissando(1)
+                                                    \override NoteHead.no-ledgers = ##t
+                                                    aqs,8
+                                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
+                                                    [
+                                                    - \tweak circled-tip ##t
+                                                    ^ \>
+                                                      %! abjad.glissando(6)
+                                                    \revert Accidental.stencil
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteColumn.glissando-skip
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteHead.no-ledgers
+                                                      %! abjad.glissando(6)
+                                                    \undo \hide NoteHead
+                                                    aqs,16
+                                                    \!
+                                                    ]
+                                                }
+                                                r4
+                                                r4
+                                                \tweak text #tuplet-number::calc-fraction-text
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) (ly:make-duration 3 0))
+                                                \times 6/5
+                                                {
+                                                    aqs,4..
+                                                    - \tweak circled-tip ##t
+                                                    ^ \<
+                                                      %! abjad.glissando(7)
+                                                    \glissando
+                                                    \once \override Dots.staff-position = #2
+                                                      %! abjad.glissando(1)
+                                                    \hide NoteHead
+                                                      %! abjad.glissando(1)
+                                                    \override Accidental.stencil = ##f
+                                                      %! abjad.glissando(1)
+                                                    \override NoteColumn.glissando-skip = ##t
+                                                      %! abjad.glissando(1)
+                                                    \override NoteHead.no-ledgers = ##t
+                                                    aqs,8
+                                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "pp"))
+                                                    [
+                                                    - \tweak circled-tip ##t
+                                                    ^ \>
+                                                      %! abjad.glissando(6)
+                                                    \revert Accidental.stencil
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteColumn.glissando-skip
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteHead.no-ledgers
+                                                      %! abjad.glissando(6)
+                                                    \undo \hide NoteHead
+                                                    aqs,16
+                                                    \!
+                                                    ]
+                                                }
+                                                r2
+                                                \tweak text #tuplet-number::calc-fraction-text
+                                                \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 6) (ly:make-duration 3 0))
+                                                \times 6/5
+                                                {
+                                                    aqs,4..
+                                                    - \tweak circled-tip ##t
+                                                    ^ \<
+                                                      %! abjad.glissando(7)
+                                                    \glissando
+                                                    \once \override Dots.staff-position = #2
+                                                      %! abjad.glissando(1)
+                                                    \hide NoteHead
+                                                      %! abjad.glissando(1)
+                                                    \override Accidental.stencil = ##f
+                                                      %! abjad.glissando(1)
+                                                    \override NoteColumn.glissando-skip = ##t
+                                                      %! abjad.glissando(1)
+                                                    \override NoteHead.no-ledgers = ##t
+                                                    aqs,8
+                                                        ^ #(make-dynamic-script (markup #:whiteout #:italic "pp +"))
+                                                    [
+                                                    - \tweak circled-tip ##t
+                                                    ^ \>
+                                                      %! abjad.glissando(6)
+                                                    \revert Accidental.stencil
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteColumn.glissando-skip
+                                                      %! abjad.glissando(6)
+                                                    \revert NoteHead.no-ledgers
+                                                      %! abjad.glissando(6)
+                                                    \undo \hide NoteHead
+                                                    aqs,16
+                                                    \!
+                                                    ]
+                                                }
+                                            }
                                         }
                                     >>
                                     \oneVoice
@@ -4918,7 +4775,7 @@
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 1 Soli }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 1 Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 1 soli }
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
@@ -5374,7 +5231,7 @@
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 2 Soli }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Geige 2 Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { g. 2 soli }
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
@@ -5991,7 +5848,7 @@
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratsche Soli }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Bratsche Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { br. soli }
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE
@@ -6968,7 +6825,7 @@
                                       %! +SCORE
                                     \once \override Staff.BarLine.transparent = ##f
                                     \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncello Soli }
-                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Violoncello Soli }
+                                    \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { vc. soli }
                                       %! +SCORE
                                     \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
                                       %! +SCORE

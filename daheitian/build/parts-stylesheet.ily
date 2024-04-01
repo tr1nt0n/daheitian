@@ -72,7 +72,7 @@ afterGraceFraction = #(cons 15 16)
         \override AccidentalSuggestion.avoid-slur = #'ignore
         % \override Accidental.X-extent = ##f
 
-        \override BarLine.hair-thickness = 3
+        \override BarLine.hair-thickness = 5
         % \override BarLine.X-extent = #'(0 . 0)
         \override BarLine.thick-thickness = #10
         \override BarLine.bar-extent = #'(-2 . 2)
@@ -197,7 +197,7 @@ afterGraceFraction = #(cons 15 16)
         \type Engraver_group
         % \consists Measure_spanner_engraver
 
-        \RemoveAllEmptyStaves
+        \RemoveEmptyStaves
         \alias Staff
     }
 
@@ -226,7 +226,7 @@ afterGraceFraction = #(cons 15 16)
     % system-separator-markup = \markup \fontsize #12 { \tremolo-moderato }
     system-system-spacing = #'((basic-distance . 20) (minimum-distance . 20) (padding . 10))
     indent = 25\mm
-    short-indent = 25\mm
+    short-indent = 10\mm
     bottom-margin = 10\mm
     left-margin = 10\mm
     right-margin = 10\mm
