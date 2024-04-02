@@ -22,8 +22,15 @@
     \removeWithTag #'voice15
     \removeWithTag #'voice16
     \removeWithTag #'voice17
+    \removeWithTag #'voice18
     \removeWithTag #'voice19
     \removeWithTag #'voice20
+    % \removeWithTag #'voice21 viola solo
+    % \removeWithTag #'voice22 viola
+    \removeWithTag #'voice23
+    \removeWithTag #'voice24
+    \removeWithTag #'voice25
+    \removeWithTag #'voice26
         {
             \include "01_parts.ly"
             \include "02_parts.ly"

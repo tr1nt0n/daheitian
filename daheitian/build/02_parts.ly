@@ -8,14 +8,16 @@
             \time 1/4
             R1 * 1/4
             - \tweak font-size #'15
+            - \tweak padding -7
             _ \very-long-fermata
+            - \tweak padding 7
             ^ \markup \override #'(font-name . "Bodoni72 Book") \fontsize #7.5 \center-column { "37\"" }
             \once \override Score.BarLine.transparent = ##f
             \time 3/4
             s1 * 3/4
             ^ \markup {
 
-              \raise #-2 \with-dimensions-from \null
+              \raise #4 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-mixed-number-markup #2 #0 #1 #"57" #"3" #"5"

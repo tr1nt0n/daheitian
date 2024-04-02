@@ -244,7 +244,7 @@ for measure, tempo in zip(
         library.metronome_markups(
             met_string=library.metronome_marks["48"],
             mod_string=library.metronome_marks["2=4"],
-            padding=-2,
+            padding=1,
         ),
     ],
 ):
@@ -258,9 +258,9 @@ for measure, tempo in zip(
         voice=score["Global Context"],
     )
 
-# violin 1 line breaking
-
-library.line_break(score=score, measure_range=(1, 5), break_method="noBreak")
+# # violin 1 line breaking
+#
+# library.line_break(score=score, measure_range=(1, 5), break_method="noBreak")
 
 # cutaway
 
@@ -274,7 +274,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="violin1",
+    part_name="percussion1",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="03",
     includes=[

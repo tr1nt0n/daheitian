@@ -7,7 +7,7 @@
               %! +PARTS
             ^ \markup {
               %! +PARTS
-              \raise #-10 \with-dimensions-from \null
+              \raise #1 \with-dimensions-from \null
               %! +PARTS
               \override #'(font-size . 5.5)
               %! +PARTS
@@ -21,7 +21,7 @@
               %! +SCORE
         %%% ^ \markup {
               %! +SCORE
-          %%% \raise #5 \with-dimensions-from \null
+          %%% \raise #12 \with-dimensions-from \null
               %! +SCORE
           %%% \override #'(font-size . 5.5)
               %! +SCORE

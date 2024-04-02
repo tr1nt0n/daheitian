@@ -253,7 +253,7 @@ ghost_metronome = abjad.LilyPondLiteral(
 post_ghost_metronome = abjad.LilyPondLiteral(
     [
         r"^ \markup {",
-        r"  \raise #5 \with-dimensions-from \null",
+        r"  \raise #12 \with-dimensions-from \null",
         r"  \override #'(font-size . 5.5)",
         r"  \concat {",
         f"      {library.metronome_marks['48'].string[8:]}",
@@ -266,7 +266,7 @@ post_ghost_metronome = abjad.LilyPondLiteral(
 ghost_metronome_parts = abjad.LilyPondLiteral(
     [
         r"^ \markup {",
-        r"  \raise #3 \with-dimensions-from \null",
+        r"  \raise #4 \with-dimensions-from \null",
         r"  \override #'(font-size . 5.5)",
         r"  \concat {",
         f"      {abjad.MetronomeMark.make_tempo_equation_markup((3, 8), 51).string[8:]}",
@@ -279,7 +279,7 @@ ghost_metronome_parts = abjad.LilyPondLiteral(
 post_ghost_metronome_parts = abjad.LilyPondLiteral(
     [
         r"^ \markup {",
-        r"  \raise #-10 \with-dimensions-from \null",
+        r"  \raise #1 \with-dimensions-from \null",
         r"  \override #'(font-size . 5.5)",
         r"  \concat {",
         f"      {library.metronome_marks['48'].string[8:]}",
@@ -306,7 +306,7 @@ quarter_60 = abjad.LilyPondLiteral(
 quarter_60_parts = abjad.LilyPondLiteral(
     [
         r"^ \markup {",
-        r"  \raise #13 \with-dimensions-from \null",
+        r"  \raise #3 \with-dimensions-from \null",
         r"  \override #'(font-size . 5.5)",
         r"  \concat {",
         f"      {abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 60).string[8:]}",
@@ -357,7 +357,7 @@ parts_movements = [
     ),
 ]
 
-parts_movements_4 = abjad.bundle(parts_movements[3], r"- \tweak padding #16")
+parts_movements_4 = abjad.bundle(parts_movements[3], r"- \tweak padding #4")
 
 parts_movements = [
     abjad.bundle(movement, r"- \tweak padding #4") for movement in parts_movements

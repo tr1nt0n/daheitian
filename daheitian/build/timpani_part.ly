@@ -17,14 +17,19 @@
     \removeWithTag #'voice10
     \removeWithTag #'voice11
     \removeWithTag #'voice12
-   % \removeWithTag #'voice13
-    \removeWithTag #'voice14
+    \removeWithTag #'voice13
+    % \removeWithTag #'voice14 timpani
     \removeWithTag #'voice15
     \removeWithTag #'voice16
     \removeWithTag #'voice17
     \removeWithTag #'voice18
     \removeWithTag #'voice19
     \removeWithTag #'voice20
+    \removeWithTag #'voice21
+    \removeWithTag #'voice22
+    \removeWithTag #'voice23
+    \removeWithTag #'voice24
+    \removeWithTag #'voice25
         {
             \include "01_parts.ly"
             \include "02_parts.ly"

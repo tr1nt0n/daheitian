@@ -7,7 +7,7 @@
               %! +PARTS
             ^ \markup {
               %! +PARTS
-              \raise #3 \with-dimensions-from \null
+              \raise #4 \with-dimensions-from \null
               %! +PARTS
               \override #'(font-size . 5.5)
               %! +PARTS

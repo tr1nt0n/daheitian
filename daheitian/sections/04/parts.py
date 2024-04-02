@@ -230,18 +230,18 @@ for measure, tempo in zip(
         library.metronome_markups(
             met_string=library.metronome_marks["144"],
             mod_string=library.metronome_marks["3:2(8)=4"],
-            padding=-2,
-            hspace="\hspace #-5",
+            padding=1,
+            # hspace="\hspace #-5",
         ),
         library.metronome_markups(
             met_string=library.metronome_marks["96"],
             mod_string=library.metronome_marks["4.=4"],
-            padding=-1,
+            padding=1,
         ),
         library.metronome_markups(
             met_string=library.metronome_marks["144"],
             mod_string=library.metronome_marks["3:2(4)=4"],
-            padding=-2,
+            padding=0,
         ),
     ],
 ):
@@ -318,7 +318,7 @@ trinton.whiteout_empty_staves(score=score, cutaway="blank")
 
 # violin 1 line breaking
 
-library.line_break(score=score, measure_range=(5, 7), break_method="noBreak")
+# library.line_break(score=score, measure_range=(5, 7), break_method="noBreak")
 
 # parts
 
@@ -328,7 +328,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="violin1",
+    part_name="contrabass",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="04",
     includes=[

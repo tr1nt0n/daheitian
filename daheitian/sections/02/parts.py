@@ -352,6 +352,7 @@ trinton.fermata_measures(
     fermata="very-long-fermata",
     font_size="15",
     blank=False,
+    padding=-7,
 )
 
 trinton.fermata_measures(
@@ -368,9 +369,12 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (1,)),
     trinton.attachment_command(
         attachments=[
-            abjad.Markup(
-                r"""\markup \override #'(font-name . "Bodoni72 Book") \fontsize #7.5 \center-column { "37\"" }"""
-            )
+            abjad.bundle(
+                abjad.Markup(
+                    r"""\markup \override #'(font-name . "Bodoni72 Book") \fontsize #7.5 \center-column { "37\"" }"""
+                ),
+                r"- \tweak padding 7",
+            ),
         ],
         selector=trinton.select_leaves_by_index([0]),
         direction=abjad.UP,
@@ -385,7 +389,7 @@ trinton.make_music(
             library.metronome_markups(
                 met_string=library.metronome_marks["57 3/5"],
                 mod_string=library.metronome_marks["4:5(4)=4"],
-                padding=-2,
+                padding=4,
             ),
         ],
         selector=trinton.select_leaves_by_index([0]),
@@ -406,7 +410,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="violin1",
+    part_name="contrabass",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="02",
     includes=[

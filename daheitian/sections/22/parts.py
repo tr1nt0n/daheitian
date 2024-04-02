@@ -324,7 +324,7 @@ trinton.make_music(
             library.metronome_markups(
                 met_string=library.metronome_marks["96"],
                 mod_string=library.metronome_marks["4:3(4)=4"],
-                padding=4,
+                padding=7.5,
             ),
         ],
         selector=trinton.select_leaves_by_index([0]),
@@ -409,7 +409,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="violin2",
+    part_name="viola",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="22",
     includes=[

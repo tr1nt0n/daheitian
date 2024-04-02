@@ -36,7 +36,7 @@ trinton.make_music(
             library.metronome_markups(
                 met_string=library.metronome_marks["72"],
                 mod_string=library.metronome_marks["2=4"],
-                padding=-2,
+                padding=5,
             ),
         ],
         selector=trinton.select_leaves_by_index([0]),
@@ -62,7 +62,6 @@ trinton.fermata_measures(
 for voice_name in [
     "bassclarinet voice",
     "bassoon voice",
-    "percussion 1 voice",
     "harp 1 voice",
     "percussion 3 voice",
 ]:
@@ -161,9 +160,9 @@ for voice_name in [
 
     library.blank_measure_by_hand(score=score, voice_names=[voice_name], measures=[1])
 
-# violin 1 line breaking
-
-library.line_break(score=score, measure_range=(1, 2), break_method="noBreak")
+# # violin 1 line breaking
+#
+# library.line_break(score=score, measure_range=(1, 2), break_method="noBreak")
 
 # cutaway
 
@@ -177,7 +176,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="violin1",
+    part_name="timpani",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="12",
     includes=[

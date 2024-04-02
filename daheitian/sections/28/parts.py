@@ -1839,16 +1839,20 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, -1]),
         style="solid-line-with-arrow",
-        padding=7,
+        padding=9,
         full_string=True,
         right_padding=0,
     ),
     voice=score["Global Context"],
 )
 
-# violin 2 line break
+# # violin 2 line break
+#
+# library.line_break(score=score, measure_range=(5,), break_method="break")
 
-library.line_break(score=score, measure_range=(5,), break_method="break")
+# timpani line break
+
+library.line_break(score=score, measure_range=(7,), break_method="pageBreak")
 
 # cutaway
 
@@ -1865,7 +1869,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="violin2",
+    part_name="timpani",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="28",
     includes=[

@@ -60,8 +60,6 @@
             \once \override Score.TimeSignature.stencil = ##f
             \time 9/16
             s1 * 9/16
-              %! +PARTS
-            \break
             \once \override Score.TimeSignature.stencil = ##f
             \time 9/16
             s1 * 9/16
@@ -79,8 +77,6 @@
             - \tweak padding #0
             ^ \markup \fontsize #0.75 \override #'(font-name . "Bodoni72 Book Italic") \center-column { \line { ( bis Klavierresonanz aufhört,} \line { "dann + ~2\" zusätzliche Stille" ) } }
             \bar "||"
-              %! +PARTS
-            \break
             \once \override Score.BarLine.transparent = ##f
         }
         \tag #'group1

@@ -918,7 +918,7 @@ trinton.make_music(
             string="DP, Kratzen",
         ),
         full_string=True,
-        padding=10.5,
+        padding=8,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=11.5,
@@ -1160,7 +1160,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="violin1",
+    part_name="cello",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="17",
     includes=[

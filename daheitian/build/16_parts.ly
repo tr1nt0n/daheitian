@@ -14,7 +14,7 @@
             s1 * 3/4
             ^ \markup {
 
-              \raise #3 \with-dimensions-from \null
+              \raise #5 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-mixed-number-markup #2 #0 #1 #"57" #"3" #"5"
@@ -43,7 +43,7 @@
             s1 * 3/2
             ^ \markup {
 
-              \raise #12 \with-dimensions-from \null
+              \raise #1 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"72"
@@ -55,7 +55,7 @@
             s1 * 3/4
             ^ \markup {
 
-              \raise #-1 \with-dimensions-from \null
+              \raise #1 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-mixed-number-markup #2 #0 #1 #"57" #"3" #"5"
@@ -69,13 +69,11 @@
             s1 * 3/4
             \time 2/4
             s1 * 1/2
-              %! +PARTS
-            \pageBreak
             \time 3/4
             s1 * 3/4
             \time 2/4
             s1 * 1/2
-            - \tweak padding #11.5
+            - \tweak padding #5
             - \abjad-solid-line-with-arrow
             - \tweak bound-details.left.text \markup \concat { { \override #'(font-size . 5.5) \concat { ( \abjad-metronome-mark-mixed-number-markup #2 #0 #1 #"57" #"3" #"5" )  } } \hspace #0.5 }
             - \tweak bound-details.right.text \markup { \override #'(font-size . 5.5) \concat { \abjad-metronome-mark-markup #2 #0 #1 #"144" [\abjad-metric-modulation-tuplet-lhs #3 #0 #4 #5 #2 #0 #'(1 . 1)]  } }

@@ -369,7 +369,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="violin2",
+    part_name="cello",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="26",
     includes=[

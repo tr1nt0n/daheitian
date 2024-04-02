@@ -856,6 +856,14 @@ for voice_name in ["harp 1 voice", "percussion 2 voice"]:
         beam_meter=True,
     )
 
+# # viola line breaking
+#
+# library.line_break(
+#     score=score,
+#     measure_range=(5,),
+#     break_method="break"
+# )
+
 
 # cutaway
 
@@ -869,7 +877,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="violin1",
+    part_name="percussion2",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="09",
     includes=[

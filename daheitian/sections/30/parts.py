@@ -930,6 +930,8 @@ trinton.make_music(
     voice=score["Global Context"],
 )
 
+# cello breaks
+
 # cutaway
 
 trinton.whiteout_empty_staves(
@@ -949,6 +951,10 @@ library.blank_measure_by_hand(
     ],
 )
 
+# cello line breaking
+
+library.line_break(score=score, measure_range=(15,), break_method="noBreak")
+
 # parts
 
 trinton.extract_parts(score)
@@ -957,7 +963,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="violin2",
+    part_name="contrabass",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="30",
     includes=[

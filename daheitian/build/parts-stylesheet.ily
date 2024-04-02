@@ -222,7 +222,7 @@ afterGraceFraction = #(cons 15 16)
 }
 %
 \paper {
-    % min-systems-per-page = 5
+    min-systems-per-page = 4
     % system-separator-markup = \markup \fontsize #12 { \tremolo-moderato }
     system-system-spacing = #'((basic-distance . 20) (minimum-distance . 20) (padding . 10))
     indent = 25\mm

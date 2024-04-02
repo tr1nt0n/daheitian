@@ -1424,9 +1424,9 @@ for voice_name, measures in zip(
 
 # violin 1 line breaking
 
-library.line_break(score=score, measure_range=(26,), break_method="break")
-
-library.line_break(score=score, measure_range=(29,), break_method="break")
+# library.line_break(score=score, measure_range=(26,), break_method="break")
+#
+# library.line_break(score=score, measure_range=(29,), break_method="break")
 
 # parts
 
@@ -1436,7 +1436,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="violin1",
+    part_name="viola",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="19",
     includes=[

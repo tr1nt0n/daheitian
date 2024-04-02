@@ -6,7 +6,7 @@
             s1 * 3/2
             ^ \markup {
 
-              \raise #-2 \with-dimensions-from \null
+              \raise #5 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"72"
@@ -14,8 +14,6 @@
 
               }
             }
-              %! +PARTS
-            \noBreak
             \once \override Score.BarLine.transparent = ##f
             \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f
@@ -23,8 +21,6 @@
             R1 * 1/4
             - \tweak font-size #'15
             _ \short-fermata
-              %! +PARTS
-            \noBreak
             \once \override Score.BarLine.transparent = ##f
         }
         \tag #'group1
@@ -1259,102 +1255,19 @@
                     {
                         \context Voice = "percussion 1 voice"
                         {
-                            <<
-                                \context Voice = "percussion 1 voice secondary"
-                                {
-                                      %! +SCORE
-                                %%% \once \override MultiMeasureRest.transparent = ##t
-                                      %! +SCORE
-                                %%% \once \override Rest.transparent = ##t
-                                      %! +PARTS
-                                    \override Staff.MultiMeasureRest.transparent = ##t
-                                    \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Pauken }
-                                      %! +SCORE
-                                %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pk. }
-                                      %! +SCORE
-                                %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
-                                    \voiceOne
-                                    R1 * 3/2
-                                      %! +SCORE
-                                %%% \stopStaff \startStaff
-                                      %! +PARTS
-                                    \revert Staff.MultiMeasureRest.transparent
-                                }
-                                \tag #'einsatz
-                                {
-                                    \context Voice = "percussion 1 voice cue"
-                                    {
-                                        \staff-line-count 5
-                                        \highest
-                                        \once \override NoteHead.no-ledgers = ##t
-                                        \revert Staff.Clef.stencil
-                                        \set fontSize = #-3
-                                        \clef "treble"
-                                        \override Staff.Stem.stemlet-length = 0.75
-                                        \voiceTwo
-                                        c'''8.
-                                        :64
-                                        \mf
-                                        ^ \staccato
-                                        - \tweak padding 5
-                                        - \tweak whiteout 1
-                                        - \tweak whiteout-style #'outline
-                                        ^ \markup \fontsize #4 { \column { \override #'(font-name . "Bodoni72 Bold") \line { EINSATZ: } \line \override #'(font-name . "Bodoni72 Book Italic") { " Hörner " } } }
-                                        [
-                                        - \tweak padding #7.5
-                                        - \abjad-solid-line-with-hook
-                                        - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Bewegen die Ventile schnell und wahllos + Flatterzunge. } \hspace #0.5 }
-                                        - \tweak bound-details.right.padding -2
-                                        \startTextSpan
-                                        - \tweak stencil #abjad-flared-hairpin
-                                        \<
-                                        \once \override NoteHead.no-ledgers = ##t
-                                        c'''16
-                                        :128
-                                        ^ \staccato
-                                        \once \override NoteHead.no-ledgers = ##t
-                                        c'''16
-                                        :128
-                                        ^ \accent
-                                        ^ \staccato
-                                        \once \override NoteHead.no-ledgers = ##t
-                                        c'''8
-                                        :64
-                                        ^ \staccato
-                                        \once \override NoteHead.no-ledgers = ##t
-                                        \revert Staff.Stem.stemlet-length
-                                        c'''16
-                                        :128
-                                        ^ \accent
-                                        ^ \staccato
-                                        ]
-                                        \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 5 4) (ly:make-duration 3 0))
-                                        \times 4/5
-                                        {
-                                            \once \override NoteHead.no-ledgers = ##t
-                                            c'''2
-                                            :32
-                                            ^ \staccato
-                                            \once \override NoteHead.no-ledgers = ##t
-                                            c'''16
-                                            :128
-                                            \fff
-                                            ^ \accent
-                                            ^ \staccato
-                                            - \tweak padding 5
-                                            - \tweak whiteout 1
-                                            - \tweak whiteout-style #'outline
-                                            ^ \markup \fontsize #4 { \right-column { \override #'(font-name . "Bodoni72 Bold") \line { "Ende des Einsatzes" } } }
-                                            \stopTextSpan
-                                            \revert-noteheads
-                                            \set fontSize = #-0.25
-                                            r16
-                                        }
-                                        r2
-                                    }
-                                }
-                            >>
-                            \oneVoice
+                              %! +SCORE
+                        %%% \once \override Staff.BarLine.transparent = ##f
+                            \set Staff.instrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { Pauken }
+                            \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic") { pk. }
+                              %! +SCORE
+                        %%% \stopStaff \once \override Staff.StaffSymbol.line-count = #0 \startStaff
+                              %! +SCORE
+                        %%% \once \override Staff.TimeSignature.transparent = ##t
+                              %! +SCORE
+                        %%% \once \override MultiMeasureRest.transparent = ##t
+                            R1 * 3/2
+                              %! +SCORE
+                        %%% \stopStaff \startStaff
                               %! +SCORE
                         %%% \once \override Staff.BarLine.transparent = ##f
                               %! +SCORE

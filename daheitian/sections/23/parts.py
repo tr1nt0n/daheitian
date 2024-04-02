@@ -714,7 +714,7 @@ trinton.make_music(
             [0, -1],
         ),
         style="solid-line-with-arrow",
-        padding=7,
+        padding=8,
         full_string=True,
         right_padding=-1,
         command="Three",
@@ -916,7 +916,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="violin1",
+    part_name="cello",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="23",
     includes=[

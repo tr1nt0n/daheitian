@@ -4,6 +4,8 @@
         {
             \time 12/8
             s1 * 3/2
+              %! +PARTS
+            \noBreak
             ^ \markup {
 
               \raise #-2 \with-dimensions-from \null
@@ -14,8 +16,6 @@
 
               }
             }
-              %! +PARTS
-            \noBreak
             \time 3/4
             s1 * 3/4
               %! +PARTS
