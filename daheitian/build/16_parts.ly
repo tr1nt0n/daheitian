@@ -73,7 +73,7 @@
             s1 * 3/4
             \time 2/4
             s1 * 1/2
-            - \tweak padding #14
+            - \tweak padding #15
             - \abjad-solid-line-with-arrow
             - \tweak bound-details.left.text \markup \concat { { \override #'(font-size . 5.5) \concat { ( \abjad-metronome-mark-mixed-number-markup #2 #0 #1 #"57" #"3" #"5" )  } } \hspace #0.5 }
             - \tweak bound-details.right.text \markup { \override #'(font-size . 5.5) \concat { \abjad-metronome-mark-markup #2 #0 #1 #"144" [\abjad-metric-modulation-tuplet-lhs #3 #0 #4 #5 #2 #0 #'(1 . 1)]  } }

@@ -1250,7 +1250,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, -1]),
         style="solid-line-with-arrow",
-        padding=12,
+        padding=7,
         full_string=True,
         right_padding=0,
     ),
@@ -1339,9 +1339,9 @@ for voice_name in [
         beam_meter=True,
     )
 
-# cor anglais line breaking
-
-library.line_break(score=score, measure_range=(6,), break_method="break")
+# # cor anglais line breaking
+#
+# library.line_break(score=score, measure_range=(6,), break_method="break")
 
 # cutaway
 
@@ -1369,7 +1369,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="coranglais",
+    part_name="bassoon",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="21",
     includes=[

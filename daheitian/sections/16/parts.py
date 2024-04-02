@@ -1492,7 +1492,7 @@ trinton.make_music(
                     style="solid-line-with-arrow",
                     right_padding=0,
                 ),
-                r"- \tweak padding #14",
+                r"- \tweak padding #15",
             ),
         ],
         selector=trinton.select_leaves_by_index(
@@ -1735,7 +1735,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="oboe",
+    part_name="bassoon",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="16",
     includes=[

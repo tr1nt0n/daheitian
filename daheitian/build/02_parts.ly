@@ -8,9 +8,7 @@
             \time 1/4
             R1 * 1/4
             - \tweak font-size #'15
-            - \tweak padding -7
             _ \very-long-fermata
-            - \tweak padding 7
             ^ \markup \override #'(font-name . "Bodoni72 Book") \fontsize #7.5 \center-column { "37\"" }
             \once \override Score.BarLine.transparent = ##f
             \time 3/4

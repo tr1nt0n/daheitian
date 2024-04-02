@@ -520,7 +520,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, -1]),
         style="solid-line-with-arrow",
-        padding=4,
+        padding=7,
         full_string=True,
         right_padding=0,
     ),
@@ -582,7 +582,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="violin1",
+    part_name="clarinet",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="13",
     includes=[

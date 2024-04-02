@@ -963,7 +963,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="coranglais",
+    part_name="clarinet",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="30",
     includes=[

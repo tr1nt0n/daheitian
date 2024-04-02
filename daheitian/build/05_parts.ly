@@ -4,11 +4,11 @@
         {
             \time 6/16
             s1 * 3/8
-            - \tweak padding #13
+            - \tweak padding #4
             ^ \markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #4 \box \line { II. 鬼 }
             ^ \markup {
 
-              \raise #8 \with-dimensions-from \null
+              \raise #-1 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"48"

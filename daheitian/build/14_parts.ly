@@ -6,11 +6,13 @@
             s1 * 1/2
             - \tweak padding #4
             ^ \markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #4 \box \line { III. 化 }
+              %! +PARTS
+            \noBreak
             \time 3/4
             s1 * 3/4
             \time 2/4
             s1 * 1/2
-            - \tweak padding #11.5
+            - \tweak padding #8
             - \abjad-solid-line-with-arrow
             - \tweak bound-details.left.text \markup \concat { { \override #'(font-size . 5.5) \concat { ( \abjad-metronome-mark-markup #2 #0 #1 #"48" ) Accel. } } \hspace #0.5 }
             - \tweak bound-details.right.text \markup { \override #'(font-size . 5.5) \concat { \abjad-metronome-mark-markup #2 #0 #1 #"72" [\abjad-metric-modulation-tuplet-lhs #2 #0 #2 #3 #2 #0 #'(1 . 1)]  } }
@@ -26,7 +28,7 @@
             s1 * 3/4
             ^ \markup {
 
-              \raise #3 \with-dimensions-from \null
+              \raise #12 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-mixed-number-markup #2 #0 #1 #"57" #"3" #"5"

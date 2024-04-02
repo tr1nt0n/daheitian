@@ -36,7 +36,7 @@ trinton.make_music(
             library.metronome_markups(
                 met_string=library.metronome_marks["72"],
                 mod_string=library.metronome_marks["2=4"],
-                padding=3,
+                padding=12,
             ),
         ],
         selector=trinton.select_leaves_by_index([0]),
@@ -176,7 +176,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="flute",
+    part_name="bassoon",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="12",
     includes=[

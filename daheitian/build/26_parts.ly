@@ -4,6 +4,8 @@
         {
             \time 5/4
             s1 * 5/4
+            - \tweak padding #4
+            ^ \markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #4 \box \line  { V. 天（ 二 ）}
               %! +PARTS
             ^ \markup {
               %! +PARTS
@@ -21,7 +23,7 @@
               %! +SCORE
         %%% ^ \markup {
               %! +SCORE
-          %%% \raise #12 \with-dimensions-from \null
+          %%% \raise #10 \with-dimensions-from \null
               %! +SCORE
           %%% \override #'(font-size . 5.5)
               %! +SCORE

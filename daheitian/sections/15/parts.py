@@ -1041,7 +1041,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, -1]),
         style="solid-line-with-arrow",
-        padding=16,
+        padding=4,
         full_string=True,
         right_padding=0,
     ),
@@ -1066,16 +1066,20 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, -1]),
         style="solid-line-with-arrow",
-        padding=9.5,
+        padding=4,
         full_string=True,
         right_padding=0,
     ),
     voice=score["Global Context"],
 )
+#
+# # flute line breaking
+#
+# library.line_break(score=score, measure_range=(2,), break_method="break")
 
-# flute line breaking
+# bassoon line breaking
 
-library.line_break(score=score, measure_range=(2,), break_method="break")
+library.line_break(score=score, measure_range=(4, 7), break_method="noBreak")
 
 # cutaway
 
@@ -1092,7 +1096,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="oboe",
+    part_name="bassoon",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="15",
     includes=[

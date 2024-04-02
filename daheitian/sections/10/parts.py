@@ -586,7 +586,7 @@ trinton.make_music(
             library.metronome_markups(
                 met_string=library.metronome_marks["57 3/5"],
                 mod_string=library.metronome_marks["6:5(4)=4"],
-                padding=15,
+                padding=12,
             ),
         ],
         selector=trinton.select_leaves_by_index([0]),
@@ -607,7 +607,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="oboe",
+    part_name="bassoon",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="10",
     includes=[

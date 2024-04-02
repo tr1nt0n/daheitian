@@ -328,6 +328,11 @@ trinton.make_music(
         selector=trinton.select_leaves_by_index([0]),
         tag=abjad.Tag("+PARTS"),
     ),
+    trinton.attachment_command(
+        attachments=[library.movements[4]],
+        selector=trinton.select_leaves_by_index([0]),
+        direction=abjad.UP,
+    ),
     voice=score["Global Context"],
 )
 

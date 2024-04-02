@@ -1443,7 +1443,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, -1]),
         style="solid-line-with-arrow",
-        padding=11.5,
+        padding=8,
         full_string=True,
         right_padding=0,
     ),
@@ -1457,7 +1457,7 @@ trinton.make_music(
             library.metronome_markups(
                 met_string=library.metronome_marks["57 3/5"],
                 mod_string=library.metronome_marks["4:5(4)=4"],
-                padding=3,
+                padding=12,
             ),
         ],
         selector=trinton.select_leaves_by_index([0]),
@@ -1691,6 +1691,9 @@ for voice_name in [
         beam_meter=True,
     )
 
+# clarinet line breaking
+
+library.line_break(score=score, measure_range=(1,), break_method="noBreak")
 
 # cutaway
 
@@ -1714,7 +1717,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="flute",
+    part_name="bassoon",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="14",
     includes=[
