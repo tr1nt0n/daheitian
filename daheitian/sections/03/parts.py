@@ -239,7 +239,7 @@ for measure, tempo in zip(
         library.metronome_markups(
             met_string=library.metronome_marks["96"],
             mod_string=library.metronome_marks["5:3(4)=4"],
-            padding=-2,
+            padding=0,
         ),
         library.metronome_markups(
             met_string=library.metronome_marks["48"],
@@ -274,7 +274,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="percussion1",
+    part_name="flute",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="03",
     includes=[

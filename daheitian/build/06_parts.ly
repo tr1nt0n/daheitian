@@ -4,11 +4,9 @@
         {
             \time 12/8
             s1 * 3/2
-              %! +PARTS
-            \noBreak
             ^ \markup {
 
-              \raise #-2 \with-dimensions-from \null
+              \raise #2 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-mixed-number-markup #2 #0 #1 #"57" #"3" #"5"
@@ -18,8 +16,6 @@
             }
             \time 3/4
             s1 * 3/4
-              %! +PARTS
-            \noBreak
             \time 2/4
             s1 * 1/2
             \time 3/4
@@ -234,7 +230,7 @@
                                             - \tweak padding #8
                                             - \abjad-solid-line-with-hook
                                             - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Luftklang } \hspace #0.5 }
-                                            - \tweak bound-details.right.padding -15
+                                            - \tweak bound-details.right.padding -8
                                             \startTextSpan
                                             ~
                                             \tweak style #'la

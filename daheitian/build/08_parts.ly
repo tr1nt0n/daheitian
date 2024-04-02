@@ -27,6 +27,8 @@
             - \tweak font-size #'15
             _ \middle-fermata
             \bar ":|."
+              %! +PARTS
+            \pageBreak
             \once \override Score.BarLine.transparent = ##f
         }
         \tag #'group1

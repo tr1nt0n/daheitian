@@ -22,13 +22,15 @@
             s1 * 1/2
             \time 3/4
             s1 * 3/4
-            - \tweak padding #8
+            - \tweak padding #12
             - \abjad-solid-line-with-arrow
             - \tweak bound-details.left.text \markup \concat { { \override #'(font-size . 5.5) \concat { ( \abjad-metronome-mark-mixed-number-markup #2 #0 #1 #"57" #"3" #"5" ) Accel. } } \hspace #0.5 }
             - \tweak bound-details.right.text \markup { \override #'(font-size . 5.5) \concat { \abjad-metronome-mark-markup #2 #0 #1 #"72" [\abjad-metric-modulation-tuplet-lhs #2 #0 #4 #5 #2 #0 #'(1 . 1)]  } }
             \startTextSpan
             \time 2/4
             s1 * 1/2
+              %! +PARTS
+            \break
             \time 4/4
             s1 * 1
             \stopTextSpan

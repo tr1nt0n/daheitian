@@ -1436,7 +1436,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="viola",
+    part_name="flute",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="19",
     includes=[

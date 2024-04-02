@@ -17,7 +17,7 @@ score = library.daheitian_score(ts.section_24_ts)
 
 # monolith
 
-library.monolith(score=score, measure=1)
+library.monolith(score=score, measure=1, flute_denom=32)
 
 # flute music commands
 
@@ -878,7 +878,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="cello",
+    part_name="flute",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="24",
     includes=[

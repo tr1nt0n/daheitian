@@ -15,7 +15,7 @@ score = library.daheitian_score([(3, 2), (1, 4)])
 
 # commands
 
-library.monolith(score=score, measure=1)
+library.monolith(score=score, measure=1, flute_denom=32)
 
 # markups
 
@@ -36,7 +36,7 @@ trinton.make_music(
             library.metronome_markups(
                 met_string=library.metronome_marks["72"],
                 mod_string=library.metronome_marks["2=4"],
-                padding=5,
+                padding=3,
             ),
         ],
         selector=trinton.select_leaves_by_index([0]),
@@ -176,7 +176,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="timpani",
+    part_name="flute",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="12",
     includes=[

@@ -306,7 +306,7 @@ quarter_60 = abjad.LilyPondLiteral(
 quarter_60_parts = abjad.LilyPondLiteral(
     [
         r"^ \markup {",
-        r"  \raise #3 \with-dimensions-from \null",
+        r"  \raise #1 \with-dimensions-from \null",
         r"  \override #'(font-size . 5.5)",
         r"  \concat {",
         f"      {abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 60).string[8:]}",
@@ -356,6 +356,31 @@ parts_movements = [
         r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #4 \box \line  { V. 天（ 二 ）}""",
     ),
 ]
+
+
+def return_padded_movement(mark=1, padding=4):
+    mark = mark - 1
+
+    marks = [
+        abjad.Markup(
+            r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #4 \box \line { I. 天（ 一 ）}""",
+        ),
+        abjad.Markup(
+            r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #4 \box \line { II. 鬼 }""",
+        ),
+        abjad.Markup(
+            r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #4 \box \line { III. 化 }""",
+        ),
+        abjad.Markup(
+            r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #4 \box \line { IV. 神 }""",
+        ),
+        abjad.Markup(
+            r"""\markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #4 \box \line  { V. 天（ 二 ）}""",
+        ),
+    ]
+
+    return abjad.bundle(marks[mark], rf"- \tweak padding #{padding}")
+
 
 parts_movements_4 = abjad.bundle(parts_movements[3], r"- \tweak padding #4")
 
@@ -1460,7 +1485,7 @@ def write_short_instrument_names(score):
 # materials
 
 
-def monolith(score, measure):
+def monolith(score, measure, flute_denom=64):
     target = abjad.select.leaf(score["Global Context"], measure - 1)
 
     time_signature = abjad.get.indicator(target, abjad.TimeSignature)
@@ -1495,7 +1520,7 @@ def monolith(score, measure):
 
     trinton.make_music(
         lambda _: trinton.select_target(_, (measure,)),
-        evans.RhythmHandler(evans.even_division([64])),
+        evans.RhythmHandler(evans.even_division([flute_denom])),
         library.flute_flageolets(),
         trinton.attachment_command(
             attachments=[

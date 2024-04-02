@@ -275,9 +275,9 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[
             library.metronome_markups(
-                met_string=library.metronome_marks["72"], padding=0
+                met_string=library.metronome_marks["72"], padding=6
             ),
-            library.parts_movements[0],
+            library.return_padded_movement(mark=1, padding=12),
         ],
         selector=trinton.select_leaves_by_index([0]),
         direction=abjad.UP,
@@ -301,7 +301,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="contrabass",
+    part_name="oboe",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="01",
     includes=[

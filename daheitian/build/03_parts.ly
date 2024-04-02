@@ -6,7 +6,7 @@
             s1 * 3/4
             ^ \markup {
 
-              \raise #-2 \with-dimensions-from \null
+              \raise #0 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"96"

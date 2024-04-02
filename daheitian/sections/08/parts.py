@@ -400,6 +400,10 @@ trinton.make_music(
     voice=score["Global Context"],
 )
 
+# oboe line breaking
+
+library.line_break(score=score, measure_range=(4,), break_method="pageBreak")
+
 # cutaway
 
 trinton.whiteout_empty_staves(score=score, cutaway="blank")
@@ -412,7 +416,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="violin2",
+    part_name="oboe",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="08",
     includes=[

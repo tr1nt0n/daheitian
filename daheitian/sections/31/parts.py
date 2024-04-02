@@ -44,7 +44,7 @@ for voice_name in library.all_voice_names:
 
 trinton.make_music(
     lambda _: trinton.select_target(_, (2, 4)),
-    evans.RhythmHandler(evans.even_division([64])),
+    evans.RhythmHandler(evans.even_division([32])),
     library.flute_flageolets(),
     trinton.linear_attachment_command(
         attachments=[
@@ -346,7 +346,7 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[
             library.metronome_markups(
-                met_string=library.metronome_marks["72"], padding=4
+                met_string=library.metronome_marks["72"], padding=7
             )
         ],
         selector=trinton.select_leaves_by_index(
@@ -454,7 +454,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="percussion1",
+    part_name="flute",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="31",
     includes=[

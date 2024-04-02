@@ -20,6 +20,7 @@ score = library.daheitian_score(ts.section_16_ts)
 library.monolith(
     score=score,
     measure=11,
+    flute_denom=32,
 )
 
 for voice_name in ["flute voice", "frenchhorn voice"]:
@@ -1437,7 +1438,7 @@ trinton.make_music(
             library.metronome_markups(
                 met_string=library.metronome_marks["72"],
                 mod_string=library.metronome_marks["5:4(4)=4"],
-                padding=1,
+                padding=2,
             ),
         ],
         selector=trinton.select_leaves_by_index(
@@ -1491,7 +1492,7 @@ trinton.make_music(
                     style="solid-line-with-arrow",
                     right_padding=0,
                 ),
-                r"- \tweak padding #5",
+                r"- \tweak padding #14",
             ),
         ],
         selector=trinton.select_leaves_by_index(
@@ -1734,7 +1735,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="percussion2",
+    part_name="oboe",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="16",
     includes=[

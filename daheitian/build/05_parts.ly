@@ -4,11 +4,11 @@
         {
             \time 6/16
             s1 * 3/8
-            - \tweak padding #4
+            - \tweak padding #13
             ^ \markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #4 \box \line { II. 鬼 }
             ^ \markup {
 
-              \raise #-2 \with-dimensions-from \null
+              \raise #8 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"48"
@@ -20,25 +20,15 @@
             s1 * 1/4
             \time 9/16
             s1 * 9/16
-              %! +PARTS
-            \noBreak
             \time 7/16
             s1 * 7/16
-              %! +PARTS
-            \noBreak
             \once \override Score.TimeSignature.stencil = ##f
             \time 7/16
             s1 * 7/16
-              %! +PARTS
-            \noBreak
             \time 5/16
             s1 * 5/16
-              %! +PARTS
-            \noBreak
             \time 4/16
             s1 * 1/4
-              %! +PARTS
-            \noBreak
             \once \override Score.BarLine.transparent = ##f
             \once \override MultiMeasureRest.transparent = ##t
             \once \override Score.TimeSignature.stencil = ##f

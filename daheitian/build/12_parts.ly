@@ -6,7 +6,7 @@
             s1 * 3/2
             ^ \markup {
 
-              \raise #5 \with-dimensions-from \null
+              \raise #3 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"72"
@@ -42,7 +42,7 @@
                                       %! +SCORE
                                 %%% \set Staff.shortInstrumentName = \markup \fontsize #4 \override #'(font-name . "Bodoni72 Book Italic"){ fl. }
                                     \set fontSize = #-3
-                                    g''''64
+                                    g''''32
                                     - \flageolet
                                     \pp
                                     - \tweak padding 5
@@ -54,478 +54,238 @@
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     ]
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    b''''64
+                                    b''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    g''''64
+                                    g''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    b''''64
+                                    b''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    g''''64
+                                    g''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    b''''64
+                                    b''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    g''''64
+                                    g''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    b''''64
+                                    b''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    g''''64
+                                    g''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    b''''64
+                                    b''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    g''''64
+                                    g''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    b''''64
+                                    b''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    g''''64
+                                    g''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    b''''64
+                                    b''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    g''''64
+                                    g''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    b''''64
+                                    b''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    g''''64
+                                    g''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    b''''64
+                                    b''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    g''''64
+                                    g''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    b''''64
+                                    b''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    g''''64
+                                    g''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    b''''64
+                                    b''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    g''''64
+                                    g''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    b''''64
+                                    b''''32
                                     - \flageolet
                                     \once \override Beam.stencil = ##f
                                     \once \override Flag.stencil = ##f
                                     \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    g''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    b''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    g''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    b''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    g''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    b''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    g''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    b''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    g''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    b''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    g''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    b''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    g''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    b''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    g''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    b''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    g''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    b''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    g''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    b''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    g''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    b''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    g''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    b''''64
-                                    - \flageolet
-                                    \once \override Beam.stencil = ##f
-                                    \once \override Flag.stencil = ##f
-                                    \once \override Stem.stencil = ##f
-                                    a''''64
+                                    a''''32
                                     - \flageolet
                                     \!
                                     )

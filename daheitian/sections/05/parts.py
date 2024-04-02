@@ -323,11 +323,11 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (1,)),
     trinton.attachment_command(
         attachments=[
-            library.parts_movements[1],
+            library.return_padded_movement(mark=2, padding=13),
             library.metronome_markups(
                 met_string=library.metronome_marks["48"],
                 mod_string=library.metronome_marks["2.=4"],
-                padding=-2,
+                padding=8,
             ),
         ],
         selector=trinton.select_leaves_by_index([0]),
@@ -353,11 +353,13 @@ library.blank_measure_by_hand(
     score=score, voice_names=["bassclarinet voice"], measures=[0], clef_whitespace=False
 )
 
-library.line_break(
-    score=score,
-    measure_range=(3, 7),
-    break_method="noBreak",
-)
+# line breaking
+
+# library.line_break(
+#     score=score,
+#     measure_range=(3, 7),
+#     break_method="noBreak",
+# )
 
 # parts
 
@@ -367,7 +369,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="violin1",
+    part_name="flute",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="05",
     includes=[

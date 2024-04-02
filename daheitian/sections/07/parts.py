@@ -400,7 +400,7 @@ trinton.make_music(
             library.metronome_markups(
                 met_string=library.metronome_marks["72"],
                 mod_string=library.metronome_marks["5:4(4)=4"],
-                padding=-2,
+                padding=1,
             ),
         ],
         selector=trinton.select_leaves_by_index([0]),
@@ -473,7 +473,11 @@ for voice_name in [
 
 # violin 1 line breaking
 
-library.line_break(score=score, measure_range=(1, 2), break_method="noBreak")
+# library.line_break(score=score, measure_range=(1, 2), break_method="noBreak")
+
+# oboe line breaking
+
+library.line_break(score=score, measure_range=(5,), break_method="break")
 
 # cutaway
 
@@ -487,7 +491,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="violin1",
+    part_name="oboe",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="07",
     includes=[

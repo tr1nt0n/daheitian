@@ -6,6 +6,7 @@
 
 \score {
     \removeWithTag #'voice1
+    % \removeWithTag #'voice2
     \removeWithTag #'voice3
     \removeWithTag #'voice4
     \removeWithTag #'voice5
@@ -24,6 +25,11 @@
     \removeWithTag #'voice18
     \removeWithTag #'voice19
     \removeWithTag #'voice20
+    \removeWithTag #'voice21
+    \removeWithTag #'voice22
+    \removeWithTag #'voice23
+    \removeWithTag #'voice24
+    \removeWithTag #'voice25
         {
             \include "01_parts.ly"
             \include "02_parts.ly"

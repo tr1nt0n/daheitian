@@ -61,7 +61,7 @@ trinton.make_music(
         padding=8,
         style="solid-line-with-hook",
         selector=trinton.select_logical_ties_by_index([0, -1], first=True),
-        right_padding=15,
+        right_padding=8,
     ),
     voice=score["flute divisi voice"],
     beam_meter=True,
@@ -426,7 +426,7 @@ trinton.make_music(
             library.metronome_markups(
                 met_string=library.metronome_marks["57 3/5"],
                 mod_string=library.metronome_marks["6:5(4)=4"],
-                padding=-2,
+                padding=2,
             ),
         ],
         selector=trinton.select_leaves_by_index([0]),
@@ -529,7 +529,7 @@ for voice_name in [
 
 # violin 1 line breaking
 
-library.line_break(score=score, measure_range=(1, 2), break_method="noBreak")
+# library.line_break(score=score, measure_range=(1, 2), break_method="noBreak")
 
 # cutaway
 
@@ -543,7 +543,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="percussion1",
+    part_name="flute",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="06",
     includes=[

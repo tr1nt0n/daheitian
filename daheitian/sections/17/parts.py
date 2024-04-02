@@ -1145,6 +1145,20 @@ trinton.make_music(
     voice=score["Global Context"],
 )
 
+# flute line breaking
+
+# library.line_break(
+#     score=score,
+#     measure_range=(1, 2),
+#     break_method="noBreak"
+# )
+
+# library.line_break(
+#     score=score,
+#     measure_range=(3,),
+#     break_method="break"
+# )
+
 # cutaway
 
 trinton.whiteout_empty_staves(
@@ -1160,7 +1174,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="cello",
+    part_name="oboe",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="17",
     includes=[
