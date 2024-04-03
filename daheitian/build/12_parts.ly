@@ -6,7 +6,7 @@
             s1 * 3/2
             ^ \markup {
 
-              \raise #12 \with-dimensions-from \null
+              \raise #5 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"72"
@@ -21,6 +21,8 @@
             R1 * 1/4
             - \tweak font-size #'15
             _ \short-fermata
+              %! +PARTS
+            \break
             \once \override Score.BarLine.transparent = ##f
         }
         \tag #'group1

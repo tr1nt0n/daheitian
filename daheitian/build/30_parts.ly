@@ -2049,6 +2049,9 @@
                                     \tweak TupletNumber.text #(tuplet-number::append-note-wrapper(tuplet-number::non-default-tuplet-fraction-text 7 6) (ly:make-duration 3 0))
                                     \times 6/7
                                     {
+                                        \override Staff.Accidental.whiteout-style = #'outline
+                                        \override Staff.Accidental.whiteout = 1
+                                        \override Staff.Accidental.layer = 10
                                         \voiceOne
                                         \tweak Accidental.stencil #ly:text-interface::print
                                         \tweak Accidental.text \three-eighths-flat-markup

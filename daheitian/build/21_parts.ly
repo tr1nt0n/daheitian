@@ -1467,6 +1467,8 @@
                                     \clef "treble"
                                     \override Staff.Stem.stemlet-length = 0.75
                                     <d' f'>8..
+                                    - \tweak padding 5
+                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Tutti" }
                                     [
                                     - \tweak circled-tip ##t
                                     _ \<

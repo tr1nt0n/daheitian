@@ -1438,7 +1438,7 @@ trinton.make_music(
             library.metronome_markups(
                 met_string=library.metronome_marks["72"],
                 mod_string=library.metronome_marks["5:4(4)=4"],
-                padding=2,
+                padding=14,
             ),
         ],
         selector=trinton.select_leaves_by_index(
@@ -1492,7 +1492,7 @@ trinton.make_music(
                     style="solid-line-with-arrow",
                     right_padding=0,
                 ),
-                r"- \tweak padding #15",
+                r"- \tweak padding #4",
             ),
         ],
         selector=trinton.select_leaves_by_index(
@@ -1681,6 +1681,10 @@ for voice_name in [
 #
 # library.line_break(score=score, measure_range=(15,), break_method="pageBreak")
 
+# trombone line breaking
+
+library.line_break(score=score, measure_range=(20,), break_method="break")
+
 # cutaway
 
 trinton.whiteout_empty_staves(
@@ -1735,7 +1739,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="bassoon",
+    part_name="tuba",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="16",
     includes=[

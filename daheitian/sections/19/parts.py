@@ -1428,6 +1428,10 @@ for voice_name, measures in zip(
 #
 # library.line_break(score=score, measure_range=(29,), break_method="break")
 
+# trumpet line breaking
+
+library.line_break(score=score, measure_range=(28,), break_method="noBreak")
+
 # parts
 
 trinton.extract_parts(score)
@@ -1436,7 +1440,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="flute",
+    part_name="trumpet",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="19",
     includes=[

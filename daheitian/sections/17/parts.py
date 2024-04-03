@@ -1090,7 +1090,7 @@ trinton.make_music(
     trinton.hooked_spanner_command(
         string=r"""\markup \fontsize #5.5 { "Rall. moltiss." }""",
         full_string=True,
-        padding=7,
+        padding=5,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1]),
         right_padding=-3,
@@ -1174,7 +1174,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="bassoon",
+    part_name="tuba",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="17",
     includes=[

@@ -1839,7 +1839,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, -1]),
         style="solid-line-with-arrow",
-        padding=9,
+        padding=4,
         full_string=True,
         right_padding=0,
     ),
@@ -1854,9 +1854,9 @@ trinton.make_music(
 
 # library.line_break(score=score, measure_range=(7,), break_method="pageBreak")
 
-# flute line breaking
-
-library.line_break(score=score, measure_range=(13,), break_method="break")
+# # flute line breaking
+#
+# library.line_break(score=score, measure_range=(13,), break_method="break")
 
 # cutaway
 
@@ -1873,7 +1873,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="flute",
+    part_name="trombone",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="28",
     includes=[

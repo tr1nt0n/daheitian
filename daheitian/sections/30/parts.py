@@ -187,6 +187,19 @@ trinton.make_music(
         direction=abjad.DOWN,
         voice_name="frenchhorn divisi voice",
     ),
+    trinton.attachment_command(
+        attachments=[
+            abjad.LilyPondLiteral(
+                [
+                    r"\override Staff.Accidental.whiteout-style = #'outline",
+                    r"\override Staff.Accidental.whiteout = 1",
+                    r"\override Staff.Accidental.layer = 10",
+                ],
+                site="before",
+            )
+        ],
+        selector=trinton.select_leaves_by_index([0]),
+    ),
     voice=score["frenchhorn voice"],
     preprocessor=trinton.fuse_quarters_preprocessor((3, 2)),
 )
@@ -963,7 +976,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="clarinet",
+    part_name="horn",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="30",
     includes=[

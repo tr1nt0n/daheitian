@@ -266,7 +266,7 @@ post_ghost_metronome = abjad.LilyPondLiteral(
 ghost_metronome_parts = abjad.LilyPondLiteral(
     [
         r"^ \markup {",
-        r"  \raise #4 \with-dimensions-from \null",
+        r"  \raise #5 \with-dimensions-from \null",
         r"  \override #'(font-size . 5.5)",
         r"  \concat {",
         f"      {abjad.MetronomeMark.make_tempo_equation_markup((3, 8), 51).string[8:]}",
@@ -279,7 +279,7 @@ ghost_metronome_parts = abjad.LilyPondLiteral(
 post_ghost_metronome_parts = abjad.LilyPondLiteral(
     [
         r"^ \markup {",
-        r"  \raise #1 \with-dimensions-from \null",
+        r"  \raise #0 \with-dimensions-from \null",
         r"  \override #'(font-size . 5.5)",
         r"  \concat {",
         f"      {library.metronome_marks['48'].string[8:]}",

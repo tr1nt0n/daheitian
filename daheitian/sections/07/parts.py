@@ -386,7 +386,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, -1]),
         style="solid-line-with-arrow",
-        padding=8,
+        padding=3,
         full_string=True,
         right_padding=0,
     ),
@@ -475,9 +475,9 @@ for voice_name in [
 
 # library.line_break(score=score, measure_range=(1, 2), break_method="noBreak")
 
-# oboe line breaking
-
-library.line_break(score=score, measure_range=(5,), break_method="break")
+# # oboe line breaking
+#
+# library.line_break(score=score, measure_range=(5,), break_method="break")
 
 # cutaway
 
@@ -491,7 +491,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="oboe",
+    part_name="horn",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="07",
     includes=[

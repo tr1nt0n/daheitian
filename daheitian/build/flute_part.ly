@@ -5,6 +5,7 @@
 \include "/Users/trintonprater/abjad/abjad/scm/abjad.ily"
 
 \score {
+    % \removeWithTag #'voice1 flute
     \removeWithTag #'voice2
     \removeWithTag #'voice3
     \removeWithTag #'voice4

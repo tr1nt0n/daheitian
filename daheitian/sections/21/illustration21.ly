@@ -23,6 +23,7 @@
             \time 3/4
             s1 * 3/4
             ^ \markup {
+
               \raise #9 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
@@ -1480,6 +1481,8 @@
                                     \clef "treble"
                                     \override Staff.Stem.stemlet-length = 0.75
                                     <d' f'>8..
+                                    - \tweak padding 5
+                                    ^ \markup \fontsize #2 \override #'(font-name . "Bodoni72 Book Italic") { "Tutti" }
                                     [
                                     - \tweak circled-tip ##t
                                     _ \<

@@ -14,7 +14,7 @@
             \once \override Score.TimeSignature.stencil = ##f
             \time 6/4
             s1 * 3/2
-            - \tweak padding #7
+            - \tweak padding #5
             - \abjad-solid-line-with-hook
             - \tweak bound-details.left.text \markup \concat { \fontsize #5.5 { "Rall. moltiss." } \hspace #0.5 }
             - \tweak bound-details.right.padding 3

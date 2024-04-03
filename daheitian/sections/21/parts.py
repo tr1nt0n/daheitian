@@ -322,6 +322,7 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[abjad.Clef("treble")], selector=trinton.select_leaves_by_index([0])
     ),
+    library.tutti(),
     voice=score["trumpet voice"],
 )
 
@@ -1369,7 +1370,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="bassoon",
+    part_name="trumpet",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="21",
     includes=[

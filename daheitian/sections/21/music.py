@@ -322,6 +322,7 @@ trinton.make_music(
     trinton.attachment_command(
         attachments=[abjad.Clef("treble")], selector=trinton.select_leaves_by_index([0])
     ),
+    library.tutti(),
     voice=score["trumpet voice"],
 )
 

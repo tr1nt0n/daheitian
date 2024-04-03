@@ -4,11 +4,11 @@
         {
             \time 2/4
             s1 * 1/2
-            - \tweak padding #7
+            - \tweak padding #5
             ^ \markup \override #'(font-name . "Source Han Serif SC Bold") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \fontsize #4 \box \line { I. 天（ 一 ）}
             ^ \markup {
 
-              \raise #2 \with-dimensions-from \null
+              \raise #0 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"72"

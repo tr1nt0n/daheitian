@@ -1079,7 +1079,7 @@ trinton.make_music(
 
 # bassoon line breaking
 
-library.line_break(score=score, measure_range=(4, 7), break_method="noBreak")
+# library.line_break(score=score, measure_range=(4, 7), break_method="noBreak")
 
 # cutaway
 
@@ -1096,7 +1096,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="bassoon",
+    part_name="horn",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="15",
     includes=[

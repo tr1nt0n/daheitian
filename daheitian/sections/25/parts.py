@@ -1407,7 +1407,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="percussion2",
+    part_name="trumpet",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="25",
     includes=[
