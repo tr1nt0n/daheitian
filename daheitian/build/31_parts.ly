@@ -27,7 +27,7 @@
             s1 * 5/4
             ^ \markup {
 
-              \raise #-1 \with-dimensions-from \null
+              \raise #10 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
                   \abjad-metronome-mark-markup #2 #0 #1 #"48"
@@ -1429,16 +1429,6 @@
                                     :32
                                     \arpeggio
                                     \pp
-                                      %! +PARTS
-                                    - \tweak padding #11
-                                      %! +PARTS
-                                    - \abjad-solid-line-with-hook
-                                      %! +PARTS
-                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Mit Stimmgabel in G } \hspace #0.5 }
-                                      %! +PARTS
-                                    - \tweak bound-details.right.padding -4
-                                      %! +PARTS
-                                    \startTextSpan
                                       %! +SCORE
                                 %%% - \tweak padding #11
                                       %! +SCORE
@@ -1449,6 +1439,16 @@
                                 %%% - \tweak bound-details.right.padding -68
                                       %! +SCORE
                                 %%% \startTextSpan
+                                      %! +PARTS
+                                    - \tweak padding #13
+                                      %! +PARTS
+                                    - \abjad-solid-line-with-hook
+                                      %! +PARTS
+                                    - \tweak bound-details.left.text \markup \concat { \override #'(font-name . " Bodoni72 Book ") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #2 { \center-column { \line { Mit einem Triangelschläger } \line { zwischen den Saiten }  } } \hspace #0.5 }
+                                      %! +PARTS
+                                    - \tweak bound-details.right.padding -4
+                                      %! +PARTS
+                                    \startTextSpan
                                     ~
                                     <es'''' f''''>2
                                     :32

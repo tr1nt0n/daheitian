@@ -151,11 +151,16 @@ trinton.make_music(
         tag=abjad.Tag("+SCORE"),
     ),
     trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="Mit Stimmgabel in G",
+        string=trinton.boxed_markup(
+            string=["Mit einem Triangelschläger", "zwischen den Saiten"],
+            tweaks=None,
+            column="\center-column",
+            font_name="Bodoni72 Book",
+            fontsize=2,
+            string_only=True,
         ),
         full_string=True,
-        padding=11,
+        padding=13,
         style="solid-line-with-hook",
         selector=trinton.select_leaves_by_index([0, -1], pitched=True),
         right_padding=4,
@@ -366,7 +371,7 @@ trinton.make_music(
             library.metronome_markups(
                 met_string=library.metronome_marks["48"],
                 mod_string=library.metronome_marks["4.=4"],
-                padding=-1,
+                padding=10,
             )
         ],
         selector=trinton.select_leaves_by_index(
@@ -454,7 +459,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="flute",
+    part_name="harp",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="31",
     includes=[

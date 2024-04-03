@@ -306,7 +306,7 @@ quarter_60 = abjad.LilyPondLiteral(
 quarter_60_parts = abjad.LilyPondLiteral(
     [
         r"^ \markup {",
-        r"  \raise #7 \with-dimensions-from \null",
+        r"  \raise #2 \with-dimensions-from \null",
         r"  \override #'(font-size . 5.5)",
         r"  \concat {",
         f"      {abjad.MetronomeMark.make_tempo_equation_markup((1, 4), 60).string[8:]}",

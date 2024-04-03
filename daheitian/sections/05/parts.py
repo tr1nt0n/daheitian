@@ -323,11 +323,11 @@ trinton.make_music(
     lambda _: trinton.select_target(_, (1,)),
     trinton.attachment_command(
         attachments=[
-            library.return_padded_movement(mark=2, padding=4),
+            library.return_padded_movement(mark=2, padding=8),
             library.metronome_markups(
                 met_string=library.metronome_marks["48"],
                 mod_string=library.metronome_marks["2.=4"],
-                padding=-1,
+                padding=4,
             ),
         ],
         selector=trinton.select_leaves_by_index([0]),
@@ -369,7 +369,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="clarinet",
+    part_name="harp",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="05",
     includes=[

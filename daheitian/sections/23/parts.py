@@ -820,7 +820,7 @@ trinton.make_music(
             library.metronome_markups(
                 met_string=library.metronome_marks["72"],
                 mod_string=library.metronome_marks["3:4(4)=4"],
-                padding=6,
+                padding=2,
             ),
         ],
         selector=trinton.select_leaves_by_index([0]),
@@ -916,7 +916,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="cello",
+    part_name="harp",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="23",
     includes=[

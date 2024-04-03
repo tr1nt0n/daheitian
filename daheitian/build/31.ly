@@ -15,6 +15,7 @@
             \time 3/2
             s1 * 3/2
             ^ \markup {
+
               \raise #9 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
@@ -25,6 +26,7 @@
             \time 5/4
             s1 * 5/4
             ^ \markup {
+
               \raise #9 \with-dimensions-from \null
               \override #'(font-size . 5.5)
               \concat {
@@ -1992,7 +1994,7 @@
                                       %! +PARTS
                                 %%% - \abjad-solid-line-with-hook
                                       %! +PARTS
-                                %%% - \tweak bound-details.left.text \markup \concat { \override #'(font-name . "Bodoni72 Book") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #1 \line { Mit Stimmgabel in G } \hspace #0.5 }
+                                %%% - \tweak bound-details.left.text \markup \concat { \override #'(font-name . " Bodoni72 Book ") \override #'(style . "box") \override #'(box-padding . 0.5) \whiteout \box \fontsize #2 { \\center-column { \line { Mit einem Triangelschläger } \line { zwischen den Saiten }  } } \hspace #0.5 }
                                       %! +PARTS
                                 %%% - \tweak bound-details.right.padding -4
                                       %! +PARTS

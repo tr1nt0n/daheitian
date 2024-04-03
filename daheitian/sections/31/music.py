@@ -151,8 +151,16 @@ trinton.make_music(
         tag=abjad.Tag("+SCORE"),
     ),
     trinton.hooked_spanner_command(
-        string=library.return_boxed_markup(
-            string="Mit Stimmgabel in G",
+        # string=library.return_boxed_markup(
+        #     string="Mit einem Triangelschläger zwischen den Saiten",
+        # ),
+        string=trinton.boxed_markup(
+            string=["Mit einem Triangelschläger", "zwischen den Saiten"],
+            tweaks=None,
+            column="center-column",
+            font_name="Bodoni72 Book",
+            fontsize=2,
+            string_only=True,
         ),
         full_string=True,
         padding=11,
