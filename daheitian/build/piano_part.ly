@@ -13,7 +13,9 @@
     \removeWithTag #'voice6
     \removeWithTag #'voice7
     \removeWithTag #'voice8
-    \removeWithTag #'voice11
+    \removeWithTag #'voice9
+    % \removeWithTag #'voice10 piano rh
+    % \removeWithTag #'voice11 piano lh
     \removeWithTag #'voice12
     \removeWithTag #'voice13
     \removeWithTag #'voice14
@@ -23,6 +25,11 @@
     \removeWithTag #'voice18
     \removeWithTag #'voice19
     \removeWithTag #'voice20
+    \removeWithTag #'voice21
+    \removeWithTag #'voice22
+    \removeWithTag #'voice23
+    \removeWithTag #'voice24
+    \removeWithTag #'voice25
         {
             \include "01_parts.ly"
             \include "02_parts.ly"

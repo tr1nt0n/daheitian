@@ -1438,7 +1438,7 @@ trinton.make_music(
             library.metronome_markups(
                 met_string=library.metronome_marks["72"],
                 mod_string=library.metronome_marks["5:4(4)=4"],
-                padding=14,
+                padding=1,
             ),
         ],
         selector=trinton.select_leaves_by_index(
@@ -1739,7 +1739,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="tuba",
+    part_name="piano",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="16",
     includes=[

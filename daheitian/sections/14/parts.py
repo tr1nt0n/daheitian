@@ -1443,7 +1443,7 @@ trinton.make_music(
         ],
         selector=trinton.select_leaves_by_index([0, -1]),
         style="solid-line-with-arrow",
-        padding=2,
+        padding=4,
         full_string=True,
         right_padding=0,
     ),
@@ -1457,7 +1457,7 @@ trinton.make_music(
             library.metronome_markups(
                 met_string=library.metronome_marks["57 3/5"],
                 mod_string=library.metronome_marks["4:5(4)=4"],
-                padding=1,
+                padding=5,
             ),
         ],
         selector=trinton.select_leaves_by_index([0]),
@@ -1717,7 +1717,7 @@ trinton.extract_parts(score)
 
 trinton.render_parts(
     score=score,
-    part_name="harp",
+    part_name="piano",
     build_path="/Users/trintonprater/scores/daheitian/daheitian/build",
     segment_name="14",
     includes=[
