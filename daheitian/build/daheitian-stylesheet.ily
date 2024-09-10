@@ -15,7 +15,7 @@ afterGraceFraction = #(cons 15 16)
     dedication = \markup \with-color "lightgray" \column {\line \override #'(font-name . "Bodoni72 Bold") { \fontsize #7 { \hspace #9 D À \hspace #16 H Ē I \hspace #14 T I Ā N } } \line { \fontsize #23 \with-color #white "."} }
     title = \markup \override #'(font-name . "QIJIFALLBACK") \center-column { \line \fontsize #19 { 大 黑 天 } \fontsize #23 \with-color #white "."}
     subtitle = \markup \fontsize #5 \center-column { \line { \override #'(font-name . "Bodoni72 Book Italic") { für } \override #'(font-name . "Bodoni72 Bold") { ORCHESTER } } \fontsize #0.01 \with-color #white "."}
-    composer = \markup \override #'(font-name . "Bodoni72") \fontsize #4 {"Trinton Hlynn (*2000)"}
+    composer = \markup \override #'(font-name . "Bodoni72") \fontsize #4 {"Trinity Hlynn Prater (*2000)"}
 }
 
 \layout {
@@ -232,7 +232,7 @@ afterGraceFraction = #(cons 15 16)
                 \override #'(font-name . "QIJIFALLBACK")
                 "大黑天"
                 \override #'(font-name . "Bodoni72 Book")
-                " - Trinton Hlynn"
+                " - Trinity Hlynn Prater"
             }
             \concat {
                 \fontsize #5
@@ -252,7 +252,7 @@ afterGraceFraction = #(cons 15 16)
                     \override #'(font-name . "QIJIFALLBACK")
                     "大黑天"
                     \override #'(font-name . "Bodoni72 Book")
-                    " - Trinton Hlynn"
+                    " - Trinity Hlynn Prater"
                 }
             }
 }
